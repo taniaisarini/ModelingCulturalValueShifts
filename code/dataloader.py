@@ -2,15 +2,23 @@ import pandas as pd
 import numpy as np
 from scipy import stats # Added import for the t-test
 
-class WVSDataLoader:
-    # ... (Previous __init__, load_data, get_waves, get_countries_by_wave, 
-    #       get_common_countries, get_questions_by_wave, get_common_questions, 
-    #       calculate_averages methods remain the same) ...
+import os
 
-    def __init__(self, file_path):
+class WVSDataLoader:
+    def __init__(self, file_path, cache_path=None):
         self.file_path = file_path
+        self.cache_path = cache_path
         self.df = self.load_data()
-        self.averages_df, self.errors_df = self.calculate_averages()
+
+        if self.cache_path and os.path.exists(self.cache_path):
+            print("Loading cached averages...")
+            self.averages_df = pd.read_csv(self.cache_path)
+        else:
+            print("Computing averages...")
+            self.averages_df, _ = self.calculate_averages()
+
+            if self.cache_path:
+                self.averages_df.to_csv(self.cache_path, index=False)
 
     def load_data(self):
         return pd.read_csv(self.file_path)
@@ -182,6 +190,69 @@ class WVSDataLoader:
         mean2 = data2.mean()
         
         return t_stat, p_value, mean1, mean2
+    
+
+    def get_average_result(self, country, wave, question_code):
+        """
+        Retrieves the pre-calculated average for a specific country, wave, and question.
+        """
+        mask = (
+            (self.averages_df['country'] == country) & 
+            (self.averages_df['wave'] == wave) & 
+            (self.averages_df['question'] == question_code)
+        )
+        result = self.averages_df[mask]
+        
+        if result.empty:
+            return None
+        return result.iloc[0]['average_value']
+    
+    def get_significant_changes_for_countries(self, wave1, wave2, countries=None, alpha=0.05, question_prefix=None):
+        # 1. Determine which countries to iterate over
+        all_common = self.get_common_countries(wave1, wave2)
+        
+        if countries is not None:
+            # Ensure the requested countries actually exist in both waves
+            target_countries = [c for c in countries if c in all_common]
+            
+            # Optional: Warn if some requested countries were skipped
+            skipped = set(countries) - set(target_countries)
+            if skipped:
+                print(f"Warning: The following countries were not found in both waves: {skipped}")
+        else:
+            target_countries = all_common
+
+        common_questions = self.get_common_questions(wave1, wave2, prefix=question_prefix)
+        results = []
+
+        print(f"Analyzing {len(common_questions)} questions across {len(target_countries)} selected countries...")
+
+        for country in target_countries:
+            for question in common_questions:
+                t_stat, p_value, mean1, mean2 = self._perform_welch_ttest(wave1, wave2, country, question)
+                
+                if p_value is not None and p_value < alpha:
+                    results.append({
+                        'country': country,
+                        'question': question,
+                        f'mean_wave_{wave1}': mean1,
+                        f'mean_wave_{wave2}': mean2,
+                        'change_direction': 'Increase' if mean2 > mean1 else 'Drop',
+                        'change_magnitude': mean2 - mean1,
+                        't_statistic': t_stat,
+                        'p_value': p_value
+                    })
+
+        # Error handling for empty results
+        expected_columns = [
+            'country', 'question', f'mean_wave_{wave1}', f'mean_wave_{wave2}', 
+            'change_direction', 'change_magnitude', 't_statistic', 'p_value'
+        ]
+
+        if not results:
+            return pd.DataFrame(columns=expected_columns)
+        
+        return pd.DataFrame(results).sort_values(by='p_value')
 
 
     def get_significant_changes(self, wave1, wave2, alpha=0.05, question_prefix=None):
@@ -245,3 +316,39 @@ class WVSDataLoader:
         
         # If results exist, create the DataFrame and sort it
         return pd.DataFrame(results).sort_values(by='p_value')
+
+    def get_answer_distribution(
+        self, 
+        country, 
+        wave, 
+        question_code, 
+        normalize=False, 
+        drop_negative=True, 
+        dropna=True
+    ):
+        # Filter data
+        df_subset = self.df[
+            (self.df['S002VS'] == wave) &
+            (self.df['COUNTRY_ALPHA'] == country)
+        ]
+
+        if question_code not in df_subset.columns:
+            raise ValueError(f"Question '{question_code}' not found in dataset.")
+
+        values = df_subset[question_code]
+
+        # Handle missing values
+        if dropna:
+            values = values.dropna()
+
+        # Handle negative values (WVS special codes)
+        if drop_negative:
+            values = values[values >= 0]
+
+        if len(values) == 0:
+            return pd.Series(dtype=float)
+
+        # Compute distribution
+        distribution = values.value_counts(normalize=normalize).sort_index()
+
+        return distribution

@@ -1,0 +1,53 @@
+f'''### Task Overview:
+You will be given a **question**, a **label** and a list of **choices** for the question. Your task is to minimally restructure the question such that it makes sense. You may need to use the label and choices sometimes to complete the question. Several questions will mention "lists" or "aspects", but the question will be only about one item; remove any references to lists for such questions and make it just about that item. DO NOT make this change when the questions asks to "choose up to a number" from a list. Leave such questions unchanged. Return **only** the final question and nothing else. See some examples below:
+
+### Example Input 1:
+#### Question:
+For each of the following aspects, indicate how important it is in your life. Would you say it is very important, rather important, not very important or not important at all Family
+#### Label:
+Important in life: Family
+#### Choices:
+['1 Very important', '2 Rather important', '3 Not very important', '4 Not at all important', "-1 Don't know", '-2 No answer', '-4 Not asked', '-5 Missing; Not available']
+
+
+### Example Output 1:
+For the following aspect, indicate how important it is in your life. Would you say it is very important, rather important, not very important or not important at all?
+Aspect: Family
+
+### Example Input 2:
+#### Question:
+Please tell me for each of the following statements whether you think it can always be justified, never be justified, or something in between, using this card. Sex before marriage
+#### Label:
+Justifiable: Sex before marriage
+#### Choices:
+['1 Never justifiable', '2 2', '3 3', '4 4', '5 5', '6 6', '7 7', '8 8', '9 9', '10 Always justifiable', "-1 Don't know", '-2 No answer', '-4 Not asked in survey', '-5 Missing; Not available']
+
+### Example Output 2:
+Please tell me for the following statement whether you think it can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Sex before marriage
+
+### Example Input 3:
+#### Question:
+I’m going to read out another list of global problems, and goals that world leaders have set to reduce them. Indicate for each of these goals how high a priority your own country’s leaders should give to it, using this card. (Read out and code one answer for each goal):
+#### Label:
+MDG: Fight HIV
+#### Choices:
+['1 Top priority', '2 High priority', '3 Medium priority', '4 Low priority', "-1 Don't know", '-2 No answer', '-4 Not asked', '-5 Missing; Unknown']
+
+### Example Output 3:
+I’m going to read out a global problem for which world leaders have set goals to reduce them. Indicate how high a priority your own country’s leaders should give to this goal, using the provided scale.
+Goal: Fight HIV
+
+### Example Input 4:
+#### Question:
+Now I'd like you to tell me your views on various issues. How would you place your views on this scale? 1 means you agree completely with the statement on the left; 10 means you agree completely with the statement on the right; and if your views fall somewhere in between, you can chose any number in between. Hard work brings success
+#### Label:
+Hard work brings success
+#### Choices:
+['1 In the long run, hard work usually brings a better life', '2 2', '3 3', '4 4', '5 5', '6 6', '7 7', '8 8', '9 9', "10 Hard work doesn't generally bring success - it's more a matter of luck and connections", "-1 Don't know", '-2 No answer', '-3 Not applicable', '-4 Not asked in survey', '-5 Missing; Unknown']
+
+### Example Output 4:
+I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can chose any number in between.
+Issue: Hard work brings success
+
+'''
