@@ -104,6 +104,17 @@ def test_check_sql_rejects_tampered_queries():
     assert be.dry_calls == 0
 
 
+def test_table_selection_by_date():
+    assert g.events_by_month("EGY", D(2008, 1, 1), D(2008, 3, 31)).table == g.TABLES["v1"]
+    assert g.events_by_month("EGY", D(2019, 1, 1), D(2019, 3, 31)).table == g.TABLES["v2"]
+    assert g.TABLES["v1"] in g.events_by_month("EGY", D(2008, 1, 1), D(2008, 3, 31)).sql
+    raises(g.CostGuardError, g.events_by_month, "EGY", D(2015, 1, 1), D(2015, 3, 31))   # straddles the boundary
+    assert g.events_by_month("EGY", D(2015, 1, 1), D(2015, 2, 1), table="v1").table == g.TABLES["v1"]
+    raises(ValueError, g.events_by_month, "EGY", D(2015, 1, 1), D(2015, 2, 1), table="v3")
+    q = g.events_by_month("EGY", D(2008, 1, 1), D(2008, 3, 31))      # table field must match the SQL
+    raises(g.CostGuardError, g.check_sql, g.Query(q.sql, q.params, q.start, q.end, table=g.TABLES["v2"]))
+
+
 def test_country_codes():
     assert g.to_fips("EGY") == "EG" and g.to_fips("eg") == "EG"
     raises(ValueError, g.to_fips, "ZZZ")

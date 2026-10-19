@@ -33,8 +33,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_DIR = ROOT / "data" / "gdelt"
 
-# Table name is from GDELT's "_partitioned" convention; confirm with `GDELTClient.check_table()` before first use.
-EVENTS_TABLE = "gdelt-bq.gdeltv2.events_partitioned"
+# Both tables are day-partitioned (verified with metadata calls). v1 is the GDELT 1.0 history, v2 starts 2015-02-18.
+# Event counts are NOT comparable across the two (v2 has many more sources); compare shares/tone, not raw counts.
+TABLES = {"v1": "gdelt-bq.full.events_partitioned", "v2": "gdelt-bq.gdeltv2.events_partitioned"}
+EVENTS_TABLE = TABLES["v2"]
+V2_START = dt.date(2015, 2, 18)
 
 GB = 10 ** 9
 DEFAULT_MAX_BYTES = 20 * GB          # per query
@@ -66,6 +69,7 @@ class Query:
     params: dict = field(default_factory=dict)   # name -> (bigquery type, value)
     start: dt.date = None
     end: dt.date = None
+    table: str = EVENTS_TABLE
 
 
 @dataclass
@@ -101,13 +105,28 @@ def _check_dates(start, end, max_days):
         raise CostGuardError(f"Range is {(end - start).days + 1} days; the limit is {max_days}")
 
 
-def _build(select_sql, tail_sql, country, start, end, max_days):
+def pick_table(start, end, table=None):
+    """'v1' before 2015-02-18, 'v2' from then on. A range that straddles the boundary is refused: the two
+    tables are not comparable, so make two queries instead."""
+    if table is not None:
+        if table not in TABLES:
+            raise ValueError(f"table must be one of {sorted(TABLES)}")
+        return TABLES[table]
+    if end < V2_START:
+        return TABLES["v1"]
+    if start >= V2_START:
+        return TABLES["v2"]
+    raise CostGuardError(f"Range {start}..{end} straddles the GDELT 1.0/2.0 boundary ({V2_START}); split it")
+
+
+def _build(select_sql, tail_sql, country, start, end, max_days, table=None):
     _check_dates(start, end, max_days)
+    tbl = pick_table(start, end, table)
     p_start = dt.datetime.combine(start, dt.time.min, tzinfo=dt.timezone.utc)
     p_end = dt.datetime.combine(end + dt.timedelta(days=PARTITION_SLACK_DAYS + 1), dt.time.min, tzinfo=dt.timezone.utc)
     sql = (
         f"SELECT {select_sql}\n"
-        f"FROM `{EVENTS_TABLE}`\n"
+        f"FROM `{tbl}`\n"
         "WHERE _PARTITIONTIME >= @p_start AND _PARTITIONTIME < @p_end\n"
         "  AND SQLDATE >= @d_start AND SQLDATE <= @d_end\n"
         "  AND ActionGeo_CountryCode = @country\n"
@@ -118,27 +137,27 @@ def _build(select_sql, tail_sql, country, start, end, max_days):
         "d_start": ("INT64", int(start.strftime("%Y%m%d"))), "d_end": ("INT64", int(end.strftime("%Y%m%d"))),
         "country": ("STRING", to_fips(country)),
     }
-    q = Query(sql=sql, params=params, start=start, end=end)
+    q = Query(sql=sql, params=params, start=start, end=end, table=tbl)
     check_sql(q, max_days)
     return q
 
 
-def events_by_month(country, start, end, max_days=DEFAULT_MAX_DAYS):
+def events_by_month(country, start, end, max_days=DEFAULT_MAX_DAYS, table=None):
     """Monthly counts per CAMEO root code (the same shape as data/gdelt/egypt_test_results.csv), plus tone."""
     return _build(
         "MonthYear, EventRootCode, COUNT(*) AS n_events, SUM(NumMentions) AS n_mentions, "
         "AVG(AvgTone) AS avg_tone, AVG(GoldsteinScale) AS avg_goldstein",
         "GROUP BY MonthYear, EventRootCode\nORDER BY MonthYear, EventRootCode",
-        country, start, end, max_days)
+        country, start, end, max_days, table)
 
 
-def events_raw(country, start, end, columns, max_days=DEFAULT_MAX_DAYS):
+def events_raw(country, start, end, columns, max_days=DEFAULT_MAX_DAYS, table=None):
     """Row-level events with an explicit column list. Prefer events_by_month; raw pulls can be large."""
     columns = list(columns)
     bad = [c for c in columns if c not in ALLOWED_COLUMNS]
     if not columns or bad:
         raise ValueError(f"Columns must be a non-empty subset of ALLOWED_COLUMNS; bad: {bad}")
-    return _build(", ".join(columns), "", country, start, end, max_days)
+    return _build(", ".join(columns), "", country, start, end, max_days, table)
 
 
 def check_sql(q, max_days=DEFAULT_MAX_DAYS):
@@ -147,8 +166,8 @@ def check_sql(q, max_days=DEFAULT_MAX_DAYS):
     if re.search(r"\*", re.sub(r"COUNT\(\*\)", "", sql)):
         raise CostGuardError("`*` is not allowed")
     tables = set(re.findall(r"`([^`]+)`", sql))
-    if tables != {EVENTS_TABLE}:
-        raise CostGuardError(f"Only {EVENTS_TABLE} may be queried, found {tables}")
+    if q.table not in TABLES.values() or tables != {q.table}:
+        raise CostGuardError(f"Only {sorted(TABLES.values())} may be queried, found {tables}")
     if "_PARTITIONTIME >= @p_start" not in sql or "_PARTITIONTIME < @p_end" not in sql:
         raise CostGuardError("Missing bounded _PARTITIONTIME filter")
     if re.search(r";|--", sql):
@@ -277,9 +296,9 @@ class GDELTClient:
         self._cache_put(key, q, rows, billed)
         return rows
 
-    def check_table(self):
+    def check_table(self, table="v2"):
         """Free metadata call: confirm the table exists and is time-partitioned."""
-        return self.backend.table_info(EVENTS_TABLE)
+        return self.backend.table_info(TABLES[table])
 
 
 def main():
