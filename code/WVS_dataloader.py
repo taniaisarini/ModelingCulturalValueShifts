@@ -352,3 +352,92 @@ class WVSDataLoader:
         distribution = values.value_counts(normalize=normalize).sort_index()
 
         return distribution
+    
+
+
+    def detect_significant_changes(self, wave1, wave2, countries=None, config=None):
+        """Format-aware significance filtering (see change_detection.py).
+
+        A change is significant only if it is statistically reliable (permutation test, FDR-corrected)
+        AND at least as large as the minimum effect size for the question's format. Thresholds are set
+        through `change_detection.ChangeConfig`. Returns one row per test with a `significant` column.
+        """
+        from change_detection import ChangeConfig, detect_changes
+        return detect_changes(self.df, wave1, wave2, countries=countries, cfg=config or ChangeConfig())
+
+    def get_country_significant_changes(self, country, file_path, p_value_threshold=0.05, exclude_prefixes=['E179']):
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(f"Could not find the file: {file_path}")
+            
+        # Load the results file
+        df = pd.read_csv(file_path)
+        
+        # 1. Filter for the specific country
+        country_df = df[df['country'] == country].copy()
+        
+        if country_df.empty:
+            print(f"No data found for {country} in this file.")
+            return {}
+            
+        # 2. Filter for statistical significance based on the test type in the file
+        if 'welch_p_value' in country_df.columns:
+            sig_df = country_df[country_df['welch_p_value'] < p_value_threshold]
+        elif 'ks_p_value' in country_df.columns:
+            sig_df = country_df[country_df['ks_p_value'] < p_value_threshold]
+        else:
+            # If no p-value column exists (e.g., Wasserstein distance files), 
+            # we default to returning all questions for that country.
+            sig_df = country_df
+            
+        # 3. Format into a nested dictionary
+        results_dict = {}
+        for _, row in sig_df.iterrows():
+            question = row['question']
+            if any(question.startswith(prefix) for prefix in exclude_prefixes):
+                continue
+            
+            # Extract all column data except the country and question labels
+            metrics = row.drop(['country', 'question']).to_dict()
+            results_dict[question] = metrics
+            
+        return results_dict
+    
+    def get_all_significant_changes(self, file_path, p_value_threshold=0.05, exclude_prefixes=['E179', 'E180']):
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(f"Could not find the file: {file_path}")
+
+        df = pd.read_csv(file_path)
+
+        # 1. Determine which p-value column to use
+        if 'welch_p_value' in df.columns:
+            p_col = 'welch_p_value'
+        elif 'ks_p_value' in df.columns:
+            p_col = 'ks_p_value'
+        else:
+            # No statistical test column → treat all rows as significant
+            p_col = None
+
+        results = {}
+
+        # 2. Iterate row-wise (needed because schema is flexible)
+        for _, row in df.iterrows():
+            country = row['country']
+            question = row['question']
+
+            if any(question.startswith(prefix) for prefix in exclude_prefixes):
+                continue
+
+            # 3. Apply significance filter if applicable
+            if p_col is not None:
+                if row[p_col] >= p_value_threshold:
+                    continue
+
+            # 4. Initialize nested dicts
+            if country not in results:
+                results[country] = {}
+
+            # 5. Store all metrics except identifiers
+            metrics = row.drop(['country', 'question']).to_dict()
+            results[country][question] = metrics
+
+        return results

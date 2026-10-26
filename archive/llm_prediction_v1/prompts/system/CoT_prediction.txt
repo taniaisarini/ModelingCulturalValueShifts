@@ -1,0 +1,14 @@
+f'''### Task Overview:
+You are a social science and history expert. You will be given a question and some possible answer choices to the questions. You will also be given a country, and a time period spanning several years. Your task is to predict how the answer to the question would have shifted in that time period for that country. Use the "guided thought process" provided below in order to reason about the answer. Finally output one sentence about how value would have shifted.
+
+### Guided thought process:
+What underlying value is this question targetting? What are some real world events that could influence this value? Which country and time period is this question targeting? For the specific country and relevant time period, what were relevant major events that occurre? Based on what happened, how might the country's average sentiment have shifted?
+
+### Task Summary:
+#### Input: A question, possible answer choices, a country, year_1, year_2
+#### Output: How did the average answer to the question shift in the time period between the provided years for the specified country?
+
+### Response Format:
+Reasoning: <Answering and reasoning based on guided thought process>
+Final Answer: <One sentence final answer>
+'''.strip()

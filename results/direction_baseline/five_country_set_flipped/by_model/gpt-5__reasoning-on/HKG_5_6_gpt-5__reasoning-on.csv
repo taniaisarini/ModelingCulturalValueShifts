@@ -1,0 +1,978 @@
+country,wave_a,wave_b,years_a,years_b,code,format,family,significant,effect,truth,pred,correct,parsed,error,response,finish_reason,cached,cache_key,prompt
+HKG,5,6,2005,2014,A001,ordinal_scale,ordered,True,0.09982528747492306,toward_low,toward_low,True,True,,"Family is consistently rated as “very important” in Hong Kong, and between the mid-2000s and early 2010s there was no broad erosion of family orientation; if anything, economic and social pressures likely reinforced reliance on family. So the typical response stayed high or shifted slightly toward “very important.”
+
+ANSWER: B",stop,False,829d1887d8a39e9e1da524beb94bb26b6eb06d6a64f45defee747318ba75cc72,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Indicate how important the following aspect is in your life. Would you say it is very important, rather important, not very important, or not important at all?
+Aspect: Family
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Not at all important""
+B: It moved toward ""Very important""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,A004,ordinal_scale,ordered,True,0.08023808938995731,toward_low,toward_low,True,True,,"Rising tensions over autonomy and governance in Hong Kong through the early 2010s—culminating in the 2014 Umbrella Movement—heightened political awareness and engagement. This likely made more people consider politics important in their lives.
+
+ANSWER: A",stop,False,2144fa0721329784952cd88c2282c70f7593d5c1d447d9b036067891c91d5190,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: For the following aspect, indicate how important it is in your life. Would you say it is very important, rather important, not very important or not important at all?  
+Aspect: Politics
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Very important""
+B: It moved toward ""Not at all important""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,A006,ordinal_scale,ordered,True,0.08350307621263328,toward_high,toward_high,True,True,,"Hong Kong is among the most secular societies in East Asia, and younger, more educated cohorts have tended to place less emphasis on religion over time. Between 2005 and 2014, survey evidence and regional trends point to a decline in the salience of religion, shifting typical responses toward lower importance.
+
+ANSWER: A",stop,False,cdc44c805384f855aa57dfeba71cb37c92f3b2af0981228a5d9693629f8579fc,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: For the following aspect, indicate how important it is in your life. Would you say it is very important, rather important, not very important or not important at all?  
+Aspect: Religion
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Not at all important""
+B: It moved toward ""Very important""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,A008,ordinal_scale,ordered,True,0.07574211341022069,toward_low,toward_high,False,True,,"Rising housing costs, inequality, and mounting political tensions culminated in the 2014 Umbrella Movement, likely dampening overall mood compared with the more stable, recovering mid‑2000s. These pressures would push the typical response toward less happiness.
+
+ANSWER: B",stop,False,9f0e090b422569d977cf01d1c04f02193e73dd48e147ae3579e7af0d105b6544,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Taking all things together, would you say you are feeling:  
+Feeling of happiness
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Very happy""
+B: It moved toward ""Not at all happy""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,A099,ordinal_scale,ordered,True,0.19504824345175975,toward_high,toward_low,False,True,,"Organized voluntary sports-club participation in Hong Kong is generally low, and from 2005 to 2014 long work hours, an aging population, and a shift toward commercial gyms rather than voluntary teams likely reduced active club membership. Thus the distribution would have moved toward reporting no membership.
+
+ANSWER: B",stop,False,8b2d2f5fefa682088a97a59b336a8a56e8fb2dd1221fcde72937be8658780fb1,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Now I am going to read out a type of voluntary organization; could you tell me whether you are a member, an active member, an inactive member, or not a member of this organization?
+Organization type: Sport or recreational organization, football/baseball/rugby team
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Active member""
+B: It moved toward ""Not a member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,A100,ordinal_scale,ordered,True,0.14076536600498263,toward_high,toward_low,False,True,,"Rising work pressures and economic stress in Hong Kong over this period likely reduced time for cultural and educational group participation, and the surge in civic engagement around 2014 focused more on political/student activism than on arts or educational memberships broadly. Overall, active membership probably did not increase.
+
+ANSWER: A",stop,False,a8bbb875ed8ca18045043a96eae22069a006b00c75bbde73c7f0a25c36ff7701,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: I am going to read out a type of voluntary organization; could you tell me whether you are a member, an active member, an inactive member, or not a member of this type of organization?
+Organization type: Art, music or educational organization
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Not a member""
+B: It moved toward ""Active member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,A101,ordinal_scale,ordered,True,0.08308068451838424,toward_high,toward_low,False,True,,"Unionization in Hong Kong has long been low, and between 2005 and 2014 there was no broad mobilization into unions—significant surges came later around 2019—while structural shifts and weak collective bargaining likely nudged membership downward. So the balance of answers would have moved slightly away from active involvement toward non-membership.
+
+ANSWER: B",stop,False,4d237514e1db8849d527800bb4e48605c01b1cb193399c95423a4c693a3ddc8d,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Now I am going to read out a type of voluntary organization; could you tell me whether you are a member, an active member, an inactive member, or not a member of this organization?
+Organization: Labour Union
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Active member""
+B: It moved toward ""Not a member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,A102,ordinal_scale,ordered,True,0.0700908576307937,toward_high,toward_low,False,True,,"Party membership in Hong Kong has always been very low, and over the 2005–2014 period mobilization tended to occur through non-party civic movements rather than formal party enrollment. Despite heightened activism leading up to the 2014 Umbrella Movement, this did not translate into greater party membership.
+
+ANSWER: B",stop,False,ddff7f5387cc6b49a8bf6d00347c2857652ba557bb9d3b035306593995332b80,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Now I am going to read out a type of voluntary organization; could you tell me whether you are a member, an active member, an inactive member, or not a member?
+Organization type: Political party
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Active member""
+B: It moved toward ""Not a member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,A103,ordinal_scale,ordered,True,0.11957564593347342,toward_high,toward_low,False,True,,"Public concern about pollution grew, but Hong Kongers generally favor ad‑hoc support or donations over formal membership, and 2014’s civic energy focused more on political protest than environmental group participation. As a result, formal environmental-organization membership didn’t broaden and the typical response leaned more toward not a member.
+
+ANSWER: A",stop,False,4047e5375c6816d6fe1950392e6811662b5dacd2506697b9aa4180351069ce4a,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Now I am going to read out a type of voluntary organization; could you tell me whether you are a member, an active member, an inactive member, or not a member of this organization?  
+Organization type: Environmental organization
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Not a member""
+B: It moved toward ""Active member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,A104,ordinal_scale,ordered,True,0.09666935305912944,toward_high,toward_low,False,True,,"Participation in formal civic groups in Hong Kong is generally low, and across the 2005–2014 period, active membership in voluntary organizations—including professional associations—tended to decline as engagement shifted to more informal or issue-based networks. Thus the typical response moved further toward not being a member.
+
+ANSWER: B",stop,False,078b37bdcf73eed7184444653c75460f4e38014242f9a461b716a9b640ce1765,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Now I am going to read out a voluntary organization; could you tell me whether you are a member, an active member, an inactive member, or not a member of this type of organization?
+Organization type: Professional association
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Active member""
+B: It moved toward ""Not a member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,A106,ordinal_scale,ordered,True,0.08303910939693693,toward_high,toward_low,False,True,,"Hong Kong has low rates of formal associational membership, and between 2005 and 2014 participation increasingly took the form of ad hoc, networked mobilization rather than joining organizations. This likely shifted responses away from formal membership categories toward not a member.
+
+ANSWER: B",stop,False,b094dd1be1304c8ccdfb1fb4cb9615012a3deb5058b453657f1addbebcb2ceec,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Now I am going to ask about your membership status in a voluntary organization. Are you a member, an active member, an inactive member, or not a member of this type of organization?
+Organization type: Other organization
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Active member""
+B: It moved toward ""Not a member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,A124_02,mention_flag,share,True,0.07957188498402556,decrease,decrease,True,True,,"Public expressions of racial exclusion in Hong Kong likely eased over this period, helped by the 2009 Race Discrimination Ordinance and growing cosmopolitan norms, which tend to reduce willingness to openly say they wouldn’t want neighbors of a different race. Thus, the share mentioning this likely fell by 2014.
+
+ANSWER: A",stop,False,f84a230a8eeecf069075b0efc68dd6be5b3ef6490304ef8a7fb73d356c9cc80a,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Could you please mention if you would not like to have people of a different race as neighbors?
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Mentioned"". Did that share change between 2005 and 2014?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,A124_03,mention_flag,share,True,0.1352747603833866,decrease,decrease,True,True,,"Hong Kong’s drinking culture became more mainstream over this period (including the 2008 removal of wine and beer duties), which likely reduced stigma toward drinkers. As alcohol became more normalized, fewer people would say they wouldn’t want heavy drinkers as neighbors.
+
+ANSWER: B",stop,False,5b3c93464c96f58c348220bb77a925ac58cdbc148137d1e2910dd920c7b387c3,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Could you please mention if you would not like to have the following group of people as neighbors?
+Group: Heavy drinkers
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Mentioned"". Did that share change between 2005 and 2014?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,A124_07,mention_flag,share,True,0.10631309904153358,decrease,decrease,True,True,,"Public awareness, antidiscrimination efforts, and improved HIV treatment in the 2000s–2010s generally reduced stigma toward people with AIDS in Hong Kong. Thus, fewer respondents would mention people with AIDS as undesirable neighbors by 2014 compared to 2005.
+
+ANSWER: B",stop,False,18a68f589b0fc8cb092f985e6ed946cb49ff5093bbe451a6449f0331744588de,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Could you please mention if you would not like to have people who have AIDS as your neighbors?
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Mentioned"". Did that share change between 2005 and 2014?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,A124_08,mention_flag,share,True,0.12838019169329073,decrease,increase,False,True,,"Public attitudes in Hong Kong toward drug addicts as neighbors are typically very unfavorable, and heightened concern about youth drug abuse in the late 2000s likely reinforced stigma. Therefore, the share mentioning drug addicts as undesirable neighbors likely rose between 2005 and 2014.
+
+ANSWER: A",stop,False,3cba1812b3c52171e87477cee6b69af56d2e2f344fd36502c941acfb4f230e04,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Could you please mention if you would not like to have a particular group as neighbors?
+Group: Drug addicts
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Mentioned"". Did that share change between 2005 and 2014?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,A124_09,mention_flag,share,True,0.165,decrease,decrease,True,True,,"Public attitudes in Hong Kong became more accepting of LGBT people over the 2005–2014 period, with rising support for same-sex rights and visibility. Consequently, fewer people would have said they did not want homosexuals as neighbors.
+
+ANSWER: A",stop,False,35d481ce0ec40ddc01dc20d644180f7bb0e9b62f9e9b611d4abcd4f3ab85e199,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Could you please mention if you would not like to have the following group as neighbors?
+Group: Homosexuals
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Mentioned"". Did that share change between 2005 and 2014?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,A165,binary,share,True,0.07281458010954733,decrease,increase,False,True,,"Social and political tensions in Hong Kong grew over this period (rising inequality, mainland–local frictions, and the run-up to the 2014 protests), which likely eroded generalized interpersonal trust. Consequently, more people would say you need to be very careful.
+
+ANSWER: A",stop,False,201643abf0eb2b82da2b96b0f158e32f057fc7bf425f6ee966e836759189d70a,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Generally speaking, would you say that most people can be trusted or that you need to be very careful in dealing with people?
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Need to be very careful"". Did that share change between 2005 and 2014?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,A173,ordinal_scale,ordered,True,0.06190786133299383,toward_high,toward_low,False,True,,"Rising housing costs, widening inequality, and mounting political tensions culminating in the 2014 Umbrella Movement likely eroded Hongkongers’ sense of personal agency compared with the mid-2000s recovery period. As a result, the typical response shifted toward feeling less control over how life turns out.
+
+ANSWER: A",stop,False,7eec3efd8391aded86c50e2af9c23bbf42f26b5c808e9150040a622a73a421f3,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Please use this scale where 1 means ""none at all"" and 10 means ""a great deal"" to indicate how much freedom of choice and control you feel you have over the way your life turns out.
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,B008,forced_choice,option,True,0.22606104597646737,1,1,True,True,,"Rising concern over air pollution and environmental quality in Hong Kong during the 2000s–early 2010s, alongside relatively low unemployment by 2014, likely shifted public priorities toward protecting the environment. Thus the environment option gained the most support.
+
+ANSWER: 1",stop,False,548c5b7fa88f4fadb2167f0ddffc81a409996aed23f428a1c36b8dfb7c1f3bf3,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Here are two statements people sometimes make when discussing the environment and economic growth. Which statement comes closer to your own point of view?
+A. Protecting the environment should be given priority, even if it causes slower economic growth and some loss of jobs 
+B. Economic growth and creating jobs should be the top priority, even if the environment suffers to some extent
+
+### Task:
+
+Think about the share of people in Hong Kong choosing each answer in 2005 and in 2014. Which answer gained the most support (the largest increase in share)?
+
+1: Protecting environment
+2: Economy growth and creating jobs
+3: Other answer
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <number>"
+HKG,5,6,2005,2014,C002,categorical,option,True,0.10352326494880554,1,1,True,True,,"Between 2005 and 2014, Hong Kong saw rising localist sentiment and growing tensions over Mainland immigration, which likely strengthened nativist views. This would translate into more people agreeing that locals should get job priority when jobs are scarce.
+
+ANSWER: 2",stop,False,38f0ca1891ee9b49252b27a5d45af21d8faefd2135c4f31db31334429b0d4ae1,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Do you agree, disagree, or neither agree nor disagree with the following statement? When jobs are scarce, employers should give priority to people of this country over immigrants.
+
+### Task:
+
+Think about the share of people in Hong Kong choosing each answer in 2005 and in 2014. Which answer gained the most support (the largest increase in share)?
+
+1: Disagree
+2: Agree
+3: Neither
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <number>"
+HKG,5,6,2005,2014,C006,ordinal_scale,ordered,True,0.056673897107573465,toward_high,toward_high,True,True,,"Hong Kong’s economy and labor market were significantly stronger by 2014 than in 2005—unemployment fell, incomes and asset values (especially housing) rose—boosting many households’ perceived financial standing, even though living costs climbed. On balance, typical responses likely shifted upward on the satisfaction scale.
+
+ANSWER: B",stop,False,2027e548e9c05c5db908d174db6e5d2f8a1c59bdee8ca8fdb28023ab209b176a,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: How satisfied are you with your household's financial situation? If '1' means you are completely dissatisfied and '10' means you are completely satisfied, where would you rate your satisfaction?
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Dissatisfied""
+B: It moved toward ""Satisfied""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,D057,ordinal_scale,ordered,True,0.05323810967139003,toward_high,toward_high,True,True,,"Rising female labor force participation, higher living costs, and generational change in Hong Kong from 2005 to 2014 likely pushed attitudes toward valuing paid work over traditional homemaking. As norms liberalized, the typical response would shift away from endorsing the housewife role as equally fulfilling.
+
+ANSWER: A",stop,False,4c69c1dbd92f4391708aa7ae7840c8553b4271ffcbda8aee55f1928df76c549f,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?
+Statement: Being a housewife is just as fulfilling as working for pay
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Strongly disagree""
+B: It moved toward ""Agree strongly""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E012,binary,share,True,0.0721013386822483,decrease,decrease,True,True,,"Willingness to fight for “the country” in Hong Kong was low to begin with, and by the early 2010s it declined further as identification with the mainland weakened amid rising political tensions and protests. Thus, fewer respondents said “yes” by 2014.
+
+ANSWER: A",stop,False,8873bfa2bba8dc4d85caa4b94fb39eabce712a3a71d65f957cd0a5bd97cba929,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Would you be willing to fight for your country if there were another war?
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Yes"". Did that share change between 2005 and 2014?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E015,ordinal_scale,ordered,True,0.09377529545086613,toward_high,toward_low,False,True,,"Public debate in Hong Kong over long working hours and work-life balance grew through the late 2000s and early 2010s, including pushes for standard working hours. With rising fatigue over overwork and younger cohorts favoring balance, views moved a bit more positive toward placing less importance on work.
+
+ANSWER: A",stop,False,7679cee3bb69ec2db5c2c3dc24f747b70337e3f25940d8796e2043e4a3f77c97,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: I'm going to read out a possible change in our way of life that might take place in the near future. Please tell me if you think it would be a good thing, a bad thing, or if you don't mind.
+Change: Less importance placed on work in our lives
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Good thing""
+B: It moved toward ""Bad thing""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E016,ordinal_scale,ordered,True,0.16145987274386703,toward_low,toward_low,True,True,,"Hong Kong’s economy and daily life became even more tech-centric between 2005 and 2014, with widespread smartphone adoption, high-speed connectivity, and focus on innovation for competitiveness. These shifts likely made “more emphasis on technology” seem increasingly beneficial to most people.
+
+ANSWER: B",stop,False,b535824e1c311ee6d1199681f3ac08dd4aeabe5bcc47d98c5c1132bea7dbd362,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: I'm going to read out a possible change in our way of life that might take place in the near future. Please tell me if you think it would be a good thing, a bad thing, or you don't mind.
+Change: More emphasis on the development of technology
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Bad thing""
+B: It moved toward ""Good thing""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E018,ordinal_scale,ordered,True,0.11331003657984602,toward_low,toward_high,False,True,,"Between 2005 and 2014, Hong Kong saw growing distrust of government and Beijing’s influence, culminating in large pro-democracy protests and fears of eroding civil liberties. This climate likely made “greater respect for authority” less attractive to the public.
+
+ANSWER: B",stop,False,f587a77fd03239b56ff3c32ffc18c29a0538fb152d80cfaf8ceccdffa7b34037,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: I'm going to read out a possible change in our way of life that might take place in the near future. If it were to happen, would you think it would be a good thing, a bad thing, or don't mind?  
+Change: Greater respect for authority
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Good thing""
+B: It moved toward ""Bad thing""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E023,ordinal_scale,ordered,True,0.09527019426861134,toward_low,toward_low,True,True,,"Public attention to politics in Hong Kong intensified over this period, with growing debates over governance and major mobilizations like the 2012 protests and the 2014 Umbrella Movement drawing many—especially youth—into political engagement. This likely shifted typical responses toward greater interest.
+
+ANSWER: A",stop,False,225876cfba5f4b954e7c820c5443c60e92adaf2b1a576946ac0e6423e57b0acb,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: How interested are you in politics?
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Very interested""
+B: It moved toward ""Not at all interested""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E025B,binary,share,True,0.7769869174551449,decrease,decrease,True,True,,"Public activism in Hong Kong intensified in the early 2010s (e.g., anti–national education protests, Occupy/Umbrella Movement build-up), and online platforms made petition signing easier. Therefore, fewer people would report “Not done” by 2014 than in 2005.
+
+ANSWER: B",stop,False,10c86431deda653dbefb5aeea8be3243c151897712eced491e896619039b14c6,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Have you done the following activity in the last five years? Please answer yes or no.
+Activity: signing a petition
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Not done"". Did that share change between 2005 and 2014?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E033,ordinal_scale,ordered,True,0.1139039318466135,toward_low,toward_high,False,True,,"Hong Kong’s “left–right” labels are often understood as pro-Beijing/left versus liberal–market/right. Between 2005 and 2014, growing distrust of Beijing and the rise of localist/pro-democracy sentiment likely led fewer people to identify with the “left,” nudging the average self-placement to the right.
+
+ANSWER: B",stop,False,270e87c820d8f6a78f8da59a87ac835810c857e327701dfaf1e4d5ce3da153ab,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: In political matters, people talk of ""the left"" and ""the right."" How would you generally place your views on this scale?
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Left""
+B: It moved toward ""Right""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E035,ordinal_scale,ordered,True,0.14567285459317875,toward_high,toward_low,False,True,,"Rising housing costs, stagnant wages for many, and growing concern about tycoon dominance and inequality became more salient in Hong Kong through the 2000s and early 2010s, culminating around 2014. Public sentiment likely shifted toward favoring redistribution and equality.
+
+ANSWER: A",stop,False,937efd0e1361bbb00ed1b659a0aaeb99c48175a026ccce6bd8d38091cc10affc,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.
+Issue: Income equality
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Incomes should be made more equal""
+B: It moved toward ""We need larger income differences as incentives""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E036,ordinal_scale,ordered,True,0.11330835812617632,toward_high,toward_high,True,True,,"After the 2008 financial crisis and amid rising inequality and housing stress, many Hongkongers grew disillusioned with tycoon-dominated markets and favored a stronger public role. This likely nudged average views somewhat away from pure privatization toward more government ownership/intervention.
+
+ANSWER: A",stop,False,489758f04453b63a29715fe07e95acca55c5fe3ea5c4c67a6c2c94f8ac23c50b,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.
+Issue: Private vs state ownership of business
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Government ownership of business should be increased""
+B: It moved toward ""Private ownership of business should be increased""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E037,ordinal_scale,ordered,True,0.22863648399079586,toward_low,toward_high,False,True,,"Rising inequality, worsening housing affordability, and debates over elderly pensions in the early 2010s increased expectations for a stronger social safety net. In the wake of the global financial crisis, more Hongkongers leaned toward government taking greater responsibility.
+
+ANSWER: B",stop,False,a2067fe5b007297d090ed2656dc95b09f90f7e8d870253af3cd0de19abb37987,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.  
+Issue: Government responsibility
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""People should take more responsibility""
+B: It moved toward ""The government should take more responsibility""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E039,ordinal_scale,ordered,True,0.12848996644930225,toward_high,toward_high,True,True,,"Hong Kong traditionally leans pro-market, so in 2005 people tended to see competition as beneficial. By 2014, after the global financial crisis and growing frustration with inequality and perceived crony capitalism, views likely shifted somewhat toward seeing competition as more harmful.
+
+ANSWER: B",stop,False,63cfe6ad830a55032c02fa16a240f57659150baa9c68e67b78d6714457e1e62f,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.  
+Issue: Competition good or harmful
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Competition is good""
+B: It moved toward ""Competition is harmful""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E069_04,ordinal_scale,ordered,True,0.09533546850620021,toward_high,toward_high,True,True,,"Public perception of Hong Kong’s media independence eroded between 2005 and 2014 amid rising concerns about self-censorship, ownership influence, and high-profile incidents like the 2014 attack on editor Kevin Lau, all against the backdrop of the Umbrella Movement. These trends likely reduced public confidence in the press.
+
+ANSWER: B",stop,False,0c4219a841bcaaf1fbe3cc75529c9ea067b75eaca7a84f7b9978d8a95775f8ad,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: The press
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E069_06,ordinal_scale,ordered,True,0.061760011216445074,toward_low,toward_high,False,True,,"Public confidence in the Hong Kong Police declined over this period as political tensions rose, culminating in the 2014 Umbrella Movement when police use of force sparked widespread criticism. As a result, typical responses shifted toward lower confidence. 
+ANSWER: A",stop,False,d7278c6495457f62551634dd46059b145ccd159ea7d31fe2ecf9be374f020999,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence, or none at all?  
+Organization: The police
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E069_07,ordinal_scale,ordered,True,0.05611333829014749,toward_high,toward_high,True,True,,"Public confidence in Hong Kong’s legislature (LegCo) was mixed in 2005, but political tensions and dissatisfaction over stalled democratic reforms mounted through the 2010s. By 2014—amid the Umbrella Movement protests—trust in the legislature had clearly eroded, pushing attitudes toward lower confidence.
+
+ANSWER: B",stop,False,7775c8e8287f91798a2fc0b9052425f21c53effa7e347e240f9dee0498526198,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Parliament
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E069_10,ordinal_scale,ordered,True,0.10560929771860733,toward_high,toward_high,True,True,,"Public confidence in Hong Kong’s television likely declined from 2005 to 2014 amid growing perceptions of pro-government bias, censorship pressures, and controversies (e.g., the 2013 HKTV licensing row and TVB’s criticized coverage of the 2014 protests). Rising reliance on online media also eroded trust in traditional TV.
+
+ANSWER: A",stop,False,69949bfe89d2ad524544f233abfdeab627268122aa7a8073c353814e6d0df0c9,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: Television
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E069_11,ordinal_scale,ordered,True,0.06610142619820636,toward_low,toward_high,False,True,,"Public trust declined over the period: after mid-2000s discontent simmered, and by 2014 the Umbrella Movement and backlash against Beijing’s electoral restrictions sharply eroded confidence in the government. As a result, typical responses shifted toward less confidence.
+
+ANSWER: B",stop,False,538f6c2c4ee2cd2522113fd0cf78b1b0d3d44c749a195054fa7741077adfb6c7,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: The government (in your nation’s capital)
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E069_13,ordinal_scale,ordered,True,0.19224335998529546,toward_low,toward_high,False,True,,"Public sentiment in Hong Kong toward big business likely deteriorated between 2005 and 2014, influenced by the 2008 financial crisis, rising inequality and housing affordability issues linked to property tycoons, and growing backlash against establishment-aligned corporations during the 2014 Umbrella Movement. These factors would push confidence away from “a great deal” toward skepticism.
+
+ANSWER: B",stop,False,023bf5ac99d46e3b93878f706b07f3d1924716fd5bba55daffd240f5986f92c7,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Major Companies
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E114,ordinal_scale,ordered,True,0.07124709639953543,toward_high,toward_high,True,True,,"Public debate in Hong Kong between 2005 and 2014 increasingly centered on demands for universal suffrage, culminating in the 2014 Umbrella Movement, which sharpened resistance to unelected, unchecked leadership. As a result, views shifted away from endorsing a strong leader without elections.
+
+ANSWER: B",stop,False,35cb40affecc94c8b0b890b2f74951d68afbe6c45aafb75a90775a6daa1b1151,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: I'm going to describe a type of political system and ask what you think about it as a way of governing this country. Would you say it is a very good, fairly good, fairly bad, or very bad way of governing?
+Type of political system: Having a strong leader who does not have to bother with parliament and elections
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Very good""
+B: It moved toward ""Very bad""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E115,ordinal_scale,ordered,True,0.07654022526396313,toward_low,toward_high,False,True,,"Between 2005 and 2014, Hong Kong saw growing dissatisfaction with unaccountable elites and a stronger push for democratic accountability, culminating in the 2014 Umbrella Movement. That climate likely reduced support for rule by unelected experts and increased skepticism toward technocratic decision-making.
+
+ANSWER: B",stop,False,48d3bd8bbbc8158d24225cee7f754594a269e03456f518486137778982198260,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: I'm going to describe a type of political system and ask what you think about it as a way of governing this country. Would you say it is a very good, fairly good, fairly bad, or very bad way of governing this country?
+System: Having experts, not government, make decisions according to what they think is best for the country
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Very good""
+B: It moved toward ""Very bad""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E116,ordinal_scale,ordered,True,0.0827431710607772,toward_low,toward_high,False,True,,"Public opinion in Hong Kong has generally been pro-civilian, pro-rule-of-law, and wary of military involvement in governance; by 2014—amid rising concerns about Beijing’s influence and the Umbrella Movement—attitudes toward army rule likely hardened further. Thus, the typical answer moved more negative.
+
+ANSWER: B",stop,False,3f319d7d9fee45c706812d4a2af7e3b5e31c0606c5916ed293bcebfd8c7da327,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: I'm going to describe a type of political system and ask what you think about it as a way of governing this country. Would you say it is a very good, fairly good, fairly bad, or very bad way of governing this country?
+System: Having the army rule
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Very good""
+B: It moved toward ""Very bad""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E117,ordinal_scale,ordered,True,0.05877404793790546,toward_low,toward_low,True,True,,"Public support for democracy in Hong Kong has been consistently high and intensified through the 2010s amid growing dissatisfaction with Beijing’s constraints, culminating in the 2014 Umbrella Movement. This likely shifted the typical response toward viewing a democratic system as “very good.”
+
+ANSWER: B",stop,False,7edbaafd4fcc310a53b7829c81326402e435ddde114693bfd0a0af2b33e94f8c,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: I'm going to describe a type of political system and ask what you think about it as a way of governing this country. Would you say it is a very good, fairly good, fairly bad, or very bad way of governing this country?  
+Type of political system: Having a democratic political system
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Very bad""
+B: It moved toward ""Very good""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,E124,ordinal_scale,ordered,True,0.06954568775290512,toward_high,toward_high,True,True,,"Public perceptions likely worsened: in 2005 many still felt “one country, two systems” preserved freedoms, but by 2014 growing mainland influence, curbs on media and elections, and the Umbrella Movement with a forceful police response signaled shrinking civil liberties. So people would report less respect for human rights.
+
+ANSWER: B",stop,False,3070ef0e9bbc145d65448cc1caf7e55a3e8e2a3379c8cd89152c4716f6991db9,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: How much respect is there for individual human rights in this country nowadays?
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""There is a lot of respect for individual human rights""
+B: It moved toward ""There is no respect at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,F001,ordinal_scale,ordered,True,0.1287159667702757,toward_low,toward_low,True,True,,"Between 2005 and 2014, Hong Kong experienced mounting political tension, identity debates, and economic pressure culminating in the 2014 Umbrella Movement—conditions that typically prompt greater personal reflection. These societal stresses likely nudged people toward thinking about meaning and purpose more frequently.
+
+ANSWER: B",stop,False,9411bbb29866a12240531602672e2ca8ee87145c0f7c7f92747039254ea1ab0d,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: How often, if at all, do you think about the meaning and purpose of life?
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Never""
+B: It moved toward ""Often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,F034,categorical,option,True,0.4990348696167284,3,2,False,True,,"Hong Kong secularized over this period, with fewer people calling themselves religious and more opting for non-religious identities. Given local norms favoring non-affiliation over explicit atheism, the biggest gain was in “Not a religious person.”
+
+ANSWER: 1",stop,False,4ed9a3f1233777170ea469621acf44a47f1f0c08806f196d4b9940427b029f0a,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Independently of whether you go to church or not, would you say you are a religious person?
+
+### Task:
+
+Think about the share of people in Hong Kong choosing each answer in 2005 and in 2014. Which answer gained the most support (the largest increase in share)?
+
+1: Not a religious person
+2: A convinced atheist
+3: A religious person
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <number>"
+HKG,5,6,2005,2014,F063,ordinal_scale,ordered,True,0.05987781430124723,toward_high,toward_low,False,True,,"Hong Kong is highly secular, and through the 2000s–2010s younger cohorts increasingly identified as non-religious. This likely lowered the average rating of God's importance between 2005 and 2014.
+
+ANSWER: B",stop,False,d87262a63638a460f96f1c2121a20636a09e6842e463a16178dbac8e5310ae8a,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: How important is God in your life? Please use this scale to indicate: 10 means “very important” and 1 means “not at all important.”
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Very important""
+B: It moved toward ""Not at all important""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,F114A,ordinal_scale,ordered,True,0.37568679790902015,toward_high,toward_low,False,True,,"Public opinion in Hong Kong has long viewed benefit fraud as clearly wrong, and debates over welfare abuse and “welfare tourism” in the early 2010s likely reinforced that stance. The typical response therefore became, if anything, even less tolerant of such behavior between 2005 and 2014.
+
+ANSWER: B",stop,False,e5c4f8412e9d2a3d1301ca51a9676c41bdd4530c570f44b14811b869eafa7141,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Claiming government benefits to which you are not entitled
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,F115,ordinal_scale,ordered,True,0.08011287232877506,toward_high,toward_low,False,True,,"Public attitudes in Hong Kong toward rule-breaking behaviors like fare evasion are generally very strict, and over the 2005–2014 period they tended to become, if anything, slightly stricter. This aligns with broader East Asian trends of low and declining tolerance for everyday dishonesty.
+
+ANSWER: A",stop,False,035874fa1f5bcd54705740e24ed4ecd68f494cb855c796518dfd88e996a62774,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.  
+Statement: Avoiding a fare on public transport
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,F118,ordinal_scale,ordered,True,0.06776021719141004,toward_high,toward_high,True,True,,"Public attitudes in Hong Kong toward LGBT issues grew more accepting through the 2000s and early 2010s, with rising support for same-sex rights and greater social liberalism. This aligns with global and regional trends and WVS patterns showing higher justifiability ratings over time.
+
+ANSWER: A",stop,False,68df617ec2f807fd4727e823fd930e63a533ff6cc8003cd36b864563e9dd013d,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Homosexuality
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,F123,ordinal_scale,ordered,True,0.05593990939361864,toward_high,toward_high,True,True,,"Public attitudes in Hong Kong generally liberalized on personal-morality items over the 2000s, with younger, more secular cohorts becoming a larger share of respondents. That pattern likely nudged views on suicide slightly away from “never justifiable” by 2014.
+
+ANSWER: B",stop,False,946658a4852dce7b5d6387a1a5c3f976aab5e0bd00b3dd76e297108145552554,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Suicide
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,5,6,2005,2014,G006,ordinal_scale,ordered,True,0.11127682874534665,toward_low,toward_high,False,True,,"Rising tensions with Beijing and growing localist identity in Hong Kong—especially after the 2012 national education protests and culminating in the 2014 Umbrella Movement—reduced pride in Chinese nationality compared with the mid-2000s. The typical response shifted away from “Very proud.”
+
+ANSWER: B",stop,False,e1d42a39f37f144c9cf31cdfeec9974b0a13c185ab18e6ffd7167dbabf7ad352,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2005
+Year 2: 2014
+Question: How proud are you to be of the nationality of this country?
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2005 and in 2014. Did the typical answer move?
+
+A: It moved toward ""Very proud""
+B: It moved toward ""Not at all proud""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"

@@ -1,0 +1,906 @@
+code,format,family,group,n_choices,label
+COW_NUM,identifier,,,0,CoW country code numeric
+COW_ALPHA,identifier,,,0,CoW country code alpha
+A001,ordinal_scale,Important in life,,4,Important in life: Family
+A002,ordinal_scale,Important in life,,4,Important in life: Friends
+A003,ordinal_scale,Important in life,,4,Important in life: Leisure time
+A004,ordinal_scale,Important in life,,4,Important in life: Politics
+A005,ordinal_scale,Important in life,,4,Important in life: Work
+A006,ordinal_scale,Important in life,,4,Important in life: Religion
+A008,ordinal_scale,,,4,Feeling of happiness
+A009,ordinal_scale,,,5,State of health (subjective)
+A010,binary,,,2,Ever felt very excited or interested
+A011,binary,,,2,Ever felt restless
+A012,binary,,,2,Ever felt proud because someone complimented you
+A013,binary,,,2,Ever felt very lonely or remote from other people
+A014,binary,,,2,Ever felt pleased about having accomplished something
+A015,binary,,,2,Ever felt bored
+A016,binary,,,2,Ever felt on top of the world
+A017,binary,,,2,Ever felt depressed or very unhappy
+A018,binary,,,2,Ever felt that things were going your way
+A019,binary,,,2,Ever felt upset because somebody criticized you
+A025,forced_choice,,,2,Respect and love for parents
+A026,forced_choice,,,3,Parents responsibilities to their children
+A044,ranked_choice,,,5,What children should learn 1
+A045,ranked_choice,,,5,What children should learn 2
+A046,binary,,,2,Abortion when the mothers health is at risk
+A047,binary,,,2,Abortion when child physically handicapped
+A048,binary,,,2,Abortion when woman not married
+A049,binary,,,2,Abortion if not wanting more children
+A057,ordinal_scale,,,4,Spend time with parents or other relatives
+A058,ordinal_scale,,,4,Spend time with friends
+A059,ordinal_scale,,,4,Spend time with colleagues from work
+A060,ordinal_scale,,,4,"Spend time with people at your church, mosque or synagogue"
+A061,ordinal_scale,,,4,"Spend time with people at sport, culture, communal organization"
+A062,ordinal_scale,,,3,How often discusses political matters with friends
+A063,ordinal_scale,,,4,"Persuading friends, relatives or fellow workers"
+A064,mention_flag,Member,org_membership,2,Member: Belong to social welfare service for elderly
+A065,mention_flag,Member,org_membership,2,Member: Belong to religious organization
+A066,mention_flag,Member,org_membership,2,"Member: Belong to education, arts, music or cultural activities"
+A080_02,mention_flag,Member,org_membership,2,"Member:  Self-help group, mutual aid group"
+A067,mention_flag,Member,org_membership,2,Member: Belong to labour unions
+A068,mention_flag,Member,org_membership,2,Member: Belong to political parties
+A069,mention_flag,Member,org_membership,2,Member: Belong to local political actions
+A080_01,mention_flag,Member,org_membership,2,Member: Humanitarian or charitable organization
+A070,mention_flag,Member,org_membership,2,Member: Belong to human rights
+A071,mention_flag,Member,org_membership,2,"Member: Belong to conservation, the environment, ecology, animal rights"
+A071B,mention_flag,Member,org_membership,2,"Member: Belong to conservation, the environment, ecology"
+A071C,mention_flag,Member,org_membership,2,Member: Belong to animal rights
+A072,mention_flag,Member,org_membership,2,Member: Belong to professional associations
+A073,mention_flag,Member,org_membership,2,Member: Belong to youth work
+A074,mention_flag,Member,org_membership,2,Member: Belong to sports or recreation
+A075,mention_flag,Member,org_membership,2,Member: Belong to women´s group
+A076,mention_flag,Member,org_membership,2,Member: Belong to peace movement
+A077,mention_flag,Member,org_membership,2,Member: Belong to organization concerned with health
+A079,mention_flag,Member,org_membership,2,Member: Belong to other groups
+A080,mention_flag,Member,voluntary_work,2,Member: Belong to none
+A081,mention_flag,Voluntary work,voluntary_work,2,"Voluntary work: Unpaid work social welfare service for elderly, handicapped or deprived people"
+A082,mention_flag,Voluntary work,voluntary_work,2,Voluntary work: Unpaid work religious or church organization
+A083,mention_flag,Voluntary work,voluntary_work,2,"Voluntary work: Unpaid work education, arts, music or cultural activities"
+A084,mention_flag,Voluntary work,voluntary_work,2,Voluntary work: Unpaid work labour unions
+A085,mention_flag,Voluntary work,voluntary_work,2,Voluntary work: Unpaid work political parties or groups
+A086,mention_flag,Voluntary work,voluntary_work,2,Voluntary work: Unpaid work local political action groups
+A087,mention_flag,Voluntary work,voluntary_work,2,Voluntary work: Unpaid work human rights
+A088,mention_flag,Voluntary work,voluntary_work,2,"Voluntary work: Unpaid work environment, conservation, animal rights"
+A088B,mention_flag,Voluntary work,voluntary_work,2,"Voluntary work: Unpaid work environment, conservation, ecology"
+A088C,mention_flag,Voluntary work,voluntary_work,2,Voluntary work: Unpaid work animal rights
+A089,mention_flag,Voluntary work,voluntary_work,2,Voluntary work: Unpaid work professional associations
+A090,mention_flag,Voluntary work,voluntary_work,2,Voluntary work: Unpaid work youth work
+A091,mention_flag,Voluntary work,voluntary_work,2,Voluntary work: Unpaid work sports or recreation
+A092,mention_flag,Voluntary work,voluntary_work,2,Voluntary work: Unpaid work women´s group
+A093,mention_flag,Voluntary work,voluntary_work,2,Voluntary work: Unpaid work peace movement
+A094,mention_flag,Voluntary work,voluntary_work,2,Voluntary work: Unpaid work organization concerned with health
+A096,mention_flag,Voluntary work,voluntary_work,2,Voluntary work: Unpaid work other groups
+A097,mention_flag,Voluntary work,voluntary_work,2,Voluntary work: Unpaid work none
+A098,ordinal_scale,,,3,Active/Inactive membership of church or religious organization
+A099,ordinal_scale,,,3,Active/Inactive membership of sport or recreation
+A100,ordinal_scale,,,3,"Active/Inactive membership of art, music, educational"
+A101,ordinal_scale,,,3,Active/Inactive membership of labour unions
+A102,ordinal_scale,,,3,Active/Inactive membership of political party
+A103,ordinal_scale,,,3,Active/Inactive membership of environmental organization
+A104,ordinal_scale,,,3,Active/Inactive membership of professional organization
+A105,ordinal_scale,,,3,Active/Inactive membership of charitable/humanitarian organization
+A106,ordinal_scale,,,3,Active/Inactive membership of any other organization
+A106B,ordinal_scale,Active/Inactive membership,,3,Active/Inactive membership: Consumer organization
+A106C,ordinal_scale,Active/Inactive membership,,3,"Active/Inactive membership: Self-help group, mutual aid group"
+A106D,ordinal_scale,Active/Inactive membership,,3,Active/Inactive membership: Women’s group
+A107,ordinal_scale,Reasons voluntary work,,5,Reasons voluntary work: Solidarity with the poor and disadvantaged
+A108,ordinal_scale,Reasons voluntary work,,5,Reasons voluntary work: Compassion for those in need
+A109,ordinal_scale,Reasons voluntary work,,5,Reasons voluntary work: Opportunity to repay something
+A110,ordinal_scale,Reasons voluntary work,,5,"Reasons voluntary work: Sense of duty, moral, obligation"
+A111,ordinal_scale,Reasons voluntary work,,5,Reasons voluntary work: Identifying with people who suffer
+A112,ordinal_scale,Reasons voluntary work,,5,Reasons voluntary work: Time on my hands
+A113,ordinal_scale,Reasons voluntary work,,5,Reasons voluntary work: Personal satisfaction
+A114,ordinal_scale,Reasons voluntary work,,5,Reasons voluntary work: Religious belief
+A115,ordinal_scale,Reasons voluntary work,,5,Reasons voluntary work: Help disadvantaged people
+A116,ordinal_scale,Reasons voluntary work,,5,Reasons voluntary work: Make a contribution to my local community
+A117,ordinal_scale,Reasons voluntary work,,5,Reasons voluntary work: Bring about social or political change
+A118,ordinal_scale,Reasons voluntary work,,5,Reasons voluntary work: For social reasons
+A119,ordinal_scale,Reasons voluntary work,,5,Reasons voluntary work: Gain new skills and useful experience
+A120,ordinal_scale,Reasons voluntary work,,5,"Reasons voluntary work: Did not want to, but could not refuse"
+A124_01,mention_flag,Neighbours,neighbours,2,Neighbours: People with a criminal record
+A124_02,mention_flag,Neighbours,neighbours,2,Neighbours: People of a different race
+A124_03,mention_flag,Neighbours,neighbours,2,Neighbours: Heavy drinkers
+A124_04,mention_flag,Neighbours,neighbours,2,Neighbours: Emotionally unstable people
+A124_05,mention_flag,Neighbours,neighbours,2,Neighbours: Muslims
+A124_06,mention_flag,Neighbours,neighbours,2,Neighbours: Immigrants/foreign workers
+A124_07,mention_flag,Neighbours,neighbours,2,Neighbours: People who have AIDS
+A124_08,mention_flag,Neighbours,neighbours,2,Neighbours: Drug addicts
+A124_09,mention_flag,Neighbours,neighbours,2,Neighbours: Homosexuals
+A124_10,mention_flag,Neighbours,neighbours,2,Neighbours: Jews
+A124_11,mention_flag,Neighbours,neighbours,2,Neighbours: Evangelists
+A124_12,mention_flag,Neighbours,neighbours,2,Neighbours: People of a different religion
+A124_13,mention_flag,Neighbours,neighbours,2,Neighbours: People of the same religion
+A124_14,mention_flag,Neighbours,neighbours,2,Neighbours: Militant minority
+A124_15,mention_flag,Neighbours,neighbours,2,Neighbours: Zoroastrians
+A124_16,mention_flag,Neighbours,neighbours,2,Neighbours: People not from country of origin
+A124_17,mention_flag,Neighbours,neighbours,2,Neighbours: Gypsies
+A124_18,mention_flag,Neighbours,neighbours,2,Neighbours: Political Extremists
+A124_19,mention_flag,Neighbours,neighbours,2,Neighbours: Trafficants
+A124_20,mention_flag,Neighbours,neighbours,2,Neighbours: Indians or Lebanese
+A124_21,mention_flag,Neighbours,neighbours,2,Neighbours: Chinese or Philippino Chinese
+A124_22,mention_flag,Neighbours,neighbours,2,Neighbours: Spiritists
+A124_23,mention_flag,Neighbours,neighbours,2,Neighbours: Protestants
+A124_24,mention_flag,Neighbours,neighbours,2,Neighbours: Christians
+A124_25,mention_flag,Neighbours,neighbours,2,Neighbours: Witchdoctors and related labels
+A124_27,mention_flag,Neighbours,neighbours,2,Neighbours: Right wing extremists
+A124_28,mention_flag,Neighbours,neighbours,2,Neighbours: People with large families
+A124_29,mention_flag,Neighbours,neighbours,2,Neighbours: Hindus
+A124_30,mention_flag,Neighbours,neighbours,2,Neighbours: North-American persons
+A124_31,mention_flag,Neighbours,neighbours,2,Neighbours: Haitians
+A124_32,mention_flag,Neighbours,neighbours,2,Neighbours: Members of new religious movements
+A124_33,mention_flag,Neighbours,neighbours,2,"Neighbours: Jews, Arabs, Asians, gypsies, etc"
+A124_34,mention_flag,Neighbours,neighbours,2,Neighbours: Black people
+A124_35,mention_flag,Neighbours,neighbours,2,Neighbours: White people
+A124_36,mention_flag,Neighbours,neighbours,2,Neighbours: Coloured people
+A124_37,mention_flag,Neighbours,neighbours,2,Neighbours: Indians
+A124_38,mention_flag,Neighbours,neighbours,2,"Neighbours: Kurds, Esids"
+A124_42,mention_flag,Neighbours,neighbours,2,Neighbours: Unmarried couples living together
+A124_43,mention_flag,Neighbours,neighbours,2,Neighbours: People who speak a different language
+A124_45,mention_flag,Neighbours,neighbours,2,Neighbours: Sunnis
+A124_46,mention_flag,Neighbours,neighbours,2,Neighbours: Shia
+A124_47,mention_flag,Neighbours,neighbours,2,Neighbours: French
+A124_48,mention_flag,Neighbours,neighbours,2,Neighbours: British
+A124_49,mention_flag,Neighbours,neighbours,2,Neighbours: Iranian
+A124_50,mention_flag,Neighbours,neighbours,2,Neighbours: Kuwaiti
+A124_51,mention_flag,Neighbours,neighbours,2,Neighbours: Turkish
+A124_52,mention_flag,Neighbours,neighbours,2,Neighbours: Jordanian
+A124_53,mention_flag,Neighbours,neighbours,2,Neighbours: Kildani
+A124_54,mention_flag,Neighbours,neighbours,2,Neighbours: Indigenes; Aborigenes
+A124_55,mention_flag,Neighbours,neighbours,2,Neighbours: Maori
+A124_56,mention_flag,Neighbours,neighbours,2,Neighbours: Pacific Islanders
+A124_57,mention_flag,Neighbours,neighbours,2,Neighbours: Europeans/Pakeha
+A124_58,mention_flag,Neighbours,neighbours,2,Neighbours: Americans
+A124_59,mention_flag,Neighbours,neighbours,2,Neighbours: Chaldean
+A124_60,mention_flag,Neighbours,neighbours,2,Neighbours: Mapuches
+A124_61,mention_flag,Neighbours,neighbours,2,Neighbours: Russians
+A165,binary,,,2,Most people can be trusted
+A168,binary,,,2,Do you think most people try to take advantage of you
+A168A,numeric_scale,,,10,Do you think most people try to take advantage of you (10 point scale)
+A169,forced_choice,,,5,Good human relationships
+A170,numeric_scale,,,10,Satisfaction with your life
+A173,numeric_scale,,,10,How much freedom of choice and control
+A174,ordinal_scale,,,3,Membership consumer organisation
+A189,ordinal_scale,Schwartz,,6,Schwartz: It is important to this person to think up new ideas and be creative
+A190,ordinal_scale,Schwartz,,6,Schwartz: It is important to this person to be rich
+A191,ordinal_scale,Schwartz,,6,Schwartz: It is important to this person living in secure surroundings
+A192,ordinal_scale,Schwartz,,6,Schwartz: It is important to this person to have a good time
+A193,ordinal_scale,Schwartz,,6,Schwartz: It is important to this person to help the people nearby
+A194,ordinal_scale,Schwartz,,6,Schwartz: It is important to this person being very successful
+A195,ordinal_scale,Schwartz,,6,Schwartz: It is important to this person adventure and taking risks
+A196,ordinal_scale,Schwartz,,6,Schwartz: It is important to this person to always behave properly
+A197,ordinal_scale,Schwartz,,6,Schwartz: It is important to this person looking after the environment
+A198,ordinal_scale,Schwartz,,6,Schwartz: It is important to this person tradition
+A199,ordinal_scale,Schwartz,,6,Schwartz: It is important to this person to do something for the good of society
+A200,numeric_scale,Social position,,10,Social position: People in their 20s
+A201,numeric_scale,Social position,,10,Social position: People in their 40s
+A202,numeric_scale,Social position,,10,Social position: People in their 70s
+A203,numeric_scale,,,10,Is a 30-year old boss acceptable
+A204,ordinal_scale,People over 70,,5,People over 70: are seen as friendly
+A205,ordinal_scale,People over 70,,5,People over 70: are seen as competent
+A206,ordinal_scale,People over 70,,5,People over 70: viewed with respect
+A207,numeric_scale,,,10,Is a 70-year old boss acceptable
+A208,ordinal_scale,,,4,Older people are not respected much these days
+A209,ordinal_scale,,,4,Older people get more than their fair share from the government
+A210,ordinal_scale,,,4,Older people are a burden on society
+A211,ordinal_scale,,,4,Companies that employ young people perform better than those that employ people of different ages
+A212,ordinal_scale,,,4,Old people have too much political influence
+A213,ordinal_scale,I see myself as someone who,,5,I see myself as someone who: is reserved
+A214,ordinal_scale,I see myself as someone who,,5,I see myself as someone who: is generally trusting
+A215,ordinal_scale,I see myself as someone who,,5,I see myself as someone who: tends to be lazy
+A216,ordinal_scale,I see myself as someone who,,5,"I see myself as someone who: is relaxed, handles stress well"
+A217,ordinal_scale,I see myself as someone who,,5,I see myself as someone who: has few artistic interests
+A218,ordinal_scale,I see myself as someone who,,5,"I see myself as someone who: is outgoing, sociable"
+A219,ordinal_scale,I see myself as someone who,,5,I see myself as someone who: tends to find fault with others
+A220,ordinal_scale,I see myself as someone who,,5,I see myself as someone who: does a thorough job
+A221,ordinal_scale,I see myself as someone who,,5,I see myself as someone who: gets nervous easily
+A222,ordinal_scale,I see myself as someone who,,5,I see myself as someone who: has an active imagination
+B001,ordinal_scale,,,4,Would give part of my income for the environment
+B002,ordinal_scale,,,4,Increase in taxes if used to prevent environmental pollution
+B003,ordinal_scale,,,4,Government should reduce environmental pollution
+B004,ordinal_scale,,,4,Would buy things at a 20% higher price if it helped to protect environment
+B005,ordinal_scale,,,4,All talk about the environment make people anxious
+B006,ordinal_scale,,,4,"Combatting unemployment, we have to accept environmental problems"
+B007,ordinal_scale,,,4,Protecting environment and fighting pollution is less urgent than suggested
+B008,forced_choice,,,3,Protecting environment vs. Economic growth
+B009,forced_choice,,,5,Human & nature
+B010,ordinal_scale,,,4,[Country]s environmental problems can be solved without any international agreements to handle them
+B011,binary,Environmental action,,2,Environmental action: chosen products that are better for environment
+B012,binary,Environmental action,,2,Environmental action: recycle
+B013,binary,Environmental action,,2,Environmental action: reduce water consumption
+B014,binary,Environmental action,,2,"Environmental action: attend meeting, signed petition"
+B015,binary,Environmental action,,2,Environmental action: contributed to environmental organization
+B016,forced_choice,,,3,Tradition vs. high economic growth
+B017,forced_choice,,,5,Humanity has a bright or bleak future
+B018,ordinal_scale,Environmental problems in your community,,4,Environmental problems in your community: Poor water quality.
+B019,ordinal_scale,Environmental problems in your community,,4,Environmental problems in your community: Poor air quality.
+B020,ordinal_scale,Environmental problems in your community,,4,Environmental problems in your community: Poor sewage and sanitation.
+B021,ordinal_scale,Environmental problems in the world,,4,Environmental problems in the world: Global warming or the greenhouse effect.
+B022,ordinal_scale,Environmental problems in the world,,4,Environmental problems in the world: Loss of plant or animal species or biodiversity.
+B023,ordinal_scale,Environmental problems in the world,,4,"Environmental problems in the world: Pollution of rivers, lakes and oceans."
+B030,binary,Past two years,,2,Past two years: given money to ecological organization
+B031,binary,Past two years,,2,Past two years: participated in demonstration for environment
+C001,categorical,Jobs scarce,,3,Jobs scarce: Men should have more right to a job than women (3 categories)
+C001_01,ordinal_scale,Jobs scarce,,5,Jobs scarce: Men should have more right to a job than women (5 categories)
+C002,categorical,Jobs scarce,,3,Jobs scarce: Employers should give priority to (nation) people than immigrants (3 categories)
+C002_01,ordinal_scale,Jobs scarce,,5,Jobs scarce: Employers should give priority to (nation) people than immigrants (5 categories)
+C004,categorical,Jobs scarce,,3,Jobs scarce: older people should be forced to retire
+C005,categorical,,,3,Unfair to give work to handicapped people when able bodied people can´t find jobs
+C006,numeric_scale,,,10,Satisfaction with financial situation of household
+C008,numeric_scale,,,5,Work compared with Leisure
+C009,ranked_choice,,,5,"First choice, if looking for a job"
+C010,ranked_choice,,,5,Second choice if looking for a job
+C011,mention_flag,Important in a job,job_qualities,2,Important in a job: good pay
+C012,mention_flag,Important in a job,job_qualities,2,Important in a job: not too much pressure
+C013,mention_flag,Important in a job,job_qualities,2,Important in a job: good job security
+C014,mention_flag,Important in a job,job_qualities,2,Important in a job: a respected job
+C015,mention_flag,Important in a job,job_qualities,2,Important in a job: good hours
+C016,mention_flag,Important in a job,job_qualities,2,Important in a job: an opportunity to use initiative
+C017,mention_flag,Important in a job,job_qualities,2,Important in a job: generous holidays
+C018,mention_flag,Important in a job,job_qualities,2,Important in a job: that you can achieve something
+C019,mention_flag,Important in a job,job_qualities,2,Important in a job: a responsible job
+C020,mention_flag,Important in a job,job_qualities,2,Important in a job: a job that is interesting
+C021,mention_flag,Important in a job,job_qualities,2,Important in a job: a job that meets one´s abilities
+C022,mention_flag,Important in a job,job_qualities,2,Important in a job: pleasant people to work with
+C023,mention_flag,Important in a job,job_qualities,2,Important in a job: good chances for promotion
+C024,mention_flag,Important in a job,job_qualities,2,Important in a job: a useful job for society
+C025,mention_flag,Important in a job,job_qualities,2,Important in a job: meeting people
+C031,ordinal_scale,,,4,Degree of pride in your work
+C033,numeric_scale,,,10,Job satisfaction
+C034,numeric_scale,,,10,Freedom decision taking in job
+C036,ordinal_scale,,,5,To develop talents you need to have a job
+C037,ordinal_scale,,,5,Humiliating to receive money without having to work for it
+C038,ordinal_scale,,,5,People who don´t work turn lazy
+C039,ordinal_scale,,,5,Work is a duty towards society
+C040,ordinal_scale,,,5,People should not have to work if they don´t want to
+C041,ordinal_scale,,,5,Work should come first even if it means less spare time
+C042B1,mention_flag,Why people work,why_people_work,2,Why people work: work is like a business transaction
+C042B2,mention_flag,Why people work,why_people_work,2,Why people work: I do the best I can regardless of pay
+C042B3,mention_flag,Why people work,why_people_work,2,Why people work: I wouldn’t work if I didn’t have to
+C042B4,mention_flag,Why people work,why_people_work,2,Why people work: I wouldn´t work if work interfered my life
+C042B5,mention_flag,Why people work,why_people_work,2,Why people work: work most important in my life
+C042B6,mention_flag,Why people work,why_people_work,2,Why people work: I never had a paid job
+C042B7,mention_flag,Why people work,why_people_work,2,Why people work: don’t know
+C059,binary,Fairness,,2,Fairness: One secretary is paid more
+C060,categorical,,,4,How business and industry should be managed
+C061,forced_choice,,,3,Following instructions at work
+C062,ordinal_scale,Work,,4,Work: until satisfied with results
+C063,ordinal_scale,Work,,4,Work: accomplish personal goals
+C064,ordinal_scale,Work,,4,Work: stay up late to finish
+D001,ordinal_scale,,,5,How much do you trust your family
+D001_B,ordinal_scale,How much you trust,,4,How much you trust: Your family (B)
+D002,numeric_scale,,,10,Satisfaction with home life
+D003,mention_flag,Sharing with partner,sharing_attitudes,2,Sharing with partner: attitudes towards religion
+D004,mention_flag,Sharing with partner,sharing_attitudes,2,Sharing with partner: moral standards
+D005,mention_flag,Sharing with partner,sharing_attitudes,2,Sharing with partner: social attitudes
+D006,mention_flag,Sharing with partner,sharing_attitudes,2,Sharing with partner: political views
+D007,mention_flag,Sharing with partner,sharing_attitudes,2,Sharing with partner: sexual attitudes
+D008,mention_flag,Sharing with partner,sharing_attitudes,2,Sharing with partner: no sharing attitudes
+D009,mention_flag,Sharing with partner,sharing_attitudes,2,Sharing with partner: don´t know or missing
+D010,mention_flag,Sharing with parents,sharing_attitudes,2,Sharing with parents: attitudes towards religion
+D011,mention_flag,Sharing with parents,sharing_attitudes,2,Sharing with parents: moral standards´
+D012,mention_flag,Sharing with parents,sharing_attitudes,2,Sharing with parents: social attitudes
+D013,mention_flag,Sharing with parents,sharing_attitudes,2,Sharing with parents: political views
+D014,mention_flag,Sharing with parents,sharing_attitudes,2,Sharing with parents: sexual attitudes
+D015,mention_flag,Sharing with parents,sharing_attitudes,2,Sharing with parents: no sharing attitudes
+D016,mention_flag,Sharing with parents,sharing_attitudes,2,Sharing with parents: don´t know or missing
+D017,count,,,11,Ideal number of children
+D018,binary,,,2,Child needs a home with father and mother
+D019,binary,,,2,A woman has to have children to be fulfilled
+D022,binary,,,2,Marriage is an out-dated institution
+D023,categorical,,,3,Woman as a single parent
+D024,categorical,,,3,Enjoy sexual freedom
+D025,categorical,If only one child allowed,,3,If only one child allowed: boy or girl
+D026_03,ordinal_scale,,,5,Duty towards society to have children
+D026_05,ordinal_scale,,,5,It is childs duty to take care of ill parent
+D027,ordinal_scale,Important for succesful marriage,,3,Important for succesful marriage: Faithfulness
+D028,ordinal_scale,Important for succesful marriage,,3,Important for succesful marriage: Adequate income
+D029,ordinal_scale,Important for succesful marriage,,3,Important for succesful marriage: Same social background
+D030,ordinal_scale,Important for succesful marriage,,3,Important for succesful marriage: Respect and appreciation
+D031,ordinal_scale,Important for succesful marriage,,3,Important for succesful marriage: Religious beliefs
+D032,ordinal_scale,Important for succesful marriage,,3,Important for succesful marriage: Good housing
+D033,ordinal_scale,Important for succesful marriage,,3,Important for succesful marriage: Agreement on politics
+D034,ordinal_scale,Important in succesful marriage,,3,Important in succesful marriage: Understanding and tolerance
+D035,ordinal_scale,Important for succesful marriage,,3,Important for succesful marriage: Apart from in-laws
+D036,ordinal_scale,Important for succesful marriage,,3,Important for succesful marriage: Happy sexual relationship
+D037,ordinal_scale,Important for succesful marriage,,3,Important for succesful marriage: Sharing household chores
+D038,ordinal_scale,Important for succesful marriage,,3,Important for succesful marriage: Children
+D043,ordinal_scale,Important for succesful marriage,,3,Important for succesful marriage: Tastes and interests in common
+D054,ordinal_scale,,,4,One of main goals in life has been to make my parents proud
+D055,ordinal_scale,,,4,Make effort to live up to what my friends expect
+D056,ordinal_scale,,,4,Relationship working mother
+D057,ordinal_scale,,,4,Being a housewife just as fulfilling
+D058,ordinal_scale,,,4,Husband and wife should both contribute to income
+D059,ordinal_scale,,,4,Men make better political leaders than women do
+D060,ordinal_scale,,,4,University is more important for a boy than for a girl
+D061,ordinal_scale,,,4,Pre-school child suffers with working mother
+D062,ordinal_scale,,,4,Women want a home and children
+D063,ordinal_scale,,,4,Job best way for women to be independent
+D063_B,ordinal_scale,,,3,Job best way for women to be independent (b)
+D066,ordinal_scale,,,4,Problem if women have more income than husband (4 categories)
+D066_B,ordinal_scale,,,3,Problem if women have more income than husband (3 categories)
+D066_01,ordinal_scale,,,5,Problem if women have more income than husband (5 categories)
+D067,ordinal_scale,Traits in a woman,,5,Traits in a woman: Woman wearing weil
+D068,ordinal_scale,Traits in a woman,,5,Traits in a woman: Woman good mother
+D069,ordinal_scale,Traits in a woman,,5,Traits in a woman: Woman good wife
+D070,ordinal_scale,Traits in a woman,,5,Traits in a woman: Woman religious
+D071,ordinal_scale,Traits in a woman,,5,Traits in a woman: Woman educated
+D072,ordinal_scale,Traits in a woman,,5,Traits in a woman: Woman being independent
+D073,ordinal_scale,Traits in a woman,,5,Traits in a woman: Woman having work outside home
+D074,ordinal_scale,Traits in a woman,,5,Traits in a woman: Woman maintaining her family
+D075,ordinal_scale,Traits in a woman,,5,Traits in a woman: Woman being sociable
+D076,ordinal_scale,,,5,More than one wife
+D077,ordinal_scale,,,5,Wife must obey
+D078,ordinal_scale,,,4,Men make better business executives than women do
+D079,ordinal_scale,,,4,I seek to be myself rather than to follow others
+D080,ordinal_scale,,,4,I decide my goals in life by myself
+D081,ordinal_scale,,,5,Homosexual couples are as good parents as other couples
+E001,ranked_choice,Aims of country,,4,Aims of country: first choice
+E002,ranked_choice,Aims of country,,4,Aims of country: second choice
+E003,ranked_choice,Aims of respondent,,4,Aims of respondent: first choice
+E004,ranked_choice,Aims of respondent,,4,Aims of respondent: second choice
+E005,ranked_choice,Most important,,4,Most important: first choice
+E006,ranked_choice,Most important,,4,Most important: second choice
+E007,ordinal_scale,National goals,,4,National goals: Maintaining order in the nation
+E008,ordinal_scale,National goals,,4,National goals: Giving people more say
+E009,ordinal_scale,National goals,,4,National goals: Fighting rising prices
+E010,ordinal_scale,National goals,,4,National goals: free speech
+E012,binary,,,2,Willingness to fight for country
+E014,ordinal_scale,Future changes,,3,Future changes: Less emphasis on money and material possessions
+E015,ordinal_scale,Future changes,,3,Future changes: Less importance placed on work
+E016,ordinal_scale,Future changes,,3,Future changes: More emphasis on technology
+E017,ordinal_scale,Future changes,,3,Future changes: More emphasis on individual
+E018,ordinal_scale,Future changes,,3,Future changes: Greater respect for authority
+E019,ordinal_scale,Future changes,,3,Future changes: More emphasis on family life
+E020,ordinal_scale,Future changes,,3,Future changes: A simple and more natural lifestyle
+E022,forced_choice,,,3,Opinion about scientific advances
+E023,ordinal_scale,,,4,Interest in politics
+E025,ordinal_scale,Political action,,3,Political action: Signing a petition
+E025B,binary,Political action recently done,,2,Political action recently done: signing a petition
+E026,ordinal_scale,Political action,,3,Political action: joining in boycotts
+E026B,binary,Political action recently done,,2,Political action recently done: joining in boycotts
+E027,ordinal_scale,Political action,,3,Political action: attending lawful/peaceful demonstrations
+E028,ordinal_scale,Political action,,3,Political action: joining unofficial strikes
+E028B,binary,Political acition recently done,,2,Political acition recently done: Joining strikes
+E029,ordinal_scale,Political action,,3,Political action: occupying buildings or factories
+E032,forced_choice,,,3,Freedom or equality
+E033,numeric_scale,,,10,Self positioning in political scale
+E034,categorical,,,3,Basic kinds of attitudes concerning society
+E035,numeric_scale,,,10,Income equality
+E036,numeric_scale,,,10,Private vs state ownership of business
+E037,numeric_scale,,,10,Government responsibility
+E038,numeric_scale,,,10,Job taking of the unemployed
+E039,numeric_scale,,,10,Competition good or harmful
+E040,numeric_scale,,,10,Hard work brings success
+E041,numeric_scale,,,10,Wealth accumulation
+E045,numeric_scale,,,10,Major changes in life
+E046,numeric_scale,,,10,New and old ideas
+E047,numeric_scale,Personal characteristics,,10,"Personal characteristics: Changes, worry or welcome possibility"
+E048,mention_flag,Personal characteristics,personal_characteristics,2,Personal characteristics: I usually count on being successful in everything I do
+E049,mention_flag,Personal characteristics,personal_characteristics,2,Personal characteristics: I enjoy convincing others of my opinion
+E050,mention_flag,Personal characteristics,personal_characteristics,2,Personal characteristics: I serve as a model for others
+E051,mention_flag,Personal characteristics,personal_characteristics,2,Personal characteristics: I am good at getting what I want
+E052,mention_flag,Personal characteristics,personal_characteristics,2,Personal characteristics: I own many things others envy me for
+E053,mention_flag,Personal characteristics,personal_characteristics,2,Personal characteristics: I like to assume responsibility
+E054,mention_flag,Personal characteristics,personal_characteristics,2,Personal characteristics: I am rarely unsure about how I should behave
+E055,mention_flag,Personal characteristics,personal_characteristics,2,Personal characteristics: I often give others advice
+E056,mention_flag,Personal characteristics,personal_characteristics,2,Personal characteristics: None of the above
+E057,ordinal_scale,,,5,The economic system needs fundamental changes
+E058,ordinal_scale,,,5,Our government should be made much more open to the public
+E059,ordinal_scale,,,5,Allow more freedom for individuals
+E060,ordinal_scale,,,5,I could do nothing about an unjust law
+E061,ordinal_scale,,,5,Political reform is moving too rapidly
+E062,forced_choice,,,3,Importation of goods
+E063,ordinal_scale,Current society,,5,Current society: Egalitarian vs. competitive society
+E064,ordinal_scale,Current society,,5,Current society: Extensive welfare vs. low taxes
+E065,ordinal_scale,Current society,,5,Current society: Regulated vs. responsible society
+E066,ordinal_scale,Society aimed,,5,Society aimed:  egalitarian vs. competitive
+E067,ordinal_scale,Society aimed,,5,Society aimed: extensive welfare vs. low taxes
+E068,ordinal_scale,Society aimed,,5,Society aimed: regulated vs. responsible society
+E069_01,ordinal_scale,Confidence,,4,Confidence: Churches
+E069_02,ordinal_scale,Confidence,,4,Confidence: Armed Forces
+E069_03,ordinal_scale,Confidence,,4,Confidence: Education System
+E069_04,ordinal_scale,Confidence,,4,Confidence: The Press
+E069_05,ordinal_scale,Confidence,,4,Confidence: Labour Unions
+E069_06,ordinal_scale,Confidence,,4,Confidence: The Police
+E069_07,ordinal_scale,Confidence,,4,Confidence: Parliament
+E069_08,ordinal_scale,Confidence,,4,Confidence: The Civil Services
+E069_09,ordinal_scale,Confidence,,4,Confidence: Social Security System
+E069_10,ordinal_scale,Confidence,,4,Confidence: Television
+E069_11,ordinal_scale,Confidence,,4,Confidence: The Government
+E069_12,ordinal_scale,Confidence,,4,Confidence: The Political Parties
+E069_13,ordinal_scale,Confidence,,4,Confidence: Major Companies
+E069_14,ordinal_scale,Confidence,,4,Confidence: The Environmental Protection Movement
+E069_15,ordinal_scale,Confidence,,4,Confidence: The Women´s Movement
+E069_17,ordinal_scale,Confidence,,4,Confidence: Justice System/Courts
+E069_18,ordinal_scale,Confidence,,4,Confidence: The European Union
+E069_18A,ordinal_scale,Confidence,,4,Confidence: Major regional organization (combined from country-specific)
+E069_19,ordinal_scale,Confidence,,4,Confidence: NATO
+E069_20,ordinal_scale,Confidence,,4,Confidence: The United Nations
+E069_21,ordinal_scale,Confidence,,4,Confidence: The Arab League
+E069_22,ordinal_scale,Confidence,,4,Confidence: The Association of South East Asian Nations -ASEAN
+E069_23,ordinal_scale,Confidence,,4,Confidence: The Organization for African Unity-OAU
+E069_24,ordinal_scale,Confidence,,4,Confidence: The NAFTA
+E069_25,ordinal_scale,Confidence,,4,Confidence: The Andean pact
+E069_26,ordinal_scale,Confidence,,4,Confidence: The Mercosur
+E069_27,ordinal_scale,Confidence,,4,Confidence: The SAARC
+E069_28,ordinal_scale,Confidence,,4,Confidence: The ECO
+E069_29,ordinal_scale,Confidence,,4,Confidence: The APEC
+E069_30,ordinal_scale,Confidence,,4,Confidence: The Free Commerce Treaty (Tratado de libre comercio)
+E069_31,ordinal_scale,Confidence,,4,Confidence: The United American States Organization (Organización de Estados Unidos Americanos - OEA)
+E069_32,ordinal_scale,Confidence,,4,Confidence: The “Movimiento en pro de Vieques”(Puerto Rico)
+E069_33,ordinal_scale,Confidence,,4,Confidence: Local/Regional Government
+E069_34,ordinal_scale,Confidence,,4,Confidence: SADC/SADEC
+E069_35,ordinal_scale,Confidence,,4,Confidence: East African Cooperation (EAC)
+E069_38,ordinal_scale,Confidence,,4,Confidence: The Presidency
+E069_39,ordinal_scale,Confidence,,4,Confidence: The Civil Society Groups
+E069_40,ordinal_scale,Confidence,,4,Confidence: Charitable or humanitarian organizations
+E069_41,ordinal_scale,Confidence,,4,Confidence: Banks
+E069_42,ordinal_scale,Confidence,,4,Confidence: CARICOM
+E069_43,ordinal_scale,Confidence,,4,Confidence: CIS
+E069_44,ordinal_scale,Confidence,,4,Confidence: Confidence in CER with Australia
+E069_45,ordinal_scale,Confidence,,4,Confidence: International Monetary Found (IMF)
+E069_46,ordinal_scale,Confidence,,4,Confidence: Non governmental Organizations (NGOs)
+E069_47,ordinal_scale,Confidence,,4,Confidence: The American Forces
+E069_48,ordinal_scale,Confidence,,4,Confidence: The non-Iraqi television
+E069_49,ordinal_scale,Confidence,,4,Confidence: TV News
+E069_51,ordinal_scale,Confidence,,4,Confidence: Religious leaders
+E069_52,ordinal_scale,Confidence,,4,Confidence: Evangelic Church
+E069_54,ordinal_scale,Confidence,,4,Confidence: Universities
+E069_55,ordinal_scale,Confidence,,4,Confidence: The Organization of the Islamic World
+E069_56,ordinal_scale,Confidence,,4,Confidence: The Organization of American States (OAE)
+E069_57,ordinal_scale,Confidence,,4,Confidence: UNASUR
+E069_58,ordinal_scale,Confidence,,4,Confidence: The Arab Maghreb Union
+E069_59,ordinal_scale,Confidence,,4,Confidence: Cooperation Council for the Arab states of Gulf (GCC)
+E069_60,ordinal_scale,Confidence,,4,Confidence: Mainland government
+E069_61,ordinal_scale,Confidence,,4,Confidence: The World Trade Organization (WTO)
+E069_62,ordinal_scale,Confidence,,4,Confidence: The World Health Organization (WHO)
+E069_63,ordinal_scale,Confidence,,4,Confidence: The World Bank
+E069_64,ordinal_scale,Confidence,,4,Confidence: Elections
+E069_65,ordinal_scale,Confidence,,4,Confidence: International Criminal Court (ICC)
+E069_66,ordinal_scale,Confidence,,4,Confidence: UNDP United Nations Development Programme
+E069_67,ordinal_scale,Confidence,,4,Confidence: The African Union (AU)
+E104,ordinal_scale,Approval,,4,Approval: Ecology movement or nature protection
+E105,ordinal_scale,Approval,,4,Approval: Anti-nuclear energy movement
+E106,ordinal_scale,Approval,,4,Approval: Disarmament movement
+E107,ordinal_scale,Approval,,4,Approval: Human rights movement
+E108,ordinal_scale,Approval,,4,Approval: Women’s movement
+E109,ordinal_scale,Approval,,4,Approval: Anti-apartheid movement
+E110,ordinal_scale,,,4,Satisfaction with the way democracy develops
+E111,numeric_scale,,,10,Rate political system for governing country
+E112,numeric_scale,,,10,Rate political system as it was before
+E113,numeric_scale,,,10,Rate political system in ten years
+E114,ordinal_scale,Political system,,4,Political system: Having a strong leader
+E115,ordinal_scale,Political system,,4,Political system: Having experts make decisions
+E116,ordinal_scale,Political system,,4,Political system: Having the army rule
+E117,ordinal_scale,Political system,,4,Political system: Having a democratic political system
+E117B,ordinal_scale,Political system,,4,Political system: Having a system governed by religious law in which there are no political parties or elections
+E118,forced_choice,,,2,Firm party leader vs. Cooperating party leader
+E119,forced_choice,,,2,Government order vs. freedom
+E120,ordinal_scale,,,4,"In democracy, the economic system runs badly"
+E121,ordinal_scale,,,4,Democracies are indecisive and have too much squabbling
+E122,ordinal_scale,,,4,Democracies aren´t good at maintaining order
+E123,ordinal_scale,,,4,Democracy may have problems but is better
+E124,ordinal_scale,,,4,Respect for individual human rights nowadays
+E125,ordinal_scale,,,4,Satisfaction with the people in national office
+E127,binary,,,2,Free market economy right for country future
+E128,forced_choice,,,2,Country is run by big interest vs. for all people’s benefit
+E129,ordinal_scale,,,5,Economic aid to poorer countries
+E129A,ordinal_scale,,,3,Amount of foreign aid of this country
+E129B,ordinal_scale,,,5,How much more foreign aid this country should contribute
+E129C,binary,,,2,Be willing to pay higher taxes in order to increase country´s foreign aid
+E129D,ordinal_scale,,,4,Economic aid to poorer countries (favor/against)
+E130,ordinal_scale,,,3,Poverty compared to 10 years ago
+E131,forced_choice,,,3,Why are people in need
+E132,forced_choice,,,3,Chance to escape from poverty
+E133,ordinal_scale,,,4,How much is the government doing against poverty
+E134,ordinal_scale,,,4,Amount of help for less developed countries
+E135,categorical,Who should decide,,6,Who should decide: international peacekeeping
+E136,categorical,Who should decide,,6,Who should decide: protection of the environment
+E137,categorical,Who should decide,,6,Who should decide: aid to developing countries
+E138,categorical,Who should decide,,6,Who should decide: refugees
+E139,categorical,Who should decide,,6,Who should decide: human rights
+E140,ordinal_scale,,,4,Country cannot solve environmental problems by itself
+E141,ordinal_scale,,,4,Country cannot solve crime problems by itself
+E142,ordinal_scale,,,4,Country cannot solve employment problems by itself
+E143,ordinal_scale,,,4,Immigrant policy
+E150,ordinal_scale,,,5,How often follows politics in the news
+E179WVS,categorical,Which party would you vote for,,0,Which party would you vote for: first choice (WVS)
+E180WVS,categorical,Which party would you vote for,,0,Which party would you vote for: second choice (WVS)
+E182,categorical,,,0,Party that would never vote
+E184,ordinal_scale,,,5,Aggression from neighbouring country
+E185,ordinal_scale,,,5,Exploitation of local resources
+E186,ordinal_scale,,,5,Cultural invasion by the west
+E188,ordinal_scale,,,4,Frequency watches TV
+E189,ordinal_scale,,,4,TV most important entertainment
+E190,ranked_choice,Why are there people living in need,,5,Why are there people living in need: first
+E191,ranked_choice,Why are there people living in need,,5,Why are there people living in need: second
+E192,categorical,,,20,Least liked group in society
+E193,binary,Least liked allow,,2,Least liked allow: hold office
+E194,binary,Least liked allow,,2,Least liked allow: teach
+E195,binary,Least liked allow,,2,Least liked allow: demonstrate
+E196,ordinal_scale,,,4,Extent of political corruption
+E198,ordinal_scale,,,4,Using violence for political goals not justified
+E203,ordinal_scale,,,4,Rapid implementation of market reforms have negative impact on national stability
+E204,categorical,,,3,Effect of market economic reforms
+E205,ordinal_scale,,,4,Political parties serve the social and political needs of people
+E206,binary,,,2,Free and fair elections will reduce terrorism
+E207,ordinal_scale,,,4,[Country] should have close relations with France
+E208,ordinal_scale,,,4,[Country] should have close relations with United States
+E209,binary,,,2,Would persist to immigrate abroad if R´s economic situation was better
+E211,categorical,,,3,Opinion about the problem of Palestine and Israel
+E212,ordinal_scale,,,4,Opinion about 11th september airliners crash action by religious fundamentalists
+E213,ordinal_scale,,,5,Woman should not work outside unless forced to do so
+E214,ordinal_scale,,,5,Western democracy is the best political system for country
+E215,ordinal_scale,,,4,It is necessary to fight terrorism by military means
+E216,ordinal_scale,,,4,[Country] needs foreign military cooperation to combat terrorism
+E217,numeric_scale,,,10,"Science and technology are making our lives healthier, easier, and more comfortable"
+E218,numeric_scale,,,10,"Because of science and technology, there will be more opportunities for the next generation"
+E219,numeric_scale,,,10,Science and technology make our way of life change too fast
+E220,numeric_scale,,,10,We depend too much on science and not enough on faith
+E221B,binary,Political action recently done,,2,Political action recently done: Attending peaceful/lawful demonstrations
+E222,ordinal_scale,Political action,,3,Political action: Other
+E222B,binary,Political action recently done,,2,Political action recently done: Other
+E224,numeric_scale,Democracy,,11,Democracy: Governments tax the rich and subsidize the poor.
+E225,numeric_scale,Democracy,,11,Democracy: Religious authorities interpret the laws.
+E226,numeric_scale,Democracy,,11,Democracy: People choose their leaders in free elections.
+E227,numeric_scale,Democracy,,11,Democracy: People receive state aid for unemployment.
+E228,numeric_scale,Democracy,,11,Democracy: The army takes over when government is incompetent.
+E229,numeric_scale,Democracy,,11,Democracy: Civil rights protect people’s liberty against oppression.
+E230,numeric_scale,Democracy,,10,Democracy: The economy is prospering.
+E231,numeric_scale,Democracy,,10,Democracy: Criminals are severely punished.
+E232,numeric_scale,Democracy,,10,Democracy: People can change the laws in referendums.
+E233,numeric_scale,Democracy,,11,Democracy: Women have the same rights as men.
+E233A,numeric_scale,Democracy,,11,Democracy: The state makes people's incomes equal
+E233B,numeric_scale,Democracy,,11,Democracy: People obey their rulers
+E234,numeric_scale,,,10,"The world is better off, or worse off, because of science and technology"
+E235,numeric_scale,,,11,Importance of democracy
+E236,numeric_scale,,,11,Democraticness in own country
+E237,binary,,,2,Heard of the Millennium Development Goals
+E238,ranked_choice,Most serious problem of the world,,5,Most serious problem of the world: 1st choice
+E239,ranked_choice,Most serious problem of the world,,5,Most serious problem of the world: 2nd choice
+E240,ranked_choice,Most serious problem for own country,,5,Most serious problem for own country: 1st choice
+E241,ranked_choice,Most serious problem for own country,,5,Most serious problem for own country: 2nd choice
+E242,ordinal_scale,MDG,,4,MDG: Reduce extreme poverty
+E243,ordinal_scale,MDG,,4,MDG: Increase primary education
+E244,ordinal_scale,MDG,,4,MDG: Reduce child mortality
+E245,ordinal_scale,MDG,,4,MDG: Fight HIV
+E246,ordinal_scale,MDG,,4,MDG: Improve housing conditions
+E247,numeric_scale,Priority,,10,Priority: Global poverty versus National problems
+E248,mention_flag,Information source,info_source_last_week,2,Information source: Daily newspaper
+E248B,ordinal_scale,Information source,,5,Information source: Daily newspaper (B)
+E249,mention_flag,Information source,info_source_last_week,2,Information source: News broadcasts on radio or TV
+E250,mention_flag,Information source,info_source_last_week,2,Information source: Printed magazines
+E250B,ordinal_scale,Information source,,5,Information source: Printed magazines (B)
+E251,mention_flag,Information source,info_source_last_week,2,Information source: In depth reports on radio or TV
+E252,mention_flag,Information source,info_source_last_week,2,Information source: Books
+E253,mention_flag,Information source,info_source_last_week,2,"Information source: Internet, Email"
+E253B,ordinal_scale,Information source,,5,"Information source: Social media (Facebook, Twitter, etc.)"
+E254,mention_flag,Information source,info_source_last_week,2,Information source: Talk with friends or colleagues
+E254B,ordinal_scale,Information source,,5,Information source: Talk with friends or colleagues (B)
+E255,ordinal_scale,,,4,How often use of PC
+E256,categorical,,,27,General party preference
+E257,binary,,,2,Voted in recent parliament elections
+E258,mention_flag,Information source,info_source_last_week,2,Information source: TV news
+E258B,ordinal_scale,Information source,,5,Information source: TV news (B)
+E259,mention_flag,Information source,info_source_last_week,2,Information source: Radio news
+E259B,ordinal_scale,Information source,,5,Information source: Radio news (B)
+E260,mention_flag,Information source,info_source_last_week,2,Information source: Mobile phone
+E260B,ordinal_scale,Information source,,5,Information source: Mobile phone (B)
+E261,mention_flag,Information source,info_source_last_week,2,Information source: Email
+E261B,ordinal_scale,Information source,,5,Information source: Email (B)
+E262,mention_flag,Information source,info_source_last_week,2,Information source: Internet
+E262B,ordinal_scale,Information source,,5,Information source: Internet (B)
+E263,categorical,Vote in elections,,4,Vote in elections: local level
+E264,categorical,Vote in elections,,4,Vote in elections: National level
+E265_01,ordinal_scale,How often in country's elections,,4,How often in country's elections: Votes are counted fairly
+E265_02,ordinal_scale,How often in country's elections,,4,How often in country's elections: Opposition candidates are prevented from running
+E265_03,ordinal_scale,How often in country's elections,,4,How often in country's elections: TV news favors the governing party
+E265_04,ordinal_scale,How often in country's elections,,4,How often in country's elections: Voters are bribed
+E265_05,ordinal_scale,How often in country's elections,,4,How often in country's elections: Journalists provide fair coverage of elections
+E265_06,ordinal_scale,How often in country's elections,,4,How often in country's elections: Election officials are fair
+E265_07,ordinal_scale,How often in country's elections,,4,How often in country's elections: Rich people buy elections
+E265_08,ordinal_scale,How often in country's elections,,4,How often in country's elections: Voters are threatened with  violence at the polls
+E265_09,ordinal_scale,How often in country's elections,,4,How often in country's elections: Voters are offered a genuine choice in the elections
+E265_10,ordinal_scale,How often in country´s elections,,4,How often in country´s elections: Women have equal opportunities to run the office
+E266,ordinal_scale,,,4,Some people think that having honest elections makes a lot of difference in their lives;  other people think that it doesn’t matter much
+E267,ordinal_scale,,,4,Importance of having honest elections in whether or not this country develops economically
+E268,numeric_scale,,,10,"Scale corruption in [my country] - pay a bribe, give a gift, do a favor to other to get things"
+E269,ordinal_scale,Groups of people involved in corruption,,4,Groups of people involved in corruption: State authorities
+E270,ordinal_scale,Groups of people involved in corruption,,4,Groups of people involved in corruption: Business executives
+E271,ordinal_scale,Groups of people involved in corruption,,4,Groups of people involved in corruption: Local authorities
+E272,ordinal_scale,Groups of people involved in corruption,,4,"Groups of people involved in corruption: Civil service providers (police, judiciary, civil servants, doctors, teachers)"
+E273,ordinal_scale,Groups of people involved in corruption,,4,Groups of people involved in corruption: Journalists and media
+E274,ordinal_scale,,,4,"Frequency ordinary people pay a bribe, give a gift or do a favor to local officials/service providers in order to get services"
+E275,ordinal_scale,Degree of agreement,,5,"Degree of agreement: On the whole, women are less corrupt than men"
+E276,numeric_scale,,,10,"Risk in this country to be held accountable for giving or receiving a bribe, gift or favor in return for public service"
+E277,ordinal_scale,,,3,Standard of living comparing with your parents
+E278,numeric_scale,,,10,"Should international organizations prioritize, being effective or being democratic"
+E289,ordinal_scale,Social activism,,3,Social activism: Encouraging others to vote
+E290,numeric_scale,Justifiable,,10,Justifiable: Political violence
+E279,knowledge,,,3,Five countries have permanent seats on the Security Council of the United Nations. Which ones of the following is not a member?
+E280,knowledge,,,3,Where are the headquarters of the International Monetary Fund (IMF) located?
+E281,knowledge,,,3,Which of the following problems does the organization Amnesty International deal with?
+E282,ordinal_scale,Political actions using Internet,,3,Political actions using Internet: Searching information about politics and political events
+E283,ordinal_scale,Political actions using Internet,,3,Political actions using Internet: Signing an electronic petition
+E284,ordinal_scale,Political actions using Internet,,3,Political actions using Internet: Encouraging other people to take any form of political action
+E285,ordinal_scale,Political actions using Internet,,3,"Political actions using Internet: Organizing political activities, events, protests"
+E286,ordinal_scale,Social activism,,3,Social activism: Donating to a group or campaign
+E287,ordinal_scale,Social activism,,3,Social activism: Contacting a government official
+E288,ordinal_scale,Social activism,,3,Social activism: Encouraging others to take action about political issues
+E291,ordinal_scale,,,5,How much would you say the political system in your country allows people like you to have a say in what the government does?
+F001,ordinal_scale,,,4,Thinking about meaning and purpose of life
+F003,ordinal_scale,,,4,Thinking about death
+F004,categorical,,,3,Life is meaningful because God exits
+F005,categorical,,,3,Try to get the best out of life
+F006,categorical,,,3,Death is inevitable
+F007,categorical,,,3,Death has meaning if you believe in God
+F008,categorical,,,3,Death is a natural resting point
+F009,categorical,,,3,Sorrow has meaning if you believe in God
+F010,categorical,,,3,Life has no meaning
+F022,forced_choice,Statement,,3,Statement: good and evil
+F025,categorical,,,10,Religious denominations - major groups
+F025_WVS,categorical,,,0,Religious denomination - detailed list
+F027,categorical,,,10,Which former religious denomination
+F028,ordinal_scale,,,8,How often do you attend religious services
+F028B,ordinal_scale,,,8,How often to you pray
+F029,binary,,,2,Raised religiously
+F031,binary,Important,,2,Important: Religious service birth
+F032,binary,Important,,2,Important: Religious service marriage
+F033,binary,Important,,2,Important: Religious service death
+F034,categorical,,,3,Religious person
+F035,binary,Churches give answers,,2,Churches give answers: moral problems
+F036,binary,Churches give answers,,2,Churches give answers: the problems of family life
+F037,binary,Churches give answers,,2,Churches give answers: people´s spiritual needs
+F038,binary,Churches give answers,,2,Churches give answers: the social problems
+F040,binary,Churches speak out on,,2,Churches speak out on: disarmament
+F041,binary,Churches speak out on,,2,Churches speak out on: abortion
+F042,binary,Churches speak out on,,2,Churches speak out on: third world problems
+F043,binary,Churches speak out on,,2,Churches speak out on: extramarital affairs
+F044,binary,Churches speak out on,,2,Churches speak out on: unemployment
+F045,binary,Churches speak out on,,2,Churches speak out on: racial discrimination
+F046,binary,Churches speak out on,,2,Churches speak out on: euthanasia
+F047,binary,Churches speak out on,,2,Churches speak out on: homosexuality
+F048,binary,Churches speak out on,,2,Churches speak out on: ecology and environmental issues
+F049,binary,Churches speak out on,,2,Churches speak out on: government policy
+F050,binary,Believe in,,2,Believe in: God
+F051,binary,Believe in,,2,Believe in: life after death
+F052,binary,Believe in,,2,Believe in: people have a soul
+F053,binary,Believe in,,2,Believe in: hell
+F054,binary,Believe in,,2,Believe in: heaven
+F055,binary,Believe in,,2,Believe in: Sin
+F057,binary,Believe in,,2,Believe in: re-incarnation
+F059,binary,Believe in,,2,Believe in: devil
+F060,binary,Believe in,,2,Believe in: resurrection of the dead
+F062,categorical,,,4,Personal God vs. Spirit or Life Force
+F063,numeric_scale,,,10,How important is God in your life
+F064,binary,,,2,Get comfort and strength from religion
+F065,binary,,,2,"Moments of prayer, meditation..."
+F066,ordinal_scale,,,7,Pray to God outside of religious services (I)
+F067,categorical,,,5,Pray to God outside of religious services (ii)
+F102,ordinal_scale,,,5,Politicians who don´t believe in God are unfit for public office
+F103,ordinal_scale,,,5,Religious leaders should not influence how people vote
+F104,ordinal_scale,,,5,Better if more people with strong religious beliefs in public office
+F105,ordinal_scale,,,5,Religious leaders should not influence government
+F108,ordinal_scale,,,5,Government protects freedom
+F109,ordinal_scale,,,5,Government protects religion
+F110,ordinal_scale,Laws,,5,Laws: people’s wishes
+F111,ordinal_scale,,,5,Only laws of the Shari´a
+F114A,numeric_scale,Justifiable,,10,Justifiable: Claiming government benefits to which you are not entitled
+F114E,numeric_scale,Justifiable,,10,"Justifiable: Terrorism as a political, ideological or religious mean"
+F114B,numeric_scale,Justifiable,,10,Justifiable: Stealing property
+F114C,numeric_scale,Justifiable,,10,Justifiable: Parents beating children
+F114D,numeric_scale,Justifiable,,10,Justifiable: Violence against other people
+F115,numeric_scale,Justifiable,,10,Justifiable: Avoiding a fare on public transport
+F116,numeric_scale,Justifiable,,10,Justifiable: Cheating on taxes
+F117,numeric_scale,Justifiable,,10,Justifiable: Someone accepting a bribe
+F118,numeric_scale,Justifiable,,10,Justifiable: Homosexuality
+F119,numeric_scale,Justifiable,,10,Justifiable: Prostitution
+F120,numeric_scale,Justifiable,,10,Justifiable: Abortion
+F121,numeric_scale,Justifiable,,10,Justifiable: Divorce
+F122,numeric_scale,Justifiable,,10,Justifiable: Euthanasia
+F123,numeric_scale,Justifiable,,10,Justifiable: Suicide
+F124,numeric_scale,Justifiable,,10,Justifiable: Drinking alcohol
+F125,numeric_scale,Justifiable,,10,Justifiable: Joyriding
+F126,numeric_scale,Justifiable,,10,Justifiable: Taking soft drugs
+F127,numeric_scale,Justifiable,,10,Justifiable: Llying
+F128,numeric_scale,Justifiable,,10,Justifiable: Adultery
+F129,numeric_scale,Justifiable,,10,Justifiable: Throwing away litter
+F130,numeric_scale,Justifiable,,10,Justifiable: Driving under influence of alcohol
+F132,numeric_scale,Justifiable,,10,Justifiable: Having casual sex
+F135,numeric_scale,Justifiable,,10,Justifiable: Sex under the legal age of consent
+F135A,numeric_scale,Justifiable,,10,Justifiable: Sex before marriage
+F136,numeric_scale,Justifiable,,10,Justifiable: Political assassination
+F139,numeric_scale,Justifiable,,10,Justifiable: Buy stolen goods
+F140,numeric_scale,Justifiable,,10,Justifiable: Keeping money that you have found
+F141,numeric_scale,Justifiable,,10,Justifiable: Fighting with the police
+F142,numeric_scale,Justifiable,,10,Justifiable: Failing to report damage you’ve done accidentally to a parked vehicle
+F143,numeric_scale,Justifiable,,10,Justifiable: Threatening workers who refuse to join a strike
+F144,numeric_scale,Justifiable,,10,Justifiable: Klling in self-defence
+F144_02,numeric_scale,Justifiable,,10,Justifiable: Death penalty
+F164,ordinal_scale,,,5,Islam requires woman to dress modestly but does not require cover face with veil
+F165,ordinal_scale,,,5,Violation of Islam for male and female university students to attend classes together
+F166,ordinal_scale,,,5,"By requiring man treat all wives equally, Islam true intent is prohibit taking more than one wife"
+F167,ordinal_scale,,,5,Monarchy is a form of government that is compatible with Islam
+F168,ordinal_scale,,,5,Democracy is a Western form of government that is not compatible with Islam
+F169,ordinal_scale,,,5,Nationalism is incompatible with Islam because Islam requires ´ummah´
+F170,ordinal_scale,,,5,"If Palestinian state established and peace with Israel, Islam would not oppose existence of Israel"
+F171,ordinal_scale,,,5,"If country pursues policies harmful to Muslims, Islam permits killing civilians in that country"
+F172,ordinal_scale,,,5,A truly Islamic country should not have a parliament with the right to pass laws
+F173,ordinal_scale,,,5,Islam requires that political rights of non Muslims should be inferior to those of Muslims
+F174,ordinal_scale,,,5,Islams requires country with majority of Muslims be governed by men of Islamic learning
+F175,ordinal_scale,,,4,Religions limit democratic processes
+F176,categorical,,,4,Some US Policies toward other countries are good and some are bad
+F177,binary,,,2,"While US policies toward other countries are often bad, most ordinary americans are good people"
+F178,binary,,,2,The culture of US and other Western countries has many positive attributes
+F179,binary,,,2,Exposure to the culture of the US and other Western countries harmful effect on our country
+F186,ordinal_scale,,,4,Religion is a cause of terrorism
+F187,ordinal_scale,,,4,The content of [Country] education contributes to religious extremism
+F188,forced_choice,Which is more important as a basis for marriage,,2,Which is more important as a basis for marriage:  parents´ approval or love
+F189,categorical,,,3,"When you were growing up, did your father or mother have more influence in the affairs of the house"
+F190,ordinal_scale,,,5,How frequently do you perform the five prescribed prayers of the Islam
+F191,ordinal_scale,,,5,How frequently do you perform in the mosque
+F192,categorical,,,4,"If you feel sad and want to talk to someone, to whom do you usually turn to"
+F193,ordinal_scale,,,5,Civil marriage is very important because it helps maintain the family
+F194,ordinal_scale,How important,,5,How important: daily prayer
+F195,ordinal_scale,How important,,5,How important: building a prosperous society
+F196,ordinal_scale,How important,,5,How important: forming a happy secure family
+F197,ordinal_scale,How important,,5,How important: building a successful professional future
+F198,numeric_scale,,,10,Fate versus control
+F199,numeric_scale,Justifiable,,10,Justifiable: For a man to beat his wife
+F200,forced_choice,Meaning of religion,,4,Meaning of religion: To follow religious norms and ceremonies vs To do good to other people
+F201,forced_choice,Meaning of religion,,4,Meaning of religion: To make sense of life after death vs To make sense of life in this world
+F202,ordinal_scale,,,4,"Whenever science and religion conflict,  religion is always right"
+F203,ordinal_scale,,,4,The only acceptable religion  is my religion
+F204,ordinal_scale,,,4,All religions should be taught in public schools
+F205,ordinal_scale,,,4,People who belong to different religions are probably just as moral as those who belong to mine
+F206,numeric_scale,Degree of agreement,,10,Degree of agreement: Nowadays one often has trouble deciding which moral rules are the right ones to follow
+G001,ranked_choice,,,5,Geographical groups belonging to first
+G001CS,identifier,,,37,Geographical groups belonging to first (country specific)
+G002,ranked_choice,,,5,Geographical groups belonging to second
+G002CS,identifier,,,35,Geographical groups belonging to second  (country specific)
+G003CS,categorical,,,0,Geographical groups belonging to least of all (country specific)
+G005,binary,,,2,Citizen of [country]
+G006,ordinal_scale,,,4,How proud of nationality
+G007_01,ordinal_scale,Trust,,5,Trust: Other people in country
+G007_02,ordinal_scale,Trust,,5,Trust: French Canadians
+G007_03,ordinal_scale,Trust,,5,Trust: Nepalis
+G007_04,ordinal_scale,Trust,,5,Trust: Korean residents in Japan
+G007_05,ordinal_scale,Trust,,5,Trust: Chinese residents in Japan
+G007_06,ordinal_scale,Trust,,5,Trust: Mestizo
+G007_07,ordinal_scale,Trust,,5,Trust: Indians
+G007_08,ordinal_scale,Trust,,5,Trust: Central Americans
+G007_09,ordinal_scale,Trust,,5,Trust: Hausas
+G007_10,ordinal_scale,Trust,,5,Trust: Igbos
+G007_11,ordinal_scale,Trust,,5,Trust: Yorubas
+G007_12,ordinal_scale,Trust,,5,Trust: Ghanaians
+G007_13,ordinal_scale,Trust,,5,Trust: Czechs
+G007_16,ordinal_scale,Trust,,5,Trust: West Germans
+G007_17,ordinal_scale,Trust,,5,Trust: Your friends
+G007_18,ordinal_scale,Trust,,5,Trust: Your neighborhood
+G007_18_B,ordinal_scale,Trust,,4,Trust: Your neighborhood (B)
+G007_19,ordinal_scale,Trust,,5,Trust: White South Africans
+G007_20,ordinal_scale,Trust,,5,Trust: Black South Africans
+G007_21,ordinal_scale,Trust,,5,Trust: Coloured South Africans
+G007_22,ordinal_scale,Trust,,5,Trust: Asian South Africans
+G007_28,ordinal_scale,Trust,,5,Trust: Moroccans
+G007_30,ordinal_scale,Trust,,5,Trust: Portuguese
+G007_31,ordinal_scale,Trust,,5,Trust: Koreans
+G007_32,ordinal_scale,Trust,,5,Trust: Soviet Union people
+G007_33_B,ordinal_scale,Trust,,4,Trust: People you know personally (B)
+G007_34_B,ordinal_scale,Trust,,4,Trust: People you meet for the first time (B)
+G007_35_B,ordinal_scale,Trust,,4,Trust: People of another religion (B)
+G007_36_B,ordinal_scale,Trust,,4,Trust: People of another nationality (B)
+G007_37,ordinal_scale,Trust,,5,Trust: Americans
+G007_39,ordinal_scale,Trust,,5,Trust: Russians
+G007_40,ordinal_scale,Trust,,5,Trust: Chinese
+G007_41,ordinal_scale,Trust,,5,Trust: Italians
+G007_42,ordinal_scale,Trust,,5,Trust: Latin Americans
+G007_43,ordinal_scale,Trust,,5,Trust: Japanese
+G007_44,ordinal_scale,Trust,,5,Trust: Blacks
+G007_45,ordinal_scale,Trust,,5,Trust: Germans
+G007_48,ordinal_scale,Trust,,5,Trust: Mapuche Indians
+G007_49,ordinal_scale,Trust,,5,Trust: Pascuences
+G007_50,ordinal_scale,Confianza,,5,Confianza: Argentinos
+G007_51,ordinal_scale,Trust,,5,Trust: Peruvians
+G007_52,ordinal_scale,Trust,,5,Trust: Chinese Zhuan Nationality
+G007_53,ordinal_scale,Trust,,5,Trust: Chinese Hui Nationality
+G007_54,ordinal_scale,Trust,,5,Trust: English
+G007_55,ordinal_scale,Trust,,5,Trust: Slovaks
+G007_56,ordinal_scale,Trust,,5,Trust: Gypsies
+G007_57,ordinal_scale,Trust,,5,Trust: Poles
+G007_58,ordinal_scale,Trust,,5,Trust: Indian Hindus
+G007_59,ordinal_scale,Trust,,5,Trust: Indian Non-Hindus
+G007_60,ordinal_scale,Trust,,5,Trust: Pakistanis
+G007_61,ordinal_scale,Trust,,4,Trust: Canadian people in general
+G007_62,ordinal_scale,Trust,,4,Trust: Christians
+G007_63,ordinal_scale,Trust,,4,Trust: Kurds
+G007_64,ordinal_scale,Trust,,5,Trust: People in general
+G007_65,ordinal_scale,Trust,,4,Trust: Relatives
+G007_66,ordinal_scale,Trust,,4,Trust: Shi´i
+G007_67,ordinal_scale,Trust,,4,Trust: Sunni
+G015,categorical,,,0,Which of the following best describes you
+G015B,categorical,,,0,Which of the following best describes you (B)
+G016,categorical,,,0,Language at home
+G017,categorical,Born in this country,,8,Born in this country: birth country
+G018,ordinal_scale,,,5,When came to country
+G019,ordinal_scale,,,4,I see myself as a world citizen
+G020,ordinal_scale,,,4,I see myself as member of my local community
+G021,ordinal_scale,,,4,I see myself as citizen of the [country] nation
+G022A,ordinal_scale,,,4,I see myself as citizen of [Latinamerica]
+G022B,ordinal_scale,,,4,I see myself as citizen of [North America]
+G022C,ordinal_scale,,,4,I see myself as citizen of the [European Union]
+G022D,ordinal_scale,,,4,I see myself as citizen of [APEC]
+G022E,ordinal_scale,,,4,I see myself as citizen of [ASIA]
+G022F,ordinal_scale,,,4,I see myself as citizen of [Mercosur]
+G022G,ordinal_scale,,,4,I see myself as citizen of [my province or region]
+G022H,ordinal_scale,,,4,I see myself as citizen of [a country other than mine]
+G022I,ordinal_scale,,,4,I see myself as citizen of [CIS]
+G022J,ordinal_scale,,,4,I see myself as citizen of [The Caribbean]
+G022K,ordinal_scale,,,4,I see myself as citizen of [The African Union]
+G022L,ordinal_scale,,,4,I see myself as citizen of [Arab Maghreb Union]
+G022M,ordinal_scale,,,4,I see myself as citizen of [ASEAN]
+G022N,ordinal_scale,,,4,I see myself as citizen of [Arab Union]
+G022O,ordinal_scale,,,4,I see myself as citizen of the [Northeast Asia Region]
+G022P,ordinal_scale,,,4,I see myself as citizen of the [UNASUR]
+G022Q,ordinal_scale,,,4,I see myself as citizen of the [Islamic nation]
+G022R,ordinal_scale,,,4,I see myself as part of the Cooperation Council for the Arab states of Gulf (GCC)
+G023,ordinal_scale,,,4,I see myself as an autonomous individual
+G024,ranked_choice,,,9,What thing are you proud of in your country -1st
+G025,ranked_choice,,,9,What thing are you proud of in your country -2nd
+G026,binary,,,2,Mother immigrant
+G026_01,categorical,,,0,Mother's Country of origin
+G027,binary,,,2,Father immigrant
+G027_01,categorical,,,0,Father's Country of origin
+G027A,binary,,,2,Respondent immigrant
+G027B,binary,,,2,Respondent citizen
+G028,ordinal_scale,Requirements for citizenship,,3,Requirements for citizenship: having ancestors from my country
+G029,ordinal_scale,Requirements for citizenship,,3,Requirements for citizenship: being born on my country’s soil
+G030,ordinal_scale,Requirements for citizenship,,3,Requirements for citizenship: adopting the customs of my country
+G031,ordinal_scale,Requirements for citizenship,,3,Requirements for citizenship: abiding by my country´s laws
+G032,numeric_scale,,,10,Ethnic diversity
+G052,ordinal_scale,,,5,Evaluate the impact of immigrants on the development of [your country]
+G053,categorical,Effects of immigrants on the development of [your country],,3,Effects of immigrants on the development of [your country]: Fill useful jobs in the workforce
+G054,categorical,Effects of immigrants on the development of [your country],,3,Effects of immigrants on the development of [your country]: Strengthen cultural diversity
+G055,categorical,Effects of immigrants on the development of [your country],,3,Effects of immigrants on the development of [your country]: Increase the crime rate
+G056,categorical,Effects of immigrants on the development of [your country],,3,Effects of immigrants on the development of [your country]: Give asylum to political refugees
+G057,categorical,Effects of immigrants on the development of [your country],,3,Effects of immigrants on the development of [your country]: Increase the risks of terrorism
+G058,categorical,Effects of immigrants on the development of [your country],,3,Effects of immigrants on the development of [your country]: Help poor people establish new lives
+G059,categorical,Effects of immigrants on the development of [your country],,3,Effects of immigrants on the development of [your country]: Increase unemployment
+G060,categorical,Effects of immigrants on the development of [your country],,3,Effects of immigrants on the development of [your country]: Lead to social conflict
+G062,ordinal_scale,How close you feel,,4,"How close you feel: Continent; e.g. Europe, Asia etc.]"
+G063,ordinal_scale,How close you feel,,4,How close you feel: World
+G255,ordinal_scale,How close you feel,,4,"How close you feel: Your [village, town or city]"
+H001,ordinal_scale,,,4,Secure in neighborhood
+H002_01,ordinal_scale,Frequency in your neighborhood,,4,Frequency in your neighborhood: Robberies
+H002_02,ordinal_scale,Frequency in your neighborhood,,4,Frequency in your neighborhood: Alcohol consumed in the streets
+H002_03,ordinal_scale,Frequency in your neighborhood,,4,Frequency in your neighborhood: Police or military interfere with people’s private life
+H002_04,ordinal_scale,Frequency in your neighborhood,,4,Frequency in your neighborhood: Racist behavior
+H002_05,ordinal_scale,Frequency in your neighborhood,,4,Frequency in your neighborhood: Drug sale in streets
+H003_01,binary,Things done for reasons of security,,2,Things done for reasons of security: Didn’t carry much money
+H003_02,binary,Things done for reasons of security,,2,Things done for reasons of security: Preferred not to go out at night
+H003_03,binary,Things done for reasons of security,,2,"Things done for reasons of security: Carried a knife, gun or other weapon"
+H004,binary,,,2,Respondent was victim of a crime during the past year
+H005,binary,,,2,Respondent's family was victim of a crime during last year
+H006_01,ordinal_scale,Worries,,4,Worries: Losing my job or not finding a job
+H006_02,ordinal_scale,Worries,,4,Worries: Not being able to give one's children a good education
+H006_03,ordinal_scale,Worries,,4,Worries: A war involving my country
+H006_04,ordinal_scale,Worries,,4,Worries: A terrorist attack
+H006_05,ordinal_scale,Worries,,4,Worries: A civil war
+H006_06,ordinal_scale,Worries,,4,Worries: Government wire-tapping or reading my mail or email
+H007,binary,,,2,"Under some conditions, war is necessary to obtain justice"
+H008_01,ordinal_scale,Frequency you/family (last 12 month),,4,Frequency you/family (last 12 month): Gone without enough food to eat
+H008_02,ordinal_scale,Frequency you/family (last 12 month),,4,Frequency you/family (last 12 month): Felt unsafe from crime in your own home
+H008_03,ordinal_scale,Frequency you/family (last 12 month),,4,Frequency you/family (last 12 month): Gone without needed medicine or treatment that you needed
+H008_04,ordinal_scale,Frequency you/family (last 12 month),,4,Frequency you/family (last 12 month): Gone without a cash income
+H008_05,ordinal_scale,How frequently do the following things occur in your neighborhood,,4,How frequently do the following things occur in your neighborhood: Street violence and fights
+H008_06,ordinal_scale,How frequently do the following things occur in your neighborhood,,4,How frequently do the following things occur in your neighborhood: Sexual harassment
+H008_07,forced_choice,,,2,Freedom and Equality - Which more important
+H008_08,forced_choice,,,2,Freedom and securiy - Which more important
+H008_09,ordinal_scale,"In the last 12 month, how often have you or your family",,4,"In the last 12 month, how often have you or your family: Gone without a safe shelter over your head"
+H009,ordinal_scale,Government has the right,,4,Government has the right: Keep people under video surveillance in public areas
+H010,ordinal_scale,Government has the right,,4,Government has the right: Monitor all e-mails and any other information exchanged on the Internet
+H011,ordinal_scale,Government has the right,,4,Government has the right: Collect information about anyone living in [COUNTRY] without their knowledge
+I001,numeric_scale,,,10,One of the bad effects of science is that it breaks down people’s ideas of right and wrong
+I002,numeric_scale,,,10,It is not important for me to know about science in my daily life
+A027_A029_A030_A032_A034_A035_A038_A039_A040_A041_A042_A043B,mention_flag,,child_qualities,77,Important child qualities

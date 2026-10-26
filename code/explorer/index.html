@@ -1,0 +1,579 @@
+<title>GDELT Explorer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a control bar over small multiples (views 1 and 3) or one large chart (view 2); neutrals from the data-viz reference palette. */
+:root{
+  --bg:#fcfcfb; --surface:#ffffff; --ink:#0b0b0b; --muted:#52514e; --faint:#8a8985; --grid:#e4e3df; --border:#dcdbd6; --soft:#f1f0ec;
+  --accent:#2a78d6; --accent-ink:#ffffff;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#6250d6; --s8:#e34948;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1a1a19; --surface:#222221; --ink:#f0efec; --muted:#c3c2b7; --faint:#8f8e86; --grid:#2f2f2d; --border:#3a3a37; --soft:#2a2a28;
+    --accent:#3987e5; --accent-ink:#0b0b0b;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1a1a19; --surface:#222221; --ink:#f0efec; --muted:#c3c2b7; --faint:#8f8e86; --grid:#2f2f2d; --border:#3a3a37; --soft:#2a2a28;
+  --accent:#3987e5; --accent-ink:#0b0b0b;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:14px/1.5 'IBM Plex Sans',system-ui,sans-serif;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px}
+.wrap{max-width:1240px;margin:0 auto}
+h1{font:600 26px/1.15 'Fraunces',Georgia,serif;margin:0;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:6px 0 18px;max-width:80ch}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;border-bottom:1px solid var(--border);margin-bottom:16px}
+.tab{font:inherit;font-weight:500;background:none;border:0;border-bottom:2px solid transparent;padding:9px 14px;color:var(--muted);cursor:pointer}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tab:hover{color:var(--ink)}
+button:focus-visible,select:focus-visible,input:focus-visible,.panel:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.controls{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:flex-end;margin-bottom:14px}
+.field{display:flex;flex-direction:column;gap:4px;min-width:0}
+.field>label,.field>.lab{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+select{font:inherit;padding:6px 9px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--ink);max-width:100%}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:6px;overflow:hidden;background:var(--surface)}
+.seg button{font:inherit;font-size:13px;padding:6px 11px;border:0;background:none;color:var(--muted);cursor:pointer;border-right:1px solid var(--border)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{font:inherit;font-size:12px;padding:3px 9px;border:1px solid var(--border);border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.chip[aria-pressed="true"]{border-color:var(--ink)}
+.chip i{width:9px;height:9px;border-radius:50%;display:inline-block;background:var(--faint)}
+.chip[aria-pressed="false"] i{display:none}
+.note{color:var(--muted);font-size:12.5px;margin:0 0 12px;max-width:90ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 10px 6px;min-width:0}
+.panel.click{cursor:pointer}
+.panel.click:hover{border-color:var(--faint)}
+.ph{display:flex;justify-content:space-between;gap:8px;align-items:baseline;min-height:20px}
+.pt{font-size:12.5px;font-weight:500;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pt b{font-family:'IBM Plex Mono',monospace;font-weight:500;color:var(--muted);margin-right:5px}
+.pv{font:12px 'IBM Plex Mono',monospace;color:var(--muted);white-space:nowrap}
+svg{display:block;width:100%;height:auto;touch-action:pan-y}
+.big{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-bottom:8px;font-size:12.5px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:3px;border-radius:2px;display:inline-block}
+.tip{position:fixed;z-index:20;pointer-events:none;background:var(--ink);color:var(--bg);border-radius:6px;padding:7px 10px;font-size:12px;line-height:1.45;box-shadow:0 2px 10px rgba(0,0,0,.25);max-width:260px}
+.tip .th{font-weight:600;margin-bottom:2px}
+.tip .tr{display:flex;justify-content:space-between;gap:14px;font-variant-numeric:tabular-nums}
+.tip .tr i{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:6px}
+.tablebox{margin-top:12px;max-height:380px;overflow:auto;border:1px solid var(--border);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:12px;font-variant-numeric:tabular-nums}
+th,td{padding:4px 9px;text-align:right;border-bottom:1px solid var(--grid);white-space:nowrap}
+th:first-child,td:first-child{text-align:left;position:sticky;left:0;background:var(--surface)}
+thead th{position:sticky;top:0;background:var(--surface);color:var(--muted);font-weight:500}
+.tl th,.tl td{text-align:left;white-space:normal}.tl td.num,.tl th.num{text-align:right;white-space:nowrap}.tl th:first-child,.tl td:first-child{position:static}
+.empty{padding:40px 12px;text-align:center;color:var(--muted)}
+.link{font:inherit;font-size:12.5px;color:var(--accent);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+.cards{display:grid;gap:14px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px;min-width:0}
+.card h3{font:600 17px/1.25 'Fraunces',Georgia,serif;margin:0 0 4px}
+.card .q{color:var(--muted);font-size:12.5px;margin:2px 0}
+.card .read{margin:8px 0 10px;max-width:80ch}
+.cardgrid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:760px){.cardgrid{grid-template-columns:minmax(0,1fr)}}
+.stats{font-size:12.5px;color:var(--muted);display:grid;gap:3px;margin-top:8px}
+.stats b{color:var(--ink);font-weight:500}
+.pill{display:inline-block;font-size:11px;padding:1px 8px;border-radius:999px;border:1px solid var(--border);color:var(--muted)}
+.pill.sig{border-color:var(--accent);color:var(--accent)}
+h2.sec{font:600 18px/1.2 'Fraunces',Georgia,serif;margin:22px 0 6px}
+.sec+.note{margin-bottom:10px}
+.codecard{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:0 14px}
+.codecard summary{cursor:pointer;padding:10px 0;list-style:none}
+.codecard summary::-webkit-details-marker{display:none}
+.codecard summary b{font-family:'IBM Plex Mono',monospace;font-weight:500;color:var(--muted);margin-right:8px}
+.codecard summary .nm{font-weight:600}
+.codecard summary .ds{display:block;color:var(--muted);font-size:13px;margin-top:2px;max-width:100ch}
+.codecard ul{margin:0 0 12px;padding-left:0;list-style:none;font-size:13px}
+.codecard li{padding:2px 0}
+.codecard li code{font-family:'IBM Plex Mono',monospace;color:var(--muted);margin-right:8px}
+.codecard li ul{margin:2px 0 4px 36px}
+.search{font:inherit;padding:7px 10px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--ink);width:min(420px,100%)}
+footer{margin-top:24px;color:var(--muted);font-size:12px;max-width:100ch}
+</style>
+
+<div class="wrap">
+  <h1>GDELT Explorer</h1>
+  <p class="sub">How often news-coded events of each kind were recorded in 29 countries, November 2003 to July 2023. Events are coded from news articles into CAMEO categories, so these series measure coverage, not what happened.</p>
+  <div class="tabs" role="tablist" id="tabs">
+    <button class="tab" role="tab" data-view="country">One country, every event</button>
+    <button class="tab" role="tab" data-view="compare">One event, compare countries</button>
+    <button class="tab" role="tab" data-view="sub">One country and event, its sub-events</button>
+    <button class="tab" role="tab" data-view="corr">Events and survey answers</button>
+    <button class="tab" role="tab" data-view="codes">What the codes mean</button>
+  </div>
+  <div class="controls" id="controls"></div>
+  <p class="note" id="note"></p>
+  <div id="out"></div>
+  <footer>Source: GDELT events (v1 before 2015-02-18, v2 after; v2 reads many more sources, so counts and shares shift at that date). Share = events of the category divided by all events recorded for the country in the same window. Sub-event names are the official CAMEO event codes. The chart window moves across the series (a rolling window centred on each point, pooled over the window).</footer>
+</div>
+<div class="tip" id="tip" hidden></div>
+
+<script>
+(() => {
+'use strict';
+const $ = (s, r = document) => r.querySelector(s);
+const NS = 'http://www.w3.org/2000/svg';
+const DAY = 864e5;
+const state = { view: 'country', country: 'EGY', root: '14', scale: 'all', year: 2011, month: 1,
+  win: { all: 3, year: 7, month: 1 }, measure: 'share', picked: ['EGY', 'THA', 'UKR', 'URY', 'HKG'], detail: 'base', table: false };
+let META, START, ND, MONTHS = [];
+const cache = new Map();            // iso -> {root, sub}
+const slot = new Map();             // country -> colour slot (stable while selected)
+
+/* ---------- small helpers ---------- */
+function h(tag, attrs, ...kids) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (v == null || v === false) continue;
+    if (k === 'class') e.className = v; else if (k === 'text') e.textContent = v;
+    else if (k.startsWith('on')) e.addEventListener(k.slice(2), v); else e.setAttribute(k, v === true ? '' : v);
+  }
+  for (const kid of kids.flat()) if (kid != null && kid !== false) e.append(kid.nodeType ? kid : document.createTextNode(String(kid)));
+  return e;
+}
+function s(tag, attrs, ...kids) {
+  const e = document.createElementNS(NS, tag);
+  for (const [k, v] of Object.entries(attrs || {})) e.setAttribute(k, v);
+  for (const kid of kids) if (kid) e.append(kid);
+  return e;
+}
+const dateOf = i => new Date(START + i * DAY);
+const iso = i => dateOf(i).toISOString().slice(0, 10);
+const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const title = t => t.replace(/\b([a-z])/g, c => c.toUpperCase()).replace(/\bOr\b/g, 'or').replace(/\bAnd\b/g, 'and').replace(/\bOf\b/g, 'of');
+
+function dec(b64, w) {
+  const bin = atob(b64), u = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i);
+  return w === 2 ? new Uint16Array(u.buffer) : new Uint32Array(u.buffer);
+}
+function prefix(a) { const p = new Float64Array(a.length + 1); for (let i = 0; i < a.length; i++) p[i + 1] = p[i] + a[i]; return p; }
+
+/* ---------- data ---------- */
+async function loadRoot(c) {
+  const e = cache.get(c) || {}; cache.set(c, e);
+  if (e.root) return e.root;
+  const j = await (await fetch(`data/root_${c}.json`)).json();
+  const total = dec(j.t, j.w), m = dec(j.r, j.w);
+  const roots = {};
+  META.roots.forEach((r, k) => { roots[r.code] = m.subarray(k * ND, (k + 1) * ND); });
+  e.root = { total, roots, pT: prefix(total), pR: Object.fromEntries(Object.entries(roots).map(([k, v]) => [k, prefix(v)])) };
+  return e.root;
+}
+async function loadSub(c) {
+  const e = cache.get(c) || {}; cache.set(c, e);
+  if (e.sub) return e.sub;
+  const j = await (await fetch(`data/sub_${c}.json`)).json();
+  e.sub = { codes: j.codes, off: j.off, d: dec(j.d, 2), c: dec(j.c, j.w), dense: new Map() };
+  return e.sub;
+}
+function denseOf(sub, code) {
+  if (sub.dense.has(code)) return sub.dense.get(code);
+  const k = sub.codes.indexOf(code), a = new Float64Array(ND);
+  if (k >= 0) for (let r = sub.off[k]; r < sub.off[k + 1]; r++) a[sub.d[r]] += sub.c[r];
+  sub.dense.set(code, a); return a;
+}
+
+/* ---------- series for the current scale ---------- */
+const winLabel = { all: n => `${n}-month`, year: n => `${n}-day`, month: n => `${n}-day` };
+function range() {
+  if (state.scale === 'all') return null;
+  const y = state.year, m = state.scale === 'month' ? state.month - 1 : 0;
+  const a = Math.max(0, Math.round((Date.UTC(y, m, 1) - START) / DAY));
+  const b = Math.min(ND - 1, Math.round((Date.UTC(state.scale === 'month' ? y : y + 1, state.scale === 'month' ? m + 1 : 0, 1) - START) / DAY) - 1);
+  return [a, b];
+}
+/* P = prefix of events, Q = prefix of the denominator (null for events per day). Returns {xs, ys}. */
+function series(P, Q) {
+  const W = state.win[state.scale], h1 = Math.floor((W - 1) / 2), h2 = Math.ceil((W - 1) / 2);
+  const xs = [], ys = [];
+  const val = (lo, hi) => {
+    const ev = P[hi + 1] - P[lo];
+    if (Q) { const d = Q[hi + 1] - Q[lo]; return d > 0 ? 100 * ev / d : null; }
+    return ev / (hi - lo + 1);
+  };
+  if (state.scale === 'all') {
+    for (let m = 0; m < MONTHS.length; m++) {
+      const lo = MONTHS[Math.max(0, m - h1)][0], hi = MONTHS[Math.min(MONTHS.length - 1, m + h2)][1];
+      xs.push(Math.round((MONTHS[m][0] + MONTHS[m][1]) / 2)); ys.push(val(lo, hi));
+    }
+  } else {
+    const [a, b] = range();
+    for (let i = a; i <= b; i++) { xs.push(i); ys.push(val(Math.max(0, i - h1), Math.min(ND - 1, i + h2))); }
+  }
+  return { xs, ys };
+}
+function fmt(v) {
+  if (v == null) return 'no events';
+  if (state.measure === 'perday') return v >= 100 ? Math.round(v).toLocaleString() : v >= 10 ? v.toFixed(1) : v.toFixed(2);
+  return (v >= 10 ? v.toFixed(1) : v >= 1 ? v.toFixed(2) : v.toFixed(3)) + '%';
+}
+function niceTicks(max) {
+  const raw = max / 3, p = Math.pow(10, Math.floor(Math.log10(raw))), f = raw / p;
+  const step = (f <= 1 ? 1 : f <= 2 ? 2 : f <= 5 ? 5 : 10) * p, out = [];
+  for (let v = 0; v <= max * 1.001; v += step) out.push(+v.toFixed(10));
+  return out;
+}
+function xTicks(a, b, big) {
+  const out = [];
+  if (state.scale === 'all') {
+    const y0 = dateOf(a).getUTCFullYear(), y1 = dateOf(b).getUTCFullYear(), step = big ? 2 : 5;
+    for (let y = Math.ceil((y0 + 1) / step) * step; y <= y1; y += step) out.push([Math.round((Date.UTC(y, 0, 1) - START) / DAY), String(y)]);
+  } else if (state.scale === 'year') {
+    for (let m = 0; m < 12; m++) { const d = Math.round((Date.UTC(state.year, m, 1) - START) / DAY); if (d >= a && d <= b && (big || m % 3 === 0)) out.push([d, MON[m]]); }
+  } else {
+    for (let d = a; d <= b; d++) { const day = dateOf(d).getUTCDate(); if (day === 1 || day % (big ? 3 : 7) === 1 && day < 29) out.push([d, String(day)]); }
+  }
+  return out;
+}
+
+/* ---------- drawing ---------- */
+const tip = $('#tip');
+function showTip(ev, head, rows) {
+  tip.replaceChildren(h('div', { class: 'th', text: head }), ...rows.map(r => h('div', { class: 'tr' }, h('span', null, r.c ? h('i', { style: `background:${r.c}` }) : null, r.l), h('span', { text: r.v }))));
+  tip.hidden = false;
+  const w = tip.offsetWidth, hh = tip.offsetHeight;
+  tip.style.left = Math.max(8, Math.min(innerWidth - w - 8, ev.clientX + 14)) + 'px';
+  tip.style.top = Math.max(8, Math.min(innerHeight - hh - 8, ev.clientY - hh - 10 < 8 ? ev.clientY + 16 : ev.clientY - hh - 10)) + 'px';
+}
+const hideTip = () => { tip.hidden = true; };
+
+/* lines: [{xs, ys, color, label}]; all lines share xs. opts: W,H,big, readout(fn) for panels */
+function chart(lines, opts) {
+  const { W, H, big } = opts, m = { l: big ? 46 : 34, r: big ? 14 : 6, t: 6, b: big ? 22 : 18 };
+  const xs = lines[0].xs, a = (state.scale === 'all' ? 0 : xs[0]), b = (state.scale === 'all' ? ND - 1 : xs[xs.length - 1]);
+  let ymax = 0; for (const L of lines) for (const v of L.ys) if (v != null && v > ymax) ymax = v;
+  if (!(ymax > 0)) ymax = 1;
+  const ticks = niceTicks(ymax * 1.05), top = Math.max(ticks[ticks.length - 1], ymax);
+  const X = d => m.l + (d - a) / Math.max(1, b - a) * (W - m.l - m.r), Y = v => H - m.b - v / top * (H - m.b - m.t);
+  const svg = s('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': opts.aria || 'line chart' });
+  const step = ticks.length > 1 ? ticks[1] - ticks[0] : 1, dp = step >= 1 ? 0 : Math.ceil(-Math.log10(step) - 1e-9);
+  for (const t of ticks) {
+    svg.append(s('line', { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), stroke: 'var(--grid)', 'stroke-width': 1 }));
+    const tx = s('text', { x: m.l - 5, y: Y(t) + 3.5, 'text-anchor': 'end', 'font-size': big ? 11 : 9, fill: 'var(--muted)' });
+    tx.textContent = state.measure === 'perday' ? (t >= 1000 ? t / 1000 + 'K' : t.toFixed(dp)) : t.toFixed(dp) + '%';
+    svg.append(tx);
+  }
+  for (const [d, lab] of xTicks(a, b, big)) {
+    const tx = s('text', { x: X(d), y: H - 4, 'text-anchor': 'middle', 'font-size': big ? 11 : 9, fill: 'var(--muted)' }); tx.textContent = lab; svg.append(tx);
+  }
+  if (opts.marker != null) svg.append(s('line', { x1: X(opts.marker), x2: X(opts.marker), y1: m.t, y2: H - m.b, stroke: 'var(--faint)', 'stroke-width': 1 }));
+  for (const L of lines) {
+    let d = '', pen = false;
+    L.ys.forEach((v, i) => { if (v == null) { pen = false; return; } d += `${pen ? 'L' : 'M'}${X(L.xs[i]).toFixed(1)},${Y(v).toFixed(1)}`; pen = true; });
+    svg.append(s('path', { d, fill: 'none', stroke: L.color, 'stroke-width': big ? 2 : 1.6, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }));
+  }
+  const cross = s('line', { y1: m.t, y2: H - m.b, stroke: 'var(--muted)', 'stroke-width': 1, visibility: 'hidden' });
+  const dots = lines.map(L => s('circle', { r: 3.5, fill: L.color, stroke: 'var(--surface)', 'stroke-width': 1.5, visibility: 'hidden' }));
+  svg.append(cross, ...dots);
+  const at = ev => {
+    const r = svg.getBoundingClientRect(), px = (ev.clientX - r.left) / r.width * W;
+    const d = a + (px - m.l) / (W - m.l - m.r) * (b - a);
+    let lo = 0, hi = xs.length - 1; while (lo < hi) { const mid = (lo + hi) >> 1; if (xs[mid] < d) lo = mid + 1; else hi = mid; }
+    if (lo > 0 && Math.abs(xs[lo - 1] - d) < Math.abs(xs[lo] - d)) lo--;
+    return lo;
+  };
+  const label = i => state.scale === 'all' ? `${MON[dateOf(xs[i]).getUTCMonth()]} ${dateOf(xs[i]).getUTCFullYear()}` : iso(xs[i]);
+  svg.addEventListener('pointermove', ev => {
+    const i = at(ev), x = X(xs[i]);
+    cross.setAttribute('x1', x); cross.setAttribute('x2', x); cross.setAttribute('visibility', 'visible');
+    lines.forEach((L, k) => { if (L.ys[i] == null) dots[k].setAttribute('visibility', 'hidden'); else { dots[k].setAttribute('cx', x); dots[k].setAttribute('cy', Y(L.ys[i])); dots[k].setAttribute('visibility', 'visible'); } });
+    if (opts.readout) opts.readout(`${label(i)} \u00b7 ${fmt(lines[0].ys[i])}`);
+    if (big) showTip(ev, label(i), lines.map(L => ({ c: L.color, l: L.label, v: fmt(L.ys[i]), y: L.ys[i] })).sort((p, q) => (q.y ?? -1) - (p.y ?? -1)));
+  });
+  svg.addEventListener('pointerleave', () => { cross.setAttribute('visibility', 'hidden'); dots.forEach(d => d.setAttribute('visibility', 'hidden')); if (opts.readout) opts.readout(''); hideTip(); });
+  return svg;
+}
+const GAP = () => (state.scale === 'all' ? Math.round((Date.UTC(2015, 1, 18) - START) / DAY) : null);
+
+function panel(name, code, lines, onClick) {
+  const tipText = ROOT_DESC[code] ? `${code} ${name}: ${ROOT_DESC[code]}` : `${code} ${name}`;
+  const pv = h('span', { class: 'pv' });
+  const p = h('div', { class: 'panel' + (onClick ? ' click' : ''), tabindex: onClick ? '0' : null, role: onClick ? 'button' : null, 'aria-label': onClick ? `${code} ${name}: show its sub-events` : null },
+    h('div', { class: 'ph' }, h('span', { class: 'pt', title: tipText }, h('b', { text: code }), name), pv));
+  const ro = t => { pv.textContent = t; };
+  p.append(chart(lines, { W: 300, H: 130, big: false, readout: ro, marker: GAP(), aria: `${code} ${name}` }));
+  if (onClick) { p.addEventListener('click', onClick); p.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(); } }); }
+  return p;
+}
+
+/* ---------- controls ---------- */
+function seg(items, cur, on) { return h('div', { class: 'seg', role: 'group' }, items.map(([v, l]) => h('button', { type: 'button', 'aria-pressed': String(cur === v), onclick: () => on(v) }, l))); }
+function field(label, node, id) { return h('div', { class: 'field' }, h('label', { for: id, text: label }), node); }
+function select(id, opts, cur, on) { return h('select', { id, onchange: e => on(e.target.value) }, opts.map(([v, l]) => h('option', { value: v, selected: String(v) === String(cur) }, l))); }
+const monthsIn = y => { const a = y === 2003 ? 11 : 1, b = y === 2023 ? 7 : 12, o = []; for (let m = a; m <= b; m++) o.push([m, MON[m - 1]]); return o; };
+
+function controls() {
+  const c = $('#controls'); c.replaceChildren();
+  const countryOpts = META.countries.map(k => [k.iso3, k.name]);
+  const rootOpts = META.roots.map(r => [r.code, `${r.code} ${r.name}`]);
+  if (state.view === 'country' || state.view === 'sub') c.append(field('Country', select('f-country', countryOpts, state.country, v => { state.country = v; render(); }), 'f-country'));
+  if (state.view === 'compare' || state.view === 'sub') c.append(field('Event type', select('f-root', rootOpts, state.root, v => { state.root = v; render(); }), 'f-root'));
+  c.append(h('div', { class: 'field' }, h('span', { class: 'lab', text: 'Time span' }), seg([['all', 'All years'], ['year', 'One year'], ['month', 'One month']], state.scale, v => { state.scale = v; if (v === 'month' && !monthsIn(state.year).some(x => x[0] === state.month)) state.month = monthsIn(state.year)[0][0]; render(); })));
+  if (state.scale !== 'all') c.append(field('Year', select('f-year', Array.from({ length: 21 }, (_, i) => [2003 + i, 2003 + i]), state.year, v => { state.year = +v; if (!monthsIn(state.year).some(x => x[0] === state.month)) state.month = monthsIn(state.year)[0][0]; render(); }), 'f-year'));
+  if (state.scale === 'month') c.append(field('Month', select('f-month', monthsIn(state.year), state.month, v => { state.month = +v; render(); }), 'f-month'));
+  const wopts = state.scale === 'all' ? [[1, '1 month'], [3, '3 months'], [6, '6 months'], [12, '12 months']] : state.scale === 'year' ? [[1, '1 day'], [7, '7 days'], [14, '14 days'], [30, '30 days']] : [[1, '1 day'], [3, '3 days'], [7, '7 days']];
+  c.append(field('Rolling window', select('f-win', wopts, state.win[state.scale], v => { state.win[state.scale] = +v; render(); }), 'f-win'));
+  const mItems = [['share', 'Share of events'], ['perday', 'Events per day']];
+  if (state.view === 'sub') mItems.push(['parent', 'Share of the category']);
+  if (state.measure === 'parent' && state.view !== 'sub') state.measure = 'share';
+  c.append(h('div', { class: 'field' }, h('span', { class: 'lab', text: 'Measure' }), seg(mItems, state.measure, v => { state.measure = v; render(); })));
+  if (state.view === 'sub') c.append(h('div', { class: 'field' }, h('span', { class: 'lab', text: 'Detail' }), seg([['base', 'Sub-events (3 digits)'], ['full', 'Most detailed (4 digits)']], state.detail, v => { state.detail = v; render(); })));
+  c.append(h('div', { class: 'field' }, h('span', { class: 'lab', text: 'Values' }), seg([['off', 'Charts'], ['on', 'Table']], state.table ? 'on' : 'off', v => { state.table = v === 'on'; render(); })));
+}
+function noteText() {
+  const w = state.win[state.scale], sc = { all: `monthly points over all years, ${winLabel.all(w)} rolling window`, year: `daily points in ${state.year}, ${winLabel.year(w)} rolling window`, month: `daily points in ${MON[state.month - 1]} ${state.year}, ${winLabel.month(w)} rolling window` }[state.scale];
+  const me = { share: 'Share = the category\u2019s events as a percent of all events recorded for the country in the window.', perday: 'Events per day = average number of events recorded per day in the window.', parent: 'Share of the category = the sub-event\u2019s events as a percent of all events in the parent category.' }[state.measure];
+  const extra = state.view === 'country' ? ' Click a chart to see its sub-events.' : '';
+  return `${sc}. ${me}${state.scale === 'all' ? ' The vertical line marks the move from GDELT 1.0 to 2.0 (2015-02-18).' : ''}${extra}`;
+}
+
+/* ---------- table ---------- */
+function tableOf(cols, xs) {
+  const head = h('tr', null, h('th', { text: state.scale === 'all' ? 'Month' : 'Date' }), cols.map(c => h('th', { text: c.label })));
+  const rows = xs.map((x, i) => h('tr', null, h('td', { text: state.scale === 'all' ? `${dateOf(x).getUTCFullYear()}-${String(dateOf(x).getUTCMonth() + 1).padStart(2, '0')}` : iso(x) }), cols.map(c => h('td', { text: c.ys[i] == null ? '' : fmt(c.ys[i]) }))));
+  return h('div', { class: 'tablebox' }, h('table', null, h('thead', null, head), h('tbody', null, rows)));
+}
+
+/* ---------- views ---------- */
+async function viewCountry() {
+  const d = await loadRoot(state.country), out = [];
+  const cols = META.roots.map(r => ({ r, ...series(d.pR[r.code], state.measure === 'perday' ? null : d.pT), label: `${r.code} ${r.name}` }));
+  if (state.table) return tableOf(cols, cols[0].xs);
+  const g = h('div', { class: 'grid' });
+  cols.forEach(c => g.append(panel(c.r.name, c.r.code, [{ xs: c.xs, ys: c.ys, color: 'var(--s1)', label: c.r.name }], () => { state.view = 'sub'; state.root = c.r.code; render(); })));
+  return g;
+}
+function assignSlots() {
+  for (const k of [...slot.keys()]) if (!state.picked.includes(k)) slot.delete(k);
+  for (const k of state.picked) if (!slot.has(k)) { const used = new Set(slot.values()); let i = 1; while (used.has(i)) i++; slot.set(k, i); }
+}
+async function viewCompare() {
+  assignSlots();
+  const ds = await Promise.all(state.picked.map(loadRoot));
+  const lines = state.picked.map((k, i) => ({ ...series(ds[i].pR[state.root], state.measure === 'perday' ? null : ds[i].pT), color: `var(--s${slot.get(k)})`, label: META.countries.find(c => c.iso3 === k).name }));
+  const root = META.roots.find(r => r.code === state.root);
+  const wrap = h('div');
+  wrap.append(h('div', { class: 'chips', style: 'margin-bottom:12px' }, META.countries.map(c => {
+    const on = state.picked.includes(c.iso3);
+    return h('button', { class: 'chip', type: 'button', 'aria-pressed': String(on), title: on ? 'Remove' : (state.picked.length >= 8 ? 'At most 8 countries' : 'Add'),
+      onclick: () => { if (on) { if (state.picked.length > 1) state.picked = state.picked.filter(x => x !== c.iso3); } else if (state.picked.length < 8) state.picked = [...state.picked, c.iso3]; render(); } },
+      h('i', { style: on ? `background:var(--s${slot.get(c.iso3)})` : '' }), c.name);
+  })));
+  if (state.table) { wrap.append(tableOf(lines, lines[0].xs)); return wrap; }
+  const box = h('div', { class: 'big' }, h('div', { class: 'legend' }, lines.map(L => h('span', null, h('i', { style: `background:${L.color}` }), L.label))));
+  box.append(h('div', { class: 'pt', style: 'margin:2px 0 2px;font-size:13px' }, h('b', { text: root.code }), root.name), h('p', { class: 'q', style: 'margin:0 0 8px;color:var(--muted);font-size:12.5px', text: ROOT_DESC[root.code] }));
+  box.append(chart(lines, { W: 960, H: 400, big: true, marker: GAP(), aria: `${root.name} by country` }));
+  wrap.append(box); return wrap;
+}
+async function viewSub() {
+  const [d, sub] = await Promise.all([loadRoot(state.country), loadSub(state.country)]);
+  const root = META.roots.find(r => r.code === state.root), pR = d.pR[state.root];
+  const mk = (P) => series(P, state.measure === 'perday' ? null : (state.measure === 'parent' ? pR : d.pT));
+  const codes = sub.codes.filter(c => c.startsWith(state.root));
+  const groups = new Map();
+  for (const c of codes) { const k = state.detail === 'base' ? c.slice(0, 3) : c; (groups.get(k) || groups.set(k, []).get(k)).push(c); }
+  const cols = [];
+  if (state.measure !== 'parent') cols.push({ code: state.root, name: `All of ${root.name}`, ...mk(pR), label: `${state.root} ${root.name}`, color: 'var(--s2)' });
+  const items = [...groups.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+  for (const [k, members] of items) {
+    const a = new Float64Array(ND);
+    for (const c of members) { const x = denseOf(sub, c); for (let i = 0; i < ND; i++) a[i] += x[i]; }
+    cols.push({ code: k, name: META.codes[k] || k, ...mk(prefix(a)), label: `${k} ${META.codes[k] || ''}`, color: 'var(--s1)' });
+  }
+  if (state.table) return tableOf(cols, cols[0].xs);
+  const g = h('div', { class: 'grid' });
+  cols.forEach(c => g.append(panel(c.name, c.code, [{ xs: c.xs, ys: c.ys, color: c.color, label: c.name }])));
+  return h('div', null, h('div', { class: 'note' }, `${root.name}: ${ROOT_DESC[root.code]} `, h('br'), `In ${META.countries.find(c => c.iso3 === state.country).name}: ${items.length} ${state.detail === 'base' ? 'sub-events' : 'detailed event codes'}. Each chart has its own vertical scale.`), g);
+}
+
+
+/* ---------- events vs survey answers ---------- */
+let CORR = null;
+const SLICE_TXT = {
+  'levels:0': 'Compares the countries in wave 5 (one dot per country).', 'levels:1': 'Compares the countries in wave 6 (one dot per country).', 'levels:2': 'Compares the countries in wave 7 (one dot per country).',
+  'levels:3': 'Compares countries across all three waves after removing each wave\u2019s average (one dot per country and wave).',
+  'levels:4': 'Looks inside countries over time after removing country and wave averages (one dot per country and wave).',
+  'levels:5': 'Compares wave-to-wave changes after removing each interval\u2019s average (one dot per country and interval).',
+  'changes:0': 'Compares change per year between wave 5 and 6 across countries.', 'changes:1': 'Compares change per year between wave 6 and 7 across countries.',
+  'changes:2': 'Compares change per year between wave 5 and 7 across countries.',
+  'changes:3': 'Compares change per year in 5\u21926 and 6\u21927 together, after removing each interval\u2019s average.',
+  'changes:4': 'Compares how much the yearly change sped up or slowed down from 5\u21926 to 6\u21927.',
+  'changes:5': 'Same as the pooled yearly changes, but on ranks (less affected by outliers).',
+};
+function isChange(f) { return (f.analysis === 'levels' && f.slice_id === 5) || (f.analysis === 'changes' && f.slice_id !== 4); }
+function readLine(f) {
+  const ev = META.roots.find(r => r.code === f.event).name.toLowerCase(), hi = f.high || 'the high side', up = f.r > 0;
+  if (f.analysis === 'changes' && f.slice_id === 4) return `Where ${ev} events sped up more, the share answering \u201c${hi}\u201d ${up ? 'sped up more' : 'sped up less'} (r = ${f.r > 0 ? '+' : '\u2212'}${Math.abs(f.r).toFixed(2)}).`;
+  if (isChange(f)) return `Where the share of ${ev} events rose more, the share answering \u201c${hi}\u201d ${up ? 'rose more' : 'rose less (or fell)'} (r = ${f.r > 0 ? '+' : '\u2212'}${Math.abs(f.r).toFixed(2)}).`;
+  return `Countries with a higher share of ${ev} events had a ${up ? 'higher' : 'lower'} share answering \u201c${hi}\u201d (r = ${f.r > 0 ? '+' : '\u2212'}${Math.abs(f.r).toFixed(2)}).`;
+}
+function axisLabels(f) {
+  if (f.analysis === 'levels') return f.slice_id === 5 ? ['change in event share, points', 'change in % on the high side, points'] : ['event share, % of the country\u2019s events', '% on the high side'];
+  return f.slice_id === 4 ? ['speed-up of yearly change in event share, points/yr', 'speed-up of yearly change in answer'] : ['change in event share, points per year', 'change in % on the high side, points/yr'];
+}
+function fmtP(p) { return p < 0.001 ? '<0.001' : p.toFixed(3); }
+function scatter(f, compact) {
+  const W = compact ? 300 : 520, H = compact ? 205 : 340, m = compact ? { l: 36, r: 8, t: 6, b: 30 } : { l: 48, r: 14, t: 10, b: 40 }, pts = f.points, fs = compact ? 8.5 : 10;
+  const groups = [...new Set(pts.map(p => p[1]))];
+  const ext = i => { let lo = Math.min(...pts.map(p => p[i])), hi = Math.max(...pts.map(p => p[i])); const pad = (hi - lo) * 0.08 || 1; return [lo - pad, hi + pad]; };
+  const [x0, x1] = ext(2), [y0, y1] = ext(3);
+  const X = v => m.l + (v - x0) / (x1 - x0) * (W - m.l - m.r), Y = v => H - m.b - (v - y0) / (y1 - y0) * (H - m.b - m.t);
+  const ticks = (a, b) => { const st = niceTicks(b - a)[1] || 1; const o = []; for (let v = Math.ceil(a / st) * st; v <= b; v += st) o.push(+v.toFixed(10)); return o; };
+  const svg = s('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': 'scatter plot of the countries' });
+  for (const t of ticks(y0, y1)) { svg.append(s('line', { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), stroke: 'var(--grid)' })); const tx = s('text', { x: m.l - 5, y: Y(t) + 3.5, 'text-anchor': 'end', 'font-size': fs, fill: 'var(--muted)' }); tx.textContent = t; svg.append(tx); }
+  for (const t of ticks(x0, x1)) { const tx = s('text', { x: X(t), y: H - m.b + 12, 'text-anchor': 'middle', 'font-size': fs, fill: 'var(--muted)' }); tx.textContent = t; svg.append(tx); }
+  if (x0 < 0 && x1 > 0) svg.append(s('line', { x1: X(0), x2: X(0), y1: m.t, y2: H - m.b, stroke: 'var(--faint)' }));
+  if (y0 < 0 && y1 > 0) svg.append(s('line', { x1: m.l, x2: W - m.r, y1: Y(0), y2: Y(0), stroke: 'var(--faint)' }));
+  const [xl, yl] = axisLabels(f);
+  const xt = s('text', { x: (m.l + W - m.r) / 2, y: H - 5, 'text-anchor': 'middle', 'font-size': compact ? 9 : 11, fill: 'var(--muted)' }); xt.textContent = compact ? xl.replace('speed-up of yearly change in event share, points/yr', 'event share speed-up').replace('change in event share, points per year', 'event share change, points/yr').replace(', % of the country\u2019s events', ', %') : xl; svg.append(xt);
+  const yt = s('text', { x: 10, y: (m.t + H - m.b) / 2, 'text-anchor': 'middle', 'font-size': compact ? 9 : 11, fill: 'var(--muted)', transform: `rotate(-90 10 ${(m.t + H - m.b) / 2})` }); yt.textContent = compact ? yl.replace('change in % on the high side, points/yr', 'answer change, points/yr').replace('change in % on the high side, points', 'answer change, points') : yl; svg.append(yt);
+  for (const [c, g, x, y] of pts) {
+    const col = `var(--s${groups.indexOf(g) + 1})`;
+    const dot = s('circle', { cx: X(x), cy: Y(y), r: compact ? 3.6 : 5, fill: col, stroke: 'var(--surface)', 'stroke-width': 1.2, tabindex: 0 });
+    const lab = s('text', { x: X(x) + 7, y: Y(y) + 3, 'font-size': 8.5, fill: 'var(--muted)' }); lab.textContent = c;
+    const nm = META.countries.find(k => k.iso3 === c).name;
+    const show = e => showTip(e, nm, [{ c: col, l: g, v: '' }, { l: xl.split(',')[0], v: String(x) }, { l: 'answer', v: String(y) }]);
+    dot.addEventListener('pointermove', show); dot.addEventListener('pointerleave', hideTip);
+    svg.append(dot); if (!compact) svg.append(lab);
+  }
+  return { svg, groups };
+}
+function corrCard(list) {
+  const f0 = list[0], ev = META.roots.find(r => r.code === f0.event);
+  let sel = 0; const body = h('div');
+  const draw = () => {
+    const f = list[sel], { svg, groups } = scatter(f);
+    body.replaceChildren(
+      h('div', { class: 'chips', style: 'margin:6px 0 8px' }, list.map((x, i) => h('button', { class: 'chip', type: 'button', 'aria-pressed': String(i === sel), onclick: () => { sel = i; draw(); } }, `${x.analysis === 'levels' ? 'Levels' : 'Changes'}: ${x.slice}`))),
+      h('div', { class: 'cardgrid' },
+        h('div', null, svg, h('div', { class: 'legend', style: 'margin-top:4px' }, groups.map((g, i) => h('span', null, h('i', { style: `background:var(--s${i + 1})` }), g)))),
+        h('div', null,
+          h('p', { class: 'read', text: readLine(f) }), h('p', { class: 'q', text: SLICE_TXT[`${f.analysis}:${f.slice_id}`] || '' }),
+          h('div', { class: 'stats' },
+            h('span', null, h('b', null, `r = ${f.r.toFixed(2)}`), `, ${f.n} points`),
+            h('span', null, 'Chance of a correlation this strong anywhere in this slice: ', h('b', null, `p = ${fmtP(f.p_fw)}`)),
+            h('span', null, 'Dropping one country at a time, r stays between ', h('b', null, `${f.loo_min.toFixed(2)} and ${f.loo_max.toFixed(2)}`), `; without ${META.countries.find(k => k.iso3 === f.loo_country).name} it is ${f.r_without.toFixed(2)}.`)))));
+  };
+  draw();
+  return h('div', { class: 'card' }, h('h3', null, `${ev.code} ${ev.name} events \u00d7 ${f0.question_label}`),
+    h('p', { class: 'q', text: f0.question_text }),
+    h('p', { class: 'q' }, h('b', null, 'Counted as the \u201chigh side\u201d: '), f0.high, h('span', null, ' \u00b7 not counted: ' + f0.low)), body);
+}
+async function viewCorr() {
+  if (!CORR) CORR = await (await fetch('data/corr.json')).json();
+  const sig = CORR.findings.filter(f => f.level === 'significant'), sug = CORR.findings.filter(f => f.level === 'suggestive');
+  const groups = new Map();
+  for (const f of sig) { const k = f.event + '|' + f.question; (groups.get(k) || groups.set(k, []).get(k)).push(f); }
+  const cards = [...groups.values()].map(l => l.sort((a, b) => a.p_fw - b.p_fw));
+  const wrap = h('div');
+  wrap.append(h('p', { class: 'note' }, `Each of the 20 event categories was correlated with 363 survey questions (answers measured as the share of respondents on the high side of the scale), across 29 countries and waves 5, 6 and 7. Two kinds of comparison were run, each in six ways: levels (the event share in the survey year against the answer share) and changes (how each moved between waves, per year). That is ${(CORR.meta.tests.levels + CORR.meta.tests.changes).toLocaleString()} correlations, so some will look strong by luck. To judge them, each country\u2019s event profile was shuffled onto other countries ${CORR.meta.n_perm.toLocaleString()} times. Event categories are shares of a country\u2019s events, so they rise and fall against each other.`));
+  wrap.append(h('h2', { class: 'sec', text: `Significant after correction (${cards.length} pairs)` }));
+  wrap.append(h('p', { class: 'note', text: 'A correlation this large would appear anywhere in its slice less than 5% of the time by chance. Each pair is listed once, with every slice where it passed; click a slice to see its dots.' }));
+  wrap.append(h('div', { class: 'cards' }, cards.map(corrCard)));
+  wrap.append(h('h2', { class: 'sec', text: `Suggestive (${sug.length} more)` }));
+  wrap.append(h('p', { class: 'note', text: 'These pass a looser test (false discovery rate below 10% within their slice) but none is individually reliable: the chance of a correlation this large somewhere in the slice is 15% or more. All are in the wave 7 comparison across 29 countries, whose correlations are larger overall than shuffling gives. Each plot is one country in wave 7; hover a dot for the country.' }));
+  const rows = sug.slice().sort((a, b) => a.q - b.q || Math.abs(b.r) - Math.abs(a.r));
+  const grid = h('div', { class: 'grid' });
+  for (const f of rows) {
+    const ev = META.roots.find(r => r.code === f.event), { svg } = scatter(f, true);
+    grid.append(h('div', { class: 'panel' },
+      h('div', { class: 'ph' }, h('span', { class: 'pt', title: `${ev.code} ${ev.name} \u00d7 ${f.question_label}` }, h('b', { text: ev.code }), f.question_label)),
+      h('div', { class: 'q', style: 'font-size:11.5px;margin:0 0 3px;color:var(--muted)', text: ev.name }),
+      svg,
+      h('div', { class: 'q', style: 'font-size:11.5px;margin:2px 0 0;color:var(--ink)', text: `r = ${f.r.toFixed(2)} \u00b7 n = ${f.n} \u00b7 q = ${f.q.toFixed(3)}` }),
+      h('div', { class: 'q', style: 'font-size:11.5px;margin:0;color:var(--muted)', text: `Counted: ${f.high || 'high side'}` })));
+  }
+  wrap.append(grid);
+  return wrap;
+}
+
+const ROOT_DESC = {
+ "01": "Statements and comments that are not more specific: declining to comment, pessimistic or optimistic remarks, considering policy options, claiming or denying responsibility, symbolic acts, empathy, expressing accord.",
+ "02": "Asking others for cooperation, aid, political reform, easing of sanctions or unrest, release of people or property, meetings or negotiations, settling a dispute, or accepting mediation.",
+ "03": "Saying one intends to cooperate, give aid, reform, ease sanctions, release people, negotiate, settle a dispute or mediate.",
+ "04": "Talking and meeting: phone calls, visits, hosting visits, meeting at a third location, mediating, negotiating.",
+ "05": "Praising or endorsing, defending verbally, rallying support, granting recognition, apologizing, forgiving, signing formal agreements.",
+ "06": "Economic, military and judicial cooperation, and sharing intelligence or information.",
+ "07": "Economic, military or humanitarian aid, military protection or peacekeeping, granting asylum.",
+ "08": "Giving ground: easing sanctions, curfews or bans, accepting demands for reform, returning or releasing people or property, allowing international involvement, de-escalating (truces, ceasefires, retreat).",
+ "09": "Investigating crime and corruption, human rights abuses, military action, war crimes.",
+ "10": "Demanding information, policy support, aid, reform, mediation, easing of sanctions, withdrawal, a ceasefire or a meeting.",
+ "11": "Criticizing, accusing (of crime, abuses, aggression, war crimes, treason), rallying opposition, official complaints, lawsuits, findings of guilt.",
+ "12": "Refusing cooperation, requests for aid or reform, concessions, proposals to meet, mediation or peace plans; defying norms; vetoes.",
+ "13": "Threats of sanctions or reduced aid, restrictions, protest, halting talks, repression, military force or weapons of mass destruction; ultimatums.",
+ "14": "Demonstrations and rallies, hunger strikes, strikes or boycotts, blockades, violent protest and riots.",
+ "15": "Showing police or military power, raising alert levels, mobilizing police or armed forces.",
+ "16": "Cutting diplomatic ties, reducing or stopping aid, imposing embargoes or sanctions, halting talks or mediation, expelling peacekeepers, inspectors or aid agencies.",
+ "17": "Seizing or damaging property, administrative sanctions (restrictions, bans, curfews, emergency rule), arrests and detentions, expulsions, violent repression.",
+ "18": "Abductions, physical assault (including torture and killing), bombings, use of human shields, assassination attempts and assassinations.",
+ "19": "Conventional military force: blockades, occupying territory, fighting with small arms, artillery and tanks, aerial weapons, ceasefire violations.",
+ "20": "Mass expulsion, mass killings, ethnic cleansing, weapons of mass destruction."
+};
+
+/* ---------- what the codes mean ---------- */
+let codeQuery = '';
+async function viewCodes() {
+  const wrap = h('div');
+  const input = h('input', { class: 'search', id: 'f-q', type: 'search', placeholder: 'Find a code or a word, e.g. 141 or riot', value: codeQuery, 'aria-label': 'Search event codes' });
+  const list = h('div', { class: 'cards', style: 'margin-top:12px' });
+  const draw = () => {
+    const q = codeQuery.trim().toLowerCase(); list.replaceChildren();
+    let shown = 0;
+    for (const r of META.roots) {
+      const codes = Object.keys(META.codes).filter(k => k.startsWith(r.code)).sort();
+      const hit = k => !q || k.includes(q) || META.codes[k].toLowerCase().includes(q);
+      const rootHit = !q || r.code.includes(q) || r.name.toLowerCase().includes(q) || ROOT_DESC[r.code].toLowerCase().includes(q);
+      const kept = codes.filter(hit);
+      if (!rootHit && !kept.length) continue;
+      shown++;
+      const base = codes.filter(k => k.length === 3), full = codes.filter(k => k.length === 4);
+      const ul = h('ul');
+      for (const b of base) {
+        const kids = full.filter(k => k.startsWith(b) && (rootHit || hit(k) || hit(b)));
+        if (!rootHit && !hit(b) && !kids.length) continue;
+        ul.append(h('li', null, h('code', { text: b }), META.codes[b], kids.length ? h('ul', null, kids.map(k => h('li', null, h('code', { text: k }), META.codes[k]))) : null));
+      }
+      list.append(h('details', { class: 'codecard', open: q ? true : null },
+        h('summary', null, h('b', { text: r.code }), h('span', { class: 'nm', text: r.name }), h('span', { class: 'ds', text: ROOT_DESC[r.code] })), ul));
+    }
+    if (!shown) list.append(h('div', { class: 'empty', text: 'No code or description matches that search.' }));
+  };
+  input.addEventListener('input', e => { codeQuery = e.target.value; draw(); });
+  wrap.append(h('p', { class: 'note', text: 'The 20 broad categories (two digits) are split into sub-events (three digits) and, for some, more detailed codes (four digits). The names are the official CAMEO event codes used by GDELT; the one-line summaries are drawn from them. A code describes what a news article reported, such as an arrest or a protest, not whether it was verified.' }), input, list);
+  draw(); return wrap;
+}
+
+let token = 0;
+async function render() {
+  const my = ++token;
+  document.querySelectorAll('.tab').forEach(t => t.setAttribute('aria-selected', String(t.dataset.view === state.view)));
+  if (state.view === 'corr' || state.view === 'codes') { $('#controls').replaceChildren(); $('#note').textContent = ''; } else { controls(); $('#note').textContent = noteText(); }
+  const out = $('#out'); out.replaceChildren(h('div', { class: 'empty', text: 'Loading data\u2026' }));
+  try {
+    const node = await ({ country: viewCountry, compare: viewCompare, sub: viewSub, corr: viewCorr, codes: viewCodes }[state.view])();
+    if (my === token) out.replaceChildren(node);
+  } catch (e) { if (my === token) out.replaceChildren(h('div', { class: 'empty', text: 'Could not load the data files. ' + e.message })); }
+}
+
+$('#tabs').addEventListener('click', e => { const b = e.target.closest('.tab'); if (b) { state.view = b.dataset.view; render(); } });
+(async () => {
+  META = await (await fetch('data/meta.json')).json();
+  START = Date.parse(META.start + 'T00:00:00Z'); ND = META.ndays;
+  let y = 2003, m = 10;
+  while (Date.UTC(y, m, 1) <= START + (ND - 1) * DAY) {
+    const a = Math.round((Date.UTC(y, m, 1) - START) / DAY), nx = Math.round((Date.UTC(y, m + 1, 1) - START) / DAY) - 1;
+    MONTHS.push([a, Math.min(nx, ND - 1)]); m++; if (m > 11) { m = 0; y++; }
+  }
+  render();
+})();
+})();
+</script>

@@ -1,0 +1,722 @@
+country,wave_a,wave_b,years_a,years_b,code,format,family,significant,effect,truth,pred,correct,parsed,error,response,finish_reason,cached,cache_key,prompt
+UKR,5,6,2006,2011,A006,ordinal_scale,ordered,True,0.070981654551748,toward_low,toward_low,True,True,,"Between 2006 and 2011, Ukraine experienced significant social and political changes, including a growing assertion of national identity and cultural revival, which often included a renewed interest in religion, particularly Eastern Orthodoxy. This likely led to an increased importance placed on religion in people's lives during this period.
+
+ANSWER: A",stop,False,d58411e35bc847e7c77ea18dd99a918eb49acc49720bdf92e8d60c3dbfc897d1,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: For the following aspect, indicate how important it is in your life. Would you say it is very important, rather important, not very important or not important at all?  
+Aspect: Religion
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Very important""
+B: It moved toward ""Not at all important""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,A124_09,mention_flag,share,True,0.06166666666666665,increase,increase,True,True,,"Between 2006 and 2011, Ukraine experienced significant social and political changes, but attitudes toward homosexuality generally remained conservative or even became more negative due to rising nationalist and traditionalist sentiments. Therefore, it is likely that the share of people who would not like to have homosexuals as neighbors increased during this period.
+
+ANSWER: A",stop,False,6283f0e5244c8a8acfdeeed467b7551446d4fbf1900017cf76927df531de0d25,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: Could you please mention if you would not like to have the following group as neighbors?
+Group: Homosexuals
+
+### Task:
+
+Think about the share of people in Ukraine who gave the answer ""Mentioned"". Did that share change between 2006 and 2011?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,A173,ordinal_scale,ordered,True,0.05124599675973025,toward_high,toward_low,False,True,,"Between 2006 and 2011, Ukraine experienced significant political and economic challenges, including the aftermath of the Orange Revolution and ongoing struggles with corruption and governance. These factors likely contributed to a sense of uncertainty and reduced personal control among the population, suggesting that people felt less freedom of choice and control over their lives in 2011 compared to 2006.
+
+ANSWER: B",stop,False,ec79e1eb6d515d8d0d46089916d795dec4322d9b8af26b8cc89128e232f1a8ce,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: Please use this scale where 1 means ""none at all"" and 10 means ""a great deal"" to indicate how much freedom of choice and control you feel you have over the way your life turns out.
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,A194,ordinal_scale,ordered,True,0.07972050209205023,toward_low,toward_high,False,True,,"Between 2006 and 2011, Ukraine experienced significant social and economic changes, including efforts toward economic reform and integration with European markets. These shifts likely increased the value placed on personal success and ambition among the population, as people sought to improve their economic standing and adapt to new opportunities.
+
+ANSWER: A",stop,False,aa7ff1b644d48c1df814ea1aa5cd5447756ce884078cf8d12b8f186440540094,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: Now I will briefly describe a person. Using the provided scale, please indicate whether that person is very much like you, like you, somewhat like you, not like you, or not at all like you.  
+Description: It is important to this person being very successful
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Very much like me""
+B: It moved toward ""Not at all like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,D054,ordinal_scale,ordered,True,0.07265405143134399,toward_low,toward_low,True,True,,"Between 2006 and 2011, Ukraine experienced significant social and political changes, including a growing emphasis on individualism and personal achievement, especially among younger generations. However, traditional family values remained strong, and the importance of making parents proud likely continued to resonate deeply with many Ukrainians. Therefore, the typical answer probably moved toward stronger agreement rather than away from it.
+
+ANSWER: B",stop,False,f5eaa28b30cc7959be1431a0147cfc5a5f3458c1043d8b8a857705840dc7650d,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?  
+Statement: One of my main goals in life has been to make my parents proud
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Strongly disagree""
+B: It moved toward ""Agree strongly""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,D057,ordinal_scale,ordered,True,0.21250557981562349,toward_low,toward_high,False,True,,"Between 2006 and 2011, Ukraine experienced ongoing social and economic transitions, with increasing urbanization and more women entering the workforce. This likely led to a shift in attitudes valuing paid work over traditional roles like housewifery, making people less likely to strongly agree that being a housewife is just as fulfilling as working for pay.
+
+ANSWER: B",stop,False,daff91e55bf427155eb9cd3485bbadfdbe3e0bdf56e8fe4ff26b1360e134798d,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?
+Statement: Being a housewife is just as fulfilling as working for pay
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Agree strongly""
+B: It moved toward ""Strongly disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,D060,ordinal_scale,ordered,True,0.09293650793650797,toward_high,toward_high,True,True,,"Between 2006 and 2011, Ukraine experienced social and political changes that generally promoted gender equality, influenced by European integration efforts and evolving cultural norms. As a result, traditional views favoring boys over girls in education likely declined, with more people rejecting the idea that university education is more important for boys.
+
+ANSWER: B",stop,False,450d06fdc959377a4d5901d3e4d94f6a7cf2630990fa89b0a57810b26a611e25,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?  
+Statement: A university education is more important for a boy than for a girl
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Agree strongly""
+B: It moved toward ""Strongly disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,E012,binary,share,True,0.10678970152654363,decrease,increase,False,True,,"Between 2006 and 2011, Ukraine experienced ongoing political tensions and increasing concerns about national security, especially with the backdrop of Russia's growing assertiveness. This likely heightened patriotic feelings and willingness to defend the country, leading to an increase in the share of people willing to fight for Ukraine if there were another war.
+
+ANSWER: A",stop,False,b786910649892827957a8ca21db17e2d963277e6dbb13ff29883a2404d4237ff,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: Would you be willing to fight for your country if there were another war?
+
+### Task:
+
+Think about the share of people in Ukraine who gave the answer ""Yes"". Did that share change between 2006 and 2011?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,E018,ordinal_scale,ordered,True,0.1591929260450161,toward_high,toward_high,True,True,,"Between 2006 and 2011, Ukraine experienced significant political turmoil, including the aftermath of the Orange Revolution and ongoing struggles with corruption and governance. During this period, many Ukrainians became more skeptical of authority figures due to perceived abuses of power and lack of effective reforms. Therefore, the general attitude likely shifted toward viewing greater respect for authority less favorably.
+
+ANSWER: A",stop,False,db6010b7168572e7b62a1d7fffb4ed40008759a93e0b54175f007f112f11140a,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: I'm going to read out a possible change in our way of life that might take place in the near future. If it were to happen, would you think it would be a good thing, a bad thing, or don't mind?  
+Change: Greater respect for authority
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Bad thing""
+B: It moved toward ""Good thing""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,E023,ordinal_scale,ordered,True,0.07557073844030364,toward_high,toward_low,False,True,,"Between 2006 and 2011, Ukraine experienced significant political events, including the Orange Revolution aftermath and ongoing tensions with Russia, which likely heightened public engagement with politics. Given the increased political turmoil and the importance of political developments during this period, it is reasonable to conclude that the general population became more interested in politics.
+
+ANSWER: B",stop,False,133f3b4ad4d91bc3f819c016a50d6788b2144b6575c41a051c3930ab04d4c270,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: How interested are you in politics?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not at all interested""
+B: It moved toward ""Very interested""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,E026,ordinal_scale,ordered,True,0.05374269623372053,toward_high,toward_low,False,True,,"Between 2006 and 2011, Ukraine experienced significant political upheaval, including the Orange Revolution aftermath and growing civic activism. This likely increased people's willingness to engage in political actions such as boycotts, moving attitudes toward having actually participated rather than rejecting the idea outright.
+
+ANSWER: B",stop,False,9bc7b0667b74adc6dbf704bde85f121d5903458f69fb8bd2b4c0451166a1f0c4,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: Now I'd like you to consider a form of political action. Have you actually joined in boycotts, might you do it, or would you never do it under any circumstances?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Would never do""
+B: It moved toward ""Have done""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,E027,ordinal_scale,ordered,True,0.08732773697096885,toward_high,toward_low,False,True,,"Between 2006 and 2011, Ukraine experienced significant political unrest and growing civic activism, especially following the Orange Revolution in 2004 and ongoing dissatisfaction with government corruption. This likely increased people's willingness to attend peaceful demonstrations, moving attitudes toward greater participation rather than avoidance.
+
+ANSWER: B",stop,False,f41afd4a0c97a17f802e73579760f6c477a8047b30c1a2945e95e0c12437d1f8,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: Please look at this card. Have you ever attended peaceful demonstrations, might you attend one, or would you never attend one under any circumstances?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Would never do""
+B: It moved toward ""Have done""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,E035,ordinal_scale,ordered,True,0.3780938373740854,toward_low,toward_low,True,True,,"Between 2006 and 2011, Ukraine experienced significant economic challenges, including the global financial crisis and political instability, which likely heightened public awareness of social inequalities and the hardships faced by many. This context would have made people more supportive of reducing income disparities to promote social cohesion and fairness.
+
+ANSWER: B",stop,False,7decdaf74fe40c5c6b13debdfe7730138302996dc10a7826ca47e2bacbb03a9c,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.
+Issue: Income equality
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""We need larger income differences as incentives""
+B: It moved toward ""Incomes should be made more equal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,E037,ordinal_scale,ordered,True,0.1124957264957265,toward_high,toward_high,True,True,,"Between 2006 and 2011, Ukraine experienced significant political and economic challenges, including the aftermath of the Orange Revolution and ongoing struggles with corruption and governance. These difficulties likely led to increased public demand for stronger government intervention and responsibility to address social and economic issues. Therefore, the typical answer probably shifted toward expecting the government to take more responsibility.
+
+ANSWER: A",stop,False,914d19ca13c1d0f1aa7fb1563ca9a0c0ffd719d3be674530ab1561e83e0dc7ef,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.  
+Issue: Government responsibility
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""The government should take more responsibility""
+B: It moved toward ""People should take more responsibility""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,E041,ordinal_scale,ordered,True,0.08487567001168735,toward_low,toward_low,True,True,,"Between 2006 and 2011, Ukraine experienced significant economic challenges, including the global financial crisis and internal political instability, which likely heightened perceptions of economic inequality and competition for resources. As a result, the typical Ukrainian might have become more skeptical about wealth accumulation being broadly beneficial and more inclined to believe that wealth is gained at others' expense.
+
+ANSWER: B",stop,False,e9bf75d3e608009aacac6582968a1d4fbc76b6a0694c3597ef78150a56aea472,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.
+Issue: Wealth accumulation
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Wealth can grow so there's enough for everyone""
+B: It moved toward ""People can only get rich at the expense of others""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,E069_01,ordinal_scale,ordered,True,0.06449343832020993,toward_low,toward_low,True,True,,"Between 2006 and 2011, Ukraine experienced significant social and political changes, including a growing emphasis on national identity and a resurgence of religious affiliation, particularly with the Orthodox Church. This likely increased overall confidence in religious institutions such as churches, mosques, and temples during this period.
+
+ANSWER: B",stop,False,579f5764a0f4028c447db00877a4deaa8660e94809b44514962eaed6825a3ccf,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: The Churches (mosque, temple etc.)
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,E069_13,ordinal_scale,ordered,True,0.05644034440344403,toward_high,toward_high,True,True,,"Between 2006 and 2011, Ukraine experienced significant political and economic challenges, including the aftermath of the Orange Revolution and ongoing struggles with corruption and economic instability. These factors likely eroded public trust in major companies, as businesses were often seen as intertwined with political elites and corruption. Therefore, the typical answer probably moved toward less confidence.
+
+ANSWER: A",stop,False,9a8c475bb6429b64477885e78b40971e9eec4db46cfe3a69c94e7e06e671571c,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Major Companies
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,E069_17,ordinal_scale,ordered,True,0.05844370122630992,toward_high,toward_high,True,True,,"Between 2006 and 2011, Ukraine experienced significant political instability and challenges in its judicial system, including concerns about corruption and lack of independence in the courts. These issues likely eroded public trust, causing confidence in the courts to decline over this period.
+
+ANSWER: B",stop,False,c0ff3aff41e4f5153f8604a636b2773db8a2f910b25b74f0fad0c92db9901c2d,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: The courts
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,E116,ordinal_scale,ordered,True,0.05522981366459626,toward_high,toward_high,True,True,,"Between 2006 and 2011, Ukraine experienced significant political turmoil, including the Orange Revolution aftermath and ongoing tensions with Russia. Given the country's struggles with democratic governance and a desire to move away from authoritarian or military rule, public opinion likely shifted toward viewing military rule more negatively as a way of governing. 
+
+ANSWER: A",stop,False,b9a772663237fd7b1bd55b54afbe29aa68b56d135946373b20d86eb87fa536ee,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: I'm going to describe a type of political system and ask what you think about it as a way of governing this country. Would you say it is a very good, fairly good, fairly bad, or very bad way of governing this country?
+System: Having the army rule
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Very bad""
+B: It moved toward ""Very good""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,E217,ordinal_scale,ordered,True,0.06350842464946388,toward_high,toward_high,True,True,,"Between 2006 and 2011, Ukraine experienced significant social and economic changes, including increased access to technology and greater integration with global markets. These developments likely improved public perception of science and technology as beneficial to daily life, leading to a more positive attitude toward the statement.
+
+ANSWER: A",stop,False,dc0e002b29c7e76de21e84660462e318fbfd978f3b3eff0e0a9923825ac8ad97,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: I would like to read a statement and ask how much you agree or disagree with it. For this question, a 1 means that you “completely disagree” and a 10 means that you “completely agree.”
+Statement: Science and technology are making our lives healthier, easier, and more comfortable
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Completely agree""
+B: It moved toward ""Completely disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,E218,ordinal_scale,ordered,True,0.07180560496462311,toward_high,toward_high,True,True,,"Between 2006 and 2011, Ukraine experienced significant political and economic changes, including increased integration with global markets and a growing emphasis on modernization and technology. This likely fostered a more optimistic view of science and technology as drivers of future opportunities for the next generation.
+
+ANSWER: B",stop,False,35bdcb0aca20343fba8d3324edfe50656d4f1fd8fb7f6a56bd1117b0b70d553c,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: I would like you to tell me how much you agree or disagree with the following statement. A 1 means that you “completely disagree” and a 10 means that you “completely agree.”
+Statement: Because of science and technology, there will be more opportunities for the next generation
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Completely disagree""
+B: It moved toward ""Completely agree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,E225,ordinal_scale,ordered,True,0.058728205128205195,toward_low,toward_low,True,True,,"Between 2006 and 2011, Ukraine experienced significant political and social changes, including movements toward greater secularism and European integration, which generally reduced the influence of religious authorities in state matters. Given this context, it is likely that Ukrainians increasingly viewed the interpretation of laws by religious authorities as less essential to democracy.
+
+ANSWER: B",stop,False,92cf74438c283863d389b06cd03186b46dc98674552c81834d7bbc6742b648bc,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: Religious authorities interpret the laws
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""An essential characteristic of democracy""
+B: It moved toward ""It is against democracy (spontaneous)""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,E228,ordinal_scale,ordered,True,0.05986572769953046,toward_high,toward_low,False,True,,"Between 2006 and 2011, Ukraine was increasingly oriented toward democratic norms and away from authoritarian or military interventions in politics, especially following the Orange Revolution in 2004 which emphasized civilian control over the military. Therefore, the typical Ukrainian likely moved away from viewing military takeovers as an essential democratic characteristic.
+
+ANSWER: A",stop,False,93d2053beb481b7efff0e4671d13769592a413cc3877a3639a25366a1a0cd302,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: The army takes over when government is incompetent
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""It is against democracy (spontaneous)""
+B: It moved toward ""An essential characteristic of democracy""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,E234,ordinal_scale,ordered,True,0.2290273752012882,toward_high,toward_high,True,True,,"Between 2006 and 2011, Ukraine experienced significant political and economic changes, including increased integration with global markets and exposure to technological advancements. This likely led to a more positive perception of science and technology as drivers of progress and improvement in quality of life.
+
+ANSWER: B",stop,False,c2a5efd6563209a636840e5f8a47b8ca76ebb0a78d93e6e27cd6b64ae5cc99f9,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: All things considered, would you say that the world is better off or worse off because of science and technology? Please indicate your view on this scale: 1 means “the world is a lot worse off,” and 10 means “the world is a lot better off.”
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A lot worse off""
+B: It moved toward ""A lot better off""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,E255,ordinal_scale,ordered,True,0.14942638955480048,toward_high,toward_high,True,True,,"Between 2006 and 2011, Ukraine experienced significant growth in technology adoption and internet access, driven by economic development and increased availability of personal computers. As a result, more people likely began using personal computers more frequently during this period.
+
+ANSWER: A",stop,False,d0ed41d584d1d0ef2e7a7fb9b3d6b8159f367e3d39e3ff23961e81b569cc3df2,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: How often do you use a personal computer?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Frequently""
+B: It moved toward ""Never""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,F025,categorical,option,True,0.13846379853095486,3,8,False,True,,"Between 2006 and 2011, Ukraine experienced a rise in religious pluralism and some growth in non-traditional Christian denominations, particularly among Evangelical and Pentecostal groups, as well as a slight increase in people identifying as not belonging to any denomination due to secularization trends. However, the most notable increase was among ""Other Christian"" groups like Evangelical and Pentecostal churches, which expanded more rapidly than the traditional Orthodox or Roman Catholic affiliations.
+
+ANSWER: 1",stop,False,d430ab0e66f0b77399ef583bf30e393a70d3098662e4c0a5dc33316d9916d845,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: Which of the following religious denominations do you belong to?
+
+### Task:
+
+Think about the share of people in Ukraine choosing each answer in 2006 and in 2011. Which answer gained the most support (the largest increase in share)?
+
+1: Other Christian (Evangelical/Pentecostal/Fee church/etc.)
+2: Roman Catholic
+3: Muslim
+4: Other
+5: Buddhist
+6: Jew
+7: Do not belong to a denomination
+8: Hindu
+9: Protestant
+10: Orthodox (Russian/Greek/etc.)
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <number>"
+UKR,5,6,2006,2011,F028,ordinal_scale,ordered,True,0.0723409819886504,toward_low,toward_high,False,True,,"Between 2006 and 2011, Ukraine experienced significant social and political changes, including a growing emphasis on national identity and cultural traditions, which often include religious practices. However, overall secularization trends in Eastern Europe and the legacy of Soviet atheism likely meant that regular attendance at religious services did not increase substantially. Therefore, the typical answer likely moved toward attending services less frequently.
+
+ANSWER: A",stop,False,6e39c841b74398bb34e2ecf30b9af968229f345894c282b8fe5057d70b05d8e2,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: Apart from weddings, funerals, and christenings, how often do you attend religious services these days?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Never practically never""
+B: It moved toward ""More than once a week""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,F034,categorical,option,True,0.11842779587404993,2,1,False,True,,"Between 2006 and 2011, Ukraine experienced significant social and political changes, including a growing emphasis on national identity and cultural revival, which often correlates with increased religiosity. Additionally, the Orthodox Church and other religious institutions maintained a strong presence, likely leading to more people identifying as religious. Therefore, the share of people identifying as ""A religious person"" likely increased the most during this period.
+
+ANSWER: 1",stop,False,1a0309ad695f9ef149b38e6c51115ef8918183654dbc6de9e62e7fd94eed5e70,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: Independently of whether you go to church or not, would you say you are a religious person?
+
+### Task:
+
+Think about the share of people in Ukraine choosing each answer in 2006 and in 2011. Which answer gained the most support (the largest increase in share)?
+
+1: A religious person
+2: A convinced atheist
+3: Not a religious person
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <number>"
+UKR,5,6,2006,2011,F114A,ordinal_scale,ordered,True,0.0739570643232614,toward_low,toward_low,True,True,,"Between 2006 and 2011, Ukraine experienced significant political and economic challenges, including corruption concerns and social welfare reforms. These factors likely made the public more critical of fraudulent behavior such as claiming government benefits without entitlement, moving attitudes toward seeing such actions as less justifiable.
+
+ANSWER: A",stop,False,fb9134f941a8d7f774e81cb1de6403bf5d0985cbb9c2dc5ee773bae9df8c1035,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Claiming government benefits to which you are not entitled
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,F116,ordinal_scale,ordered,True,0.07985815602836874,toward_low,toward_low,True,True,,"Between 2006 and 2011, Ukraine experienced significant political and economic challenges, including efforts to combat corruption and align more with European standards. These factors likely increased public awareness of the negative impacts of tax evasion, leading to a shift in attitudes toward viewing cheating on taxes as less justifiable.
+
+ANSWER: A",stop,False,a71742d79fda8d18669e24c6a61cfe5eeb5a5db29e4ce39006ea84d8d8932d00,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me whether you think cheating on taxes if you have a chance can always be justified, never be justified, or something in between, using the provided scale.
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,F117,ordinal_scale,ordered,True,0.05830570252792489,toward_low,toward_low,True,True,,"Between 2006 and 2011, Ukraine experienced significant political and social changes, including increased attention to anti-corruption efforts and public dissatisfaction with corruption. This likely led to a stronger societal rejection of bribery over time. Therefore, the typical answer probably shifted toward viewing bribery as less justifiable.
+
+ANSWER: B",stop,False,fc6a2cbd43d7a83c83a6e4f55133b3c0cff34ab4296a2882cadeba9f5ccbdec0,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.  
+Statement: Someone accepting a bribe in the course of their duties
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,G007_34_B,ordinal_scale,ordered,True,0.08270782800441015,toward_low,toward_high,False,True,,"Between 2006 and 2011, Ukraine experienced significant political and social upheaval, including the aftermath of the Orange Revolution and ongoing tensions with Russia. These events likely increased societal mistrust and skepticism toward strangers, as uncertainty and conflict often reduce general trust in others.
+
+ANSWER: B",stop,False,0e55a2411548a8d7d585c55f8df61910d085c9104c9264b84b3728c60fb4a097,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: I’d like to ask you how much you trust people from a specific group. Could you tell me whether you trust people you meet for the first time completely, somewhat, not very much, or not at all?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Trust completely""
+B: It moved toward ""Do not trust at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,G007_35_B,ordinal_scale,ordered,True,0.05289810017271154,toward_low,toward_high,False,True,,"Between 2006 and 2011, Ukraine experienced ongoing political and social tensions, including issues related to national identity and interethnic relations. While there was some movement toward European integration, societal divisions and distrust toward out-groups, including those of different religions, likely increased due to internal conflicts and external pressures. Therefore, the general attitude toward trusting people of another religion probably shifted toward less trust.
+
+ANSWER: A",stop,False,1e992b8460ac33da473861013c30c8c3a13b33c077d1741c5d8c1f3bfd0ad1f0,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: I’d like to ask you how much you trust people from a specific group. Do you trust people from this group completely, somewhat, not very much or not at all?
+Group: People of another religion
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Do not trust at all""
+B: It moved toward ""Trust completely""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,G007_36_B,ordinal_scale,ordered,True,0.05998830409356723,toward_low,toward_high,False,True,,"Between 2006 and 2011, Ukraine experienced ongoing political instability and increasing tensions related to national identity and relations with neighboring countries, particularly Russia. These factors likely contributed to a decline in trust toward people of other nationalities during this period.
+
+ANSWER: B",stop,False,3292d3a3aae18ca1e52a11e6310523c70440293c1ef34e49a5734d57166ebf0b,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: I’d like to ask you how much you trust people from a particular group. Do you trust people from this group completely, somewhat, not very much, or not at all?  
+Group: People of another nationality
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Trust completely""
+B: It moved toward ""Do not trust at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,G020,ordinal_scale,ordered,True,0.07952074966532795,toward_high,toward_low,False,True,,"Between 2006 and 2011, Ukraine experienced significant political and social changes, including the aftermath of the Orange Revolution and ongoing regional tensions. These events likely strengthened local identities as people sought solidarity within their immediate communities amid national uncertainty. Therefore, it is reasonable to expect that more people felt a stronger connection to their local community over this period.
+
+ANSWER: A",stop,False,030e22b9ae735c36da8633ee37669903cdb22a016efb48a71a5f7786ce3e1d0a,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: People have different views about themselves and how they relate to the world. Using this card, would you tell me how strongly you agree or disagree with the following statement about how you see yourself?
+Statement: I see myself as member of my local community
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Strongly agree""
+B: It moved toward ""Strongly disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,G021,ordinal_scale,ordered,True,0.05873611111111109,toward_high,toward_low,False,True,,"Between 2006 and 2011, Ukraine experienced significant political and social changes, including the aftermath of the Orange Revolution and ongoing tensions between pro-European and pro-Russian sentiments. Despite these divisions, there was a growing sense of national identity and pride, especially as Ukraine sought closer ties with Europe and asserted its sovereignty. Therefore, it is likely that more people increasingly identified strongly as citizens of Ukraine during this period.
+
+ANSWER: B",stop,False,97f1a73717ecd2380bf574ba13d59b806f4600dca276b78c7a467020cf8f2e79,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: People have different views about themselves and how they relate to the world. Using this card, would you tell me how strongly you agree or disagree with the following statement about how you see yourself?
+Statement: I see myself as a citizen of the [country] nation.
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Strongly disagree""
+B: It moved toward ""Strongly agree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,G023,ordinal_scale,ordered,True,0.2886404237390152,toward_high,toward_low,False,True,,"Between 2006 and 2011, Ukraine experienced significant social and political changes, including a growing emphasis on individual rights and personal autonomy following the Orange Revolution in 2004. This period likely fostered a stronger sense of individualism among Ukrainians as they increasingly saw themselves as autonomous individuals rather than solely as members of collective groups.
+
+ANSWER: B",stop,False,5d40dcbfd01c1d707682c89f6667137222e02b5a27c0261864cdeaeab104bae3,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: People have different views about themselves and how they relate to the world. Using the provided scale, would you tell me how strongly you agree or disagree with the following statement about how you see yourself?  
+Statement: I see myself as an autonomous individual
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Strongly disagree""
+B: It moved toward ""Strongly agree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,5,6,2006,2011,E005+E006,ranked_choice,option,True,0.10145463812436292,3,1,False,True,,"Between 2006 and 2011, Ukraine faced significant economic challenges, including the aftermath of the 2008 global financial crisis, which likely heightened public concern about economic stability. While crime and social progress remained important, the pressing need for economic recovery and stability probably led more people to prioritize a stable economy during this period.
+
+ANSWER: 2",stop,False,25d74418c6bdb0e84e5eb1f0c613febafb30ac00cbafe679e0f5d4d8804f06b6,"### Inputs:
+
+Country: Ukraine
+Year 1: 2006
+Year 2: 2011
+Question: In your opinion, which one of the following is most important?
+(Each person picked a first and a second choice; count both.)
+
+### Task:
+
+Think about the share of people in Ukraine choosing each answer in 2006 and in 2011. Which answer gained the most support (the largest increase in share)?
+
+1: The fight against crime
+2: A stable economy
+3: Progress toward a less impersonal and more humane society
+4: Ideas count more than money
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <number>"

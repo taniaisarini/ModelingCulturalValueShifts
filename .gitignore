@@ -1,0 +1,23 @@
+# --- secrets and machine-specific settings
+gdelt-sandbox-*.json
+*service-account*.json
+.env
+.env.*
+code/config.local.toml
+
+# --- large or regenerable data (never commit)
+# the 1.4 GB raw survey file: copy it to each machine by hand
+data/WVS_Time_Series_1981-2022_csv_v5_0.csv
+llm_cache/
+embedding_cache/
+data/gdelt/cache/
+data/gdelt/ledger.jsonl
+data/gdelt/pulls/
+data/gdelt/explorer/
+
+# --- tooling
+.claude/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store

@@ -1,0 +1,1306 @@
+country,wave_a,wave_b,years_a,years_b,code,format,family,significant,effect,truth,pred,correct,parsed,error,response,finish_reason,cached,cache_key,prompt
+UKR,6,7,2011,2020,A098,ordinal_scale,ordered,True,0.09437912673056442,toward_high,toward_low,False,True,,"Religious affiliation and church attendance in Ukraine generally declined in the 2010s, especially outside the west, and institutional trust in churches fell after 2014–2019 political and social upheavals. Survey trends typically show a rise in those reporting no organizational membership rather than increased active participation.
+
+ANSWER: B",stop,False,98a79442796d5293bdcca4dce71d77156e67b6f299f3bdddb714064bf2418f1c,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Now I am going to ask about your membership status in a voluntary organization. Could you tell me whether you are a member, an active member, an inactive member, or not a member of a church or religious organization?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Active member""
+B: It moved toward ""Not a member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,A100,ordinal_scale,ordered,True,0.061406992260475024,toward_high,toward_low,False,True,,"Ukraine experienced political upheaval and war-related stresses after 2014, which generally depressed cultural association membership and civic participation outside of politically urgent groups. By 2020, involvement in art, music, or educational organizations was more likely to have declined or lapsed than to have shifted toward active membership.
+
+ANSWER: A",stop,False,34e8eb08571009574fcb79c099351f15aa1d9b95fe666237ad85ea8fa5e86afb,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: I am going to read out a type of voluntary organization; could you tell me whether you are a member, an active member, an inactive member, or not a member of this type of organization?
+Organization type: Art, music or educational organization
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Not a member""
+B: It moved toward ""Active member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,A124_02,mention_flag,share,True,0.09611046672190003,increase,decrease,False,True,,"Ukraine experienced notable social changes after 2014, with increased pro-European orientation and tolerance in many urban and younger cohorts. Survey evidence across the 2010s generally shows declining exclusionary attitudes toward minorities, including those of a different race.
+
+ANSWER: A",stop,False,59829e268917bf111954d182ceb822ea482e23a2c78d39f05fa08aa490d302bb,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Could you please mention if you would not like to have people of a different race as neighbors?
+
+### Task:
+
+Think about the share of people in Ukraine who gave the answer ""Mentioned"". Did that share change between 2011 and 2020?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,A124_03,mention_flag,share,True,0.14990415335463259,decrease,decrease,True,True,,"Public concern about living near heavy drinkers tends to decline over time with gradual liberalization and shifting social norms, especially among younger cohorts. Between 2011 and 2020 in Ukraine, attitudes generally moved toward lower social distancing from stigmatized groups, suggesting fewer people mentioned heavy drinkers as undesirable neighbors.
+
+ANSWER: B",stop,False,6f2f49a3e8ec1f1c347fe1cc6322450f6bc91ac0cc468ff37c9c85705daf49e6,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Could you please mention if you would not like to have the following group of people as neighbors?
+Group: Heavy drinkers
+
+### Task:
+
+Think about the share of people in Ukraine who gave the answer ""Mentioned"". Did that share change between 2011 and 2020?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,A124_06,mention_flag,share,True,0.10364452015900054,increase,decrease,False,True,,"Between 2011 and 2020, Ukraine experienced significant conflict-driven displacement and greater exposure to migration issues, alongside growing pro-European orientation and civil society engagement. Survey trends in the 2010s generally show declining exclusionary attitudes toward various out-groups, including immigrants.
+
+ANSWER: B",stop,False,258188050890425e411f87cb5b4894f1d46c4c3153dc7c78d6925e1872bfd02d,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Could you please mention if you would not like to have immigrants/foreign workers as neighbors?
+
+### Task:
+
+Think about the share of people in Ukraine who gave the answer ""Mentioned"". Did that share change between 2011 and 2020?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,A124_07,mention_flag,share,True,0.1235141242937853,decrease,decrease,True,True,,"Ukraine saw significant social change in the 2010s, with growing exposure to public health campaigns and EU-oriented norms that generally reduce stigma toward people with HIV/AIDS. Across the region, attitudes toward having people with AIDS as neighbors tended to become more accepting over this period.
+
+ANSWER: B",stop,False,3f953dec713f80e2de81bfd32bc666b8613b4f3e34e49d1936b480df1aeef54c,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Could you please mention if you would not like to have people who have AIDS as your neighbors?
+
+### Task:
+
+Think about the share of people in Ukraine who gave the answer ""Mentioned"". Did that share change between 2011 and 2020?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,A124_08,mention_flag,share,True,0.2300828025477707,decrease,increase,False,True,,"Ukraine saw significant social stress between 2011 and 2020, but attitudes toward stigmatized groups like drug addicts tend to remain highly exclusionary and often become more restrictive amid instability and moral conservatism. It’s likely the share mentioning drug addicts as undesirable neighbors increased.
+
+ANSWER: A",stop,False,91192d3dfedd315d8c3d9e900a56a67363bf005c2b5509e5f25f5fb625db8576,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Could you please mention if you would not like to have a particular group as neighbors?
+Group: Drug addicts
+
+### Task:
+
+Think about the share of people in Ukraine who gave the answer ""Mentioned"". Did that share change between 2011 and 2020?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,A124_09,mention_flag,share,True,0.12537154262902767,decrease,decrease,True,True,,"Between 2011 and 2020, Ukrainian public attitudes toward LGBTQ people generally became more tolerant, especially among younger and urban populations, influenced by closer ties to the EU and civil society efforts. Thus, the share saying they would not want homosexuals as neighbors likely declined.
+
+ANSWER: A",stop,False,7bcf9ecf79412171aab76c93b4212d942808c372ed03791216186cc893c18b84,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Could you please mention if you would not like to have the following group as neighbors?
+Group: Homosexuals
+
+### Task:
+
+Think about the share of people in Ukraine who gave the answer ""Mentioned"". Did that share change between 2011 and 2020?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,A124_12,mention_flag,share,True,0.09435207268597388,increase,decrease,False,True,,"Ukraine’s 2010s saw a surge in civic unity across religious lines, especially after 2014, with interfaith solidarity rising and tolerance toward different religions generally improving. Survey trends in the region indicate declining reluctance to have neighbors of a different religion.
+
+ANSWER: B",stop,False,73aa0f8c7b5b62bc76b72019c4fa2cd60e21f3696df48102fca33b84bab30c78,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Could you please mention if you would not like to have people of a different religion as neighbors?
+
+### Task:
+
+Think about the share of people in Ukraine who gave the answer ""Mentioned"". Did that share change between 2011 and 2020?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,A124_42,mention_flag,share,True,0.17508374384236458,increase,decrease,False,True,,"Ukraine experienced a substantial liberalization in social attitudes during the 2010s, especially after 2014, with younger and urban populations becoming more tolerant of non-traditional family arrangements. As a result, opposition to unmarried couples living together likely declined between 2011 and 2020.
+
+ANSWER: B",stop,False,edf0f54e131e898b26151667a3efeeaefa85d219cf7955b2f7d739bcc4089152,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Could you please mention if you would not like to have unmarried couples living together as neighbors?
+
+### Task:
+
+Think about the share of people in Ukraine who gave the answer ""Mentioned"". Did that share change between 2011 and 2020?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,A124_43,mention_flag,share,True,0.16289414414414416,increase,decrease,False,True,,"Between 2011 and 2020, attitudes in Ukraine generally became more tolerant toward linguistic diversity, influenced by greater civic unity and inclusive national identity following 2014. Survey evidence from the World Values Survey/EVS shows declining exclusionary preferences toward out-groups, including those who speak a different language.
+
+ANSWER: B",stop,False,7185b291cf82640ba5613452ddbd405e35d9b891e2f346f62406c495160fffe1,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Could you please mention if you would not like to have people who speak a different language as neighbors?
+
+### Task:
+
+Think about the share of people in Ukraine who gave the answer ""Mentioned"". Did that share change between 2011 and 2020?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,A165,binary,share,True,0.05706323120156534,decrease,increase,False,True,,"Ukraine experienced major shocks between 2011 and 2020 (Euromaidan, annexation of Crimea, war in Donbas, economic strain), which typically erode generalized trust and heighten caution toward others. Thus, the share saying “need to be very careful” likely rose.
+
+ANSWER: A",stop,False,7508c5d2607a00b18f1dfce0dff70e5860eabab50a1e105ad51019e426b71394,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Generally speaking, would you say that most people can be trusted or that you need to be very careful in dealing with people?
+
+### Task:
+
+Think about the share of people in Ukraine who gave the answer ""Need to be very careful"". Did that share change between 2011 and 2020?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,D057,ordinal_scale,ordered,True,0.07130158730158737,toward_high,toward_high,True,True,,"Public attitudes in Ukraine have generally trended toward more egalitarian gender norms over the 2010s, especially after social and economic upheavals and increased European orientation. This makes it more likely that fewer people endorsed the traditional view that being a housewife is just as fulfilling as paid work.
+
+ANSWER: A",stop,False,c42e5ae11d6686e28de4fa5437c90a22c1cfe451cea3cb110a591e341c7c3a12,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?
+Statement: Being a housewife is just as fulfilling as working for pay
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Strongly disagree""
+B: It moved toward ""Agree strongly""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,D059,ordinal_scale,ordered,True,0.060594657375145175,toward_high,toward_high,True,True,,"Ukraine experienced significant social and political change between 2011 and 2020, including greater visibility of women in civic activism and politics, alongside broader European integration influences that tend to correlate with more egalitarian gender attitudes. These shifts likely reduced agreement with the notion that men are better political leaders.
+
+ANSWER: B",stop,False,d245d926a8fa6a60d470b8d9eecc5e9c54150f4cd6fb4ceccd19bc2c8e837933,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?
+Statement: On the whole, men make better political leaders than women do
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Agree strongly""
+B: It moved toward ""Strongly disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,D060,ordinal_scale,ordered,True,0.05260717264386988,toward_low,toward_high,False,True,,"Between 2011 and 2020, Ukrainian public opinion generally moved in a more gender-egalitarian direction, especially among younger and urban populations, with declining support for traditional gender roles. It’s likely that agreement with the statement decreased and rejection strengthened over the decade.
+
+ANSWER: A",stop,False,5145929d83dc5bd03711cf658c15793807b7ca2fea91721aa98397c29e80250b,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?  
+Statement: A university education is more important for a boy than for a girl
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Strongly disagree""
+B: It moved toward ""Agree strongly""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,D061,ordinal_scale,ordered,True,0.10478463648834022,toward_low,toward_high,False,True,,"Between 2011 and 2020, Ukraine experienced significant social change, especially with rising urbanization, EU-oriented values among younger cohorts, and increasing female labor force participation. Such trends generally correlate with declining agreement that children suffer when mothers work. 
+
+ANSWER: B",stop,False,a3ddcde47d47124d2714b0a761b98c6227586b4f7ebf49cb08dc1b86ead8a1c0,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?
+Statement: When a mother works for pay, the children suffer
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Agree strongly""
+B: It moved toward ""Strongly disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,D066_B,ordinal_scale,ordered,True,0.1714143637325652,toward_low,toward_high,False,True,,"Traditional gender norms have been gradually weakening in Ukraine over the 2010s, especially among younger and urban populations. By 2020, views that a woman earning more than her husband is a problem would be less common than in 2011.
+
+ANSWER: A",stop,False,b639b07307ba7e2134126541776d53221aa9de7f5d7177c0b88cad87bd4c9a62,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Do you agree, disagree or neither agree nor disagree with the following statement?  
+Statement: Problem if women have more income than husband
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Disagree""
+B: It moved toward ""Agree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E012,binary,share,True,0.13307725138711055,increase,increase,True,True,,"Between 2011 and 2020, Ukraine experienced the 2014 Revolution of Dignity and the onset of war in Donbas, which heightened national identity and mobilization. These events likely increased willingness to defend the country compared to the pre-war period.
+
+ANSWER: B",stop,False,d35da14c3cc873a1eb69118f8cbe81243c71da0a8b02f93e507ccc7d8bbd86a2,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Would you be willing to fight for your country if there were another war?
+
+### Task:
+
+Think about the share of people in Ukraine who gave the answer ""Yes"". Did that share change between 2011 and 2020?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E015,ordinal_scale,ordered,True,0.05046384479717808,toward_high,toward_high,True,True,,"Between 2011 and 2020, Ukraine experienced war, economic hardship, and mobilization that likely reinforced the value of work, responsibility, and effort. Such conditions typically make societies view de-emphasizing work less favorably, shifting attitudes toward seeing “less importance placed on work” as a bad thing.
+
+ANSWER: B",stop,False,f32831ca76a96eaa6c7b8c03de58520f904e5ff38e231e67c41aefa078b71a65,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: I'm going to read out a possible change in our way of life that might take place in the near future. Please tell me if you think it would be a good thing, a bad thing, or if you don't mind.
+Change: Less importance placed on work in our lives
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Good thing""
+B: It moved toward ""Bad thing""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E018,ordinal_scale,ordered,True,0.12584617824294322,toward_high,toward_high,True,True,,"After 2014, Ukraine experienced a powerful pro-democracy, anti-authoritarian civic shift driven by the Maidan revolution, war with Russia, and mobilization for accountable governance. By 2020, public skepticism of “greater respect for authority” as an abstract value likely increased, even as trust in specific institutions (e.g., military) rose.
+
+ANSWER: B",stop,False,ba240dadce063f3a3fcce4132c8ef6a2aab86cdb17a5e7e4c205d65a711b9262,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: I'm going to read out a possible change in our way of life that might take place in the near future. If it were to happen, would you think it would be a good thing, a bad thing, or don't mind?  
+Change: Greater respect for authority
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Good thing""
+B: It moved toward ""Bad thing""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E025,ordinal_scale,ordered,True,0.1630895436164067,toward_low,toward_low,True,True,,"Between 2011 and 2020, Ukraine experienced major political mobilization (Euromaidan, war-related civic engagement) and rapid growth of online activism. These shifts likely increased willingness and actual experience with petitions.
+
+ANSWER: A",stop,False,d123a0d3cdcde397a50857a3f32e066176ba868fc7febebba4625adfe2875cb8,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Now I'd like you to look at this card. I'm going to read out a form of political action that people can take, and I'd like you to tell me whether you have actually done it, might do it, or would never do it under any circumstances.
+Action: Signing a petition
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Have done""
+B: It moved toward ""Would never do""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E026,ordinal_scale,ordered,True,0.09382595870206488,toward_low,toward_low,True,True,,"Ukraine experienced significant political mobilization and protest activity between 2011 and 2020, particularly around Euromaidan and subsequent conflicts, which generally increase willingness to engage in political actions like boycotts. Such periods tend to shift people from “would never do” toward openness or having participated.
+
+ANSWER: A",stop,False,3666ba62689c14023bbee5832c75bcf27aac973d6a6705bada80a8ec62214960,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Now I'd like you to consider a form of political action. Have you actually joined in boycotts, might you do it, or would you never do it under any circumstances?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Have done""
+B: It moved toward ""Would never do""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E027,ordinal_scale,ordered,True,0.10930625180063383,toward_low,toward_low,True,True,,"Ukraine experienced major protest waves between 2013–2014 (Euromaidan) and ongoing civic mobilization related to conflict and reforms, which increased both participation in and openness to demonstrations. Compared to 2011, by 2020 more Ukrainians had direct experience with protests and were less likely to say they would never attend.
+
+ANSWER: A",stop,False,cde1f3458ab946e70ab827b28bea9dfe31fcc810c920653f34995af1796c7de4,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Please look at this card. Have you ever attended peaceful demonstrations, might you attend one, or would you never attend one under any circumstances?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Have done""
+B: It moved toward ""Would never do""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E028,ordinal_scale,ordered,True,0.0835045045045045,toward_low,toward_low,True,True,,"Between 2011 and 2020, Ukraine experienced mass protest cycles (Euromaidan 2013–14), war-related mobilization, and recurrent labor/economic grievances, all of which tend to normalize collective action. Such contexts generally increase both willingness to engage in and actual experience with protest tactics, including strikes.
+
+ANSWER: A",stop,False,79d09698b4509322985d838f5dde2576bf5e1341c2e171a0629ed1ff64334c29,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Now I'd like you to look at this card. I'm going to read out a form of political action that people can take, and I'd like you to tell me whether you have actually done this, might do it, or would never do it under any circumstances.
+Action: Joining strikes
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Have done""
+B: It moved toward ""Would never do""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E035,ordinal_scale,ordered,True,0.29774110032362455,toward_high,toward_low,False,True,,"Ukraine experienced deep economic shocks after 2014 (recession, conflict, inflation) and rising poverty, which typically increases support for redistribution. Public opinion in Eastern Europe often favors egalitarian policies, and hardship in the 2010s likely strengthened preferences for income equality by 2020.
+
+ANSWER: A",stop,False,6825ef83e7cdbcaaa6fffa481eb3c4e890a1db20e91bbc34d38327d8f540bdac,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.
+Issue: Income equality
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Incomes should be made more equal""
+B: It moved toward ""We need larger income differences as incentives""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E036,ordinal_scale,ordered,True,0.080851556605321,toward_low,toward_low,True,True,,"After the 2014 revolution, conflict with Russia, and subsequent reforms, Ukraine moved away from its Soviet legacy toward market-oriented policies, privatizing some state assets and encouraging private enterprise. Public opinion generally shifted to favor private ownership more than in 2011, reflecting dissatisfaction with state-run inefficiency and oligarchic control.
+
+ANSWER: B",stop,False,46fc9a5e98204559d925a45f1be3e4f7102c5b93fef4d062d972866ffe0969a5,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.
+Issue: Private vs state ownership of business
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Government ownership of business should be increased""
+B: It moved toward ""Private ownership of business should be increased""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E037,ordinal_scale,ordered,True,0.1564850657108721,toward_low,toward_high,False,True,,"Ukraine experienced deep political and economic upheavals after 2013–2014 (Euromaidan, war, reforms), which eroded trust in state capacity but also heightened expectations for social protection and public services amid crisis. By 2020, with ongoing conflict and reform fatigue, attitudes generally shifted toward expecting more state responsibility for welfare and security.
+
+ANSWER: B",stop,False,368a42fc46707f366578935383da942d2b655075060f34408678dd3635cadbfe,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.  
+Issue: Government responsibility
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""People should take more responsibility""
+B: It moved toward ""The government should take more responsibility""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E069_01,ordinal_scale,ordered,True,0.05248582995951417,toward_high,toward_low,False,True,,"After 2014, religiosity and the public role of the Orthodox Church surged in Ukraine amid national crisis and conflict, and trust in traditional institutions like churches generally rose. By 2020, confidence in churches was higher than in the relatively stagnant, more cynical pre-2014 period.
+
+ANSWER: A",stop,False,02bb36abe91b87df03d436abede267b8b88741895cf6ffc55c3fbf7b7a533308,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: The Churches (mosque, temple etc.)
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E069_02,ordinal_scale,ordered,True,0.09049986416734582,toward_low,toward_low,True,True,,"Public confidence in Ukraine’s armed forces rose markedly between 2011 and 2020, driven by the 2014 conflict with Russia and the subsequent centrality of the military in national defense and identity. Surveys in the mid-to-late 2010s showed increasing trust in the army compared to pre-2014 levels.
+
+ANSWER: A",stop,False,4adc226d9121901c6842c8630dda2fdbb72ac24e1925d575ada691d9f7a30e6f,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: The armed forces
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E069_04,ordinal_scale,ordered,True,0.13105980096777137,toward_high,toward_high,True,True,,"Ukraine’s media environment saw dramatic upheaval between 2011 and 2020, including the Euromaidan, war in Donbas, Russian disinformation, and oligarchic media influence—factors that generally eroded trust in the press. Public skepticism and polarization around media narratives likely increased, pushing typical responses toward lower confidence.
+
+ANSWER: B",stop,False,fbc311094dc295e9cc369fe1ea96dc1a4e8d1866c4e9cf6797b4feb609f28ed4,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: The press
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E069_05,ordinal_scale,ordered,True,0.09148307105388646,toward_high,toward_high,True,True,,"In 2011, Ukrainians’ trust in institutions like labor unions was already limited, and the upheavals of the 2014 revolution, economic hardship, and ongoing conflict further eroded confidence in legacy organizations perceived as ineffective or politicized. By 2020, institutional trust generally polarized toward skepticism, making “none at all” more common for labor unions.
+
+ANSWER: A",stop,False,3d91fe6069b8fb76e82f473c60eb41d5a26d099b3d400dc2abe2ed24ff267572,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: Labour Unions
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E069_08,ordinal_scale,ordered,True,0.05538888888888892,toward_high,toward_low,False,True,,"Public trust in Ukrainian state institutions was very low around 2011, but after the 2014 Revolution of Dignity and subsequent reforms, there was a gradual (though uneven) improvement in perceptions of government professionalism and anti-corruption efforts by 2020. While trust remained limited, the typical response shifted slightly away from total distrust toward somewhat more confidence.
+
+ANSWER: A",stop,False,a95047c256cf658766a91ee86e2f8310596ca593a31ea7310b3983267b652236,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: The Civil Services
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E069_10,ordinal_scale,ordered,True,0.14319386481184238,toward_high,toward_high,True,True,,"After 2011, Ukraine experienced major political upheavals (Euromaidan, 2014 conflict, information warfare), rising polarization, and greater skepticism toward traditional media. These dynamics generally eroded trust in television, pushing attitudes toward lower confidence.
+
+ANSWER: A",stop,False,0fc8f1997db87448fd4ba62d636b6e19f6ef7775e4373fcbc3d9122dd150403e,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: Television
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E069_14,ordinal_scale,ordered,True,0.0701578458681523,toward_high,toward_low,False,True,,"Environmental issues and civil society gained salience in Ukraine during the 2010s, especially after 2014, with growth in NGOs and activism, which generally boosts trust in such organizations. While overall institutional trust can be low, the trend for environmental NGOs likely moved toward more confidence rather than cynicism.
+
+ANSWER: B",stop,False,bbb6c428f8cd3a75454e16a832a8896e559c66afd3663f23f39beba3113e14a0,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Environmental organizations
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E069_54,ordinal_scale,ordered,True,0.05345084351367077,toward_high,toward_high,True,True,,"Ukraine’s 2011 attitudes predated the Euromaidan upheaval, annexation of Crimea, and war in Donbas, after which trust in many state and public institutions declined amid instability and economic strain. While the post-2014 reform push included higher education, public confidence in universities generally eroded over the 2010s due to perceived corruption and quality concerns.
+
+ANSWER: A",stop,False,093111135f271e9f0cde3cc0981b74810b662c95fc58ee66d3ae555acad826b0,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Universities
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E115,ordinal_scale,ordered,True,0.10349733759318422,toward_high,toward_low,False,True,,"Ukraine experienced deep distrust in elected politicians after the 2013–14 revolution, war in the east, and ongoing corruption concerns, which often increased support for technocratic, expert-led governance as a corrective to dysfunctional politics. By 2020, amid war-driven security concerns and reform agendas, deference to experts likely rose relative to 2011.
+
+ANSWER: A",stop,False,3282d44496ee908aa0eb37e154f4b7d160fd6ce71084a0de487a8aab1ffab02e,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: I'm going to describe a type of political system and ask what you think about it as a way of governing this country. Would you say it is a very good, fairly good, fairly bad, or very bad way of governing this country?
+System: Having experts, not government, make decisions according to what they think is best for the country
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Very good""
+B: It moved toward ""Very bad""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E124,ordinal_scale,ordered,True,0.05513776365722353,toward_low,toward_high,False,True,,"After 2014, Ukraine saw significant political upheaval, war in the east, and governance challenges, which likely eroded public perceptions of rights protection despite some pro-European reforms. By 2020, continued conflict and institutional strain probably made people more skeptical about the respect for individual human rights compared with 2011.
+
+ANSWER: B",stop,False,775d888d956a5a0ae40f5ec40994b7b12d85e030962b2f47fd8a90d19c6881ff,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: How much respect is there for individual human rights in this country nowadays?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""There is a lot of respect for individual human rights""
+B: It moved toward ""There is no respect at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E225,ordinal_scale,ordered,True,0.05844485749690212,toward_high,toward_low,False,True,,"Ukraine is a largely secular state with a history of church-state separation, and public opinion has generally not favored clerical involvement in lawmaking. From 2011 to 2020—amid post-Maidan civic mobilization and a turn toward European democratic norms—the view that religious authorities interpreting laws is essential to democracy likely declined.
+
+ANSWER: A",stop,False,272aa2c0508915a429df3529aabefb1bcb4ff0cd3b1355510e6304ea3603e821,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: Religious authorities interpret the laws
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""It is against democracy (spontaneous)""
+B: It moved toward ""An essential characteristic of democracy""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E228,ordinal_scale,ordered,True,0.05337832388153755,toward_high,toward_low,False,True,,"Ukraine experienced political upheaval between 2011 and 2020, including the 2014 Revolution of Dignity and heightened emphasis on civilian democracy and resistance to authoritarianism. These events likely reduced support for military intervention as a “democratic” mechanism, shifting views toward seeing army takeovers as anti-democratic.
+
+ANSWER: B",stop,False,6352e233c2e24429a6343872c29c7e9f84f005434ef34854769a34240981ec0b,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: The army takes over when government is incompetent
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""An essential characteristic of democracy""
+B: It moved toward ""It is against democracy (spontaneous)""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E233B,ordinal_scale,ordered,True,0.07490096237970258,toward_high,toward_low,False,True,,"Given Ukraine’s 2013–2014 Revolution of Dignity and subsequent conflict with Russia, public understanding of democracy shifted toward emphasizing accountability and citizen rights over authoritarian obedience. Thus, the typical response likely moved away from viewing obedience to rulers as essential to democracy.
+
+ANSWER: A",stop,False,ae10353e447728888d06820e79152aad8697e9566fdb9827c98989bab31e0f2b,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Please tell me how essential you think it is that people obey their rulers as a characteristic of democracy. Use a scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""It is against democracy (spontaneous)""
+B: It moved toward ""An essential characteristic of democracy""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E236,ordinal_scale,ordered,True,0.05339983457402822,toward_high,toward_high,True,True,,"Ukraine in 2011, under Yanukovych’s increasingly authoritarian rule, likely rated its governance as less democratic. By 2020, after the Euromaidan revolution, democratic reforms, competitive elections, and Zelenskyy’s presidency, perceptions of democratic governance improved, even amid ongoing challenges.
+
+ANSWER: B",stop,False,ce8d3528e2ac0255553fac4a5cc614b3c04bad92f1413fb4988eada22214207f,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: How democratically is your country being governed today? Using a scale from 1 to 10, where 1 means “not at all democratic” and 10 means “completely democratic,” what position would you choose?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""It is against democracy (spontaneous)""
+B: It moved toward ""Completely democratic""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E248B,ordinal_scale,ordered,True,0.3648022690437601,toward_high,toward_high,True,True,,"Print newspaper readership has declined sharply across Europe in the 2010s due to digital news and smartphone adoption, and Ukraine followed this pattern, especially after 2014 with rapid move to online sources. Thus, the typical response shifted away from frequent use of daily newspapers.
+
+ANSWER: B",stop,False,6d4c5eb95c1860a2eadd404fde59ddb8adae1e1507ffafe32cb12f9259c19742,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Please indicate how often you use the following source to obtain information: Daily newspaper.
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Daily""
+B: It moved toward ""Never""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E254B,ordinal_scale,ordered,True,0.2680308747855918,toward_high,toward_low,False,True,,"Mobile internet and social media use expanded significantly in Ukraine during the 2010s, but interpersonal discussion remained a key information channel, especially amid political upheavals (Euromaidan, conflict, 2014–2020) when people relied on friends/colleagues to interpret news. The typical frequency likely shifted toward more frequent use rather than abandonment.
+
+ANSWER: B",stop,False,57a77f7e8f4fb4976e3a4d9701c7518655cb509b2045c964f8a30f740b434bd4,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Please indicate how often you use the following source to obtain information: Talk with friends or colleagues. Do you use it daily, weekly, monthly, less than monthly, or never?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Never""
+B: It moved toward ""Daily""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E258B,ordinal_scale,ordered,True,0.18983465818759945,toward_high,toward_high,True,True,,"Internet and social media use expanded rapidly in Ukraine during the 2010s, especially post-2014, reducing reliance on traditional TV as a primary news source. As a result, daily TV news consumption likely declined by 2020 compared to 2011.
+
+ANSWER: A",stop,False,b0269ac4515a20c9b94a2ea0b911ed1b01faa6274ff91615709abe9b5c020dd4,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Please indicate how often you use TV news to obtain information: daily, weekly, monthly, less than monthly, or never.
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Never""
+B: It moved toward ""Daily""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E259B,ordinal_scale,ordered,True,0.2328029045643154,toward_high,toward_high,True,True,,"Radio listening as a primary news source has declined across most countries in the 2010s due to the rise of online and mobile news. In Ukraine, especially after rapid growth of internet penetration and social media use in the 2010s, regular radio news use likely decreased, shifting responses toward less frequent use.
+
+ANSWER: B",stop,False,a3db87b0a079199174c4a136fb2b08ba11bfd88a537b837565dce5f49ea388e9,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Please indicate how often you use the following source to obtain information: Radio news.  
+Options: Daily, Weekly, Monthly, Less than monthly, or Never.
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Daily""
+B: It moved toward ""Never""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E262B,ordinal_scale,ordered,True,0.23138597904915387,toward_low,toward_low,True,True,,"Internet access and smartphone adoption rose sharply in Ukraine during the 2010s, expanding broadband and mobile data coverage. This would shift typical responses from less frequent use toward daily internet use by 2020.
+
+ANSWER: B",stop,False,da5989199d6e024d77be9172e14147f5f2397c231d7090fd196cc5d5e52d2f6a,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Please indicate how frequently you use the following source to obtain information: Internet.  
+Choices: Daily, Weekly, Monthly, Less than monthly, Never.
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Never""
+B: It moved toward ""Daily""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E265_01,ordinal_scale,ordered,True,0.11797744873704043,toward_low,toward_low,True,True,,"After the 2014 Revolution of Dignity and subsequent electoral reforms, as well as widely regarded competitive presidential and parliamentary elections in 2014 and 2019, public confidence in the fairness of vote counting likely improved compared with 2011 under the more distrusted Yanukovych-era institutions. Thus the typical answer shifted toward votes being counted more fairly.
+
+ANSWER: A",stop,False,e86a17ae54fbca2132221ccbf7ad1165ae0ce935d4e7664944f1a148fee75ed5,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: In your view, how often do votes get counted fairly in this country’s elections?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Very often""
+B: It moved toward ""Not at all often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E265_02,ordinal_scale,ordered,True,0.0828122404490956,toward_high,toward_high,True,True,,"After 2011, Ukrainians saw increasingly competitive elections after the 2014 revolution and reforms, with pluralistic politics and active opposition parties, especially compared to the Yanukovych era when opposition figures faced notable barriers. By 2020, despite ongoing challenges, the perception likely shifted toward fewer instances of opposition being prevented from running.
+
+ANSWER: B",stop,False,c61691cce4c4aaa8e99f867182e6211eee3798de5bb9d88e9f3f7d692bfff703,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: In your view, how often do opposition candidates get prevented from running in this country’s elections?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Very often""
+B: It moved toward ""Not at all often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E265_04,ordinal_scale,ordered,True,0.08358036119807648,toward_high,toward_low,False,True,,"After 2014, Ukraine saw heightened public scrutiny of electoral malpractice and some reforms, but vote-buying remained a well-known tactic, especially in 2012 and 2019 parliamentary elections. Public perception likely shifted toward believing bribery was common or persistent rather than rare.
+
+ANSWER: A",stop,False,0c3aa77b653e20e649f8dadf9f52ada2cca4c5f9e07603c029d765899bbab3c5,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: In your view, how often do voters get bribed in this country’s elections?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Very often""
+B: It moved toward ""Not at all often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E265_05,ordinal_scale,ordered,True,0.05871212121212122,toward_high,toward_high,True,True,,"Between 2011 and 2020, Ukraine experienced major political upheavals (Euromaidan, 2014 conflict), oligarchic media influence, and intense polarization, which generally eroded trust in media fairness. Despite some growth in independent outlets, public perception of fair election coverage likely declined.
+
+ANSWER: B",stop,False,01f9f0930cfef01a862596e4ea273405c36cc7422bd2ab1038cc0b827f4e04e0,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: In your view, how often do journalists provide fair coverage of elections in this country?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Very often""
+B: It moved toward ""Not at all often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E265_06,ordinal_scale,ordered,True,0.18061760606168914,toward_low,toward_low,True,True,,"After the 2014 Revolution of Dignity and subsequent electoral reforms, many Ukrainians initially gained confidence in cleaner, more competitive elections compared to the Yanukovych era. By 2020—after internationally praised 2019 presidential and parliamentary elections—perceptions of fairness generally improved relative to 2011.
+
+ANSWER: A",stop,False,9de47f79f8afb77c99afc2c8fe37b6fb96946e4ed6b51c822b5b6c4f1f5fadb3,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: In your view, how often do election officials act fairly in this country’s elections?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Very often""
+B: It moved toward ""Not at all often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E265_07,ordinal_scale,ordered,True,0.072977741051168,toward_high,toward_low,False,True,,"Ukraine experienced major political upheavals between 2011 and 2020, including the 2013–14 Euromaidan protests, the ousting of Yanukovych, and ongoing oligarchic influence in politics. Public skepticism about oligarchs’ sway likely intensified, pushing perceptions toward elections being bought more frequently.
+
+ANSWER: A",stop,False,84ff4f989d24ff593a8ca86c839352ad74fa3e760818b184e9ae7968952d53e3,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: In your view, how often do rich people buy elections in this country?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Very often""
+B: It moved toward ""Not at all often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E265_09,ordinal_scale,ordered,True,0.1329647958315332,toward_low,toward_low,True,True,,"Between 2011 and 2020, Ukraine experienced the 2014 Revolution of Dignity, the fall of Yanukovych’s regime, and multiple competitive elections, including the 2019 presidential election that brought a political outsider to power in a widely regarded free and fair vote. These developments likely increased public perception that voters are offered a genuine choice.
+
+ANSWER: B",stop,False,4d5d4b11eb175f9c04aba9cd230f3039f5310955490c1961d705638a068b8d9d,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: In your view, how often are voters offered a genuine choice in this country’s elections?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Not at all often""
+B: It moved toward ""Very often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,F025,categorical,option,True,0.11863520157325469,3,3,True,True,,"Ukraine’s religious landscape shifted significantly after 2014, with many who previously identified with the Moscow-affiliated Orthodox Church reidentifying with the newly established independent Orthodox Church of Ukraine. This likely raised the overall “Orthodox” share, while other categories remained small or stable.
+
+ANSWER: 1",stop,False,54e03e5c9d6ab5f3bb6c5f1d98d34baad9e72fcb36de5df3ce1696e3a5e90c3d,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Which of the following religious denominations do you belong to?
+
+### Task:
+
+Think about the share of people in Ukraine choosing each answer in 2011 and in 2020. Which answer gained the most support (the largest increase in share)?
+
+1: Orthodox (Russian/Greek/etc.)
+2: Protestant
+3: Hindu
+4: Do not belong to a denomination
+5: Jew
+6: Buddhist
+7: Other
+8: Muslim
+9: Roman Catholic
+10: Other Christian (Evangelical/Pentecostal/Fee church/etc.)
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <number>"
+UKR,6,7,2011,2020,F114A,ordinal_scale,ordered,True,0.07833055479221997,toward_high,toward_low,False,True,,"In the 2010s, Ukraine underwent major political upheaval, war, and anti-corruption mobilization, which generally hardened public attitudes against dishonest behavior involving the state. Surveys like the World Values Survey typically show rising intolerance for corruption and benefit fraud over this period.
+
+ANSWER: B",stop,False,4f36aa0814f3f880b42ff5a893ae4c13ebbccba84b0eb6b37d33298761f1b9cf,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Claiming government benefits to which you are not entitled
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,F116,ordinal_scale,ordered,True,0.058706303330580696,toward_high,toward_low,False,True,,"Public attitudes in Ukraine during the 2010s generally hardened against corruption and rule-breaking, especially after the 2014 Maidan and subsequent reforms and conflict, which tended to increase normative rejection of behaviors like tax evasion. By 2020, the typical response likely shifted further toward “never justifiable.”
+
+ANSWER: B",stop,False,5ae88ef0ca7fed7c7e9f21e8334e1e4a525a6a571e6ea982a0148443fc58405d,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Please tell me whether you think cheating on taxes if you have a chance can always be justified, never be justified, or something in between, using the provided scale.
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,F117,ordinal_scale,ordered,True,0.05199603817756177,toward_high,toward_low,False,True,,"Public attitudes in Ukraine toward corruption hardened after the 2013–2014 Euromaidan, the anti-corruption agenda of post-2014 governments, and the visibility of reform efforts and scandals. By 2020, more Ukrainians tended to view bribery as less acceptable than in 2011, shifting toward “never justifiable.”
+
+ANSWER: A",stop,False,9b14418c2ebdf09087d31fce05780f199fb8b75ccd7937e444e50ac9638ea673,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.  
+Statement: Someone accepting a bribe in the course of their duties
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,F202,ordinal_scale,ordered,True,0.053010813887307884,toward_low,toward_high,False,True,,"Ukraine has trended toward more secular and pro-science attitudes, especially after 2014, with urbanization, generational turnover, and distancing from traditional church authority (notably the Moscow Patriarchate) accelerating skepticism of religion’s primacy over science. Thus, the typical response would have shifted away from endorsing religion over science.
+
+ANSWER: B",stop,False,8d36ce5c2a332a72c39a4bc9b72ad86e063fd680f92b4eb4c954e5b8e3036ceb,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Please tell us if you strongly agree, agree, disagree, or strongly disagree with the following statement:
+""Whenever science and religion conflict, religion is always right.""
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Strongly agree""
+B: It moved toward ""Strongly disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,G006,ordinal_scale,ordered,True,0.08749214603217739,toward_low,toward_low,True,True,,"Between 2011 and 2020, Ukraine experienced a surge in national identity and cohesion, particularly after the 2014 Revolution of Dignity and the conflict with Russia, which tended to increase expressions of national pride. Surveys during the late 2010s generally showed rising levels of national pride compared to the pre-2014 period.
+
+ANSWER: A",stop,False,25c1afbd095f42da4fc72a99571ba7fc10d5fc7fc61b965c391146d7122da2f6,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: How proud are you to be of the nationality of this country?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Very proud""
+B: It moved toward ""Not at all proud""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,G007_33_B,ordinal_scale,ordered,True,0.06650104821802937,toward_high,toward_low,False,True,,"Between 2011 and 2020, Ukraine experienced prolonged conflict, political upheaval, and economic strain, which generally erode generalized trust but can strengthen trust in close networks. For “people you know personally,” Ukrainians likely leaned more on personal ties during crises, nudging responses toward greater trust in known individuals.
+
+ANSWER: A",stop,False,aa585f317217ac3016e5495a09bbbb48d07f576c82e965102134e4dd67c8ff96,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: I’d like to ask you how much you trust people from a particular group. Could you tell me if you trust people from this group completely, somewhat, not very much, or not at all?
+Group: People you know personally
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Trust completely""
+B: It moved toward ""Do not trust at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,H002_02,ordinal_scale,ordered,True,0.1000968160207463,toward_high,toward_high,True,True,,"Public drinking in Ukraine was relatively common in the 2000s/early 2010s, but the mid-2010s saw stricter local regulations, changing norms, and disruptions from conflict that reduced visible street drinking in many areas. By 2020, urban enforcement and shifting behaviors likely made “very frequent” occurrences less common.
+
+ANSWER: B",stop,False,7ca71055fb0f22da3f4d3eab2f9af45f98e103c4f9ea015436025ac3642f9b1f,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: How frequently does alcohol consumption in the streets occur in your neighborhood?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Very Frequently""
+B: It moved toward ""Not at all frequently""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,H002_03,ordinal_scale,ordered,True,0.0525019425019425,toward_low,toward_low,True,True,,"In 2011, Ukraine was relatively stable, and everyday perceptions of police/military interference were moderate. By 2020, after the 2014 revolution, ongoing conflict in the east, and expanded security presence and checks, many Ukrainians—especially near conflict-affected areas—would perceive more frequent interference. 
+ANSWER: B",stop,False,61e73a0165fbc6db24c4a1867d02f2b83863c379445ac3624bc0bdc5c1e135c1,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: How frequently does the police or military interfere with people’s private life in your neighborhood?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Not at all frequently""
+B: It moved toward ""Very Frequently""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,H006_03,ordinal_scale,ordered,True,0.22072782632753785,toward_low,toward_low,True,True,,"In 2011, large-scale war felt relatively unlikely for many Ukrainians. By 2020, after Russia’s 2014 annexation of Crimea and ongoing conflict in Donbas, the perceived threat of war was much higher, increasing public worry.
+
+ANSWER: B",stop,False,435e705bc0ed7fa3147a317cac1f44d7b7d45d6eb7e84b0056a80e711f7335c9,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: To what degree are you worried about the following situation? A war involving my country
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Not at all""
+B: It moved toward ""Very much""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,H006_04,ordinal_scale,ordered,True,0.16647195178488644,toward_low,toward_low,True,True,,"Ukraine experienced major conflict and insecurity after 2014, including the war in Donbas and several high-profile attacks, which likely heightened general fear of violence and terrorism. By 2020, concern about terrorism would have increased compared to 2011.
+
+ANSWER: B",stop,False,b9e36c4428f6112c1711c5d2e2ca21ca19789009853633d907d1c79073eafa4c,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: To what degree are you worried about the following situation? A terrorist attack
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Not at all""
+B: It moved toward ""Very much""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,H006_05,ordinal_scale,ordered,True,0.14983101658883932,toward_low,toward_low,True,True,,"Between 2011 and 2020, Ukraine experienced the Euromaidan revolution (2013–14), Russia’s annexation of Crimea, and an ongoing armed conflict in the Donbas, all of which made the prospect and reality of internal armed conflict much more salient. Public concern about civil war would therefore have increased substantially by 2020 compared to 2011.
+
+ANSWER: A",stop,False,440d8007bad9144c23674420802b6b437ed5f621b27ee28985a5cf583a269191,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: To what degree are you worried about the following situation? 
+Situation: A civil war
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Very much""
+B: It moved toward ""Not at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,H008_01,ordinal_scale,ordered,True,0.127214244055606,toward_high,toward_high,True,True,,"Ukraine experienced significant economic hardship around 2011–2015, particularly after the 2014 crisis, but by 2020 there had been some economic stabilization and modest recovery, with social assistance and remittances helping reduce severe deprivation. Overall, the share reporting going without enough food likely decreased by 2020.
+
+ANSWER: B",stop,False,b32a8234c37b8230bb9aaf023e0e4d41c54346183a7c020760143a77bf35a4bd,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: In the last 12 months, how often have you or your family gone without enough food to eat?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Often""
+B: It moved toward ""Never""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,H008_03,ordinal_scale,ordered,True,0.06567197512030407,toward_high,toward_low,False,True,,"Between 2011 and 2020, Ukraine experienced significant economic shocks (2014 crisis, conflict in the east) that initially strained access to healthcare, but by 2020 there had been notable health system reforms and some stabilization. Nonetheless, ongoing conflict, economic hardship, and the added strain of the COVID-19 pandemic likely increased instances of going without needed medicine or treatment compared to 2011.
+
+ANSWER: B",stop,False,e847e38bbb8f89b048f5e68d25615c98330e924e2ca9a5c7fd76a22f02963c62,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: In the last 12 months, how often have you or your family gone without needed medicine or treatment?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Never""
+B: It moved toward ""Often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,H008_04,ordinal_scale,ordered,True,0.42173888044388386,toward_high,toward_low,False,True,,"Ukraine experienced major economic shocks after 2014, including recession, conflict, and currency devaluation, which increased poverty and income instability through the mid-2010s. By 2020 there had been some recovery, but the pandemic likely reintroduced financial strain, making going without cash income more common than in 2011.
+
+ANSWER: A",stop,False,b29c5a9be6846202c35b03705b0aab3e3fd49dd2e4e8047b37e481a160233138,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: In the last 12 months, how often have you or your family gone without a cash income?
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Often""
+B: It moved toward ""Never""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,I001,ordinal_scale,ordered,True,0.07864500601684732,toward_high,toward_low,False,True,,"Ukraine underwent profound social and political upheaval between 2011 and 2020—Euromaidan, war with Russia, and a turn toward Europe—accompanied by rising support for scientific, secular, and modernizing orientations. This likely reduced agreement with moral skepticism about science.
+
+ANSWER: A",stop,False,293d9df7178f52ffbf486c49681729b2561f2a50eddae86c32087add642a54e5,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: Now, I would like to read a statement and ask how much you agree or disagree with it. For this question, a 1 means that you “completely disagree” and a 10 means that you “completely agree.”
+Statement: One of the bad effects of science is that it breaks down people’s ideas of right and wrong
+
+### Task:
+
+Think about how the people of Ukraine, taken as a whole, answered this question in 2011 and in 2020. Did the typical answer move?
+
+A: It moved toward ""Completely disagree""
+B: It moved toward ""Completely agree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+UKR,6,7,2011,2020,E001+E002,ranked_choice,option,True,0.19210791366906474,2,2,True,True,,"Ukraine’s priorities shifted markedly after 2014 and through 2020: while economic growth remained important, the sharpest rise in salience was for security due to conflict with Russia and ongoing geopolitical tensions. Thus, “Strong defence forces” gained the most support between 2011 and 2020.
+
+ANSWER: 4",stop,False,1868d4d3d3f0316dd67233db1c02631a9b9c6cf9609d8f1997a1d960b259375c,"### Inputs:
+
+Country: Ukraine
+Year 1: 2011
+Year 2: 2020
+Question: People sometimes talk about what the country's most important aim should be for the next ten years. On this card are listed some goals which different people would give top priority. Which one of these do you consider the most important?
+(Each person picked a first and a second choice; count both.)
+
+### Task:
+
+Think about the share of people in Ukraine choosing each answer in 2011 and in 2020. Which answer gained the most support (the largest increase in share)?
+
+1: People have more say about how things are done
+2: Trying to make our cities and countryside more beautiful
+3: A high level of economic growth
+4: Strong defence forces
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <number>"

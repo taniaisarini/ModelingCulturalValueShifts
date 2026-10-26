@@ -1,0 +1,1750 @@
+country,wave_a,wave_b,years_a,years_b,code,format,family,significant,effect,truth,pred,correct,parsed,error,response,finish_reason,cached,cache_key,prompt
+THA,5,6,2007,2013,A098,ordinal_scale,ordered,True,0.058367184740374445,toward_low,toward_high,False,True,,"Thailand is a predominantly Buddhist country where religious organizations play a significant role in community life. Between 2007 and 2013, while modernization and urbanization increased, religious affiliation and participation generally remained strong or even grew as people sought social cohesion amid rapid changes. Therefore, it is likely that the typical answer moved toward being an active member rather than not a member.
+
+ANSWER: A",stop,False,e0304198b0d1b9f631c6feacce977a9b6648f4ffc88d0f350c42f3b83dc47c70,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Now I am going to ask about your membership status in a voluntary organization. Could you tell me whether you are a member, an active member, an inactive member, or not a member of a church or religious organization?
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Active member""
+B: It moved toward ""Not a member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A104,ordinal_scale,ordered,True,0.07233814510865416,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced significant political and economic changes, including increased urbanization and shifts in the labor market. However, professional associations typically require formal qualifications and stable employment sectors, which may not have expanded rapidly for the general population. Given these factors, it is likely that the overall membership in professional associations did not increase substantially, and more people remained or moved toward not being members.
+
+ANSWER: B",stop,False,f1ed2027f286564b57ab344c67689897bb79242882214d56f97e4cc7b7b23634,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Now I am going to read out a voluntary organization; could you tell me whether you are a member, an active member, an inactive member, or not a member of this type of organization?
+Organization type: Professional association
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Active member""
+B: It moved toward ""Not a member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A124_02,mention_flag,share,True,0.12381062102260257,increase,decrease,False,True,,"Between 2007 and 2013, Thailand experienced significant political and social changes, including increased globalization and exposure to diverse cultures through tourism and media. These factors likely contributed to a more open attitude toward people of different races, reducing racial prejudice over time.
+
+ANSWER: A",stop,False,cb18c4300812ad766670073bac910ea175f735ee28f3350c45c20308c9915a5a,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Could you please mention if you would not like to have people of a different race as neighbors?
+
+### Task:
+
+Think about the share of people in Thailand who gave the answer ""Mentioned"". Did that share change between 2007 and 2013?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A124_06,mention_flag,share,True,0.14791748849441158,increase,decrease,False,True,,"Between 2007 and 2013, Thailand experienced significant economic growth and increased globalization, which often leads to greater exposure to and acceptance of immigrants and foreign workers. However, concerns about job competition and cultural differences might have also risen, potentially increasing negative attitudes. Overall, given Thailand's growing reliance on foreign labor during this period, it is likely that the share of people who did not want immigrants as neighbors decreased as familiarity and economic interdependence grew.
+
+ANSWER: B",stop,False,606fc91cf746ca128e9d519571686023f69f6bb5265694556256e1f156799759,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Could you please mention if you would not like to have immigrants/foreign workers as neighbors?
+
+### Task:
+
+Think about the share of people in Thailand who gave the answer ""Mentioned"". Did that share change between 2007 and 2013?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A124_07,mention_flag,share,True,0.11573770491803279,decrease,decrease,True,True,,"Between 2007 and 2013, awareness and education about HIV/AIDS in Thailand improved, leading to reduced stigma against people living with AIDS. As a result, fewer people would express a desire to avoid having neighbors with AIDS, indicating a decrease in the share of people who ""mentioned"" not wanting such neighbors.
+
+ANSWER: B",stop,False,d60f88d10675c891d2df9c3d90d4e1594dd6d70c4158b3be1ca7f3d545130ca6,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Could you please mention if you would not like to have people who have AIDS as your neighbors?
+
+### Task:
+
+Think about the share of people in Thailand who gave the answer ""Mentioned"". Did that share change between 2007 and 2013?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A124_08,mention_flag,share,True,0.1099717514124294,decrease,increase,False,True,,"Between 2007 and 2013, Thailand experienced ongoing social challenges related to drug use and public health concerns, which likely heightened negative perceptions toward drug addicts. This would suggest an increase in the share of people unwilling to have drug addicts as neighbors during this period.
+
+ANSWER: A",stop,False,9f9e0def6d9f9970402c7a15068ed73fb94bbb819e6426622559a39c0c07fce7,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Could you please mention if you would not like to have a particular group as neighbors?
+Group: Drug addicts
+
+### Task:
+
+Think about the share of people in Thailand who gave the answer ""Mentioned"". Did that share change between 2007 and 2013?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A124_09,mention_flag,share,True,0.061888560157790956,increase,decrease,False,True,,"Between 2007 and 2013, Thailand experienced gradual social liberalization and increased visibility of LGBTQ+ communities, especially in urban areas. This likely contributed to a decrease in negative attitudes toward homosexuals as neighbors during this period.
+
+ANSWER: A",stop,False,841b8a15fe691e24fedcb2c60e668c66a70e878937fa2e76d6c1b970970be1cb,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Could you please mention if you would not like to have the following group as neighbors?
+Group: Homosexuals
+
+### Task:
+
+Think about the share of people in Thailand who gave the answer ""Mentioned"". Did that share change between 2007 and 2013?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A124_12,mention_flag,share,True,0.0536439842209073,increase,increase,True,True,,"Between 2007 and 2013, Thailand experienced political and social tensions, including conflicts with Muslim minority groups in the southern provinces. Such tensions could have heightened religious sensitivities and possibly increased reluctance to have neighbors of different religions. Therefore, it is likely that the share of people expressing a preference against neighbors of different religions increased during this period.
+
+ANSWER: A",stop,False,e6781b65c8a35b62ed6e28cb58ca6c457cac7b37499f2d3e2ac914606982672c,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Could you please mention if you would not like to have people of a different religion as neighbors?
+
+### Task:
+
+Think about the share of people in Thailand who gave the answer ""Mentioned"". Did that share change between 2007 and 2013?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A124_42,mention_flag,share,True,0.07241946088099936,decrease,decrease,True,True,,"Between 2007 and 2013, Thailand experienced gradual social modernization and increasing urbanization, which often lead to more liberal attitudes toward non-traditional living arrangements such as unmarried couples living together. Therefore, it is likely that fewer people expressed discomfort with having unmarried couples as neighbors over time.
+
+ANSWER: B",stop,False,ab07905295575db450c18317cc2f28e0a74d6bd29a570fef6523e73b2ae932d4,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Could you please mention if you would not like to have unmarried couples living together as neighbors?
+
+### Task:
+
+Think about the share of people in Thailand who gave the answer ""Mentioned"". Did that share change between 2007 and 2013?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A124_43,mention_flag,share,True,0.08196769940672383,increase,increase,True,True,,"Between 2007 and 2013, Thailand experienced significant political and social changes, including increased nationalism and tensions related to ethnic and cultural identity. These factors likely contributed to a rise in discomfort or reluctance toward neighbors who speak different languages. Therefore, it is reasonable to infer that the share of people who would not like to have neighbors speaking a different language increased during this period.
+
+ANSWER: A",stop,False,871b85f6842d5162db374f6884b487473b817a84531fa7ba28cfd6b0543560b1,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Could you please mention if you would not like to have people who speak a different language as neighbors?
+
+### Task:
+
+Think about the share of people in Thailand who gave the answer ""Mentioned"". Did that share change between 2007 and 2013?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A165,binary,share,True,0.08934357058864217,increase,increase,True,True,,"Between 2007 and 2013, Thailand experienced political instability and social unrest, including protests and government changes, which likely eroded trust among people. Such conditions generally lead to an increase in the share of people who feel they need to be very careful in dealing with others.
+
+ANSWER: A",stop,False,5006cc8407888ccd4add8c07b1d791a74ff0b371b2b8c3ddb4d22f4609d4fe9d,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Generally speaking, would you say that most people can be trusted or that you need to be very careful in dealing with people?
+
+### Task:
+
+Think about the share of people in Thailand who gave the answer ""Need to be very careful"". Did that share change between 2007 and 2013?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A168A,ordinal_scale,ordered,True,0.07386822465770579,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including protests and a military coup in 2014. Such instability often erodes trust in others and institutions, leading people to become more skeptical about fairness in social interactions. Therefore, it is likely that the typical answer shifted toward a more distrustful view.
+
+ANSWER: A",stop,False,a40602c9ef68a4766e3b10cc41b5c94a11dcae7596e36247bba6d5991078d462,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Do you think most people would try to take advantage of you if they got a chance, or would they try to be fair? Please show your response on a scale where 1 means “people would try to take advantage of you,” and 10 means “people would try to be fair.”
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Most people try to take advantage of me""
+B: It moved toward ""Most people try to be fair""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A173,ordinal_scale,ordered,True,0.06724203378842356,toward_high,toward_low,False,True,,"Between 2007 and 2013, Thailand experienced significant political instability, including a military coup in 2006 and ongoing protests and government changes. Such turmoil likely reduced people's sense of control over their lives. Therefore, the typical answer probably moved toward feeling less freedom of choice and control.
+
+ANSWER: A",stop,False,3af5496f80e6d52d6f5518392ac0e1a23d0e01a9a559f0a3696bcd34240a51d8,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please use this scale where 1 means ""none at all"" and 10 means ""a great deal"" to indicate how much freedom of choice and control you feel you have over the way your life turns out.
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A189,ordinal_scale,ordered,True,0.07236093205995073,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced significant economic growth and increasing integration into the global economy, which likely encouraged more emphasis on creativity and innovation among its population. As a result, people may have increasingly identified with valuing new ideas and creativity.
+
+ANSWER: A",stop,False,0a3a74c02310697c4766d756f12d76d87b9b5097bfb35f6689e169385141b7ae,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I will briefly describe a person. Using the provided scale, please indicate whether that person is very much like you, like you, somewhat like you, not like you, or not at all like you.  
+Description: It is important to this person to think up new ideas and be creative
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Very much like me""
+B: It moved toward ""Not at all like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A190,ordinal_scale,ordered,True,0.10490681280478976,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced significant economic growth and increasing consumerism, which likely heightened the importance placed on wealth and material success among its population. Additionally, social and political changes during this period may have reinforced the value of financial security and status.
+
+ANSWER: B",stop,False,eaefd0435989f6ff81f99062b644284811d3abf24fe6f5d1d2919910cb0cc043,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please indicate how much the following description applies to you using this scale: very much like you, like you, somewhat like you, not like you, or not at all like you.
+Description: It is important to this person to be rich
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Not at all like me""
+B: It moved toward ""Very much like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A191,ordinal_scale,ordered,True,0.1298468949665124,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced political instability and social unrest, including coups and protests, which likely heightened people's desire for security and stability in their surroundings. Therefore, it is reasonable to expect that more people would identify with the importance of living in secure surroundings over this period.
+
+ANSWER: A",stop,False,b76dc842fa3bf90fbe3e961a3066b22170e0484ffe9aff9e45dd3fb593d0ac81,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Now I will briefly describe a person. Using this card, would you please indicate whether that person is very much like you, like you, somewhat like you, not like you, or not at all like you?  
+Description: It is important to this person to live in secure surroundings.
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Very much like me""
+B: It moved toward ""Not at all like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A192,ordinal_scale,ordered,True,0.11868940598225339,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced significant economic growth and increasing urbanization, which often correlates with a greater emphasis on personal enjoyment and leisure activities. Additionally, the rise of consumer culture and tourism likely encouraged more people to value ""spoiling"" themselves and having a good time.
+
+ANSWER: A",stop,False,3f5fad04183bf60dd4ad474e1601bfa9cab497ce735564e48fa6b56023e48235,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please indicate how much the following description applies to you, using the provided scale: ""It is important to this person to have a good time; to 'spoil' oneself.""
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Very much like me""
+B: It moved toward ""Not at all like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A193,ordinal_scale,ordered,True,0.06977148118120728,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced significant social and political changes, including increased awareness of community and social responsibility due to various crises and grassroots movements. This likely strengthened the cultural emphasis on helping neighbors and caring for their needs, moving attitudes toward greater agreement with the statement.
+
+ANSWER: A",stop,False,f8d4135391ed700a024a602d327b7d135a4ef57b728671d00bf1be77f81acc31,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I will briefly describe a person. Using this card, would you please indicate whether the description is very much like you, like you, somewhat like you, not like you, or not at all like you?  
+Description: It is important to help people living nearby; to care for their needs
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Very much like me""
+B: It moved toward ""Not at all like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A194,ordinal_scale,ordered,True,0.059736591454001994,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced significant economic growth and increasing globalization, which often heightens the value placed on personal success and achievement. As a result, it is likely that more people identified with the importance of being very successful during this period.
+
+ANSWER: B",stop,False,d8946cfda652f4e10cbea41d98f8a141d54786a598d573e8cd923d4d7d891757,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Now I will briefly describe a person. Using the provided scale, please indicate whether that person is very much like you, like you, somewhat like you, not like you, or not at all like you.  
+Description: It is important to this person being very successful
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Not at all like me""
+B: It moved toward ""Very much like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A195,ordinal_scale,ordered,True,0.05988455703534046,toward_low,toward_high,False,True,,"Between 2007 and 2013, Thailand experienced significant political and economic changes, including increased globalization and exposure to international culture, which often encourage adventurousness and risk-taking attitudes. Younger generations, influenced by these factors, likely became more open to adventure and risk, shifting the typical response toward identifying more with those traits.
+
+ANSWER: A",stop,False,5a283f9503055fe8b69d6d25933d65b949a16f3099c7941697ac6ee4a3d82c4b,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I will briefly describe a person. Using the provided scale, please indicate whether that person is very much like you, like you, somewhat like you, not like you, or not at all like you.
+Description: It is important to this person adventure and taking risks
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Very much like me""
+B: It moved toward ""Not at all like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A196,ordinal_scale,ordered,True,0.06405377528826259,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced significant political and social changes, including increased political activism and shifts in cultural values. However, traditional values emphasizing proper behavior and respect remain strong in Thai society, and there is likely a reinforcement of the importance of behaving properly as a response to social instability.
+
+ANSWER: A",stop,False,2a27b29ff3cd3944bc7602d062aed743f63f328783f50395692120f1a5221238,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I will briefly describe a person. Using the provided scale, please indicate whether that person is very much like you, like you, somewhat like you, not like you, or not at all like you.
+Description: It is important to this person to always behave properly
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Very much like me""
+B: It moved toward ""Not at all like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A197,ordinal_scale,ordered,True,0.07380633071546752,toward_high,toward_high,True,True,,"Between 2007 and 2013, global awareness and concern about environmental issues generally increased, including in developing countries like Thailand. Given Thailand's exposure to environmental challenges such as pollution and deforestation, it is likely that more people identified with the importance of looking after the environment over this period.
+
+ANSWER: A",stop,False,08f1574006efca40d901e95c33b66243ff8b3d936a512abd9c5c11cbb7ea0a10,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Now I will briefly describe a person. Using this card, would you please indicate whether that person is very much like you, like you, somewhat like you, not like you, or not at all like you?
+Description: It is important to this person to look after the environment
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Very much like me""
+B: It moved toward ""Not at all like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,A198,ordinal_scale,ordered,True,0.07470796104106259,toward_high,toward_high,True,True,,"Thailand is a country with strong cultural roots and a deep respect for tradition, which tends to be reinforced rather than diminished over time, especially in the context of social and political changes between 2007 and 2013. Given the importance of tradition in Thai society, it is likely that the typical answer moved toward identifying more strongly with the importance of tradition.
+
+ANSWER: B",stop,False,31704bf29a34d999a27397d4373a430fdad6f795cdd6db1b21273ddbf50e4178,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Now I will briefly describe a person. Using this card, would you please indicate whether that person is very much like you, like you, somewhat like you, not like you, or not at all like you?
+Description: It is important to this person tradition
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Not at all like me""
+B: It moved toward ""Very much like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,B008,forced_choice,option,True,0.1209179558618667,1,2,False,True,,"Between 2007 and 2013, Thailand experienced significant economic development pressures alongside growing awareness of environmental issues. However, given the country's focus on rapid economic growth and job creation during this period, it is likely that more people prioritized economic growth over environmental protection. Thus, the share of people choosing ""Economic growth and creating jobs"" probably increased more than those prioritizing the environment.
+
+ANSWER: 2",stop,False,161a9ddc3c1444fb5cd346f780ae6695992dc50f3d949db537ab7a314649d010,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Here are two statements people sometimes make when discussing the environment and economic growth. Which statement comes closer to your own point of view?
+A. Protecting the environment should be given priority, even if it causes slower economic growth and some loss of jobs 
+B. Economic growth and creating jobs should be the top priority, even if the environment suffers to some extent
+
+### Task:
+
+Think about the share of people in Thailand choosing each answer in 2007 and in 2013. Which answer gained the most support (the largest increase in share)?
+
+1: Protecting environment
+2: Economy growth and creating jobs
+3: Other answer
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <number>"
+THA,5,6,2007,2013,C006,ordinal_scale,ordered,True,0.05622741033608317,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced significant economic challenges, including the global financial crisis aftermath and domestic political instability, which likely affected household incomes and financial security. Despite some recovery efforts, these factors probably led to a decrease in overall satisfaction with household financial situations.
+
+ANSWER: A",stop,False,b56ff23d06b1f3beaaa60182b9b3c5c946ca6108c1044c5dc041ed8bcdd5007b,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: How satisfied are you with your household's financial situation? If '1' means you are completely dissatisfied and '10' means you are completely satisfied, where would you rate your satisfaction?
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Dissatisfied""
+B: It moved toward ""Satisfied""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,D054,ordinal_scale,ordered,True,0.07785000386336938,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced ongoing social and economic changes, but traditional family values remained strong, especially the importance of filial piety and making parents proud. Given the cultural emphasis on family honor and respect in Thai society, it is likely that the attitude toward making parents proud either remained stable or moved slightly toward stronger agreement.
+
+ANSWER: A",stop,False,4e0a886ecc2bf46a2b466722caa113bdfd2c61736f01d89a69980bfcd4efacbc,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?  
+Statement: One of my main goals in life has been to make my parents proud
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Agree strongly""
+B: It moved toward ""Strongly disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,D057,ordinal_scale,ordered,True,0.12147755796522129,toward_low,toward_high,False,True,,"Between 2007 and 2013, Thailand experienced ongoing economic development and increasing urbanization, which often correlates with greater female participation in the workforce and shifting views on gender roles. As more women pursued paid employment, societal attitudes likely shifted toward valuing work outside the home, making the statement ""Being a housewife is just as fulfilling as working for pay"" less strongly agreed with over time.
+
+ANSWER: A",stop,False,cb47baf2f6cf8c578c6a0dfe05922608e00c083829312f22c83c29fb556c07f6,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?
+Statement: Being a housewife is just as fulfilling as working for pay
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Strongly disagree""
+B: It moved toward ""Agree strongly""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,D059,ordinal_scale,ordered,True,0.06039883879871484,toward_low,toward_high,False,True,,"Between 2007 and 2013, Thailand experienced significant social and political changes, including increased awareness of gender equality issues globally and regionally. While traditional views on gender roles might have been strong in 2007, by 2013 there was likely a shift toward greater acceptance of women in leadership roles, reflecting broader trends in Southeast Asia and worldwide.
+
+ANSWER: B",stop,False,663e48e53205ffbd8e7ca92077270f21a70957663a37001721c160b5bfe2bdd0,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?
+Statement: On the whole, men make better political leaders than women do
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Agree strongly""
+B: It moved toward ""Strongly disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,D078,ordinal_scale,ordered,True,0.056473332159831,toward_high,toward_high,True,True,,"Between 2007 and 2013, global trends toward gender equality and women's empowerment were gaining momentum, including in many Asian countries like Thailand. While traditional gender roles remained influential, increasing education and workforce participation by women likely led to a shift away from strongly agreeing that men make better business executives. Therefore, the typical answer probably moved toward more disagreement with the statement.
+
+ANSWER: A",stop,False,4cc187bb889bc23d95012c72563b5096a5b3d86e9f1c6e6969d9ebcf7c08cff8,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: For the following statement, can you tell me how strongly you agree or disagree? Do you strongly agree, agree, disagree, or strongly disagree?
+Statement: On the whole, men make better business executives than women do
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Strongly disagree""
+B: It moved toward ""Agree strongly""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E018,ordinal_scale,ordered,True,0.07661025639892236,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including military coups and protests, which often emphasized respect for authority as a stabilizing value. Given the cultural context valuing hierarchy and order, it is likely that the general attitude shifted toward viewing greater respect for authority more positively as a means to restore social stability.
+
+ANSWER: A",stop,False,42610f1ce8b0c05dea00d88448de520d73f25517d10e0513eaae91cbd766fde2,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I'm going to read out a possible change in our way of life that might take place in the near future. If it were to happen, would you think it would be a good thing, a bad thing, or don't mind?  
+Change: Greater respect for authority
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Good thing""
+B: It moved toward ""Bad thing""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E023,ordinal_scale,ordered,True,0.057034120017137424,toward_high,toward_low,False,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including the 2006 military coup aftermath, the 2010 protests, and the 2013 political crisis. These events likely heightened public awareness and engagement with politics, increasing overall interest in political matters.
+
+ANSWER: A",stop,False,b5b6ef384615409e9064e6ae41d5643df33ef1575094175efc833cca4aec8ba6,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: How interested are you in politics?
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Very interested""
+B: It moved toward ""Not at all interested""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E025,ordinal_scale,ordered,True,0.13792624347803345,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced significant political unrest, including protests and movements advocating for democratic reforms. This heightened political engagement likely encouraged more people to participate in political actions such as signing petitions. Therefore, the typical answer probably shifted toward greater willingness or actual participation in signing petitions.
+
+ANSWER: A",stop,False,e5e369ed6cd7eb85687e1cf543debcf1a120608bf672c4bcf216f5b64f0c779f,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Now I'd like you to look at this card. I'm going to read out a form of political action that people can take, and I'd like you to tell me whether you have actually done it, might do it, or would never do it under any circumstances.
+Action: Signing a petition
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Have done""
+B: It moved toward ""Would never do""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E026,ordinal_scale,ordered,True,0.11566214892227303,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced significant political unrest, including protests and boycotts related to government changes and political conflicts. This likely increased political engagement and willingness to participate in boycotts among the population. Therefore, the typical answer probably moved toward ""Have done.""
+
+ANSWER: A",stop,False,fe5768a069b49787f7648066e42897255bf4b71dcf6f7d3044f071bfbe499fdf,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Now I'd like you to consider a form of political action. Have you actually joined in boycotts, might you do it, or would you never do it under any circumstances?
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Have done""
+B: It moved toward ""Would never do""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E027,ordinal_scale,ordered,True,0.13254450651322144,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced significant political unrest, including the 2010 protests and military crackdowns, which likely heightened political awareness and participation among the population. This context suggests that more people might have become willing to attend peaceful demonstrations, moving the typical answer toward ""Have done"" or ""Might attend.""
+
+ANSWER: A",stop,False,5052a3c7c88e756c85d09d266ea653b140e620768dca15e807142d141c6dfcd6,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please look at this card. Have you ever attended peaceful demonstrations, might you attend one, or would you never attend one under any circumstances?
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Have done""
+B: It moved toward ""Would never do""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E033,ordinal_scale,ordered,True,0.0702600905488102,toward_low,toward_high,False,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including the 2006 military coup and the rise of the Red Shirt movement, which was generally associated with more populist and left-leaning policies. However, by 2013, there was also a strong resurgence of conservative and royalist forces aligned with the right, especially in urban centers and among the middle class. Overall, the political climate became more polarized, but the dominant shift among the general population leaned toward conservative and right-wing views as the establishment sought to reassert control.
+
+ANSWER: B",stop,False,f0c74cbce3bb2298d5cbc16d357a25dcb38c118f652d600327744be0b370edb5,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: In political matters, people talk of ""the left"" and ""the right."" How would you generally place your views on this scale?
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Left""
+B: It moved toward ""Right""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E035,ordinal_scale,ordered,True,0.20817996599368083,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced significant political and economic changes, including growing awareness of social inequalities and the impact of rapid economic growth on income distribution. Public discourse increasingly highlighted the need to address income disparities, suggesting that the typical Thai respondent likely shifted toward favoring more income equality.
+
+ANSWER: A",stop,False,90ad072bb65ce5191c49366c139608cf3d41a2f7c4bf5908ecaee07ce04fc407,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.
+Issue: Income equality
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Incomes should be made more equal""
+B: It moved toward ""We need larger income differences as incentives""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E036,ordinal_scale,ordered,True,0.06794549804155561,toward_high,toward_low,False,True,,"Between 2007 and 2013, Thailand experienced political instability and debates over economic policy, with some factions advocating for stronger government intervention to address inequality and economic challenges. However, the general trend in Southeast Asia during this period leaned toward market liberalization and private sector growth, suggesting that the typical Thai respondent likely favored increased private ownership over state control.
+
+ANSWER: B",stop,False,7dfcb698db2202c34042d54f7b7dbe03a538d5c960fcc39e94ea7ad2e6a2dbd6,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.
+Issue: Private vs state ownership of business
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Government ownership of business should be increased""
+B: It moved toward ""Private ownership of business should be increased""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E037,ordinal_scale,ordered,True,0.14154998771800537,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including protests and changes in government, which likely influenced public attitudes toward governance. Given the instability and challenges faced by the government during this period, many people may have felt that the government should take more responsibility to restore order and provide stability.
+
+ANSWER: B",stop,False,39099ee49cef20332eac4b0d4458824cf943d29a6394fce1d02e11f4ae99e31b,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.  
+Issue: Government responsibility
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""People should take more responsibility""
+B: It moved toward ""The government should take more responsibility""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E040,ordinal_scale,ordered,True,0.0996472461471204,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced significant political and economic challenges, including political unrest and a global economic slowdown. Despite these difficulties, Thai culture traditionally values diligence and perseverance, which likely sustained or even strengthened the belief that hard work leads to success. Therefore, the typical answer probably moved toward greater agreement that hard work brings success.
+
+ANSWER: A",stop,False,68e1f7aa5fa595acaf2a439564d2330d133e80407ddabfb5211bba57578a6545,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.  
+Issue: Hard work brings success
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""In the long run, hard work usually brings a better life""
+B: It moved toward ""Hard work doesn't generally bring success - it's more a matter of luck and connections""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E041,ordinal_scale,ordered,True,0.0667111633941557,toward_high,toward_low,False,True,,"Between 2007 and 2013, Thailand experienced significant economic growth alongside rising income inequality and social tensions. While some segments of the population benefited from wealth accumulation, many felt that wealth was concentrated among elites, leading to skepticism about whether wealth growth was inclusive. This likely shifted attitudes somewhat toward the view that wealth accumulation comes at the expense of others.
+
+ANSWER: A",stop,False,8b79954fac5099702164b24db4b7cb7e8a28dfec1d36661cfde34b83b446b64d,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.
+Issue: Wealth accumulation
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""People can only get rich at the expense of others""
+B: It moved toward ""Wealth can grow so there's enough for everyone""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E069_01,ordinal_scale,ordered,True,0.08338738795651711,toward_low,toward_low,True,True,,"Thailand is a predominantly Buddhist country where temples and religious institutions generally hold significant cultural and social influence. Between 2007 and 2013, despite political turmoil, the role of religious organizations as community anchors likely maintained or even increased public confidence. Therefore, the typical answer probably moved toward greater confidence in churches, mosques, temples, etc.
+
+ANSWER: A",stop,False,00c7828ccbd585f0ef5530182b7ab4ed57bfaaffa432c4a2129331711882a056,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: The Churches (mosque, temple etc.)
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E069_02,ordinal_scale,ordered,True,0.128820315876899,toward_low,toward_high,False,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including military coups in 2006 and 2014, with the armed forces playing a central role in governance and stability. While some segments of the population may have increased their confidence in the military as a stabilizing force, overall public trust likely declined due to concerns about military intervention in politics and restrictions on democratic freedoms.
+
+ANSWER: B",stop,False,5a0e44472cf8c0fde2623146f7c36410a9ed8f1cb97faacb92cdb4406ba76277,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: The armed forces
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E069_05,ordinal_scale,ordered,True,0.05872129033621879,toward_low,toward_high,False,True,,"Between 2007 and 2013, Thailand experienced significant political and economic changes, including labor market challenges and political unrest. These factors likely eroded trust in institutions such as labor unions, which may have been seen as less effective or aligned with political factions. Therefore, the typical confidence in labor unions probably declined during this period.
+
+ANSWER: A",stop,False,514f00c540ecef943996a40d8db17963abc7e82fd0aff4897078deb5c363b097,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: Labour Unions
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E069_06,ordinal_scale,ordered,True,0.05439976867208342,toward_low,toward_high,False,True,,"Between 2007 and 2013, Thailand experienced significant political unrest, including military coups and widespread protests, which often involved the police either as enforcers or as targets of criticism. Public trust in the police likely declined due to perceptions of corruption, abuse of power, and their role in political conflicts.
+
+ANSWER: A",stop,False,5cd1e8a06dfe3e7b01d5ef6461371e78e04a37e8dc299cc89229ccdef814de7a,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence, or none at all?  
+Organization: The police
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E069_07,ordinal_scale,ordered,True,0.09105816084233354,toward_low,toward_high,False,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including a military coup in 2006, ongoing protests, and changes in government. These events likely eroded public trust in political institutions such as Parliament. Therefore, it is reasonable to conclude that confidence in Parliament declined during this period.
+
+ANSWER: B",stop,False,754a552fa887f2da84d280b2d061084ef36d8e406d3b33acfc4a7c8d98951621,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Parliament
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E069_08,ordinal_scale,ordered,True,0.11788159415041305,toward_low,toward_high,False,True,,"Between 2007 and 2013, Thailand experienced significant political instability, including military coups and widespread protests, which likely eroded public trust in government institutions such as the civil services. Given this context, it is reasonable to infer that confidence in the civil services declined during this period.
+
+ANSWER: B",stop,False,de3ac021a83ea3b65d63dd19fdd7c20e12626dc4ea48bcd55372626a97d3c677,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: The Civil Services
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E069_11,ordinal_scale,ordered,True,0.11636174911862747,toward_low,toward_high,False,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including a military coup in 2006, ongoing protests, and changes in government leadership. These events likely eroded public trust in the government, leading to decreased confidence in the government in the capital over this period.
+
+ANSWER: B",stop,False,f96028d5822e07f9318fd727033da22a368b04da5618bcbc270f77c454b329bb,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: The government (in your nation’s capital)
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E069_12,ordinal_scale,ordered,True,0.09038366044463259,toward_low,toward_high,False,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including a military coup in 2006 and ongoing conflicts between different political factions. These events likely eroded public trust in political parties, as many citizens became disillusioned with the political process and parties' ability to govern effectively.
+
+ANSWER: A",stop,False,d4a8faae784082f5aad4bd4c89ce5a167a189d3146052b250a468bc14cd993f2,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Political Parties
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E069_13,ordinal_scale,ordered,True,0.19209364292968117,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced significant political and economic changes, including the global financial crisis aftermath and domestic political unrest. Despite these challenges, major companies often remained relatively stable and influential in the economy, which likely maintained or slightly increased public confidence in them as pillars of economic stability.
+
+ANSWER: A",stop,False,2daac35e52ef687336dc04b323eabef43929722658a019b3e3c61800bb6bc317,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Major Companies
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E069_14,ordinal_scale,ordered,True,0.19827850007121203,toward_low,toward_low,True,True,,"Between 2007 and 2013, environmental awareness globally was increasing, and Thailand experienced growing concerns about pollution and natural resource management. This likely led to greater public trust and confidence in environmental organizations as key actors addressing these issues.
+
+ANSWER: B",stop,False,4a5b8d88a9fbf8ae2080f0fbfe8499a18df114edf6f25f86a12d6fba9723162a,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Environmental organizations
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E069_15,ordinal_scale,ordered,True,0.17983734831575973,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced significant social and political changes, including increased awareness and activism around gender equality and women's rights. This likely led to greater public recognition and trust in women's organizations as advocates for social issues. Therefore, the typical answer probably moved toward more confidence.
+
+ANSWER: A",stop,False,59eac979e28758bef2894a91f7082d6c1ce10cab133041ae843f55b61e31131d,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Women’s organizations
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E069_17,ordinal_scale,ordered,True,0.0624871640719191,toward_low,toward_high,False,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including military coups and contentious court rulings that were often seen as politically motivated. This likely eroded public trust in the courts, causing confidence to decline.
+
+ANSWER: A",stop,False,79ea6e0f1a44dce2652c05c1d5c921afef184ca4a85f886ca75f16a1b3747063,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: The courts
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E069_18A,ordinal_scale,ordered,True,0.1852736870158787,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced significant political instability, including a military coup in 2006 and ongoing tensions that affected its regional relationships. However, during this period, ASEAN (the major regional organization in Southeast Asia) was strengthening its integration efforts, which likely increased Thai people's confidence in regional cooperation as a stabilizing force. Therefore, the typical answer likely moved toward greater confidence.
+
+ANSWER: B",stop,False,3cb095dad1255cf7e3731379d8b6c5cc6b4f1df181058c5b85bef568adffaf91,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: How much confidence do you have in major regional organizations?
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E069_20,ordinal_scale,ordered,True,0.1427132428890104,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced political instability, including a military coup in 2006 and ongoing tensions that affected public trust in institutions. However, the United Nations generally maintained a positive reputation globally as a peacekeeping and humanitarian organization, and Thais often view international organizations favorably. Therefore, it is likely that confidence in the UN either remained stable or increased slightly as people looked to international bodies for support amid domestic turmoil.
+
+ANSWER: B",stop,False,c1077116f83780ea7d90e50869d97dfc03b5d48e00be63bbb9616227878832f1,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence, or none at all?
+Organization: The United Nations
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E069_40,ordinal_scale,ordered,True,0.14310813532017716,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced significant political instability and social unrest, which often leads to increased reliance on and trust in charitable and humanitarian organizations as people seek support outside of government institutions. Additionally, the global rise in awareness of humanitarian issues during this period likely contributed to greater confidence in such organizations.
+
+ANSWER: B",stop,False,db6cf1a30e33011ea0b6a7f14704db8ef11971555ee4a37ef3e6b772b7f9c4ed,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Charitable or humanitarian organizations
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E114,ordinal_scale,ordered,True,0.24524047529990603,toward_high,toward_low,False,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including military coups and conflicts between pro- and anti-government groups. The 2006 coup ousted Thaksin Shinawatra, and the political instability continued through this period, with some segments of the population supporting strong, decisive leadership to restore order, while others favored democratic processes. Given the recurring military interventions and some public support for strong leaders to bypass parliamentary gridlock, it is likely that attitudes shifted somewhat toward accepting or favoring a strong leader without parliamentary constraints.
+
+ANSWER: A",stop,False,587b8ea3cd4f45cc9d9f1d0fbce333ae796a2ceba9d6d2278c91272327b6b5e1,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I'm going to describe a type of political system and ask what you think about it as a way of governing this country. Would you say it is a very good, fairly good, fairly bad, or very bad way of governing?
+Type of political system: Having a strong leader who does not have to bother with parliament and elections
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Very good""
+B: It moved toward ""Very bad""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E115,ordinal_scale,ordered,True,0.17696503167378486,toward_high,toward_low,False,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including military coups and conflicts between different political factions. Given this context, public trust in traditional democratic processes may have been shaken, potentially increasing support for expert-led governance as a way to stabilize the country. Therefore, the typical answer likely moved toward viewing expert decision-making more favorably.
+
+ANSWER: A",stop,False,a229d292cb114fc5c8d05b85e15ea4cba1bab217cfe9bb7c3a3ab4828bb60c7c,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I'm going to describe a type of political system and ask what you think about it as a way of governing this country. Would you say it is a very good, fairly good, fairly bad, or very bad way of governing this country?
+System: Having experts, not government, make decisions according to what they think is best for the country
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Very good""
+B: It moved toward ""Very bad""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E116,ordinal_scale,ordered,True,0.14090369540791808,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including military coups in 2006 and 2014, with the military playing a prominent role in governance. In 2007, shortly after the 2006 coup, some segments of the population may have been more accepting or neutral toward military rule as a stabilizing force. However, by 2013, growing political polarization and protests against military influence likely led to increased skepticism and negative attitudes toward army rule as a way of governing.
+
+ANSWER: B",stop,False,1eb0c6e4ba5b0e02324ec090f521163d61af291f6379ef0bc1777c12270552e4,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I'm going to describe a type of political system and ask what you think about it as a way of governing this country. Would you say it is a very good, fairly good, fairly bad, or very bad way of governing this country?
+System: Having the army rule
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Very good""
+B: It moved toward ""Very bad""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E117,ordinal_scale,ordered,True,0.08550205553973439,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including a military coup in 2006 and ongoing conflicts between pro- and anti-democracy groups. Despite these challenges, many Thais continued to value democratic governance as a preferable system compared to military or authoritarian rule, especially as the country sought stability and legitimacy through elections. Therefore, the general attitude likely moved toward viewing democracy more positively.
+
+ANSWER: B",stop,False,427b5726fcffad2b6a6d91b886162318c205ff11a9b33e7b469af6993b83469f,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I'm going to describe a type of political system and ask what you think about it as a way of governing this country. Would you say it is a very good, fairly good, fairly bad, or very bad way of governing this country?  
+Type of political system: Having a democratic political system
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Very bad""
+B: It moved toward ""Very good""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E124,ordinal_scale,ordered,True,0.12497971466957809,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including military coups and crackdowns on protests, which likely led to increased public perception of diminished respect for individual human rights. Therefore, the typical answer probably shifted toward a more negative view of human rights respect.
+
+ANSWER: B",stop,False,1e47b6d65bb9fc587c63601636bc0c67ca5b108bf91df55a00374b182a3ce78a,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: How much respect is there for individual human rights in this country nowadays?
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""There is a lot of respect for individual human rights""
+B: It moved toward ""There is no respect at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E218,ordinal_scale,ordered,True,0.05174449812130969,toward_low,toward_high,False,True,,"Between 2007 and 2013, Thailand experienced significant economic growth and increased investment in technology and education, which likely boosted optimism about future opportunities driven by science and technology. Additionally, the global rise of digital technology and mobile connectivity during this period would have positively influenced public perception.
+
+ANSWER: A",stop,False,0b3c9229042a15e1f29e86edd25a3979de12138735a1a8e090f9c2fd8e2121e0,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I would like you to tell me how much you agree or disagree with the following statement. A 1 means that you “completely disagree” and a 10 means that you “completely agree.”
+Statement: Because of science and technology, there will be more opportunities for the next generation
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Completely agree""
+B: It moved toward ""Completely disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E222,ordinal_scale,ordered,True,0.10858373858073152,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced significant political unrest and increased civic engagement, including protests and various forms of political action. This environment likely encouraged more people to consider or actually engage in unconventional or less common political actions (""Other""), moving attitudes toward having done such actions rather than rejecting them outright.
+
+ANSWER: B",stop,False,70c5297a5147a6719f41fd07ed63b5fdc18d4e6b165690b9e066563fc8d0e51c,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Now I’d like you to look at this card. I’m going to read out a form of political action that people can take, and I’d like you to tell me whether you have done this, might do it, or would never do it under any circumstances.
+Action: Other (write in)
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Would never do""
+B: It moved toward ""Have done""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E224,ordinal_scale,ordered,True,0.1315520682545949,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including protests and changes in government, with ongoing debates about social inequality and economic redistribution. Given the increased visibility of social justice issues and the role of populist policies during this period, it is likely that more people came to view government intervention in taxing the rich and subsidizing the poor as an essential characteristic of democracy.
+
+ANSWER: B",stop,False,4e20809c0e4c8e6f858cd2dde085b71c740fd585a64c9ee8b96641dbc609f2bd,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please tell me how essential you think it is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: Governments tax the rich and subsidize the poor
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""It is against democracy (spontaneous)""
+B: It moved toward ""An essential characteristic of democracy""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E225,ordinal_scale,ordered,True,0.09247393198116943,toward_high,toward_low,False,True,,"Thailand is a predominantly Buddhist country with a significant role of religion in society, but its political system is officially a constitutional monarchy with secular laws. Between 2007 and 2013, Thailand experienced political turmoil and increasing polarization, with some groups emphasizing traditional and religious values more strongly. However, the general trend in democratic attitudes globally and in Thailand has been toward separating religious authority from legal and political authority to uphold democratic principles. Therefore, it is likely that the typical Thai respondent in 2013 viewed religious authorities interpreting laws as less essential to democracy than in 2007.
+
+ANSWER: A",stop,False,0f4aee7b5d4b0ca7318f291672e311c890ee8d5b5ef077b1fc93c3325db462a6,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: Religious authorities interpret the laws
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""It is against democracy (spontaneous)""
+B: It moved toward ""An essential characteristic of democracy""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E226,ordinal_scale,ordered,True,0.10238049318087891,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including a military coup in 2006 and ongoing conflicts between different political factions. Despite this instability, the importance of free elections as a democratic characteristic likely became more pronounced among the population, as many people sought legitimate and peaceful means to choose their leaders amid political unrest.
+
+ANSWER: B",stop,False,294621462abd7dc87f40a863e49f301e9e7ad7a017699d7e159d98f59ce3a7e2,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: People choose their leaders in free elections
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""It is against democracy (spontaneous)""
+B: It moved toward ""An essential characteristic of democracy""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E227,ordinal_scale,ordered,True,0.11253139592472057,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including protests and changes in government, which likely heightened public awareness of social welfare issues. Given the increasing global emphasis on social safety nets during this period and the challenges faced by many Thais, it is plausible that more people came to view state aid for unemployment as an essential democratic characteristic.
+
+ANSWER: A",stop,False,aa9857bccd328ed8e23340799c529a69003b36f6da140f389f88b436d37d4f97,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: People receive state aid for unemployment
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""An essential characteristic of democracy""
+B: It moved toward ""It is against democracy (spontaneous)""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E228,ordinal_scale,ordered,True,0.08518000008825691,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced significant political instability, including military coups and ongoing conflicts between civilian governments and the military. Given the military's prominent role in politics and some segments of the population viewing the army as a stabilizing force, it is likely that more people came to see the army stepping in during government incompetence as an acceptable or even essential characteristic of democracy.
+
+ANSWER: A",stop,False,e74142e9e8f213641eb0ffaada2a889d3ee43288215e733cc870bd31fa8b60e1,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: The army takes over when government is incompetent
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""An essential characteristic of democracy""
+B: It moved toward ""It is against democracy (spontaneous)""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E229,ordinal_scale,ordered,True,0.11157471841195493,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including military coups and protests that highlighted concerns about state oppression and civil liberties. Given these events, it is likely that the population became more aware of the importance of civil rights as a safeguard against state abuse, thus viewing them as more essential to democracy.
+
+ANSWER: A",stop,False,4697abab82bd4195ce80de2fa30ba7100cb3f81008a55913250abc3f27ffb510,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: Civil rights protect people’s liberty from state oppression
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""An essential characteristic of democracy""
+B: It moved toward ""It is against democracy (spontaneous)""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E234,ordinal_scale,ordered,True,0.05744114521922851,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced significant economic growth and increased access to technology, such as mobile phones and the internet, which likely improved public perception of science and technology. Additionally, global trends during this period generally saw rising optimism about technological advancements improving quality of life.
+
+ANSWER: A",stop,False,673048c0079dd3725a6dc3799d0d03d6bbeb602b469b3ca7f8cad23699196f7c,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: All things considered, would you say that the world is better off or worse off because of science and technology? Please indicate your view on this scale: 1 means “the world is a lot worse off,” and 10 means “the world is a lot better off.”
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""A lot better off""
+B: It moved toward ""A lot worse off""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E235,ordinal_scale,ordered,True,0.05032383879236179,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including military coups and protests related to democratic governance. Despite these challenges, the ongoing political conflicts likely heightened public awareness and desire for democratic principles, leading many to place greater importance on living in a democratically governed country.
+
+ANSWER: B",stop,False,717fbf6c669fd3f115b406b3f25dc11414a9cd2b9768574d74d6f9d255a772d6,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: How important is it for you to live in a country that is governed democratically? On a scale where 1 means “not at all important” and 10 means “absolutely important,” what position would you choose?
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""It is against democracy (spontaneous)""
+B: It moved toward ""Absolutely imporrtant""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E236,ordinal_scale,ordered,True,0.052924545389677766,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including a military coup in 2006 and ongoing conflicts between pro- and anti-government groups. These events likely led to increased skepticism about the democratic nature of governance, causing the typical answer to move away from viewing the country as completely democratic.
+
+ANSWER: A",stop,False,9a41504ec3119acc89251af2be597294f5622d5d64d486815169648693b1c0a6,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: How democratically is your country being governed today? Using a scale from 1 to 10, where 1 means “not at all democratic” and 10 means “completely democratic,” what position would you choose?
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""It is against democracy (spontaneous)""
+B: It moved toward ""Completely democratic""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E255,ordinal_scale,ordered,True,0.14220505045564952,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced significant growth in technology adoption and internet penetration, with more affordable computers and increased digital literacy. As a result, it is likely that the frequency of personal computer use increased during this period.
+
+ANSWER: B",stop,False,fe7f87851f33ec19d46a510d8d1ce0060d34e80c0d927b41c470ab769b4ee57b,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: How often do you use a personal computer?
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Never""
+B: It moved toward ""Frequently""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,F001,ordinal_scale,ordered,True,0.05142346810579327,toward_high,toward_low,False,True,,"Between 2007 and 2013, Thailand experienced significant social and political changes, including increased political unrest and economic challenges. Such conditions often lead people to reflect more deeply on existential questions, suggesting a shift toward thinking about the meaning and purpose of life more frequently.
+
+ANSWER: B",stop,False,f6512114bfa33001b802be5f7cfec682427bee1b4d423ca43588c2b760d03cfb,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: How often, if at all, do you think about the meaning and purpose of life?
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Never""
+B: It moved toward ""Often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,F028,ordinal_scale,ordered,True,0.14132428461500254,toward_high,toward_low,False,True,,"Thailand is a predominantly Buddhist country where religious practices are deeply integrated into daily life and culture. Between 2007 and 2013, despite modernization and urbanization, the general population likely maintained or even increased their frequency of attending religious services beyond major life events, reflecting a continued or strengthened engagement with religious activities.
+
+ANSWER: A",stop,False,48875b7d3d5ede772f6291693769f2e019635d433c4dc6ba7f4e858073d809c3,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Apart from weddings, funerals, and christenings, how often do you attend religious services these days?
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""More than once a week""
+B: It moved toward ""Never practically never""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,F063,ordinal_scale,ordered,True,0.4175308114776461,toward_low,toward_high,False,True,,"Thailand is a predominantly Buddhist country where religion plays a significant role in daily life and cultural identity. Between 2007 and 2013, there were no major secularizing trends or events that would likely reduce the importance of spirituality or religious belief in the population. Therefore, the typical answer likely remained stable or moved slightly toward viewing God (or a higher spiritual power) as more important.
+
+ANSWER: A",stop,False,3bbd0f56a63f7dd5f6d90bd4f11f608a7461489b43d9e3424c02878a59b94d4a,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: How important is God in your life? Please use this scale to indicate: 10 means “very important” and 1 means “not at all important.”
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Very important""
+B: It moved toward ""Not at all important""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,F114A,ordinal_scale,ordered,True,0.14219629885354812,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced political instability and growing concerns about corruption and misuse of public resources. This likely led to a stronger societal disapproval of dishonest behaviors such as claiming government benefits fraudulently. Therefore, the typical answer probably shifted toward viewing such actions as less justifiable.
+
+ANSWER: B",stop,False,043190552716296aaff8c9d73c863e44cfef6cccce6d3807a7ba0610761b2b84,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Claiming government benefits to which you are not entitled
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,F115,ordinal_scale,ordered,True,0.14295498652018013,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced political instability and economic challenges, which may have influenced public attitudes toward minor acts of rule-breaking like fare evasion. However, given the cultural emphasis on social order and respect for rules in Thai society, it is likely that attitudes shifted toward viewing fare evasion as less acceptable over time.
+
+ANSWER: A",stop,False,a4ba7b507103860ef10f766fe3f199dc6b59e7528e422f7ac677eceecebf2c74,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.  
+Statement: Avoiding a fare on public transport
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,F116,ordinal_scale,ordered,True,0.12219747630659304,toward_low,toward_high,False,True,,"Between 2007 and 2013, Thailand experienced political instability and economic challenges, which often correlate with increased public tolerance for tax evasion as a form of coping or protest against perceived government inefficiency or corruption. Therefore, it is likely that the typical answer shifted toward greater acceptance of cheating on taxes.
+
+ANSWER: A",stop,False,bbad249f3d12f6a5a4486847b4832770c99df6b0158a817a8a80b3a97fe2545c,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please tell me whether you think cheating on taxes if you have a chance can always be justified, never be justified, or something in between, using the provided scale.
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,F117,ordinal_scale,ordered,True,0.12233188199929343,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil and increased public awareness of corruption issues, including high-profile anti-corruption campaigns. This likely led to a stronger societal rejection of bribery, moving public opinion toward viewing bribery as less justifiable.
+
+ANSWER: A",stop,False,ed3033bba893e3157952b2fa4338a69485c315001963c2c0b0291d31a17df234,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.  
+Statement: Someone accepting a bribe in the course of their duties
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,F118,ordinal_scale,ordered,True,0.06031138448489919,toward_low,toward_high,False,True,,"Between 2007 and 2013, Thailand experienced increasing visibility and acceptance of LGBTQ+ individuals, partly due to greater media representation and tourism influences. While traditional values remained strong, overall societal attitudes toward homosexuality became more tolerant during this period.
+
+ANSWER: A",stop,False,b48fadf2798899b1641f85b421f62c9999d4c2ed192c616a395fe5b1f5c0b1f4,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Homosexuality
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,F119,ordinal_scale,ordered,True,0.09540500547716077,toward_low,toward_low,True,True,,"Thailand has a long-standing and complex relationship with prostitution, which is both widespread and culturally nuanced. Between 2007 and 2013, there was increased awareness and discussion about human trafficking and the exploitation associated with prostitution, leading to stronger legal crackdowns and social campaigns against it. This likely shifted public opinion somewhat toward viewing prostitution as less justifiable.
+
+ANSWER: B",stop,False,8a710a15ac11644871cbd5fc51f9446c668afa37b28448dc30deb93a721034c1,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please tell me for the following statement whether you think it can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Prostitution
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,F120,ordinal_scale,ordered,True,0.05939973202431418,toward_low,toward_high,False,True,,"Between 2007 and 2013, Thailand experienced gradual social changes, including increased discussions about women's rights and reproductive health. While abortion remained legally restricted, public attitudes generally became more open to considering abortion as justifiable under certain circumstances, reflecting a slight shift toward greater acceptance.
+
+ANSWER: B",stop,False,823c1c991c899445d3bc232fefa537f0ba15aacde6e40104f69b490ae8034fe8,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Abortion
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,F121,ordinal_scale,ordered,True,0.07285105452689028,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced gradual social modernization and increasing urbanization, which often correlate with more liberal attitudes toward personal issues like divorce. While traditional values remain strong, younger generations and urban populations likely became more accepting of divorce as a justifiable option during this period.
+
+ANSWER: A",stop,False,c9cff73e9922588764877c9f61e36e4a37dcefffed7071e8b5f88f8c910f5cf6,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please tell me whether you think this statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Divorce
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,F122,ordinal_scale,ordered,True,0.10387599732908334,toward_high,toward_low,False,True,,"Between 2007 and 2013, Thailand experienced ongoing social and political changes, but traditional Buddhist values, which generally emphasize the sanctity of life, remained influential in shaping public opinion on ethical issues like euthanasia. While global trends showed increasing acceptance of euthanasia, Thai society likely remained cautious or even more conservative due to heightened political instability and a focus on preserving cultural norms during this period.
+
+ANSWER: A",stop,False,105bc933bfc578d3911cb636bd37eed9012cc620f260281301b0a9f459cd4f93,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Euthanasia
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,F123,ordinal_scale,ordered,True,0.07147420190476468,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced significant social and economic changes, including increased awareness of mental health issues and efforts to reduce stigma around suicide. However, traditional cultural and religious values, particularly Buddhism, generally view suicide as morally problematic, which likely maintained or even strengthened the view that suicide is not justifiable. Therefore, the typical answer likely moved toward ""Never justifiable.""
+
+ANSWER: A",stop,False,aec9593e5ad0d3b049a5bc1689b436bea7f93cada199176b9bac7657b994cba9,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Suicide
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,F199,ordinal_scale,ordered,True,0.09181599911632565,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced increased awareness and activism around women's rights and domestic violence, influenced by both local advocacy and international human rights movements. This likely led to a shift in public opinion toward viewing wife-beating as less acceptable.
+
+ANSWER: B",stop,False,7eda24e34b1ba4b78b8531d83f18080c4a9765b43a08f8cafa7c2b91689468f6,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: For a man to beat his wife
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,G007_35_B,ordinal_scale,ordered,True,0.0639811383216659,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced political instability and social tensions, including conflicts with Muslim minority groups in the southern provinces. These events likely heightened religious distrust among the general population. Therefore, it is reasonable to infer that trust in people of another religion decreased during this period.
+
+ANSWER: B",stop,False,42bafdc92490fd1e0ba5a1a551660e0bce9f2f2dd5222967eeb0654ad7055f75,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I’d like to ask you how much you trust people from a specific group. Do you trust people from this group completely, somewhat, not very much or not at all?
+Group: People of another religion
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Trust completely""
+B: It moved toward ""Do not trust at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,G007_36_B,ordinal_scale,ordered,True,0.06288747065969646,toward_high,toward_high,True,True,,"Between 2007 and 2013, Thailand experienced significant political and social changes, including increased nationalism and occasional tensions related to immigration and foreign influence. These factors likely contributed to a more cautious or skeptical attitude toward people of another nationality. Therefore, the typical answer probably shifted toward less trust.
+
+ANSWER: A",stop,False,c944765698ddcb0c52106399947e3fbe5df75a84f73b127ae9d83de9acc465d6,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: I’d like to ask you how much you trust people from a particular group. Do you trust people from this group completely, somewhat, not very much, or not at all?  
+Group: People of another nationality
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Do not trust at all""
+B: It moved toward ""Trust completely""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,G022M,ordinal_scale,ordered,True,0.08033395450646319,toward_low,toward_low,True,True,,"Between 2007 and 2013, ASEAN integration efforts increased, and Thailand, as a key member, likely experienced growing regional identity awareness. Given the push for ASEAN community building during this period, Thai citizens probably felt a stronger connection to ASEAN by 2013.
+
+ANSWER: B",stop,False,8bafd4a8390cee4409e6357f2cb9db7b72c1159e8df8693ac8a6cf3db24fbabe,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: People have different views about themselves and how they relate to the world. Using this card, would you tell me how strongly you agree or disagree with the following statement about how you see yourself?
+Statement: I see myself as a citizen of ASEAN
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Strongly disagree""
+B: It moved toward ""Strongly agree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,G023,ordinal_scale,ordered,True,0.1823569636731977,toward_low,toward_low,True,True,,"Between 2007 and 2013, Thailand experienced significant political and social changes, including increased globalization and exposure to individualistic values through media and education. These factors likely encouraged a stronger sense of individual autonomy among the population over time.
+
+ANSWER: A",stop,False,94032bb2ded6bcfc6c88d6717175a8942087a229563473e19bcd782cf4fb337f,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: People have different views about themselves and how they relate to the world. Using the provided scale, would you tell me how strongly you agree or disagree with the following statement about how you see yourself?  
+Statement: I see myself as an autonomous individual
+
+### Task:
+
+Think about how the people of Thailand, taken as a whole, answered this question in 2007 and in 2013. Did the typical answer move?
+
+A: It moved toward ""Strongly agree""
+B: It moved toward ""Strongly disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+THA,5,6,2007,2013,E001+E002,ranked_choice,option,True,0.13046248120201803,4,3,False,True,,"Between 2007 and 2013, Thailand experienced significant political and social changes, including protests and shifts in governance that heightened public awareness of political participation and democratic rights. Given this context, it is likely that the priority of ""People have more say about how things are done"" gained the most support, reflecting increased public desire for political voice and influence. Economic growth and defense might have remained important but less so compared to the rising demand for political inclusion.
+
+ANSWER: 1",stop,False,e1e1ada721c270caf7d03b1e0c49dfb044fc3862c8e4905277b89b7554d14772,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: People sometimes talk about what the country's most important aim should be for the next ten years. On this card are listed some goals which different people would give top priority. Which one of these do you consider the most important?
+(Each person picked a first and a second choice; count both.)
+
+### Task:
+
+Think about the share of people in Thailand choosing each answer in 2007 and in 2013. Which answer gained the most support (the largest increase in share)?
+
+1: People have more say about how things are done
+2: Trying to make our cities and countryside more beautiful
+3: A high level of economic growth
+4: Strong defence forces
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <number>"
+THA,5,6,2007,2013,E003+E004,ranked_choice,option,True,0.1961459338418686,3,3,True,True,,"Between 2007 and 2013, Thailand experienced significant political turmoil, including protests and changes in government, which likely heightened concerns about economic stability and daily living costs. As a result, more people probably prioritized ""Fighting rising prices"" over other issues, reflecting growing economic anxieties during this period.
+
+ANSWER: 2",stop,False,bcd78f35e4ad9f8a899870688f26ac9c4c02b94b7f14eb2cca9fa98011ae7c63,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: If you had to choose, which one of the following is most important?
+(Each person picked a first and a second choice; count both.)
+
+### Task:
+
+Think about the share of people in Thailand choosing each answer in 2007 and in 2013. Which answer gained the most support (the largest increase in share)?
+
+1: Protecting freedom of speech
+2: Fighting rising prices
+3: Maintaining order in the nation
+4: Giving people more say in important government decisions
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <number>"
+THA,5,6,2007,2013,E005+E006,ranked_choice,option,True,0.12332961065968345,4,4,True,True,,"Between 2007 and 2013, Thailand experienced political instability and social unrest, which likely heightened public concern about safety and security. Additionally, economic challenges during this period may have shifted priorities toward stability and order. Therefore, the option ""The fight against crime"" probably gained the most support as people sought greater security in uncertain times.
+
+ANSWER: 4",stop,False,02a218336589d0cd999ed9df06be9cd460fc87407a02a84e7c42981a6ca82a0f,"### Inputs:
+
+Country: Thailand
+Year 1: 2007
+Year 2: 2013
+Question: In your opinion, which one of the following is most important?
+(Each person picked a first and a second choice; count both.)
+
+### Task:
+
+Think about the share of people in Thailand choosing each answer in 2007 and in 2013. Which answer gained the most support (the largest increase in share)?
+
+1: Ideas count more than money
+2: Progress toward a less impersonal and more humane society
+3: A stable economy
+4: The fight against crime
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <number>"

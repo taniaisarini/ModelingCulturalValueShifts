@@ -1,0 +1,1683 @@
+country,wave_a,wave_b,years_a,years_b,code,format,family,significant,effect,truth,pred,correct,parsed,error,response,finish_reason,cached,cache_key,prompt
+EGY,6,7,2013,2018,A004,ordinal_scale,ordered,True,0.27653688139672195,toward_high,toward_high,True,True,,"After the 2011 uprising, Egyptians’ political engagement initially spiked, but the 2013 coup and subsequent repression under Sisi fostered disillusionment and risk-avoidance. By 2018, many were more apathetic or cautious, making politics feel less important in daily life.
+
+ANSWER: A",stop,False,ab863d7e165cb3bd78155797b8b28075198e8f93966638316540a4bb66ad9ee1,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: For the following aspect, indicate how important it is in your life. Would you say it is very important, rather important, not very important or not important at all?  
+Aspect: Politics
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all important""
+B: It moved toward ""Very important""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,A005,ordinal_scale,ordered,True,0.15680871746560177,toward_low,toward_low,True,True,,"Egypt experienced major economic strain between 2013 and 2018 (currency devaluation, high inflation, subsidy reforms), making employment and income more salient for households. That likely nudged responses toward seeing work as very important rather than less important.
+
+ANSWER: A",stop,False,4b87ae3fcb514ad82087fe367533696f492a0152e563cb860cb9b90ce18afcf0,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: For the following aspect, indicate how important it is in your life. Would you say it is very important, rather important, not very important or not important at all?
+Aspect: Work
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Very important""
+B: It moved toward ""Not at all important""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,A008,ordinal_scale,ordered,True,0.26228193006099965,toward_low,toward_high,False,True,,"After the 2013 upheaval, Egypt saw some political stabilization but severe economic austerity, currency devaluation, and high inflation from 2016 onward, which hurt living standards. Gallup/World Happiness indicators show declines in well-being in this period, suggesting people felt less happy by 2018.
+
+ANSWER: A",stop,False,b94921513e23ff87ca2c6d5e03f1e12b523183bb89a485b2b990fd1bce49f3f0,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Taking all things together, would you say you are feeling:  
+Feeling of happiness
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all happy""
+B: It moved toward ""Very happy""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,A104,ordinal_scale,ordered,True,0.05709534701986824,toward_high,toward_low,False,True,,"After the 2013 military takeover, Egypt’s civic space contracted and participation in independent organizations declined. By 2018, fewer people would report being active in professional associations, pushing responses toward “not a member.”
+
+ANSWER: A",stop,False,7b5e6ee6dd9406a3ab17537281b71a9fb312ab0b3917d4e0a93f0204cb3ad520,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Now I am going to read out a voluntary organization; could you tell me whether you are a member, an active member, an inactive member, or not a member of this type of organization?
+Organization type: Professional association
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not a member""
+B: It moved toward ""Active member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,A124_43,mention_flag,share,True,0.05640402713941782,increase,decrease,False,True,,"Egyptians saw growing exposure to diverse media and international contacts between 2013 and 2018, and concerns about “different language” neighbors are relatively low-salience compared with other out-groups. This likely translated into slightly greater acceptance over time.
+
+ANSWER: A",stop,False,688decffae783d7cfec168a62ab58ec731b87000cdfad96ff9b3726883211a1b,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Could you please mention if you would not like to have people who speak a different language as neighbors?
+
+### Task:
+
+Think about the share of people in Egypt who gave the answer ""Mentioned"". Did that share change between 2013 and 2018?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,A165,binary,share,True,0.13199830392352074,increase,increase,True,True,,"Surveys in Egypt show generalized social trust fell between 2013 and 2018 amid continued political polarization and economic strain, meaning fewer said “most people can be trusted.” Consequently, the share saying you need to be very careful increased.
+
+ANSWER: B",stop,False,0174262007258f5a98832761566968719f075368285785d66408bdb40c0f866a,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Generally speaking, would you say that most people can be trusted or that you need to be very careful in dealing with people?
+
+### Task:
+
+Think about the share of people in Egypt who gave the answer ""Need to be very careful"". Did that share change between 2013 and 2018?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,A170,ordinal_scale,ordered,True,0.09692569986772336,toward_high,toward_high,True,True,,"After the 2013 coup and intense unrest, Egyptians’ life satisfaction fell to very low levels. By 2018, political stability had returned despite economic hardship and inflation, and survey evidence suggests a modest rebound in reported life satisfaction.
+
+ANSWER: B",stop,False,e15a054f50fd2cadd81c8216aec4560449f9ceb076696b57b049739b4a8deaf7,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: All things considered, how satisfied are you with your life as a whole these days? Please use the provided scale to help with your answer.
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Dissatisfied""
+B: It moved toward ""Satisfied""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,C002,categorical,option,True,0.1361854714202055,1,1,True,True,,"Economic strain and heightened nationalism in Egypt between 2013 and 2018 likely reinforced support for prioritizing locals in scarce job markets, pushing more respondents toward agreement. As a result, agreement increased while neutral and disagree responses fell or stayed low.
+
+ANSWER: 2",stop,False,2f5861b7b3571b292f007feb3f4e0c4052222288fc663d96df9d1da830cbf20c,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Do you agree, disagree, or neither agree nor disagree with the following statement? When jobs are scarce, employers should give priority to people of this country over immigrants.
+
+### Task:
+
+Think about the share of people in Egypt choosing each answer in 2013 and in 2018. Which answer gained the most support (the largest increase in share)?
+
+1: Neither
+2: Agree
+3: Disagree
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <number>"
+EGY,6,7,2013,2018,D054,ordinal_scale,ordered,True,0.05744653082293352,toward_low,toward_low,True,True,,"Family ties and filial duty are very strong in Egypt, and periods of economic and political strain in the mid-2010s likely reinforced reliance on and identification with family. This would push responses toward stronger endorsement of making parents proud.
+
+ANSWER: B",stop,False,f1730615a30493d8ae1e583a89918b01a139581aff25c5421dd87e559b6122ba,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?  
+Statement: One of my main goals in life has been to make my parents proud
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Strongly disagree""
+B: It moved toward ""Agree strongly""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,D060,ordinal_scale,ordered,True,0.10108060585151969,toward_high,toward_high,True,True,,"Female educational attainment and university enrollment rose in Egypt through the 2010s, and the Sisi government publicly emphasized women’s empowerment (e.g., appointing female ministers), nudging norms toward gender equality. These trends likely reduced agreement with the idea that boys deserve university education more than girls.
+
+ANSWER: B",stop,False,2c43a2f542af8abe2e3702deb4a2aff35d5a9640571b5f7c3151da8f73ae16ed,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?  
+Statement: A university education is more important for a boy than for a girl
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Agree strongly""
+B: It moved toward ""Strongly disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,D061,ordinal_scale,ordered,True,0.08611282445819542,toward_low,toward_high,False,True,,"Education and urbanization kept rising in Egypt over this period, and survey trends in the region show modest liberalization on gender-role attitudes by 2017–2019. This likely reduced the share strongly endorsing the idea that children suffer when mothers work.
+
+ANSWER: A",stop,False,c35b03f18e0528098746034564ec58fd411ad8368f9ca3072525f5a51dc03cc2,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?
+Statement: When a mother works for pay, the children suffer
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Strongly disagree""
+B: It moved toward ""Agree strongly""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,D066_B,ordinal_scale,ordered,True,0.10300609762549587,toward_low,toward_high,False,True,,"Economic pressures and public discourse around women’s work and empowerment in the mid-2010s likely nudged norms toward greater acceptance of women’s earning power. Compared with 2013, by 2018 Egyptians were somewhat less likely to see a wife out-earning her husband as a problem.
+
+ANSWER: B",stop,False,c51c2178583328d119304dc17373694f8154c60f34d1028d38f8d5be84caa6b8,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Do you agree, disagree or neither agree nor disagree with the following statement?  
+Statement: Problem if women have more income than husband
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Agree""
+B: It moved toward ""Disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,D078,ordinal_scale,ordered,True,0.06241107396453768,toward_high,toward_high,True,True,,"Public attitudes in Egypt have generally trended slowly toward more gender-egalitarian views, and the mid-2010s saw visible government promotion of women in cabinet and public campaigns on women’s rights. That likely nudged opinion away from agreeing that men are inherently better business executives.
+
+ANSWER: B",stop,False,cc1c617474c31441ccabed94a1cde0969ce2570d675299d4493d4b374eaace87,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: For the following statement, can you tell me how strongly you agree or disagree? Do you strongly agree, agree, disagree, or strongly disagree?
+Statement: On the whole, men make better business executives than women do
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Agree strongly""
+B: It moved toward ""Strongly disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E012,binary,share,True,0.3135043216352815,increase,decrease,False,True,,"Patriotic sentiment after the 2013 upheaval was tempered by years of economic strain and fatigue from the Sinai insurgency, which likely reduced enthusiasm for another war. As a result, fewer Egyptians said they would be willing to fight by 2018.
+
+ANSWER: B",stop,False,74b4441127da3ed1da5bd951cc142660aeac2a3118dff4dbd81bef02a68023f2,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Would you be willing to fight for your country if there were another war?
+
+### Task:
+
+Think about the share of people in Egypt who gave the answer ""Yes"". Did that share change between 2013 and 2018?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E015,ordinal_scale,ordered,True,0.1086962616481808,toward_high,toward_high,True,True,,"After 2013, Egypt faced austerity, high inflation, and a tougher labor market, especially after the 2016 currency devaluation. In that context, reducing the importance of work would be seen more negatively as people prioritized income and stability.
+
+ANSWER: A",stop,False,0e01973a0fc8b2219b35bd6cefa2782c3406d9ac50803844a9154f928983d375,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I'm going to read out a possible change in our way of life that might take place in the near future. Please tell me if you think it would be a good thing, a bad thing, or if you don't mind.
+Change: Less importance placed on work in our lives
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Bad thing""
+B: It moved toward ""Good thing""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E018,ordinal_scale,ordered,True,0.07106484033146249,toward_high,toward_low,False,True,,"After the 2013 turmoil and military takeover, many Egyptians prioritized order and stability, making “greater respect for authority” more attractive. By 2018, with Sisi’s consolidated rule and ongoing security framing, attitudes likely shifted further toward seeing authority as a good thing.
+
+ANSWER: B",stop,False,8e2b11d587daddeadc4e3c32fb5bd4bc190e9b4961454a63d0bf28862420d2b2,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I'm going to read out a possible change in our way of life that might take place in the near future. If it were to happen, would you think it would be a good thing, a bad thing, or don't mind?  
+Change: Greater respect for authority
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Bad thing""
+B: It moved toward ""Good thing""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E023,ordinal_scale,ordered,True,0.31641139899504667,toward_high,toward_high,True,True,,"In 2013, Egypt experienced intense political upheaval around Morsi’s ouster and Sisi’s rise, heightening public engagement. By 2018, consolidation of authoritarian rule and repression likely dampened interest and participation, pushing attitudes toward disengagement.
+
+ANSWER: A",stop,False,4950194c1abc5ef2b19aacc73f526bd09a3dd3ddbe276390c9b596a19e30631e,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: How interested are you in politics?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all interested""
+B: It moved toward ""Very interested""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E025,ordinal_scale,ordered,True,0.053764452923555556,toward_low,toward_high,False,True,,"After the 2013 ouster of Morsi and the rise of Sisi, Egypt saw a sharp crackdown on civil society and political activism, making participation in actions like petitions riskier. By 2018, this likely shifted responses away from engagement and toward avoidance.
+
+ANSWER: A",stop,False,f3eb56960b8a812fceea0570fc5dc3a80e98fa48a3f09c7d33e25e79c97a5951,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Now I'd like you to look at this card. I'm going to read out a form of political action that people can take, and I'd like you to tell me whether you have actually done it, might do it, or would never do it under any circumstances.
+Action: Signing a petition
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Would never do""
+B: It moved toward ""Have done""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E035,ordinal_scale,ordered,True,0.2780027644719815,toward_high,toward_low,False,True,,"Following the 2016 currency float and IMF-backed reforms, Egypt saw sharp inflation, subsidy cuts, and rising poverty, which likely heightened concerns about living standards and fairness. In this context, public sentiment would tend to shift toward favoring redistribution and income equality rather than larger incentive-based differences.
+
+ANSWER: B",stop,False,4e9b95c381a2b7191339af116e289ac56facf327c53f23e39eceddbd6e54a337,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.
+Issue: Income equality
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""We need larger income differences as incentives""
+B: It moved toward ""Incomes should be made more equal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E036,ordinal_scale,ordered,True,0.06355089408792282,toward_low,toward_high,False,True,,"After the 2013 upheaval and into Sisi’s rule, Egypt saw a strong resurgence of state-led economic management, with the military and SOEs expanding their roles and IMF-driven austerity fueling skepticism of the private sector. By 2018, public sentiment likely shifted further toward favoring government control over business.
+
+ANSWER: B",stop,False,545b3cf485c6b069c94a4bda740853f6dbd253700c60d24735f3df73b3aca542,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.
+Issue: Private vs state ownership of business
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Private ownership of business should be increased""
+B: It moved toward ""Government ownership of business should be increased""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E037,ordinal_scale,ordered,True,0.06341534738941172,toward_high,toward_high,True,True,,"After 2016’s currency float, subsidy cuts, and soaring inflation, economic hardship deepened, which typically increases demand for state support and safety nets. By 2018 Egyptians were more likely to want the government to take on greater responsibility than in the turbulent 2013 period.
+
+ANSWER: A",stop,False,76eb9c349cf7477cead06713e264b246bfbccf5241bb9d710190fcc1a5980939,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.  
+Issue: Government responsibility
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""The government should take more responsibility""
+B: It moved toward ""People should take more responsibility""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E040,ordinal_scale,ordered,True,0.1330358127615003,toward_high,toward_high,True,True,,"Economic turbulence, subsidy cuts, and the 2016 devaluation raised hardship while an entrenched patronage system (wasta) and military-dominated economy reinforced the sense that connections matter more than effort. This likely pushed typical views away from meritocracy.
+
+ANSWER: A",stop,False,447a88585f0bcb5cb6eec553be5dd721cdf023e49f3486fc04070bb1e2b883e9,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.  
+Issue: Hard work brings success
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Hard work doesn't generally bring success - it's more a matter of luck and connections""
+B: It moved toward ""In the long run, hard work usually brings a better life""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E069_01,ordinal_scale,ordered,True,0.09495055619255648,toward_high,toward_high,True,True,,"After the 2013 ouster of Morsi and subsequent crackdown on politicized religion, Egyptians showed growing disillusionment with religious authorities and institutions. Regional surveys around 2018 report declining trust in religious leaders/institutions, suggesting confidence in mosques/religious bodies fell.
+
+ANSWER: A",stop,False,3fa877e6669262a6b96eedc521dd4527243564ba641c46f40865407c667600c5,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: The Churches (mosque, temple etc.)
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E069_04,ordinal_scale,ordered,True,0.2220982708787587,toward_high,toward_high,True,True,,"After the 2013 coup, Egypt’s media landscape saw heavy state control, censorship, and arrests of journalists, with many independent outlets shuttered or co-opted. By 2018, the press was widely perceived as a government mouthpiece, likely eroding public confidence.
+
+ANSWER: A",stop,False,3b87da20a03ef5b04346ee1c7cf984f1c632fb06b1c8e2ef75e53897666353d4,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: The press
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E069_05,ordinal_scale,ordered,True,0.12253993519413331,toward_high,toward_high,True,True,,"After 2013, the Sisi government sharply curtailed independent unions and reasserted control over organized labor, culminating in a 2018 law that dissolved or neutered many independent unions. As unions became seen as constrained and less effective, public confidence likely declined.
+
+ANSWER: B",stop,False,3527912983d3200ff5bb232e5ce7bc5424c5c8a4e8645824ad7ad7dde702126a,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: Labour Unions
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E069_07,ordinal_scale,ordered,True,0.1491899699736811,toward_high,toward_high,True,True,,"After the 2013 coup and dissolution of the Islamist-dominated legislature, trust in Parliament was already weak amid political turmoil. By 2018, the reconstituted body was widely seen as a rubber-stamp under Sisi and associated with unpopular austerity, pushing attitudes further toward distrust.
+
+ANSWER: A",stop,False,28e67faff1148a36cec62f863e1cadcd408239655516a80ce571a6b32e0db61a,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Parliament
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E069_08,ordinal_scale,ordered,True,0.06640164834922414,toward_high,toward_low,False,True,,"After the upheaval of 2011–2013, trust in state institutions was low and the civil service was often seen as part of a dysfunctional “deep state.” Under Sisi (from 2014), the regime emphasized stability and state capacity, likely lifting reported confidence in core state bureaucracies despite economic strains.
+
+ANSWER: B",stop,False,3cf3b1b425720938733376e670c675da58349895cd252bb5d6d214dbe4459f10,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: The Civil Services
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E069_10,ordinal_scale,ordered,True,0.2427501665076593,toward_high,toward_high,True,True,,"After the 2013 coup, many Egyptians still relied on television and, amid broad support for the new authorities, tended to express higher confidence in it. By 2018, tighter state control, perceived propaganda, and a shift to online sources eroded trust in TV.
+
+ANSWER: B",stop,False,b4950241a17b1be858ed97c4d20988201d2a2ad5dfe8c5999ecb40cf15395ad0,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: Television
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E069_12,ordinal_scale,ordered,True,0.1857834039944484,toward_high,toward_high,True,True,,"After the 2013 coup and subsequent crackdown, Egypt’s political parties were increasingly marginalized or co‑opted under Sisi, with narrowing political space and rubber-stamp institutions. By 2018, this likely deepened disillusionment, pushing attitudes further toward having no confidence in parties.
+
+ANSWER: B",stop,False,57195d1098a70700e34ac6b612fe9dca7f6efd1bf278d0a7024cb49ee8599252,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Political Parties
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E069_13,ordinal_scale,ordered,True,0.06638661484031962,toward_high,toward_high,True,True,,"After 2016 the pound was floated, inflation spiked, and austerity measures bit hard, worsening living standards while large firms (often seen as connected to the state/military) appeared to fare better. That climate likely eroded public trust in big business compared to the already-turbulent 2013 period.
+
+ANSWER: A",stop,False,eeb238664fb59e10fafaec9d08f0426dd4df3b84600d5648eda42146e4720f52,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Major Companies
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E069_14,ordinal_scale,ordered,True,0.08048299356477864,toward_high,toward_high,True,True,,"After 2013, Egypt’s government sharply tightened controls on NGOs and civil society—culminating in the restrictive 2017 NGO law—which stigmatized many organizations as foreign-influenced. Environmental groups were swept into this broader climate of suspicion, so public confidence likely declined between 2013 and 2018.
+
+ANSWER: B",stop,False,c90a066270cbc9cd0b4d5c6db9d26e952e3ba2a85948378353c8f74dff5d3b83,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Environmental organizations
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E069_15,ordinal_scale,ordered,True,0.05960254063793421,toward_high,toward_high,True,True,,"After the 2013 coup, Egypt tightened control over NGOs and civil society, culminating in a highly restrictive 2017 NGO law and pervasive state/media suspicion of independent groups. This likely reduced public trust in women’s organizations, shifting typical responses toward “none at all.”
+
+ANSWER: A",stop,False,962500d0ac0a0ae826f8a64865a51ebc9f855e6b63dc0584cf648dec413018b4,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Women’s organizations
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E069_40,ordinal_scale,ordered,True,0.06639410967975387,toward_high,toward_high,True,True,,"Public trust likely fell as the post-2013 crackdown on NGOs, closure of many Islamist-linked charities, and the restrictive 2017 NGO law cast charitable and humanitarian groups under suspicion and curtailed their activity. By 2018, the climate of repression and state messaging would have pushed typical responses toward lower confidence.
+
+ANSWER: B",stop,False,d6d87634ab952d4021851fdab008236998d6fae66f8778f05e512210df371835,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Charitable or humanitarian organizations
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E069_41,ordinal_scale,ordered,True,0.06438893323074787,toward_low,toward_high,False,True,,"Egypt experienced severe currency devaluation and high inflation after the 2016 pound float, which eroded savings and fueled frustration with banks’ ability to provide foreign currency and protect value. By 2018, this likely pushed public sentiment away from confidence compared to 2013.
+
+ANSWER: B",stop,False,ae1d0d867927528c83ce70a2a7da173385ae338b19ad9619952f3361519813c7,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Banks
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E069_54,ordinal_scale,ordered,True,0.15625766173164352,toward_high,toward_high,True,True,,"Following the 2013 coup and subsequent crackdowns, Egyptian universities saw tighter state control, campus protests suppressed, and academic freedom curtailed amid broader economic strains. These dynamics likely eroded public trust rather than boosted it.
+
+ANSWER: B",stop,False,a0a31eab595cef2d017dda6bbb99ec5a1a882789b1014d0abff6bfcd81481e30,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Universities
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E114,ordinal_scale,ordered,True,0.5068923758728195,toward_high,toward_low,False,True,,"After the 2013 ouster of Morsi and the rise of Sisi, many Egyptians prioritized stability and order over procedural democracy, making unconstrained “strong leader” rule more appealing. By 2018, with authoritarian consolidation and widespread messaging favoring a strongman, public acceptance of this model had grown.
+
+ANSWER: B",stop,False,9ffd7dfaa09fead26485cc808313fb8e32aa11d09ecb7d4b32fdb1767d5b1837,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I'm going to describe a type of political system and ask what you think about it as a way of governing this country. Would you say it is a very good, fairly good, fairly bad, or very bad way of governing?
+Type of political system: Having a strong leader who does not have to bother with parliament and elections
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Very bad""
+B: It moved toward ""Very good""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E115,ordinal_scale,ordered,True,0.1805995810289442,toward_high,toward_low,False,True,,"After the upheaval of 2011–2013 and disillusionment with partisan politics, Egyptians increasingly prioritized stability and competence. By 2018, this likely translated into greater acceptance of technocratic rule, moving opinions toward seeing “experts making decisions” as a good way to govern.
+
+ANSWER: B",stop,False,acc2938e025f70c07028b51fa96e81b32a29914aa65f2b0dfef8f52230909a57,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I'm going to describe a type of political system and ask what you think about it as a way of governing this country. Would you say it is a very good, fairly good, fairly bad, or very bad way of governing this country?
+System: Having experts, not government, make decisions according to what they think is best for the country
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Very bad""
+B: It moved toward ""Very good""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E124,ordinal_scale,ordered,True,0.10400653434968982,toward_low,toward_high,False,True,,"After the 2013 coup, Egypt moved into an increasingly repressive period under Sisi with mass arrests, media censorship, and harsh restrictions on civil society. By 2018, the consolidation of authoritarian rule likely made people more inclined to say human rights were not respected.
+
+ANSWER: A",stop,False,b426f0ceacbfbdc663aa318f67e9b98ebe0826ee8e820b02c68c21c588b9627f,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: How much respect is there for individual human rights in this country nowadays?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""There is no respect at all""
+B: It moved toward ""There is a lot of respect for individual human rights""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E217,ordinal_scale,ordered,True,0.062370651104748466,toward_low,toward_high,False,True,,"Between 2013’s turmoil and power shortages and 2018, Egypt saw widespread smartphone and internet adoption, more reliable electricity, and high-profile health initiatives (e.g., the hepatitis C campaign), all of which made daily life feel more enabled by technology. This likely nudged typical responses toward stronger agreement.
+
+ANSWER: A",stop,False,cad06db73b240af55fcea386838425caa5ad011b03928761bcf7db0ef1c379b8,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I would like to read a statement and ask how much you agree or disagree with it. For this question, a 1 means that you “completely disagree” and a 10 means that you “completely agree.”
+Statement: Science and technology are making our lives healthier, easier, and more comfortable
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Completely agree""
+B: It moved toward ""Completely disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E218,ordinal_scale,ordered,True,0.07283674920818548,toward_low,toward_high,False,True,,"In 2013, Egypt was in post-uprising turmoil with economic uncertainty, likely dampening optimism. By 2018, there was more stability, rapid smartphone and internet diffusion, and high-profile tech/infrastructure initiatives, which likely boosted confidence that science and technology would create opportunities for youth.
+
+ANSWER: B",stop,False,8b0ba1d1d6fce143064e3c5ee37a957982137ca5b78b33811d057024b1a8cc9c,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I would like you to tell me how much you agree or disagree with the following statement. A 1 means that you “completely disagree” and a 10 means that you “completely agree.”
+Statement: Because of science and technology, there will be more opportunities for the next generation
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Completely disagree""
+B: It moved toward ""Completely agree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E224,ordinal_scale,ordered,True,0.07812959796091297,toward_high,toward_low,False,True,,"Between 2013 and 2018, Egypt saw authoritarian consolidation, IMF-backed austerity, and major subsidy cuts, fostering disillusion that “democracy” brings social justice. This likely reduced the tendency to see taxing the rich and subsidizing the poor as an essential feature of democracy.
+
+ANSWER: B",stop,False,d905c970ba9871026d352e6f6a830729dc23a881f63147cdf66e2f74e2d690a3,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please tell me how essential you think it is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: Governments tax the rich and subsidize the poor
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""An essential characteristic of democracy""
+B: It moved toward ""It is against democracy (spontaneous)""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E225,ordinal_scale,ordered,True,0.05758392612529084,toward_low,toward_low,True,True,,"After the 2013 ouster of the Muslim Brotherhood government and the subsequent secular-nationalist turn under Sisi, many Egyptians became more skeptical of religious authorities’ role in governance. By 2018, attitudes likely shifted away from seeing clerical interpretation of laws as a democratic ideal and more toward viewing it as contrary to democracy.
+
+ANSWER: B",stop,False,23daf3843bdddbe7f9415b9b28ee38f74759748c04614b2371b5461e0cfe4931,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: Religious authorities interpret the laws
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""An essential characteristic of democracy""
+B: It moved toward ""It is against democracy (spontaneous)""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E227,ordinal_scale,ordered,True,0.0987170083502772,toward_low,toward_high,False,True,,"After the 2016 IMF reforms and subsidy cuts, inflation and job insecurity rose, making social protection more salient. In Egypt (and the region), people commonly equate democracy with delivering social justice, so support for state unemployment aid as an essential democratic feature likely strengthened.
+
+ANSWER: B",stop,False,619190b0f2b5dc149c1960c02e83cba8de4b36ddc00ba3bcbb1664cfcf0cdb90,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: People receive state aid for unemployment
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""It is against democracy (spontaneous)""
+B: It moved toward ""An essential characteristic of democracy""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E229,ordinal_scale,ordered,True,0.05344766080208458,toward_low,toward_low,True,True,,"Following the 2013 coup and the subsequent consolidation of Sisi’s rule, public discourse increasingly prioritized stability and security over individual liberties. By 2018, amid sustained repression and state narratives skeptical of rights activism, Egyptians were more likely to downplay civil rights as an essential feature of democracy.
+
+ANSWER: A",stop,False,23ded4f378b23b782d972c73b9c0a03edc41586adf1a1d24e6bfb2ca6b837424,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: Civil rights protect people’s liberty from state oppression
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""It is against democracy (spontaneous)""
+B: It moved toward ""An essential characteristic of democracy""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E233A,ordinal_scale,ordered,True,0.05020122751209732,toward_low,toward_high,False,True,,"After the 2011 uprising, Egyptians already linked democracy to social justice, and the severe austerity and inequality pressures after the 2016 IMF program likely strengthened expectations that a good democracy should actively reduce income gaps. Thus the typical response in 2018 would have moved further toward seeing income equalization as an essential characteristic of democracy.
+
+ANSWER: B",stop,False,aa9a21740283eab963be4701934ea81433308c6513f8c6c4a632e15a9546aa35,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: The state makes people's incomes equal
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""It is against democracy (spontaneous)""
+B: It moved toward ""An essential characteristic of democracy""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E233B,ordinal_scale,ordered,True,0.11094857911381362,toward_low,toward_high,False,True,,"After the 2013 coup and the subsequent consolidation of Sisi’s rule, official discourse strongly emphasized stability, order, and deference to authority. This likely nudged public opinion to view obedience to rulers as more integral to “democracy,” shifting typical responses upward on the scale.
+
+ANSWER: A",stop,False,4152217ad87c041e401cdb3eecfe3415747bf2bd97747b7318583d6faba6a119,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please tell me how essential you think it is that people obey their rulers as a characteristic of democracy. Use a scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""An essential characteristic of democracy""
+B: It moved toward ""It is against democracy (spontaneous)""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E234,ordinal_scale,ordered,True,0.20022227085917169,toward_low,toward_high,False,True,,"Internet and smartphone use expanded rapidly in Egypt between 2013 and 2018, making the everyday benefits of technology more visible, and the government emphasized modernization and infrastructure. Despite political and economic turbulence, perceptions of science and technology’s net global benefits likely nudged more positive.
+
+ANSWER: B",stop,False,6b83731529aa25bab9244fde2b44ee17128f559853bc1287e8c8ccbd3a1a4a86,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: All things considered, would you say that the world is better off or worse off because of science and technology? Please indicate your view on this scale: 1 means “the world is a lot worse off,” and 10 means “the world is a lot better off.”
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""A lot worse off""
+B: It moved toward ""A lot better off""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E236,ordinal_scale,ordered,True,0.059060870193380605,toward_low,toward_low,True,True,,"After the 2013 military ouster of Morsi and the subsequent crackdown, Egypt moved toward more consolidated authoritarian rule under Sisi, with highly managed elections and shrinking civil liberties by 2018. This likely led people to rate the country as less democratic in 2018 than in 2013.
+
+ANSWER: B",stop,False,b9acf79e062afddc663c16f210cd4f739edf8a37071805100bad3f103dc36e8e,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: How democratically is your country being governed today? Using a scale from 1 to 10, where 1 means “not at all democratic” and 10 means “completely democratic,” what position would you choose?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Completely democratic""
+B: It moved toward ""It is against democracy (spontaneous)""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E248B,ordinal_scale,ordered,True,0.07620248915130902,toward_high,toward_high,True,True,,"Internet and smartphone use in Egypt rose sharply from 2013 to 2018, while print newspapers faced declining circulation and higher costs, pushing people toward online and TV news. Thus fewer Egyptians used a daily newspaper as an information source.
+
+ANSWER: A",stop,False,01672cae39a1bc849e73c917cd43b0ed419cdeb49ad0189b81bc77646c4c9e37,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please indicate how often you use the following source to obtain information: Daily newspaper.
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Never""
+B: It moved toward ""Daily""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E254B,ordinal_scale,ordered,True,0.23037621189185628,toward_high,toward_high,True,True,,"Smartphone and social media use expanded markedly between 2013 and 2018, shifting news habits toward digital feeds and away from interpersonal word-of-mouth. Combined with tighter political controls that discouraged open discussion, Egyptians were less likely to rely on talking with friends or colleagues for news.
+
+ANSWER: B",stop,False,17ce5ee2e7161f7d7ecdd8ec026929b55fc10ebdb1b4d1f1aa102c384f3c1ef8,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please indicate how often you use the following source to obtain information: Talk with friends or colleagues. Do you use it daily, weekly, monthly, less than monthly, or never?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Daily""
+B: It moved toward ""Never""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E258B,ordinal_scale,ordered,True,0.2814012762262408,toward_high,toward_high,True,True,,"During the 2013 political upheaval, TV remained the dominant, daily news source for many Egyptians. By 2018, rising smartphone/social media use and declining trust in tightly controlled TV news shifted consumption away from daily TV viewing toward less frequent or no use.
+
+ANSWER: B",stop,False,848adfa8d28c8a1211f098c9f794c43f3b862e2e4fce289d6b8cfdf1d20695b0,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please indicate how often you use TV news to obtain information: daily, weekly, monthly, less than monthly, or never.
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Daily""
+B: It moved toward ""Never""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E262B,ordinal_scale,ordered,True,0.11527777319515062,toward_low,toward_low,True,True,,"Smartphone adoption, mobile broadband expansion (including 4G in 2016), and growing reliance on social media/news online increased internet access and habitual use in Egypt between 2013 and 2018. Despite some censorship, overall frequency of use shifted toward more daily usage.
+
+ANSWER: A",stop,False,d069f9a849d7272863af8ec7c590bf3722e7225eaf867df3ef817dbca4944b2a,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please indicate how frequently you use the following source to obtain information: Internet.  
+Choices: Daily, Weekly, Monthly, Less than monthly, Never.
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Daily""
+B: It moved toward ""Never""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E263,categorical,option,True,0.4154507533934631,3,3,True,True,,"Egypt didn’t hold local council elections in either period, and political participation generally declined under Sisi after 2013. As fewer people reported taking part and awareness grew that such elections weren’t occurring, the share saying they “Never” vote locally likely rose the most.
+
+ANSWER: 1",stop,False,033dd1512bc05d47d0264b8565f59b059a90bf761cc1ad9504cd8ff28c675dc9,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: How often do you vote in elections at the local level?
+
+### Task:
+
+Think about the share of people in Egypt choosing each answer in 2013 and in 2018. Which answer gained the most support (the largest increase in share)?
+
+1: Never
+2: Not allowed to vote
+3: Usually
+4: Always
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <number>"
+EGY,6,7,2013,2018,E265_01,ordinal_scale,ordered,True,0.06689823323681596,toward_high,toward_high,True,True,,"After the relatively competitive 2011–12 elections, many Egyptians in 2013 still had some residual confidence in electoral processes. By 2018, following Sisi’s consolidation of power and a tightly controlled presidential election with opposition sidelined, perceptions of fair vote counting likely worsened.
+
+ANSWER: A",stop,False,3cd3ed974ff89e29e48be981f3e09ddd1ba95146be5828ae305acc7c12066c47,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: In your view, how often do votes get counted fairly in this country’s elections?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all often""
+B: It moved toward ""Very often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E265_02,ordinal_scale,ordered,True,0.06428659710083517,toward_low,toward_low,True,True,,"After the 2013 coup and Sisi’s consolidation of power, authorities increasingly barred or pressured credible challengers, culminating in the 2018 presidential race where major opponents were arrested, disqualified, or withdrew. Public perception would thus have shifted toward believing opposition candidates are often prevented from running.
+
+ANSWER: B",stop,False,dbb3587956b1cd77a51b6673119f1fd1dbb1d99e87b0b29a91897c77b29c2f00,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: In your view, how often do opposition candidates get prevented from running in this country’s elections?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all often""
+B: It moved toward ""Very often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E265_04,ordinal_scale,ordered,True,0.14589861751152072,toward_low,toward_low,True,True,,"After the 2013 coup and the consolidation of Sisi’s rule, Egypt’s subsequent elections (2014, 2015, 2018) were marked by low competition and widespread reports of turnout-buying with cash, goods, and favors. This likely heightened public perceptions that vote-buying is common compared to the more fluid, transitional period around 2013.
+
+ANSWER: B",stop,False,40966d05a256565ba6e2a3e07940f09220e509bf0ae86dfe34e0b196c6490528,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: In your view, how often do voters get bribed in this country’s elections?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all often""
+B: It moved toward ""Very often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E265_05,ordinal_scale,ordered,True,0.1793433863623,toward_high,toward_high,True,True,,"After 2013, Egypt saw a sharp consolidation of state control over media, with crackdowns on independent journalism and tightly managed coverage of politics. By the largely uncompetitive 2018 presidential election, media coverage was widely seen as propagandistic rather than fair.
+
+ANSWER: A",stop,False,171f53c832572ed75137db694a0c5df7d83dec7bdf2c0a1b9a2976d98f052623,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: In your view, how often do journalists provide fair coverage of elections in this country?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all often""
+B: It moved toward ""Very often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E265_06,ordinal_scale,ordered,True,0.058437496053113505,toward_high,toward_high,True,True,,"After the 2013 military takeover and subsequent crackdowns, Egypt’s elections became increasingly tightly managed, with major opposition figures sidelined and the 2018 presidential race effectively uncontested. This likely reduced public confidence that election officials act fairly.
+
+ANSWER: A",stop,False,afc1bc40f13e79d2eb7e278365e34c39d5780c04c269df05072d00eda80f53e3,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: In your view, how often do election officials act fairly in this country’s elections?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all often""
+B: It moved toward ""Very often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E265_07,ordinal_scale,ordered,True,0.15981738743688353,toward_low,toward_low,True,True,,"After the 2013 coup, Egypt’s politics became increasingly dominated by regime-aligned elites and businessmen, with widely reported vote-buying and patronage in the 2015 parliamentary and 2018 presidential elections. This likely made the public more cynical that wealthy actors purchase outcomes.
+
+ANSWER: B",stop,False,7ef69fac6a25037579ee11b4110a01d3b08a22730dce18355e08b09bfd7b8eb6,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: In your view, how often do rich people buy elections in this country?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all often""
+B: It moved toward ""Very often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E265_08,ordinal_scale,ordered,True,0.12567463517037486,toward_high,toward_high,True,True,,"After the 2013 turmoil and contested votes, many Egyptians perceived greater risk of intimidation at polling places. By 2018, the Sisi regime’s tight control reduced visible election-day violence (and discouraged open criticism), shifting perceptions toward fewer threats at the polls.
+
+ANSWER: A",stop,False,38c0fed0b9466ab0cb4bd4da11adb35631eee812ab198f1557de03e508535acd,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: In your view, how often do voters get threatened with violence at the polls in this country's elections?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all often""
+B: It moved toward ""Very often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E265_09,ordinal_scale,ordered,True,0.08319342606931251,toward_high,toward_high,True,True,,"In 2013, coming off the 2011–12 competitive elections, many Egyptians could still perceive some real electoral choice. By 2018, after Sisi’s consolidation of power and a tightly controlled election with a token opponent, perceptions of genuine choice declined.
+
+ANSWER: B",stop,False,c9fd8b40cd11ba15a21ea04b6639ccb6d1c8c95ab7b38a34cd49bfdb6b99a5fd,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: In your view, how often are voters offered a genuine choice in this country’s elections?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Very often""
+B: It moved toward ""Not at all often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,F028,ordinal_scale,ordered,True,0.21177468653131679,toward_low,toward_high,False,True,,"Post-2013, Egypt tightened state control over mosques and public religious life, and regional surveys show a modest rise in people identifying as less religious, both of which align with slightly lower reported service attendance. The typical response thus moved away from very frequent attendance.
+
+ANSWER: A",stop,False,7755cece321c358b2f27922fcbb1417360f2a315b872867b5f288240109e69a3,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Apart from weddings, funerals, and christenings, how often do you attend religious services these days?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Never practically never""
+B: It moved toward ""More than once a week""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,F114A,ordinal_scale,ordered,True,0.11068231448817488,toward_low,toward_low,True,True,,"Egyptians already showed very low tolerance for benefit fraud, typically choosing “never justifiable.” By 2018, amid Sisi-era anti-corruption messaging and subsidy reforms, attitudes likely hardened further rather than softened.
+
+ANSWER: A",stop,False,ee72793f2b012f7b734d0fcd51703378e8befe34381787e3b446e62044a34599,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Claiming government benefits to which you are not entitled
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,F114B,ordinal_scale,ordered,True,0.09690788049840447,toward_low,toward_low,True,True,,"Amid the post-2013 crackdown and Sisi-era emphasis on law-and-order and conservative moral norms, Egyptians likely reinforced zero-tolerance views on theft. Even if economic stress persisted, the dominant trend would push responses further toward “never justifiable.”
+
+ANSWER: B",stop,False,fa745eb8464f2e7c9bb07520095794c67c9835a79c393ec62c980f69adb0734a,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Stealing property
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,F114C,ordinal_scale,ordered,True,0.09995967610233664,toward_low,toward_low,True,True,,"Public discourse and advocacy around child protection in Egypt grew after 2013, with stronger legal language and NGO/UN campaigns emphasizing non-violent discipline. Such trends typically shift attitudes away from corporal punishment.
+
+ANSWER: B",stop,False,934d8c8562d0757d3d6e2b8d995eaafcd6b7662d3820761e72e419ea51b12218,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please tell me whether you think this can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Parents beating children
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,F114D,ordinal_scale,ordered,True,0.11189342338676697,toward_low,toward_low,True,True,,"After the 2013 turmoil and subsequent years marked by terrorism and a heavy state emphasis on stability, Egyptians generally became more averse to violence in everyday moral terms. The climate favored condemning violence broadly rather than legitimizing it.
+
+ANSWER: B",stop,False,81ff031d523ce32735a457289e717f5668cf54cd36954a41469e8e09ca086588,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Violence against other people
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,F115,ordinal_scale,ordered,True,0.06810253749773701,toward_low,toward_high,False,True,,"Economic hardship intensified between 2013 and 2018—currency devaluation, subsidy cuts, and sharp public-transport fare hikes (notably in 2018) made many more sympathetic to petty rule-bending like fare-dodging. That likely nudged the typical response slightly toward greater justifiability.
+
+ANSWER: A",stop,False,78d0cdbade71e037f0130aa7ebdfeea9b1d97ddcf8e5841a4281693d3a0fa62b,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.  
+Statement: Avoiding a fare on public transport
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,F117,ordinal_scale,ordered,True,0.07750477283191373,toward_low,toward_low,True,True,,"After the upheavals around 2011–2013, corruption became a salient grievance, and the Sisi government emphasized anti-corruption rhetoric. By 2018, public norms likely hardened against bribery rather than softened.
+
+ANSWER: B",stop,False,6742d153ecb7793768e3286a7ecfa609082a760a79058b4bec229081afb6ab3f,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.  
+Statement: Someone accepting a bribe in the course of their duties
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,F121,ordinal_scale,ordered,True,0.07410721335577984,toward_low,toward_high,False,True,,"Rising divorce rates and increased public debate around marital laws in Egypt during the 2013–2018 period likely normalized divorce somewhat, especially among younger and urban populations, nudging attitudes to be a bit more permissive even if overall views remained conservative. Thus, the typical response likely shifted slightly away from “never justifiable.”
+
+ANSWER: B",stop,False,b8de200122fc4d36181f06866f2e748e561edfa4ae0906d2efc6c57d4c3fcb6e,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please tell me whether you think this statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Divorce
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,F122,ordinal_scale,ordered,True,0.11645904493341468,toward_low,toward_low,True,True,,"Egypt is a socially conservative, overwhelmingly Muslim society where euthanasia is widely viewed as religiously impermissible; under Sisi (2014 onward) the public mood tilted more conservative on moral issues. Any movement in this period likely reinforced a “never justifiable” stance rather than liberalizing it.
+
+ANSWER: B",stop,False,7c8c039d3810e8c48e0a30a82892009d307c2271f8777f9bacf5a9425a537391,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Euthanasia
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,F123,ordinal_scale,ordered,True,0.14022923876356735,toward_low,toward_low,True,True,,"Egypt is a strongly religious society where suicide is widely condemned, and the 2013–2018 period saw a broader conservative turn under Sisi with greater emphasis on traditional moral norms. This likely pushed responses further toward “never justifiable.”
+
+ANSWER: B",stop,False,245264b75e89b7fc2aeb36583bc5cb2336cd0a455fc523cb0954aea58ad6c1d9,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Suicide
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,F199,ordinal_scale,ordered,True,0.10958890935438607,toward_low,toward_low,True,True,,"Surveys in Egypt through the mid-2010s show a declining share of people who say wife-beating can be justified, reflecting growing rejection of domestic violence. By 2018, attitudes had shifted further toward “never justifiable” compared to 2013.
+
+ANSWER: A",stop,False,b7a984f29ef1355663d52dbc06cf01faf9a3b9022db85327587e6a3b347a4176,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: For a man to beat his wife
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,F200,forced_choice,option,True,0.10136081098182806,1,2,False,True,,"After the turbulence of 2013 and the subsequent de-politicization of overt religiosity, Egyptians increasingly emphasized an ethical, non-ritual understanding of faith. Survey trends in the region indicate the largest gains went to “Do good to other people,” while “both” and “follow norms and ceremonies” were stable or declined.
+
+ANSWER: 4",stop,False,64c3f649879b79e9904a17a5447b0905db903f632b5ab25c08b93d97364ed527,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: With which one of the following statements do you agree most about the meaning of religion?
+Options: Follow religious norms and ceremonies, Do good to other people, Neither of them, Both
+
+### Task:
+
+Think about the share of people in Egypt choosing each answer in 2013 and in 2018. Which answer gained the most support (the largest increase in share)?
+
+1: Both
+2: Neither of them
+3: Follow religious norms and ceremonies
+4: Do good to other people
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <number>"
+EGY,6,7,2013,2018,G006,ordinal_scale,ordered,True,0.05349117367680306,toward_high,toward_low,False,True,,"After the turmoil of 2013, the Sisi government emphasized stability and heavy nationalist messaging around mega-projects (e.g., the New Suez Canal), which likely buoyed expressed national pride despite economic strains. As a result, typical responses shifted toward stronger pride.
+
+ANSWER: B",stop,False,5612888e6b00c13eac5fdbbae375ffcee5ecad3875397b09643f7443d4a3a6b7,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: How proud are you to be of the nationality of this country?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all proud""
+B: It moved toward ""Very proud""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,G007_18_B,ordinal_scale,ordered,True,0.06705814340432152,toward_high,toward_high,True,True,,"Political upheaval and polarization around 2013, followed by tighter security and economic strain under Sisi, likely eroded local social cohesion. By 2018, Egyptians tended to express less trust in neighbors than in 2013.
+
+ANSWER: A",stop,False,34054397f68b3027adc32872f2263ed994eeea2679ebd5a1296967ed0d7755ef,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I’d like to ask you how much you trust people from a particular group. Could you tell me whether you trust people from your neighborhood completely, somewhat, not very much or not at all?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Do not trust at all""
+B: It moved toward ""Trust completely""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,G007_33_B,ordinal_scale,ordered,True,0.07063867879978046,toward_high,toward_high,True,True,,"Egypt experienced intense polarization and repression after 2013 and persistent economic stress under Sisi, conditions that typically erode interpersonal trust beyond immediate family. By 2018, Egyptians were more cautious with acquaintances, tilting answers away from “trust completely.”
+
+ANSWER: A",stop,False,6a0b713d3af2fb2d4143dfb36b4b7990a786421201f426f7f8e2a598926fae37,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I’d like to ask you how much you trust people from a particular group. Could you tell me if you trust people from this group completely, somewhat, not very much, or not at all?
+Group: People you know personally
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Do not trust at all""
+B: It moved toward ""Trust completely""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,G007_34_B,ordinal_scale,ordered,True,0.07352456223073205,toward_high,toward_high,True,True,,"After the 2013 turmoil, Egypt moved into a period of tightened authoritarian control and economic hardship. By 2018, fear of surveillance and social caution likely made people more guarded toward strangers, pushing responses toward lower trust.
+
+ANSWER: B",stop,False,79ed5a5c5c513536639134611beb77061e45a36771f10baf8f3c298d38e1af3a,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I’d like to ask you how much you trust people from a specific group. Could you tell me whether you trust people you meet for the first time completely, somewhat, not very much, or not at all?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Trust completely""
+B: It moved toward ""Do not trust at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,G007_35_B,ordinal_scale,ordered,True,0.07710473307588728,toward_low,toward_high,False,True,,"Egypt experienced intense polarization and sectarian tension after 2013, and subsequent years saw continued security incidents targeting religious communities, with regional surveys showing declining cross-group trust. By 2018, typical responses shifted toward greater distrust of people of another religion.
+
+ANSWER: A",stop,False,14e1e07e04e2f9eca96f667a0f2b532dd922a6174e70c5dfd3ace5d09812d616,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I’d like to ask you how much you trust people from a specific group. Do you trust people from this group completely, somewhat, not very much or not at all?
+Group: People of another religion
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Do not trust at all""
+B: It moved toward ""Trust completely""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,G007_36_B,ordinal_scale,ordered,True,0.0672497558055632,toward_low,toward_high,False,True,,"Amid the post-2013 crackdown and rising nationalist rhetoric, Egypt saw growing suspicion of “foreign influence,” tougher NGO laws, and persistent security concerns. By 2018, these dynamics likely pushed attitudes toward lower trust in people of another nationality.
+
+ANSWER: B",stop,False,815539322b70c7e01d5fd901cfb2487bf391fef15786ed4b337e95dc632c6ba7,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I’d like to ask you how much you trust people from a particular group. Do you trust people from this group completely, somewhat, not very much, or not at all?  
+Group: People of another nationality
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Trust completely""
+B: It moved toward ""Do not trust at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,H001,ordinal_scale,ordered,True,0.5076023391812865,toward_low,toward_low,True,True,,"In 2013, Egypt experienced intense political upheaval, mass protests, and violence around the coup, which likely suppressed feelings of neighborhood safety. By 2018, the Sisi government had reasserted control and increased security presence, improving everyday perceptions of safety despite ongoing Sinai terrorism.
+
+ANSWER: B",stop,False,6721d5bddcb1bac95c1e7f25a4610b4f26aa3eb15060ae315b9c24681610d047,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Could you tell me how secure you feel these days in your neighborhood?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all secure""
+B: It moved toward ""Very Secure""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,H002_01,ordinal_scale,ordered,True,0.3549637307940834,toward_high,toward_high,True,True,,"In 2013, amid post-revolution instability and weakened policing, many Egyptians perceived neighborhood crime as more common. By 2018, a stronger security presence and greater public order likely reduced the perceived frequency of robberies.
+
+ANSWER: A",stop,False,43b882aa9fdb82cdc99f66c8ab963f6dc59b94f656ff9d7588269a65ba7f2e1b,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: How frequently do robberies occur in your neighborhood?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all frequently""
+B: It moved toward ""Very Frequently""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,H002_02,ordinal_scale,ordered,True,0.10756662507241856,toward_high,toward_high,True,True,,"Egypt is a predominantly Muslim country with strict social norms and policing against public drinking, and post-2013 saw tighter public order enforcement under Sisi. By 2018, economic strain and continued restrictions likely made street alcohol consumption even less visible.
+
+ANSWER: A",stop,False,802c7aab9728ec11d64422a9e584f59b6105aaa105c645d2d5bd6ef890fecd1a,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: How frequently does alcohol consumption in the streets occur in your neighborhood?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all frequently""
+B: It moved toward ""Very Frequently""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,H002_04,ordinal_scale,ordered,True,0.14354722782798876,toward_high,toward_high,True,True,,"After the 2013 upheaval, there was visible xenophobia toward some refugee groups, making incidents feel more salient. By 2018, political stabilization and less visibility of refugee populations in many areas likely reduced perceptions of racist behavior in everyday neighborhoods.
+
+ANSWER: B",stop,False,0a65fcde80e2a77ef03fd80b4abbab149448a63dac4f8860d2c87e8b1ae17c8f,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: How frequently does racist behavior occur in your neighborhood?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Very Frequently""
+B: It moved toward ""Not at all frequently""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,H002_05,ordinal_scale,ordered,True,0.10047561644441956,toward_high,toward_high,True,True,,"Following the turmoil and security vacuum around 2011–2013, Egypt under Sisi expanded policing and reasserted state control, which generally reduced visible street-level crime. By 2018, perceptions of neighborhood drug sales likely shifted toward being less frequent.
+
+ANSWER: B",stop,False,ee02b091b4ea83644833896c2f44281c36f284b8f89bd2367938f70041d8c51e,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: How frequently does drug sale in the streets occur in your neighborhood?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Very Frequently""
+B: It moved toward ""Not at all frequently""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,H003_01,binary,share,True,0.40465905406984304,decrease,decrease,True,True,,"Political turmoil and crime concerns were high around 2013 in Egypt, likely prompting more people to avoid carrying much cash for security reasons. By 2018, perceived security had improved under tighter state control, so fewer people reported doing this.
+
+ANSWER: A",stop,False,c8db22592a5ec80af304543891a64ced2f6f27252e40056c375ec9b13d00fda6,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Have you ever not carried much money for reasons of security?
+
+### Task:
+
+Think about the share of people in Egypt who gave the answer ""Yes"". Did that share change between 2013 and 2018?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,H003_02,binary,share,True,0.4594539249896239,decrease,decrease,True,True,,"Political turmoil and violence in 2013 (including curfews and widespread unrest) likely made more Egyptians avoid going out at night. By 2018, street security had generally stabilized under tighter state control, reducing such avoidance.
+
+ANSWER: A",stop,False,062db0378e74dddfff75c548af33428c96fe6557ed29a25ba6e8262da4b6293c,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: Have you preferred not to go out at night for reasons of security?
+
+### Task:
+
+Think about the share of people in Egypt who gave the answer ""Yes"". Did that share change between 2013 and 2018?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,H008_02,ordinal_scale,ordered,True,0.3311065015073698,toward_high,toward_high,True,True,,"After the post-revolution turmoil and police withdrawal around 2013, many Egyptians felt less secure at home. By 2018, with tighter security and restored policing under Sisi, everyday crime fears at home likely eased.
+
+ANSWER: B",stop,False,372ea0a8ba842cbe5e3e5db1fd387958fe7f32c941581c5d010099549e3b7a8a,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: In the last 12 months, how often have you or your family felt unsafe from crime in your own home?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Often""
+B: It moved toward ""Never""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,H008_03,ordinal_scale,ordered,True,0.12333235347949792,toward_low,toward_low,True,True,,"After the 2016 currency float and IMF-backed subsidy cuts, Egypt saw a sharp devaluation and high inflation that raised the prices of imported medicines and contributed to reported drug shortages and higher poverty. By 2018, more households were likely to have gone without needed treatment than in 2013.
+
+ANSWER: A",stop,False,d0fdb66d7c0bc50c046826741fd5cf9dc33c7b23db22afb5c3ceb2b2a6cb4ca3,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: In the last 12 months, how often have you or your family gone without needed medicine or treatment?
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Often""
+B: It moved toward ""Never""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,I002,ordinal_scale,ordered,True,0.12136304717817414,toward_low,toward_low,True,True,,"Amid the 2013 political upheaval, everyday relevance of science likely felt less salient, whereas by 2018 increased smartphone penetration, government STEM initiatives, and modernization narratives made science feel more useful in daily life. This likely shifted typical responses toward disagreeing with the statement.
+
+ANSWER: A",stop,False,fe3005ec3e2f873fe88234bb725599236801cf954505daeb740e4a8156710b3e,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: I would like to read a statement and ask how much you agree or disagree with it. For this question, a 1 means that you “completely disagree” and a 10 means that you “completely agree”.
+Statement: It is not important for me to know about science in my daily life
+
+### Task:
+
+Think about how the people of Egypt, taken as a whole, answered this question in 2013 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Completely disagree""
+B: It moved toward ""Completely agree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+EGY,6,7,2013,2018,E001+E002,ranked_choice,option,True,0.1400079833160265,2,1,False,True,,"Economic hardship deepened after 2016 devaluation and IMF-backed reforms, pushing bread-and-butter concerns to the forefront, while enthusiasm for greater political voice waned under Sisi’s consolidation. Thus, prioritizing a high level of economic growth saw the largest increase in support.
+
+ANSWER: 2",stop,False,b0113cd4297e2408d72acfe0ba4a1c618184e6a9d8d3c8405fea3a312b533e54,"### Inputs:
+
+Country: Egypt
+Year 1: 2013
+Year 2: 2018
+Question: People sometimes talk about what the country's most important aim should be for the next ten years. On this card are listed some goals which different people would give top priority. Which one of these do you consider the most important?
+(Each person picked a first and a second choice; count both.)
+
+### Task:
+
+Think about the share of people in Egypt choosing each answer in 2013 and in 2018. Which answer gained the most support (the largest increase in share)?
+
+1: Strong defence forces
+2: A high level of economic growth
+3: Trying to make our cities and countryside more beautiful
+4: People have more say about how things are done
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <number>"

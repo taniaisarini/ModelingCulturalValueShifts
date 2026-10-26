@@ -1,0 +1,1154 @@
+country,wave_a,wave_b,years_a,years_b,code,format,family,significant,effect,truth,pred,correct,parsed,error,response,finish_reason,cached,cache_key,prompt
+HKG,6,7,2014,2018,A008,ordinal_scale,ordered,True,0.07282987026684949,toward_high,toward_low,False,True,,"After the upheaval of the 2014 Umbrella Movement, Hong Kong saw a relatively calmer period and solid economic conditions by 2018, with surveys generally showing stable or slightly higher reported happiness before the 2019 downturn. This suggests a modest shift toward greater happiness.
+
+ANSWER: B",stop,False,916543768e4e19bdc57f53d38234b929cbda84e66a87da4e0a60d2b6adf10805,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Taking all things together, would you say you are feeling:  
+Feeling of happiness
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all happy""
+B: It moved toward ""Very happy""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,A009,ordinal_scale,ordered,True,0.057903106911094765,toward_high,toward_high,True,True,,"Hong Kong’s population aged notably between 2014 and 2018, and rising stress and housing pressures persisted despite stable economic conditions—factors that typically reduce self-rated health. This likely nudged responses slightly away from “Very good.”
+
+ANSWER: A",stop,False,ede837cc53a34b16e018a242103db2cd82f21d562a5df4ae803304abcc48a5d7,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: How would you describe your overall state of health these days? Would you say it is...
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Very poor""
+B: It moved toward ""Very good""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,A099,ordinal_scale,ordered,True,0.07006229326122126,toward_low,toward_low,True,True,,"Rising work hours and social tensions in Hong Kong likely reduced formal club participation, and global trends show declining membership in voluntary associations. Even with growing interest in fitness, much of it is informal rather than through organized teams or clubs.
+
+ANSWER: A",stop,False,4eca77f5b79096057e2dc9cda48ecf5d4b552a18c472d27ee2ecc3924688a272,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Now I am going to read out a type of voluntary organization; could you tell me whether you are a member, an active member, an inactive member, or not a member of this organization?
+Organization type: Sport or recreational organization, football/baseball/rugby team
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not a member""
+B: It moved toward ""Active member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,A124_02,mention_flag,share,True,0.09306024096385539,decrease,decrease,True,True,,"Rising exposure to ethnic diversity and generational turnover in Hong Kong through the mid-2010s tended to make residents slightly more accepting of different-race neighbors. Surveys over this period point to a modest decline in exclusionary responses.
+
+ANSWER: B",stop,False,d3c4211a7b7ebca603aadbed6e579349135b23dd3d446f327df61f2d4cc31077,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Could you please mention if you would not like to have people of a different race as neighbors?
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Mentioned"". Did that share change between 2014 and 2018?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,A124_03,mention_flag,share,True,0.07181927710843378,increase,decrease,False,True,,"Tolerance toward different lifestyles in Hong Kong generally increased over the mid-2010s, with younger, more liberal cohorts becoming a larger share of respondents. This likely made people less averse to having “heavy drinkers” as neighbors.
+
+ANSWER: A",stop,False,d161b8b3179bd21e126c6d11738415c0a8b599e8bc0b7a5aecad4b8e49c6718a,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Could you please mention if you would not like to have the following group of people as neighbors?
+Group: Heavy drinkers
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Mentioned"". Did that share change between 2014 and 2018?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,A124_06,mention_flag,share,True,0.1266626506024096,decrease,increase,False,True,,"Localist and anti-immigration sentiment in Hong Kong intensified in the mid-2010s, with heightened tensions over Mainland migrants and controversies around “fake refugees” and foreign workers. This likely made more people report not wanting immigrants/foreign workers as neighbors by 2018 than in 2014.
+
+ANSWER: B",stop,False,b3c6a60882998937cf0c120749005470d3495da82c9ace95cb3311a981a65fcd,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Could you please mention if you would not like to have immigrants/foreign workers as neighbors?
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Mentioned"". Did that share change between 2014 and 2018?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,A124_08,mention_flag,share,True,0.13642168674698796,increase,decrease,False,True,,"Surveys typically show very high rejection of “drug addicts” as neighbors in Hong Kong, but reported drug abuse declined over the 2010s and public salience fell. This likely led to a slight softening in attitudes by 2018 compared with 2014.
+
+ANSWER: A",stop,False,67cc1d97b635d3adb07e424836b4bb2ffb446299c40e1319adebcd96d19aeb0f,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Could you please mention if you would not like to have a particular group as neighbors?
+Group: Drug addicts
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Mentioned"". Did that share change between 2014 and 2018?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,A124_09,mention_flag,share,True,0.11765060240963855,decrease,decrease,True,True,,"Surveys in Hong Kong during the 2010s show growing acceptance of LGBT people (e.g., rising support for same-sex marriage), suggesting reduced social distance. Thus, fewer respondents would say they would not want homosexuals as neighbors in 2018 than in 2014.
+
+ANSWER: B",stop,False,05cc3ac946d1d8633e541732df9711f8974cc46113de408bcc9d569317f4c648,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Could you please mention if you would not like to have the following group as neighbors?
+Group: Homosexuals
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Mentioned"". Did that share change between 2014 and 2018?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,A124_12,mention_flag,share,True,0.1233253012048193,decrease,decrease,True,True,,"Religious diversity and coexistence are long-standing in Hong Kong, and there were no major religion-related tensions between 2014 and 2018. Tolerance toward different religions likely strengthened slightly, reducing the share who mentioned this.
+
+ANSWER: A",stop,False,74081e6ef6299dd67b281d6cfa170540c83568404cf7550239a1ad8e92269f7a,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Could you please mention if you would not like to have people of a different religion as neighbors?
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Mentioned"". Did that share change between 2014 and 2018?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,A124_42,mention_flag,share,True,0.1224698795180723,decrease,decrease,True,True,,"Growing social liberalization and rising acceptance of cohabitation in Hong Kong between 2014 and 2018 likely reduced stigma toward unmarried couples. Hence, fewer respondents would have mentioned them as undesirable neighbors.
+
+ANSWER: A",stop,False,28cd1edcd9d41315f8ef725e2be0bbd195220f1569d5d63d10531240ec5f30b5,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Could you please mention if you would not like to have unmarried couples living together as neighbors?
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Mentioned"". Did that share change between 2014 and 2018?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,A124_43,mention_flag,share,True,0.1027228915662651,decrease,increase,False,True,,"Rising localist sentiment and tensions with Mandarin-speaking mainlanders after the 2014 Umbrella Movement likely made language differences more salient and sensitive in neighborhoods. This points to more residents mentioning they would not like neighbors who speak a different language by 2018.
+
+ANSWER: B",stop,False,902cf1483c933cc204a9f9d24dacc8ad3d08723190e1cfc84fa044d07762fea7,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Could you please mention if you would not like to have people who speak a different language as neighbors?
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Mentioned"". Did that share change between 2014 and 2018?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,A165,binary,share,True,0.0884175676979905,increase,increase,True,True,,"Rising political polarization and social tensions following the 2014 Umbrella Movement were associated with lower generalized trust in Hong Kong in subsequent surveys. Thus, more people said you need to be very careful by 2018.
+
+ANSWER: B",stop,False,dbdc8fbbcb10d5a1b41933d3922c99dc6caac3b86fed57455575d4208fece4b6,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Generally speaking, would you say that most people can be trusted or that you need to be very careful in dealing with people?
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Need to be very careful"". Did that share change between 2014 and 2018?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,D061,ordinal_scale,ordered,True,0.17527007480788043,toward_high,toward_high,True,True,,"Attitudes toward working mothers have generally liberalized in developed, urban societies, and Hong Kong has long had high female labor force participation and normalized dual‑earner households. Between 2014 and 2018, views likely shifted further away from believing children suffer when mothers work.
+
+ANSWER: A",stop,False,2451ed96cb0162cc130f752ce6da9ff3c396c1892251c4f9a164ebc543c59205,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?
+Statement: When a mother works for pay, the children suffer
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Strongly disagree""
+B: It moved toward ""Agree strongly""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E012,binary,share,True,0.06857076482279756,increase,decrease,False,True,,"Public identification with China weakened after the 2014 Umbrella Movement, and Hong Kong has low militaristic sentiment to begin with. This likely reduced the share willing to say they would fight for their country by 2018.
+
+ANSWER: B",stop,False,fecc94ecee16a4766c927b46da283811e6376afab2f29d156acec373857fa9eb,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Would you be willing to fight for your country if there were another war?
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Yes"". Did that share change between 2014 and 2018?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E015,ordinal_scale,ordered,True,0.0995410994524748,toward_low,toward_low,True,True,,"Rising work stress and notoriously long hours in Hong Kong spurred a growing emphasis on work-life balance, especially among younger cohorts. By 2018, more people were likely to view placing less importance on work as a positive change.
+
+ANSWER: B",stop,False,9ab1e8791b86fca701c208177c1ed46a4fb82e131b033e6ed3801514b57789e1,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: I'm going to read out a possible change in our way of life that might take place in the near future. Please tell me if you think it would be a good thing, a bad thing, or if you don't mind.
+Change: Less importance placed on work in our lives
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Bad thing""
+B: It moved toward ""Good thing""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E018,ordinal_scale,ordered,True,0.16919594064845606,toward_high,toward_high,True,True,,"After the 2014 Umbrella Movement and subsequent curbs on dissent and autonomy, public trust in authorities eroded and pro-democracy sentiment hardened. By 2018, more Hong Kongers were likely to view “greater respect for authority” as undesirable.
+
+ANSWER: A",stop,False,aa68c1357985fd2f0a9700be25bc2b36f3fc8c65c0fd413114f8eef3429a3b80,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: I'm going to read out a possible change in our way of life that might take place in the near future. If it were to happen, would you think it would be a good thing, a bad thing, or don't mind?  
+Change: Greater respect for authority
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Bad thing""
+B: It moved toward ""Good thing""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E025,ordinal_scale,ordered,True,0.07346850373861841,toward_high,toward_low,False,True,,"After the 2014 Umbrella Movement, political engagement in Hong Kong remained heightened, and signing petitions is a low-risk, accessible form of participation that likely became more common, including via online platforms. By 2018, more people would report having signed a petition.
+
+ANSWER: B",stop,False,ec02417c68e3f2ebe6a5b9c3dd3256a2078e228e2f290d6bdaed9bd7f02c5fb8,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Now I'd like you to look at this card. I'm going to read out a form of political action that people can take, and I'd like you to tell me whether you have actually done it, might do it, or would never do it under any circumstances.
+Action: Signing a petition
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Would never do""
+B: It moved toward ""Have done""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E037,ordinal_scale,ordered,True,0.05517855551139384,toward_high,toward_high,True,True,,"Rising housing costs and inequality became even more salient between 2014 and 2018, and debates increasingly emphasized the need for government action on social welfare and housing. This likely nudged opinions toward expecting more government responsibility.
+
+ANSWER: A",stop,False,a7af974b85b5cc2f1aaf53d9f4618be7d821e86d2bfa8b37292a2abce0556418,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.  
+Issue: Government responsibility
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""The government should take more responsibility""
+B: It moved toward ""People should take more responsibility""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E040,ordinal_scale,ordered,True,0.08339129148851396,toward_high,toward_high,True,True,,"Rising inequality, worsening housing affordability, and post-Umbrella Movement disillusionment likely eroded faith in meritocratic outcomes, increasing the sense that connections and luck matter more. Despite solid macroeconomic growth, perceptions of a rigged system and guanxi gained ground.
+
+ANSWER: A",stop,False,176d3c9199a548c4a1dcc5f01fd493b8496fc7b99dedf166e09a648f2ff7f623,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.  
+Issue: Hard work brings success
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Hard work doesn't generally bring success - it's more a matter of luck and connections""
+B: It moved toward ""In the long run, hard work usually brings a better life""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E069_04,ordinal_scale,ordered,True,0.050288868938698994,toward_low,toward_high,False,True,,"After the 2014 Umbrella Movement and subsequent years of increasing pressure on media freedom, ownership consolidation, and incidents like the Victor Mallet visa case, public perceptions of the press in Hong Kong deteriorated. These trends likely eroded trust in the press overall.
+
+ANSWER: A",stop,False,cccc4529c9d53598476bccbdfe034210358d388cc29fef937766ed6e6bef6d9c,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: The press
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E069_06,ordinal_scale,ordered,True,0.10631766162085937,toward_high,toward_high,True,True,,"After the 2014 Umbrella Movement and subsequent clashes (e.g., the 2016 Mong Kok unrest) and prosecutions of activists, public trust in the Hong Kong Police eroded rather than recovered. By 2018, sentiment had shifted toward less confidence.
+
+ANSWER: B",stop,False,671a65e194eb6dc888de3c7bb2ab77cf25f57438d49fdc17828455e5e73a6d05,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence, or none at all?  
+Organization: The police
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E069_07,ordinal_scale,ordered,True,0.08395802666158717,toward_high,toward_high,True,True,,"Public confidence in Hong Kong’s Legislative Council likely fell between 2014 and 2018, amid the aftermath of the 2014 Umbrella Movement, the 2016–2017 oath-taking disqualifications, and other perceived erosions of autonomy. These developments would push typical responses toward lower trust.
+
+ANSWER: A",stop,False,155f744386af85a638c1845f36159337722aac4244697c365d3576acbd127e25,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Parliament
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E069_11,ordinal_scale,ordered,True,0.06322963293995357,toward_high,toward_high,True,True,,"Public sentiment in Hong Kong toward the central government in Beijing deteriorated after the 2014 Umbrella Movement and continued to sour with events like lawmakers’ disqualifications and perceived encroachments on autonomy through 2018. Confidence thus moved away from trust and toward distrust.
+
+ANSWER: A",stop,False,549f433d04887cbdb78e99d189f6a0c757aa46e527091e2e4ec7d8709bd5ac89,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: The government (in your nation’s capital)
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E069_14,ordinal_scale,ordered,True,0.07817532645876508,toward_high,toward_low,False,True,,"Environmental issues (air quality, plastic waste, Lantau reclamation) became more salient in Hong Kong from 2014 to 2018, and NGOs were highly visible in advocacy and post-typhoon efforts, likely boosting their credibility. As trust in political institutions waned, confidence shifted toward civic organizations like environmental groups.
+
+ANSWER: A",stop,False,845203d0568816c8619c77f169fbb5ed767fd6171d91f5e28309dd5f30ad760b,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Environmental organizations
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E069_15,ordinal_scale,ordered,True,0.05356859513609151,toward_high,toward_high,True,True,,"Rising polarization and distrust of civic and advocacy groups in Hong Kong between 2014 and 2018, alongside the perception of women’s organizations as politicized or ineffective, likely reduced public confidence. Thus the typical response shifted away from strong confidence.
+
+ANSWER: A",stop,False,3ee61e779785c6e7da707d7543085cd5a487453085dc9002a4da64a76d4e95b9,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Women’s organizations
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E069_17,ordinal_scale,ordered,True,0.06692105953317594,toward_high,toward_high,True,True,,"Public perception of judicial independence eroded between 2014 and 2018, amid Beijing’s interventions and politicized cases (e.g., NPCSC interpretations, lawmakers’ disqualifications, and jailing of activists). These developments likely pushed attitudes toward less confidence in the courts.
+
+ANSWER: B",stop,False,06d9a9e8646562cba10746483e187903674db9934e1e0cb0d5488a7312e83aea,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: The courts
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E069_18A,ordinal_scale,ordered,True,0.07202447583882102,toward_low,toward_high,False,True,,"Political polarization and rising distrust toward institutions tied to Beijing between 2014 and 2018 likely dampened Hong Kongers’ confidence in regional bodies associated with the broader region. Skepticism around China-led initiatives during this period would push opinions away from confidence.
+
+ANSWER: B",stop,False,54cf2b88dff1426474d4128a5715339400d67418d22b03d9afdf714ff4a11d38,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: How much confidence do you have in major regional organizations?
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E069_40,ordinal_scale,ordered,True,0.05524619248925838,toward_high,toward_high,True,True,,"Public attitudes in Hong Kong became more polarized after the 2014 Umbrella Movement, with civil society increasingly politicized and scrutinized. By 2018, high-profile global NGO scandals (like Oxfam) likely further eroded trust in charitable organizations, nudging responses toward greater skepticism.
+
+ANSWER: B",stop,False,486a94916c287ce2e26f27164b80bbea3a1b32ec21a68d721ed34b34af47c583,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Charitable or humanitarian organizations
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E069_54,ordinal_scale,ordered,True,0.0756385845486969,toward_high,toward_high,True,True,,"In 2014, Hong Kong’s universities generally enjoyed strong public esteem. By 2018, after the Umbrella Movement and controversies over academic freedom, politicization, and campus activism, confidence had eroded across camps, shifting attitudes toward less trust.
+
+ANSWER: B",stop,False,e6b3afb7f2c8d6a8f8b7b811e3ae670e57a7cdaf1459d8bbb804b55842a70bbf,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Universities
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E116,ordinal_scale,ordered,True,0.051074144991100634,toward_high,toward_high,True,True,,"Public sentiment in Hong Kong after the 2014 Umbrella Movement became more wary of authoritarian and militarized governance, especially given concerns about PLA involvement and growing mainland encroachment. By 2018, this likely shifted attitudes further against the idea of army rule.
+
+ANSWER: A",stop,False,f37e90b4ae7cacaf503af730bc3e78b17a21e4f1e46f08f2c11b80e3144cad4c,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: I'm going to describe a type of political system and ask what you think about it as a way of governing this country. Would you say it is a very good, fairly good, fairly bad, or very bad way of governing this country?
+System: Having the army rule
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Very bad""
+B: It moved toward ""Very good""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E228,ordinal_scale,ordered,True,0.07323580633925454,toward_low,toward_low,True,True,,"Public sentiment in Hong Kong between 2014 and 2018 was shaped by the Umbrella Movement and subsequent perceived encroachments by Beijing, which heightened wariness of any military role in politics. This likely made respondents less inclined to view an army takeover as part of democracy.
+
+ANSWER: A",stop,False,da4e48e53c771dedbbc8ac2e19156f9d2b304cdc92b02a727ada1df6841c3e83,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: The army takes over when government is incompetent
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""It is against democracy (spontaneous)""
+B: It moved toward ""An essential characteristic of democracy""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E233A,ordinal_scale,ordered,True,0.053857685131570514,toward_low,toward_high,False,True,,"Between 2014 and 2018, public frustration over Hong Kong’s high inequality and housing costs grew, and many increasingly linked “real” democracy with delivering social fairness and narrowing gaps. This likely nudged typical responses toward seeing income equality as a more essential attribute of democracy.
+
+ANSWER: B",stop,False,0d3a4bbcf9a683deb8989b4a04123a9b7c07c0c7235219ab1655a6d51a412204,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: The state makes people's incomes equal
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""It is against democracy (spontaneous)""
+B: It moved toward ""An essential characteristic of democracy""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E233B,ordinal_scale,ordered,True,0.05126426916229409,toward_low,toward_low,True,True,,"The Umbrella Movement in 2014 and subsequent tightening of political control by 2018 likely reinforced the view that democracy entails holding rulers accountable rather than obeying them. As a result, typical responses would have moved away from seeing obedience as an essential democratic characteristic.
+
+ANSWER: B",stop,False,1ac80e413a71211a64b437778314f214a1648095ff8420245c0ffe0d01492199,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Please tell me how essential you think it is that people obey their rulers as a characteristic of democracy. Use a scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""An essential characteristic of democracy""
+B: It moved toward ""It is against democracy (spontaneous)""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E264,categorical,option,True,0.12328765123983827,1,4,False,True,,"Hong Kong residents do not have popular national-level elections, and that did not change between 2014 and 2018. After the 2014 Umbrella Movement and ensuing political developments, awareness of lacking such voting rights likely increased, boosting selections of “Not allowed to vote.”
+
+ANSWER: 3",stop,False,fe8dc89ec2eb3eb547606310fc27747f672bf9d535261ec217ea12654a637fd5,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: How often do you vote in national level elections?
+
+### Task:
+
+Think about the share of people in Hong Kong choosing each answer in 2014 and in 2018. Which answer gained the most support (the largest increase in share)?
+
+1: Never
+2: Usually
+3: Not allowed to vote
+4: Always
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <number>"
+HKG,6,7,2014,2018,E265_02,ordinal_scale,ordered,True,0.12122920502755735,toward_low,toward_low,True,True,,"In 2014, most opposition figures could still contest LegCo elections, even as concerns rose over proposed screening for the Chief Executive. By 2016–2018, multiple high-profile pro-democracy and localist candidates were disqualified and some elected lawmakers were unseated, making prevention more salient and frequent.
+
+ANSWER: B",stop,False,fb5194215c28af03b2faae2d6c266b96257b6c035d05017988d60b8dcd63a7f3,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: In your view, how often do opposition candidates get prevented from running in this country’s elections?
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all often""
+B: It moved toward ""Very often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E265_03,ordinal_scale,ordered,True,0.08938836478714174,toward_low,toward_low,True,True,,"After the 2014 Umbrella Movement, distrust in mainstream broadcasters—especially TVB—grew amid accusations of pro-government bias, and this perception intensified as Beijing’s influence and political tightening increased through 2018. By 2018, more Hongkongers likely felt TV news favored the authorities during elections.
+
+ANSWER: A",stop,False,c4fbbe632574bab14b0a5c4a4a54fd234466a1660c694127a2ef81e94d5a52f1,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: In your view, how often does TV news favor the governing party in this country’s elections?
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Very often""
+B: It moved toward ""Not at all often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E265_04,ordinal_scale,ordered,True,0.09120325879602406,toward_low,toward_low,True,True,,"Public trust in Hong Kong’s electoral integrity worsened after 2014 amid the Umbrella Movement, disqualifications, and several ICAC probes into vote-buying and registration fraud around the 2015–2017 elections. This likely shifted perceptions toward believing bribery happens more frequently.
+
+ANSWER: B",stop,False,33010975d6aa9f04b3ea01da1c9203f73e1bf8020b87fce6ff0be90aecd685ba,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: In your view, how often do voters get bribed in this country’s elections?
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all often""
+B: It moved toward ""Very often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E265_07,ordinal_scale,ordered,True,0.05862869398780995,toward_low,toward_low,True,True,,"Public cynicism about elite influence grew from 2014 to 2018 amid the Umbrella Movement’s aftermath, continued dominance of business-linked functional constituencies, and disqualifications of pro-democracy figures. These developments likely reinforced the belief that tycoons can sway or “buy” electoral outcomes.
+
+ANSWER: B",stop,False,9ee258e57e608415e1a5b9fc3d9a019db4c7fb2b7629bdbbbbdfe30a59ac7262,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: In your view, how often do rich people buy elections in this country?
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all often""
+B: It moved toward ""Very often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,E265_08,ordinal_scale,ordered,True,0.053343363742344024,toward_low,toward_high,False,True,,"Despite rising political tensions after 2014, elections in Hong Kong remained orderly with little evidence of violence or intimidation at polling stations. Public perception likely stayed low or shifted slightly further toward seeing such threats as rare.
+
+ANSWER: A",stop,False,f1facd3e9d9206b1255d9ff63b46abcf8e9f7228cb1c49c55f9faa765ee6d242,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: In your view, how often do voters get threatened with violence at the polls in this country's elections?
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all often""
+B: It moved toward ""Very often""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,F114A,ordinal_scale,ordered,True,0.3464227007203945,toward_low,toward_low,True,True,,"Public debate in Hong Kong between 2014 and 2018 featured rising localist sentiment and resentment over perceived abuses of public resources, alongside an aging, more conservative population. These factors likely made people less tolerant of benefit fraud.
+
+ANSWER: A",stop,False,18225f7962fbbf7de26ca54748a265b368727f1d9c6317d003d351cca4f0b6a8,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Claiming government benefits to which you are not entitled
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,F114C,ordinal_scale,ordered,True,0.06022030897671815,toward_high,toward_low,False,True,,"Public attitudes in Hong Kong have generally trended toward stronger child-protection norms, and younger cohorts are less accepting of corporal punishment. Between 2014 and 2018, this likely pushed the typical response further toward “never justifiable.”
+
+ANSWER: B",stop,False,32a1e18155329c6ed5cc0aae254769b7eed05823d701f03bc77dc3609a396d8c,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Please tell me whether you think this can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Parents beating children
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,F118,ordinal_scale,ordered,True,0.10214477141835693,toward_high,toward_high,True,True,,"Surveys and social trends in Hong Kong between 2014 and 2018 show growing acceptance of LGBT rights (e.g., rising support for same-sex marriage and favorable court rulings), indicating increased tolerance. The typical response on the justifiability scale likely shifted upward.
+
+ANSWER: B",stop,False,f3bc35bfb405d2574bd09cd5fd80beafa5421a5d8908b828c031f8f4c07a66ab,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Homosexuality
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,F119,ordinal_scale,ordered,True,0.05690911434827478,toward_high,toward_high,True,True,,"Public attitudes in Hong Kong generally trended slightly more liberal on moral issues between WVS Wave 6 (around 2014) and Wave 7 (around 2018), and prostitution—already quasi-legal in certain forms—saw a modest uptick in perceived justifiability. Younger, more liberal cohorts likely nudged the typical response toward greater acceptance.
+
+ANSWER: B",stop,False,ea9d05a9444e047f6313a6baaddcd123f98431c70f4c3bb908151c5383a8a0fc,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Please tell me for the following statement whether you think it can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Prostitution
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,F120,ordinal_scale,ordered,True,0.07663547802571401,toward_high,toward_high,True,True,,"Survey trends around 2014–2018 show Hong Kong becoming slightly more socially liberal, with modest increases in ratings that abortion is justifiable. Younger, more educated cohorts likely nudged the typical response toward greater acceptance.
+
+ANSWER: A",stop,False,b4d1c96183b96ee8491c593db82b19a8b2253287c53cb1d983af49c2b64eadbc,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Abortion
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,F121,ordinal_scale,ordered,True,0.09234813829110537,toward_high,toward_high,True,True,,"Hong Kong grew more liberal on personal and family norms through the 2010s, and acceptance of divorce tends to rise with modernization and increasing divorce prevalence. Between WVS Wave 6 (around 2014) and Wave 7 (around 2018), the typical response likely shifted slightly toward greater justifiability.
+
+ANSWER: B",stop,False,1147bae5aee07f7f570b60a47eb47ac2600d50b1a2020b745ccf779cab6e84a0,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Please tell me whether you think this statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Divorce
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,F122,ordinal_scale,ordered,True,0.11215872367597914,toward_high,toward_high,True,True,,"Public debate on end-of-life care and patient autonomy in Hong Kong grew over this period, alongside an aging population and a broader global trend toward greater acceptance of euthanasia. These forces likely nudged average attitudes toward seeing euthanasia as more justifiable.
+
+ANSWER: A",stop,False,8f68e4fca26d5fde76e8c1f59fdd3f18f980e47bd7966b59c2756423b695c325,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Euthanasia
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,F123,ordinal_scale,ordered,True,0.07241480472040047,toward_high,toward_high,True,True,,"Hong Kong grew more secular and individualistic over this period, with younger cohorts tending to be more permissive on personal autonomy issues. Attitudes therefore likely shifted slightly toward greater justifiability of suicide.
+
+ANSWER: A",stop,False,bcfaa9aa9e7d21e61d9b61247563c05d63677c0b30f9c0086aedd46ba9072854,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Suicide
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,F135A,ordinal_scale,ordered,True,0.09848165157666988,toward_high,toward_high,True,True,,"Younger cohorts in Hong Kong tend to be more permissive about premarital sex, and generational replacement plus ongoing urban, Westernized cultural influence likely nudged attitudes in a more liberal direction between 2014 and 2018. There was no major social shift likely to make views more restrictive in that period.
+
+ANSWER: A",stop,False,904fc8a69c2f6afd9ba043b8d8c570ac1dbaf4d7b081f915bfb50bd2fe7b3f5d,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Sex before marriage
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,F203,ordinal_scale,ordered,True,0.0688749874773689,toward_high,toward_high,True,True,,"Hong Kong is highly pluralistic and relatively secular, with many people practicing syncretic traditions; from 2014 to 2018 the city saw no religious revival and younger, more secular cohorts gained influence. That would nudge attitudes further away from religious exclusivism.
+
+ANSWER: B",stop,False,8282493169dcadc3b9c93ab91646416613ec65e2b0d22651532c0c052ed0dc94,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Please tell us if you strongly agree, agree, disagree, or strongly disagree with the following statement:
+Statement: The only acceptable religion is my religion
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Strongly agree""
+B: It moved toward ""Strongly disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,G007_33_B,ordinal_scale,ordered,True,0.0755727546040598,toward_high,toward_high,True,True,,"After the 2014 Umbrella Movement and continuing polarization, social trust in Hong Kong generally declined. Even for people one knows personally, attitudes likely shifted slightly away from “trust completely” toward more caution.
+
+ANSWER: A",stop,False,a1132db0023c70b6f76da58b7f1e0cb6a1c0ff509602b8e539e31a7d35bc8eaf,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: I’d like to ask you how much you trust people from a particular group. Could you tell me if you trust people from this group completely, somewhat, not very much, or not at all?
+Group: People you know personally
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Do not trust at all""
+B: It moved toward ""Trust completely""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,G026,binary,share,True,0.3049618799495176,increase,decrease,False,True,,"Given Hong Kong’s demographics, the share of residents with mainland-born parents has been gradually declining as younger cohorts are more likely to have Hong Kong–born mothers, while earlier waves of mainland migrants age out. Over 2011–2016, the proportion of mainland-born residents also fell slightly, consistent with fewer respondents reporting an immigrant mother by 2018.
+
+ANSWER: A",stop,False,7cf962e61aa6f01145b8eceb79c9389fbd7997eb42d5039e928ee00c9aa3bbe2,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Is your mother an immigrant to this country?
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Yes"". Did that share change between 2014 and 2018?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,G027,binary,share,True,0.3499815674998157,increase,decrease,False,True,,"Immigration to Hong Kong in recent decades has been dominated by mainland-born women joining Hong Kong-born men, meaning fewer younger residents have immigrant fathers, while older cohorts with mainland-born fathers are shrinking. Thus, the share answering “Yes” likely declined from 2014 to 2018.
+
+ANSWER: B",stop,False,2d1e1e36cac71f43c0b583500789c5c99afe1aae66e41044df8286e07ad032d2,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Is your father an immigrant to this country?
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Yes"". Did that share change between 2014 and 2018?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,H001,ordinal_scale,ordered,True,0.050946282157521394,toward_high,toward_low,False,True,,"Hong Kong’s crime rates fell to multi-decade lows over 2014–2018, and the disruptive 2014 protests had subsided by 2018, making everyday neighborhoods feel calmer. This likely nudged typical responses toward feeling more secure.
+
+ANSWER: B",stop,False,b443a9e15dd676e17aad3dd88d313af12e38da48af78b82abd5dbfe3a26fb5db,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Could you tell me how secure you feel these days in your neighborhood?
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all secure""
+B: It moved toward ""Very Secure""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,H002_02,ordinal_scale,ordered,True,0.09542726588046566,toward_low,toward_high,False,True,,"Public drinking is not common in Hong Kong and neighborhoods generally have strong public order. By 2018, absent major disorder and with no notable rise in street drinking, perceptions likely shifted slightly toward it happening rarely.
+
+ANSWER: A",stop,False,32042f8ea262296f70e1d6da6544b1d6e35e5476f0c93b8ffb2399ccdf6ffdaf,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: How frequently does alcohol consumption in the streets occur in your neighborhood?
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all frequently""
+B: It moved toward ""Very Frequently""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,H002_03,ordinal_scale,ordered,True,0.07040087184279911,toward_low,toward_high,False,True,,"The 2014 Umbrella Movement brought visible police actions that could heighten perceptions of interference. By 2018, before the 2019–20 crackdown, everyday police or military intrusion in neighborhoods remained rare, so views likely shifted toward less frequent interference.
+
+ANSWER: B",stop,False,3a184a2eec5cac97bae2c3127620ef05b61af06e300b3e581a5164ac5477b4f2,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: How frequently does the police or military interfere with people’s private life in your neighborhood?
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Very Frequently""
+B: It moved toward ""Not at all frequently""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,H002_04,ordinal_scale,ordered,True,0.15165633620804223,toward_low,toward_low,True,True,,"Between 2014 and 2018, nativist and localist sentiment in Hong Kong intensified, with more visible tensions toward mainland Chinese and ongoing issues faced by ethnic minorities. This likely made residents perceive racist behavior as occurring more often in everyday settings.
+
+ANSWER: A",stop,False,e5894f41b3054fb31969daec770d45966d734f5e13182b945cc825b8de3b0b0b,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: How frequently does racist behavior occur in your neighborhood?
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Very Frequently""
+B: It moved toward ""Not at all frequently""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,H003_01,binary,share,True,0.08846213619598378,decrease,decrease,True,True,,"Reported crime in Hong Kong declined to historic lows between 2014 and 2018, improving perceived safety. With less fear of theft, fewer people likely avoided carrying cash specifically for security reasons.
+
+ANSWER: A",stop,False,72c3ce0087ddad75d2f6606a96b9a8da9f43879e1791aaa24047b4b77494f973,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: Have you ever not carried much money for reasons of security?
+
+### Task:
+
+Think about the share of people in Hong Kong who gave the answer ""Yes"". Did that share change between 2014 and 2018?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,H006_01,ordinal_scale,ordered,True,0.06724814635879786,toward_high,toward_high,True,True,,"Hong Kong’s labor market was exceptionally tight in 2018, with unemployment near record lows, reducing fears about job loss. In 2014 there was more uncertainty around growth and protests, likely keeping job worries higher.
+
+ANSWER: A",stop,False,03748fc2793696fbb037d657f4213cc59e43a76e2dd97d9892748bc3d5e7497b,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: To what degree are you worried about the following situation? Losing my job or not finding a job
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all""
+B: It moved toward ""Very much""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,H006_02,ordinal_scale,ordered,True,0.07718521454153253,toward_high,toward_high,True,True,,"Hong Kong’s economy was relatively strong by 2018 and the government rolled out the Free Quality Kindergarten Education Scheme, easing early-education costs, while school-place pressures had also eased. These factors likely reduced financial anxiety about providing children with a good education.
+
+ANSWER: B",stop,False,9aa574766a05f92d894cef75c9d2eedc55ef055ca4d1052a5b33897dd39772cc,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: To what degree are you worried about not being able to give one's children a good education?
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Very much""
+B: It moved toward ""Not at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,H006_03,ordinal_scale,ordered,True,0.08635589767665235,toward_high,toward_low,False,True,,"Regional tensions rose between 2014 and 2018—North Korea’s 2017 nuclear crisis, South China Sea militarization, and the start of the US–China trade confrontation—making conflict involving “my country” (China) feel more plausible to people in Hong Kong. This likely increased reported worry.
+
+ANSWER: A",stop,False,9bdbab24935da719fa8c7da6c3ebaf27e633a628062388727e73d2272eaebdbb,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: To what degree are you worried about the following situation? A war involving my country
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Very much""
+B: It moved toward ""Not at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,H006_04,ordinal_scale,ordered,True,0.09710987695977255,toward_high,toward_low,False,True,,"High-profile terrorist attacks in 2015–2017 in both Europe and nearby Asia (e.g., Paris, Brussels, Bangkok, Jakarta, Manchester, Marawi) kept the issue salient, likely increasing perceived risk even in relatively safe Hong Kong. By 2018, concern would be higher than in 2014.
+
+ANSWER: A",stop,False,6ea11510fc97936646326a04fa7433157b84a3258f72b82b85ce3b5769e6c798,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: To what degree are you worried about the following situation? A terrorist attack
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Very much""
+B: It moved toward ""Not at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+HKG,6,7,2014,2018,H006_05,ordinal_scale,ordered,True,0.08880180420216661,toward_high,toward_high,True,True,,"The 2014 Umbrella Movement created acute tensions and episodic clashes that could have heightened fears of internal strife. By 2018, mass protests had ebbed and society was relatively calm (before 2019), so worry about an outright civil war likely declined.
+
+ANSWER: A",stop,False,4af6957c4157b6bb5878b26321a5d989fccd3f731d1a6221e64cf740735af3a1,"### Inputs:
+
+Country: Hong Kong
+Year 1: 2014
+Year 2: 2018
+Question: To what degree are you worried about the following situation? 
+Situation: A civil war
+
+### Task:
+
+Think about how the people of Hong Kong, taken as a whole, answered this question in 2014 and in 2018. Did the typical answer move?
+
+A: It moved toward ""Not at all""
+B: It moved toward ""Very much""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"

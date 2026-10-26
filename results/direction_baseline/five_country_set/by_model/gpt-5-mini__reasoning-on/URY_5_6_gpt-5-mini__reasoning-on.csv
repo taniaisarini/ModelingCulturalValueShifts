@@ -1,0 +1,775 @@
+country,wave_a,wave_b,years_a,years_b,code,format,family,significant,effect,truth,pred,correct,parsed,error,response,finish_reason,cached,cache_key,prompt
+URY,5,6,2006,2011,A124_07,mention_flag,share,True,0.05799999999999997,decrease,decrease,True,True,,"Public attitudes toward people with HIV in Uruguay became less discriminatory from 2006 to 2011, likely due to increased awareness, treatment access, and normalization of HIV, so fewer people said they would not like to have people with AIDS as neighbors.  
+ANSWER: A",stop,False,718a90652810d9c6af810738957a03b1df76aad312d4cb7ada3289562e209c6b,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: Could you please mention if you would not like to have people who have AIDS as your neighbors?
+
+### Task:
+
+Think about the share of people in Uruguay who gave the answer ""Mentioned"". Did that share change between 2006 and 2011?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,A124_08,mention_flag,share,True,0.09899999999999998,increase,decrease,False,True,,"Uruguay's politics and public debate moved toward more progressive, harm-reduction approaches in that period, which likely reduced stigma toward people with drug problems and lowered the share who explicitly rejected them as neighbors. ANSWER: A",stop,False,de1b8995746576ffe7bd965d240c1bf6d4566ae0cbade021055b3559230cf7e1,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: Could you please mention if you would not like to have a particular group as neighbors?
+Group: Drug addicts
+
+### Task:
+
+Think about the share of people in Uruguay who gave the answer ""Mentioned"". Did that share change between 2006 and 2011?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,A124_09,mention_flag,share,True,0.06600000000000003,decrease,decrease,True,True,,"Public opinion in Uruguay became more accepting of LGBT people in the late 2000s amid progressive politics and wider social liberalization, so the share saying they would not like homosexuals as neighbors likely fell by 2011.  
+ANSWER: B",stop,False,2fef34ded0844716dd29414b047a91d33e7c63d301ce14453fc2f6a96c246410,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: Could you please mention if you would not like to have the following group as neighbors?
+Group: Homosexuals
+
+### Task:
+
+Think about the share of people in Uruguay who gave the answer ""Mentioned"". Did that share change between 2006 and 2011?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,A165,binary,share,True,0.13190687573851115,increase,decrease,False,True,,"Between 2006 and 2011 Uruguay experienced sustained economic growth and expanding social programs under the Broad Front, conditions that tend to raise interpersonal trust and reduce caution toward others. Therefore the share saying ""Need to be very careful"" declined.
+
+ANSWER: A",stop,False,05a04fffc62f82591789490148821f851d33cc6c2053fd37fc501ebe794d207b,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: Generally speaking, would you say that most people can be trusted or that you need to be very careful in dealing with people?
+
+### Task:
+
+Think about the share of people in Uruguay who gave the answer ""Need to be very careful"". Did that share change between 2006 and 2011?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,A168A,ordinal_scale,ordered,True,0.07468413307829361,toward_low,toward_high,False,True,,"Uruguay experienced relative political stability and social-policy-driven cohesion under the Frente Amplio government and recovered from the 2008–09 downturn, factors that likely supported a rise in generalized trust. 
+
+ANSWER: A",stop,False,f18a02ffb04881a7c5ead20656016bde167b4c3ca6bf949af4d84ae3842cc364,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: Do you think most people would try to take advantage of you if they got a chance, or would they try to be fair? Please show your response on a scale where 1 means “people would try to take advantage of you,” and 10 means “people would try to be fair.”
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Most people try to be fair""
+B: It moved toward ""Most people try to take advantage of me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,A191,ordinal_scale,ordered,True,0.09895516840131875,toward_high,toward_high,True,True,,"Crime and concerns about personal safety rose in Uruguay through the late 2000s even as the economy improved, so more people would emphasize the importance of living in secure surroundings by 2011.  
+ANSWER: B",stop,False,c1a444a4498a48607cd5649e57b5737a0e479a67a2d5105253ba5282ac8643d7,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: Now I will briefly describe a person. Using this card, would you please indicate whether that person is very much like you, like you, somewhat like you, not like you, or not at all like you?  
+Description: It is important to this person to live in secure surroundings.
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not at all like me""
+B: It moved toward ""Very much like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,A192,ordinal_scale,ordered,True,0.11440203001558023,toward_high,toward_high,True,True,,"Rising incomes and expanding social welfare in Uruguay between 2006 and 2011 increased disposable income and personal autonomy, while cultural modernization and younger cohorts likely emphasized self-expression and enjoyment more. Overall the typical answer moved toward valuing ""having a good time.""
+
+ANSWER: B",stop,False,8bfd51236591200c74bd38521537fc4c78a2b1996fcde70abb0b19a8655d4647,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: Please indicate how much the following description applies to you, using the provided scale: ""It is important to this person to have a good time; to 'spoil' oneself.""
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not at all like me""
+B: It moved toward ""Very much like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,B008,forced_choice,option,True,0.20790078703308212,1,1,True,True,,"Between 2006 and 2011 Uruguay experienced relatively stable growth under a progressive government and rising public awareness of environmental issues, so more people could afford to prioritize environmental protection over immediate job concerns. Therefore protecting the environment likely gained the most support.
+
+ANSWER: 3",stop,False,09a80c7b3588da45b0981ab3f7010e928d323927517ed77fb28b038c2a872eea,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: Here are two statements people sometimes make when discussing the environment and economic growth. Which statement comes closer to your own point of view?
+A. Protecting the environment should be given priority, even if it causes slower economic growth and some loss of jobs 
+B. Economic growth and creating jobs should be the top priority, even if the environment suffers to some extent
+
+### Task:
+
+Think about the share of people in Uruguay choosing each answer in 2006 and in 2011. Which answer gained the most support (the largest increase in share)?
+
+1: Other answer
+2: Economy growth and creating jobs
+3: Protecting environment
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <number>"
+URY,5,6,2006,2011,C006,ordinal_scale,ordered,True,0.05289672147906989,toward_high,toward_high,True,True,,"Uruguay experienced sustained growth, falling poverty and expanded social transfers under the Frente Amplio governments, and weathered the 2008–09 shock relatively well, improving many households' finances. Thus the typical reported score likely moved toward greater satisfaction.
+
+ANSWER: A",stop,False,ad5b83f35e3d0d62a1b446f78bee648ef5425adaa2ce372b5370d0aea45714b9,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: How satisfied are you with your household's financial situation? If '1' means you are completely dissatisfied and '10' means you are completely satisfied, where would you rate your satisfaction?
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Satisfied""
+B: It moved toward ""Dissatisfied""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,D057,ordinal_scale,ordered,True,0.08549905328533977,toward_high,toward_high,True,True,,"Between 2006 and 2011 Uruguay experienced rising female labor-force participation, higher education levels and continued urbanization alongside broadly progressive social trends, all of which would reduce endorsement of traditional housewife roles. Therefore the typical response likely shifted away from agreeing that being a housewife is as fulfilling and toward stronger disagreement.
+
+ANSWER: B",stop,False,6ff040a9e38822079cf42221fc9432087f1eadaa30b8084fef54dbf3c048064d,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?
+Statement: Being a housewife is just as fulfilling as working for pay
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Agree strongly""
+B: It moved toward ""Strongly disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,D059,ordinal_scale,ordered,True,0.16612963553107069,toward_high,toward_high,True,True,,"Uruguayans became somewhat less likely to endorse traditional gender stereotypes about political leadership between 2006 and 2011, reflecting broader societal moves toward gender equality and growing female political visibility in the region. This suggests the typical response shifted away from favoring men as better leaders and toward stronger disagreement with that statement.
+
+ANSWER: A",stop,False,6c40f8dbdd0056569fd2296ed89f5d6f1689e66903f6ec05e3dc77a9676c5131,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?
+Statement: On the whole, men make better political leaders than women do
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Strongly disagree""
+B: It moved toward ""Agree strongly""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,E025,ordinal_scale,ordered,True,0.05389579146370539,toward_high,toward_low,False,True,,"Between 2006 and 2011 Uruguay experienced growing civic engagement and rising online connectivity alongside an active broad-front government that encouraged participation, making people more likely to have actually taken low-cost political actions like signing petitions. Therefore the typical response moved toward having done it.
+
+ANSWER: B",stop,False,705181da59e93ac55d50f839fbfd0d18f645fac660e6eb9b8dd974b976b9cb12,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: Now I'd like you to look at this card. I'm going to read out a form of political action that people can take, and I'd like you to tell me whether you have actually done it, might do it, or would never do it under any circumstances.
+Action: Signing a petition
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Would never do""
+B: It moved toward ""Have done""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,E025B,binary,share,True,0.18673896499238968,increase,decrease,False,True,,"Rising internet access and an active civic and political environment in Uruguay between 2006 and 2011 likely made petition-signing easier and more common, so fewer people would report ""Not done."" ANSWER: A",stop,False,6819f1c7ce79791d6929d85e40295bdb315fdd24bf6a2bad49755a20d0aec413,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: Have you done the following activity in the last five years? Please answer yes or no.
+Activity: signing a petition
+
+### Task:
+
+Think about the share of people in Uruguay who gave the answer ""Not done"". Did that share change between 2006 and 2011?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,E033,ordinal_scale,ordered,True,0.0614984015353157,toward_low,toward_low,True,True,,"Uruguay elected and continued to be governed by the left-leaning Broad Front (Vázquez 2005–2010, then Mujica from 2010) and saw consolidation of leftist policies and popularity, so self-placement likely shifted modestly toward the left by 2011.  
+ANSWER: B",stop,False,431319307e9d32afdf8c7a6f260d9c9cbbade8539c63f63a38307ac4a6b9aefd,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: In political matters, people talk of ""the left"" and ""the right."" How would you generally place your views on this scale?
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Right""
+B: It moved toward ""Left""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,E039,ordinal_scale,ordered,True,0.050741902311945496,toward_high,toward_high,True,True,,"Between 2006 and 2011 Uruguay was governed by the left-leaning Broad Front which strengthened social programs and regulatory oversight; public opinion likely became slightly more skeptical of unfettered market competition and more supportive of collective/regulated approaches.  
+ANSWER: A",stop,False,d43115b0900645c78ad926d0132bf8bcd0987301a031393bf07fb803325ade01,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.  
+Issue: Competition good or harmful
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Competition is harmful""
+B: It moved toward ""Competition is good""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,E069_01,ordinal_scale,ordered,True,0.07550467112193267,toward_high,toward_high,True,True,,"Uruguay is one of the most secular countries in Latin America with low religious attendance and growing social liberalization under the 2005–2015 governments, so confidence in churches likely fell slightly between 2006 and 2011.  
+ANSWER: A",stop,False,eb61b7f876d720c4a9793f396d719ec85c7df053dc76f391f104bf98e618cdff,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: The Churches (mosque, temple etc.)
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,E069_13,ordinal_scale,ordered,True,0.07545373237014101,toward_low,toward_low,True,True,,"Uruguay experienced continued economic growth and recovery after the 2008–09 shock, with improving living standards and stronger public–private cooperation under Frente Amplio policies, so public confidence in major companies is likely to have edged upward. ANSWER: B",stop,False,efc7a3401a049343a213db7e1567d389fdc3284e97d3e67516042f2c9bc0fc8b,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Major Companies
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,E069_14,ordinal_scale,ordered,True,0.06832857899424667,toward_low,toward_low,True,True,,"Confidence in environmental organizations in Uruguay likely increased between 2006 and 2011, as environmental issues and NGO visibility grew under a left-leaning government that engaged with social and ecological policy, strengthening public trust in civil-society actors. Small, active civil society and rising public concern about environmental matters make a shift toward greater confidence more probable.
+
+ANSWER: A",stop,False,2d4ef1f417abb814b7c40aa7a6cbe181fab31e599961328140b9e723c3bd688f,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Environmental organizations
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,E069_15,ordinal_scale,ordered,True,0.058208127298085416,toward_low,toward_low,True,True,,"Women's organizations gained visibility and influence under the Broad Front governments (2005–2015), which promoted gender policies and collaborated with civil society, so public trust in these groups likely increased between 2006 and 2011. 
+
+ANSWER: B",stop,False,9a53131e0266a86b8d1b74f8c76acf740795f6b435c1608c320c300d58f9e7b7,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Women’s organizations
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,E069_18A,ordinal_scale,ordered,True,0.07301691600664902,toward_low,toward_low,True,True,,"Uruguayans became more favorable toward regional institutions between 2006 and 2011, driven by the Broad Front governments' active engagement with and promotion of MERCOSUR and new bodies like UNASUR, which raised the legitimacy and visibility of regional cooperation. 
+
+ANSWER: A",stop,False,9c7b9c5ab8799f978a27cf30e31392c960ddfb8c6343e6e85799909ac38b4dea,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: How much confidence do you have in major regional organizations?
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,E069_26,ordinal_scale,ordered,True,0.07301691600664902,toward_low,toward_low,True,True,,"Uruguay experienced steady economic recovery and stronger regional cooperation under left-leaning governments from 2005 onward, and public attitudes toward regional institutions like Mercosur generally improved as trade and political ties with neighbors strengthened. Therefore the typical response moved toward greater confidence.
+
+ANSWER: A",stop,False,2dc5eebbadb4582464542defc05ef91f8b3eb0dde8dd3efc00dad376c399e2d6,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: The Mercosur
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,E069_40,ordinal_scale,ordered,True,0.0555946229192848,toward_low,toward_low,True,True,,"Uruguay's left-leaning governments (2005 onward) expanded social programs and partnered with civil society, increasing the visibility and perceived effectiveness of charities; economic stability and improved social indicators likely raised public trust in humanitarian organizations between 2006 and 2011. Therefore the typical answer probably shifted toward greater confidence.
+
+ANSWER: A",stop,False,8a82c6f542b86837c9e8bda1a912dac568b89295ba73893671e59125c21916d5,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Charitable or humanitarian organizations
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,E124,ordinal_scale,ordered,True,0.1655527320896035,toward_high,toward_low,False,True,,"Uruguay was already a stable, rights-respecting democracy in 2006 and under the Broad Front (Vázquez then Mujica) 2006–2011 it saw continued social inclusion, human-rights-focused policies and improved living conditions, which likely raised popular confidence in respect for individual rights. 
+
+ANSWER: B",stop,False,fb18168dbd84aa17b207a5410ecbca023f78796dd2cf68fba1800d4a1dcf0ebb,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: How much respect is there for individual human rights in this country nowadays?
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""There is no respect at all""
+B: It moved toward ""There is a lot of respect for individual human rights""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,E217,ordinal_scale,ordered,True,0.11300483390135488,toward_high,toward_high,True,True,,"Uruguay between 2006 and 2011 experienced visible technology diffusion (notably the Plan Ceibal laptop program from 2007) and rising internet/mobile access alongside health and social-service improvements, which likely raised popular appreciation of science and technology. Therefore responses moved toward stronger agreement.
+
+ANSWER: A",stop,False,454aaf0a295fd0aed176c97c402798b5ea72a65274257a339f1f53eb55fb112c,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: I would like to read a statement and ask how much you agree or disagree with it. For this question, a 1 means that you “completely disagree” and a 10 means that you “completely agree.”
+Statement: Science and technology are making our lives healthier, easier, and more comfortable
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Completely agree""
+B: It moved toward ""Completely disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,E218,ordinal_scale,ordered,True,0.14461283741675426,toward_high,toward_high,True,True,,"Uruguay rolled out Plan Ceibal from 2007 onward and rapidly expanded school IT access and internet connectivity, making the benefits of science and technology much more visible for the next generation; economic stability under progressive governments likely reinforced that positive view. Therefore the typical response moved toward greater agreement with the statement.
+
+ANSWER: B",stop,False,d11ca6c6e4c53cad645fb52f3a1d573ef28924051faa4c15d0d490c3f701774b,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: I would like you to tell me how much you agree or disagree with the following statement. A 1 means that you “completely disagree” and a 10 means that you “completely agree.”
+Statement: Because of science and technology, there will be more opportunities for the next generation
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Completely disagree""
+B: It moved toward ""Completely agree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,E222,ordinal_scale,ordered,True,0.14829468372714938,toward_low,toward_low,True,True,,"Between 2006 and 2011 Uruguay saw consolidation of Broad Front governance and rising internet/social-media use, which broadened the repertoire of political actions (online petitions, blogs, campaigns) that respondents could report as ""other."" That likely raised the share saying they ""have done"" an ""other"" action rather than rejecting it.
+
+ANSWER: A",stop,False,106f4b699ca05afdbfb84a18953faeec4e9173721cbede96a5db01be65648375,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: Now I’d like you to look at this card. I’m going to read out a form of political action that people can take, and I’d like you to tell me whether you have done this, might do it, or would never do it under any circumstances.
+Action: Other (write in)
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Have done""
+B: It moved toward ""Would never do""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,E229,ordinal_scale,ordered,True,0.058747816435539925,toward_low,toward_high,False,True,,"Uruguay experienced continued democratic consolidation under the Broad Front government (2005–2010 and into 2011) with strong institutions and a public discourse that emphasized rights, so people likely placed slightly more weight on civil rights as essential to democracy. 
+
+ANSWER: B",stop,False,7cb67d1c8a9f3431b3b1dc37dbf5509b76c3f99820fbd216a7dd5fd651492857,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: Civil rights protect people’s liberty from state oppression
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""It is against democracy (spontaneous)""
+B: It moved toward ""An essential characteristic of democracy""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,E234,ordinal_scale,ordered,True,0.10715566197211893,toward_high,toward_high,True,True,,"Uruguayans likely became more positive: between 2006 and 2011 Uruguay expanded access to ICTs (notably the Plan Ceibal laptop program from 2007), enjoyed relatively strong economic performance, and saw growing everyday benefits from technology. These developments would push typical answers toward ""a lot better off.""
+
+ANSWER: B",stop,False,43d56b5f7acb499ac578fb34e2d479c25e4c85578a1f1c5162c557e3268eded0,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: All things considered, would you say that the world is better off or worse off because of science and technology? Please indicate your view on this scale: 1 means “the world is a lot worse off,” and 10 means “the world is a lot better off.”
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A lot worse off""
+B: It moved toward ""A lot better off""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,E255,ordinal_scale,ordered,True,0.14700793232600867,toward_high,toward_high,True,True,,"Uruguay sharply expanded access to personal computers and internet between 2006 and 2011 (notably the Plan Ceibal laptop program and rising broadband/mobile connectivity), so regular use became more common. Overall the typical answer moved toward more frequent PC use.
+
+ANSWER: A",stop,False,6dd5297ad3ed9dc1cd6900adde34128e369e0573ccd37894cb8d8d1fd17ba7dc,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: How often do you use a personal computer?
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Frequently""
+B: It moved toward ""Never""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,F025,categorical,option,True,0.10355734406438627,0,0,True,True,,"Uruguay is one of the most secular countries in Latin America; between 2006 and 2011 the trend was a decline in Catholic affiliation and a rise in people reporting no denomination, so the largest gain went to non-affiliated respondents. ANSWER: 7",stop,False,6e9fcb9ee3f1d5f7c2e0037e86737fe24a3c7e69d705373a8bb04c113d363b8e,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: Which of the following religious denominations do you belong to?
+
+### Task:
+
+Think about the share of people in Uruguay choosing each answer in 2006 and in 2011. Which answer gained the most support (the largest increase in share)?
+
+1: Other Christian (Evangelical/Pentecostal/Fee church/etc.)
+2: Roman Catholic
+3: Muslim
+4: Other
+5: Buddhist
+6: Jew
+7: Do not belong to a denomination
+8: Hindu
+9: Protestant
+10: Orthodox (Russian/Greek/etc.)
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <number>"
+URY,5,6,2006,2011,F063,ordinal_scale,ordered,True,0.07371960720685958,toward_low,toward_low,True,True,,"Uruguay was already one of Latin America's most secular societies, and between 2006 and 2011 ongoing secularizing social trends and progressive policymaking likely reduced the reported importance of God slightly. 
+
+ANSWER: A",stop,False,0f17e007cbdc736af64aa5baeb85acc8e2fdf5a12e711d5087a24d7e667c9822,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: How important is God in your life? Please use this scale to indicate: 10 means “very important” and 1 means “not at all important.”
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not at all important""
+B: It moved toward ""Very important""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,F115,ordinal_scale,ordered,True,0.0666827487496182,toward_low,toward_low,True,True,,"Between 2006 and 2011 Uruguay experienced improving economic conditions and strengthened public institutions under Frente Amplio, which likely reduced tolerance for petty noncompliance like fare evasion as social norms and trust in rules rose. 
+
+ANSWER: B",stop,False,646880ab84ce2611afe426f2022752dd77faaabaa1ce708d8997b9077b65288b,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.  
+Statement: Avoiding a fare on public transport
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,F118,ordinal_scale,ordered,True,0.07710549878199455,toward_high,toward_high,True,True,,"Uruguay is one of the more secular and politically progressive countries in Latin America, and between 2006 and 2011 social liberalization under the Frente Amplio and broader regional/global trends increased tolerance toward LGBT people. The typical response therefore shifted toward greater acceptance — i.e., toward ""Always justifiable.""
+
+ANSWER: B",stop,False,ca4205613a7495a67c425da1dd4d7e3975b7d263cc05ddb866d0a68ac6a5a266,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Homosexuality
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,F119,ordinal_scale,ordered,True,0.05416642249277924,toward_low,toward_high,False,True,,"Uruguay's political and cultural trajectory in that period was toward greater social liberalization and secular attitudes (and prostitution is legally regulated), so public opinion likely drifted slightly toward greater acceptance of prostitution. 
+
+ANSWER: B",stop,False,7e7b515bf9b35d95afe0a4bffbbefd8f294101fbeaa38343b49b507095859ac0,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me for the following statement whether you think it can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Prostitution
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,F120,ordinal_scale,ordered,True,0.06987391047717606,toward_low,toward_high,False,True,,"Between 2006 and 2011 Uruguayan public opinion became more permissive on abortion, reflecting growing secularization and expanding support under left-leaning governments and activism that led to legalization in 2012. Therefore the typical response moved toward ""Always justifiable.""
+
+ANSWER: A",stop,False,8d81cd87b383989af0b178492904e85bfc30ef501afb1cf669bf9279bad06bfd,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Abortion
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,F123,ordinal_scale,ordered,True,0.07098295740754641,toward_low,toward_high,False,True,,"Uruguay is one of the most secular and socially liberal countries in Latin America, and between 2006 and 2011 there was continued generational liberalization and greater emphasis on personal autonomy; these trends make it more likely that responses shifted toward greater acceptance of suicide being justifiable in some circumstances. 
+
+ANSWER: A",stop,False,2e509d8d53551e2b9800b9bf0797dbd007e68b6fbca05c96e1fc48030ee93b76,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Suicide
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,G006,ordinal_scale,ordered,True,0.08986692848098558,toward_high,toward_low,False,True,,"Uruguay experienced steady economic growth and improvements in social inclusion under the Broad Front governments from 2005–2011, alongside continued political stability and strengthened institutions, which tend to raise citizens' national confidence. Therefore the typical answer moved toward greater pride.
+
+ANSWER: B",stop,False,1f17368100a4d62cd6fb988322f084fd7a1eef068222cbb4b89696ae5ab23b7c,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: How proud are you to be of the nationality of this country?
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not at all proud""
+B: It moved toward ""Very proud""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,G007_18_B,ordinal_scale,ordered,True,0.06664504370926386,toward_high,toward_low,False,True,,"Uruguay saw continued economic improvement, falling poverty and stable democratic governance under Frente Amplio between 2006 and 2011, factors that tend to raise interpersonal and neighborhood trust rather than erode it. Therefore the typical response shifted toward greater trust.
+
+ANSWER: B",stop,False,e9af1d943eeb9fbff0530982ba22e3b8d444e9bfca8525a145211233249a0fb5,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: I’d like to ask you how much you trust people from a particular group. Could you tell me whether you trust people from your neighborhood completely, somewhat, not very much or not at all?
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Do not trust at all""
+B: It moved toward ""Trust completely""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,G007_33_B,ordinal_scale,ordered,True,0.11277274850150151,toward_high,toward_low,False,True,,"Uruguay experienced stable growth and progressive social policies through this period that tended to strengthen social cohesion and interpersonal trust, so the typical response likely shifted modestly toward greater confidence in people one knows. ANSWER: B",stop,False,997e53c773adf102cdf5c96f5ae4de7b037798eefe26ca017808f42c004f1e40,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: I’d like to ask you how much you trust people from a particular group. Could you tell me if you trust people from this group completely, somewhat, not very much, or not at all?
+Group: People you know personally
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Do not trust at all""
+B: It moved toward ""Trust completely""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,G007_34_B,ordinal_scale,ordered,True,0.06972029846900586,toward_high,toward_low,False,True,,"Uruguay experienced continued economic growth and stable democratic consolidation under the Broad Front from 2006–2011, conditions that tend to raise generalized interpersonal trust, and survey measures of trust in strangers showed a slight increase over that period. ANSWER: A",stop,False,70a689c5d288ff81576f5ce535acdd2bd58217047026a91fb8d75d0eb5473bb8,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: I’d like to ask you how much you trust people from a specific group. Could you tell me whether you trust people you meet for the first time completely, somewhat, not very much, or not at all?
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Trust completely""
+B: It moved toward ""Do not trust at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,G007_35_B,ordinal_scale,ordered,True,0.09221312819302077,toward_high,toward_low,False,True,,"Uruguay is highly secular and became more socially liberal and inclusive under Broad Front governments in this period, with no major religious conflict to drive fear of other faiths; thus attitudes likely grew slightly more trusting of people of other religions.  
+ANSWER: B",stop,False,2163e832de4ca3b06c5c638dc108433cbc0c382d0c7d5898c68e9f55c9fcc67e,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: I’d like to ask you how much you trust people from a specific group. Do you trust people from this group completely, somewhat, not very much or not at all?
+Group: People of another religion
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Do not trust at all""
+B: It moved toward ""Trust completely""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+URY,5,6,2006,2011,G007_36_B,ordinal_scale,ordered,True,0.07876984126984125,toward_high,toward_low,False,True,,"Between 2006 and 2011 Uruguay saw continued Broad Front governance, rising social inclusion and regional integration (MERCOSUR) alongside stable economic conditions, which likely increased openness toward foreigners. Overall the typical response shifted slightly toward greater trust in people of another nationality.
+
+ANSWER: A",stop,False,8876fbbcdd0cdfe9c305801f59a62c97ace3b6aa74ae1404618027c9a2cc44c0,"### Inputs:
+
+Country: Uruguay
+Year 1: 2006
+Year 2: 2011
+Question: I’d like to ask you how much you trust people from a particular group. Do you trust people from this group completely, somewhat, not very much, or not at all?  
+Group: People of another nationality
+
+### Task:
+
+Think about how the people of Uruguay, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Trust completely""
+B: It moved toward ""Do not trust at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
