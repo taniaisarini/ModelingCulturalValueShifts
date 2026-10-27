@@ -73,6 +73,9 @@ settled yet — this is a snapshot to work from, not a plan. Update this doc as 
 > on 63% (vs 3-36% from the gpt-4.1-mini judge); 97-100% on unchanged pairs. Against Claude's manual reading of 41 pairs, gpt-4.1-mini
 > judge agrees 80%, gpt-5 judge 83% (not a meaningful difference; the 10 gpt-5 pairs were picked using the 4.1-mini verdicts).
 
+> **GDELT cost notes (2026-10-27):** the reasoning behind the wrapper (how BigQuery bills, partitioned tables, v1/v2 table names,
+> no-billing sandbox, setup on a new machine, open risks) is written up in [GDELT_BIGQUERY.md](GDELT_BIGQUERY.md).
+
 > **GDELT BigQuery wrapper (added 2026-10-19 by another session, copied into main 2026-10-22):** `code/gdelt_bq.py` + offline tests
 > `code/test_gdelt_bq.py` (10 pass in env `wvs`; both untracked in main; also on branch `worktree-gdelt-wrapper`, 3 commits, unmerged,
 > worktree in `.claude/worktrees/gdelt-wrapper`). Cost-guarded access to GDELT events on BigQuery: no raw SQL (fixed templates:
