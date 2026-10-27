@@ -28,7 +28,8 @@ ROOTS = [f"{i:02d}" for i in range(1, 21)]
 FORMATS = {"ordinal_scale", "binary", "mention_flag"}
 
 
-def event_levels():
+def event_shares_monthly():
+    """(country [ISO], month) -> share of each root category (%) that month, index name 'country','month'."""
     df = pd.read_parquet(SRC, columns=["date", "country", "event_code", "n_events"])
     df = df[df["country"].isin(FIPS2ISO)].copy()
     df["month"] = df["date"].dt.to_period("M").dt.to_timestamp()
@@ -37,13 +38,21 @@ def event_levels():
     m = ok.groupby(["country", "month", "root"])["n_events"].sum().unstack("root", fill_value=0).reindex(columns=ROOTS, fill_value=0)
     m = m.join(total, how="right").fillna(0)
     share = m[ROOTS].div(m["total"].replace(0, np.nan), axis=0) * 100
+    share.index = pd.MultiIndex.from_tuples([(FIPS2ISO[c], mo) for c, mo in share.index], names=["country", "month"])
+    return share
+
+
+def event_levels():
+    share = event_shares_monthly()
+    share = share.copy()
     share["year"] = share.index.get_level_values("month").year
     lv = share.groupby(["country", "year"])[ROOTS].mean()
-    lv.index = pd.MultiIndex.from_tuples([(FIPS2ISO[c], y) for c, y in lv.index], names=["country", "year"])
     return lv
 
 
-def anchors():
+def _question_country_wave_stat(stat_name, stat_fn, min_n=100):
+    """Shared scaffold for anchors() and rescaled_means(): per (question, country, wave), stat_fn(v[valid], rng) ->
+    a float, over the eligible-format questions with >= min_n valid respondents in that country-wave."""
     cats, parsed = load_question_info()
     cats = cats.set_index("code")
     qs = [c for c in cats.index if cats.loc[c, "format"] in FORMATS and "+" not in c]
@@ -64,19 +73,32 @@ def anchors():
         rng = scale_range(q, parsed) or (v[valid].min(), v[valid].max())
         if rng[1] == rng[0]:
             continue
-        high = valid & (v > (rng[0] + rng[1]) / 2)
         n = valid.groupby(df["cw"]).sum()
-        k = high.groupby(df["cw"]).sum()
-        r = pd.DataFrame({"n": n, "high": k})
-        r = r[r["n"] >= 100]
-        r["share_high"] = 100 * r["high"] / r["n"]
+        stat = stat_fn(v, valid, rng).groupby(df["cw"]).mean()
+        r = pd.DataFrame({"n": n, stat_name: stat})
+        r = r[r["n"] >= min_n]
         r["code"] = q
-        out.append(r[["code", "n", "share_high"]].reset_index())
+        out.append(r[["code", "n", stat_name]].reset_index())
     a = pd.concat(out, ignore_index=True)
     a["country"] = a["cw"].str.split("|").str[0]
     a["wave"] = a["cw"].str.split("|").str[1].astype(int)
     a["year"] = a["cw"].map(year)
     return a.drop(columns="cw")
+
+
+def anchors():
+    """Per (question, country, wave): percent of valid respondents on the HIGH side of the scale."""
+    def stat(v, valid, rng):
+        return (100 * (valid & (v > (rng[0] + rng[1]) / 2))).where(valid)
+    return _question_country_wave_stat("share_high", stat)
+
+
+def rescaled_means():
+    """Per (question, country, wave): mean of the response rescaled to 0-1 (min->0, max->1), for differencing
+    changes across questions that use different scales (used by event_value_fpca.py)."""
+    def stat(v, valid, rng):
+        return (((v - rng[0]) / (rng[1] - rng[0]))).where(valid)
+    return _question_country_wave_stat("mean_rescaled", stat)
 
 
 def main():

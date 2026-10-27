@@ -1,6 +1,6 @@
 # Status
 
-Inventory of what exists in this repo; the dated notes below are the running log (last updated 2026-10-26). No research question is
+Inventory of what exists in this repo; the dated notes below are the running log (last updated 2026-10-27). No research question is
 settled yet — this is a snapshot to work from, not a plan. Update this doc as code/data/results change.
 
 > **2026-09-24: the LLM prediction code, prompts and results described below (the "LLM pipelines" section and
@@ -140,6 +140,170 @@ settled yet — this is a snapshot to work from, not a plan. Update this doc as 
 > compare countries / sub-events / events and survey answers / code meanings. Scope of the correlations: the 20 root categories x 363 of the 905 WVS questions (scale,
 > yes/no and select-many only; pick-one, ranked and numeric questions excluded). Not yet done: average-answer (mean) version of the survey side, sub-event-level
 > correlations, Step 2 (event-level detail with the 33 columns).
+
+> **Slurm on Gilbreth (2026-10-26):** `slurm/job.sbatch` + `slurm/README.md`. No CPU-only partition exists, and the
+> scheduler rejects any job requesting zero GPUs (`Job rejected: No GPUs requested`, undocumented) — every job, even
+> pure-CPU ones, must pass `--gres=gpu:1`. Account/partition/QOS/time/cpus/mem/gpu are all sbatch flags at submit time
+> (not hardcoded), since the right choice depends on live availability (`slist`, `squeue --qos=standby`). Two lanes:
+> `--qos=standby` (free, 4h max, cluster-wide cap of 24 GPUs in use across all users, preemptible, works on any of
+> the 3 accounts x any partition since `AllowAccounts=ALL` everywhere — not limited to each account's own GPU type)
+> for short/experimental jobs; `--qos=normal` (up to 14 days, charged against that account's allocation) for
+> long-running jobs. `job.sbatch` activates conda env `wvs` (`set -u` had to be dropped — conda's own
+> activate/deactivate hooks reference unbound vars) and `exec`s the command passed to it. Verified end-to-end: a real
+> standby job (csml/a30/gres=gpu:1) activated `wvs`, imported `pandas`, exited 0 in 12s.
+
+> **Planned next experiment: can GDELT predict WVS shifts? (2026-10-26, not started — plan only, drafted on another
+> machine)** Two ideas, both pending:
+> - **Idea 1, no-LLM signal check.** All 29 countries, waves 5-7, ordered/share-type questions first (thousands of
+>   examples). Features: change in the 20 event-category shares between survey years + change in total volume/tone;
+>   question section, format, and its usual direction across training countries; the first-wave answer level
+>   (regression to the mean — the LLM baseline never saw this, so including it changes the setup vs. the existing
+>   53.7% number). Models: "question's usual direction" baseline -> logistic regression -> gradient-boosted trees.
+>   Eval: leave-one-country-out, over a grid (GDELT window = survey year vs. whole interval; shares vs. rates vs.
+>   volumes; root categories vs. sub-events; question section/format), then a shuffle-country null over the same
+>   grid so "best of grid" is judged against chance.
+> - **Idea 2, LLM + GDELT summary.** Rerun the same 697 questions (gpt-4.1-mini) adding a short summary of how the
+>   country's event mix changed between the two survey years; compare against the 53.7% baseline. Prompt text (must
+>   never mention the survey) needs to be shown and approved before any call.
+> - **Capturing the timeline** (open question, not decided): two-endpoint change may be too thin. Options: monthly
+>   path summaries (trend, volatility, biggest shock + recency, gap from pre-survey baseline); a fixed-length
+>   resampled shape + PCA; a small 1D conv sequence model. Should use each country's actual fieldwork months, not
+>   just years.
+> - **Architecture for the timeline model** (not decided, opinion only, nothing chosen): must not be an LLM/black
+>   box, must capture semantics (word embeddings) and time/relations. Options: (1) question-conditioned temporal
+>   encoder — question embedding attends over the monthly event series, event codes embedded from official names;
+>   (2) low-rank bilinear model, question embedding x GDELT-trajectory embedding — simplest, most interpretable;
+>   (3) relational graph over countries/questions/event codes — likely overfits with only 29 countries; (4)
+>   latent dynamic/state-space model, hidden value trajectories driven by events, survey waves as noisy readings.
+>   Leaning (opinion, not a decision) was (2) first, then (1) if timing turns out to matter.
+> - **Why this is a hard sell:** the correlation analysis already run (`event_value_correlations.py` /
+>   `event_value_changes.py` / `event_value_significance.py`, see above) is the only part of this actually done, and
+>   found the GDELT signal alone looks weak — only 2 of 28,120 correlations survive correction (Disapprove x
+>   "secure in neighborhood" 6->7, r=+0.85 n=29, +0.72 without Egypt outlier; Appeal x "member of local community"
+>   5->6, r=-0.89 n=22), plus 39 suggestive-only pairs in the wave-7 cross-country slice. Also: GDELT 1.0/2.0 counts
+>   and tone aren't comparable across the 2015-02-18 switch, which the wave 5-7 window straddles; the 20 event
+>   shares sum to 100% so they move against each other; GDELT measures news coverage, not events themselves.
+>
+> **Monthly-trajectory correlation, first pass (2026-10-27, done, result: no signal found):** decided against a
+> per-question predictive model (median 26, often <20 countries per question once both waves require >=100
+> respondents -> p>>n for any multi-feature logistic regression; even 1 feature would make test-set accuracy swing
+> ~+-10pp on luck alone) in favor of staying correlational, like the existing yearly-level analysis above, but with
+> the monthly path instead of just the two endpoint years. New: `event_value_inputs.event_shares_monthly()`
+> (monthly share matrix, factored out of `event_levels()`, output unchanged -- verified against the old
+> `event_levels.csv` to 1e-14) and `code/event_value_monthly_changes.py`. For each country x transition (5->6,
+> 6->7), the monthly share of each of the 20 CAMEO categories over all months from Jan of the first wave's survey
+> year through Dec of the second (24-132 months depending on country) is reduced to 4 fixed-size features: level
+> (mean), trend (slope, points/year), volatility (std), shift (last 6mo mean - first 6mo mean) = 80 features,
+> correlated (Pearson, across the 29 countries) against each question's change in anchor % (same Y as
+> `event_value_changes.py`, for comparability), with a 200-shuffle permutation null (whole country feature vector
+> moved to another country) for a family-wise p per slice. Result: nothing beats chance at p<0.05 in either slice
+> (29/29 and 29/29 countries covered). Best pairs: 5->6 Appeal-trend x "member of local community" r=-0.83 n=22
+> p=0.12; 6->7 Disapprove-trend x "secure in neighborhood" r=+0.82 n=29 p=0.15 -- same pair and sign as the one
+> yearly-level correlation above that *did* survive correction, just diluted here by testing 4x more features
+> (80 vs 20) against the same permutation budget. Conclusion so far: more granular GDELT features don't surface
+> anything the yearly endpoints were missing; the signal (if any) stays weak at n=29. Output:
+> `gdelt_plots/event_value_monthly_changes/{correlations_long.csv,top_pairs.csv}`, no plots (first look only).
+> Not done yet: Benjamini-Hochberg q-values (only family-wise p so far, unlike `event_value_significance.py`'s
+> fuller treatment of the yearly version) and a robustness check (e.g. leave-one-country-out) on the two near-miss
+> pairs above.
+>
+> **Functional-PCA + elastic net (2026-10-27, in progress): supersedes the univariate correlation tests above per
+> explicit direction — "forget the earlier univariate correlation tests; this replaces them".** New approach: does
+> the SHAPE of a country's monthly GDELT trajectory (not single summary stats) predict the SIZE of a question's
+> change, fit per question with regularization instead of tested one feature at a time. New file
+> `code/event_value_fpca.py`; `event_value_inputs.py` gained `event_shares_monthly()` (monthly share matrix,
+> factored out of `event_levels()`, verified unchanged to 1e-14) and `rescaled_means()` (per question/country/wave,
+> mean response rescaled 0-1, so changes are comparable across questions with different native scales -- replaces
+> `anchors()`'s share-above-midpoint as the Y source for this line of work; `anchors()` itself is untouched and
+> still used by `event_value_correlations.py`/`event_value_changes.py`/`event_value_monthly_changes.py` above).
+> - **Fieldwork month** (`fieldwork_months()`): median(S022) per country-wave, not the exact interview date -- `S012`
+>   (exact date) only covers 46/87 country-waves, `S022` (interview year+month) covers all 87. Cached in
+>   `gdelt_plots/event_value_fpca/fieldwork_months.csv`.
+> - **Curve** (`log_centered_curves()`): per country x category x transition, log(share + 0.1) each month from the
+>   earlier wave's fieldwork month through the month before the later wave's, minus the mean of log(share + 0.1)
+>   over the 24 months before the earlier wave's fieldwork month (baseline), resampled to a fixed 12 points
+>   (`np.array_split` into 12 chunks, mean each) so interval length (48-132 months, varies by country) doesn't
+>   matter -> `(29 countries, 20 categories, 12 points)` per transition, 29/29 countries covered both transitions.
+> - **Functional PCA** (`fpca_per_category()`): per category x transition, PCA across the 29 countries' 12-point
+>   curves, first 3 components kept (44-82% variance on component 1 alone, a smooth rising/falling shape in every
+>   category checked; components 2-3 are localized early/mid-interval bumps) -> 60 features/country (20x3; a
+>   20-feature, component-1-only version also implemented). X-only, fit on all 29 countries (no Y leakage).
+> - **Per question** (`fit_question()`): ElasticNetCV (l1_ratio in [0.5, 1.0], 5-fold inner CV -- narrowed from
+>   [0.2,0.5,0.8,1.0] for speed, cut per-question fit time 6.4s -> 1.6s) on standardized fPCA scores + the
+>   country's earlier-wave mean_rescaled (regression-to-mean control), leave-one-country-out CV refitting the
+>   scaler and both models inside each fold (no held-out-country leakage into standardization). Reported: r2_oos
+>   (vs. the training-fold mean), r2_ctrl_only (plain OLS on the control alone, no CV grid), baseline =
+>   max(0, r2_ctrl_only), gain = r2_oos - baseline, sign accuracy vs. the training-fold majority-sign rate.
+>   88 eligible questions (>=20 countries with both waves matched) for 5->6, 113 for 6->7 (fixed a bug in the
+>   eligibility filter that was checking ">=1 country per wave independently" instead of the matched-pair count).
+> - **Dry run (3 questions, done):** pipeline runs end to end, no crashes; shapes and plots match spec. Sanity
+>   check worth noting: A008 ("feeling of happiness") 6->7 has r2_oos=0.618 almost entirely from the control
+>   (r2_ctrl_only=0.625, gain=-0.008) -- i.e. regression-to-the-mean explains it, GDELT adds nothing, consistent
+>   with the weak-signal conclusion above. G020/H001 are genuinely single-transition questions (not a bug): G020
+>   only asked in waves 5-6, H001 only in 6-7.
+> - **Steps 5 (permutation null, parallel via `ProcessPoolExecutor`) and 6 (fit 5->6 full-data, freeze the model,
+>   predict 6->7 by projecting 6->7 curves onto the 5->6 PCA components, not refit) are built** (`permutation_null()`,
+>   `replicate()`, `full_run()`). 2-shuffle local sanity check passed (no crash; shuffled stats were statistically
+>   unremarkable vs. observed, e.g. 6->7 observed mean_gain=-0.189 fell between the two null shuffles' -0.153/-0.109).
+> - **First full-run submission (job 12032557, csml/a30/standby, 16 cpus, --time=02:30:00): 5->6 completed, 6->7
+>   hit the time limit mid-permutation (112/200) and was killed.** 5->6 result (88 questions, 200 perms): **no
+>   summary statistic beats chance** -- p=0.81 (n_beat_baseline), p=0.21 (mean_gain), p=0.63
+>   (mean sign_acc_minus_majority); none near the 1000-shuffle-extension threshold. Saved:
+>   `gdelt_plots/event_value_fpca/{results_5to6.csv,null_stats_5to6.csv,pvalues_5to6.csv}`.
+>   5->6 wall time was 4495s for 88 questions x 200 perms over 16 workers -- ~4.1s/question-fit, 2.5x slower than
+>   the 1.6s measured for one fit in isolation. Suspected cause: each worker's own BLAS calls (numpy/sklearn)
+>   spawning threads on top of the already-parallel 16 worker processes, oversubscribing the allocated CPUs.
+>   Fix applied: `threadpoolctl.threadpool_limits(1)` per worker + `OMP/OPENBLAS/MKL_NUM_THREADS=1` env vars
+>   (`code/event_value_fpca.py`). A local re-check at n_jobs=8 did not clearly confirm the fix (interactive node
+>   is itself shared with other users' jobs, an unreliable testbed) -- not conclusive, abandoned rather than keep
+>   burning time on a side diagnostic. `full_run()` also gained a `resume=True` default: a transition whose
+>   `results_<label>.csv` already exists is loaded from disk instead of recomputed.
+> - **Resubmitted (job 12033617, same account/partition/resources, --time=03:00:00) to resume: 6->7 (full 200
+>   perms, since none of its partial 112 were saved) + replication**, budgeted off the worst-case *measured*
+>   rate (4.1s/question-fit) rather than the hoped-for fixed rate, since the fix wasn't locally confirmed. Not
+>   back yet as of this note.
+>
+> **LLM mistake analysis + two data-pipeline fixes (2026-10-27).** Looked at where the five-country gpt-4.1-mini
+> direction baseline (697 predictions, 53.7% accuracy) goes wrong, using the existing `reasoning_analysis/`
+> tfidf/embedding clusters (no new LLM calls). Worst themes: civic/organization **membership questions, 29.3%
+> accuracy** -- worse than chance; the model assumes "political upheaval -> people disengage" and is usually
+> wrong. Military-coup narratives ~45-49%, also near/below chance. Best: internet/media-use questions, 86.1% --
+> a safe global monotonic trend. Common pattern: the model writes one historical-event paragraph (revolution,
+> coup, instability) per country-period and reuses it to answer unrelated questions, rather than reasoning about
+> the specific question.
+>
+> - **Demographic splicing (new `code/demographic_splice.py`): does the LLM's prediction secretly align with one
+>   demographic subgroup better than the population it was asked about? No.** Reused `change_detection.py`'s
+>   existing significance protocol, run on data filtered to sex (X001), age (X003R, coarsened <45/45+ for power),
+>   and settlement size (X049, coarsened smaller/larger; skipped for a country-wave with <50% coverage) -- no new
+>   LLM calls. Every subgroup's accuracy against the 697 existing predictions (48.8-50.5%, near chance) was
+>   *lower* than the population accuracy (53.7%) the model was actually asked about; only 16/697 rows (2.3%) were
+>   "wrong vs. population, right vs. one subgroup," spread thin across groups -- not a real pattern. Output:
+>   `gdelt_plots/demographic_splice/`.
+> - **Two question-format bugs found and fixed while auditing format coverage, both verified to change only
+>   labels, not any significance decision or effect size (checked: identical p-values/effects before and after):**
+>   - `change_detection.py`'s `detect_country_changes()` was mislabeling every `numeric_scale` question's result
+>     row as `format="ordinal_scale"` (a wrong hardcoded string passed into `_test_scale`/`_row`); the actual
+>     test behavior was already correct for numeric_scale (same branch as ordinal_scale), so this cost nothing
+>     scientifically, but it meant the real format was lost downstream. Fixed: pass the question's own `fmt`
+>     through instead of overwriting it.
+>   - `direction_baseline.py`'s `FAMILY` dict (maps a question format to its LLM prompt style) was missing a
+>     `"numeric_scale"` entry; before the mislabeling fix this didn't matter (those questions were silently
+>     riding along disguised as `ordinal_scale`, which has the same entry), but once the mislabeling is fixed
+>     this filter would have DROPPED all ~90 numeric_scale questions (confirmed some, e.g. A170 "satisfaction
+>     with life", A168A, A173, E033, were already in the existing 697-row results, just mislabeled). Fixed:
+>     added `"numeric_scale": "ordered"` (same prompt family as ordinal_scale -- confirmed its prompt builder,
+>     `_describe_scale()`, already handles numeric_scale's "only endpoints labeled" shape correctly).
+>   - Net effect of both fixes together: the existing 697-row experiment's results are unaffected (same questions,
+>     same truth, same effect sizes); future runs now report numeric_scale questions under their correct format.
+> - **Not done yet (format audit originally scoped as three steps; did (1) demographics and found/fixed (2) this
+>   one concrete bug; have not done (3) a full sweep of the other 7 formats for similar issues):** `categorical`
+>   (54 codes), `forced_choice` (22), `ranked_choice` (20), `count` (1), `knowledge` (3) were spot-checked only
+>   (E003-E006 "aims of respondent, first/second choice" parsed cleanly) -- not exhaustively audited. Also still
+>   true: `event_value_inputs.py`'s `anchors()`/`rescaled_means()` (used by the GDELT-correlation work above, a
+>   separate pipeline from direction_baseline.py) still only cover `{ordinal_scale, binary, mention_flag}` =
+>   711/905 question codes; the other 194 (now correctly including numeric_scale's 90) are out of scope for that
+>   pipeline unless explicitly extended -- not requested yet.
 
 ## Data (`data/`)
 

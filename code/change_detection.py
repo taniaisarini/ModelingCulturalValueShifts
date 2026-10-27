@@ -290,8 +290,7 @@ def detect_country_changes(df, country, wave1, wave2, cfg=None, cats=None, parse
         if fmt == "identifier" or code in ranked_codes or code not in have:
             continue
         if fmt in ("ordinal_scale", "numeric_scale", "count"):
-            rows += _test_scale(code, "ordinal_scale" if fmt != "count" else "count",
-                                get1(code), get2(code), cfg, rng, parsed, ctx)
+            rows += _test_scale(code, fmt, get1(code), get2(code), cfg, rng, parsed, ctx)
         elif fmt in ("binary", "categorical", "forced_choice"):
             if fmt == "categorical" and not parsed.get(code, {}).get("choices"):
                 continue  # no listed answer options (country-specific codes): not interpretable

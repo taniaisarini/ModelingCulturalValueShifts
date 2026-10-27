@@ -37,7 +37,7 @@ PROMPT_FILES = {  # prompt name -> file under code/prompts/
 RESULTS_DIR = ROOT / "results" / "direction_baseline"
 LLM_PARAMS = dict(temperature=0.0, max_tokens=250)   # part of the cache key: change these and calls are re-run
 
-FAMILY = {"ordinal_scale": "ordered", "count": "ordered",
+FAMILY = {"ordinal_scale": "ordered", "count": "ordered", "numeric_scale": "ordered",
           "binary": "share", "mention_flag": "share", "knowledge": "share",
           "categorical": "option", "forced_choice": "option", "ranked_choice": "option"}
 

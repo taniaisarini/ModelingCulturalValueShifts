@@ -388,6 +388,7 @@ footer{
       <button data-mode="compare">Compare countries</button>
       <button data-mode="baseline">LLM baseline</button>
       <button data-mode="reasoning">Model reasoning</button>
+      <button data-mode="demographics">Demographics</button>
     </div>
     <div class="tabs" id="tabs">
       <button data-pair="wave5_to_wave6">Wave 5 &rarr; 6</button>
@@ -462,6 +463,10 @@ footer{
     <div id="reasoning-root"></div>
   </div>
 
+  <div id="demographics-view" hidden>
+    <div id="demographics-root"></div>
+  </div>
+
   <footer>Computed by <span class="mono">code/change_detection.py</span> on the WVS time series, all 905 questions sorted by answer format (<span class="mono">data/question_categories.csv</span>). Minimum sizes are starting values, not yet calibrated against sampling noise. <strong>&uarr; / &darr;</strong> mean a higher / lower answer <em>code</em> (for scales, a mean answer code that rose or fell; for yes/no, the share giving the higher code) &mdash; the code order is not always &ldquo;more agreement&rdquo;. Questions with no listed answer options and identifier fields are skipped. Wave pairs 5&rarr;6 and 6&rarr;7 only. The LLM baseline tab reads <span class="mono">results/direction_baseline/five_country_set/</span>.</footer>
 </div>
 
@@ -471,6 +476,8 @@ footer{
 <script src="baseline.js"></script>
 <script src="reasoning_data.js"></script>
 <script src="reasoning.js"></script>
+<script src="demographics_data.js"></script>
+<script src="demographics.js"></script>
 <script>
 let RAW = {};
 let currentPair = 'wave5_to_wave6';
@@ -708,11 +715,11 @@ function renderCompare(){
 function setMode(mode){
   currentMode = mode;
   document.querySelectorAll('#modes button').forEach(b => b.classList.toggle('active', b.dataset.mode === mode));
-  const browseMode = mode === 'browse', compareMode = mode === 'compare', baselineMode = mode === 'baseline', reasoningMode = mode === 'reasoning';
+  const browseMode = mode === 'browse', compareMode = mode === 'compare', baselineMode = mode === 'baseline', reasoningMode = mode === 'reasoning', demographicsMode = mode === 'demographics';
   // the wave tabs, format filter and method note belong to the significance views, not the LLM baseline
-  document.getElementById('tabs').hidden = baselineMode || reasoningMode;
-  document.getElementById('fmt-wrap').hidden = baselineMode || reasoningMode;
-  document.getElementById('method').hidden = baselineMode || reasoningMode;
+  document.getElementById('tabs').hidden = baselineMode || reasoningMode || demographicsMode;
+  document.getElementById('fmt-wrap').hidden = baselineMode || reasoningMode || demographicsMode;
+  document.getElementById('method').hidden = baselineMode || reasoningMode || demographicsMode;
   document.getElementById('list').hidden = !browseMode;
   document.getElementById('search-wrap').hidden = !browseMode;
   document.getElementById('sort-wrap').hidden = !browseMode;
@@ -721,10 +728,13 @@ function setMode(mode){
   document.getElementById('compare-view').hidden = !compareMode;
   document.getElementById('baseline-view').hidden = !baselineMode;
   document.getElementById('reasoning-view').hidden = !reasoningMode;
+  document.getElementById('demographics-view').hidden = !demographicsMode;
 
   if (browseMode) render();
   else if (reasoningMode){
     if (window.ReasoningView) window.ReasoningView.mount(document.getElementById('reasoning-root'));
+  } else if (demographicsMode){
+    if (window.DemographicsView) window.DemographicsView.mount(document.getElementById('demographics-root'));
   } else if (compareMode){
     if (!compareInit){ populateCompareSelects(); compareInit = true; }
     renderCompare();

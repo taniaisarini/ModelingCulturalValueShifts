@@ -1,0 +1,84 @@
+job 12033617 (wvs-fpca-resume67) on gilbreth-b003 | account=csml partition=a30 qos=standby
+running: python code/event_value_fpca.py --full --n-perm=200
+full_run: n_perm=200 n_jobs=16 resume=True
+[5to6] resuming from /scratch/gilbreth/tchakrab/ModelingCulturalValueShifts/gdelt_plots/event_value_fpca/results_5to6.csv (already completed)
+[6to7] 113 eligible questions, computing observed fit + 200 permutations...
+  permutation 1/200  permutation 2/200  permutation 3/200  permutation 4/200  permutation 5/200  permutation 6/200  permutation 7/200  permutation 8/200  permutation 9/200  permutation 10/200  permutation 11/200  permutation 12/200  permutation 13/200  permutation 14/200  permutation 15/200  permutation 16/200  permutation 17/200  permutation 18/200  permutation 19/200  permutation 20/200  permutation 21/200  permutation 22/200  permutation 23/200  permutation 24/200  permutation 25/200  permutation 26/200  permutation 27/200  permutation 28/200  permutation 29/200  permutation 30/200  permutation 31/200  permutation 32/200  permutation 33/200  permutation 34/200  permutation 35/200  permutation 36/200  permutation 37/200  permutation 38/200  permutation 39/200  permutation 40/200  permutation 41/200  permutation 42/200  permutation 43/200  permutation 44/200  permutation 45/200  permutation 46/200  permutation 47/200  permutation 48/200  permutation 49/200  permutation 50/200  permutation 51/200  permutation 52/200  permutation 53/200  permutation 54/200  permutation 55/200  permutation 56/200  permutation 57/200  permutation 58/200  permutation 59/200  permutation 60/200  permutation 61/200  permutation 62/200  permutation 63/200  permutation 64/200  permutation 65/200  permutation 66/200  permutation 67/200  permutation 68/200  permutation 69/200  permutation 70/200  permutation 71/200  permutation 72/200  permutation 73/200  permutation 74/200  permutation 75/200  permutation 76/200  permutation 77/200  permutation 78/200  permutation 79/200  permutation 80/200  permutation 81/200  permutation 82/200  permutation 83/200  permutation 84/200  permutation 85/200  permutation 86/200  permutation 87/200  permutation 88/200  permutation 89/200  permutation 90/200  permutation 91/200  permutation 92/200  permutation 93/200  permutation 94/200  permutation 95/200  permutation 96/200  permutation 97/200  permutation 98/200  permutation 99/200  permutation 100/200  permutation 101/200  permutation 102/200  permutation 103/200  permutation 104/200  permutation 105/200  permutation 106/200  permutation 107/200  permutation 108/200  permutation 109/200  permutation 110/200  permutation 111/200  permutation 112/200  permutation 113/200  permutation 114/200  permutation 115/200  permutation 116/200  permutation 117/200  permutation 118/200  permutation 119/200  permutation 120/200  permutation 121/200  permutation 122/200  permutation 123/200  permutation 124/200  permutation 125/200  permutation 126/200  permutation 127/200  permutation 128/200  permutation 129/200  permutation 130/200  permutation 131/200  permutation 132/200  permutation 133/200  permutation 134/200  permutation 135/200  permutation 136/200  permutation 137/200  permutation 138/200  permutation 139/200  permutation 140/200  permutation 141/200  permutation 142/200  permutation 143/200  permutation 144/200  permutation 145/200  permutation 146/200  permutation 147/200  permutation 148/200  permutation 149/200  permutation 150/200  permutation 151/200  permutation 152/200  permutation 153/200  permutation 154/200  permutation 155/200  permutation 156/200  permutation 157/200  permutation 158/200  permutation 159/200  permutation 160/200  permutation 161/200  permutation 162/200  permutation 163/200  permutation 164/200  permutation 165/200  permutation 166/200  permutation 167/200  permutation 168/200  permutation 169/200  permutation 170/200  permutation 171/200  permutation 172/200  permutation 173/200  permutation 174/200  permutation 175/200  permutation 176/200  permutation 177/200  permutation 178/200  permutation 179/200  permutation 180/200  permutation 181/200  permutation 182/200  permutation 183/200  permutation 184/200  permutation 185/200  permutation 186/200  permutation 187/200  permutation 188/200  permutation 189/200  permutation 190/200  permutation 191/200  permutation 192/200  permutation 193/200  permutation 194/200  permutation 195/200  permutation 196/200  permutation 197/200  permutation 198/200  permutation 199/200  permutation 200/200
+[6to7] observed: {'n_questions': 113, 'n_beat_baseline': 9, 'mean_gain': -0.18897713348100326, 'mean_sign_acc_minus_majority': -0.013124780710987603}
+[6to7] p-values: {'n_beat_baseline': np.float64(0.7960199004975125), 'mean_gain': np.float64(0.9950248756218906), 'mean_sign_acc_minus_majority': np.float64(0.8507462686567164)}
+[6to7] wall time: 7144s
+[replication] fitting 5->6, projecting 6->7...
+ question  n_67  r2_replication  sign_acc_replication
+     A001    29       -0.170805              0.586207
+     A002    29       -0.002305              0.551724
+     A003    29        0.119092              0.586207
+     A004    29       -0.019573              0.620690
+     A005    29        0.008916              0.586207
+     A006    29       -0.099705              0.758621
+     A008    29       -0.008815              0.482759
+     A009    29       -0.293239              0.482759
+     A098    29       -0.015738              0.413793
+     A099    29       -0.051843              0.482759
+     A100    29       -1.769939              0.413793
+     A101    29       -0.459111              0.517241
+     A102    29       -0.642435              0.344828
+     A103    29       -0.190212              0.586207
+     A104    29       -0.540800              0.275862
+     A105    29       -0.249416              0.379310
+     A106    27       -0.032245              0.666667
+  A124_02    28       -0.074277              0.714286
+  A124_03    27       -0.062617              0.592593
+  A124_06    28       -0.056029              0.464286
+  A124_07    27       -0.091431              0.703704
+  A124_08    27        0.196649              0.666667
+  A124_09    27       -0.101535              0.703704
+  A124_12    28       -0.024064              0.642857
+  A124_42    28       -0.005561              0.607143
+  A124_43    29       -0.059797              0.413793
+     A165    29       -0.011975              0.448276
+   D001_B    28       -0.596145              0.107143
+     D054    29       -0.072004              0.689655
+     D057    29        0.141600              0.724138
+     D059    29       -0.198903              0.827586
+     D060    29       -0.026669              0.517241
+     D078    29       -0.122091              0.758621
+     E012    29       -0.283775              0.448276
+     E015    29        0.146534              0.689655
+     E016    29       -0.036292              0.724138
+     E018    29       -0.259811              0.758621
+     E023    29       -0.006390              0.655172
+     E025    29       -0.705976              0.275862
+     E026    29       -0.089503              0.586207
+     E027    29       -0.523706              0.241379
+  E069_01    29       -0.394529              0.793103
+  E069_02    28        0.013102              0.571429
+  E069_04    29       -0.037389              0.689655
+  E069_05    29       -0.000706              0.482759
+  E069_06    28       -0.021747              0.607143
+  E069_07    29       -0.349120              0.448276
+  E069_08    29       -0.029505              0.586207
+  E069_10    29       -0.236435              0.620690
+  E069_11    28       -0.047003              0.571429
+  E069_12    29       -0.285029              0.482759
+  E069_13    29       -3.197356              0.413793
+  E069_14    29       -0.666642              0.482759
+  E069_15    29       -0.497134              0.482759
+  E069_17    28       -0.053471              0.571429
+ E069_18A    25       -1.024544              0.560000
+  E069_20    28       -0.386358              0.392857
+  E069_40    29       -0.597017              0.689655
+     E114    29       -0.000324              0.689655
+     E115    29       -0.356244              0.586207
+     E116    26       -1.729670              0.423077
+     E117    29       -0.052226              0.517241
+     E124    29       -1.783727              0.586207
+     F028    28       -0.127372              0.500000
+     G006    29       -0.026013              0.620690
+G007_18_B    28       -0.000324              0.607143
+G007_33_B    28        0.002291              0.607143
+G007_34_B    28       -0.372993              0.821429
+G007_35_B    28       -0.368641              0.642857
+G007_36_B    28       -0.280374              0.678571
+     G026    27       -0.001843              0.444444
+     G027    27       -0.018502              0.407407
+done.
