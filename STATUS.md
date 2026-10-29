@@ -1,7 +1,31 @@
 # Status
 
-Inventory of what exists in this repo; the dated notes below are the running log (last updated 2026-10-27). No research question is
+Inventory of what exists in this repo; the dated notes below are the running log (last updated 2026-10-29). No research question is
 settled yet — this is a snapshot to work from, not a plan. Update this doc as code/data/results change.
+
+> **Row-level GDELT pull, "Step 2" (2026-10-29): `code/gdelt_pull_raw_events.py`, full year 2019, all 29 WVS countries.** Row-level
+> (not aggregated) events via `events_raw()`: 18 of the 23 columns in `gdelt_bq.ALLOWED_COLUMNS` (drops `MonthYear`, `Year`,
+> `EventBaseCode`, `EventRootCode`, `QuadClass` -- exact derivations of `SQLDATE`/`EventCode`, verified to add nothing). Stored at
+> `RAW_EVENTS_DIR` (new `config.py` entry; this machine's `config.local.toml` points it at
+> `/depot/dgoldwas/data/tchakrab/gdelt-data/raw-events`), partitioned `country=<FIPS>/year=<YYYY>/month=<MM>.parquet`. Result: **43,382,365
+> rows, 373 MB x 12 = ~4.3 GB on disk, 20.29 GB billed.** Verified against the independent aggregated sweep (`events_daily_*.parquet`,
+> pulled weeks earlier by different code): exact row-count match across all 348 (country, month) cells, zero diff; also checked for
+> missing files, schema, out-of-range dates, and duplicate `GLOBALEVENTID` -- all clean.
+> - **Two real incidents during this, both corrected by hand in the local ledger (billed bytes do not revert just because the local
+>   process crashed):** (1) a first attempt pulling the whole year in one query was billed 18.66 GB then OOM-killed (cgroup limit
+>   ~9.5 GB RSS) converting results to a Python list-of-dicts, before writing anything or updating the ledger. Fixed by chunking to one
+>   calendar month at a time, written and released before the next (`gdelt_pull_raw_events.py`), plus a soft 7 GB `RLIMIT_AS` cap so a
+>   future overrun raises a catchable `MemoryError` instead of a silent SIGKILL. (2) The first retry (chunked) was billed 1.73 GB then
+>   crashed on a missing `db_dtypes` package needed by the now-safer `to_dataframe()` conversion path (`gdelt_bq.py`: new
+>   `run_to_dataframe()`/`fetch_dataframe()`, additive, does not touch the existing `run()`/`fetch()` used by the aggregated pipelines).
+>   Fixed by installing it and verifying offline before retrying for real; the retry was a BigQuery cache hit (0 GB billed).
+> - **BigQuery Storage API set up and verified (2026-10-29):** `create_bqstorage_client=True` in `run_to_dataframe()` -- ~80x faster
+>   result-fetching (3.6M rows in 17.9s vs. ~24 min via REST paging), confirmed zero additional cost (re-fetched an already-cached
+>   query: `cache_hit=True`, 0.0000 GB billed). Needed, one-time in the Cloud console: enable the BigQuery Storage API + grant the
+>   service account `BigQuery Read Session User` (in addition to Job User). `google-cloud-bigquery-storage` and `db-dtypes` added to
+>   `environment.yml`. Full details in `GDELT_BIGQUERY.md`'s new "Row-level pulls" section.
+> - Month total after this work: 94.89 GB of 1,100 GB free (800 GB self-imposed cap), including the 20.39 GB wasted across the two
+>   incidents above.
 
 > **2026-09-24: the LLM prediction code, prompts and results described below (the "LLM pipelines" section and
 > most of "Results") were moved to `archive/llm_prediction_v1/` (see its README) because the results are not

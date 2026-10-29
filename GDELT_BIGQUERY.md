@@ -38,6 +38,21 @@ tone are **not comparable**. Rough cost for Egypt, one quarter, few columns: 0.0
 3. `pip install google-cloud-bigquery` in env `wvs`; `export GOOGLE_APPLICATION_CREDENTIALS=<key path>`.
 4. `python code/gdelt_bq.py --project <id> --country EGY --start 2016-01-01 --end 2016-03-31` (dry run), then add `--run`.
 
+## Row-level pulls: the BigQuery Storage API (added 2026-10-29)
+- `code/gdelt_pull_raw_events.py` (row-level, not aggregated, events) fetches results via `to_dataframe(create_bqstorage_client=True)`
+  instead of the default REST row-by-row paging: ~80x faster on a real test (3.6M rows in 17.9s vs. ~24 min), and the test confirmed
+  **no additional charge** (`cache_hit=True`, 0.0000 GB billed, no billing-account-required error) -- this only changes how an
+  already-billed query's *results* are fetched, not the query's own bytes-scanned cost.
+- Needs, one-time, in the Cloud console (done 2026-10-29 for `gdelt-sandbox-512120`): enable the **BigQuery Storage API**, and grant the
+  service account the **BigQuery Read Session User** role (`roles/bigquery.readSessionUser`) in addition to Job User. Watch for a prompt
+  to link billing when enabling the API -- if that happens, stop (same risk as the auto-linked-billing issue above).
+- `pip install google-cloud-bigquery-storage` in env `wvs` (added to `environment.yml`).
+- Two real incidents before this was working, both corrected in the local ledger by hand (see `STATUS.md`): a full-year raw pull was
+  billed (18.66 GB) then OOM-killed before writing anything or updating the ledger (the row-level result was too big to materialize as
+  Python dicts); the first retry (chunked to one calendar month) was billed again (1.73 GB) then crashed on a missing `db_dtypes`
+  package needed by `to_dataframe()`. Lesson: verify a new result-fetching path offline (imports, a cache-hit replay) before trusting it
+  against a fresh, real, billable query.
+
 ## Caveats
 - The first wrapper (`git show 425baf3:code/gdelt_wrapper.py`) hit the unpartitioned table with `SELECT *` and no date filter, and
   an old service-account key is in git history (`code/archived/deleted_wvs-project-...json`): **rotate it** if it is still active.

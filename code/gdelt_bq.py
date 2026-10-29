@@ -235,6 +235,18 @@ class BigQueryBackend:
         rows = [dict(r) for r in job.result()]
         return rows, int(job.total_bytes_billed or 0)
 
+    def run_to_dataframe(self, sql, params, max_bytes):
+        """Like run(), but for pulls too big to materialize as a Python list of dicts (e.g. row-level raw events):
+        pandas/pyarrow builds typed columnar arrays directly from the result pages, which avoids the large per-row
+        Python object overhead of dict-of-rows and uses meaningfully less peak memory for wide, string-heavy
+        schemas. Does not go through the local JSONL row cache (not practical at this size); callers that need
+        to avoid re-billing on retry should track completion themselves (e.g. a marker file per chunk)."""
+        cfg = self._bq.QueryJobConfig(query_parameters=self._params(params), maximum_bytes_billed=max_bytes,
+                                      use_query_cache=True)
+        job = self.client.query(sql, job_config=cfg)
+        df = job.result().to_dataframe(create_bqstorage_client=True)
+        return df, int(job.total_bytes_billed or 0)
+
     def table_info(self, table):
         t = self.client.get_table(table)   # metadata call, free
         return {"time_partitioning": str(t.time_partitioning), "num_bytes": t.num_bytes, "num_rows": t.num_rows}
@@ -329,6 +341,25 @@ class GDELTClient:
         self._ledger_add(q, billed)
         self._cache_put(key, q, rows, billed)
         return rows
+
+    def fetch_dataframe(self, q, run=False):
+        """Same guards as fetch(), but for row-level pulls too big to go through the list-of-dicts path: returns
+        (DataFrame, billed_bytes) via run_to_dataframe(), or a DryRun if run=False. No local row cache (see
+        BigQueryBackend.run_to_dataframe) -- the ledger is still updated, so budget tracking stays correct."""
+        check_sql(q, self.max_days)
+        est = self.backend.dry_run(q.sql, q.params)
+        if est > self.max_bytes:
+            raise CostGuardError(f"Estimated {est / GB:.2f} GB exceeds per-query cap {self.max_bytes / GB:.2f} GB")
+        used = self.month_bytes()
+        if used + est > self.monthly_budget:
+            raise CostGuardError(f"Would bring this month to {(used + est) / GB:.1f} GB, over the "
+                                 f"{self.monthly_budget / GB:.0f} GB budget ({used / GB:.1f} GB used)")
+        if not run:
+            return DryRun(q.sql, q.params, est)
+
+        df, billed = self.backend.run_to_dataframe(q.sql, q.params, self.max_bytes)
+        self._ledger_add(q, billed)
+        return df, billed
 
     def check_table(self, table="v2"):
         """Free metadata call: confirm the table exists and is time-partitioned."""

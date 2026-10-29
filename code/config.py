@@ -3,8 +3,9 @@
 Everything inside the repo is found from this file's location. Only data that lives elsewhere is configured here, with this
 priority: environment variable, then `code/config.local.toml` (not committed; copy `config.example.toml`), then the default.
 
-    GDELT_DIR   GDELT query cache, ledger, pulled data and explorer files   (default: <repo>/data/gdelt)
-    PLOTS_DIR   figures and tables written by the plotting scripts           (default: <repo>/gdelt_plots)
+    GDELT_DIR        GDELT query cache, ledger, pulled data and explorer files    (default: <repo>/data/gdelt)
+    PLOTS_DIR        figures and tables written by the plotting scripts           (default: <repo>/gdelt_plots)
+    RAW_EVENTS_DIR   row-level GDELT event pulls (gdelt_pull_raw_events.py)        (default: <GDELT_DIR>/raw_events)
 """
 import os
 from pathlib import Path
@@ -28,3 +29,4 @@ def _get(env, key, default):
 
 GDELT_DIR = _get("GDELT_DIR", "gdelt_dir", ROOT / "data" / "gdelt")
 PLOTS_DIR = _get("PLOTS_DIR", "plots_dir", ROOT / "gdelt_plots")
+RAW_EVENTS_DIR = _get("RAW_EVENTS_DIR", "raw_events_dir", GDELT_DIR / "raw_events")
