@@ -360,6 +360,24 @@ settled yet — this is a snapshot to work from, not a plan. Update this doc as 
 >   separate pipeline from direction_baseline.py) still only cover `{ordinal_scale, binary, mention_flag}` =
 >   711/905 question codes; the other 194 (now correctly including numeric_scale's 90) are out of scope for that
 >   pipeline unless explicitly extended -- not requested yet.
+>
+> **Dashboard: new "Demographics" tab (2026-10-27), added to the existing WVS artifact (link above).** New
+> `code/export_dashboard_demographics.py` (writes `results/direction_baseline/five_country_set/demographics_data.js`,
+> `window.DEMOGRAPHICS`) + `code/dashboard/demographics.js` (view), wired into `code/dashboard/index.html` as a
+> 5th tab alongside Browse/Compare/LLM baseline/Model reasoning. Shows the 1647 significant cross-sectional
+> demographic differences from the demographic-splice work above (sex/age/settlement, within one wave, not across
+> waves), filterable by wave/country/demographic/search. Iterated live with the user: fixed an effect-vs-difference
+> column confusion (they were accidentally the same number; now `effect` = the test statistic a significance
+> decision is based on, `diff` = the groups' plain raw difference -- these coincide for binary-style questions but
+> not for scales), added literal group averages (mean code or % per group, not just a delta), added click-to-group
+> table headers (Country/Wave/Question/Split, hierarchical, click order = nesting order), fixed wave ordering
+> within a group (was sorted by effect strength, not wave), and added a small per-group trend sparkline (two
+> lines, solid/dashed, hollow dot = not significant that wave) shown whenever grouping narrows to one
+> country+question+demographic with multiple waves of data. The sparkline needed the export script extended to
+> compute every tested question's group means/shares regardless of significance (not just the 1647 significant
+> ones, since a non-significant wave would otherwise just be a hole in the line) -- `demographics_data.js` now
+> also carries a `trend` dict, 7549 points, mean/share only (scale and binary/mention/knowledge formats; skips
+> categorical/forced_choice/ranked_choice, whose "tracked option" isn't fixed across waves).
 
 ## Data (`data/`)
 
