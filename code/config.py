@@ -6,6 +6,7 @@ priority: environment variable, then `code/config.local.toml` (not committed; co
     GDELT_DIR        GDELT query cache, ledger, pulled data and explorer files    (default: <repo>/data/gdelt)
     PLOTS_DIR        figures and tables written by the plotting scripts           (default: <repo>/gdelt_plots)
     RAW_EVENTS_DIR   row-level GDELT event pulls (gdelt_pull_raw_events.py)        (default: <GDELT_DIR>/raw_events)
+    NYT_ARCHIVE_DIR  NYT Archive API monthly pulls (nyt_archive_pull.py)           (default: <repo>/data/nyt_archive)
 """
 import os
 from pathlib import Path
@@ -30,3 +31,4 @@ def _get(env, key, default):
 GDELT_DIR = _get("GDELT_DIR", "gdelt_dir", ROOT / "data" / "gdelt")
 PLOTS_DIR = _get("PLOTS_DIR", "plots_dir", ROOT / "gdelt_plots")
 RAW_EVENTS_DIR = _get("RAW_EVENTS_DIR", "raw_events_dir", GDELT_DIR / "raw_events")
+NYT_ARCHIVE_DIR = _get("NYT_ARCHIVE_DIR", "nyt_archive_dir", ROOT / "data" / "nyt_archive")

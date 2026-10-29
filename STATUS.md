@@ -3,29 +3,58 @@
 Inventory of what exists in this repo; the dated notes below are the running log (last updated 2026-10-29). No research question is
 settled yet — this is a snapshot to work from, not a plan. Update this doc as code/data/results change.
 
-> **Row-level GDELT pull, "Step 2" (2026-10-29): `code/gdelt_pull_raw_events.py`, full year 2019, all 29 WVS countries.** Row-level
-> (not aggregated) events via `events_raw()`: 18 of the 23 columns in `gdelt_bq.ALLOWED_COLUMNS` (drops `MonthYear`, `Year`,
-> `EventBaseCode`, `EventRootCode`, `QuadClass` -- exact derivations of `SQLDATE`/`EventCode`, verified to add nothing). Stored at
-> `RAW_EVENTS_DIR` (new `config.py` entry; this machine's `config.local.toml` points it at
-> `/depot/dgoldwas/data/tchakrab/gdelt-data/raw-events`), partitioned `country=<FIPS>/year=<YYYY>/month=<MM>.parquet`. Result: **43,382,365
-> rows, 373 MB x 12 = ~4.3 GB on disk, 20.29 GB billed.** Verified against the independent aggregated sweep (`events_daily_*.parquet`,
-> pulled weeks earlier by different code): exact row-count match across all 348 (country, month) cells, zero diff; also checked for
-> missing files, schema, out-of-range dates, and duplicate `GLOBALEVENTID` -- all clean.
-> - **Two real incidents during this, both corrected by hand in the local ledger (billed bytes do not revert just because the local
->   process crashed):** (1) a first attempt pulling the whole year in one query was billed 18.66 GB then OOM-killed (cgroup limit
->   ~9.5 GB RSS) converting results to a Python list-of-dicts, before writing anything or updating the ledger. Fixed by chunking to one
->   calendar month at a time, written and released before the next (`gdelt_pull_raw_events.py`), plus a soft 7 GB `RLIMIT_AS` cap so a
->   future overrun raises a catchable `MemoryError` instead of a silent SIGKILL. (2) The first retry (chunked) was billed 1.73 GB then
->   crashed on a missing `db_dtypes` package needed by the now-safer `to_dataframe()` conversion path (`gdelt_bq.py`: new
->   `run_to_dataframe()`/`fetch_dataframe()`, additive, does not touch the existing `run()`/`fetch()` used by the aggregated pipelines).
->   Fixed by installing it and verifying offline before retrying for real; the retry was a BigQuery cache hit (0 GB billed).
+> **Row-level GDELT pull, "Step 2" (done 2026-10-29): `code/gdelt_pull_raw_events.py`, full range 2003-11-01..2023-07-31, all 29 WVS
+> countries.** Row-level (not aggregated) events via `events_raw()`: 18 of the 23 columns in `gdelt_bq.ALLOWED_COLUMNS` (drops
+> `MonthYear`, `Year`, `EventBaseCode`, `EventRootCode`, `QuadClass` -- exact derivations of `SQLDATE`/`EventCode`, verified to add
+> nothing). Stored at `RAW_EVENTS_DIR` (new `config.py` entry; this machine's `config.local.toml` points it at
+> `/depot/dgoldwas/data/tchakrab/gdelt-data/raw-events`), partitioned `country=<FIPS>/year=<YYYY>/month=<MM>.parquet` (6,873 files).
+> **Final result: 497,631,396 rows, ~26 GB on disk, verified against the independent aggregated sweep (`events_daily_*.parquet`):
+> 22/29 countries exact row-count match, the other 7 off by 1-23 rows out of 1.3M-2.2M each (all in October 2016 -- present in the very
+> first scan before any of the fixes below, most likely GDELT backfilling/revising a handful of events between pull times; not a
+> pipeline bug, not chased further).** Run as Slurm batch jobs (`slurm/job.sbatch`, csml/a30/standby, `--gres=gpu:1` required even
+> though this is pure CPU/network work -- see `slurm/README.md`) specifically so the multi-hour pull survives the submitting
+> terminal/session closing.
+> - **Three real incidents during this, each corrected by hand in the local ledger (billed bytes do not revert just because the
+>   local process crashed) and all now fixed and re-verified:**
+>   1. A first attempt pulling a whole year in one query was billed 18.66 GB then OOM-killed (cgroup limit ~9.5 GB RSS) converting
+>      results to a Python list-of-dicts, before writing anything or updating the ledger. Fixed by chunking to one calendar month at
+>      a time, written and released before the next, plus a soft `RLIMIT_AS` cap (`--mem-cap-gb`, default 7 GB for interactive
+>      sessions, 12 GB used under the 20G Slurm allocation) so an overrun raises a catchable `MemoryError` instead of a silent
+>      SIGKILL.
+>   2. The first retry (chunked) was billed 1.73 GB then crashed on a missing `db_dtypes` package needed by the now-safer
+>      `to_dataframe()` conversion path (`gdelt_bq.py`: new `run_to_dataframe()`/`fetch_dataframe()`, additive, does not touch the
+>      existing `run()`/`fetch()` used by the aggregated pipelines). Fixed by installing it and verifying offline before retrying;
+>      the retry was a BigQuery cache hit (0 GB billed). `db-dtypes` and `google-cloud-bigquery-storage` added to `environment.yml`.
+>   3. A `MemoryError` on one chunk crashed the *entire* multi-year job (only the fetch step was wrapped in `try/except`, not the
+>      subsequent pandas transform where it actually hit) -- fixed to wrap the whole per-chunk body and skip-and-continue instead of
+>      stopping the run. Separately, that same month (Feb 2015, the one month `chunks()` splits across the GDELT 1.0/2.0 table
+>      boundary) had *already* been silently corrupted before this: both halves of the split month wrote to the same output file,
+>      so the second piece overwrote the first's data (~half the month's rows lost, all 29 countries) -- caught by the
+>      cross-check against the aggregated sweep, fixed by grouping pieces by calendar month before writing.
+>   4. **Self-inflicted, not a real bug:** scattered duplicate `GLOBALEVENTID` rows (141 total, several otherwise-correct months)
+>      were wrongly assumed to be a GDELT data-quality issue and deduplicated -- this was wrong. Cross-checking against the
+>      aggregated sweep's `COUNT(1)` afterward showed the "duplicates" are part of the true, expected count (GDELT's table
+>      legitimately has more than one row for some event IDs); removing them *created* a mismatch that hadn't existed before.
+>      Reverted (`to_frame()` no longer drops them) and the 7 affected months were re-fetched (free cache hits) to restore them.
 > - **BigQuery Storage API set up and verified (2026-10-29):** `create_bqstorage_client=True` in `run_to_dataframe()` -- ~80x faster
->   result-fetching (3.6M rows in 17.9s vs. ~24 min via REST paging), confirmed zero additional cost (re-fetched an already-cached
->   query: `cache_hit=True`, 0.0000 GB billed). Needed, one-time in the Cloud console: enable the BigQuery Storage API + grant the
->   service account `BigQuery Read Session User` (in addition to Job User). `google-cloud-bigquery-storage` and `db-dtypes` added to
->   `environment.yml`. Full details in `GDELT_BIGQUERY.md`'s new "Row-level pulls" section.
-> - Month total after this work: 94.89 GB of 1,100 GB free (800 GB self-imposed cap), including the 20.39 GB wasted across the two
->   incidents above.
+>   result-fetching (3.6M rows in 17.9s vs. ~24 min via REST paging), confirmed zero additional cost on both a cache-hit replay
+>   (`cache_hit=True`, 0.0000 GB billed) and a fresh, uncached query (billed normally, no extra charge). Needed, one-time in the
+>   Cloud console: enable the BigQuery Storage API + grant the service account `BigQuery Read Session User` (in addition to Job
+>   User) -- confirmed this did NOT require re-attaching billing to the sandbox project. Full details in `GDELT_BIGQUERY.md`'s new
+>   "Row-level pulls" section.
+> - Month total after all of this: ~292 GB of 1,100 GB free (800 GB self-imposed cap).
+
+> **NYT Archive API pull (done 2026-10-29): `code/nyt_archive_pull.py`, full WVS range, metadata only.** One call per calendar month
+> returns every NYT article for that month (`https://api.nytimes.com/svc/archive/v1/{year}/{month}.json`) -- confirmed via NYT's own
+> OpenAPI spec that there is no full article body text field, just headline/abstract/snippet/keywords/section/byline/word_count/etc.
+> No per-country filter exists on the endpoint (returns all NYT content, undifferentiated); the `keywords[].name == "glocations"` tag
+> was checked against a sample month and does cover the 29 WVS countries (28/29 had at least one hit in the one month spot-checked;
+> CYP had zero that month specifically). Stored at `NYT_ARCHIVE_DIR` (new `config.py` entry; this machine's `config.local.toml`
+> points it at `/depot/dgoldwas/data/tchakrab/nyt-archive`), one raw JSON file per month. Run as a Slurm batch job for the same
+> terminal-survival reason as the GDELT pull. **Result: 237/237 months fetched, 0 errors, ~52 minutes at a conservative 5 calls/min
+> pace** (the actual current rate limit is unconfirmed -- developer.nytimes.com was not reachable to verify; third-party sources
+> disagree from 5/min+500/day to 10/min+4000/day -- 5/min was used to be safe regardless of which is correct). API key via
+> `NYT_API_KEY` in the environment, never in a file. Not yet done: any filtering/use of the pulled metadata.
 
 > **2026-09-24: the LLM prediction code, prompts and results described below (the "LLM pipelines" section and
 > most of "Results") were moved to `archive/llm_prediction_v1/` (see its README) because the results are not
@@ -469,7 +498,10 @@ API-call handler in `code/thread_gpt_suite/`)
 - Persona-based results: an aggregate accuracy was computed (see Findings 2026-09-23); those results are archived and untrusted.
 - The three significance tests (Welch, KS, Wasserstein) were compared (Findings 2026-09-23); the project now uses the change-detection protocol instead.
 - GDELT: daily statistics for 29 countries (2003-11 to 2023-07) are pulled and explorable, and event shares were correlated with WVS answers (two pairs
-  survive correction). Still open: whether to feed events to the LLM prompts, a mean-answer version of the survey side, Step 2 event-level detail.
+  survive correction). Step 2 (row-level event detail, same range/countries) is now also pulled and verified, 497.6M rows, ~26 GB.
+  Still open: whether to feed events to the LLM prompts, a mean-answer version of the survey side, and any use of the row-level detail
+  (actor names/types, source URLs) beyond what the aggregated daily stats already cover.
+- NYT Archive API: article metadata (no full text) pulled for the same full range, 237 months, not yet filtered or used for anything.
 - LLM direction baseline: gpt-4.1-mini, gpt-5-mini and gpt-5 (reasoning on/off) are done in both option orders; Claude and Qwen are not run (need an
   ANTHROPIC_API_KEY, Claude support in `fast_llm.py`, and a decision on how to run Qwen).
 - `dataloader.py` vs `WVS_dataloader.py`, and `parsed_survey_data.jsonl` vs `parsed_survey_data_cleaned.jsonl`, are duplicate/divergent — should be reconciled.
