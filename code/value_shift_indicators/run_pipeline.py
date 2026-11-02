@@ -1,19 +1,17 @@
-"""Value-shift indicator system (self-contained in code/value_shift_indicators/; see README.md for the design).
+"""Value-shift indicator system (self-contained in code/value_shift_indicators/).
 
-Test case (the only one wired up so far, approved 2026-11-02): USA, question F118 "justifiable:
-homosexuality" (never=1 .. always=10), wave 5 (2006) -> wave 6 (2011). The real direction/magnitude
-(data/significant_changes/ks/F_wave5_to_wave6.csv) is read only to label the final report -- it is never
-shown to the model, which is given both possible directions and not told which is true.
-
-Reads: NYT Archive API metadata and GDELT raw events, both pre-pulled, via code/value_shift_indicators/data_sources.py
-(paths default to this project's existing depot pulls; see that file to point elsewhere).
-Writes: results/indicators.json (generated hypotheses) and results/report.json + results/report.md
-(confirm/deny verdicts per indicator, real direction revealed at the end only).
+For each of the 10 USA wave5->6 (2006->2011) test cases in cases.py: an LLM generates >=5 indicators
+per direction of a value shift (never told which direction is real) of what we'd expect to see in NYT
+article metadata / GDELT events; code pulls the real numbers for each (data_sources.py, no LLM); then
+the LLM judges which direction the evidence favors, or asks for up to 5 more indicators to check (up to
+3 rounds total, must decide by round 3). The real direction (data/significant_changes/) is read only to
+grade the final answer -- never shown to the model.
 
 Usage:
-    python run_pipeline.py              # dry run: shows both prompts and cache hit/miss, calls nothing
-    python run_pipeline.py --run        # actually calls the LLM (cached; code/llm_cache/)
+    python run_pipeline.py                  # dry run: shows case[0]'s generate_indicators prompt + cache plan
+    python run_pipeline.py --run             # actually run all 10 cases (cached; code/llm_cache/)
     python run_pipeline.py --run --model gpt-4.1-mini
+    python run_pipeline.py --run --only F118 F121   # subset, by question code
 """
 import argparse
 import csv
@@ -22,81 +20,73 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from pipeline import build_case, evaluate_indicator, generate_indicators, MODEL  # noqa: E402
+from cases import CASES  # noqa: E402
+from pipeline import MODEL, generate_indicators, run_case  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 RESULTS = Path(__file__).resolve().parent / "results"
 
-CASE = build_case(
-    country="United States",
-    year_a=2006, year_b=2011,
-    attitude_description=('how justifiable people consider homosexuality, on a scale from 1 (never '
-                           'justifiable) to 10 (always justifiable). A nationally representative survey '
-                           'asked this question at both time points.'),
-    direction_a='average answer moved toward "always justifiable" (attitudes became more accepting).',
-    direction_b='average answer moved toward "never justifiable" (attitudes became less accepting).',
-    direction_labels={"A": "attitudes became more accepting of homosexuality",
-                       "B": "attitudes became less accepting of homosexuality"},
-)
 
-GROUND_TRUTH_CSV = ROOT / "data" / "significant_changes" / "ks" / "F_wave5_to_wave6.csv"
-
-
-def load_ground_truth():
-    with open(GROUND_TRUTH_CSV) as f:
+def load_ground_truth(section, question):
+    path = ROOT / "data" / "significant_changes" / "ks" / f"{section}_wave5_to_wave6.csv"
+    with open(path) as f:
         for row in csv.DictReader(f):
-            if row["country"] == "USA" and row["question"] == "F118":
+            if row["country"] == "USA" and row["question"] == question:
                 mean_a, mean_b = float(row["mean_wave_5"]), float(row["mean_wave_6"])
                 return dict(mean_wave_5=mean_a, mean_wave_6=mean_b, change=mean_b - mean_a,
-                            true_direction="A" if mean_b > mean_a else "B", p_value=float(row["ks_p_value"]))
-    raise ValueError("USA/F118 not found in ground-truth CSV")
+                            p_value=float(row["ks_p_value"]))
+    raise ValueError(f"USA/{question} not found in {path}")
 
 
-def run(model, dry_run):
+def true_direction(entry, truth):
+    up = entry["direction_if_mean_increases"]
+    return up if truth["change"] > 0 else ("B" if up == "A" else "A")
+
+
+def run(model, dry_run, only=None):
+    cases = [c for c in CASES if only is None or c["question"] in only]
+
     if dry_run:
-        plan = generate_indicators(CASE, model=model, dry_run=True)
-        print("=== generate_indicators: dry run ===")
+        plan = generate_indicators(cases[0]["case"], model=model, dry_run=True)
+        print(f"=== generate_indicators: dry run ({cases[0]['question']}) ===")
         print(plan["plan"])
         print("\n--- prompt (user) ---\n" + plan["prompt"])
         return
 
-    indicators = generate_indicators(CASE, model=model)
     RESULTS.mkdir(exist_ok=True)
-    (RESULTS / "indicators.json").write_text(json.dumps(indicators, indent=2))
-    print(f"Generated {len(indicators['A'])} indicators for A, {len(indicators['B'])} for B "
-          f"-> results/indicators.json")
+    all_results = []
+    for entry in cases:
+        question = entry["question"]
+        print(f"=== {question} ===")
+        out = run_case(entry["case"], model=model)
+        truth = load_ground_truth(entry["section"], question)
+        true_dir = true_direction(entry, truth)
+        correct = out["final_decision"] == true_dir
+        print(f"  final decision: {out['final_decision']}  (true: {true_dir}, "
+              f"{'correct' if correct else 'WRONG'}, {len(out['rounds'])} round(s))")
+        all_results.append(dict(question=question, final_decision=out["final_decision"], true_direction=true_dir,
+                                 correct=correct, rounds_used=len(out["rounds"]), rounds=out["rounds"],
+                                 evidence=out["evidence"], ground_truth=truth))
 
-    report = []
-    for letter in ("A", "B"):
-        for indicator in indicators[letter]:
-            report.append(evaluate_indicator(letter, indicator, CASE, model=model))
+    (RESULTS / "multi_question_report.json").write_text(json.dumps(all_results, indent=2, default=str))
 
-    truth = load_ground_truth()
-    (RESULTS / "report.json").write_text(json.dumps({"report": report, "ground_truth": truth}, indent=2))
-
-    lines = ["# Value-shift indicator report",
-             "",
-             f"Case: USA, F118 (justifiable: homosexuality), wave 5 (2006) -> wave 6 (2011).",
-             f"Model never told the true direction while generating/judging indicators.",
-             "",
-             "| Direction | Source | Indicator | Expected | Verdict | Reasoning |",
-             "|---|---|---|---|---|---|"]
-    for r in report:
-        lines.append(f"| {r['direction']} | {r['source']} | {r['indicator']} | {r['expected_change']} "
-                      f"| **{r['verdict']}** | {r['reasoning']} |")
-    lines += ["",
-              "## Ground truth (revealed only here, not shown to the model)",
-              f"- mean wave 5 (2006): {truth['mean_wave_5']:.3f}, mean wave 6 (2011): {truth['mean_wave_6']:.3f} "
-              f"(change {truth['change']:+.3f}, p={truth['p_value']:.1e})",
-              f"- true direction: **{truth['true_direction']}**"]
-    (RESULTS / "report.md").write_text("\n".join(lines))
+    n_correct = sum(r["correct"] for r in all_results)
+    lines = ["# Value-shift indicator report: 10 questions", "",
+             f"Model: {model}. {n_correct}/{len(all_results)} correct.", "",
+             "| Question | Decision | True direction | Correct | Rounds used |",
+             "|---|---|---|---|---|"]
+    for r in all_results:
+        lines.append(f"| {r['question']} | {r['final_decision']} | {r['true_direction']} | "
+                      f"{'yes' if r['correct'] else 'no'} | {r['rounds_used']} |")
+    (RESULTS / "multi_question_report.md").write_text("\n".join(lines))
     print("\n".join(lines))
-    print("\n-> results/report.json, results/report.md")
+    print(f"\n-> results/multi_question_report.json, results/multi_question_report.md")
 
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", action="store_true", help="actually call the LLM; default is a dry run")
     ap.add_argument("--model", default=MODEL)
+    ap.add_argument("--only", nargs="*", default=None, help="subset of question codes, e.g. F118 F121")
     a = ap.parse_args()
-    run(a.model, dry_run=not a.run)
+    run(a.model, dry_run=not a.run, only=a.only)

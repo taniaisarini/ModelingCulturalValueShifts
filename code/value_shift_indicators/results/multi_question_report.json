@@ -1,0 +1,2887 @@
+[
+  {
+    "question": "F118",
+    "final_decision": "A",
+    "true_direction": "A",
+    "correct": true,
+    "rounds_used": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "decision": "A",
+        "reasoning": "Indicators supporting Direction A show a clear increase in positive media coverage and pro-LGBTQ+ events, such as a near doubling of positive New York Times articles on same-sex marriage efforts and increased positive-toned protests. In contrast, indicators for Direction B mostly show decreases or very small increases in negative coverage or events, with some negative protests increasing but with more positive tone. Overall, the evidence favors a shift toward more accepting attitudes.",
+        "requested": []
+      }
+    ],
+    "evidence": {
+      "A": [
+        {
+          "indicator_obj": {
+            "indicator": "Increased frequency of New York Times articles with positive coverage of same-sex marriage legalization efforts.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "same-sex marriage",
+              "marriage equality",
+              "gay marriage legalization",
+              "LGBT rights",
+              "marriage equality bill"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 144,
+            "year_a_total": 163480,
+            "year_a_rate": 0.8808416931734769,
+            "year_b_matches": 179,
+            "year_b_total": 102969,
+            "year_b_rate": 1.7383872816090278,
+            "examples": [
+              "California: Judges Ask for Clarity on Same-Sex Marriage Measure",
+              "Suits on Same-Sex Marriage May Force Administration to Take a Stand",
+              "Bush\u2019s Daughter, in a Break, Endorses Gay Marriage"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More GDELT events categorized as 01 MAKE PUBLIC STATEMENT with positive tone supporting LGBTQ+ rights.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "01"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 153757,
+            "year_a_total": 969651,
+            "year_a_rate": 158.56942343172955,
+            "year_b_matches": 1488241,
+            "year_b_total": 10259907,
+            "year_b_rate": 145.05404386219095,
+            "tone_year_a": 5.640047818413955,
+            "tone_year_b": 5.308644529061791
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT events tagged as 14 PROTEST with positive tone, representing pro-LGBTQ+ rights demonstrations.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "14"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 5715,
+            "year_a_total": 969651,
+            "year_a_rate": 5.893873156424322,
+            "year_b_matches": 69588,
+            "year_b_total": 10259907,
+            "year_b_rate": 6.782517619311754,
+            "tone_year_a": 5.373131595567174,
+            "tone_year_b": 5.458447077950048
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More New York Times articles discussing anti-discrimination laws protecting LGBTQ+ individuals.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "anti-discrimination law",
+              "LGBT protections",
+              "sexual orientation discrimination",
+              "hate crime legislation"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 2,
+            "year_a_total": 163480,
+            "year_a_rate": 0.012233912405187179,
+            "year_b_matches": 0,
+            "year_b_total": 102969,
+            "year_b_rate": 0.0,
+            "examples": []
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT events involving 05 ENGAGE IN DIPLOMATIC COOPERATION or 03 EXPRESS INTENT TO COOPERATE related to LGBTQ+ rights initiatives.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "03",
+              "05"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 144237,
+            "year_a_total": 969651,
+            "year_a_rate": 148.75145799880576,
+            "year_b_matches": 1514463,
+            "year_b_total": 10259907,
+            "year_b_rate": 147.60981751588974,
+            "tone_year_a": 6.627889052588524,
+            "tone_year_b": 6.565064255686316
+          }
+        }
+      ],
+      "B": [
+        {
+          "indicator_obj": {
+            "indicator": "Increase in New York Times articles expressing opposition or criticism of homosexuality or LGBTQ+ rights.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "homosexuality criticism",
+              "opposition to gay marriage",
+              "LGBT backlash",
+              "traditional marriage",
+              "anti-LGBT rhetoric"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 7,
+            "year_a_total": 163480,
+            "year_a_rate": 0.042818693418155127,
+            "year_b_matches": 2,
+            "year_b_total": 102969,
+            "year_b_rate": 0.019423321582223776,
+            "examples": [
+              "Even Done Politely, Gay-Marriage Protest Is Tiring",
+              "Marcus Bachmann Outlines \u2018First Spouse\u2019 Agenda"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More GDELT events tagged as 11 DISAPPROVE or 12 REJECT with negative tone targeting LGBTQ+ rights or homosexuality acceptance.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "11",
+              "12"
+            ],
+            "gdelt_tone": "more_negative"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 100146,
+            "year_a_total": 969651,
+            "year_a_rate": 103.28045863924237,
+            "year_b_matches": 918690,
+            "year_b_total": 10259907,
+            "year_b_rate": 89.54174730823583,
+            "tone_year_a": 5.4954056690749296,
+            "tone_year_b": 5.152636965833173
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT events categorized as 14 PROTEST with negative tone representing anti-LGBTQ+ demonstrations or rallies.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "14"
+            ],
+            "gdelt_tone": "more_negative"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 5715,
+            "year_a_total": 969651,
+            "year_a_rate": 5.893873156424322,
+            "year_b_matches": 69588,
+            "year_b_total": 10259907,
+            "year_b_rate": 6.782517619311754,
+            "tone_year_a": 5.373131595567174,
+            "tone_year_b": 5.458447077950048
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More New York Times articles covering legislative attempts to restrict LGBTQ+ rights or ban same-sex marriage.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "ban same-sex marriage",
+              "anti-LGBT legislation",
+              "restrict LGBTQ rights",
+              "defense of marriage act",
+              "traditional marriage law"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 17,
+            "year_a_total": 163480,
+            "year_a_rate": 0.10398825544409102,
+            "year_b_matches": 19,
+            "year_b_total": 102969,
+            "year_b_rate": 0.18452155503112586,
+            "examples": [
+              "In Defense of Marriage, for All",
+              "Mr. Obama Moves Against Bias",
+              "Obama Decision on Marriage Act Has 2012 Implications"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT events involving 10 DEMAND or 17 COERCE with negative tone aimed at limiting LGBTQ+ rights or expression.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "10",
+              "17"
+            ],
+            "gdelt_tone": "more_negative"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 60417,
+            "year_a_total": 969651,
+            "year_a_rate": 62.3079850379157,
+            "year_b_matches": 730623,
+            "year_b_total": 10259907,
+            "year_b_rate": 71.21146419748248,
+            "tone_year_a": 5.222736604192698,
+            "tone_year_b": 4.1528584882993735
+          }
+        }
+      ]
+    },
+    "ground_truth": {
+      "mean_wave_5": 4.502978723404255,
+      "mean_wave_6": 5.396943029180176,
+      "change": 0.8939643057759206,
+      "p_value": 6.330725487581733e-10
+    }
+  },
+  {
+    "question": "A106",
+    "final_decision": "B",
+    "true_direction": "B",
+    "correct": true,
+    "rounds_used": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "decision": "B",
+        "reasoning": "All indicators show either no increase or a slight decrease in civic participation signals, including fewer articles on community initiatives and cooperation events, and no increase in coverage of active membership programs. The data consistently points to a decline or stagnation rather than growth in voluntary organization activity.",
+        "requested": []
+      }
+    ],
+    "evidence": {
+      "A": [
+        {
+          "indicator_obj": {
+            "indicator": "Increased frequency of New York Times articles highlighting growth or success stories of local clubs, civic groups, and voluntary organizations.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "voluntary organization growth",
+              "civic group membership increase",
+              "community club participation",
+              "active volunteerism",
+              "membership surge"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 1,
+            "year_a_total": 163480,
+            "year_a_rate": 0.006116956202593589,
+            "year_b_matches": 0,
+            "year_b_total": 102969,
+            "year_b_rate": 0.0,
+            "examples": []
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More GDELT events tagged as 03 EXPRESS INTENT TO COOPERATE and 06 ENGAGE IN MATERIAL COOPERATION reflecting collaboration among civic groups and voluntary organizations.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "03",
+              "06"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 96020,
+            "year_a_total": 969651,
+            "year_a_rate": 99.02531941904871,
+            "year_b_matches": 994653,
+            "year_b_total": 10259907,
+            "year_b_rate": 96.94561558891324,
+            "tone_year_a": 6.399307722885177,
+            "tone_year_b": 6.122958187483657
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in New York Times articles reporting on community initiatives, volunteer drives, and calls for civic engagement.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "volunteer drive",
+              "community initiative",
+              "civic engagement",
+              "join local group",
+              "active membership"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 7,
+            "year_a_total": 163480,
+            "year_a_rate": 0.042818693418155127,
+            "year_b_matches": 3,
+            "year_b_total": 102969,
+            "year_b_rate": 0.029134982373335665,
+            "examples": [
+              "Civic Engagement Trumps \u2018Shhh!\u2019",
+              "Civic Engagement by Immigrants",
+              "Texas Two-Step"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More GDELT events categorized as 01 MAKE PUBLIC STATEMENT and 02 APPEAL related to encouraging public participation in voluntary organizations.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "01",
+              "02"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 228162,
+            "year_a_total": 969651,
+            "year_a_rate": 235.3032173431472,
+            "year_b_matches": 2303065,
+            "year_b_total": 10259907,
+            "year_b_rate": 224.47230759499087,
+            "tone_year_a": 5.759917687991117,
+            "tone_year_b": 5.47363125302284
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in New York Times coverage of youth and adult programs promoting active membership in clubs and civic groups.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "youth volunteer programs",
+              "adult civic participation",
+              "club membership drive",
+              "active community involvement"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 0,
+            "year_a_total": 163480,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 102969,
+            "year_b_rate": 0.0,
+            "examples": []
+          }
+        }
+      ],
+      "B": [
+        {
+          "indicator_obj": {
+            "indicator": "Decrease in New York Times articles discussing participation or growth in voluntary organizations and civic groups.",
+            "source": "nyt",
+            "expected_change": "decrease",
+            "nyt_keywords": [
+              "voluntary organization membership",
+              "civic group participation",
+              "community club activity",
+              "volunteerism decline"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 0,
+            "year_a_total": 163480,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 102969,
+            "year_b_rate": 0.0,
+            "examples": []
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Fewer GDELT events tagged as 03 EXPRESS INTENT TO COOPERATE and 06 ENGAGE IN MATERIAL COOPERATION involving civic groups or voluntary organizations.",
+            "source": "gdelt",
+            "expected_change": "decrease",
+            "gdelt_event_roots": [
+              "03",
+              "06"
+            ],
+            "gdelt_tone": "no_prediction"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 96020,
+            "year_a_total": 969651,
+            "year_a_rate": 99.02531941904871,
+            "year_b_matches": 994653,
+            "year_b_total": 10259907,
+            "year_b_rate": 96.94561558891324
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Reduction in New York Times coverage of community volunteer initiatives, membership drives, or calls for civic engagement.",
+            "source": "nyt",
+            "expected_change": "decrease",
+            "nyt_keywords": [
+              "volunteer drive",
+              "community initiative",
+              "civic engagement",
+              "join local group"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 6,
+            "year_a_total": 163480,
+            "year_a_rate": 0.03670173721556154,
+            "year_b_matches": 3,
+            "year_b_total": 102969,
+            "year_b_rate": 0.029134982373335665,
+            "examples": [
+              "Civic Engagement Trumps \u2018Shhh!\u2019",
+              "Civic Engagement by Immigrants",
+              "Texas Two-Step"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Decrease in GDELT events categorized as 01 MAKE PUBLIC STATEMENT and 02 APPEAL encouraging public participation in voluntary organizations.",
+            "source": "gdelt",
+            "expected_change": "decrease",
+            "gdelt_event_roots": [
+              "01",
+              "02"
+            ],
+            "gdelt_tone": "no_prediction"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 228162,
+            "year_a_total": 969651,
+            "year_a_rate": 235.3032173431472,
+            "year_b_matches": 2303065,
+            "year_b_total": 10259907,
+            "year_b_rate": 224.47230759499087
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "New York Times articles increasingly report on social isolation, disengagement, or decline in community involvement.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "social isolation",
+              "community disengagement",
+              "decline in volunteerism",
+              "drop in club membership"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 2,
+            "year_a_total": 163480,
+            "year_a_rate": 0.012233912405187179,
+            "year_b_matches": 0,
+            "year_b_total": 102969,
+            "year_b_rate": 0.0,
+            "examples": []
+          }
+        }
+      ]
+    },
+    "ground_truth": {
+      "mean_wave_5": 1.3506493506493507,
+      "mean_wave_6": 0.27310536044362294,
+      "change": -1.0775439902057278,
+      "p_value": 9.467812845937851e-42
+    }
+  },
+  {
+    "question": "E222",
+    "final_decision": "B",
+    "true_direction": "B",
+    "correct": true,
+    "rounds_used": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "decision": "B",
+        "reasoning": "Most indicators show a decrease or no change in political activism-related measures, such as fewer GDELT events tagged as DEMAND and EXPRESS INTENT TO COOPERATE, and a slight decrease in MAKE PUBLIC STATEMENT and APPEAL events. The New York Times coverage of grassroots activism is nearly unchanged but very low, providing no support for increased activism. Overall, the evidence favors a decline in willingness to take unconventional political action.",
+        "requested": []
+      }
+    ],
+    "evidence": {
+      "A": [
+        {
+          "indicator_obj": {
+            "indicator": "Increased frequency of New York Times articles discussing grassroots political activism and unconventional political actions.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "grassroots activism",
+              "political action",
+              "unconventional protest",
+              "civic engagement",
+              "political participation"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 54,
+            "year_a_total": 163480,
+            "year_a_rate": 0.33031563494005384,
+            "year_b_matches": 36,
+            "year_b_total": 102969,
+            "year_b_rate": 0.34961978848002795,
+            "examples": [
+              "Political Heavy Hitters Take On College Bowls",
+              "O\u2019Donnell Forms ChristinePAC",
+              "Divisions on the Right Over Gays in Its Ranks"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More GDELT events tagged as PROTEST (14) reflecting higher public engagement in political demonstrations.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "14"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 5715,
+            "year_a_total": 969651,
+            "year_a_rate": 5.893873156424322,
+            "year_b_matches": 69588,
+            "year_b_total": 10259907,
+            "year_b_rate": 6.782517619311754,
+            "tone_year_a": 5.373131595567174,
+            "tone_year_b": 5.458447077950048
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT events categorized as MAKE PUBLIC STATEMENT (01) and APPEAL (02) related to calls for political action.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "01",
+              "02"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 228162,
+            "year_a_total": 969651,
+            "year_a_rate": 235.3032173431472,
+            "year_b_matches": 2303065,
+            "year_b_total": 10259907,
+            "year_b_rate": 224.47230759499087,
+            "tone_year_a": 5.759917687991117,
+            "tone_year_b": 5.47363125302284
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More New York Times coverage highlighting youth and minority groups engaging in new forms of political activism.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "youth activism",
+              "minority political action",
+              "new political movements",
+              "innovative protest"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 0,
+            "year_a_total": 163480,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 102969,
+            "year_b_rate": 0.0,
+            "examples": []
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT events tagged as DEMAND (10) and EXPRESS INTENT TO COOPERATE (03) indicating active political engagement and calls for change.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "10",
+              "03"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 93094,
+            "year_a_total": 969651,
+            "year_a_rate": 96.00773886687065,
+            "year_b_matches": 895976,
+            "year_b_total": 10259907,
+            "year_b_rate": 87.32788708513635,
+            "tone_year_a": 6.557517116110137,
+            "tone_year_b": 6.09914294455627
+          }
+        }
+      ],
+      "B": [
+        {
+          "indicator_obj": {
+            "indicator": "Decrease in New York Times articles covering grassroots or unconventional political activism, indicating waning interest or participation.",
+            "source": "nyt",
+            "expected_change": "decrease",
+            "nyt_keywords": [
+              "grassroots activism",
+              "political action",
+              "unconventional protest",
+              "civic engagement",
+              "political participation"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 54,
+            "year_a_total": 163480,
+            "year_a_rate": 0.33031563494005384,
+            "year_b_matches": 36,
+            "year_b_total": 102969,
+            "year_b_rate": 0.34961978848002795,
+            "examples": [
+              "Political Heavy Hitters Take On College Bowls",
+              "O\u2019Donnell Forms ChristinePAC",
+              "Divisions on the Right Over Gays in Its Ranks"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Reduction in GDELT events tagged as PROTEST (14), reflecting lower levels of public political demonstrations.",
+            "source": "gdelt",
+            "expected_change": "decrease",
+            "gdelt_event_roots": [
+              "14"
+            ],
+            "gdelt_tone": "no_prediction"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 5715,
+            "year_a_total": 969651,
+            "year_a_rate": 5.893873156424322,
+            "year_b_matches": 69588,
+            "year_b_total": 10259907,
+            "year_b_rate": 6.782517619311754
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Fewer GDELT events categorized as MAKE PUBLIC STATEMENT (01) and APPEAL (02) related to political mobilization or calls for action.",
+            "source": "gdelt",
+            "expected_change": "decrease",
+            "gdelt_event_roots": [
+              "01",
+              "02"
+            ],
+            "gdelt_tone": "no_prediction"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 228162,
+            "year_a_total": 969651,
+            "year_a_rate": 235.3032173431472,
+            "year_b_matches": 2303065,
+            "year_b_total": 10259907,
+            "year_b_rate": 224.47230759499087
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Decline in New York Times coverage of political activism among youth and minority groups, suggesting reduced willingness to engage.",
+            "source": "nyt",
+            "expected_change": "decrease",
+            "nyt_keywords": [
+              "youth activism",
+              "minority political action",
+              "new political movements",
+              "innovative protest"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 0,
+            "year_a_total": 163480,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 102969,
+            "year_b_rate": 0.0,
+            "examples": []
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Decrease in GDELT events tagged as DEMAND (10) and EXPRESS INTENT TO COOPERATE (03), indicating less active political engagement.",
+            "source": "gdelt",
+            "expected_change": "decrease",
+            "gdelt_event_roots": [
+              "10",
+              "03"
+            ],
+            "gdelt_tone": "no_prediction"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 93094,
+            "year_a_total": 969651,
+            "year_a_rate": 96.00773886687065,
+            "year_b_matches": 895976,
+            "year_b_total": 10259907,
+            "year_b_rate": 87.32788708513635
+          }
+        }
+      ]
+    },
+    "ground_truth": {
+      "mean_wave_5": 1.5051546391752577,
+      "mean_wave_6": 2.3052007299270074,
+      "change": 0.8000460907517497,
+      "p_value": 2.1394468071032837e-17
+    }
+  },
+  {
+    "question": "E035",
+    "final_decision": "B",
+    "true_direction": "B",
+    "correct": true,
+    "rounds_used": 3,
+    "rounds": [
+      {
+        "round": 1,
+        "decision": "need_more_evidence",
+        "reasoning": "The indicators for both directions show very minimal or no change in relevant media coverage and public statements, with many measures at zero or near zero in both years. The slight decreases in articles supporting income inequality and the slight increases in articles supporting income equality are both very small and insufficient to decisively favor either direction.",
+        "requested": [
+          {
+            "direction": "A",
+            "indicator": "Change in public opinion polls specifically measuring support for policies that reduce income inequality, such as higher taxes on the wealthy or increased minimum wage",
+            "source": "polling",
+            "expected_change": "increase"
+          },
+          {
+            "direction": "B",
+            "indicator": "Increase in social media discussions or hashtags related to income equality or redistribution",
+            "source": "social_media",
+            "expected_change": "increase"
+          },
+          {
+            "direction": "A",
+            "indicator": "Number of legislative bills proposed or passed related to income inequality or redistribution",
+            "source": "gov_records",
+            "expected_change": "decrease"
+          },
+          {
+            "direction": "B",
+            "indicator": "Increase in union membership or labor strikes focused on wage equality",
+            "source": "labor_stats",
+            "expected_change": "increase"
+          },
+          {
+            "direction": "A",
+            "indicator": "Corporate earnings reports or executive compensation trends indicating acceptance of larger income differences",
+            "source": "financial_reports",
+            "expected_change": "increase"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "decision": "need_more_evidence",
+        "reasoning": "Most indicators from both directions show no change or very low counts, making it difficult to determine a clear shift in attitudes. The few measurable changes in New York Times articles slightly favor direction B, but the overall evidence is insufficient and ambiguous.",
+        "requested": [
+          {
+            "direction": "B",
+            "indicator": "Increase in public opinion polls or surveys showing a shift toward favoring income equality",
+            "source": "survey",
+            "expected_change": "increase"
+          },
+          {
+            "direction": "A",
+            "indicator": "Increase in media coverage or public statements emphasizing the importance of incentives through income inequality",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "incentives",
+              "economic growth",
+              "innovation",
+              "income inequality benefits"
+            ]
+          },
+          {
+            "direction": "B",
+            "indicator": "Increase in GDELT events involving labor union strikes or protests demanding higher wages or income redistribution",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "strike",
+              "protest"
+            ],
+            "gdelt_tone": "more_negative"
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "decision": "B",
+        "reasoning": "The indicators for direction B show a slight increase in New York Times articles covering policy proposals aimed at reducing income inequality, while direction A indicators mostly show decreases or no change in media coverage and public statements supporting income inequality. Although many event-based indicators show zero counts, the modest increase in coverage advocating income equality suggests a shift toward favoring income equality.",
+        "requested": []
+      }
+    ],
+    "evidence": {
+      "A": [
+        {
+          "indicator_obj": {
+            "indicator": "Increase in New York Times articles discussing the benefits of income inequality as a motivation for economic growth and innovation.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "income inequality as incentive",
+              "benefits of income differences",
+              "economic motivation",
+              "rewarding success",
+              "incentives for innovation"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 0,
+            "year_a_total": 163480,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 102969,
+            "year_b_rate": 0.0,
+            "examples": []
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More GDELT events involving public statements by politicians or business leaders advocating for less regulation on income distribution or praising market-driven pay scales.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "01 MAKE PUBLIC STATEMENT"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 0,
+            "year_a_total": 969651,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 10259907,
+            "year_b_rate": 0.0,
+            "tone_year_a": null,
+            "tone_year_b": null
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT events categorized as appeals or demands opposing wealth redistribution policies or higher taxes on the wealthy.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "02 APPEAL",
+              "10 DEMAND"
+            ],
+            "gdelt_tone": "more_negative"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 0,
+            "year_a_total": 969651,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 10259907,
+            "year_b_rate": 0.0,
+            "tone_year_a": null,
+            "tone_year_b": null
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More New York Times articles highlighting success stories of entrepreneurs and wealthy individuals as justification for maintaining or increasing income disparities.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "entrepreneur success",
+              "wealth creation",
+              "rewarding talent",
+              "economic incentives",
+              "income disparities justified"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 8,
+            "year_a_total": 163480,
+            "year_a_rate": 0.048935649620748714,
+            "year_b_matches": 1,
+            "year_b_total": 102969,
+            "year_b_rate": 0.009711660791111888,
+            "examples": [
+              "In Doling Out Economic Incentives, Bloomberg Looks Outside Manhattan"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Decrease in GDELT protest events related to income inequality or calls for redistribution, indicating less public unrest about income gaps.",
+            "source": "gdelt",
+            "expected_change": "decrease",
+            "gdelt_event_roots": [
+              "14 PROTEST"
+            ],
+            "gdelt_tone": "more_negative"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 0,
+            "year_a_total": 969651,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 10259907,
+            "year_b_rate": 0.0,
+            "tone_year_a": null,
+            "tone_year_b": null
+          }
+        },
+        {
+          "indicator_obj": {
+            "direction": "A",
+            "indicator": "Increase in media coverage or public statements emphasizing the importance of incentives through income inequality",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "incentives",
+              "economic growth",
+              "innovation",
+              "income inequality benefits"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 597,
+            "year_a_total": 163480,
+            "year_a_rate": 3.651822852948373,
+            "year_b_matches": 224,
+            "year_b_total": 102969,
+            "year_b_rate": 2.175412017209063,
+            "examples": [
+              "When Innovation, Too, Is Made in China",
+              "Maryland Picks Edsall to Rebuild",
+              "A Scientist\u2019s Call to Renew Both Education and Inquiry"
+            ]
+          }
+        }
+      ],
+      "B": [
+        {
+          "indicator_obj": {
+            "indicator": "Increase in New York Times articles advocating for income equality, highlighting social justice, and criticizing large income disparities.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "income equality",
+              "reduce income gap",
+              "fair wages",
+              "social justice",
+              "economic fairness"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 54,
+            "year_a_total": 163480,
+            "year_a_rate": 0.33031563494005384,
+            "year_b_matches": 7,
+            "year_b_total": 102969,
+            "year_b_rate": 0.06798162553778322,
+            "examples": [
+              "Action! Romance! Social Justice!",
+              "Activists Aim to Revitalize Israeli Protests",
+              "A Mentor\u2019s Passion for Pictures and Social Justice"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More GDELT events involving public statements or appeals by politicians, activists, or labor unions demanding higher minimum wages or progressive taxation.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "01 MAKE PUBLIC STATEMENT",
+              "02 APPEAL"
+            ],
+            "gdelt_tone": "more_negative"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 0,
+            "year_a_total": 969651,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 10259907,
+            "year_b_rate": 0.0,
+            "tone_year_a": null,
+            "tone_year_b": null
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT protest events focused on economic inequality, wealth redistribution, or social justice causes.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "14 PROTEST"
+            ],
+            "gdelt_tone": "more_negative"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 0,
+            "year_a_total": 969651,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 10259907,
+            "year_b_rate": 0.0,
+            "tone_year_a": null,
+            "tone_year_b": null
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More New York Times coverage of policy proposals or legislative efforts aimed at reducing income inequality, such as raising taxes on the wealthy or expanding social welfare programs.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "tax the rich",
+              "wealth redistribution",
+              "social welfare expansion",
+              "reduce income inequality",
+              "progressive taxation"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 2,
+            "year_a_total": 163480,
+            "year_a_rate": 0.012233912405187179,
+            "year_b_matches": 4,
+            "year_b_total": 102969,
+            "year_b_rate": 0.03884664316444755,
+            "examples": [
+              "Americans for Greater Inequality",
+              "Who Counts as \u2018Rich\u2019? Continued",
+              "Don\u2019t Tax the Rich. Tax Inequality Itself."
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Decrease in GDELT events showing positive public statements or appeals defending large income differences or opposing redistribution policies.",
+            "source": "gdelt",
+            "expected_change": "decrease",
+            "gdelt_event_roots": [
+              "01 MAKE PUBLIC STATEMENT",
+              "02 APPEAL"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 0,
+            "year_a_total": 969651,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 10259907,
+            "year_b_rate": 0.0,
+            "tone_year_a": null,
+            "tone_year_b": null
+          }
+        },
+        {
+          "indicator_obj": {
+            "direction": "B",
+            "indicator": "Increase in GDELT events involving labor union strikes or protests demanding higher wages or income redistribution",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "strike",
+              "protest"
+            ],
+            "gdelt_tone": "more_negative"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 0,
+            "year_a_total": 969651,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 10259907,
+            "year_b_rate": 0.0,
+            "tone_year_a": null,
+            "tone_year_b": null
+          }
+        }
+      ]
+    },
+    "ground_truth": {
+      "mean_wave_5": 6.184971098265896,
+      "mean_wave_6": 5.541058394160584,
+      "change": -0.6439127041053121,
+      "p_value": 5.4260718358442754e-14
+    }
+  },
+  {
+    "question": "E229",
+    "final_decision": "B",
+    "true_direction": "B",
+    "correct": true,
+    "rounds_used": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "decision": "B",
+        "reasoning": "Most indicators show a decrease in positive emphasis on civil rights as essential to democracy, including fewer NYT articles emphasizing civil rights, fewer positive public statements, and fewer demands for enhanced protections. Although protests and coercion events increased, the overall tone and frequency of positive affirmations declined, supporting direction B.",
+        "requested": []
+      }
+    ],
+    "evidence": {
+      "A": [
+        {
+          "indicator_obj": {
+            "indicator": "Increased frequency of New York Times articles emphasizing the importance of civil rights protections as fundamental to democracy.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "civil rights",
+              "essential to democracy",
+              "individual liberty",
+              "democracy protection",
+              "constitutional rights"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 279,
+            "year_a_total": 163480,
+            "year_a_rate": 1.7066307805236114,
+            "year_b_matches": 76,
+            "year_b_total": 102969,
+            "year_b_rate": 0.7380862201245034,
+            "examples": [
+              "Martin Luther King Jr.: Leader of Millions in Nonviolent Drive for Racial Justice",
+              "Cold Case: Burning the Store",
+              "Reporter on Quest to Close 1964 Civil Rights Case"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More GDELT events categorized as '01 MAKE PUBLIC STATEMENT' with positive tone about civil rights and democracy.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "01"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 153757,
+            "year_a_total": 969651,
+            "year_a_rate": 158.56942343172955,
+            "year_b_matches": 1488241,
+            "year_b_total": 10259907,
+            "year_b_rate": 145.05404386219095,
+            "tone_year_a": 5.640047818413955,
+            "tone_year_b": 5.308644529061791
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT '14 PROTEST' events advocating for civil rights and democratic freedoms.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "14"
+            ],
+            "gdelt_tone": "no_prediction"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 5715,
+            "year_a_total": 969651,
+            "year_a_rate": 5.893873156424322,
+            "year_b_matches": 69588,
+            "year_b_total": 10259907,
+            "year_b_rate": 6.782517619311754
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More New York Times headlines discussing legal victories or legislative actions strengthening civil rights protections.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "civil rights law",
+              "court ruling",
+              "legislation",
+              "voting rights",
+              "equal protection"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 996,
+            "year_a_total": 163480,
+            "year_a_rate": 6.092488377783216,
+            "year_b_matches": 262,
+            "year_b_total": 102969,
+            "year_b_rate": 2.544455127271315,
+            "examples": [
+              "Strained States Turning to Laws to Curb Labor Unions",
+              "After a Court Ruling, Turkey Frees 23 Suspected Militants",
+              "D.C. Officials Protest Proposed House Rule"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT '10 DEMAND' events calling for enhanced civil rights protections or democratic reforms.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "10"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 16330,
+            "year_a_total": 969651,
+            "year_a_rate": 16.841110873912367,
+            "year_b_matches": 114590,
+            "year_b_total": 10259907,
+            "year_b_rate": 11.168717221315942,
+            "tone_year_a": 6.917497980036524,
+            "tone_year_b": 5.429474675416224
+          }
+        }
+      ],
+      "B": [
+        {
+          "indicator_obj": {
+            "indicator": "More New York Times articles questioning or criticizing the emphasis on civil rights as essential to democracy.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "civil rights debate",
+              "overemphasis on rights",
+              "democracy challenges",
+              "liberty vs order",
+              "rights skepticism"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 0,
+            "year_a_total": 163480,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 102969,
+            "year_b_rate": 0.0,
+            "examples": []
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT '11 DISAPPROVE' or '12 REJECT' events related to civil rights protections or related policies.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "11",
+              "12"
+            ],
+            "gdelt_tone": "more_negative"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 100146,
+            "year_a_total": 969651,
+            "year_a_rate": 103.28045863924237,
+            "year_b_matches": 918690,
+            "year_b_total": 10259907,
+            "year_b_rate": 89.54174730823583,
+            "tone_year_a": 5.4954056690749296,
+            "tone_year_b": 5.152636965833173
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More New York Times headlines reporting on rollbacks or weakening of civil rights laws or enforcement.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "civil rights rollback",
+              "law weakening",
+              "rights reduction",
+              "policy change",
+              "democracy erosion"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 16,
+            "year_a_total": 163480,
+            "year_a_rate": 0.09787129924149743,
+            "year_b_matches": 4,
+            "year_b_total": 102969,
+            "year_b_rate": 0.03884664316444755,
+            "examples": [
+              "Coming to a Planet Near You: 3 Billion More Mouths to Feed",
+              "Tax Policy Change Would Bring Cash Piles Abroad Back Home",
+              "All Deliberate Speed for Nuclear Reforms?"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT '17 COERCE' or '18 ASSAULT' events targeting civil rights activists or protests.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "17",
+              "18"
+            ],
+            "gdelt_tone": "more_negative"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 58736,
+            "year_a_total": 969651,
+            "year_a_rate": 60.57437160380384,
+            "year_b_matches": 778392,
+            "year_b_total": 10259907,
+            "year_b_rate": 75.86735435321197,
+            "tone_year_a": 4.541745800802207,
+            "tone_year_b": 3.897594549179363
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Decrease in GDELT '01 MAKE PUBLIC STATEMENT' events positively affirming civil rights as essential to democracy.",
+            "source": "gdelt",
+            "expected_change": "decrease",
+            "gdelt_event_roots": [
+              "01"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 153757,
+            "year_a_total": 969651,
+            "year_a_rate": 158.56942343172955,
+            "year_b_matches": 1488241,
+            "year_b_total": 10259907,
+            "year_b_rate": 145.05404386219095,
+            "tone_year_a": 5.640047818413955,
+            "tone_year_b": 5.308644529061791
+          }
+        }
+      ]
+    },
+    "ground_truth": {
+      "mean_wave_5": 8.025919732441471,
+      "mean_wave_6": 7.521577726218098,
+      "change": -0.5043420062233732,
+      "p_value": 6.257620695960124e-08
+    }
+  },
+  {
+    "question": "F063",
+    "final_decision": "A",
+    "true_direction": "B",
+    "correct": false,
+    "rounds_used": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "decision": "A",
+        "reasoning": "Most indicators supporting Direction A show either an increase or stability in religious importance, such as more faith-based aid events and slightly more political invocations of religion, while indicators for Direction B mostly show decreases or no increase in secularism-related coverage and events. The protest events opposing religion actually increased, which contradicts Direction A's prediction but aligns with Direction B, yet this single contradictory indicator is outweighed by multiple positive indicators for Direction A.",
+        "requested": []
+      }
+    ],
+    "evidence": {
+      "A": [
+        {
+          "indicator_obj": {
+            "indicator": "Increased frequency of New York Times articles discussing the growing role of religion and God in American public life.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "importance of God",
+              "religion central",
+              "faith in America",
+              "God in daily life",
+              "religious revival"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 3,
+            "year_a_total": 163480,
+            "year_a_rate": 0.01835086860778077,
+            "year_b_matches": 1,
+            "year_b_total": 102969,
+            "year_b_rate": 0.009711660791111888,
+            "examples": [
+              "American Jews Lead the Happiest Lives"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More GDELT events tagged as MAKE PUBLIC STATEMENT or APPEAL by religious leaders emphasizing the importance of God and faith.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "01",
+              "02"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 228162,
+            "year_a_total": 969651,
+            "year_a_rate": 235.3032173431472,
+            "year_b_matches": 2303065,
+            "year_b_total": 10259907,
+            "year_b_rate": 224.47230759499087,
+            "tone_year_a": 5.759917687991117,
+            "tone_year_b": 5.47363125302284
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT events involving religious organizations providing aid or engaging in cooperative activities framed around faith-based initiatives.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "06",
+              "07"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 54876,
+            "year_a_total": 969651,
+            "year_a_rate": 56.593557888353644,
+            "year_b_matches": 646167,
+            "year_b_total": 10259907,
+            "year_b_rate": 62.97981063571044,
+            "tone_year_a": 6.319669373422464,
+            "tone_year_b": 6.394713292502927
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More New York Times coverage of political figures or public campaigns invoking God or religious values in speeches or policy discussions.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "God in politics",
+              "faith-based policy",
+              "religious values",
+              "prayer in public",
+              "God in government"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 0,
+            "year_a_total": 163480,
+            "year_a_rate": 0.0,
+            "year_b_matches": 2,
+            "year_b_total": 102969,
+            "year_b_rate": 0.019423321582223776,
+            "examples": [
+              "Mannequins Wear a Message for Iraq\u2019s Women",
+              "Does Sex Ed Undermine Parental Rights?"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Decrease in GDELT protest events opposing religious expression or faith-based initiatives, indicating less public resistance to religion.",
+            "source": "gdelt",
+            "expected_change": "decrease",
+            "gdelt_event_roots": [
+              "14"
+            ],
+            "gdelt_tone": "no_prediction"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 5715,
+            "year_a_total": 969651,
+            "year_a_rate": 5.893873156424322,
+            "year_b_matches": 69588,
+            "year_b_total": 10259907,
+            "year_b_rate": 6.782517619311754
+          }
+        }
+      ],
+      "B": [
+        {
+          "indicator_obj": {
+            "indicator": "Increase in New York Times articles discussing secularism, decline of religion, or people moving away from God.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "secularism",
+              "decline of religion",
+              "less faith",
+              "God less important",
+              "rise of atheism"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 12,
+            "year_a_total": 163480,
+            "year_a_rate": 0.07340347443112308,
+            "year_b_matches": 2,
+            "year_b_total": 102969,
+            "year_b_rate": 0.019423321582223776,
+            "examples": [
+              "French Panel Debates Secularism and Islam",
+              "Pitzer College in California Adds Major in Secularism"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More GDELT events involving public statements or appeals criticizing religion or promoting secular values.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "01",
+              "02"
+            ],
+            "gdelt_tone": "more_negative"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 228162,
+            "year_a_total": 969651,
+            "year_a_rate": 235.3032173431472,
+            "year_b_matches": 2303065,
+            "year_b_total": 10259907,
+            "year_b_rate": 224.47230759499087,
+            "tone_year_a": 5.759917687991117,
+            "tone_year_b": 5.47363125302284
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT protest events opposing religious influence in public life or advocating for separation of church and state.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "14"
+            ],
+            "gdelt_tone": "more_negative"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 5715,
+            "year_a_total": 969651,
+            "year_a_rate": 5.893873156424322,
+            "year_b_matches": 69588,
+            "year_b_total": 10259907,
+            "year_b_rate": 6.782517619311754,
+            "tone_year_a": 5.373131595567174,
+            "tone_year_b": 5.458447077950048
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Decrease in New York Times coverage of religion as a central or important part of people's lives, fewer articles about faith-based initiatives.",
+            "source": "nyt",
+            "expected_change": "decrease",
+            "nyt_keywords": [
+              "importance of God",
+              "religion central",
+              "faith in America",
+              "God in daily life",
+              "religious revival"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 3,
+            "year_a_total": 163480,
+            "year_a_rate": 0.01835086860778077,
+            "year_b_matches": 1,
+            "year_b_total": 102969,
+            "year_b_rate": 0.009711660791111888,
+            "examples": [
+              "American Jews Lead the Happiest Lives"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Decrease in GDELT events where religious groups provide aid or engage in cooperative activities framed around faith.",
+            "source": "gdelt",
+            "expected_change": "decrease",
+            "gdelt_event_roots": [
+              "06",
+              "07"
+            ],
+            "gdelt_tone": "no_prediction"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 54876,
+            "year_a_total": 969651,
+            "year_a_rate": 56.593557888353644,
+            "year_b_matches": 646167,
+            "year_b_total": 10259907,
+            "year_b_rate": 62.97981063571044
+          }
+        }
+      ]
+    },
+    "ground_truth": {
+      "mean_wave_5": 8.25,
+      "mean_wave_6": 7.801363636363637,
+      "change": -0.4486363636363633,
+      "p_value": 0.0003365627408086979
+    }
+  },
+  {
+    "question": "E221B",
+    "final_decision": "B",
+    "true_direction": "A",
+    "correct": false,
+    "rounds_used": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "decision": "B",
+        "reasoning": "Most indicators show a decrease in coverage and events related to peaceful demonstrations, such as fewer New York Times articles on marches and a slight decrease in GDELT events tagged as calls for peaceful demonstrations. Although some indicators like the number of protest events increased, the stronger and more direct indicators of public participation and media coverage decreased, supporting Direction B.",
+        "requested": []
+      }
+    ],
+    "evidence": {
+      "A": [
+        {
+          "indicator_obj": {
+            "indicator": "Increased frequency of New York Times articles mentioning recent peaceful demonstrations or protests attended by citizens.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "peaceful demonstration",
+              "lawful protest",
+              "public rally",
+              "citizen protest",
+              "mass demonstration"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 3,
+            "year_a_total": 163480,
+            "year_a_rate": 0.01835086860778077,
+            "year_b_matches": 7,
+            "year_b_total": 102969,
+            "year_b_rate": 0.06798162553778322,
+            "examples": [
+              "Crackdown on Protesters Upsets Lives in Belarus",
+              "At Protest Over Planned Cuts, Promises of More Protests to Come",
+              "TimesCast | Protests in Jordan"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Higher number of GDELT events coded as PROTEST (14) with neutral or positive tone, indicating more peaceful demonstrations.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "14"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 5715,
+            "year_a_total": 969651,
+            "year_a_rate": 5.893873156424322,
+            "year_b_matches": 69588,
+            "year_b_total": 10259907,
+            "year_b_rate": 6.782517619311754,
+            "tone_year_a": 5.373131595567174,
+            "tone_year_b": 5.458447077950048
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More New York Times articles reporting on organized peaceful marches, sit-ins, or rallies involving large numbers of participants.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "march",
+              "sit-in",
+              "rally",
+              "peaceful protest",
+              "demonstrators"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 4206,
+            "year_a_total": 163480,
+            "year_a_rate": 25.727917788108638,
+            "year_b_matches": 1293,
+            "year_b_total": 102969,
+            "year_b_rate": 12.557177402907671,
+            "examples": [
+              "At Sea in South Korea",
+              "Disney Tests Broadway Ticket Flexibility",
+              "Packers Claim a Wild-Card Berth"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT events tagged as MAKE PUBLIC STATEMENT (01) or APPEAL (02) related to calls for peaceful demonstrations or civic engagement.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "01",
+              "02"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 228162,
+            "year_a_total": 969651,
+            "year_a_rate": 235.3032173431472,
+            "year_b_matches": 2303065,
+            "year_b_total": 10259907,
+            "year_b_rate": 224.47230759499087,
+            "tone_year_a": 5.759917687991117,
+            "tone_year_b": 5.47363125302284
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More New York Times coverage highlighting civic participation and activism through lawful demonstrations.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "civic participation",
+              "activism",
+              "lawful demonstration",
+              "peaceful assembly",
+              "public engagement"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 70,
+            "year_a_total": 163480,
+            "year_a_rate": 0.4281869341815513,
+            "year_b_matches": 38,
+            "year_b_total": 102969,
+            "year_b_rate": 0.3690431100622517,
+            "examples": [
+              "James Buchanan\u2019s Activist Blunder",
+              "Living Around | Morningside Park",
+              "The Name Evokes Dawn for a Reason"
+            ]
+          }
+        }
+      ],
+      "B": [
+        {
+          "indicator_obj": {
+            "indicator": "Decrease in New York Times articles mentioning recent peaceful demonstrations or lawful protests attended by citizens.",
+            "source": "nyt",
+            "expected_change": "decrease",
+            "nyt_keywords": [
+              "peaceful demonstration",
+              "lawful protest",
+              "public rally",
+              "citizen protest",
+              "mass demonstration"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 3,
+            "year_a_total": 163480,
+            "year_a_rate": 0.01835086860778077,
+            "year_b_matches": 7,
+            "year_b_total": 102969,
+            "year_b_rate": 0.06798162553778322,
+            "examples": [
+              "Crackdown on Protesters Upsets Lives in Belarus",
+              "At Protest Over Planned Cuts, Promises of More Protests to Come",
+              "TimesCast | Protests in Jordan"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Fewer GDELT events coded as PROTEST (14) with neutral or positive tone, indicating fewer peaceful demonstrations.",
+            "source": "gdelt",
+            "expected_change": "decrease",
+            "gdelt_event_roots": [
+              "14"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 5715,
+            "year_a_total": 969651,
+            "year_a_rate": 5.893873156424322,
+            "year_b_matches": 69588,
+            "year_b_total": 10259907,
+            "year_b_rate": 6.782517619311754,
+            "tone_year_a": 5.373131595567174,
+            "tone_year_b": 5.458447077950048
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Reduction in New York Times articles reporting on organized peaceful marches, sit-ins, or rallies involving large numbers of participants.",
+            "source": "nyt",
+            "expected_change": "decrease",
+            "nyt_keywords": [
+              "march",
+              "sit-in",
+              "rally",
+              "peaceful protest",
+              "demonstrators"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 4206,
+            "year_a_total": 163480,
+            "year_a_rate": 25.727917788108638,
+            "year_b_matches": 1293,
+            "year_b_total": 102969,
+            "year_b_rate": 12.557177402907671,
+            "examples": [
+              "At Sea in South Korea",
+              "Disney Tests Broadway Ticket Flexibility",
+              "Packers Claim a Wild-Card Berth"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Decrease in GDELT events tagged as MAKE PUBLIC STATEMENT (01) or APPEAL (02) related to calls for peaceful demonstrations or civic engagement.",
+            "source": "gdelt",
+            "expected_change": "decrease",
+            "gdelt_event_roots": [
+              "01",
+              "02"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 228162,
+            "year_a_total": 969651,
+            "year_a_rate": 235.3032173431472,
+            "year_b_matches": 2303065,
+            "year_b_total": 10259907,
+            "year_b_rate": 224.47230759499087,
+            "tone_year_a": 5.759917687991117,
+            "tone_year_b": 5.47363125302284
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Less New York Times coverage highlighting civic participation and activism through lawful demonstrations.",
+            "source": "nyt",
+            "expected_change": "decrease",
+            "nyt_keywords": [
+              "civic participation",
+              "activism",
+              "lawful demonstration",
+              "peaceful assembly",
+              "public engagement"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 70,
+            "year_a_total": 163480,
+            "year_a_rate": 0.4281869341815513,
+            "year_b_matches": 38,
+            "year_b_total": 102969,
+            "year_b_rate": 0.3690431100622517,
+            "examples": [
+              "James Buchanan\u2019s Activist Blunder",
+              "Living Around | Morningside Park",
+              "The Name Evokes Dawn for a Reason"
+            ]
+          }
+        }
+      ]
+    },
+    "ground_truth": {
+      "mean_wave_5": 1.8906379453189726,
+      "mean_wave_6": 1.457680250783699,
+      "change": -0.43295769453527355,
+      "p_value": 3.4825846223975708e-43
+    }
+  },
+  {
+    "question": "F121",
+    "final_decision": "B",
+    "true_direction": "A",
+    "correct": false,
+    "rounds_used": 3,
+    "rounds": [
+      {
+        "round": 1,
+        "decision": "need_more_evidence",
+        "reasoning": "All indicators for both directions show almost no change or zero occurrences, except for a minimal increase in articles promoting traditional marriage in direction B, which is too small to be conclusive. The lack of measurable media or event coverage changes means the current evidence is insufficient to determine the direction of attitude shift.",
+        "requested": [
+          {
+            "direction": "A",
+            "indicator": "Change in national survey average score on justifiability of divorce",
+            "source": "survey",
+            "expected_change": "increase"
+          },
+          {
+            "direction": "B",
+            "indicator": "Change in national survey average score on justifiability of divorce",
+            "source": "survey",
+            "expected_change": "decrease"
+          },
+          {
+            "direction": "A",
+            "indicator": "Increase in social media posts or blogs positively framing divorce",
+            "source": "social_media",
+            "expected_change": "increase"
+          },
+          {
+            "direction": "B",
+            "indicator": "Increase in social media posts or blogs negatively framing divorce",
+            "source": "social_media",
+            "expected_change": "increase"
+          },
+          {
+            "direction": "A",
+            "indicator": "Increase in divorce rates or legal filings",
+            "source": "government_records",
+            "expected_change": "increase"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "decision": "need_more_evidence",
+        "reasoning": "All indicators for both directions show almost no change or extremely low counts, except for a minimal increase in articles promoting traditional marriage and condemning divorce, which is too small to decisively support direction B. The lack of any substantial media or event evidence for either direction means the current data is insufficient to determine the attitude shift.",
+        "requested": [
+          {
+            "direction": "A",
+            "indicator": "Change in nationally representative survey average score on justifiability of divorce",
+            "source": "survey",
+            "expected_change": "increase"
+          },
+          {
+            "direction": "B",
+            "indicator": "Change in nationally representative survey average score on justifiability of divorce",
+            "source": "survey",
+            "expected_change": "decrease"
+          },
+          {
+            "direction": "A",
+            "indicator": "Increase in social media posts or blogs positively framing divorce",
+            "source": "social_media",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "divorce",
+              "freedom",
+              "happiness"
+            ]
+          },
+          {
+            "direction": "B",
+            "indicator": "Increase in social media posts or blogs negatively framing divorce",
+            "source": "social_media",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "divorce",
+              "harm",
+              "stability"
+            ]
+          },
+          {
+            "direction": "A",
+            "indicator": "Increase in divorce rates as a possible behavioral indicator of acceptance",
+            "source": "government_statistics",
+            "expected_change": "increase"
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "decision": "B",
+        "reasoning": "The only observed change was a slight increase in New York Times articles covering religious or cultural groups promoting traditional marriage and condemning divorce, which supports direction B. All other indicators for both directions showed no change, but the presence of any increase in negative framing of divorce suggests a shift toward less acceptance.",
+        "requested": []
+      }
+    ],
+    "evidence": {
+      "A": [
+        {
+          "indicator_obj": {
+            "indicator": "Increase in New York Times articles discussing divorce as a common and acceptable solution to marital problems.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "divorce acceptance",
+              "divorce justified",
+              "divorce common",
+              "marriage dissolution",
+              "divorce rates rising"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 0,
+            "year_a_total": 163480,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 102969,
+            "year_b_rate": 0.0,
+            "examples": []
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More GDELT events with public statements supporting divorce rights or reforms making divorce easier to obtain.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "01 MAKE PUBLIC STATEMENT"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 0,
+            "year_a_total": 969651,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 10259907,
+            "year_b_rate": 0.0,
+            "tone_year_a": null,
+            "tone_year_b": null
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in New York Times articles highlighting stories of individuals positively framing divorce as a path to personal freedom or happiness.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "divorce empowerment",
+              "divorce happiness",
+              "divorce freedom",
+              "positive divorce stories"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 0,
+            "year_a_total": 163480,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 102969,
+            "year_b_rate": 0.0,
+            "examples": []
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More GDELT events involving appeals or demands for legal reforms to ease divorce procedures or protect divorced individuals' rights.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "02 APPEAL",
+              "10 DEMAND"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 0,
+            "year_a_total": 969651,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 10259907,
+            "year_b_rate": 0.0,
+            "tone_year_a": null,
+            "tone_year_b": null
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in New York Times coverage of declining stigma around divorce and growing social acceptance.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "divorce stigma decline",
+              "divorce acceptance growing",
+              "changing attitudes divorce"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 0,
+            "year_a_total": 163480,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 102969,
+            "year_b_rate": 0.0,
+            "examples": []
+          }
+        }
+      ],
+      "B": [
+        {
+          "indicator_obj": {
+            "indicator": "Increase in New York Times articles emphasizing negative consequences of divorce and promoting marital stability.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "divorce harms",
+              "divorce negative effects",
+              "marriage preservation",
+              "divorce discouraged"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 0,
+            "year_a_total": 163480,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 102969,
+            "year_b_rate": 0.0,
+            "examples": []
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More GDELT events with public statements or protests opposing divorce or advocating for stricter divorce laws.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "01 MAKE PUBLIC STATEMENT",
+              "14 PROTEST"
+            ],
+            "gdelt_tone": "more_negative"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 0,
+            "year_a_total": 969651,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 10259907,
+            "year_b_rate": 0.0,
+            "tone_year_a": null,
+            "tone_year_b": null
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in New York Times coverage of religious or cultural groups promoting traditional marriage and condemning divorce.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "traditional marriage",
+              "anti-divorce",
+              "marriage sanctity",
+              "divorce condemned"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 0,
+            "year_a_total": 163480,
+            "year_a_rate": 0.0,
+            "year_b_matches": 2,
+            "year_b_total": 102969,
+            "year_b_rate": 0.019423321582223776,
+            "examples": [
+              "Even Done Politely, Gay-Marriage Protest Is Tiring",
+              "Marcus Bachmann Outlines \u2018First Spouse\u2019 Agenda"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More GDELT events involving demands or disapproval directed at liberal divorce policies or campaigns to reduce divorce rates.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "10 DEMAND",
+              "11 DISAPPROVE"
+            ],
+            "gdelt_tone": "more_negative"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 0,
+            "year_a_total": 969651,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 10259907,
+            "year_b_rate": 0.0,
+            "tone_year_a": null,
+            "tone_year_b": null
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in New York Times articles reporting on government or community initiatives aimed at reducing divorce rates.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "divorce prevention",
+              "marriage counseling programs",
+              "reduce divorce rates",
+              "marriage support initiatives"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 0,
+            "year_a_total": 163480,
+            "year_a_rate": 0.0,
+            "year_b_matches": 0,
+            "year_b_total": 102969,
+            "year_b_rate": 0.0,
+            "examples": []
+          }
+        }
+      ]
+    },
+    "ground_truth": {
+      "mean_wave_5": 5.813242784380305,
+      "mean_wave_6": 6.199353945546839,
+      "change": 0.386111161166534,
+      "p_value": 1.8677723135107737e-05
+    }
+  },
+  {
+    "question": "E026B",
+    "final_decision": "B",
+    "true_direction": "A",
+    "correct": false,
+    "rounds_used": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "decision": "B",
+        "reasoning": "Most indicators show a decrease consistent with Direction B, including a significant drop in New York Times articles mentioning boycotts and a decrease in GDELT events tagged as DEMAND or DISAPPROVE. Although protest events slightly increased, the overall pattern of media coverage and calls for boycott participation declined, supporting fewer people joining boycotts.",
+        "requested": []
+      }
+    ],
+    "evidence": {
+      "A": [
+        {
+          "indicator_obj": {
+            "indicator": "Increased frequency of New York Times articles discussing consumer boycotts or calls to boycott specific companies or products.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "boycott",
+              "consumer boycott",
+              "call to boycott",
+              "boycott campaign",
+              "boycott movement"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 167,
+            "year_a_total": 163480,
+            "year_a_rate": 1.0215316858331294,
+            "year_b_matches": 45,
+            "year_b_total": 102969,
+            "year_b_rate": 0.43702473560003496,
+            "examples": [
+              "Kanda Satyagraha",
+              "A DreamWorks Rout in a Flawed Contest",
+              "Former Liberian President Boycotts War Crimes Trial"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More GDELT events tagged as PROTEST (14) related to consumer or labor issues, indicating organized boycott actions.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "14"
+            ],
+            "gdelt_tone": "more_negative"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 5715,
+            "year_a_total": 969651,
+            "year_a_rate": 5.893873156424322,
+            "year_b_matches": 69588,
+            "year_b_total": 10259907,
+            "year_b_rate": 6.782517619311754,
+            "tone_year_a": 5.373131595567174,
+            "tone_year_b": 5.458447077950048
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT events categorized as MAKE PUBLIC STATEMENT (01) or APPEAL (02) where activists or organizations urge the public to join boycotts.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "01",
+              "02"
+            ],
+            "gdelt_tone": "more_negative"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 228162,
+            "year_a_total": 969651,
+            "year_a_rate": 235.3032173431472,
+            "year_b_matches": 2303065,
+            "year_b_total": 10259907,
+            "year_b_rate": 224.47230759499087,
+            "tone_year_a": 5.759917687991117,
+            "tone_year_b": 5.47363125302284
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "More New York Times headlines or abstracts reporting on companies losing sales or facing pressure due to consumer boycotts.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "boycott impact",
+              "boycott hurts sales",
+              "consumer pressure",
+              "boycott effect"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 0,
+            "year_a_total": 163480,
+            "year_a_rate": 0.0,
+            "year_b_matches": 1,
+            "year_b_total": 102969,
+            "year_b_rate": 0.009711660791111888,
+            "examples": [
+              "Is Modern Culture Ruining Childhood?"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT events tagged as DEMAND (10) or DISAPPROVE (11) related to corporate practices, reflecting calls for boycott.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "10",
+              "11"
+            ],
+            "gdelt_tone": "more_negative"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 86491,
+            "year_a_total": 969651,
+            "year_a_rate": 89.19807229611479,
+            "year_b_matches": 752711,
+            "year_b_total": 10259907,
+            "year_b_rate": 73.36431022230514,
+            "tone_year_a": 5.709497772589518,
+            "tone_year_b": 5.079382970530947
+          }
+        }
+      ],
+      "B": [
+        {
+          "indicator_obj": {
+            "indicator": "Decrease in New York Times articles mentioning consumer boycotts or calls to boycott products or companies.",
+            "source": "nyt",
+            "expected_change": "decrease",
+            "nyt_keywords": [
+              "boycott",
+              "consumer boycott",
+              "call to boycott",
+              "boycott campaign",
+              "boycott movement"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 167,
+            "year_a_total": 163480,
+            "year_a_rate": 1.0215316858331294,
+            "year_b_matches": 45,
+            "year_b_total": 102969,
+            "year_b_rate": 0.43702473560003496,
+            "examples": [
+              "Kanda Satyagraha",
+              "A DreamWorks Rout in a Flawed Contest",
+              "Former Liberian President Boycotts War Crimes Trial"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Fewer GDELT events tagged as PROTEST (14) related to consumer or labor boycotts, indicating less organized boycott activity.",
+            "source": "gdelt",
+            "expected_change": "decrease",
+            "gdelt_event_roots": [
+              "14"
+            ],
+            "gdelt_tone": "no_prediction"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 5715,
+            "year_a_total": 969651,
+            "year_a_rate": 5.893873156424322,
+            "year_b_matches": 69588,
+            "year_b_total": 10259907,
+            "year_b_rate": 6.782517619311754
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Reduction in GDELT events categorized as MAKE PUBLIC STATEMENT (01) or APPEAL (02) urging public participation in boycotts.",
+            "source": "gdelt",
+            "expected_change": "decrease",
+            "gdelt_event_roots": [
+              "01",
+              "02"
+            ],
+            "gdelt_tone": "no_prediction"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 228162,
+            "year_a_total": 969651,
+            "year_a_rate": 235.3032173431472,
+            "year_b_matches": 2303065,
+            "year_b_total": 10259907,
+            "year_b_rate": 224.47230759499087
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Fewer New York Times reports on companies suffering from consumer boycotts or pressure campaigns.",
+            "source": "nyt",
+            "expected_change": "decrease",
+            "nyt_keywords": [
+              "boycott impact",
+              "boycott hurts sales",
+              "consumer pressure",
+              "boycott effect"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 0,
+            "year_a_total": 163480,
+            "year_a_rate": 0.0,
+            "year_b_matches": 1,
+            "year_b_total": 102969,
+            "year_b_rate": 0.009711660791111888,
+            "examples": [
+              "Is Modern Culture Ruining Childhood?"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Decrease in GDELT events tagged as DEMAND (10) or DISAPPROVE (11) related to calls for boycotts or corporate criticism.",
+            "source": "gdelt",
+            "expected_change": "decrease",
+            "gdelt_event_roots": [
+              "10",
+              "11"
+            ],
+            "gdelt_tone": "no_prediction"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 86491,
+            "year_a_total": 969651,
+            "year_a_rate": 89.19807229611479,
+            "year_b_matches": 752711,
+            "year_b_total": 10259907,
+            "year_b_rate": 73.36431022230514
+          }
+        }
+      ]
+    },
+    "ground_truth": {
+      "mean_wave_5": 1.796036333608588,
+      "mean_wave_6": 1.4135135135135135,
+      "change": -0.38252282009507454,
+      "p_value": 1.4205836891479291e-37
+    }
+  },
+  {
+    "question": "E217",
+    "final_decision": "B",
+    "true_direction": "A",
+    "correct": false,
+    "rounds_used": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "decision": "B",
+        "reasoning": "Most indicators for Direction A show either decreases or very minimal increases, while several indicators for Direction B show increases in protest events and public fears, despite some decreases in critical articles. The rise in protest events and slight increase in articles discussing distrust suggest a shift toward more negative attitudes about science and technology's impact on daily life.",
+        "requested": []
+      }
+    ],
+    "evidence": {
+      "A": [
+        {
+          "indicator_obj": {
+            "indicator": "Increase in New York Times articles with positive headlines about breakthroughs in medical technology improving health outcomes.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "medical breakthrough",
+              "health improvement",
+              "life-saving technology",
+              "healthier lives",
+              "medical innovation"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 7,
+            "year_a_total": 163480,
+            "year_a_rate": 0.042818693418155127,
+            "year_b_matches": 1,
+            "year_b_total": 102969,
+            "year_b_rate": 0.009711660791111888,
+            "examples": [
+              "In Medicine, New Isn\u2019t Always Improved"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT events categorized as 03 EXPRESS INTENT TO COOPERATE related to scientific collaborations and technology development.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "03"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 76764,
+            "year_a_total": 969651,
+            "year_a_rate": 79.16662799295828,
+            "year_b_matches": 781386,
+            "year_b_total": 10259907,
+            "year_b_rate": 76.15916986382041,
+            "tone_year_a": 6.480938413750725,
+            "tone_year_b": 6.197349576055629
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in New York Times articles highlighting technological advances making daily life easier and more comfortable.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "technology convenience",
+              "easier life",
+              "comfort technology",
+              "smart devices",
+              "technology improves life"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 0,
+            "year_a_total": 163480,
+            "year_a_rate": 0.0,
+            "year_b_matches": 1,
+            "year_b_total": 102969,
+            "year_b_rate": 0.009711660791111888,
+            "examples": [
+              "Users of iPhones Put a Flourish in E-Signatures"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT events tagged as 07 PROVIDE AID involving technology transfer or scientific assistance to improve living conditions.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "07"
+            ],
+            "gdelt_tone": "more_positive"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 35620,
+            "year_a_total": 969651,
+            "year_a_rate": 36.73486646226323,
+            "year_b_matches": 432900,
+            "year_b_total": 10259907,
+            "year_b_rate": 42.19336491061761,
+            "tone_year_a": 6.452538051029116,
+            "tone_year_b": 6.66286941523992
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in New York Times articles with positive tone about science and technology contributing to environmental sustainability and healthier living.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "environmental technology",
+              "sustainable technology",
+              "clean energy",
+              "healthier environment",
+              "green technology"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 25,
+            "year_a_total": 163480,
+            "year_a_rate": 0.15292390506483974,
+            "year_b_matches": 22,
+            "year_b_total": 102969,
+            "year_b_rate": 0.21365653740446153,
+            "examples": [
+              "Siemens Invests in Expanding Wind Power",
+              "Obama Ducks and Covers on Climate",
+              "In Pa., Obama Pushes Investment in Clean Energy"
+            ]
+          }
+        }
+      ],
+      "B": [
+        {
+          "indicator_obj": {
+            "indicator": "Increase in New York Times articles expressing skepticism or criticism about negative impacts of science and technology on health and daily life.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "technology risks",
+              "health concerns",
+              "technology backlash",
+              "negative effects",
+              "technology criticism"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 15,
+            "year_a_total": 163480,
+            "year_a_rate": 0.09175434303890384,
+            "year_b_matches": 5,
+            "year_b_total": 102969,
+            "year_b_rate": 0.048558303955559434,
+            "examples": [
+              "Stress, Pollution and Poverty: A Vicious Cycle?",
+              "Job Worries Override Health Concerns",
+              "Energy Agency Calls for Rise in World Oil Output"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT events categorized as 14 PROTEST related to opposition against technological developments or scientific projects.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "14"
+            ],
+            "gdelt_tone": "more_negative"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 5715,
+            "year_a_total": 969651,
+            "year_a_rate": 5.893873156424322,
+            "year_b_matches": 69588,
+            "year_b_total": 10259907,
+            "year_b_rate": 6.782517619311754,
+            "tone_year_a": 5.373131595567174,
+            "tone_year_b": 5.458447077950048
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in New York Times articles reporting on ethical controversies or failures in science and technology causing harm or discomfort.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "scientific misconduct",
+              "technology failure",
+              "ethical concerns",
+              "technology harm",
+              "science controversy"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 6,
+            "year_a_total": 163480,
+            "year_a_rate": 0.03670173721556154,
+            "year_b_matches": 2,
+            "year_b_total": 102969,
+            "year_b_rate": 0.019423321582223776,
+            "examples": [
+              "A Park, an Oyster Farm and Science",
+              "A Journal\u2019s Statement May Aid a Harvard Researcher Accused of Misconduct"
+            ]
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in GDELT events tagged as 11 DISAPPROVE or 12 REJECT involving scientific or technological initiatives.",
+            "source": "gdelt",
+            "expected_change": "increase",
+            "gdelt_event_roots": [
+              "11",
+              "12"
+            ],
+            "gdelt_tone": "more_negative"
+          },
+          "metrics": {
+            "source": "gdelt",
+            "year_a_matches": 100146,
+            "year_a_total": 969651,
+            "year_a_rate": 103.28045863924237,
+            "year_b_matches": 918690,
+            "year_b_total": 10259907,
+            "year_b_rate": 89.54174730823583,
+            "tone_year_a": 5.4954056690749296,
+            "tone_year_b": 5.152636965833173
+          }
+        },
+        {
+          "indicator_obj": {
+            "indicator": "Increase in New York Times articles discussing public fears or distrust about technology making life less comfortable or more complicated.",
+            "source": "nyt",
+            "expected_change": "increase",
+            "nyt_keywords": [
+              "technology fear",
+              "public distrust",
+              "technology anxiety",
+              "complicated life",
+              "technology discomfort"
+            ]
+          },
+          "metrics": {
+            "source": "nyt",
+            "year_a_matches": 2,
+            "year_a_total": 163480,
+            "year_a_rate": 0.012233912405187179,
+            "year_b_matches": 3,
+            "year_b_total": 102969,
+            "year_b_rate": 0.029134982373335665,
+            "examples": [
+              "What Wendy Wasserstein Wrought",
+              "Remembering Payton, With Eyes Open",
+              "The Photo That Exposed Segregation"
+            ]
+          }
+        }
+      ]
+    },
+    "ground_truth": {
+      "mean_wave_5": 6.902698282910875,
+      "mean_wave_6": 7.283865002311604,
+      "change": 0.38116671940072866,
+      "p_value": 3.466279680901189e-07
+    }
+  }
+]
