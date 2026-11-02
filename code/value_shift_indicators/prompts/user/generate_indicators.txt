@@ -1,0 +1,13 @@
+Country: {country}
+Time points: {year_a} and {year_b}
+Attitude measured: {attitude_description}
+
+Between {year_a} and {year_b}, the average answer moved in one of these two directions (you are not told which actually happened):
+Direction A: {direction_a}
+Direction B: {direction_b}
+
+For EACH direction, produce at least 5 indicators: concrete, observable signals we could look for in (a) New York Times article abstracts/headlines, or (b) global news-event records (GDELT — events are tagged with one of these categories: {gdelt_categories}, each event also has a tone score) between {window_start} and {window_end} that we would expect to see MORE or LESS of if that direction were the true one.
+
+For each indicator return: `indicator` (one sentence), `source` ("nyt" or "gdelt"), `expected_change` ("increase" or "decrease"), and either `nyt_keywords` (list of phrases to search article abstracts for) or `gdelt_event_roots` (list of 2-digit codes from the list above) plus optional `gdelt_tone` ("more_negative"/"more_positive"/"no_prediction").
+
+Return JSON: {{"A": [...at least 5...], "B": [...at least 5...]}}
