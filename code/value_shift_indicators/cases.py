@@ -159,4 +159,151 @@ CASES = [
         ),
         direction_if_mean_increases="A",
     ),
+    dict(
+        question="E037", section="E",
+        case=build_case(
+            country="United States", year_a=2006, year_b=2011,
+            attitude_description=('whether people think individuals should take more responsibility for '
+                                   'providing for themselves, or the government should take more '
+                                   'responsibility for ensuring everyone is provided for, on a scale from '
+                                   '1 (people should take more responsibility) to 10 (the government should '
+                                   'take more responsibility). A nationally representative survey asked '
+                                   'this question at both time points.'),
+            direction_a='average answer moved toward "the government should take more responsibility" (people became more supportive of government responsibility for provision).',
+            direction_b='average answer moved toward "people should take more responsibility" (people became more supportive of individual responsibility for provision).',
+            direction_labels={"A": "people became more supportive of government responsibility for provision",
+                               "B": "people became more supportive of individual responsibility for provision"},
+        ),
+        direction_if_mean_increases="A",
+    ),
+    dict(
+        question="F120", section="F",
+        case=build_case(
+            country="United States", year_a=2006, year_b=2011,
+            attitude_description=('how justifiable people consider abortion, on a scale from 1 (never '
+                                   'justifiable) to 10 (always justifiable). A nationally representative '
+                                   'survey asked this question at both time points.'),
+            direction_a='average answer moved toward "always justifiable" (attitudes became more accepting of abortion).',
+            direction_b='average answer moved toward "never justifiable" (attitudes became less accepting of abortion).',
+            direction_labels={"A": "attitudes became more accepting of abortion",
+                               "B": "attitudes became less accepting of abortion"},
+        ),
+        direction_if_mean_increases="A",
+    ),
+    dict(
+        question="F123", section="F",
+        case=build_case(
+            country="United States", year_a=2006, year_b=2011,
+            attitude_description=('how justifiable people consider suicide, on a scale from 1 (never '
+                                   'justifiable) to 10 (always justifiable). A nationally representative '
+                                   'survey asked this question at both time points.'),
+            direction_a='average answer moved toward "always justifiable" (attitudes became more accepting of suicide).',
+            direction_b='average answer moved toward "never justifiable" (attitudes became less accepting of suicide).',
+            direction_labels={"A": "attitudes became more accepting of suicide",
+                               "B": "attitudes became less accepting of suicide"},
+        ),
+        direction_if_mean_increases="A",
+    ),
+    dict(
+        question="C006", section="C",
+        case=build_case(
+            country="United States", year_a=2006, year_b=2011,
+            attitude_description=("people's satisfaction with their household's financial situation, on a "
+                                   'scale from 1 (dissatisfied) to 10 (satisfied). A nationally '
+                                   'representative survey asked this question at both time points.'),
+            direction_a='average answer moved toward "satisfied" (people became more satisfied with their household finances).',
+            direction_b='average answer moved toward "dissatisfied" (people became less satisfied with their household finances).',
+            direction_labels={"A": "people became more satisfied with their household finances",
+                               "B": "people became less satisfied with their household finances"},
+        ),
+        direction_if_mean_increases="A",
+    ),
+    dict(
+        question="E234", section="E",
+        case=build_case(
+            country="United States", year_a=2006, year_b=2011,
+            attitude_description=('whether people think the world is better off or worse off because of '
+                                   'science and technology, on a scale from 1 (a lot worse off) to 10 (a '
+                                   'lot better off). A nationally representative survey asked this '
+                                   'question at both time points.'),
+            direction_a='average answer moved toward "a lot better off" (people became more positive about the overall effect of science and technology on the world).',
+            direction_b='average answer moved toward "a lot worse off" (people became more negative about the overall effect of science and technology on the world).',
+            direction_labels={"A": "people became more positive about the overall effect of science and technology on the world",
+                               "B": "people became more negative about the overall effect of science and technology on the world"},
+        ),
+        direction_if_mean_increases="A",
+    ),
+    dict(
+        question="E041", section="E",
+        case=build_case(
+            country="United States", year_a=2006, year_b=2011,
+            attitude_description=('whether people believe wealth can only be accumulated at others\' '
+                                   'expense, or that wealth can grow so there is enough for everyone, on a '
+                                   'scale from 1 (people can only get rich at the expense of others) to 10 '
+                                   '(wealth can grow so there\'s enough for everyone). A nationally '
+                                   'representative survey asked this question at both time points.'),
+            direction_a="average answer moved toward \"wealth can grow so there's enough for everyone\" (people became more optimistic that wealth creation benefits everyone).",
+            direction_b='average answer moved toward "people can only get rich at the expense of others" (people became more convinced that wealth comes at others\' expense).',
+            direction_labels={"A": "people became more optimistic that wealth creation benefits everyone",
+                               "B": "people became more convinced that wealth comes at others' expense"},
+        ),
+        direction_if_mean_increases="A",
+    ),
+    dict(
+        question="E233", section="E",
+        case=build_case(
+            country="United States", year_a=2006, year_b=2011,
+            attitude_description=('whether people see women having the same rights as men as an essential '
+                                   'characteristic of democracy, on a scale from 0 (against democracy) to '
+                                   '10 (an essential characteristic of democracy). A nationally '
+                                   'representative survey asked this question at both time points.'),
+            direction_a='average answer moved toward "an essential characteristic of democracy" (people placed more importance on equal rights for women as part of democracy).',
+            direction_b='average answer moved toward lower importance (people placed less importance on equal rights for women as part of democracy).',
+            direction_labels={"A": "people placed more importance on equal rights for women as part of democracy",
+                               "B": "people placed less importance on equal rights for women as part of democracy"},
+        ),
+        direction_if_mean_increases="B",
+    ),
+    dict(
+        question="D059", section="D",
+        case=build_case(
+            country="United States", year_a=2006, year_b=2011,
+            attitude_description=('whether people agree that men make better political leaders than women '
+                                   'do, coded 1 (agree strongly) to 4 (strongly disagree). A nationally '
+                                   'representative survey asked this question at both time points.'),
+            direction_a='average answer moved toward "strongly disagree" (people became less likely to think men make better political leaders than women).',
+            direction_b='average answer moved toward "agree strongly" (people became more likely to think men make better political leaders than women).',
+            direction_labels={"A": "people became less likely to think men make better political leaders than women",
+                               "B": "people became more likely to think men make better political leaders than women"},
+        ),
+        direction_if_mean_increases="A",
+    ),
+    dict(
+        question="G021", section="G",
+        case=build_case(
+            country="United States", year_a=2006, year_b=2011,
+            attitude_description=('whether people see themselves as a citizen of their nation, coded 1 '
+                                   '(strongly agree) to 4 (strongly disagree). A nationally representative '
+                                   'survey asked this question at both time points.'),
+            direction_a='average answer moved toward "strongly disagree" (people became less likely to identify as a citizen of their nation).',
+            direction_b='average answer moved toward "strongly agree" (people became more likely to identify as a citizen of their nation).',
+            direction_labels={"A": "people became less likely to identify as a citizen of their nation",
+                               "B": "people became more likely to identify as a citizen of their nation"},
+        ),
+        direction_if_mean_increases="A",
+    ),
+    dict(
+        question="E069_01", section="E",
+        case=build_case(
+            country="United States", year_a=2006, year_b=2011,
+            attitude_description=('how much confidence people have in churches, coded 1 (a great deal) to '
+                                   '4 (none at all). A nationally representative survey asked this '
+                                   'question at both time points.'),
+            direction_a='average answer moved toward "none at all" (people had less confidence in churches).',
+            direction_b='average answer moved toward "a great deal" (people had more confidence in churches).',
+            direction_labels={"A": "people had less confidence in churches",
+                               "B": "people had more confidence in churches"},
+        ),
+        direction_if_mean_increases="A",
+    ),
 ]

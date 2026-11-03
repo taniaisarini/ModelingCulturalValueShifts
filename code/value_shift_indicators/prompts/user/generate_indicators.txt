@@ -6,8 +6,16 @@ Between {year_a} and {year_b}, the average answer moved in one of these two dire
 Direction A: {direction_a}
 Direction B: {direction_b}
 
-For EACH direction, produce at least 5 indicators: concrete, observable signals we could look for in (a) New York Times article abstracts/headlines, or (b) global news-event records (GDELT — events are tagged with one of these categories: {gdelt_categories}, each event also has a tone score) between {window_start} and {window_end} that we would expect to see MORE or LESS of if that direction were the true one.
+For EACH direction, produce at least 5 indicators: concrete, observable signals we could look for in (a) New York Times article headlines/abstracts, or (b) GDELT news-event records (events located in the United States) between {window_start} and {window_end} that we would expect to see MORE or LESS of if that direction were the true one.
 
-For each indicator return: `indicator` (one sentence), `source` ("nyt" or "gdelt"), `expected_change` ("increase" or "decrease"), and either `nyt_keywords` (list of phrases to search article abstracts for) or `gdelt_event_roots` (list of 2-digit codes from the list above) plus optional `gdelt_tone` ("more_negative"/"more_positive"/"no_prediction").
+For an NYT indicator, return: `indicator` (one sentence), `source`: "nyt", `expected_change` ("increase" or "decrease"), `nyt_keywords` (phrases to search headlines/abstracts/subject tags for), and optionally `nyt_sections` (restrict to these NYT section or desk names, e.g. "U.S.", "Opinion").
+
+For a GDELT indicator, return: `indicator`, `source`: "gdelt", `expected_change`, and:
+- `gdelt_event_codes`: one or more CAMEO codes — a 2-digit root from this list ({gdelt_categories}) or a more specific code within one (e.g. "1411")
+- optionally `gdelt_actor_types`: actor categories to require (from: {gdelt_actor_types})
+- optionally `gdelt_actor_name_contains`: substrings to match in the actors' names (crude — actor-name extraction is inconsistent)
+- optionally `gdelt_location_contains`: substrings to match in the event location (e.g. a US state name)
+- optionally `gdelt_tone` ("more_negative"/"more_positive"/"no_prediction") and/or `gdelt_goldstein` ("more_negative"/"more_positive"/"no_prediction") — tone is sentiment of the covering articles, Goldstein is the event's own cooperation/conflict intensity
+- optionally `gdelt_baseline_codes`: if comparing this indicator's matching events against ALL GDELT events that year risks being misleading because GDELT's total indexed volume changed a lot between {year_a} and {year_b}, give a narrower set of CAMEO root codes to use as the comparison baseline instead (e.g. other political/civic-discourse categories), so the share is of a more comparable denominator
 
 Return JSON: {{"A": [...at least 5...], "B": [...at least 5...]}}

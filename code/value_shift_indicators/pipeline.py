@@ -28,6 +28,10 @@ GDELT_CATEGORIES = ("01 MAKE PUBLIC STATEMENT, 02 APPEAL, 03 EXPRESS INTENT TO C
                     "08 YIELD, 09 INVESTIGATE, 10 DEMAND, 11 DISAPPROVE, 12 REJECT, 13 THREATEN, "
                     "14 PROTEST, 15 EXHIBIT FORCE POSTURE, 16 REDUCE RELATIONS, 17 COERCE, 18 ASSAULT, "
                     "19 FIGHT, 20 USE UNCONVENTIONAL MASS VIOLENCE")
+GDELT_ACTOR_TYPES = ("GOV government, LEG legislature, JUD judiciary, COP police, MED media, BUS business, "
+                     "EDU education, REL religious, CVL civilians/general public")
+
+GDELT_BOUNDARY_YEAR = 2015  # 2015-02-18: GDELT 1.0 before, 2.0 after -- counts/tone not comparable across it
 
 
 def load_prompt(kind, name):
@@ -37,6 +41,9 @@ def load_prompt(kind, name):
 def build_case(country, year_a, year_b, attitude_description, direction_a, direction_b, direction_labels):
     """`direction_labels` is a short {"A": ..., "B": ...} phrase used only for display inside prompts,
     e.g. {"A": "attitudes became more accepting of X", "B": "attitudes became less accepting of X"}."""
+    if (year_a < GDELT_BOUNDARY_YEAR) != (year_b < GDELT_BOUNDARY_YEAR):
+        raise ValueError(f"{year_a} and {year_b} fall on opposite sides of the GDELT 1.0/2.0 boundary "
+                          f"(2015-02-18); pick two years on the same side for now.")
     return dict(country=country, year_a=year_a, year_b=year_b, attitude_description=attitude_description,
                 direction_a=direction_a, direction_b=direction_b, direction_labels=direction_labels,
                 window_start=year_a - 1, window_end=year_b + 1)
@@ -52,7 +59,8 @@ def generate_indicators(case, model=MODEL, dry_run=False):
     """One call: >=5 indicators per direction. Returns the parsed {"A": [...], "B": [...]}, or if
     dry_run, {"plan": ..., "prompt": ...} without calling anything."""
     system = load_prompt("system", "generate_indicators")
-    user = load_prompt("user", "generate_indicators").format(gdelt_categories=GDELT_CATEGORIES, **case)
+    user = load_prompt("user", "generate_indicators").format(
+        gdelt_categories=GDELT_CATEGORIES, gdelt_actor_types=GDELT_ACTOR_TYPES, **case)
     req = [{"id": "generate", "system": system, "user": user}]
     if dry_run:
         return {"plan": plan_llm(req, model=model, **GEN_PARAMS), "prompt": user}
@@ -70,31 +78,58 @@ def generate_indicators(case, model=MODEL, dry_run=False):
 def measure_indicator(indicator, case):
     """No LLM call: pull the real pre/post numbers for one indicator from NYT or GDELT."""
     if indicator["source"] == "nyt":
-        keywords = indicator["nyt_keywords"]
-        matches_a, total_a, rate_a, _ = nyt_year_rate(case["year_a"], keywords)
-        matches_b, total_b, rate_b, examples_b = nyt_year_rate(case["year_b"], keywords)
-        return dict(source="nyt", year_a_matches=matches_a, year_a_total=total_a, year_a_rate=rate_a,
-                    year_b_matches=matches_b, year_b_total=total_b, year_b_rate=rate_b, examples=examples_b)
+        sections = indicator.get("nyt_sections") or None
+        a = nyt_year_rate(case["year_a"], indicator["nyt_keywords"], sections=sections)
+        b = nyt_year_rate(case["year_b"], indicator["nyt_keywords"], sections=sections)
+        return dict(source="nyt", sections=sections,
+                    year_a_matches=a["matches"], year_a_total=a["total"], year_a_rate=a["rate"],
+                    year_b_matches=b["matches"], year_b_total=b["total"], year_b_rate=b["rate"],
+                    examples=b["examples"])
     elif indicator["source"] == "gdelt":
-        roots = indicator["gdelt_event_roots"]
-        matches_a, total_a, rate_a, tone_a, _ = gdelt_year_stats(case["year_a"], roots)
-        matches_b, total_b, rate_b, tone_b, _ = gdelt_year_stats(case["year_b"], roots)
-        metrics = dict(source="gdelt", year_a_matches=matches_a, year_a_total=total_a, year_a_rate=rate_a,
-                       year_b_matches=matches_b, year_b_total=total_b, year_b_rate=rate_b)
+        kwargs = dict(event_codes=indicator["gdelt_event_codes"],
+                      actor_types=indicator.get("gdelt_actor_types") or None,
+                      actor_name_contains=indicator.get("gdelt_actor_name_contains") or None,
+                      location_contains=indicator.get("gdelt_location_contains") or None,
+                      baseline_codes=indicator.get("gdelt_baseline_codes") or None)
+        a = gdelt_year_stats(case["year_a"], **kwargs)
+        b = gdelt_year_stats(case["year_b"], **kwargs)
+        metrics = dict(source="gdelt", filters=kwargs,
+                       year_a_matches=a["matches"], year_a_total=a["total"], year_a_rate=a["rate"],
+                       year_b_matches=b["matches"], year_b_total=b["total"], year_b_rate=b["rate"])
         if indicator.get("gdelt_tone", "no_prediction") != "no_prediction":
-            metrics["tone_year_a"], metrics["tone_year_b"] = tone_a, tone_b
+            metrics["tone_year_a"], metrics["tone_year_b"] = a["tone_matched"], b["tone_matched"]
+        if indicator.get("gdelt_goldstein", "no_prediction") != "no_prediction":
+            metrics["goldstein_year_a"], metrics["goldstein_year_b"] = a["goldstein_matched"], b["goldstein_matched"]
         return metrics
     raise ValueError(f"Unknown indicator source: {indicator['source']!r}")
 
 
 def _format_measured(metrics, case):
     unit = "matching articles" if metrics["source"] == "nyt" else "matching events"
+    denom_note = ""
+    if metrics["source"] == "gdelt":
+        f = metrics.get("filters", {})
+        extra = []
+        if f.get("actor_types"):
+            extra.append(f"actors: {', '.join(f['actor_types'])}")
+        if f.get("actor_name_contains"):
+            extra.append(f"actor name contains: {', '.join(f['actor_name_contains'])}")
+        if f.get("location_contains"):
+            extra.append(f"location contains: {', '.join(f['location_contains'])}")
+        if f.get("baseline_codes"):
+            extra.append(f"rate vs. baseline categories {', '.join(f['baseline_codes'])} (not all events)")
+        if extra:
+            denom_note = " [" + "; ".join(extra) + "]"
+    elif metrics["source"] == "nyt" and metrics.get("sections"):
+        denom_note = f" [sections: {', '.join(metrics['sections'])}]"
     line = (f"{metrics['year_a_matches']}/{metrics['year_a_total']} {unit} "
             f"({metrics['year_a_rate']:.2f} per 1,000) in {case['year_a']} vs. "
             f"{metrics['year_b_matches']}/{metrics['year_b_total']} "
-            f"({metrics['year_b_rate']:.2f} per 1,000) in {case['year_b']}")
+            f"({metrics['year_b_rate']:.2f} per 1,000) in {case['year_b']}{denom_note}")
     if metrics.get("tone_year_a") is not None and metrics.get("tone_year_b") is not None:
         line += f"; avg tone {metrics['tone_year_a']:.2f} vs. {metrics['tone_year_b']:.2f}"
+    if metrics.get("goldstein_year_a") is not None and metrics.get("goldstein_year_b") is not None:
+        line += f"; avg Goldstein {metrics['goldstein_year_a']:.2f} vs. {metrics['goldstein_year_b']:.2f}"
     return line
 
 
@@ -119,6 +154,7 @@ def aggregate_judge(case, evidence, round_num, model=MODEL, dry_run=False):
     system = load_prompt("system", "aggregate_judge")
     user = load_prompt("user", "aggregate_judge").format(
         round_num=round_num, round_instruction=round_instruction,
+        gdelt_categories=GDELT_CATEGORIES, gdelt_actor_types=GDELT_ACTOR_TYPES,
         direction_a_indicators=_format_indicator_block(evidence["A"], case),
         direction_b_indicators=_format_indicator_block(evidence["B"], case),
         **case)
@@ -140,7 +176,13 @@ def run_case(case, model=MODEL):
     evidence = {"A": [], "B": []}
     for letter in ("A", "B"):
         for ind in indicators[letter]:
-            evidence[letter].append({"indicator_obj": ind, "metrics": measure_indicator(ind, case)})
+            if ind.get("source") not in ("nyt", "gdelt"):
+                continue  # model returned something we can't look up; skip it
+            try:
+                metrics = measure_indicator(ind, case)
+            except (KeyError, ValueError):
+                continue  # e.g. missing nyt_keywords/gdelt_event_codes for the given source
+            evidence[letter].append({"indicator_obj": ind, "metrics": metrics})
 
     rounds, final = [], None
     for round_num in range(1, 4):
