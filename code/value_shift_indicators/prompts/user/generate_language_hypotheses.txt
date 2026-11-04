@@ -1,0 +1,13 @@
+Country: {country}
+Time points: {year_a} and {year_b}
+Attitude measured: {attitude_description}
+
+Between {year_a} and {year_b}, the average answer moved in one of these two directions:
+Direction A: {direction_a}
+Direction B: {direction_b}
+
+Produce 5 hypotheses: concrete, observable patterns in the language used in New York Times coverage between {window_start} and {window_end} that would indicate the attitude had shifted toward Direction A or Direction B.
+
+For each hypothesis return: `hypothesis` (one sentence), `direction` ("A" or "B"), `expected_change` ("increase" or "decrease").
+
+Return JSON: {{"hypotheses": [...5 total...]}}
