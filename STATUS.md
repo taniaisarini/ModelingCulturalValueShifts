@@ -399,6 +399,50 @@ settled yet — this is a snapshot to work from, not a plan. Update this doc as 
 > Nexis/ProQuest/Factiva, whether new Telegram collection is wanted) -- not yet sent/submitted by her. Phases 3-5
 > (indicators, news collection, citizen text collection) not started.
 
+> **Data-acquisition brief, Phase 3 done (2026-11-04): aggregate indicators, all 6 countries.** New scripts
+> `code/wvs_data_pull_wdi.py` and `code/wvs_data_pull_wikipedia_pageviews.py` (both dry-run by default, `--run` to
+> execute); the rest of this phase was manual research (one subagent) and transcription, not scripted. Written to
+> `data/wvs_data/indicators/{country}/{series_id}.csv`, logged in `meta/{sources,gaps,collection_log}.csv`.
+> - **World Bank WDI** (GDP growth, CPI inflation, unemployment -- `gdp_wdi`/`cpi_wdi`/`unemp_wdi`): 18/18
+>   country x series pulled clean, 2003-2023, free unauthenticated API. Only gap: Ukraine unemployment has no
+>   figure for 2022-2023 (wartime suspension of labor-force surveys, as the brief predicted).
+> - **Consumer confidence** (one series per country except Egypt and Hong Kong, which have two each): US
+>   (`cci_umich`) pulled directly from FRED's UMCSENT series (252 monthly points, 2003-2023 -- used FRED's
+>   redistribution rather than umich.edu directly, since UMich's own usage terms restrict redistribution without
+>   written consent). The other five countries needed manual research across press releases/PDFs (a subagent did
+>   this, with an explicit no-fabrication rule -- every value has a source URL); results are thin and uneven:
+>   Ukraine (`cci_infosapiens`) is the strongest at 63 monthly points 2018-2023 (cross-checked against individual
+>   PDF press releases); Egypt Nielsen 9 points (2010-2016), Egypt IDSC only 3 (ahram.org.eg, its main outlet,
+>   blocks automated fetches with HTTP 403); Thailand UTCC only 9 scattered points across the full 20 years (no
+>   public historical table exists; Trading Economics/CEIC gate full history behind a paid plan); Uruguay UCU only
+>   3 points, 2022-2023 (pre-2022 sits behind a discontinued paid Alphacast dataset). **Flagged for a spot-check:**
+>   Hong Kong's two series (CUHK 9 points 2010-2018, CityU 3 points 2019-2021) came from Google-indexed snippets of
+>   the source PDFs/press releases, not from reopening the documents directly -- both source sites (a CUHK web
+>   archive, CityU's JS-rendered press pages) returned bot-check/empty responses to every automated fetch, retried
+>   after a rate-limit reset with the same result. One cleanup after the subagent finished: its sources happened to
+>   include data past 2023 (Thailand, Uruguay, Ukraine all had rows into 2025-2026); trimmed back to the brief's
+>   2003-2023 scope (dropped 4/13, 8/11, 24/87 rows respectively) and fixed `sources.csv` coverage_end to match.
+> - **Wikipedia pageviews**: daily country totals from Wikimedia's differentially-private historical release
+>   (`analytics.wikimedia.org/published/datasets/country_project_page_historical/`, one file per day, summed
+>   `private_count` per country). **Egypt and Thailand never appear in this dataset** (checked multiple sample days
+>   across the full range) -- consistent with Wikimedia's privacy "country protection list" (hides ~35 countries),
+>   not substituted. US/UA/HK/UY: 2183/2188 days fetched (2017-02-09 to 2023-02-05, the dataset's own full range at
+>   country granularity; nothing finer exists after that date, only global totals) -- 5 genuine 404s in Wikimedia's
+>   own release, not a pipeline bug. **Sanity check: Ukraine's daily total jumps from ~800K to 3M+ exactly at
+>   2022-02-24**, the day of the full-scale invasion -- a real signal, not noise. Needed a custom `User-Agent`
+>   header (Wikimedia blocks the default `python-requests` UA per their API etiquette policy); the ~3-7MB daily
+>   files themselves are not kept, only the aggregated per-country sums and a resume marker.
+> - **Not collected, logged as gaps instead of substituted:** Box Office Mojo (robots.txt disallows automated
+>   access for everyone except named search-engine crawlers -- IMDb/Amazon terms, not scraped per the brief's
+>   never-do rule). Spotify via kworb.net (its per-country pages are a live today-only snapshot plus a lifetime
+>   per-track totals page -- no reconstructible historical daily/weekly archive; the brief itself already called
+>   Spotify low-value for most of these windows, so this wasn't pursued further via charts.spotify.com's own
+>   archive). Quarterly national GDP from each country's own statistical agency (BEA/CBE/Derzhstat/NESDC/Census and
+>   Statistics Dept HK/BCU) -- not started, lower priority than the annual WDI series.
+> - **New "needs Tania" item, 6th alongside the five from Phase 2:** Media Cloud's API requires a new account/key
+>   (no self-serve-and-anonymous path found) -- per the brief's rule against using a credential she hasn't given,
+>   not signed up for.
+
 > **`fast_llm.py` now also calls Claude models (2026-11-03), via the Anthropic SDK (`anthropic==0.125.0`, added to
 > `environment.yml`).** `run_llm`/`run_llm_async` pick the provider from the model name (`claude-...` -> Anthropic,
 > everything else -> OpenAI as before); same call signature, same on-disk cache, same adaptive-concurrency/retry
