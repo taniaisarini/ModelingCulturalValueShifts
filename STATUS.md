@@ -379,6 +379,26 @@ settled yet — this is a snapshot to work from, not a plan. Update this doc as 
 > also carries a `trend` dict, 7549 points, mean/share only (scale and binary/mention/knowledge formats; skips
 > categorical/forced_choice/ranked_choice, whose "tracked option" isn't fixed across waves).
 
+> **New data-acquisition brief (2026-11-04), Phase 0-2 done:** a separate brief ("Data Acquisition Brief WVS Value-Shift
+> Project.md", kept outside the repo) scopes collecting news text, citizen text and aggregate indicators for 6 WVS
+> countries (US, EG, UA, TH, HK, UY), 2003-2023, as supporting signal -- not yet an analysis plan. `wvs_data/` scaffolded
+> (`WVS_DATA_DIR` in `code/config.py`, default `<repo>/data/wvs_data`, same pattern as `GDELT_DIR`/`NYT_ARCHIVE_DIR`;
+> `news/`, `citizen/`, `raw/` gitignored as large/regenerable, `meta/` and `indicators/` tracked). `meta/wvs_fieldwork.csv`
+> filled in (18 rows, country x wave 5-7) from IHSN/GHDx catalog pages -- **resolves the brief's open question: Uruguay
+> wave 7 fieldwork was 2022-01-27 to 2022-03-22, not 2023.** 13/18 rows have exact day-level dates; US W7, UA W5, TH W6,
+> TH W7, HK W6 only have year-level precision (worldvaluessurvey.org's own methodology pages gave no per-country dates
+> and sometimes hit bot-detection; IHSN catalog pages for these had no stated fieldwork period). Flagged in
+> `meta/collection_log.csv`: Egypt wave 6's stated fieldwork period (2012-03 to 2012-04) disagrees by exactly one year
+> with its own interview-date variable V261 (2013-02 to 2013-04) -- used the stated period, discrepancy unexplained.
+> `meta/gaps.csv` pre-populated with the brief's own known-gaps table (Mada Masr block, HK forum platform switch,
+> VKontakte block, consumer-confidence start gaps, Pushshift/X API end, pre-2010 citizen-text thinness). Noted but not
+> yet acted on: **GDELT events (all 6 countries, full range) and NYT Archive metadata (US, full range) are already
+> pulled from earlier work** (see the two entries above) and satisfy two of the brief's cross-country news routes
+> without new collection. Five items drafted for Tania to act on (NYT key's Article Search/Books API scopes, Meta
+> Content Library application text, Reddit for Researchers application text, a Purdue-library question re:
+> Nexis/ProQuest/Factiva, whether new Telegram collection is wanted) -- not yet sent/submitted by her. Phases 3-5
+> (indicators, news collection, citizen text collection) not started.
+
 ## Data (`data/`)
 
 - `WVS_Time_Series_1981-2022_csv_v5_0.csv` — full raw World Values Survey time-series microdata
