@@ -7,6 +7,10 @@ Sends many chat requests concurrently and adjusts how many are in flight on its 
   * then probes upward again, slowly near the level that caused the throttle
 Everything runs on one asyncio event loop (cheaper than hundreds of threads).
 
+Works with OpenAI models (gpt-...) and, via the Anthropic SDK, Claude models (model name starts
+with "claude-"): picked automatically from the model name, same `run_llm` call either way. Claude
+calls need ANTHROPIC_API_KEY set and must pass max_tokens explicitly (Anthropic has no default).
+
 Caching (llm_cache.py): a call with the same model, messages and parameters is never sent twice. Each request is
 looked up first; only misses go to the API, and every success is stored with its full response. That also makes
 interrupted runs resumable. `plan_llm(...)` reports hits and misses without calling anything.
@@ -32,6 +36,12 @@ from concurrent.futures import ThreadPoolExecutor
 import httpx
 from openai import (APIConnectionError, APIStatusError, APITimeoutError, AsyncOpenAI,
                     DefaultAsyncHttpxClient, InternalServerError, RateLimitError)
+from anthropic import AsyncAnthropic
+from anthropic import APIConnectionError as AnthropicAPIConnectionError
+from anthropic import APIStatusError as AnthropicAPIStatusError
+from anthropic import APITimeoutError as AnthropicAPITimeoutError
+from anthropic import InternalServerError as AnthropicInternalServerError
+from anthropic import RateLimitError as AnthropicRateLimitError
 from tqdm import tqdm
 
 from llm_cache import DEFAULT_CACHE_DIR, LLMCache, make_key, new_record
@@ -135,6 +145,25 @@ def _messages(req):
     return msgs
 
 
+def _is_claude_model(model):
+    return model.startswith("claude-")
+
+
+def _split_system(msgs):
+    """Anthropic takes the system prompt as a separate top-level field, not a message."""
+    system, rest = None, []
+    for m in msgs:
+        if m["role"] == "system" and system is None:
+            system = m["content"]
+        else:
+            rest.append(m)
+    return system, rest
+
+
+def _anthropic_text(resp):
+    return "".join(b.text for b in resp.content if getattr(b, "type", None) == "text")
+
+
 def _raw(resp):
     """The complete API response as a plain dict (works across openai/pydantic versions)."""
     for name in ("model_dump", "dict"):
@@ -191,7 +220,11 @@ async def run_llm_async(requests, model="gpt-4.1-mini", *, temperature=0.0, max_
     ids = [r["id"] for r in requests]
     if len(set(ids)) != len(ids):
         raise ValueError("request ids must be unique")
+    is_claude = _is_claude_model(model)
     params = _params(temperature, max_tokens, extra)
+    if is_claude and params.get("max_tokens") is None:
+        raise ValueError(f"{model}: Claude models require max_tokens (the Anthropic API has no "
+                         f"default); pass max_tokens=... to run_llm.")
     store = LLMCache(cache_dir or DEFAULT_CACHE_DIR) if cache else None
 
     results, todo = {}, {}          # todo: cache key -> [representative request, [ids sharing it]]
@@ -213,13 +246,28 @@ async def run_llm_async(requests, model="gpt-4.1-mini", *, temperature=0.0, max_
 
     own_client = client is None
     if own_client:
-        http = DefaultAsyncHttpxClient(
-            limits=httpx.Limits(max_connections=max_concurrency + 50,
-                                max_keepalive_connections=max_concurrency),
-            timeout=request_timeout)
         # max_retries=0: we handle every retry ourselves so throttles are visible to the controller
-        client = AsyncOpenAI(api_key=api_key or os.environ.get("OPENAI_API_KEY"),
-                             max_retries=0, http_client=http)
+        if is_claude:
+            http = httpx.AsyncClient(
+                limits=httpx.Limits(max_connections=max_concurrency + 50,
+                                    max_keepalive_connections=max_concurrency),
+                timeout=request_timeout)
+            client = AsyncAnthropic(api_key=api_key or os.environ.get("ANTHROPIC_API_KEY"),
+                                    max_retries=0, http_client=http)
+        else:
+            http = DefaultAsyncHttpxClient(
+                limits=httpx.Limits(max_connections=max_concurrency + 50,
+                                    max_keepalive_connections=max_concurrency),
+                timeout=request_timeout)
+            client = AsyncOpenAI(api_key=api_key or os.environ.get("OPENAI_API_KEY"),
+                                 max_retries=0, http_client=http)
+
+    # which exception classes mean what, for whichever provider this call is using
+    RateLimitErr = AnthropicRateLimitError if is_claude else RateLimitError
+    StatusErr = AnthropicAPIStatusError if is_claude else APIStatusError
+    TimeoutErr = AnthropicAPITimeoutError if is_claude else APITimeoutError
+    ConnErr = AnthropicAPIConnectionError if is_claude else APIConnectionError
+    ServerErr = AnthropicInternalServerError if is_claude else InternalServerError
 
     limiter = AdaptiveLimiter(min(initial_concurrency, max_concurrency), min_concurrency, max_concurrency)
     kwargs = dict(params)
@@ -237,32 +285,44 @@ async def run_llm_async(requests, model="gpt-4.1-mini", *, temperature=0.0, max_
             delay = None
             t0 = time.monotonic()
             try:
-                resp = await client.chat.completions.create(model=model, messages=msgs, **kwargs)
-                limiter.on_success()
-                u = resp.usage
-                short = {"prompt": u.prompt_tokens, "completion": u.completion_tokens} if u else {}
-                stats["tokens"] += sum(short.values())
-                choice = resp.choices[0]
-                response = {"text": choice.message.content, "finish_reason": getattr(choice, "finish_reason", None),
-                            "returned_model": getattr(resp, "model", None), "id": getattr(resp, "id", None),
-                            "usage_short": short, "raw": _raw(resp)}
+                if is_claude:
+                    system, rest = _split_system(msgs)
+                    create_kwargs = dict(kwargs, **({"system": system} if system else {}))
+                    resp = await client.messages.create(model=model, messages=rest, **create_kwargs)
+                    limiter.on_success()
+                    u = resp.usage
+                    short = {"prompt": u.input_tokens, "completion": u.output_tokens}
+                    stats["tokens"] += sum(short.values())
+                    response = {"text": _anthropic_text(resp), "finish_reason": resp.stop_reason,
+                                "returned_model": resp.model, "id": resp.id,
+                                "usage_short": short, "raw": _raw(resp)}
+                else:
+                    resp = await client.chat.completions.create(model=model, messages=msgs, **kwargs)
+                    limiter.on_success()
+                    u = resp.usage
+                    short = {"prompt": u.prompt_tokens, "completion": u.completion_tokens} if u else {}
+                    stats["tokens"] += sum(short.values())
+                    choice = resp.choices[0]
+                    response = {"text": choice.message.content, "finish_reason": getattr(choice, "finish_reason", None),
+                                "returned_model": getattr(resp, "model", None), "id": getattr(resp, "id", None),
+                                "usage_short": short, "raw": _raw(resp)}
                 if store:
                     store.put(new_record(key, model, msgs, params, req.get("replicate", 0), response,
                                          attempt, time.monotonic() - t0))
                 return {"id": req["id"], "text": response["text"], "usage": short,
                         "finish_reason": response["finish_reason"], "attempts": attempt, "error": None,
                         "cached": False, "cache_key": key}
-            except RateLimitError as e:
-                if _is_quota_error(e):
+            except RateLimitErr as e:
+                if not is_claude and _is_quota_error(e):
                     return _fail(req, attempt, f"quota exhausted: {e}", key)
                 last_err = f"429: {e}"
                 ra = _retry_after(e)
                 limiter.on_throttle(ra)
                 delay = 0 if ra else min(30.0, 0.5 * 2 ** attempt)
-            except (APITimeoutError, APIConnectionError, InternalServerError) as e:
+            except (TimeoutErr, ConnErr, ServerErr) as e:
                 last_err = f"{type(e).__name__}: {e}"
                 delay = min(30.0, 0.5 * 2 ** attempt)
-            except APIStatusError as e:   # 4xx other than 429: the request itself is bad
+            except StatusErr as e:   # 4xx other than 429: the request itself is bad
                 return _fail(req, attempt, f"{e.status_code}: {e}", key)
             finally:
                 await limiter.release()

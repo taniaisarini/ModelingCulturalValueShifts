@@ -399,6 +399,16 @@ settled yet — this is a snapshot to work from, not a plan. Update this doc as 
 > Nexis/ProQuest/Factiva, whether new Telegram collection is wanted) -- not yet sent/submitted by her. Phases 3-5
 > (indicators, news collection, citizen text collection) not started.
 
+> **`fast_llm.py` now also calls Claude models (2026-11-03), via the Anthropic SDK (`anthropic==0.125.0`, added to
+> `environment.yml`).** `run_llm`/`run_llm_async` pick the provider from the model name (`claude-...` -> Anthropic,
+> everything else -> OpenAI as before); same call signature, same on-disk cache, same adaptive-concurrency/retry
+> logic either way -- only the network call and response parsing (`client.messages.create`, system prompt split out
+> of `messages`, `usage.input_tokens`/`output_tokens`, `stop_reason`) differ per provider. Claude calls require
+> `max_tokens` explicitly (raises `ValueError` up front otherwise -- the Anthropic API has no default) and
+> `ANTHROPIC_API_KEY` in the environment. Verified offline only, with a mocked Anthropic client standing in for the
+> network (dispatch, response parsing, the `max_tokens` guard, and that caching/`plan_llm` behave the same as the
+> existing OpenAI path) -- no real Claude call has been made yet; that needs an explicit ask per the project rule.
+
 ## Data (`data/`)
 
 - `WVS_Time_Series_1981-2022_csv_v5_0.csv` — full raw World Values Survey time-series microdata
