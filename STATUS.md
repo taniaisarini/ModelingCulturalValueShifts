@@ -1,7 +1,90 @@
 # Status
 
-Inventory of what exists in this repo; the dated notes below are the running log (last updated 2026-10-29). No research question is
+Inventory of what exists in this repo; the dated notes below are the running log (last updated 2026-11-04). No research question is
 settled yet — this is a snapshot to work from, not a plan. Update this doc as code/data/results change.
+
+> **Value-shift indicator system (2026-11-02 to 2026-11-04, new, self-contained in `code/value_shift_indicators/`; built on an
+> unmerged worktree branch `worktree-value-shift-indicators`).** Explores whether an LLM can predict which direction a WVS question
+> moved using only independent evidence (NYT Archive metadata, GDELT US events) -- the LLM is never told it's WVS and (for the
+> prediction test cases) never told the true direction. Three steps: `generate_indicators` (1 call: >=5 falsifiable indicators per
+> direction, e.g. "NYT coverage of X should increase"), `measure_indicator`/`data_sources.py` (no LLM, pulls real NYT keyword-match
+> rates and GDELT event-type rates for the indicator), `aggregate_judge` (1 call per round, up to 3 rounds: given all evidence so
+> far, decide a direction or ask for up to 5 more indicators, forced to decide by round 3). All prompts approved before use per
+> project convention; all calls through `fast_llm.py`, cached.
+> - **First test case (2026-11-02): USA, F118 ("justifiable: homosexuality"), wave5->6 (2006->2011), gpt-4.1-mini.** Correctly
+>   landed on the true direction (more accepting) in round 1, but the per-indicator confirm/deny design (10 independent judgments,
+>   no aggregation) left no single answer -- redesigned to the aggregate-judge loop above.
+> - **10-question run (gpt-4.1-mini): 5/10 correct, but decisions landed 8 "B" vs 2 "A"** despite a near-50/50 true split --
+>   investigated with an order-bias probe (`test_order_bias.py`: same evidence, A/B labels swapped) and ruled out: only 2/10
+>   flipped, so the skew was evidence-driven, not a position/order artifact. Leading suspect: GDELT's indexed event volume grew
+>   ~10x from 2006 to 2011 (more digitized sources, not more real events), so "rate per 1,000 total events" indicators are
+>   mechanically biased toward "decrease" regardless of topic.
+> - **Schema expansion (2026-11-02), approved then added:** GDELT indicators can specify actor types, actor-name/location
+>   substrings, Goldstein score, and an alternate `gdelt_baseline_codes` set (narrower denominator than "all events", to fight the
+>   volume-growth bias above); NYT indicators can restrict to sections and now also match `keywords[].name` tags. Hard guard added
+>   in `build_case()` against picking `year_a`/`year_b` on opposite sides of the GDELT 1.0/2.0 boundary (2015-02-18).
+> - **20-question run (10 new + the original 10, gpt-4.1-mini): 8/20 correct.** Usage of the new fields was lopsided --
+>   `gdelt_actor_types` and `nyt_sections` used on 100% of applicable indicators, but `gdelt_baseline_codes` (the volume-growth
+>   fix) only 4% and `gdelt_actor_name_contains` (the only real topic-targeting mechanism GDELT has) only 2% -- the model mostly
+>   skipped the two fields meant to fix the diagnosed problems. **Also found: `REL` (religious), invented for the
+>   `gdelt_actor_types` prompt vocabulary, is not a real GDELT actor-type code** (checked a real month's distinct values: GOV, BUS,
+>   EDU, COP, JUD, CVL, MED, LEG, MIL, MNC, HLH, LAB, CRM, ... -- no REL). 9 of 19 `REL`-filtered indicators across 4 questions got
+>   a silent, wrong 0/0 "no evidence" instead of actually being measured. Not yet fixed in the schema.
+
+> **Direct hands-on evidence rounds (2026-11-02, by Claude, not the automated pipeline above): 15 USA questions total (5 then
+> 10 more), real NYT/GDELT lookups, own reasoning and real-world historical knowledge used openly (not blind).** Findings:
+> - **Media volume vs. survey-measured sentiment can point in exactly opposite directions.** Life satisfaction rose slightly
+>   2006->2011 despite recession/unemployment-crisis NYT coverage rising +686%; confidence in companies rose despite Occupy Wall
+>   Street coverage spiking 0.06->4.05/1k; belief that "hard work brings success" strengthened even as "American Dream"-framed
+>   coverage *fell*. Three independent cases, all economic-attitude questions -- political/cultural/religious questions (Tea
+>   Party/debt-ceiling, the 2010 Park51/"Ground Zero mosque" controversy, gay-rights coverage) tracked the true direction well.
+> - **GDELT's institutional-actor disapprove/reject rate failed on every domestic-institutional-confidence question tested (3/3:
+>   confidence in government, Congress, political parties), while NYT confirmed all three of the same questions.** Likely cause,
+>   untested: the raw-events partition filters by event *location* (US soil) not actor *nationality*, so a "GOV actor disapproves"
+>   event can be a foreign government's statement made in the US (UN, embassies) rather than Americans disapproving of their own
+>   government. `Actor1CountryCode`/`Actor2CountryCode` columns exist in the stored data and were never filtered on.
+> - **NYT keyword search is brittle to exact phrasing.** `["Wisconsin collective bargaining", "Scott Walker union"]` returned 0/0
+>   for 2011 despite the Wisconsin Act 10 fight being one of the biggest domestic stories that year; single looser terms
+>   ("Wisconsin", "Scott Walker", "collective bargaining") found it immediately (28-209 matches). Confirmed independently: GDELT's
+>   `REL` actor-type bug above.
+> - Confirmed real-world knowledge is doing real work here: several hand-picked indicators (Tea Party, debt-ceiling standoff,
+>   Park51) and one *independently* generated one in the later language-hypothesis round converged on the same specific events --
+>   but this also means the exercise shows the data *contains* a detectable signal when you already know what to look for, not
+>   that a blind system could *find* it (see explicit discussion in conversation; not written up as code).
+
+> **Claude/Anthropic support added to `code/fast_llm.py` (2026-11-04).** Dispatches on model-name prefix (`"claude-"` vs default)
+> to the Anthropic Messages API or the existing OpenAI path; same `run_llm`/`plan_llm` call either way. Claude calls require
+> `max_tokens` explicitly (no API default) and `ANTHROPIC_API_KEY`. Ported into the isolated worktree from an uncommitted copy in
+> the shared checkout -- **not yet committed on `main`.** `anthropic` added to the environment (installed via pip in this
+> session; not yet added to `environment.yml`).
+
+> **Language-hypothesis experiment (2026-11-04, new prompt, new scope, also in `code/value_shift_indicators/`): can an LLM
+> predict value shifts from patterns in *how* people write, not just what gets covered?** Modeled loosely on the
+> post-9/11 "I" -> "we" pronoun-shift finding (Cohn, Mehl & Pennebaker 2004), but the model is given no worked example, just an
+> explanation of the hypothesis category, to avoid anchoring it to one pattern type. `generate_language_hypotheses` prompt: given
+> a value shift (blind to true direction, no "markers"/operationalization forced -- deliberately deferred), produce 5 hypotheses
+> about language patterns in NYT coverage. Piloted on F118 with `claude-haiku-5-5`: 5 genuinely style/framing-flavored hypotheses
+> (e.g. "equality/civil-rights" vs. "sin/immoral" framing; one specifically about quote-attribution, not just word frequency).
+> - **Scaled to all 128 USA wave5->6 significant changes with a usable (two-ended) scale** -- `bulk_cases.py` builds attitude
+>   descriptions mechanically from the codebook (`parsed_question` + `choices` in `parsed_survey_data_cleaned.jsonl`), filtered via
+>   `question_categories.csv` to `ordinal_scale`/`numeric_scale`/`binary`/`mention_flag` formats (not hand-authored per question
+>   like `cases.py`). Checked real per-country wave5/6 fieldwork years for the usual 5-country set (EGY 2008/2013, THA 2007/2013,
+>   UKR 2006/2011, URY 2006/2011, HKG 2005/2014) but **scoped this run to USA only**: NYT is a plausible domestic-discourse proxy
+>   for the US but not for the other 5 (foreign-correspondent coverage of another country is a different, weaker premise).
+>   128/128 succeeded (claude-haiku-5-5, 643 hypotheses, ~15s wall-clock; 2 initial JSON truncations at `max_tokens=1500`, retried
+>   individually at 2500 and patched in rather than bumping the shared default and invalidating the other 126's cache).
+>   Published as a browsable artifact (private): https://claude.ai/artifact/9ieYsZZgwq6MBTQgzGSf8c.
+> - **Quick mechanical test against real NYT text, no new LLM calls** (`test_language_hypotheses.py`): markers extracted from each
+>   hypothesis's own quoted example words/phrases (616/643 had >=1; the rest are pure structural claims, left untested). Two
+>   real bugs found and fixed: (1) `document_type != "article"` entries (multimedia/audio, ~textless) grew from ~2% to ~11% of the
+>   NYT archive 2006->2011, inflating the denominator -- filtered to articles only; (2) marker extraction kept trailing
+>   punctuation from quotes like `'crucial,'` -- stripped. **Result: 101 confirm / 219 deny / 296 inconclusive; only 59/128
+>   questions reached a non-tie predicted direction, accuracy on those 28/59 (47.5%, roughly chance).** Root cause of the
+>   persistent deny-heavy skew: NYT's indexed article count fell ~42% 2006->2011 (160,430 -> 92,647) even restricted to articles,
+>   so most quoted-phrase rates mechanically decline regardless of topic, while ~90% of generated hypotheses predict "increase" --
+>   a structural mismatch between the hypotheses and this test, not necessarily evidence the hypotheses are wrong. Known
+>   remaining weakness: some extracted markers are generic dictionary words quoted for emphasis (e.g. "friends" alone, 3,863
+>   matches) -- not fixed, needs a specificity judgment call rather than a quick regex tweak.
 
 > **Row-level GDELT pull, "Step 2" (done 2026-10-29): `code/gdelt_pull_raw_events.py`, full range 2003-11-01..2023-07-31, all 29 WVS
 > countries.** Row-level (not aggregated) events via `events_raw()`: 18 of the 23 columns in `gdelt_bq.ALLOWED_COLUMNS` (drops
