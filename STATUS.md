@@ -3,6 +3,36 @@
 Inventory of what exists in this repo; the dated notes below are the running log (last updated 2026-11-05). No research question is
 settled yet — this is a snapshot to work from, not a plan. Update this doc as code/data/results change.
 
+> **Chars-per-100k significance bug found and fixed (2026-11-05, `test_lexicon_hypotheses.py`).** Found by comparing, question
+> by question, where the earlier free-text language-hypothesis experiment was correct and this structured one was wrong (20
+> such cases). **The bug:** the chars metric's significance test ran a two-proportion z-test with `n` = total corpus
+> *characters* (hundreds of millions for an unrestricted hypothesis, e.g. `n_a=117,867,391`). At that scale the test is
+> absurdly over-powered -- almost any word whose raw count didn't shrink by exactly the corpus's own shrinkage ratio
+> (2006's corpus is ~2.8x 2011's in characters) came back "significant" (`p=0.0` or `p≈1e-15`) regardless of real relevance.
+> **Fix (`chars_from_presence()`):** the chars metric's *direction* still comes from the occurrences-per-character rate, but
+> its *significance* is no longer tested independently against the huge character total -- it reuses the matching
+> presence-based (article-count) test's p-value, exactly how the original free-text experiment's own chars-rate fix worked
+> (char rate decided direction only, never significance, there either). Verified offline with a fabricated huge-exposure
+> fixture before rescoring anything for real. Rescored pilot, full 128-question bulk run, and the entire feedback-loop
+> history (no new LLM calls -- same generated hypotheses, corrected test only).
+> - **Accuracy barely moved (49.6%-52.8% both before and after, still chance either way) -- revealing a SECOND, different
+>   problem the fix exposed rather than solved.** Re-ran the same 20 "old-experiment-correct, new-experiment-wrong"
+>   diagnostic after the fix: **all 20 are still wrong.** Inspecting why: many confirmed hypotheses are now significant
+>   under the FIXED, article-count-based test too (e.g. A002's Facebook/Twitter/social-network lexicon, p=2.5e-05; E218's
+>   unemployment/recession lexicon, p=0.0) -- these aren't statistical artifacts anymore, they're real, large, correctly-
+>   detected trends in NYT coverage 2006->2011. The problem is relevance, not significance: social media's real adoption
+>   curve and the 2008 financial crisis are huge secular trends that coincide with this exact time window and get picked up
+>   by any coarse word-frequency test, regardless of whether they have any causal connection to the specific WVS attitude
+>   being tested (A002 is about friendship quality, not social media; A001 is about family importance, not the 2008 crisis).
+>   **No p-value threshold fixes a confound** -- this needs either more specific/targeted lexica or a mechanism that reads
+>   content for relevance rather than counting raw frequency (the LLM-judge/RAG idea discussed but not built: see the
+>   "simple keyword-based RAG" discussion below).
+> - **Final numbers with the fix, all 128 questions:** round 1 alone, chars-per-100k 55/107 decided (51.4%, z=0.29, p=0.77);
+>   round 1 + feedback loop combined, chars-per-100k 60/121 decided (49.6%, z=-0.09, p=0.93, i.e. indistinguishable from
+>   chance in either direction). presence-fraction unchanged throughout (not touched by this bug): 53/101 (52.5%) round 1
+>   alone, 62/123 (50.4%) with feedback. 9 questions still tied (either metric) after feedback, up slightly from 7 (the fix
+>   made the chars metric more conservative, so a few more hypotheses land as "inconclusive" instead of a spurious confirm).
+
 > **Structured, lexicon-based hypothesis experiment (2026-11-05, new, `code/value_shift_indicators/`; prompt approved before
 > use).** Follow-up to the language-hypothesis experiment below, constraining the hypothesis *type* instead of leaving it fully
 > open-ended: each hypothesis is a fixed JSON shape, not a free-text sentence with markers inferred post hoc. New files:

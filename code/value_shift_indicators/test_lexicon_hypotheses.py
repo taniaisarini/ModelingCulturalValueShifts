@@ -84,6 +84,26 @@ def rate_test(x_a, n_a, x_b, n_b):
                 p_value=p_value, observed=("increase" if p_b > p_a else "decrease"))
 
 
+def chars_from_presence(presence_test, occ_a, chars_a, occ_b, chars_b):
+    """The chars metric's significance test, FIXED (2026-11-05 bug found by inspecting 20 cases where
+    the old free-text experiment was right and this one was wrong): testing raw occurrence counts
+    against total corpus CHARACTERS (tens to hundreds of millions for an unrestricted hypothesis) makes
+    a two-proportion z-test absurdly over-powered -- almost any word whose raw count didn't shrink by
+    exactly the same ratio as the whole corpus (2006 corpus is ~2.8x the characters of 2011's) comes
+    back "significant" (p=0.0 or 1e-15) regardless of real relevance to the hypothesis. Fix: the chars
+    metric's *direction* still comes from the occurrences-per-character rate (that's the whole point of
+    having a second metric), but its *significance* is NOT tested independently -- it reuses
+    `presence_test`'s p-value, exactly how the original language-hypothesis experiment's char-rate
+    fix worked (char rate only ever decided direction there, never significance; the z-test's n was
+    always the article count)."""
+    rate_a = occ_a / chars_a if chars_a else 0.0
+    rate_b = occ_b / chars_b if chars_b else 0.0
+    observed = None if (chars_a == 0 or chars_b == 0) else ("increase" if rate_b > rate_a else "decrease")
+    return dict(x_a=occ_a, n_a=chars_a, x_b=occ_b, n_b=chars_b,
+                rate_a=round(rate_a * 100_000, 4), rate_b=round(rate_b * 100_000, 4),
+                p_value=presence_test["p_value"], observed=observed, significance_source="presence")
+
+
 def verdict_for(rate, expected_change):
     if rate["p_value"] is None:
         return "inconclusive"
@@ -108,31 +128,41 @@ def combine_verdicts(v1, v2):
 def test_trend(sub_a, sub_b, chars_a, chars_b, lexicon, expected_change):
     presence = rate_test(count_presence(sub_a, lexicon), len(sub_a),
                           count_presence(sub_b, lexicon), len(sub_b))
-    chars = rate_test(count_occurrences(sub_a, lexicon), chars_a,
-                       count_occurrences(sub_b, lexicon), chars_b)
+    occ_a, occ_b = count_occurrences(sub_a, lexicon), count_occurrences(sub_b, lexicon)
+    chars = chars_from_presence(presence, occ_a, chars_a, occ_b, chars_b)
     return dict(presence=dict(presence, verdict=verdict_for(presence, expected_change)),
                 chars=dict(chars, verdict=verdict_for(chars, expected_change)))
 
 
 def test_contrast(sub_a, sub_b, chars_a, chars_b, lexicon_early, lexicon_late):
-    out = {}
-    for metric_name, count_fn, total_a, total_b in (
-        ("presence", count_presence, len(sub_a), len(sub_b)),
-        ("chars", count_occurrences, chars_a, chars_b),
-    ):
-        early_a, early_b = count_fn(sub_a, lexicon_early), count_fn(sub_b, lexicon_early)
-        late_a, late_b = count_fn(sub_a, lexicon_late), count_fn(sub_b, lexicon_late)
+    n_a, n_b = len(sub_a), len(sub_b)
+    pres_early_a, pres_early_b = count_presence(sub_a, lexicon_early), count_presence(sub_b, lexicon_early)
+    pres_late_a, pres_late_b = count_presence(sub_a, lexicon_late), count_presence(sub_b, lexicon_late)
 
-        early_trend = rate_test(early_a, total_a, early_b, total_b)
-        late_trend = rate_test(late_a, total_a, late_b, total_b)
-        v_early, v_late = verdict_for(early_trend, "decrease"), verdict_for(late_trend, "increase")
-        independent = dict(early=early_trend, late=late_trend, verdict=combine_verdicts(v_early, v_late))
+    pres_early_trend = rate_test(pres_early_a, n_a, pres_early_b, n_b)
+    pres_late_trend = rate_test(pres_late_a, n_a, pres_late_b, n_b)
+    v_early_p, v_late_p = verdict_for(pres_early_trend, "decrease"), verdict_for(pres_late_trend, "increase")
+    pres_independent = dict(early=pres_early_trend, late=pres_late_trend,
+                            verdict=combine_verdicts(v_early_p, v_late_p))
+    pres_dominance_rate = rate_test(pres_early_a, pres_early_a + pres_late_a,
+                                    pres_early_b, pres_early_b + pres_late_b)
+    pres_dominance = dict(pres_dominance_rate, verdict=verdict_for(pres_dominance_rate, "decrease"))
 
-        dominance_rate = rate_test(early_a, early_a + late_a, early_b, early_b + late_b)
-        dominance = dict(dominance_rate, verdict=verdict_for(dominance_rate, "decrease"))
+    # chars: direction from occurrence-per-char rate, significance reused from the matching
+    # presence-based lexicon trend test (see chars_from_presence) -- dominance is untouched, its own
+    # n (early+late occurrence counts) was never affected by the huge-character-count bug.
+    occ_early_a, occ_early_b = count_occurrences(sub_a, lexicon_early), count_occurrences(sub_b, lexicon_early)
+    occ_late_a, occ_late_b = count_occurrences(sub_a, lexicon_late), count_occurrences(sub_b, lexicon_late)
+    chars_early_trend = chars_from_presence(pres_early_trend, occ_early_a, chars_a, occ_early_b, chars_b)
+    chars_late_trend = chars_from_presence(pres_late_trend, occ_late_a, chars_a, occ_late_b, chars_b)
+    v_early_c, v_late_c = verdict_for(chars_early_trend, "decrease"), verdict_for(chars_late_trend, "increase")
+    chars_independent = dict(early=chars_early_trend, late=chars_late_trend,
+                             verdict=combine_verdicts(v_early_c, v_late_c))
+    chars_dominance_rate = rate_test(occ_early_a, occ_early_a + occ_late_a, occ_early_b, occ_early_b + occ_late_b)
+    chars_dominance = dict(chars_dominance_rate, verdict=verdict_for(chars_dominance_rate, "decrease"))
 
-        out[metric_name] = dict(independent=independent, dominance=dominance)
-    return out
+    return dict(presence=dict(independent=pres_independent, dominance=pres_dominance),
+                chars=dict(independent=chars_independent, dominance=chars_dominance))
 
 
 def score_hypothesis(h, texts_a, texts_b):

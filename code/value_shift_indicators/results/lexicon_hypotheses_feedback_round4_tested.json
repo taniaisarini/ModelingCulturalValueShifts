@@ -1,0 +1,4857 @@
+[
+  {
+    "country": "USA",
+    "question": "A006",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of survey-documented religious disaffiliation rises between 2006 and 2011, reflecting growing public attention to Americans leaving or switching religions (direction A).",
+        "lexicon": [
+          "religious landscape survey",
+          "religious switchers",
+          "unchurched",
+          "dechurched",
+          "post-Christian"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 0,
+            "n_a": 160430,
+            "x_b": 0,
+            "n_b": 92647,
+            "p_a": 0.0,
+            "p_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 117867391,
+            "x_b": 0,
+            "n_b": 42627467,
+            "rate_a": 0.0,
+            "rate_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of contemporary worship music and Christian pop culture rises, signaling a revival of religious engagement among Americans (direction B).",
+        "topic": [
+          "Christian rock",
+          "worship music",
+          "praise band",
+          "contemporary worship"
+        ],
+        "lexicon": [
+          "Hillsong",
+          "worship album",
+          "Christian music festival",
+          "praise and worship"
+        ],
+        "direction": "B",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 10,
+        "n_articles_b": 3,
+        "chars_a": 308248,
+        "chars_b": 1634,
+        "result": {
+          "presence": {
+            "x_a": 0,
+            "n_a": 10,
+            "x_b": 0,
+            "n_b": 3,
+            "p_a": 0.0,
+            "p_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 308248,
+            "x_b": 0,
+            "n_b": 1634,
+            "rate_a": 0.0,
+            "rate_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Language describing a Christian national identity gives way to language describing religion as fading, indicating a move toward lower religious importance (direction A).",
+        "lexicon_early": [
+          "Christian nation",
+          "one nation under God",
+          "God-fearing"
+        ],
+        "lexicon_late": [
+          "post-Christian",
+          "religious decline",
+          "faith fading"
+        ],
+        "direction": "A",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 16,
+                "n_a": 160430,
+                "x_b": 3,
+                "n_b": 92647,
+                "p_a": 0.0001,
+                "p_b": 3.2e-05,
+                "p_value": 0.05958779949562931,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 160430,
+                "x_b": 0,
+                "n_b": 92647,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 16,
+              "n_a": 16,
+              "x_b": 3,
+              "n_b": 3,
+              "p_a": 1.0,
+              "p_b": 1.0,
+              "p_value": 1.0,
+              "observed": "decrease",
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 19,
+                "n_a": 117867391,
+                "x_b": 3,
+                "n_b": 42627467,
+                "rate_a": 0.0161,
+                "rate_b": 0.007,
+                "p_value": 0.05958779949562931,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 117867391,
+                "x_b": 0,
+                "n_b": 42627467,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 19,
+              "n_a": 19,
+              "x_b": 3,
+              "n_b": 3,
+              "p_a": 1.0,
+              "p_b": 1.0,
+              "p_value": 1.0,
+              "observed": "decrease",
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Coverage of young people's religious life shifts from framing youth as leaving church to framing young adults as returning to faith, indicating a move toward higher religious importance (direction B).",
+        "topic": [
+          "youth ministry",
+          "campus ministry",
+          "college ministry"
+        ],
+        "lexicon_early": [
+          "young people leaving church",
+          "Millennials leaving church",
+          "youth drift"
+        ],
+        "lexicon_late": [
+          "young adults returning",
+          "campus revival",
+          "Passion conference"
+        ],
+        "direction": "B",
+        "tested": true,
+        "n_articles_a": 4,
+        "n_articles_b": 0,
+        "chars_a": 4347,
+        "chars_b": 0,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 4,
+                "x_b": 0,
+                "n_b": 0,
+                "p_a": null,
+                "p_b": null,
+                "p_value": null,
+                "observed": null
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 4,
+                "x_b": 0,
+                "n_b": 0,
+                "p_a": null,
+                "p_b": null,
+                "p_value": null,
+                "observed": null
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 0,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 4347,
+                "x_b": 0,
+                "n_b": 0,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": null,
+                "observed": null,
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 4347,
+                "x_b": 0,
+                "n_b": 0,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": null,
+                "observed": null,
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 0,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of Jewish religious disaffiliation and synagogue decline rises, reflecting a drop in religious importance among American Jews (direction A).",
+        "topic": [
+          "Jewish",
+          "synagogue",
+          "rabbi"
+        ],
+        "lexicon": [
+          "Jewish identity",
+          "intermarriage",
+          "secular Jews",
+          "unaffiliated Jews",
+          "synagogue membership decline"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 2737,
+        "n_articles_b": 749,
+        "chars_a": 10248550,
+        "chars_b": 356887,
+        "result": {
+          "presence": {
+            "x_a": 13,
+            "n_a": 2737,
+            "x_b": 4,
+            "n_b": 749,
+            "p_a": 0.00475,
+            "p_b": 0.00534,
+            "p_value": 0.8370738604218564,
+            "observed": "increase",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 18,
+            "n_a": 10248550,
+            "x_b": 7,
+            "n_b": 356887,
+            "rate_a": 0.1756,
+            "rate_b": 1.9614,
+            "p_value": 0.8370738604218564,
+            "observed": "increase",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A098",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Explicitly secular or humanist organizations gained visibility in NYT coverage as people left religious affiliation, so their frequency should rise between 2006 and 2011.",
+        "lexicon": [
+          "Freedom From Religion Foundation",
+          "American Humanist Association",
+          "humanist",
+          "freethinker",
+          "godless"
+        ],
+        "direction": "B",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 62,
+            "n_a": 160430,
+            "x_b": 24,
+            "n_b": 92647,
+            "p_a": 0.000386,
+            "p_b": 0.000259,
+            "p_value": 0.09387065535177697,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 81,
+            "n_a": 117867391,
+            "x_b": 26,
+            "n_b": 42627467,
+            "rate_a": 0.0687,
+            "rate_b": 0.061,
+            "p_value": 0.09387065535177697,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Within coverage of Latter-day Saint congregations, language about formal active-membership duties should grow, reflecting rising reported active participation (Direction A).",
+        "topic": [
+          "Latter-day Saints",
+          "Mormon",
+          "LDS ward",
+          "stake"
+        ],
+        "lexicon": [
+          "temple recommend",
+          "home teaching",
+          "ward council",
+          "bishopric",
+          "missionary service"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 2138,
+        "n_articles_b": 986,
+        "chars_a": 5287767,
+        "chars_b": 502555,
+        "result": {
+          "presence": {
+            "x_a": 0,
+            "n_a": 2138,
+            "x_b": 0,
+            "n_b": 986,
+            "p_a": 0.0,
+            "p_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 5287767,
+            "x_b": 0,
+            "n_b": 502555,
+            "rate_a": 0.0,
+            "rate_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Sunday-morning competing activities (youth sports, brunch, weekend leagues) should rise relative to church-based youth programs as people move away from religious affiliation (Direction B).",
+        "lexicon_early": [
+          "Sunday school enrollment",
+          "vacation Bible school",
+          "youth group attendance",
+          "confirmation class",
+          "children's church"
+        ],
+        "lexicon_late": [
+          "Sunday league",
+          "travel team",
+          "weekend tournament",
+          "Sunday brunch",
+          "Sunday soccer"
+        ],
+        "direction": "B",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 160430,
+                "x_b": 0,
+                "n_b": 92647,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 6,
+                "n_a": 160430,
+                "x_b": 4,
+                "n_b": 92647,
+                "p_a": 3.7e-05,
+                "p_b": 4.3e-05,
+                "p_value": 0.8238051258527062,
+                "observed": "increase"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 6,
+              "x_b": 0,
+              "n_b": 4,
+              "p_a": 0.0,
+              "p_b": 0.0,
+              "p_value": 1.0,
+              "observed": "decrease",
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 117867391,
+                "x_b": 0,
+                "n_b": 42627467,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 8,
+                "n_a": 117867391,
+                "x_b": 5,
+                "n_b": 42627467,
+                "rate_a": 0.0068,
+                "rate_b": 0.0117,
+                "p_value": 0.8238051258527062,
+                "observed": "increase",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 8,
+              "x_b": 0,
+              "n_b": 5,
+              "p_a": 0.0,
+              "p_b": 0.0,
+              "p_value": 1.0,
+              "observed": "decrease",
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of mainline Episcopal, Lutheran, and Methodist congregations, descriptions of members shift from nominal or inactive status toward practicing, communicant status, consistent with movement toward active membership (Direction A).",
+        "topic": [
+          "Episcopal",
+          "Lutheran",
+          "Methodist"
+        ],
+        "lexicon_early": [
+          "nominal members",
+          "inactive members",
+          "on the books",
+          "lapsed communicants"
+        ],
+        "lexicon_late": [
+          "communicant",
+          "confirmed members",
+          "practicing members",
+          "worship attendance"
+        ],
+        "direction": "A",
+        "tested": true,
+        "n_articles_a": 856,
+        "n_articles_b": 200,
+        "chars_a": 4007495,
+        "chars_b": 88517,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 3,
+                "n_a": 856,
+                "x_b": 0,
+                "n_b": 200,
+                "p_a": 0.003505,
+                "p_b": 0.0,
+                "p_value": 0.40180040276190976,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 1,
+                "n_a": 856,
+                "x_b": 0,
+                "n_b": 200,
+                "p_a": 0.001168,
+                "p_b": 0.0,
+                "p_value": 0.6286717092534113,
+                "observed": "decrease"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 3,
+              "n_a": 4,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 3,
+                "n_a": 4007495,
+                "x_b": 0,
+                "n_b": 88517,
+                "rate_a": 0.0749,
+                "rate_b": 0.0,
+                "p_value": 0.40180040276190976,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 2,
+                "n_a": 4007495,
+                "x_b": 0,
+                "n_b": 88517,
+                "rate_a": 0.0499,
+                "rate_b": 0.0,
+                "p_value": 0.6286717092534113,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 3,
+              "n_a": 5,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Worship-ministry language tied to energetic, participatory congregational life should increase as congregations pursued active engagement, supporting Direction A.",
+        "lexicon": [
+          "praise band",
+          "worship leader",
+          "worship team",
+          "choir director",
+          "Gospel choir"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 22,
+            "n_a": 160430,
+            "x_b": 1,
+            "n_b": 92647,
+            "p_a": 0.000137,
+            "p_b": 1.1e-05,
+            "p_value": 0.0013190918647767447,
+            "observed": "decrease",
+            "verdict": "deny"
+          },
+          "chars": {
+            "x_a": 26,
+            "n_a": 117867391,
+            "x_b": 1,
+            "n_b": 42627467,
+            "rate_a": 0.0221,
+            "rate_b": 0.0023,
+            "p_value": 0.0013190918647767447,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "deny"
+          }
+        },
+        "round": 4
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A101",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of mass grassroots union mobilization rose between 2006 and 2011, pointing to more active engagement with unions.",
+        "lexicon": [
+          "solidarity rally",
+          "teach-in",
+          "sit-in at the statehouse",
+          "Madison capitol"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 3,
+            "n_a": 160430,
+            "x_b": 3,
+            "n_b": 92647,
+            "p_a": 1.9e-05,
+            "p_b": 3.2e-05,
+            "p_value": 0.49590524439530626,
+            "observed": "increase",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 3,
+            "n_a": 117867391,
+            "x_b": 4,
+            "n_b": 42627467,
+            "rate_a": 0.0025,
+            "rate_b": 0.0094,
+            "p_value": 0.49590524439530626,
+            "observed": "increase",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of workplaces without unions and of unions being removed from workplaces rose, pointing to more people being non-members.",
+        "lexicon": [
+          "nonunion",
+          "union-free",
+          "de-unionized",
+          "unionless shop"
+        ],
+        "direction": "B",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 12,
+            "n_a": 160430,
+            "x_b": 8,
+            "n_b": 92647,
+            "p_a": 7.5e-05,
+            "p_b": 8.6e-05,
+            "p_value": 0.7528482530410112,
+            "observed": "increase",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 19,
+            "n_a": 117867391,
+            "x_b": 10,
+            "n_b": 42627467,
+            "rate_a": 0.0161,
+            "rate_b": 0.0235,
+            "p_value": 0.7528482530410112,
+            "observed": "increase",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of graduate students, adjunct faculty and residents organizing for union recognition rose, pointing to more active union involvement among white-collar professionals.",
+        "topic": [
+          "graduate student workers",
+          "adjunct professors",
+          "resident physicians"
+        ],
+        "lexicon": [
+          "unionize",
+          "union election",
+          "recognize the union",
+          "collective bargaining rights"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 1,
+        "n_articles_b": 0,
+        "chars_a": 2173,
+        "chars_b": 0,
+        "result": {
+          "presence": {
+            "x_a": 0,
+            "n_a": 1,
+            "x_b": 0,
+            "n_b": 0,
+            "p_a": null,
+            "p_b": null,
+            "p_value": null,
+            "observed": null,
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 2173,
+            "x_b": 0,
+            "n_b": 0,
+            "rate_a": 0.0,
+            "rate_b": 0.0,
+            "p_value": null,
+            "observed": null,
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Early coverage framed unions in hostile terms and late coverage framed them sympathetically around middle-class and inequality themes, shifting attitudes toward active membership.",
+        "lexicon_early": [
+          "union bosses",
+          "Big Labor",
+          "union thugs",
+          "featherbedding"
+        ],
+        "lexicon_late": [
+          "middle class squeeze",
+          "income inequality",
+          "working families",
+          "living wage"
+        ],
+        "direction": "A",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 3,
+                "n_a": 160430,
+                "x_b": 3,
+                "n_b": 92647,
+                "p_a": 1.9e-05,
+                "p_b": 3.2e-05,
+                "p_value": 0.49590524439530626,
+                "observed": "increase"
+              },
+              "late": {
+                "x_a": 82,
+                "n_a": 160430,
+                "x_b": 42,
+                "n_b": 92647,
+                "p_a": 0.000511,
+                "p_b": 0.000453,
+                "p_value": 0.5268064269588992,
+                "observed": "decrease"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 3,
+              "n_a": 85,
+              "x_b": 3,
+              "n_b": 45,
+              "p_a": 0.035294,
+              "p_b": 0.066667,
+              "p_value": 0.41733362673988994,
+              "observed": "increase",
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 3,
+                "n_a": 117867391,
+                "x_b": 3,
+                "n_b": 42627467,
+                "rate_a": 0.0025,
+                "rate_b": 0.007,
+                "p_value": 0.49590524439530626,
+                "observed": "increase",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 134,
+                "n_a": 117867391,
+                "x_b": 47,
+                "n_b": 42627467,
+                "rate_a": 0.1137,
+                "rate_b": 0.1103,
+                "p_value": 0.5268064269588992,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 3,
+              "n_a": 137,
+              "x_b": 3,
+              "n_b": 50,
+              "p_a": 0.021898,
+              "p_b": 0.06,
+              "p_value": 0.19067580774977788,
+              "observed": "increase",
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In airline and aerospace labor disputes, early coverage centered on settled contracts and late coverage on lockouts, replacement workers and layoffs, pointing to a shift toward non-membership.",
+        "topic": [
+          "flight attendants",
+          "airline pilots",
+          "Boeing machinists",
+          "Verizon workers"
+        ],
+        "lexicon_early": [
+          "contract ratified",
+          "strike ends",
+          "tentative agreement reached"
+        ],
+        "lexicon_late": [
+          "lockout",
+          "replacement workers",
+          "layoffs",
+          "concession demands"
+        ],
+        "direction": "B",
+        "tested": true,
+        "n_articles_a": 78,
+        "n_articles_b": 15,
+        "chars_a": 116404,
+        "chars_b": 7596,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 78,
+                "x_b": 0,
+                "n_b": 15,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 78,
+                "x_b": 0,
+                "n_b": 15,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 0,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 116404,
+                "x_b": 0,
+                "n_b": 7596,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 116404,
+                "x_b": 0,
+                "n_b": 7596,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 0,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A124_12",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of face-covering and dress restrictions targeting Muslim women rose between 2006 and 2011, reflecting more public talk of excluding religious minorities from everyday life (Direction A).",
+        "lexicon": [
+          "face veil",
+          "burqa ban",
+          "niqab ban",
+          "full-face veil",
+          "veil ban"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 11,
+            "n_a": 160430,
+            "x_b": 6,
+            "n_b": 92647,
+            "p_a": 6.9e-05,
+            "p_b": 6.5e-05,
+            "p_value": 0.910445063720901,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 31,
+            "n_a": 117867391,
+            "x_b": 15,
+            "n_b": 42627467,
+            "rate_a": 0.0263,
+            "rate_b": 0.0352,
+            "p_value": 0.910445063720901,
+            "observed": "increase",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of Jewish households moving into neighborhoods shifted toward welcoming language between 2006 and 2011, consistent with less reported reluctance about religious neighbors (Direction B).",
+        "topic": [
+          "Jewish family",
+          "synagogue",
+          "Orthodox Jewish",
+          "Chabad"
+        ],
+        "lexicon": [
+          "welcome to the neighborhood",
+          "neighborly",
+          "good neighbors",
+          "warmly greeted"
+        ],
+        "direction": "B",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 411,
+        "n_articles_b": 75,
+        "chars_a": 2906524,
+        "chars_b": 39659,
+        "result": {
+          "presence": {
+            "x_a": 1,
+            "n_a": 411,
+            "x_b": 0,
+            "n_b": 75,
+            "p_a": 0.002433,
+            "p_b": 0.0,
+            "p_value": 0.6689285360249588,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 1,
+            "n_a": 2906524,
+            "x_b": 0,
+            "n_b": 39659,
+            "rate_a": 0.0344,
+            "rate_b": 0.0,
+            "p_value": 0.6689285360249588,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Descriptions of religious diversity in neighborhoods moved from open-door framing toward exclusionary framing between 2006 and 2011 (Direction A).",
+        "lexicon_early": [
+          "open to all faiths",
+          "neighborly",
+          "welcoming to newcomers",
+          "religious mix"
+        ],
+        "lexicon_late": [
+          "religious segregation",
+          "keep out",
+          "cultural takeover",
+          "not our way of life"
+        ],
+        "direction": "A",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 18,
+                "n_a": 160430,
+                "x_b": 4,
+                "n_b": 92647,
+                "p_a": 0.000112,
+                "p_b": 4.3e-05,
+                "p_value": 0.07278504328485114,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 21,
+                "n_a": 160430,
+                "x_b": 10,
+                "n_b": 92647,
+                "p_a": 0.000131,
+                "p_b": 0.000108,
+                "p_value": 0.6150953217455801,
+                "observed": "decrease"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 18,
+              "n_a": 39,
+              "x_b": 4,
+              "n_b": 14,
+              "p_a": 0.461538,
+              "p_b": 0.285714,
+              "p_value": 0.25208337882603393,
+              "observed": "decrease",
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 21,
+                "n_a": 117867391,
+                "x_b": 4,
+                "n_b": 42627467,
+                "rate_a": 0.0178,
+                "rate_b": 0.0094,
+                "p_value": 0.07278504328485114,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 25,
+                "n_a": 117867391,
+                "x_b": 10,
+                "n_b": 42627467,
+                "rate_a": 0.0212,
+                "rate_b": 0.0235,
+                "p_value": 0.6150953217455801,
+                "observed": "increase",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 21,
+              "n_a": 46,
+              "x_b": 4,
+              "n_b": 14,
+              "p_a": 0.456522,
+              "p_b": 0.285714,
+              "p_value": 0.2563474083717905,
+              "observed": "decrease",
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Coverage of Scientology moved from framing it as a cult toward framing it as a protected religion with recognized rights between 2006 and 2011 (Direction B).",
+        "topic": [
+          "Scientology",
+          "Church of Scientology"
+        ],
+        "lexicon_early": [
+          "brainwashing",
+          "cult",
+          "Xenu",
+          "shunned members"
+        ],
+        "lexicon_late": [
+          "religious freedom",
+          "tax-exempt status",
+          "church members",
+          "religious rights"
+        ],
+        "direction": "B",
+        "tested": true,
+        "n_articles_a": 14,
+        "n_articles_b": 6,
+        "chars_a": 44699,
+        "chars_b": 2841,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 4,
+                "n_a": 14,
+                "x_b": 0,
+                "n_b": 6,
+                "p_a": 0.285714,
+                "p_b": 0.0,
+                "p_value": 0.14323490752466972,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 14,
+                "x_b": 0,
+                "n_b": 6,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 4,
+              "n_a": 4,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 6,
+                "n_a": 44699,
+                "x_b": 0,
+                "n_b": 2841,
+                "rate_a": 13.4231,
+                "rate_b": 0.0,
+                "p_value": 0.14323490752466972,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 44699,
+                "x_b": 0,
+                "n_b": 2841,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 6,
+              "n_a": 6,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of Muslim immigrants and refugees increasingly used exclusionary policy terms such as registries and bans between 2006 and 2011, indicating more open talk of excluding Muslims (Direction A).",
+        "topic": [
+          "Muslim immigrants",
+          "Muslim refugees",
+          "Muslim Americans"
+        ],
+        "lexicon": [
+          "Muslim registry",
+          "travel ban",
+          "refugee ban",
+          "special registration"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 27,
+        "n_articles_b": 6,
+        "chars_a": 55151,
+        "chars_b": 3466,
+        "result": {
+          "presence": {
+            "x_a": 0,
+            "n_a": 27,
+            "x_b": 0,
+            "n_b": 6,
+            "p_a": 0.0,
+            "p_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 55151,
+            "x_b": 0,
+            "n_b": 3466,
+            "rate_a": 0.0,
+            "rate_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A124_42",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "As public opinion softened, NYT coverage increasingly described cohabitation stigma as fading, so phrases signaling that disapproval of unmarried living arrangements was no longer socially acceptable should rise over 2006-2011, consistent with movement toward 'Not mentioned'.",
+        "lexicon": [
+          "no longer taboo",
+          "stigma of living together",
+          "shifting attitudes toward",
+          "social acceptance of"
+        ],
+        "direction": "B",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 1,
+            "n_a": 160430,
+            "x_b": 0,
+            "n_b": 92647,
+            "p_a": 6e-06,
+            "p_b": 0.0,
+            "p_value": 0.4472962637461917,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 1,
+            "n_a": 117867391,
+            "x_b": 0,
+            "n_b": 42627467,
+            "rate_a": 0.0008,
+            "rate_b": 0.0,
+            "p_value": 0.4472962637461917,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of religious institutions' conflicts with housing and service rules over unmarried couples should grow over 2006-2011, with more emphasis on religious liberty framing, consistent with stronger objection (movement toward 'Mentioned').",
+        "topic": [
+          "Catholic Charities",
+          "Catholic Church",
+          "religious landlords"
+        ],
+        "lexicon": [
+          "religious freedom",
+          "conscience clause",
+          "faith-based objection"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 455,
+        "n_articles_b": 116,
+        "chars_a": 784824,
+        "chars_b": 57081,
+        "result": {
+          "presence": {
+            "x_a": 0,
+            "n_a": 455,
+            "x_b": 1,
+            "n_b": 116,
+            "p_a": 0.0,
+            "p_b": 0.008621,
+            "p_value": 0.04745182696501882,
+            "observed": "increase",
+            "verdict": "confirm"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 784824,
+            "x_b": 1,
+            "n_b": 57081,
+            "rate_a": 0.0,
+            "rate_b": 1.7519,
+            "p_value": 0.04745182696501882,
+            "observed": "increase",
+            "significance_source": "presence",
+            "verdict": "confirm"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Descriptions of unmarried couples shifted from sensational, morally charged terms of the earlier period to neutral relationship vocabulary in the later period, consistent with movement toward 'Not mentioned'.",
+        "lexicon_early": [
+          "love nest",
+          "paramour",
+          "mistress",
+          "hanky-panky"
+        ],
+        "lexicon_late": [
+          "de facto spouse",
+          "committed partner",
+          "household of two adults"
+        ],
+        "direction": "B",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 82,
+                "n_a": 160430,
+                "x_b": 35,
+                "n_b": 92647,
+                "p_a": 0.000511,
+                "p_b": 0.000378,
+                "p_value": 0.13275467086441894,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 160430,
+                "x_b": 0,
+                "n_b": 92647,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 82,
+              "n_a": 82,
+              "x_b": 35,
+              "n_b": 35,
+              "p_a": 1.0,
+              "p_b": 1.0,
+              "p_value": 1.0,
+              "observed": "decrease",
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 117,
+                "n_a": 117867391,
+                "x_b": 40,
+                "n_b": 42627467,
+                "rate_a": 0.0993,
+                "rate_b": 0.0938,
+                "p_value": 0.13275467086441894,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 117867391,
+                "x_b": 0,
+                "n_b": 42627467,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 117,
+              "n_a": 117,
+              "x_b": 40,
+              "n_b": 40,
+              "p_a": 1.0,
+              "p_b": 1.0,
+              "p_value": 1.0,
+              "observed": "decrease",
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of rental screening and roommate listings, early articles emphasized checking a applicant's marital or relationship status, while later articles emphasized source-of-income and no-relationship-question policies, consistent with movement toward 'Not mentioned'.",
+        "topic": [
+          "tenant screening",
+          "rental listings",
+          "roommate ads"
+        ],
+        "lexicon_early": [
+          "background check on marital status",
+          "living arrangements disclosed",
+          "couples not welcome"
+        ],
+        "lexicon_late": [
+          "source of income",
+          "no questions about relationship",
+          "fair tenant selection"
+        ],
+        "direction": "B",
+        "tested": true,
+        "n_articles_a": 2,
+        "n_articles_b": 0,
+        "chars_a": 1919,
+        "chars_b": 0,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 2,
+                "x_b": 0,
+                "n_b": 0,
+                "p_a": null,
+                "p_b": null,
+                "p_value": null,
+                "observed": null
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 2,
+                "x_b": 0,
+                "n_b": 0,
+                "p_a": null,
+                "p_b": null,
+                "p_value": null,
+                "observed": null
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 0,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 1919,
+                "x_b": 0,
+                "n_b": 0,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": null,
+                "observed": null,
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 1919,
+                "x_b": 0,
+                "n_b": 0,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": null,
+                "observed": null,
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 0,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Commentary framing cohabitation as a sign of broader social breakdown should become more common over 2006-2011, consistent with stronger objection (movement toward 'Mentioned').",
+        "lexicon": [
+          "family breakdown",
+          "marriage crisis",
+          "decline of marriage",
+          "erosion of the family"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 0,
+            "n_a": 160430,
+            "x_b": 2,
+            "n_b": 92647,
+            "p_a": 0.0,
+            "p_b": 2.2e-05,
+            "p_value": 0.06274571857856648,
+            "observed": "increase",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 117867391,
+            "x_b": 2,
+            "n_b": 42627467,
+            "rate_a": 0.0,
+            "rate_b": 0.0047,
+            "p_value": 0.06274571857856648,
+            "observed": "increase",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A196",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Rule-adherence phrasing that stresses doing things 'by the book' and staying on the straight and narrow becomes more common in NYT coverage over 2006-2011, consistent with a rise in people saying proper behavior matters to them.",
+        "lexicon": [
+          "by the book",
+          "straight and narrow",
+          "above reproach",
+          "kept his nose clean",
+          "stayed in line"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 33,
+            "n_a": 160430,
+            "x_b": 12,
+            "n_b": 92647,
+            "p_a": 0.000206,
+            "p_b": 0.00013,
+            "p_value": 0.16620479964017054,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 41,
+            "n_a": 117867391,
+            "x_b": 12,
+            "n_b": 42627467,
+            "rate_a": 0.0348,
+            "rate_b": 0.0282,
+            "p_value": 0.16620479964017054,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of military personnel increasingly emphasizes codes of conduct and chain-of-command discipline over 2006-2011, reflecting stronger endorsement of proper, rule-bound behavior.",
+        "topic": [
+          "military recruits",
+          "Army soldiers",
+          "Marines",
+          "veterans"
+        ],
+        "lexicon": [
+          "code of conduct",
+          "chain of command",
+          "court-martial",
+          "regulations",
+          "honor code"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 766,
+        "n_articles_b": 305,
+        "chars_a": 3198786,
+        "chars_b": 158588,
+        "result": {
+          "presence": {
+            "x_a": 9,
+            "n_a": 766,
+            "x_b": 4,
+            "n_b": 305,
+            "p_a": 0.011749,
+            "p_b": 0.013115,
+            "p_value": 0.8538841798897958,
+            "observed": "increase",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 16,
+            "n_a": 3198786,
+            "x_b": 8,
+            "n_b": 158588,
+            "rate_a": 0.5002,
+            "rate_b": 5.0445,
+            "p_value": 0.8538841798897958,
+            "observed": "increase",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Descriptions of individuals shift from conventional, upright conduct toward self-centered entitlement language between early and late periods, indicating a move away from valuing proper behavior.",
+        "lexicon_early": [
+          "by the book",
+          "upright",
+          "dutiful",
+          "conscientious",
+          "principled"
+        ],
+        "lexicon_late": [
+          "entitled",
+          "self-absorbed",
+          "me-first",
+          "narcissistic",
+          "selfie"
+        ],
+        "direction": "B",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 169,
+                "n_a": 160430,
+                "x_b": 92,
+                "n_b": 92647,
+                "p_a": 0.001053,
+                "p_b": 0.000993,
+                "p_value": 0.6483508126899746,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 189,
+                "n_a": 160430,
+                "x_b": 83,
+                "n_b": 92647,
+                "p_a": 0.001178,
+                "p_b": 0.000896,
+                "p_value": 0.036862961441038955,
+                "observed": "decrease"
+              },
+              "verdict": "deny"
+            },
+            "dominance": {
+              "x_a": 169,
+              "n_a": 358,
+              "x_b": 92,
+              "n_b": 175,
+              "p_a": 0.472067,
+              "p_b": 0.525714,
+              "p_value": 0.24462617015661525,
+              "observed": "increase",
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 213,
+                "n_a": 117867391,
+                "x_b": 96,
+                "n_b": 42627467,
+                "rate_a": 0.1807,
+                "rate_b": 0.2252,
+                "p_value": 0.6483508126899746,
+                "observed": "increase",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 242,
+                "n_a": 117867391,
+                "x_b": 92,
+                "n_b": 42627467,
+                "rate_a": 0.2053,
+                "rate_b": 0.2158,
+                "p_value": 0.036862961441038955,
+                "observed": "increase",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 213,
+              "n_a": 455,
+              "x_b": 96,
+              "n_b": 188,
+              "p_a": 0.468132,
+              "p_b": 0.510638,
+              "p_value": 0.3264554428039306,
+              "observed": "increase",
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In sports coverage, language about bad sportsmanship and trash talk gives way to fair-play and honor-the-game language over 2006-2011, consistent with stronger expectations of proper behavior.",
+        "topic": [
+          "athletes",
+          "professional sports",
+          "Olympics",
+          "coaches"
+        ],
+        "lexicon_early": [
+          "trash talk",
+          "taunting",
+          "bench-clearing brawl",
+          "dirty play",
+          "showboating"
+        ],
+        "lexicon_late": [
+          "sportsmanship",
+          "fair play",
+          "good sport",
+          "honor the game",
+          "class act"
+        ],
+        "direction": "A",
+        "tested": true,
+        "n_articles_a": 1020,
+        "n_articles_b": 524,
+        "chars_a": 2392535,
+        "chars_b": 279304,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 2,
+                "n_a": 1020,
+                "x_b": 2,
+                "n_b": 524,
+                "p_a": 0.001961,
+                "p_b": 0.003817,
+                "p_value": 0.4969303370833713,
+                "observed": "increase"
+              },
+              "late": {
+                "x_a": 3,
+                "n_a": 1020,
+                "x_b": 2,
+                "n_b": 524,
+                "p_a": 0.002941,
+                "p_b": 0.003817,
+                "p_value": 0.7743057556605037,
+                "observed": "increase"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 2,
+              "n_a": 5,
+              "x_b": 2,
+              "n_b": 4,
+              "p_a": 0.4,
+              "p_b": 0.5,
+              "p_value": 0.7641771556220949,
+              "observed": "increase",
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 2,
+                "n_a": 2392535,
+                "x_b": 2,
+                "n_b": 279304,
+                "rate_a": 0.0836,
+                "rate_b": 0.7161,
+                "p_value": 0.4969303370833713,
+                "observed": "increase",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 3,
+                "n_a": 2392535,
+                "x_b": 5,
+                "n_b": 279304,
+                "rate_a": 0.1254,
+                "rate_b": 1.7902,
+                "p_value": 0.7743057556605037,
+                "observed": "increase",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 2,
+              "n_a": 5,
+              "x_b": 2,
+              "n_b": 7,
+              "p_a": 0.4,
+              "p_b": 0.285714,
+              "p_value": 0.6788452994243181,
+              "observed": "decrease",
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Self-promotion and attention-seeking vocabulary grows in NYT coverage over 2006-2011 as social platforms spread, reflecting a decline in the view that behaving properly is central to one's identity.",
+        "lexicon": [
+          "selfie",
+          "self-promotion",
+          "attention-seeking",
+          "over-sharing",
+          "personal brand"
+        ],
+        "direction": "B",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 18,
+            "n_a": 160430,
+            "x_b": 8,
+            "n_b": 92647,
+            "p_a": 0.000112,
+            "p_b": 8.6e-05,
+            "p_value": 0.5365257800766685,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 25,
+            "n_a": 117867391,
+            "x_b": 8,
+            "n_b": 42627467,
+            "rate_a": 0.0212,
+            "rate_b": 0.0188,
+            "p_value": 0.5365257800766685,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "D001_B",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of relatives forging documents or secretly moving money out of family members' accounts rises between 2006 and 2011, reflecting more reported distrust within families.",
+        "lexicon": [
+          "forged his mother's signature",
+          "forged her father's name",
+          "secretly moved money",
+          "drained his mother's account",
+          "pilfered from his grandmother"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 0,
+            "n_a": 160430,
+            "x_b": 0,
+            "n_b": 92647,
+            "p_a": 0.0,
+            "p_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 117867391,
+            "x_b": 0,
+            "n_b": 42627467,
+            "rate_a": 0.0,
+            "rate_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Stories about identity theft committed by relatives increase, so people are more likely to be described as having been robbed by a family member.",
+        "topic": [
+          "identity theft",
+          "stolen identity",
+          "credit card fraud",
+          "fraudulent accounts"
+        ],
+        "lexicon": [
+          "used her son's Social Security number",
+          "opened accounts in his mother's name",
+          "a relative ran up debt",
+          "stolen by a cousin",
+          "his sister took out loans in his name"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 84,
+        "n_articles_b": 15,
+        "chars_a": 244523,
+        "chars_b": 8010,
+        "result": {
+          "presence": {
+            "x_a": 0,
+            "n_a": 84,
+            "x_b": 0,
+            "n_b": 15,
+            "p_a": 0.0,
+            "p_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 244523,
+            "x_b": 0,
+            "n_b": 8010,
+            "rate_a": 0.0,
+            "rate_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Coverage of paternity and parentage questions shifts from accepting family members' word to reporting DNA tests that revealed deception, indicating declining trust in relatives' claims.",
+        "topic": [
+          "paternity",
+          "DNA test",
+          "biological father",
+          "child support"
+        ],
+        "lexicon_early": [
+          "took his word for it",
+          "assumed the child was his",
+          "trusted her account",
+          "the family accepted"
+        ],
+        "lexicon_late": [
+          "DNA test revealed",
+          "not the biological father",
+          "paternity fraud",
+          "the test showed he was not related"
+        ],
+        "direction": "A",
+        "tested": true,
+        "n_articles_a": 131,
+        "n_articles_b": 40,
+        "chars_a": 165255,
+        "chars_b": 23177,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 131,
+                "x_b": 0,
+                "n_b": 40,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 1,
+                "n_a": 131,
+                "x_b": 0,
+                "n_b": 40,
+                "p_a": 0.007634,
+                "p_b": 0.0,
+                "p_value": 0.5794407375601667,
+                "observed": "decrease"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 1,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 165255,
+                "x_b": 0,
+                "n_b": 23177,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 1,
+                "n_a": 165255,
+                "x_b": 0,
+                "n_b": 23177,
+                "rate_a": 0.6051,
+                "rate_b": 0.0,
+                "p_value": 0.5794407375601667,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 1,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Narratives move from estrangement toward reconciliation in family stories, indicating growing trust and willingness to restore relationships.",
+        "lexicon_early": [
+          "no contact with his father",
+          "cut ties with her sister",
+          "has not spoken to his brother",
+          "refused to see his mother"
+        ],
+        "lexicon_late": [
+          "reconciled with his father",
+          "reunited with her sister",
+          "made peace with his brother",
+          "reconnected with his mother"
+        ],
+        "direction": "B",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 160430,
+                "x_b": 0,
+                "n_b": 92647,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 160430,
+                "x_b": 0,
+                "n_b": 92647,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 0,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 117867391,
+                "x_b": 0,
+                "n_b": 42627467,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 117867391,
+                "x_b": 0,
+                "n_b": 42627467,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 0,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Child placement with relatives (kinship care) becomes more common in coverage, reflecting greater willingness to entrust children fully to family members.",
+        "topic": [
+          "kinship care",
+          "foster care",
+          "child welfare",
+          "relative placement"
+        ],
+        "lexicon": [
+          "placed with her grandmother",
+          "raised by an aunt",
+          "kinship placement",
+          "living with their great-aunt",
+          "the children went to live with relatives"
+        ],
+        "direction": "B",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 129,
+        "n_articles_b": 32,
+        "chars_a": 215179,
+        "chars_b": 17389,
+        "result": {
+          "presence": {
+            "x_a": 0,
+            "n_a": 129,
+            "x_b": 0,
+            "n_b": 32,
+            "p_a": 0.0,
+            "p_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 215179,
+            "x_b": 0,
+            "n_b": 17389,
+            "rate_a": 0.0,
+            "rate_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "D060",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of women's barriers in male-dominated fields rises between 2006 and 2011, signaling growing public attention to gender equality in education and careers, which would move opinion toward disagreeing that a degree matters more for boys.",
+        "lexicon": [
+          "glass ceiling",
+          "leaky pipeline",
+          "women in STEM",
+          "female engineers",
+          "women physicists"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 15,
+            "n_a": 160430,
+            "x_b": 11,
+            "n_b": 92647,
+            "p_a": 9.3e-05,
+            "p_b": 0.000119,
+            "p_value": 0.5463053834613052,
+            "observed": "increase",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 17,
+            "n_a": 117867391,
+            "x_b": 12,
+            "n_b": 42627467,
+            "rate_a": 0.0144,
+            "rate_b": 0.0282,
+            "p_value": 0.5463053834613052,
+            "observed": "increase",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "As college costs and student debt become a dominant household concern, coverage increasingly discusses sending sons to trade or vocational routes or prioritizing a son's education. This would reflect more agreement that a university education matters more for boys.",
+        "topic": [
+          "college tuition",
+          "student loans",
+          "financial aid"
+        ],
+        "lexicon": [
+          "send the boy to college",
+          "educate the sons first",
+          "trade school instead",
+          "vocational training for boys"
+        ],
+        "direction": "B",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 109,
+        "n_articles_b": 99,
+        "chars_a": 230841,
+        "chars_b": 50651,
+        "result": {
+          "presence": {
+            "x_a": 0,
+            "n_a": 109,
+            "x_b": 0,
+            "n_b": 99,
+            "p_a": 0.0,
+            "p_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 230841,
+            "x_b": 0,
+            "n_b": 50651,
+            "rate_a": 0.0,
+            "rate_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Framing shifts from the older language of women's liberation toward post-feminist and third-wave vocabulary, reflecting a change in how gender roles are discussed and a move toward more egalitarian attitudes (Direction A).",
+        "lexicon_early": [
+          "women's liberation",
+          "women's lib",
+          "bra-burning"
+        ],
+        "lexicon_late": [
+          "post-feminist",
+          "third-wave",
+          "Girl Power"
+        ],
+        "direction": "A",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 8,
+                "n_a": 160430,
+                "x_b": 0,
+                "n_b": 92647,
+                "p_a": 5e-05,
+                "p_b": 0.0,
+                "p_value": 0.0315997648540165,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 2,
+                "n_a": 160430,
+                "x_b": 2,
+                "n_b": 92647,
+                "p_a": 1.2e-05,
+                "p_b": 2.2e-05,
+                "p_value": 0.5782187711427778,
+                "observed": "increase"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 8,
+              "n_a": 10,
+              "x_b": 0,
+              "n_b": 2,
+              "p_a": 0.8,
+              "p_b": 0.0,
+              "p_value": 0.02845973691631043,
+              "observed": "decrease",
+              "verdict": "confirm"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 21,
+                "n_a": 117867391,
+                "x_b": 0,
+                "n_b": 42627467,
+                "rate_a": 0.0178,
+                "rate_b": 0.0,
+                "p_value": 0.0315997648540165,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 3,
+                "n_a": 117867391,
+                "x_b": 2,
+                "n_b": 42627467,
+                "rate_a": 0.0025,
+                "rate_b": 0.0047,
+                "p_value": 0.5782187711427778,
+                "observed": "increase",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 21,
+              "n_a": 24,
+              "x_b": 0,
+              "n_b": 2,
+              "p_a": 0.875,
+              "p_b": 0.0,
+              "p_value": 0.0025560949482295037,
+              "observed": "decrease",
+              "verdict": "confirm"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of marriage and couples, language that subordinates the wife's career to the husband's gives way to language describing shared earning and careers. This signals a shift toward egalitarian norms for both sons and daughters (Direction A).",
+        "topic": [
+          "marriage",
+          "wedding",
+          "spouse"
+        ],
+        "lexicon_early": [
+          "husband's career takes priority",
+          "wife follows husband"
+        ],
+        "lexicon_late": [
+          "two-career couples",
+          "both spouses work",
+          "dual-career couples"
+        ],
+        "direction": "A",
+        "tested": true,
+        "n_articles_a": 1757,
+        "n_articles_b": 1096,
+        "chars_a": 6990913,
+        "chars_b": 557968,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 1757,
+                "x_b": 0,
+                "n_b": 1096,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 1757,
+                "x_b": 0,
+                "n_b": 1096,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 0,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 6990913,
+                "x_b": 0,
+                "n_b": 557968,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 6990913,
+                "x_b": 0,
+                "n_b": 557968,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 0,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Professional schools are increasingly described as having a female majority, and this 'feminization' framing grows over time. Greater public awareness that women now outnumber men in these programs would move opinion toward disagreeing that boys need education more (Direction A).",
+        "topic": [
+          "law schools",
+          "medical schools",
+          "MBA programs"
+        ],
+        "lexicon": [
+          "female majority",
+          "more women than men enrolled",
+          "feminization of medicine",
+          "feminization of law"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 31,
+        "n_articles_b": 25,
+        "chars_a": 32049,
+        "chars_b": 9562,
+        "result": {
+          "presence": {
+            "x_a": 0,
+            "n_a": 31,
+            "x_b": 0,
+            "n_b": 25,
+            "p_a": 0.0,
+            "p_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 32049,
+            "x_b": 0,
+            "n_b": 9562,
+            "rate_a": 0.0,
+            "rate_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E023",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of first-time and young voter mobilization rose between 2006 and 2011, reflecting a surge of new political engagement tied to the 2008 cycle and its aftermath. This should push the average answer toward 'Very interested'.",
+        "lexicon": [
+          "Rock the Vote",
+          "Obama generation",
+          "first-time voter",
+          "new voter registration"
+        ],
+        "direction": "B",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 5,
+            "n_a": 160430,
+            "x_b": 0,
+            "n_b": 92647,
+            "p_a": 3.1e-05,
+            "p_b": 0.0,
+            "p_value": 0.08926847645027869,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 6,
+            "n_a": 117867391,
+            "x_b": 0,
+            "n_b": 42627467,
+            "rate_a": 0.0051,
+            "rate_b": 0.0,
+            "p_value": 0.08926847645027869,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of cable news and online political outlets shows declining audiences over 2006-2011, consistent with fewer people actively following politics. This should push the average answer toward 'Not at all interested'.",
+        "topic": [
+          "cable news",
+          "political blogs",
+          "talk radio"
+        ],
+        "lexicon": [
+          "ratings for cable news fell",
+          "audience shrank",
+          "viewership declined"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 69,
+        "n_articles_b": 50,
+        "chars_a": 151770,
+        "chars_b": 23870,
+        "result": {
+          "presence": {
+            "x_a": 0,
+            "n_a": 69,
+            "x_b": 0,
+            "n_b": 50,
+            "p_a": 0.0,
+            "p_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 151770,
+            "x_b": 0,
+            "n_b": 23870,
+            "rate_a": 0.0,
+            "rate_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Descriptions of public attention to politics moved from indifference toward crowded, high-attendance participation between the earlier and later periods. This should indicate movement toward 'Very interested'.",
+        "lexicon_early": [
+          "bored by politics",
+          "skipped the news",
+          "ignored campaign coverage"
+        ],
+        "lexicon_late": [
+          "standing-room only",
+          "crowds overflowed",
+          "surge of interest",
+          "people lined up to attend"
+        ],
+        "direction": "B",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 160430,
+                "x_b": 0,
+                "n_b": 92647,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 4,
+                "n_a": 160430,
+                "x_b": 4,
+                "n_b": 92647,
+                "p_a": 2.5e-05,
+                "p_b": 4.3e-05,
+                "p_value": 0.4316960997094439,
+                "observed": "increase"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 4,
+              "x_b": 0,
+              "n_b": 4,
+              "p_a": 0.0,
+              "p_b": 0.0,
+              "p_value": 1.0,
+              "observed": "decrease",
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 117867391,
+                "x_b": 0,
+                "n_b": 42627467,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 6,
+                "n_a": 117867391,
+                "x_b": 5,
+                "n_b": 42627467,
+                "rate_a": 0.0051,
+                "rate_b": 0.0117,
+                "p_value": 0.4316960997094439,
+                "observed": "increase",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 6,
+              "x_b": 0,
+              "n_b": 5,
+              "p_a": 0.0,
+              "p_b": 0.0,
+              "p_value": 1.0,
+              "observed": "decrease",
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Online political activity shifted from low visibility to mass sharing over the period, suggesting rising interest in political content. This should indicate movement toward 'Very interested'.",
+        "topic": [
+          "political websites",
+          "online petitions",
+          "Twitter"
+        ],
+        "lexicon_early": [
+          "few visitors",
+          "barely read",
+          "hardly anyone signed"
+        ],
+        "lexicon_late": [
+          "went viral",
+          "flooded inboxes",
+          "millions signed"
+        ],
+        "direction": "B",
+        "tested": true,
+        "n_articles_a": 17,
+        "n_articles_b": 849,
+        "chars_a": 21650,
+        "chars_b": 443130,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 17,
+                "x_b": 0,
+                "n_b": 849,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 17,
+                "x_b": 0,
+                "n_b": 849,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 0,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 21650,
+                "x_b": 0,
+                "n_b": 443130,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 21650,
+                "x_b": 0,
+                "n_b": 443130,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 0,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Expressions of personal disinterest in politics as a waste of time became more common between 2006 and 2011, indicating a shift toward 'Not at all interested'.",
+        "lexicon": [
+          "not interested in politics",
+          "don't follow politics",
+          "politics is a waste of time"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 0,
+            "n_a": 160430,
+            "x_b": 0,
+            "n_b": 92647,
+            "p_a": 0.0,
+            "p_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 117867391,
+            "x_b": 0,
+            "n_b": 42627467,
+            "rate_a": 0.0,
+            "rate_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E217",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of everyday consumer technology gadgets that promise convenience, rising in 2006-2011, signals a more favorable public view of technology making daily life easier (Direction A).",
+        "lexicon": [
+          "HDTV",
+          "Bluetooth",
+          "touchscreen",
+          "Roomba",
+          "e-reader"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 46,
+            "n_a": 160430,
+            "x_b": 67,
+            "n_b": 92647,
+            "p_a": 0.000287,
+            "p_b": 0.000723,
+            "p_value": 5.538827523299261e-07,
+            "observed": "increase",
+            "verdict": "confirm"
+          },
+          "chars": {
+            "x_a": 79,
+            "n_a": 117867391,
+            "x_b": 98,
+            "n_b": 42627467,
+            "rate_a": 0.067,
+            "rate_b": 0.2299,
+            "p_value": 5.538827523299261e-07,
+            "observed": "increase",
+            "significance_source": "presence",
+            "verdict": "confirm"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Coverage shifting from 'wonder drug' language toward drug-resistant superbug language between the mid-2000s and 2011 signals growing doubt that medical science is making life healthier (Direction B).",
+        "lexicon_early": [
+          "wonder drug",
+          "miracle cure",
+          "magic bullet",
+          "panacea"
+        ],
+        "lexicon_late": [
+          "superbug",
+          "drug-resistant",
+          "MRSA",
+          "C. difficile"
+        ],
+        "direction": "B",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 18,
+                "n_a": 160430,
+                "x_b": 9,
+                "n_b": 92647,
+                "p_a": 0.000112,
+                "p_b": 9.7e-05,
+                "p_value": 0.7238923986799188,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 8,
+                "n_a": 160430,
+                "x_b": 7,
+                "n_b": 92647,
+                "p_a": 5e-05,
+                "p_b": 7.6e-05,
+                "p_value": 0.4186920960722085,
+                "observed": "increase"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 18,
+              "n_a": 26,
+              "x_b": 9,
+              "n_b": 16,
+              "p_a": 0.692308,
+              "p_b": 0.5625,
+              "p_value": 0.393882360780335,
+              "observed": "decrease",
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 24,
+                "n_a": 117867391,
+                "x_b": 9,
+                "n_b": 42627467,
+                "rate_a": 0.0204,
+                "rate_b": 0.0211,
+                "p_value": 0.7238923986799188,
+                "observed": "increase",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 12,
+                "n_a": 117867391,
+                "x_b": 12,
+                "n_b": 42627467,
+                "rate_a": 0.0102,
+                "rate_b": 0.0282,
+                "p_value": 0.4186920960722085,
+                "observed": "increase",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 24,
+              "n_a": 36,
+              "x_b": 9,
+              "n_b": 21,
+              "p_a": 0.666667,
+              "p_b": 0.428571,
+              "p_value": 0.07904565667515229,
+              "observed": "decrease",
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Growing NYT coverage of space exploration and discoveries reflects rising public enthusiasm for science as a beneficial enterprise, pushing agreement with the statement upward (Direction A).",
+        "topic": [
+          "space",
+          "NASA",
+          "astronomy",
+          "telescope"
+        ],
+        "lexicon": [
+          "Hubble",
+          "Mars rover",
+          "exoplanet",
+          "Kepler telescope",
+          "spacewalk"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 3250,
+        "n_articles_b": 1472,
+        "chars_a": 10891011,
+        "chars_b": 818318,
+        "result": {
+          "presence": {
+            "x_a": 76,
+            "n_a": 3250,
+            "x_b": 11,
+            "n_b": 1472,
+            "p_a": 0.023385,
+            "p_b": 0.007473,
+            "p_value": 0.000165810186925075,
+            "observed": "decrease",
+            "verdict": "deny"
+          },
+          "chars": {
+            "x_a": 150,
+            "n_a": 10891011,
+            "x_b": 16,
+            "n_b": 818318,
+            "rate_a": 1.3773,
+            "rate_b": 1.9552,
+            "p_value": 0.000165810186925075,
+            "observed": "increase",
+            "significance_source": "presence",
+            "verdict": "confirm"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Rising coverage of online security threats in the internet and personal-data context signals technology being framed as a source of harm rather than convenience, pushing agreement downward (Direction B).",
+        "topic": [
+          "internet",
+          "online",
+          "computer",
+          "personal data"
+        ],
+        "lexicon": [
+          "data breach",
+          "identity theft",
+          "hackers",
+          "spyware",
+          "phishing"
+        ],
+        "direction": "B",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 5402,
+        "n_articles_b": 3251,
+        "chars_a": 10695075,
+        "chars_b": 1635938,
+        "result": {
+          "presence": {
+            "x_a": 57,
+            "n_a": 5402,
+            "x_b": 72,
+            "n_b": 3251,
+            "p_a": 0.010552,
+            "p_b": 0.022147,
+            "p_value": 1.6281241996818352e-05,
+            "observed": "increase",
+            "verdict": "confirm"
+          },
+          "chars": {
+            "x_a": 95,
+            "n_a": 10695075,
+            "x_b": 117,
+            "n_b": 1635938,
+            "rate_a": 0.8883,
+            "rate_b": 7.1519,
+            "p_value": 1.6281241996818352e-05,
+            "observed": "increase",
+            "significance_source": "presence",
+            "verdict": "confirm"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In agriculture coverage, a shift from framing farming around pesticides and chemicals toward framing it around high-yield and engineered seed signals greater public acceptance of science improving food and life (Direction A).",
+        "topic": [
+          "farm",
+          "crop",
+          "harvest"
+        ],
+        "lexicon_early": [
+          "organic",
+          "pesticide",
+          "chemical"
+        ],
+        "lexicon_late": [
+          "drought-resistant",
+          "gene-edited",
+          "high-yield",
+          "hybrid seed"
+        ],
+        "direction": "A",
+        "tested": true,
+        "n_articles_a": 2295,
+        "n_articles_b": 1287,
+        "chars_a": 9307832,
+        "chars_b": 668827,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 105,
+                "n_a": 2295,
+                "x_b": 44,
+                "n_b": 1287,
+                "p_a": 0.045752,
+                "p_b": 0.034188,
+                "p_value": 0.0963015692089133,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 2295,
+                "x_b": 2,
+                "n_b": 1287,
+                "p_a": 0.0,
+                "p_b": 0.001554,
+                "p_value": 0.05888810521984578,
+                "observed": "increase"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 105,
+              "n_a": 105,
+              "x_b": 44,
+              "n_b": 46,
+              "p_a": 1.0,
+              "p_b": 0.956522,
+              "p_value": 0.0314818057304338,
+              "observed": "decrease",
+              "verdict": "confirm"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 218,
+                "n_a": 9307832,
+                "x_b": 70,
+                "n_b": 668827,
+                "rate_a": 2.3421,
+                "rate_b": 10.4661,
+                "p_value": 0.0963015692089133,
+                "observed": "increase",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 9307832,
+                "x_b": 2,
+                "n_b": 668827,
+                "rate_a": 0.0,
+                "rate_b": 0.299,
+                "p_value": 0.05888810521984578,
+                "observed": "increase",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 218,
+              "n_a": 218,
+              "x_b": 70,
+              "n_b": 72,
+              "p_a": 1.0,
+              "p_b": 0.972222,
+              "p_value": 0.013536498926434826,
+              "observed": "decrease",
+              "verdict": "confirm"
+            }
+          }
+        },
+        "round": 4
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "F114A",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "As the Great Recession deepened, NYT coverage increasingly framed taking more from the system as a matter of survival, so the vocabulary of necessity and desperation rises, pushing attitudes toward 'Always justifiable'.",
+        "lexicon": [
+          "desperate measures",
+          "no other choice",
+          "do what you have to",
+          "survival mode",
+          "had no choice but"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 22,
+            "n_a": 160430,
+            "x_b": 6,
+            "n_b": 92647,
+            "p_a": 0.000137,
+            "p_b": 6.5e-05,
+            "p_value": 0.0954201414653486,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 22,
+            "n_a": 117867391,
+            "x_b": 6,
+            "n_b": 42627467,
+            "rate_a": 0.0187,
+            "rate_b": 0.0141,
+            "p_value": 0.0954201414653486,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of refundable tax credits drew heavier scrutiny of phony claims after 2006, so condemnation language about fraudulent claims for these credits should rise, pushing attitudes toward 'Never justifiable'.",
+        "topic": [
+          "Earned Income Tax Credit",
+          "child tax credit",
+          "tax refund fraud"
+        ],
+        "lexicon": [
+          "phony dependents",
+          "fraudulent refund",
+          "identity theft refund",
+          "tax cheats",
+          "bogus claims"
+        ],
+        "direction": "B",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 9,
+        "n_articles_b": 0,
+        "chars_a": 122130,
+        "chars_b": 0,
+        "result": {
+          "presence": {
+            "x_a": 0,
+            "n_a": 9,
+            "x_b": 0,
+            "n_b": 0,
+            "p_a": null,
+            "p_b": null,
+            "p_value": null,
+            "observed": null,
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 122130,
+            "x_b": 0,
+            "n_b": 0,
+            "rate_a": 0.0,
+            "rate_b": 0.0,
+            "p_value": null,
+            "observed": null,
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Coverage shifted from labeling benefit claimants as scammers or deadbeats toward describing them as victims of bad luck, so sympathetic framing of people who take more than they should rises, pushing attitudes toward 'Always justifiable'.",
+        "lexicon_early": [
+          "deadbeat",
+          "welfare queen",
+          "sponger",
+          "scammer",
+          "freeloading"
+        ],
+        "lexicon_late": [
+          "through no fault of their own",
+          "bad luck",
+          "lost everything",
+          "unlucky break",
+          "fell on hard times"
+        ],
+        "direction": "A",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 17,
+                "n_a": 160430,
+                "x_b": 9,
+                "n_b": 92647,
+                "p_a": 0.000106,
+                "p_b": 9.7e-05,
+                "p_value": 0.8329276584064416,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 39,
+                "n_a": 160430,
+                "x_b": 13,
+                "n_b": 92647,
+                "p_a": 0.000243,
+                "p_b": 0.00014,
+                "p_value": 0.08224143427423725,
+                "observed": "decrease"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 17,
+              "n_a": 56,
+              "x_b": 9,
+              "n_b": 22,
+              "p_a": 0.303571,
+              "p_b": 0.409091,
+              "p_value": 0.3736783079498951,
+              "observed": "increase",
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 18,
+                "n_a": 117867391,
+                "x_b": 9,
+                "n_b": 42627467,
+                "rate_a": 0.0153,
+                "rate_b": 0.0211,
+                "p_value": 0.8329276584064416,
+                "observed": "increase",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 53,
+                "n_a": 117867391,
+                "x_b": 15,
+                "n_b": 42627467,
+                "rate_a": 0.045,
+                "rate_b": 0.0352,
+                "p_value": 0.08224143427423725,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 18,
+              "n_a": 71,
+              "x_b": 9,
+              "n_b": 24,
+              "p_a": 0.253521,
+              "p_b": 0.375,
+              "p_value": 0.25400618751725745,
+              "observed": "increase",
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Within Social Security coverage, language treating benefits as earned and owed gave way to language about overpayments and ineligible recipients, so condemnation of improper claims grows, pushing attitudes toward 'Never justifiable'.",
+        "topic": [
+          "Social Security",
+          "retirement benefits",
+          "survivor benefits"
+        ],
+        "lexicon_early": [
+          "earned benefits",
+          "paid into",
+          "owed to seniors",
+          "retirement security"
+        ],
+        "lexicon_late": [
+          "overpayments",
+          "ineligible recipients",
+          "benefit recovery",
+          "improper enrollment",
+          "identity theft benefits"
+        ],
+        "direction": "B",
+        "tested": true,
+        "n_articles_a": 174,
+        "n_articles_b": 151,
+        "chars_a": 433856,
+        "chars_b": 74619,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 1,
+                "n_a": 174,
+                "x_b": 0,
+                "n_b": 151,
+                "p_a": 0.005747,
+                "p_b": 0.0,
+                "p_value": 0.35081843637389465,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 174,
+                "x_b": 0,
+                "n_b": 151,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 1,
+              "n_a": 1,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 2,
+                "n_a": 433856,
+                "x_b": 0,
+                "n_b": 74619,
+                "rate_a": 0.461,
+                "rate_b": 0.0,
+                "p_value": 0.35081843637389465,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 433856,
+                "x_b": 0,
+                "n_b": 74619,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 2,
+              "n_a": 2,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Commentary increasingly treated gaming the system as ordinary and even clever behavior, so the vocabulary of loopholes and playing the angles rises, pushing attitudes toward 'Always justifiable'.",
+        "lexicon": [
+          "playing the system",
+          "gaming the system is normal",
+          "smart way to",
+          "take what you can",
+          "angle"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 938,
+            "n_a": 160430,
+            "x_b": 434,
+            "n_b": 92647,
+            "p_a": 0.005847,
+            "p_b": 0.004684,
+            "p_value": 0.00012498172612041003,
+            "observed": "decrease",
+            "verdict": "deny"
+          },
+          "chars": {
+            "x_a": 1300,
+            "n_a": 117867391,
+            "x_b": 547,
+            "n_b": 42627467,
+            "rate_a": 1.1029,
+            "rate_b": 1.2832,
+            "p_value": 0.00012498172612041003,
+            "observed": "increase",
+            "significance_source": "presence",
+            "verdict": "confirm"
+          }
+        },
+        "round": 4
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "F199",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of intimate violence increasingly uses the precise legal and clinical vocabulary of coercive control and strangulation, which signals a shift toward treating abuse of a spouse as serious and never acceptable (direction B).",
+        "lexicon": [
+          "coercive control",
+          "strangulation",
+          "non-fatal strangulation",
+          "economic abuse"
+        ],
+        "direction": "B",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 10,
+            "n_a": 160430,
+            "x_b": 2,
+            "n_b": 92647,
+            "p_a": 6.2e-05,
+            "p_b": 2.2e-05,
+            "p_value": 0.15156746890332018,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 15,
+            "n_a": 117867391,
+            "x_b": 2,
+            "n_b": 42627467,
+            "rate_a": 0.0127,
+            "rate_b": 0.0047,
+            "p_value": 0.15156746890332018,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Early coverage frames a husband's physical punishment of his wife as discipline or a private matter, while later coverage describes the same conduct as criminal assault or abuse. This shift points toward 'never justifiable' (direction B).",
+        "lexicon_early": [
+          "discipline his wife",
+          "hit her",
+          "spank",
+          "correct his wife"
+        ],
+        "lexicon_late": [
+          "criminal assault",
+          "charged with assault",
+          "abuser",
+          "strangulation"
+        ],
+        "direction": "B",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 33,
+                "n_a": 160430,
+                "x_b": 16,
+                "n_b": 92647,
+                "p_a": 0.000206,
+                "p_b": 0.000173,
+                "p_value": 0.5654425821865678,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 79,
+                "n_a": 160430,
+                "x_b": 20,
+                "n_b": 92647,
+                "p_a": 0.000492,
+                "p_b": 0.000216,
+                "p_value": 0.000700814631701796,
+                "observed": "decrease"
+              },
+              "verdict": "deny"
+            },
+            "dominance": {
+              "x_a": 33,
+              "n_a": 112,
+              "x_b": 16,
+              "n_b": 36,
+              "p_a": 0.294643,
+              "p_b": 0.444444,
+              "p_value": 0.09661955498722397,
+              "observed": "increase",
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 42,
+                "n_a": 117867391,
+                "x_b": 21,
+                "n_b": 42627467,
+                "rate_a": 0.0356,
+                "rate_b": 0.0493,
+                "p_value": 0.5654425821865678,
+                "observed": "increase",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 119,
+                "n_a": 117867391,
+                "x_b": 22,
+                "n_b": 42627467,
+                "rate_a": 0.101,
+                "rate_b": 0.0516,
+                "p_value": 0.000700814631701796,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "verdict": "deny"
+            },
+            "dominance": {
+              "x_a": 42,
+              "n_a": 161,
+              "x_b": 21,
+              "n_b": 43,
+              "p_a": 0.26087,
+              "p_b": 0.488372,
+              "p_value": 0.004123044582867719,
+              "observed": "increase",
+              "verdict": "deny"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of police and sheriff responses to domestic calls increasingly mentions mandatory arrest and primary-aggressor rules. These show public institutions treating spousal beating as an offense that cannot be excused, which fits direction B.",
+        "topic": [
+          "sheriff",
+          "police officers",
+          "deputies",
+          "police department"
+        ],
+        "lexicon": [
+          "mandatory arrest",
+          "primary aggressor",
+          "domestic disturbance call",
+          "domestic violence call"
+        ],
+        "direction": "B",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 1033,
+        "n_articles_b": 578,
+        "chars_a": 2087043,
+        "chars_b": 320425,
+        "result": {
+          "presence": {
+            "x_a": 0,
+            "n_a": 1033,
+            "x_b": 0,
+            "n_b": 578,
+            "p_a": 0.0,
+            "p_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 2087043,
+            "x_b": 0,
+            "n_b": 320425,
+            "rate_a": 0.0,
+            "rate_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of immigrant and religious communities, earlier articles describe wife-beating as a matter of tradition, honor, or family authority. Later articles emphasize criminal liability and state intervention. This shift points toward 'never justifiable' (direction B).",
+        "topic": [
+          "immigrant community",
+          "mosque",
+          "Hasidic",
+          "Orthodox community",
+          "diaspora"
+        ],
+        "lexicon_early": [
+          "family honor",
+          "cultural practice",
+          "husband's authority",
+          "family discipline"
+        ],
+        "lexicon_late": [
+          "prosecuted",
+          "child protective services",
+          "state intervention",
+          "criminal charges"
+        ],
+        "direction": "B",
+        "tested": true,
+        "n_articles_a": 301,
+        "n_articles_b": 115,
+        "chars_a": 1236489,
+        "chars_b": 63259,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 301,
+                "x_b": 0,
+                "n_b": 115,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 4,
+                "n_a": 301,
+                "x_b": 0,
+                "n_b": 115,
+                "p_a": 0.013289,
+                "p_b": 0.0,
+                "p_value": 0.2141604581021821,
+                "observed": "decrease"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 4,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 1236489,
+                "x_b": 0,
+                "n_b": 63259,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 6,
+                "n_a": 1236489,
+                "x_b": 0,
+                "n_b": 63259,
+                "rate_a": 0.4852,
+                "rate_b": 0.0,
+                "p_value": 0.2141604581021821,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 6,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Victim-blaming justifications for spousal violence, such as 'provoked' and 'asked for it,' appear less often over time. A decline in these phrases indicates a movement away from justifying the beating of a wife (direction B).",
+        "lexicon": [
+          "provoked him",
+          "asked for it",
+          "she deserved it",
+          "brought it on herself"
+        ],
+        "direction": "B",
+        "expected_change": "decrease",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 10,
+            "n_a": 160430,
+            "x_b": 2,
+            "n_b": 92647,
+            "p_a": 6.2e-05,
+            "p_b": 2.2e-05,
+            "p_value": 0.15156746890332018,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 11,
+            "n_a": 117867391,
+            "x_b": 2,
+            "n_b": 42627467,
+            "rate_a": 0.0093,
+            "rate_b": 0.0047,
+            "p_value": 0.15156746890332018,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "G007_33_B",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "During the 2008-2011 recession, households increasingly leaned on relatives and close friends for shelter and money, so coverage of people sharing homes and resources should rise, signaling more trust in people one knows personally.",
+        "lexicon": [
+          "doubled up",
+          "moved in with my parents",
+          "couch surfing",
+          "bunking with",
+          "pooled resources"
+        ],
+        "direction": "B",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 0,
+            "n_a": 160430,
+            "x_b": 2,
+            "n_b": 92647,
+            "p_a": 0.0,
+            "p_b": 2.2e-05,
+            "p_value": 0.06274571857856648,
+            "observed": "increase",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 117867391,
+            "x_b": 2,
+            "n_b": 42627467,
+            "rate_a": 0.0,
+            "rate_b": 0.0047,
+            "p_value": 0.06274571857856648,
+            "observed": "increase",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Marital and partner relationships should show rising distrust in 2006-2011 coverage, with more references to prenuptial protections and infidelity disputes.",
+        "topic": [
+          "marriage",
+          "divorce",
+          "spouse",
+          "husband and wife"
+        ],
+        "lexicon": [
+          "prenuptial agreement",
+          "cheating spouse",
+          "filed for divorce",
+          "infidelity",
+          "hid assets"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 1596,
+        "n_articles_b": 865,
+        "chars_a": 6302587,
+        "chars_b": 458266,
+        "result": {
+          "presence": {
+            "x_a": 29,
+            "n_a": 1596,
+            "x_b": 8,
+            "n_b": 865,
+            "p_a": 0.01817,
+            "p_b": 0.009249,
+            "p_value": 0.08247949529764309,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 40,
+            "n_a": 6302587,
+            "x_b": 10,
+            "n_b": 458266,
+            "rate_a": 0.6347,
+            "rate_b": 2.1821,
+            "p_value": 0.08247949529764309,
+            "observed": "increase",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Early-period coverage of close personal ties should describe openness and being trusted with things, while late-period coverage should describe secrecy and suspicion within personal relationships, indicating a shift toward distrust of known people.",
+        "lexicon_early": [
+          "open book",
+          "trusted with",
+          "no secrets",
+          "give them the keys"
+        ],
+        "lexicon_late": [
+          "trust issues",
+          "keeping secrets",
+          "behind my back",
+          "two-faced"
+        ],
+        "direction": "A",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 23,
+                "n_a": 160430,
+                "x_b": 11,
+                "n_b": 92647,
+                "p_a": 0.000143,
+                "p_b": 0.000119,
+                "p_value": 0.6064832099759365,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 11,
+                "n_a": 160430,
+                "x_b": 6,
+                "n_b": 92647,
+                "p_a": 6.9e-05,
+                "p_b": 6.5e-05,
+                "p_value": 0.910445063720901,
+                "observed": "decrease"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 23,
+              "n_a": 34,
+              "x_b": 11,
+              "n_b": 17,
+              "p_a": 0.676471,
+              "p_b": 0.647059,
+              "p_value": 0.8336348830246822,
+              "observed": "decrease",
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 25,
+                "n_a": 117867391,
+                "x_b": 14,
+                "n_b": 42627467,
+                "rate_a": 0.0212,
+                "rate_b": 0.0328,
+                "p_value": 0.6064832099759365,
+                "observed": "increase",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 14,
+                "n_a": 117867391,
+                "x_b": 7,
+                "n_b": 42627467,
+                "rate_a": 0.0119,
+                "rate_b": 0.0164,
+                "p_value": 0.910445063720901,
+                "observed": "increase",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 25,
+              "n_a": 39,
+              "x_b": 14,
+              "n_b": 21,
+              "p_a": 0.641026,
+              "p_b": 0.666667,
+              "p_value": 0.8425642863051734,
+              "observed": "increase",
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In community groups such as carpools, church groups and book clubs, early coverage should emphasize strangers-turned-acquaintances keeping their distance, while late coverage should emphasize members swapping favors and watching each other's children, indicating increased trust among known people.",
+        "topic": [
+          "carpool",
+          "church group",
+          "book club",
+          "parents' co-op"
+        ],
+        "lexicon_early": [
+          "keeping to myself",
+          "never met",
+          "kept my distance"
+        ],
+        "lexicon_late": [
+          "took turns driving",
+          "watched each other's kids",
+          "swapped favors",
+          "left a spare key"
+        ],
+        "direction": "B",
+        "tested": true,
+        "n_articles_a": 54,
+        "n_articles_b": 42,
+        "chars_a": 77272,
+        "chars_b": 23204,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 54,
+                "x_b": 0,
+                "n_b": 42,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 54,
+                "x_b": 0,
+                "n_b": 42,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 0,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 77272,
+                "x_b": 0,
+                "n_b": 23204,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 77272,
+                "x_b": 0,
+                "n_b": 23204,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 0,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Reports of personal financial betrayal within families and friendships, such as borrowing without asking or taking money from people one knows, should rise in 2006-2011, reflecting falling trust in intimate contacts.",
+        "lexicon": [
+          "embezzled from",
+          "pilfered",
+          "borrowed without asking",
+          "pawned his sister's",
+          "drained the joint account"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 13,
+            "n_a": 160430,
+            "x_b": 6,
+            "n_b": 92647,
+            "p_a": 8.1e-05,
+            "p_b": 6.5e-05,
+            "p_value": 0.6490477262442524,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 16,
+            "n_a": 117867391,
+            "x_b": 6,
+            "n_b": 42627467,
+            "rate_a": 0.0136,
+            "rate_b": 0.0141,
+            "p_value": 0.6490477262442524,
+            "observed": "increase",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "G026",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage naming specific immigrant nationalities in birthplace phrasing ('Haitian-born', 'Dominican-born') rises between 2006 and 2011, as reporting shifted from generic 'immigrants' to specific origin countries and mothers' origins became more visible.",
+        "lexicon": [
+          "Haitian-born",
+          "Dominican-born",
+          "Ecuadorian-born",
+          "Somali-born",
+          "Guatemalan-born"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 11,
+            "n_a": 160430,
+            "x_b": 0,
+            "n_b": 92647,
+            "p_a": 6.9e-05,
+            "p_b": 0.0,
+            "p_value": 0.011720376088544704,
+            "observed": "decrease",
+            "verdict": "deny"
+          },
+          "chars": {
+            "x_a": 17,
+            "n_a": 117867391,
+            "x_b": 0,
+            "n_b": 42627467,
+            "rate_a": 0.0144,
+            "rate_b": 0.0,
+            "p_value": 0.011720376088544704,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "deny"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of the 2010 Haiti earthquake and its aftermath increased references to Haitian mothers and Haitian immigrant families in the US, pushing the perceived share of immigrant mothers upward (Direction A).",
+        "topic": [
+          "Haiti earthquake",
+          "Haitian relief",
+          "Port-au-Prince"
+        ],
+        "lexicon": [
+          "Haitian mother",
+          "mother from Haiti",
+          "Haitian immigrant family",
+          "Haitian-American family"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 28,
+        "n_articles_b": 37,
+        "chars_a": 29157,
+        "chars_b": 19630,
+        "result": {
+          "presence": {
+            "x_a": 0,
+            "n_a": 28,
+            "x_b": 0,
+            "n_b": 37,
+            "p_a": 0.0,
+            "p_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 29157,
+            "x_b": 0,
+            "n_b": 19630,
+            "rate_a": 0.0,
+            "rate_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Descriptions of parents shifted from the framing of 'immigrant' or 'foreign-born' people toward 'American-born' and 'raised in America' framing between the periods, consistent with a move toward 'No' (Direction B).",
+        "lexicon_early": [
+          "immigrant",
+          "foreign-born",
+          "came from abroad"
+        ],
+        "lexicon_late": [
+          "American-born",
+          "raised in America",
+          "grew up in the United States"
+        ],
+        "direction": "B",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 1425,
+                "n_a": 160430,
+                "x_b": 423,
+                "n_b": 92647,
+                "p_a": 0.008882,
+                "p_b": 0.004566,
+                "p_value": 0.0,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 33,
+                "n_a": 160430,
+                "x_b": 26,
+                "n_b": 92647,
+                "p_a": 0.000206,
+                "p_b": 0.000281,
+                "p_value": 0.2342211845051072,
+                "observed": "increase"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 1425,
+              "n_a": 1458,
+              "x_b": 423,
+              "n_b": 449,
+              "p_a": 0.977366,
+              "p_b": 0.942094,
+              "p_value": 0.00016044220128286213,
+              "observed": "decrease",
+              "verdict": "confirm"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 2616,
+                "n_a": 117867391,
+                "x_b": 631,
+                "n_b": 42627467,
+                "rate_a": 2.2194,
+                "rate_b": 1.4803,
+                "p_value": 0.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 38,
+                "n_a": 117867391,
+                "x_b": 32,
+                "n_b": 42627467,
+                "rate_a": 0.0322,
+                "rate_b": 0.0751,
+                "p_value": 0.2342211845051072,
+                "observed": "increase",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 2616,
+              "n_a": 2654,
+              "x_b": 631,
+              "n_b": 663,
+              "p_a": 0.985682,
+              "p_b": 0.951735,
+              "p_value": 5.328789209890772e-08,
+              "observed": "decrease",
+              "verdict": "confirm"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In maternity and prenatal health reporting, coverage increasingly describes immigrant women giving birth (foreign-born mothers, immigrant women in labor) rather than native-born mothers, indicating a rise in immigrant mothers (Direction A).",
+        "topic": [
+          "prenatal care",
+          "maternity ward",
+          "obstetric",
+          "childbirth"
+        ],
+        "lexicon_early": [
+          "native-born mothers",
+          "American mothers",
+          "mothers in the United States"
+        ],
+        "lexicon_late": [
+          "foreign-born mothers",
+          "immigrant women giving birth",
+          "immigrant mothers in labor"
+        ],
+        "direction": "A",
+        "tested": true,
+        "n_articles_a": 105,
+        "n_articles_b": 33,
+        "chars_a": 1197681,
+        "chars_b": 16118,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 105,
+                "x_b": 0,
+                "n_b": 33,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 105,
+                "x_b": 0,
+                "n_b": 33,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 0,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 1197681,
+                "x_b": 0,
+                "n_b": 16118,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "late": {
+                "x_a": 0,
+                "n_a": 1197681,
+                "x_b": 0,
+                "n_b": 16118,
+                "rate_a": 0.0,
+                "rate_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease",
+                "significance_source": "presence"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 0,
+              "x_b": 0,
+              "n_b": 0,
+              "p_a": null,
+              "p_b": null,
+              "p_value": null,
+              "observed": null,
+              "verdict": "inconclusive"
+            }
+          }
+        },
+        "round": 4
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "The consumer boom in DNA ancestry testing (2007 onward) increased talk of deep American roots and maternal-line ancestry, so mentions of families settled in America for generations rise, moving answers toward 'No' (Direction B).",
+        "topic": [
+          "DNA ancestry test",
+          "23andMe",
+          "genetic genealogy"
+        ],
+        "lexicon": [
+          "American for generations",
+          "family has been in America since",
+          "maternal line",
+          "settled in America in the 1700s"
+        ],
+        "direction": "B",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 3,
+        "n_articles_b": 1,
+        "chars_a": 13546,
+        "chars_b": 459,
+        "result": {
+          "presence": {
+            "x_a": 0,
+            "n_a": 3,
+            "x_b": 0,
+            "n_b": 1,
+            "p_a": 0.0,
+            "p_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 13546,
+            "x_b": 0,
+            "n_b": 459,
+            "rate_a": 0.0,
+            "rate_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "significance_source": "presence",
+            "verdict": "inconclusive"
+          }
+        },
+        "round": 4
+      }
+    ]
+  }
+]

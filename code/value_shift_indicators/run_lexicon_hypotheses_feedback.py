@@ -118,7 +118,7 @@ def run_round(round_num, tied_questions, history, texts_a, texts_b, model, dry_r
         return
 
     res = run_llm(requests, model=model, temperature=1.0, max_tokens=MAX_TOKENS)
-    raw_out, n_ok, n_fail = [], 0, 0
+    raw_out, tested_out, n_ok, n_fail = [], [], 0, 0
     for rid, q in case_by_id.items():
         r = res[rid]
         if r["error"]:
@@ -136,10 +136,16 @@ def run_round(round_num, tied_questions, history, texts_a, texts_b, model, dry_r
         scored = [dict(score_hypothesis(h, texts_a, texts_b), round=round_num) for h in new_hyps]
         history[q].extend(scored)
         raw_out.append(dict(country="USA", question=q, hypotheses=new_hyps))
+        tested_out.append(dict(country="USA", question=q, hypotheses=scored))
     print(f"  round {round_num}: {n_ok} succeeded, {n_fail} failed")
 
     RESULTS.mkdir(exist_ok=True)
     (RESULTS / f"lexicon_hypotheses_feedback_round{round_num}.json").write_text(json.dumps(raw_out, indent=2))
+    # Always save the scored version too -- never leave scoring results only in memory. Without this,
+    # reconstructing per-round verdicts later means reloading the full NYT corpus and rescoring from
+    # scratch (which is exactly what happened the first time this script was run for real).
+    (RESULTS / f"lexicon_hypotheses_feedback_round{round_num}_tested.json").write_text(
+        json.dumps(tested_out, indent=2))
 
 
 def run(model, max_rounds, dry_run):
@@ -163,6 +169,10 @@ def run(model, max_rounds, dry_run):
             return
         tied = [q for q in tied if is_tied(history[q])]
         print(f"  -> {len(tied)} still tied after round {round_num}.")
+
+    # Full per-hypothesis cumulative history (every round, every field, every verdict) -- not just the
+    # tally -- so nothing needs reloading the NYT corpus and rescoring from scratch to inspect later.
+    (RESULTS / "lexicon_hypotheses_feedback_full_history.json").write_text(json.dumps(history, indent=2))
 
     final = []
     for q, hyps in history.items():
