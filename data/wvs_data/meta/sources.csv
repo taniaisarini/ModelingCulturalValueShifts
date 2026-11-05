@@ -1,0 +1,31 @@
+id,type,country,url,access,license,coverage_start,coverage_end
+gdp_wdi,indicator,US,https://api.worldbank.org/v2/country/USA/indicator/NY.GDP.MKTP.KD.ZG,public_api_no_key,CC-BY-4.0,2003,2023
+cpi_wdi,indicator,US,https://api.worldbank.org/v2/country/USA/indicator/FP.CPI.TOTL.ZG,public_api_no_key,CC-BY-4.0,2003,2023
+unemp_wdi,indicator,US,https://api.worldbank.org/v2/country/USA/indicator/SL.UEM.TOTL.ZS,public_api_no_key,CC-BY-4.0,2003,2023
+gdp_wdi,indicator,EG,https://api.worldbank.org/v2/country/EGY/indicator/NY.GDP.MKTP.KD.ZG,public_api_no_key,CC-BY-4.0,2003,2023
+cpi_wdi,indicator,EG,https://api.worldbank.org/v2/country/EGY/indicator/FP.CPI.TOTL.ZG,public_api_no_key,CC-BY-4.0,2003,2023
+unemp_wdi,indicator,EG,https://api.worldbank.org/v2/country/EGY/indicator/SL.UEM.TOTL.ZS,public_api_no_key,CC-BY-4.0,2003,2023
+gdp_wdi,indicator,UA,https://api.worldbank.org/v2/country/UKR/indicator/NY.GDP.MKTP.KD.ZG,public_api_no_key,CC-BY-4.0,2003,2023
+cpi_wdi,indicator,UA,https://api.worldbank.org/v2/country/UKR/indicator/FP.CPI.TOTL.ZG,public_api_no_key,CC-BY-4.0,2003,2023
+unemp_wdi,indicator,UA,https://api.worldbank.org/v2/country/UKR/indicator/SL.UEM.TOTL.ZS,public_api_no_key,CC-BY-4.0,2003,2021
+gdp_wdi,indicator,TH,https://api.worldbank.org/v2/country/THA/indicator/NY.GDP.MKTP.KD.ZG,public_api_no_key,CC-BY-4.0,2003,2023
+cpi_wdi,indicator,TH,https://api.worldbank.org/v2/country/THA/indicator/FP.CPI.TOTL.ZG,public_api_no_key,CC-BY-4.0,2003,2023
+unemp_wdi,indicator,TH,https://api.worldbank.org/v2/country/THA/indicator/SL.UEM.TOTL.ZS,public_api_no_key,CC-BY-4.0,2003,2023
+gdp_wdi,indicator,HK,https://api.worldbank.org/v2/country/HKG/indicator/NY.GDP.MKTP.KD.ZG,public_api_no_key,CC-BY-4.0,2003,2023
+cpi_wdi,indicator,HK,https://api.worldbank.org/v2/country/HKG/indicator/FP.CPI.TOTL.ZG,public_api_no_key,CC-BY-4.0,2003,2023
+unemp_wdi,indicator,HK,https://api.worldbank.org/v2/country/HKG/indicator/SL.UEM.TOTL.ZS,public_api_no_key,CC-BY-4.0,2003,2023
+gdp_wdi,indicator,UY,https://api.worldbank.org/v2/country/URY/indicator/NY.GDP.MKTP.KD.ZG,public_api_no_key,CC-BY-4.0,2003,2023
+cpi_wdi,indicator,UY,https://api.worldbank.org/v2/country/URY/indicator/FP.CPI.TOTL.ZG,public_api_no_key,CC-BY-4.0,2003,2023
+unemp_wdi,indicator,UY,https://api.worldbank.org/v2/country/URY/indicator/SL.UEM.TOTL.ZS,public_api_no_key,CC-BY-4.0,2003,2023
+cci_umich,indicator,US,https://fred.stlouisfed.org/graph/fredgraph.csv?id=UMCSENT,public_api_no_key,FRED redistribution of U. Michigan Surveys of Consumers (original UMich terms restrict direct redistribution; used FRED copy instead),2003,2023
+cci_nielsen_eg,indicator,EG,https://www.dailynewsegypt.com/?p=130080,news_republication,Nielsen Global Consumer Confidence Index figures as republished in Daily News Egypt / Amwal Al Ghad articles (no single primary Nielsen page located; original IDSC/ahram.org.eg coverage blocked by bot detection),2010,2016
+cci_idsc_eg,indicator,EG,https://www.egyptindependent.com/?p=2435843,news_republication,"Egyptian Cabinet IDSC monthly consumer confidence figures as republished in Egypt Independent / Daily News Egypt (ahram.org.eg, the IDSC's main English-language outlet, returns HTTP 403 to automated fetches)",2012,2014
+cci_infosapiens,indicator,UA,https://www.sapiens.com.ua/en/other-research,public_web,"Info Sapiens (GfK Ukraine before 2019) monthly consumer confidence press releases, publicly posted PDFs and an archive index page",2018,2023
+cci_utcc,indicator,TH,https://www.utcc.ac.th/utcc-consumer-confidence-index-sep-2026/,public_web,"UTCC Center for Economic and Business Forecasting monthly press releases (utcc.ac.th) plus Trading Economics summary stats and news republication (nationthailand.com, opendevelopmentmekong.net) for months without a located UTCC page",2003,2023
+cci_cuhk,indicator,HK,https://webarchive.lib.cuhk.edu.hk/20201208111228mp_/http://www.cuhk.edu.hk/hkiaps/qol/sources/EQOL/ReportSum_EQOL_Sep 2016.pdf,web_archive_mirror,"CUHK Centre for Quality of Life quarterly press-release PDFs; the live archive (webarchive.lib.cuhk.edu.hk) returns a bot-check page to automated fetches, so these nine values come from search-engine-indexed snippets of the PDFs, not an independently re-opened document -- flagged for the project owner to spot-check",2010,2018
+cci_cityu,indicator,HK,https://www.cityu.edu.hk/media/press-release/2019/10/08/hong-kong-consumer-confidence-index-drops-lowest-point,public_web,"CityU press releases for the Cross-strait, Hong Kong and Macao Consumer Confidence Index, Hong Kong sub-index; cityu.edu.hk pages render via JS and returned empty body text to direct fetches (retried after WebFetch quota reset, same result), so these three values come from search-engine-indexed quotes of the releases",2019,2021
+cci_ucu,indicator,UY,https://equipos.com.uy/noticias/Indice-de-Confianza-del-Consumidor--Junio-2023/154,public_web,"ICC Uruguay bimonthly press releases (equipos.com.uy) and one directly-fetched news article (montevideo.com.uy) for a 2022 value, Equipos Consultores / UCU Business School, University of Michigan methodology",2022,2023
+wiki_pageviews,indicator,HK,https://analytics.wikimedia.org/published/datasets/country_project_page_historical/,public_web,"Wikimedia Foundation, differentially-private release",2017-02,2023-02
+wiki_pageviews,indicator,UA,https://analytics.wikimedia.org/published/datasets/country_project_page_historical/,public_web,"Wikimedia Foundation, differentially-private release",2017-02,2023-02
+wiki_pageviews,indicator,US,https://analytics.wikimedia.org/published/datasets/country_project_page_historical/,public_web,"Wikimedia Foundation, differentially-private release",2017-02,2023-02
+wiki_pageviews,indicator,UY,https://analytics.wikimedia.org/published/datasets/country_project_page_historical/,public_web,"Wikimedia Foundation, differentially-private release",2017-02,2023-02
