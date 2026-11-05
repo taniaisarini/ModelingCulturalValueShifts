@@ -4,81 +4,80 @@
     "question": "F118",
     "hypotheses": [
       {
-        "type": "trend",
-        "hypothesis": "As public acceptance of homosexuality rose, New York Times coverage from 2006 to 2011 should show more frequent use of rights-and-recognition language such as same-sex marriage and marriage equality.",
+        "kind": "trend_general",
+        "hypothesis": "Across all coverage, mentions of 'LGBT' and 'gay rights' rose between 2006 and 2011 as public acceptance of homosexuality grew, which corresponds to Direction A.",
         "lexicon": [
-          "same-sex marriage",
-          "marriage equality",
-          "gay couples",
-          "gay rights"
+          "LGBT",
+          "gay rights",
+          "gay equality",
+          "civil rights for gays"
         ],
-        "topic": [],
         "direction": "A",
         "expected_change": "increase"
       },
       {
-        "type": "contrast",
-        "hypothesis": "Coverage should shift from older, more stigmatizing framing of homosexuality toward neutral or self-identifying terms as acceptance grew.",
-        "lexicon_early": [
-          "homosexual agenda",
-          "sodomy",
-          "homosexual conduct"
-        ],
-        "lexicon_late": [
+        "kind": "trend_topic",
+        "hypothesis": "Within coverage of same-sex marriage, religiously framed moral condemnation language such as 'sin' and 'abomination' declined between 2006 and 2011 as the debate shifted toward equality, which corresponds to Direction A.",
+        "topic": [
+          "same-sex marriage",
           "gay marriage",
-          "LGBT",
-          "gay community"
+          "Proposition 8"
         ],
-        "topic": [],
-        "direction": "A"
-      },
-      {
-        "type": "trend",
-        "hypothesis": "If opposition to homosexuality hardened, coverage of marriage debates should increasingly use traditionalist and defense-of-marriage framing.",
         "lexicon": [
-          "traditional marriage",
-          "defense of marriage",
-          "religious liberty",
-          "natural family"
-        ],
-        "topic": [],
-        "direction": "B",
-        "expected_change": "increase"
-      },
-      {
-        "type": "contrast",
-        "hypothesis": "Within military coverage, the debate should move from questions about gays serving openly toward concerns framed around religious conscience and traditional values if attitudes tightened.",
-        "lexicon_early": [
-          "don't ask, don't tell",
-          "gays in the military",
-          "open service"
-        ],
-        "lexicon_late": [
-          "religious conscience",
-          "traditional values",
-          "chaplains"
-        ],
-        "topic": [
-          "military",
-          "Pentagon"
-        ],
-        "direction": "B"
-      },
-      {
-        "type": "trend",
-        "hypothesis": "Within coverage of churches and religious leaders, condemnatory moral language should decline as acceptance of homosexuality increased.",
-        "lexicon": [
-          "sin",
           "sinful",
-          "biblical",
-          "condemn"
-        ],
-        "topic": [
-          "church",
-          "religious leaders"
+          "abomination",
+          "immoral",
+          "threat to the family"
         ],
         "direction": "A",
         "expected_change": "decrease"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Around 2006 coverage more often used the clinical-sounding term 'homosexuals', while by 2011 'gay people' and 'gay men and lesbians' had become more common, reflecting increasing acceptance, which corresponds to Direction A.",
+        "lexicon_early": [
+          "homosexuals",
+          "homosexual lifestyle",
+          "homosexual behavior"
+        ],
+        "lexicon_late": [
+          "gay people",
+          "gay men and lesbians",
+          "gay Americans"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Within military policy coverage, framing around banning homosexuals from service was gradually replaced by framing around gay service members and repeal, which corresponds to Direction A.",
+        "topic": [
+          "don't ask, don't tell",
+          "gays in the military",
+          "military service"
+        ],
+        "lexicon_early": [
+          "ban on homosexuals",
+          "homosexual conduct",
+          "exclude homosexuals"
+        ],
+        "lexicon_late": [
+          "gay service members",
+          "repeal",
+          "openly gay troops"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Across all coverage, references to gay people being open about their sexuality, such as 'coming out' and 'openly gay', increased from 2006 to 2011, consistent with growing social acceptance and Direction A.",
+        "lexicon": [
+          "coming out",
+          "openly gay",
+          "gay couples",
+          "gay pride"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
       }
     ]
   },
@@ -87,86 +86,88 @@
     "question": "A001",
     "hypotheses": [
       {
-        "type": "trend",
-        "hypothesis": "During the recession years, coverage of economic hardship increasingly describes families pooling resources, so phrases about living together and shared household support should rise in frequency, signaling family becoming more important.",
+        "kind": "trend_general",
+        "hypothesis": "Across all New York Times coverage, references to family-centered values such as 'family values' and 'family first' become more frequent between 2006 and 2011, consistent with family rising in perceived importance.",
         "lexicon": [
-          "moved back in with parents",
-          "multigenerational household",
-          "doubled up",
-          "relying on family",
-          "family budget"
-        ],
-        "topic": [
-          "recession"
+          "family values",
+          "family first",
+          "put family",
+          "family comes first"
         ],
         "direction": "B",
         "expected_change": "increase"
       },
       {
-        "type": "contrast",
-        "hypothesis": "Coverage shifts from moral language about family obligations toward language emphasizing individual choice and self-fulfillment, indicating family becoming less central to personal identity.",
-        "lexicon_early": [
-          "family values",
-          "traditional family",
-          "family obligations",
-          "raising children"
+        "kind": "trend_topic",
+        "hypothesis": "Within coverage of the recession and jobs, language emphasizing families bearing the burden and relying on each other increases between 2006 and 2011, reflecting greater emphasis on family support during economic hardship.",
+        "topic": [
+          "recession",
+          "unemployment",
+          "foreclosure",
+          "layoffs",
+          "economic downturn"
         ],
-        "lexicon_late": [
-          "personal choice",
-          "individual fulfillment",
-          "lifestyle choice",
-          "self-expression"
-        ],
-        "topic": [],
-        "direction": "A"
-      },
-      {
-        "type": "trend",
-        "hypothesis": "Marriage-related coverage increasingly drops references to traditional family structures as a defining social norm, so such phrases should decline, consistent with family losing importance.",
         "lexicon": [
-          "traditional family",
-          "family values",
-          "husband and wife",
-          "nuclear family"
+          "families struggling",
+          "help their families",
+          "family members",
+          "relying on family",
+          "moved in with relatives"
         ],
-        "topic": [
-          "marriage"
-        ],
-        "direction": "A",
-        "expected_change": "decrease"
+        "direction": "B",
+        "expected_change": "increase"
       },
       {
-        "type": "contrast",
-        "hypothesis": "Work-related coverage moves from career-advancement framing to framing that stresses time with family, suggesting family rising in priority relative to work.",
+        "kind": "contrast_general",
+        "hypothesis": "Across all coverage, debates framed around individual lifestyle choices and divorce-era family structure give way to language about spending time together and family togetherness by 2011, indicating family becoming more central to personal life.",
         "lexicon_early": [
-          "career advancement",
-          "corporate ladder",
-          "climbing the ranks",
-          "long hours"
+          "single mothers",
+          "broken homes",
+          "divorce rate",
+          "nontraditional families"
         ],
         "lexicon_late": [
-          "work-life balance",
-          "family time",
-          "time with children",
-          "family-friendly"
-        ],
-        "topic": [
-          "workplace",
-          "jobs"
+          "family dinner",
+          "quality time",
+          "time with family",
+          "family togetherness"
         ],
         "direction": "B"
       },
       {
-        "type": "trend",
-        "hypothesis": "Lifestyle and leisure coverage increasingly features family-centered activities, so references to family togetherness should grow, indicating family becoming more important.",
+        "kind": "contrast_topic",
+        "hypothesis": "Within workplace and career coverage, the framing shifts from long hours and career advancement toward family-friendly policies and time with children by 2011, consistent with family taking greater priority.",
+        "topic": [
+          "workplace",
+          "work-life balance",
+          "career",
+          "employers",
+          "working hours"
+        ],
+        "lexicon_early": [
+          "long hours",
+          "career ladder",
+          "climb the corporate",
+          "office culture"
+        ],
+        "lexicon_late": [
+          "family-friendly",
+          "time with children",
+          "flexible schedules",
+          "family leave"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Across all coverage, phrases about family routines and home life become more common between 2006 and 2011, suggesting a rise in the perceived importance of family in daily life.",
         "lexicon": [
           "family dinner",
           "family vacation",
-          "family togetherness",
-          "spending time with family",
-          "family game night"
+          "at home with",
+          "bedtime stories",
+          "family time"
         ],
-        "topic": [],
         "direction": "B",
         "expected_change": "increase"
       }
@@ -177,83 +178,83 @@
     "question": "A168A",
     "hypotheses": [
       {
-        "type": "trend",
-        "hypothesis": "Coverage of fraud and swindles would rise after the 2008 financial crisis, reflecting a growing public sense that others will exploit you, which points toward Direction B.",
+        "kind": "trend_general",
+        "hypothesis": "Across all New York Times coverage, mentions of fraud-related vocabulary such as scam, swindle, and con artist rise between 2006 and 2011, reflecting a growing public expectation that others may take advantage.",
         "lexicon": [
-          "Ponzi scheme",
-          "fraud",
           "scam",
           "swindle",
-          "con artist"
+          "con artist",
+          "fraud"
         ],
-        "topic": [],
         "direction": "B",
         "expected_change": "increase"
       },
       {
-        "type": "contrast",
-        "hypothesis": "Language about trusting others in good faith would give way to language about predatory exploitation during the financial crisis, indicating a shift toward Direction B.",
+        "kind": "trend_topic",
+        "hypothesis": "Within coverage of the housing and financial crisis, language about victims being exploited by predatory lenders and fraudsters becomes more frequent between 2006 and 2011.",
+        "topic": [
+          "foreclosure",
+          "housing crisis",
+          "subprime mortgage",
+          "financial crisis"
+        ],
+        "lexicon": [
+          "predatory lending",
+          "victims",
+          "exploited",
+          "fraud",
+          "scam"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Coverage shifts from language presuming good faith in people toward language expressing suspicion and wariness of others over the period.",
         "lexicon_early": [
           "good faith",
-          "trustworthy",
-          "benefit of the doubt"
+          "benefit of the doubt",
+          "trusted",
+          "neighborly"
         ],
         "lexicon_late": [
-          "predatory",
-          "exploitation",
-          "greed"
-        ],
-        "topic": [
-          "mortgage",
-          "bank"
+          "distrust",
+          "skepticism",
+          "suspicion",
+          "wary"
         ],
         "direction": "B"
       },
       {
-        "type": "trend",
-        "hypothesis": "Coverage of volunteering and helping strangers would increase, reflecting greater public confidence that people will act fairly toward one another, which points toward Direction A.",
-        "lexicon": [
-          "volunteers",
-          "good Samaritan",
-          "helping strangers",
-          "community spirit",
-          "charity"
+        "kind": "contrast_topic",
+        "hypothesis": "Within coverage of financial markets and investing, framing shifts from trusting advisers and firms toward describing investors as being preyed upon by schemes between 2006 and 2011.",
+        "topic": [
+          "Ponzi scheme",
+          "Madoff",
+          "investors",
+          "Wall Street"
         ],
-        "topic": [],
-        "direction": "A",
-        "expected_change": "increase"
-      },
-      {
-        "type": "contrast",
-        "hypothesis": "Framing of economic life as cutthroat competition would be gradually replaced by framing around cooperation and sharing, indicating a shift toward Direction A.",
         "lexicon_early": [
-          "cutthroat",
-          "every man for himself",
-          "dog-eat-dog"
+          "trusted advisers",
+          "faith in",
+          "confidence in"
         ],
         "lexicon_late": [
-          "collaboration",
-          "sharing",
-          "cooperation"
+          "preyed upon",
+          "rip-off",
+          "taken advantage",
+          "duped"
         ],
-        "topic": [
-          "economy",
-          "consumers"
-        ],
-        "direction": "A"
+        "direction": "B"
       },
       {
-        "type": "trend",
-        "hypothesis": "References to trust and good faith in institutions and officials would decline, consistent with a rising expectation that others will take advantage, which points toward Direction B.",
+        "kind": "trend_general",
+        "hypothesis": "Across all coverage, phrases signaling cooperative assumptions about other people decline in frequency between 2006 and 2011.",
         "lexicon": [
-          "trust",
+          "benefit of the doubt",
           "good faith",
-          "public trust",
-          "integrity"
-        ],
-        "topic": [
-          "Congress",
-          "Wall Street"
+          "cooperation",
+          "give people a break"
         ],
         "direction": "B",
         "expected_change": "decrease"
@@ -265,87 +266,91 @@
     "question": "A165",
     "hypotheses": [
       {
-        "type": "trend",
-        "hypothesis": "As public trust in people eroded after the financial crisis, New York Times coverage would increasingly use fraud and deception vocabulary.",
+        "kind": "trend_general",
+        "hypothesis": "Across all New York Times coverage, references to fraud, scams, and distrust become more frequent between 2006 and 2011, consistent with a shift toward people feeling they need to be careful with others.",
         "lexicon": [
           "fraud",
           "scam",
-          "Ponzi",
           "con artist",
-          "distrust"
+          "distrust",
+          "swindle"
         ],
-        "topic": [],
         "direction": "A",
         "expected_change": "increase"
       },
       {
-        "type": "contrast",
-        "hypothesis": "Within coverage of public opinion and surveys, wariness-oriented security language from 2006 would give way to community-trust language by 2011, indicating a shift toward trust.",
-        "lexicon_early": [
-          "suspicious",
-          "terror threat",
-          "watch list"
-        ],
-        "lexicon_late": [
-          "volunteers",
-          "helping neighbors",
-          "cooperation",
-          "trust"
-        ],
+        "kind": "trend_topic",
+        "hypothesis": "Within coverage of the financial crisis and Wall Street, language about deception and betrayal rises between 2006 and 2011, reflecting heightened wariness toward financial actors.",
         "topic": [
-          "public opinion",
-          "survey"
+          "financial crisis",
+          "Wall Street",
+          "bailout",
+          "subprime mortgage"
         ],
-        "direction": "B"
+        "lexicon": [
+          "deception",
+          "betrayal",
+          "greed",
+          "cheated",
+          "misled"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
       },
       {
-        "type": "trend",
-        "hypothesis": "Coverage of local community life would show rising use of words about cooperation and neighborly help, consistent with greater willingness to trust others.",
-        "lexicon": [
-          "volunteers",
-          "cooperation",
+        "kind": "contrast_general",
+        "hypothesis": "Around 2006, coverage leans on trust-affirming community language, while by 2011 it leans on vocabulary of scrutiny and caution, indicating a move toward wariness in dealing with people.",
+        "lexicon_early": [
+          "good faith",
           "neighborly",
-          "civic engagement",
-          "trust"
+          "community spirit",
+          "take people at their word",
+          "open-hearted"
         ],
+        "lexicon_late": [
+          "scrutiny",
+          "watchdog",
+          "skeptical",
+          "due diligence",
+          "beware"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Within coverage of online life, early reporting emphasizes social connection and friendship, while later reporting emphasizes identity theft and phishing, suggesting people became more guarded in online interactions.",
         "topic": [
-          "community"
+          "online",
+          "internet",
+          "social networking",
+          "MySpace"
+        ],
+        "lexicon_early": [
+          "online friends",
+          "social network",
+          "connect with friends",
+          "meet people"
+        ],
+        "lexicon_late": [
+          "identity theft",
+          "phishing",
+          "online predators",
+          "privacy settings"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Across all New York Times coverage, language of cooperation and mutual goodwill becomes more frequent between 2006 and 2011, consistent with a shift toward perceiving most people as trustworthy.",
+        "lexicon": [
+          "cooperation",
+          "volunteers",
+          "bipartisan",
+          "compromise",
+          "helping neighbors"
         ],
         "direction": "B",
         "expected_change": "increase"
-      },
-      {
-        "type": "trend",
-        "hypothesis": "Growing concern about being cheated online would raise coverage of identity theft and data security, reflecting increased caution toward others.",
-        "lexicon": [
-          "identity theft",
-          "phishing",
-          "data breach",
-          "security breach"
-        ],
-        "topic": [],
-        "direction": "A",
-        "expected_change": "increase"
-      },
-      {
-        "type": "contrast",
-        "hypothesis": "In coverage of Wall Street and investors, trust-based language would be replaced by betrayal and hoax vocabulary after the 2008 scandals, indicating a move toward caution.",
-        "lexicon_early": [
-          "trusted",
-          "good faith",
-          "honest broker"
-        ],
-        "lexicon_late": [
-          "swindle",
-          "Madoff",
-          "betrayal",
-          "hoax"
-        ],
-        "topic": [
-          "Wall Street",
-          "investors"
-        ],
-        "direction": "A"
       }
     ]
   },
@@ -354,81 +359,86 @@
     "question": "A124_02",
     "hypotheses": [
       {
-        "type": "trend",
-        "hypothesis": "As attitudes became less opposed to interracial neighbors, New York Times coverage would increasingly use language about racial progress and a post-racial society.",
+        "kind": "trend_general",
+        "hypothesis": "As Americans grew less willing to express overt racial exclusion, New York Times coverage used the language of racial progress and colorblindness more often across all articles from 2006 to 2011.",
         "lexicon": [
           "post-racial",
           "racial progress",
-          "first black president",
-          "racial barrier"
+          "colorblind",
+          "racial reconciliation"
         ],
-        "topic": [],
         "direction": "B",
         "expected_change": "increase"
       },
       {
-        "type": "contrast",
-        "hypothesis": "Coverage of race relations would shift from framing race mainly as conflict toward framing it as demographic change and multiracial identity, consistent with greater acceptance of racial mixing.",
+        "kind": "trend_topic",
+        "hypothesis": "Within coverage of housing and neighborhoods, references to explicit segregation practices declined between 2006 and 2011 as stated racial exclusion became less socially acceptable.",
+        "topic": [
+          "housing",
+          "neighborhood",
+          "fair housing",
+          "homeowners"
+        ],
+        "lexicon": [
+          "racial covenant",
+          "redlining",
+          "segregated neighborhoods",
+          "whites only"
+        ],
+        "direction": "B",
+        "expected_change": "decrease"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Coverage shifted from framing racial exclusion as a live problem of overt bias toward framing race relations through the lens of a post-racial or diversity-celebrating narrative.",
         "lexicon_early": [
-          "racial tensions",
-          "race riots",
-          "racial violence"
+          "racial profiling",
+          "hate crime",
+          "racial slur",
+          "white supremacist"
         ],
         "lexicon_late": [
+          "post-racial",
           "multiracial",
-          "racially diverse",
-          "mixed-race"
+          "diversity",
+          "racial harmony"
         ],
-        "topic": [],
         "direction": "B"
       },
       {
-        "type": "trend",
-        "hypothesis": "If attitudes toward racial neighbors grew more hostile, coverage of housing and neighborhoods would show rising use of terms tied to segregation and white flight.",
-        "lexicon": [
-          "white flight",
-          "racial tensions",
-          "segregation",
-          "racially mixed neighborhoods"
-        ],
+        "kind": "contrast_topic",
+        "hypothesis": "Within articles about neighborhoods and integration, the framing moved from fears of white flight and resistance to newcomers toward descriptions of diverse, mixed neighborhoods.",
         "topic": [
           "neighborhood",
-          "housing"
+          "integration",
+          "suburb",
+          "neighbors"
         ],
-        "direction": "A",
-        "expected_change": "increase"
-      },
-      {
-        "type": "trend",
-        "hypothesis": "Greater acceptance of interracial relationships would show up as more coverage of interracial marriage and mixed-race families in the New York Times.",
-        "lexicon": [
-          "interracial marriage",
-          "mixed-race",
-          "interracial couples"
-        ],
-        "topic": [
-          "marriage"
-        ],
-        "direction": "B",
-        "expected_change": "increase"
-      },
-      {
-        "type": "contrast",
-        "hypothesis": "Coverage around Obama-era politics would shift from neutral diversity framing toward racially charged resentment framing, indicating growing racial hostility.",
         "lexicon_early": [
-          "diversity",
-          "civil rights",
-          "racial equality"
+          "white flight",
+          "resist integration",
+          "racial tension",
+          "block busting"
         ],
         "lexicon_late": [
-          "racial resentment",
-          "racial backlash",
-          "birther"
+          "mixed-income",
+          "diverse neighborhood",
+          "welcoming",
+          "multiracial community"
         ],
-        "topic": [
-          "Obama"
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Across all coverage, mentions of openly racist neighbor complaints and similar exclusionary attitudes became less frequent between 2006 and 2011.",
+        "lexicon": [
+          "don't want neighbors",
+          "racist neighbor",
+          "white neighbors",
+          "bigotry"
         ],
-        "direction": "A"
+        "direction": "B",
+        "expected_change": "decrease"
       }
     ]
   }

@@ -5,41 +5,64 @@ settled yet — this is a snapshot to work from, not a plan. Update this doc as 
 
 > **Structured, lexicon-based hypothesis experiment (2026-11-05, new, `code/value_shift_indicators/`; prompt approved before
 > use).** Follow-up to the language-hypothesis experiment below, constraining the hypothesis *type* instead of leaving it fully
-> open-ended: each hypothesis is now a fixed JSON shape, not a free-text sentence with markers inferred post hoc. Two types,
-> either optionally restricted to a `topic` word/phrase list (same mechanism as a lexicon, filtering which articles count at
-> all): **trend** (one lexicon, frequency rises/falls from year_a to year_b) and **contrast** (two lexicons, one expected to
-> dominate near year_a and the other near year_b -- a replacement/crossover pattern). New files (not committed):
-> `prompts/{system,user}/generate_lexicon_hypotheses.txt`, `run_lexicon_hypotheses.py` (generation, dry run by default),
-> `test_lexicon_hypotheses.py` (mechanical scoring, no LLM calls, reuses `test_language_hypotheses.load_nyt_texts`/`total_chars`
-> and `analysis_tools.two_proportion_z`).
-> - Every hypothesis is scored by **both** rate metrics side by side (not merged into one verdict), to compare which tracks
->   reality better: article-presence fraction (like the old `count_matches()`) and raw occurrences per 100,000 characters
->   (`count_occurrences()`, new -- the old pipeline only ever counted presence, never multiple mentions per article).
-> - Contrast hypotheses are additionally scored by **both** of two methods, each under both rate metrics (4 verdicts total):
->   `independent` (two separate trend tests, one per lexicon, confirmed only if both hold) and `dominance` (one test on the
->   early lexicon's *share* of early+late mentions, expected to fall over time). All of this reuses `two_proportion_z` exactly
->   as-is -- no new statistic, just new (x, n) pairs fed into it (occurrence count over character count for the "chars" metric,
->   a valid normal-approximation for a rare-event rate comparison).
-> - **Scope: a 5-question pilot** (USA wave5->6: F118 reused from the original pilot for continuity, plus A001/A168A/A165/A124_02
->   spanning the other three usable significant-change formats), not the full 128-question set -- same caution the original
->   language-hypothesis experiment used before scaling up.
-> - Dry run confirmed all 5 prompts render correctly (5/5 cache misses, 0 calls sent) and matches the exact text shown to and
->   approved by the user. `filter_by_topic`/`count_presence`/`count_occurrences`/`rate_test`/`combine_verdicts`/`test_trend`/
->   `test_contrast` checked offline against small hand-built fake article lists (no real NYT data, no LLM calls) -- all correct,
->   including a real presence-vs-occurrence divergence caught in the first fixture attempt (presence fraction can fall even as
->   raw occurrences rise, if the same articles repeat the word more rather than more articles using it at all).
-> - **Run for real (2026-11-05), claude-haiku-5-5, all 5 pilot questions.** First pass: 2/5 succeeded at `max_tokens=1500`, 3/5
->   truncated mid-JSON (same failure mode the original bulk run hit) -- retried just those 3 at `max_tokens=3000` (not the
->   shared default, same reasoning as the original fix) and all 3 came back clean. 25 hypotheses total (15 trend, 10 contrast),
->   0 untestable (every one had the required structured fields -- the whole point of the schema change).
-> - **Confirm-only accuracy, both metrics, decided-only (ties excluded), n=5 (too small for significance, reported as-is):**
->   presence-fraction 2/4 correct (50%); occurrences-per-100k-chars 1/3 correct (33%). Both at or below chance, consistent with
->   every other approach tried so far in this project (free-text language hypotheses: 55.7%; no-hypothesis baseline: 51.6%) --
->   structuring the hypothesis schema did not, on this small sample, produce better signal than the free-text version, though
->   5 questions is far too few to conclude anything beyond "not an obvious win." Per-question breakdown in
->   `results/lexicon_hypotheses_pilot_tested.json`; true direction was "A" for all 5 pilot questions (coincidence of which
->   5 were picked, not a bug -- cross-checked F118 against the already-established result from the original pilot).
-> - Not yet scaled past the 5-question pilot or run through a feedback-loop round; no dashboard built for this experiment yet.
+> open-ended: each hypothesis is a fixed JSON shape, not a free-text sentence with markers inferred post hoc. New files:
+> `prompts/{system,user}/generate_lexicon_hypotheses.txt`, `run_lexicon_hypotheses.py` (5-question pilot, dry run by default),
+> `run_lexicon_hypotheses_bulk.py` (full 128-question set, dry run by default), `test_lexicon_hypotheses.py` (mechanical
+> scoring, no LLM calls, takes a dataset name arg -- `pilot` default or `bulk` -- reuses
+> `test_language_hypotheses.load_nyt_texts`/`total_chars` and `analysis_tools.two_proportion_z`).
+> - **Schema, exactly four kinds (fixed same day after an initial looser version -- see below):** `trend_general` (one
+>   lexicon, frequency change across ALL coverage), `trend_topic` (one lexicon, frequency change only within coverage matching
+>   a required `topic` word/phrase list -- `topic` retrieves the relevant articles first, `lexicon` is checked within them: a
+>   simple keyword-based retrieve-then-check pipeline, no LLM involved in the checking step), `contrast_general` (two lexicons,
+>   one dominates near year_a and the other near year_b, across all coverage), `contrast_topic` (same crossover, only within
+>   topic-matched coverage). `topic` is a required field for the two "_topic" kinds and does not exist at all for the two
+>   "_general" kinds -- not an optional add-on either way, so the model must commit to whether a pattern is topic-restricted.
+> - **Initial version was looser and got corrected before the real run (explicit user catch):** the first prompt draft had
+>   only two types (trend/contrast) with `topic` as an *optional* field models could leave `[]` by choice -- this let the
+>   model dodge committing to whether a pattern was topic-restricted, and 3/5 of the first pilot's hypotheses did exactly that.
+>   Rewrote the prompt to the four named kinds above and `test_lexicon_hypotheses.py` to dispatch on `kind` (a "_topic"
+>   hypothesis with an empty/missing `topic` is now marked untestable rather than silently treated as unconditioned); checked
+>   offline against hand-built fake text for all four kinds plus the missing-topic/unknown-kind edge cases before any real call.
+> - Every hypothesis is scored by **both** rate metrics side by side (not merged into one verdict): article-presence fraction
+>   (fraction of matching articles) and raw occurrences per 100,000 characters. Contrast hypotheses are additionally scored by
+>   **both** of two methods, each under both rate metrics (4 verdicts total): `independent` (two separate trend tests, one per
+>   lexicon, confirmed only if both hold) and `dominance` (one test on the early lexicon's *share* of early+late mentions,
+>   expected to fall over time). All of this reuses `two_proportion_z` exactly as-is -- no new statistic.
+> - **5-question pilot re-run under the fixed schema (claude-haiku-5-5):** F118/A001/A168A/A165/A124_02, all 25 hypotheses
+>   testable, each question got the required mix of all 4 kinds. Needed `max_tokens=3000` (not the pilot's original 1500 --
+>   the richer 4-kind schema truncates more often than the old free-text one; same per-failure-retry fix as before, not a
+>   shared-default bump). **Confirm-only decided-only accuracy, n=5: presence-fraction 2/4 (50%), chars-per-100k 2/4 (50%).**
+> - **Scaled to the full 128-question USA wave5->6 set (`run_lexicon_hypotheses_bulk.py`, claude-haiku-5-5, `max_tokens=3000`
+>   default since the pilot showed 1500 truncates about half the time under this schema):** 126/128 succeeded first pass, 2
+>   truncated even at 3000 and were retried individually at 4500. 632 hypotheses total (8 of 128 questions returned only 4 --
+>   satisfied "at least one of each kind" literally without padding to 5 -- not treated as an error), 0 untestable.
+> - **Full 128-question confirm-only decided-only accuracy: presence-fraction 53/101 (52.5%, z=0.50, p=0.62); chars-per-100k
+>   57/111 (51.4%, z=0.28, p=0.78).** Both at chance, not significant -- same conclusion as every other approach tried in this
+>   project (free-text language hypotheses: 55.7%; no-hypothesis baseline: 51.6%). The precise 4-kind schema did not improve
+>   prediction accuracy over the looser free-text version at scale, either.
+> - **Verdict counts by kind (confirm/deny/inconclusive), all 128 questions:** `trend_general` (n=241) presence
+>   [92,49,100] chars [101,45,95]; `trend_topic` (n=134) presence [21,31,82] chars [58,13,63]; `contrast_general` (n=129)
+>   presence [77,18,34] chars [82,18,29]; `contrast_topic` (n=128) presence [24,19,85] chars [31,42,55].
+>   `contrast_general` confirms far more than it denies (the strongest signal of any kind) while both "_topic" kinds are
+>   mostly inconclusive -- plausibly just lower statistical power from smaller topic-filtered article subsets, not evidence
+>   topic-conditioning itself is a worse mechanism; not disentangled from sample size here.
+> - **Configurable multi-round feedback loop built and run (`run_lexicon_hypotheses_feedback.py`, `--max-rounds` flag,
+>   default 5; new prompt `prompts/{system,user}/generate_lexicon_hypotheses_feedback.txt`, shown and approved before use).**
+>   Unlike the old free-text experiment's one-off round2/round_n scripts, this is one script, looped internally. A question
+>   is "tied" (needs more hypotheses) if confirm-only voting has no majority under EITHER the presence-fraction or the
+>   chars-per-100k metric (both must independently decide before a question drops out) -- explicit 2026-11-05 decision, since
+>   this experiment tracks two metrics in parallel where the old one had only one. Each round feeds back every hypothesis
+>   from every prior round (lexica, topic, kind, measured verdict under both metrics -- never the true direction) and asks
+>   for 5 new ones, same four-kind schema. No forced final-round decision -- a question that never resolves just stays tied.
+> - **Run for real: 31 of 128 questions tied after round 1.** Ties cut round over round: 31 -> 17 -> 15 -> 11 -> 8 across the
+>   5 rounds. One question (D078) failed to parse on every single round (consistent truncation at `max_tokens=3000` --
+>   same question, same failure, every time since its history never advanced) -- retried once at `max_tokens=6000`, resolved
+>   to Direction A under both metrics. **Final: 7 of 128 still tied** (`A006, A098, A124_12, E023, F114A, F199, G007_33_B`).
+> - **Final accuracy, all 128 questions, round 1 + feedback combined: presence-fraction 62/123 decided (50.4%, z=0.09,
+>   p=0.93); chars-per-100k 66/125 decided (52.8%, z=0.63, p=0.53).** Both still at chance. The feedback loop did cut ties
+>   substantially (31->7, a 77% reduction, comparable to the old free-text experiment's 46->6), but matches that same
+>   experiment's core finding: resolving a tie is not the same as resolving it correctly -- newly-decided questions landed
+>   close to a coin flip, not above it. No dashboard built for this experiment yet.
 
 > **Value-shift indicator system (2026-11-02 to 2026-11-04, new, self-contained in `code/value_shift_indicators/`; built on an
 > unmerged worktree branch `worktree-value-shift-indicators`).** Explores whether an LLM can predict which direction a WVS question

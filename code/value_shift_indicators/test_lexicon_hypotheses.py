@@ -3,11 +3,20 @@ real NYT text, no new LLM calls. Unlike test_language_hypotheses.py (markers inf
 free-text sentence), each hypothesis here already carries its own structured word/phrase lists, so no
 marker-extraction step is needed.
 
-Two hypothesis types:
-  - "trend": one lexicon, tested for a frequency change from year_a to year_b.
-  - "contrast": two lexicons (lexicon_early/lexicon_late), tested for a dominance crossover.
-Either type may carry a non-empty `topic` list; if present, articles are first filtered to those
-containing >=1 topic phrase before any lexicon counting.
+Exactly four hypothesis kinds (2026-11-05 schema fix -- `topic` used to be an optional field on a
+generic trend/contrast shape, which let the model leave it empty by choice instead of committing to
+whether the pattern was topic-restricted at all; now it's a required part of which of four kinds a
+hypothesis is):
+  - "trend_general": one lexicon, tested for a frequency change from year_a to year_b, across ALL articles.
+  - "trend_topic": one lexicon, same frequency-change test, but first retrieved down to only the articles
+    matching the hypothesis's own `topic` word/phrase list (a keyword-based retrieval step) -- a simple
+    retrieve-then-check pipeline: `topic` retrieves the relevant subset, `lexicon` is what's checked
+    within it. No LLM involved in this step, only in generating the two lexica up front.
+  - "contrast_general": two lexicons (lexicon_early/lexicon_late), tested for a dominance crossover,
+    across all articles.
+  - "contrast_topic": same crossover test, but within the `topic`-retrieved subset only.
+A "_topic" hypothesis MUST carry a non-empty `topic` list (retrieval step applies); a "_general"
+hypothesis has no `topic` field at all (no retrieval filter -- the full corpus is "all articles").
 
 Every hypothesis is scored by BOTH rate metrics, kept side by side rather than merged, so the pilot can
 compare which tracks reality better:
@@ -26,7 +35,9 @@ metrics above (4 verdicts total):
   - dominance: one test on lexicon_early's SHARE of (lexicon_early + lexicon_late) mentions, at year_a vs
     year_b -- expected to decrease (early dominates less as time passes).
 
-Usage: python test_lexicon_hypotheses.py
+Usage:
+    python test_lexicon_hypotheses.py          # scores results/lexicon_hypotheses_pilot.json (default)
+    python test_lexicon_hypotheses.py bulk      # scores results/lexicon_hypotheses_bulk.json
 """
 import json
 import sys
@@ -38,6 +49,7 @@ from test_language_hypotheses import load_nyt_texts, total_chars  # noqa: E402
 
 RESULTS = Path(__file__).resolve().parent / "results"
 YEAR_A, YEAR_B = 2006, 2011
+VALID_KINDS = {"trend_general", "trend_topic", "contrast_general", "contrast_topic"}
 
 
 def filter_by_topic(texts, topic):
@@ -123,41 +135,102 @@ def test_contrast(sub_a, sub_b, chars_a, chars_b, lexicon_early, lexicon_late):
     return out
 
 
-def run():
+def score_hypothesis(h, texts_a, texts_b):
+    """Score one hypothesis dict against pre-loaded NYT text for both years. Returns the same dict
+    with tested=True and n_articles_a/n_articles_b/chars_a/chars_b/result added, or tested=False and
+    untestable_reason added. Pulled out of run() so the feedback-loop script can score new hypotheses
+    the same way without duplicating this logic."""
+    kind = h.get("kind")
+    if kind not in VALID_KINDS:
+        return dict(h, tested=False, untestable_reason=f"unknown kind {kind!r}")
+
+    is_topic_kind = kind.endswith("_topic")
+    topic = h.get("topic") or []
+    if is_topic_kind and not topic:
+        return dict(h, tested=False, untestable_reason=f"{kind} requires a non-empty topic")
+
+    # Retrieval step: "_topic" kinds filter down to the topic-matched subset first;
+    # "_general" kinds use the full corpus as-is (no retrieval filter).
+    sub_a = filter_by_topic(texts_a, topic) if is_topic_kind else texts_a
+    sub_b = filter_by_topic(texts_b, topic) if is_topic_kind else texts_b
+    chars_a, chars_b = total_chars(sub_a), total_chars(sub_b)
+
+    if kind in ("trend_general", "trend_topic") and h.get("lexicon") and h.get("expected_change"):
+        result = test_trend(sub_a, sub_b, chars_a, chars_b, h["lexicon"], h["expected_change"])
+    elif kind in ("contrast_general", "contrast_topic") and h.get("lexicon_early") and h.get("lexicon_late"):
+        result = test_contrast(sub_a, sub_b, chars_a, chars_b, h["lexicon_early"], h["lexicon_late"])
+    else:
+        return dict(h, tested=False, untestable_reason="missing lexicon field(s)")
+    return dict(h, tested=True, n_articles_a=len(sub_a), n_articles_b=len(sub_b),
+                chars_a=chars_a, chars_b=chars_b, result=result)
+
+
+def effective_verdicts(h):
+    """The single confirm/deny/inconclusive verdict per metric used for voting -- for a trend
+    hypothesis this is just its own verdict; for a contrast hypothesis it's confirm if EITHER the
+    independent or dominance method confirms (deny if either denies and neither confirms). Returns
+    (presence_verdict, chars_verdict); only call on a hypothesis with tested=True."""
+    r = h["result"]
+    if h["kind"].startswith("trend"):
+        return r["presence"]["verdict"], r["chars"]["verdict"]
+    out = []
+    for metric in ("presence", "chars"):
+        ind, dom = r[metric]["independent"]["verdict"], r[metric]["dominance"]["verdict"]
+        if ind == "confirm" or dom == "confirm":
+            out.append("confirm")
+        elif ind == "deny" or dom == "deny":
+            out.append("deny")
+        else:
+            out.append("inconclusive")
+    return tuple(out)
+
+
+def tally_votes(hyps):
+    """Confirm-only voting across a question's (tested) hypotheses, for both metrics independently.
+    Returns dict(votes_presence, votes_chars, pred_presence, pred_chars) where pred is 'A', 'B', or
+    'tie'. Untested hypotheses are skipped."""
+    votes_p, votes_c = {"A": 0, "B": 0}, {"A": 0, "B": 0}
+    for h in hyps:
+        if not h.get("tested"):
+            continue
+        pv, cv = effective_verdicts(h)
+        d = h["direction"]
+        if pv == "confirm":
+            votes_p[d] += 1
+        if cv == "confirm":
+            votes_c[d] += 1
+    pred_p = "A" if votes_p["A"] > votes_p["B"] else "B" if votes_p["B"] > votes_p["A"] else "tie"
+    pred_c = "A" if votes_c["A"] > votes_c["B"] else "B" if votes_c["B"] > votes_c["A"] else "tie"
+    return dict(votes_presence=votes_p, votes_chars=votes_c, pred_presence=pred_p, pred_chars=pred_c)
+
+
+def run(dataset="pilot"):
     print("loading NYT 2006/2011 into memory...")
     texts_a, texts_b = load_nyt_texts(YEAR_A), load_nyt_texts(YEAR_B)
     print(f"  {len(texts_a)} articles ({YEAR_A}), {len(texts_b)} articles ({YEAR_B})")
 
-    data = json.load(open(RESULTS / "lexicon_hypotheses_pilot.json"))
+    data = json.load(open(RESULTS / f"lexicon_hypotheses_{dataset}.json"))
 
-    n_trend = n_contrast = n_untestable = 0
+    counts = {k: 0 for k in VALID_KINDS}
+    n_untestable = 0
     out = []
     for d in data:
         row = dict(country=d["country"], question=d["question"], hypotheses=[])
         for h in d.get("hypotheses", []):
-            htype = h.get("type")
-            topic = h.get("topic") or []
-            sub_a, sub_b = filter_by_topic(texts_a, topic), filter_by_topic(texts_b, topic)
-            chars_a, chars_b = total_chars(sub_a), total_chars(sub_b)
-
-            if htype == "trend" and h.get("lexicon") and h.get("expected_change"):
-                n_trend += 1
-                result = test_trend(sub_a, sub_b, chars_a, chars_b, h["lexicon"], h["expected_change"])
-            elif htype == "contrast" and h.get("lexicon_early") and h.get("lexicon_late"):
-                n_contrast += 1
-                result = test_contrast(sub_a, sub_b, chars_a, chars_b, h["lexicon_early"], h["lexicon_late"])
+            scored = score_hypothesis(h, texts_a, texts_b)
+            if scored["tested"]:
+                counts[scored["kind"]] += 1
             else:
                 n_untestable += 1
-                row["hypotheses"].append(dict(h, tested=False))
-                continue
-            row["hypotheses"].append(dict(h, tested=True, n_articles_a=len(sub_a), n_articles_b=len(sub_b),
-                                          chars_a=chars_a, chars_b=chars_b, result=result))
+            row["hypotheses"].append(scored)
         out.append(row)
 
-    (RESULTS / "lexicon_hypotheses_pilot_tested.json").write_text(json.dumps(out, indent=2))
-    print(f"\nhypotheses: {n_trend} trend, {n_contrast} contrast, {n_untestable} untestable (missing fields)")
-    print(f"-> {RESULTS / 'lexicon_hypotheses_pilot_tested.json'}")
+    out_path = RESULTS / f"lexicon_hypotheses_{dataset}_tested.json"
+    out_path.write_text(json.dumps(out, indent=2))
+    print(f"\nhypotheses by kind: {counts}, {n_untestable} untestable")
+    print(f"-> {out_path}")
 
 
 if __name__ == "__main__":
-    run()
+    import sys as _sys
+    run(_sys.argv[1] if len(_sys.argv) > 1 else "pilot")

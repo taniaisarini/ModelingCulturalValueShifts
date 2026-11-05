@@ -1,10 +1,17 @@
 """Pilot run of the structured, lexicon-based hypothesis experiment (prompts/{system,user}/
-generate_lexicon_hypotheses.txt, approved 2026-11-05). Unlike the earlier language-hypothesis experiment
-(any kind of language pattern, free text, markers inferred post hoc by regex), each hypothesis here is
-one of two fixed JSON shapes the model must fill in directly:
-  - "trend": a single word/phrase list whose frequency rises or falls between the two time points.
-  - "contrast": two word/phrase lists, one expected to dominate near year_a and the other near year_b.
-Either type may optionally carry a `topic` word/phrase list restricting which articles count at all.
+generate_lexicon_hypotheses.txt, approved 2026-11-05, schema fixed 2026-11-05 same day). Unlike the
+earlier language-hypothesis experiment (any kind of language pattern, free text, markers inferred post
+hoc by regex), each hypothesis here is exactly one of four fixed JSON shapes the model must commit to:
+  - "trend_general": a single word/phrase list whose frequency rises or falls, across all coverage.
+  - "trend_topic": same, but only within coverage matching a required `topic` word/phrase list (a
+    keyword-based retrieval step -- `topic` retrieves the relevant articles, `lexicon` is checked
+    within them).
+  - "contrast_general": two word/phrase lists, one expected to dominate near year_a and the other near
+    year_b, across all coverage.
+  - "contrast_topic": same crossover pattern, but only within coverage matching a required `topic` list.
+`topic` is not an optional add-on -- it's required for the two "_topic" kinds and absent entirely for
+the two "_general" kinds, so the model must commit to whether a pattern is topic-restricted rather than
+leaving it ambiguous.
 
 Scope: 5 USA wave5->6 questions, one per usable significant-change format (ordinal_scale, numeric_scale
 x2 -- including F118, the original pilot question from the earlier experiment, for continuity --

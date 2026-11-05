@@ -4,153 +4,15 @@
     "question": "F118",
     "hypotheses": [
       {
-        "type": "trend",
-        "hypothesis": "As public acceptance of homosexuality rose, New York Times coverage from 2006 to 2011 should show more frequent use of rights-and-recognition language such as same-sex marriage and marriage equality.",
+        "kind": "trend_general",
+        "hypothesis": "Across all coverage, mentions of 'LGBT' and 'gay rights' rose between 2006 and 2011 as public acceptance of homosexuality grew, which corresponds to Direction A.",
         "lexicon": [
-          "same-sex marriage",
-          "marriage equality",
-          "gay couples",
-          "gay rights"
-        ],
-        "topic": [],
-        "direction": "A",
-        "expected_change": "increase",
-        "tested": true,
-        "n_articles_a": 160430,
-        "n_articles_b": 92647,
-        "chars_a": 117867391,
-        "chars_b": 42627467,
-        "result": {
-          "presence": {
-            "x_a": 261,
-            "n_a": 160430,
-            "x_b": 318,
-            "n_b": 92647,
-            "p_a": 0.001627,
-            "p_b": 0.003432,
-            "p_value": 0.0,
-            "observed": "increase",
-            "verdict": "confirm"
-          },
-          "chars": {
-            "x_a": 506,
-            "n_a": 117867391,
-            "x_b": 530,
-            "n_b": 42627467,
-            "p_a": 4e-06,
-            "p_b": 1.2e-05,
-            "p_value": 0.0,
-            "observed": "increase",
-            "verdict": "confirm"
-          }
-        }
-      },
-      {
-        "type": "contrast",
-        "hypothesis": "Coverage should shift from older, more stigmatizing framing of homosexuality toward neutral or self-identifying terms as acceptance grew.",
-        "lexicon_early": [
-          "homosexual agenda",
-          "sodomy",
-          "homosexual conduct"
-        ],
-        "lexicon_late": [
-          "gay marriage",
           "LGBT",
-          "gay community"
+          "gay rights",
+          "gay equality",
+          "civil rights for gays"
         ],
-        "topic": [],
         "direction": "A",
-        "tested": true,
-        "n_articles_a": 160430,
-        "n_articles_b": 92647,
-        "chars_a": 117867391,
-        "chars_b": 42627467,
-        "result": {
-          "presence": {
-            "independent": {
-              "early": {
-                "x_a": 13,
-                "n_a": 160430,
-                "x_b": 8,
-                "n_b": 92647,
-                "p_a": 8.1e-05,
-                "p_b": 8.6e-05,
-                "p_value": 0.8875058545002688,
-                "observed": "increase"
-              },
-              "late": {
-                "x_a": 212,
-                "n_a": 160430,
-                "x_b": 133,
-                "n_b": 92647,
-                "p_a": 0.001321,
-                "p_b": 0.001436,
-                "p_value": 0.4535672630005383,
-                "observed": "increase"
-              },
-              "verdict": "inconclusive"
-            },
-            "dominance": {
-              "x_a": 13,
-              "n_a": 225,
-              "x_b": 8,
-              "n_b": 141,
-              "p_a": 0.057778,
-              "p_b": 0.056738,
-              "p_value": 0.9667838700092055,
-              "observed": "decrease",
-              "verdict": "inconclusive"
-            }
-          },
-          "chars": {
-            "independent": {
-              "early": {
-                "x_a": 24,
-                "n_a": 117867391,
-                "x_b": 9,
-                "n_b": 42627467,
-                "p_a": 0.0,
-                "p_b": 0.0,
-                "p_value": 0.9261405808773138,
-                "observed": "increase"
-              },
-              "late": {
-                "x_a": 350,
-                "n_a": 117867391,
-                "x_b": 158,
-                "n_b": 42627467,
-                "p_a": 3e-06,
-                "p_b": 4e-06,
-                "p_value": 0.020443970053310334,
-                "observed": "increase"
-              },
-              "verdict": "inconclusive"
-            },
-            "dominance": {
-              "x_a": 24,
-              "n_a": 374,
-              "x_b": 9,
-              "n_b": 167,
-              "p_a": 0.064171,
-              "p_b": 0.053892,
-              "p_value": 0.6444558571548118,
-              "observed": "decrease",
-              "verdict": "inconclusive"
-            }
-          }
-        }
-      },
-      {
-        "type": "trend",
-        "hypothesis": "If opposition to homosexuality hardened, coverage of marriage debates should increasingly use traditionalist and defense-of-marriage framing.",
-        "lexicon": [
-          "traditional marriage",
-          "defense of marriage",
-          "religious liberty",
-          "natural family"
-        ],
-        "topic": [],
-        "direction": "B",
         "expected_change": "increase",
         "tested": true,
         "n_articles_a": 160430,
@@ -159,169 +21,306 @@
         "chars_b": 42627467,
         "result": {
           "presence": {
-            "x_a": 7,
+            "x_a": 68,
             "n_a": 160430,
-            "x_b": 37,
+            "x_b": 79,
             "n_b": 92647,
-            "p_a": 4.4e-05,
-            "p_b": 0.000399,
-            "p_value": 6.20423712405227e-11,
+            "p_a": 0.000424,
+            "p_b": 0.000853,
+            "p_value": 1.607659016378271e-05,
             "observed": "increase",
             "verdict": "confirm"
           },
           "chars": {
-            "x_a": 11,
+            "x_a": 111,
             "n_a": 117867391,
-            "x_b": 55,
+            "x_b": 105,
             "n_b": 42627467,
-            "p_a": 0.0,
-            "p_b": 1e-06,
-            "p_value": 0.0,
+            "p_a": 1e-06,
+            "p_b": 2e-06,
+            "p_value": 2.1671553440683056e-13,
             "observed": "increase",
             "verdict": "confirm"
           }
         }
       },
       {
-        "type": "contrast",
-        "hypothesis": "Within military coverage, the debate should move from questions about gays serving openly toward concerns framed around religious conscience and traditional values if attitudes tightened.",
-        "lexicon_early": [
-          "don't ask, don't tell",
-          "gays in the military",
-          "open service"
-        ],
-        "lexicon_late": [
-          "religious conscience",
-          "traditional values",
-          "chaplains"
-        ],
+        "kind": "trend_topic",
+        "hypothesis": "Within coverage of same-sex marriage, religiously framed moral condemnation language such as 'sin' and 'abomination' declined between 2006 and 2011 as the debate shifted toward equality, which corresponds to Direction A.",
         "topic": [
-          "military",
-          "Pentagon"
+          "same-sex marriage",
+          "gay marriage",
+          "Proposition 8"
         ],
-        "direction": "B",
-        "tested": true,
-        "n_articles_a": 3507,
-        "n_articles_b": 1637,
-        "chars_a": 10179484,
-        "chars_b": 918127,
-        "result": {
-          "presence": {
-            "independent": {
-              "early": {
-                "x_a": 9,
-                "n_a": 3507,
-                "x_b": 4,
-                "n_b": 1637,
-                "p_a": 0.002566,
-                "p_b": 0.002443,
-                "p_value": 0.934877403855817,
-                "observed": "decrease"
-              },
-              "late": {
-                "x_a": 10,
-                "n_a": 3507,
-                "x_b": 4,
-                "n_b": 1637,
-                "p_a": 0.002851,
-                "p_b": 0.002443,
-                "p_value": 0.7936369461737318,
-                "observed": "decrease"
-              },
-              "verdict": "inconclusive"
-            },
-            "dominance": {
-              "x_a": 9,
-              "n_a": 19,
-              "x_b": 4,
-              "n_b": 8,
-              "p_a": 0.473684,
-              "p_b": 0.5,
-              "p_value": 0.9005521720743777,
-              "observed": "increase",
-              "verdict": "inconclusive"
-            }
-          },
-          "chars": {
-            "independent": {
-              "early": {
-                "x_a": 11,
-                "n_a": 10179484,
-                "x_b": 4,
-                "n_b": 918127,
-                "p_a": 1e-06,
-                "p_b": 4e-06,
-                "p_value": 0.00971030602580969,
-                "observed": "increase"
-              },
-              "late": {
-                "x_a": 24,
-                "n_a": 10179484,
-                "x_b": 4,
-                "n_b": 918127,
-                "p_a": 2e-06,
-                "p_b": 4e-06,
-                "p_value": 0.24812386512072582,
-                "observed": "increase"
-              },
-              "verdict": "deny"
-            },
-            "dominance": {
-              "x_a": 11,
-              "n_a": 35,
-              "x_b": 4,
-              "n_b": 8,
-              "p_a": 0.314286,
-              "p_b": 0.5,
-              "p_value": 0.32005848224149513,
-              "observed": "increase",
-              "verdict": "inconclusive"
-            }
-          }
-        }
-      },
-      {
-        "type": "trend",
-        "hypothesis": "Within coverage of churches and religious leaders, condemnatory moral language should decline as acceptance of homosexuality increased.",
         "lexicon": [
-          "sin",
           "sinful",
-          "biblical",
-          "condemn"
-        ],
-        "topic": [
-          "church",
-          "religious leaders"
+          "abomination",
+          "immoral",
+          "threat to the family"
         ],
         "direction": "A",
         "expected_change": "decrease",
         "tested": true,
-        "n_articles_a": 4068,
-        "n_articles_b": 904,
-        "chars_a": 14046312,
-        "chars_b": 459563,
+        "n_articles_a": 327,
+        "n_articles_b": 294,
+        "chars_a": 509351,
+        "chars_b": 143449,
         "result": {
           "presence": {
-            "x_a": 1358,
-            "n_a": 4068,
-            "x_b": 170,
-            "n_b": 904,
-            "p_a": 0.333825,
-            "p_b": 0.188053,
-            "p_value": 0.0,
-            "observed": "decrease",
-            "verdict": "confirm"
-          },
-          "chars": {
-            "x_a": 7014,
-            "n_a": 14046312,
-            "x_b": 221,
-            "n_b": 459563,
-            "p_a": 0.000499,
-            "p_b": 0.000481,
-            "p_value": 0.5813369108893256,
+            "x_a": 0,
+            "n_a": 327,
+            "x_b": 0,
+            "n_b": 294,
+            "p_a": 0.0,
+            "p_b": 0.0,
+            "p_value": 1.0,
             "observed": "decrease",
             "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 0,
+            "n_a": 509351,
+            "x_b": 0,
+            "n_b": 143449,
+            "p_a": 0.0,
+            "p_b": 0.0,
+            "p_value": 1.0,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          }
+        }
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Around 2006 coverage more often used the clinical-sounding term 'homosexuals', while by 2011 'gay people' and 'gay men and lesbians' had become more common, reflecting increasing acceptance, which corresponds to Direction A.",
+        "lexicon_early": [
+          "homosexuals",
+          "homosexual lifestyle",
+          "homosexual behavior"
+        ],
+        "lexicon_late": [
+          "gay people",
+          "gay men and lesbians",
+          "gay Americans"
+        ],
+        "direction": "A",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 19,
+                "n_a": 160430,
+                "x_b": 7,
+                "n_b": 92647,
+                "p_a": 0.000118,
+                "p_b": 7.6e-05,
+                "p_value": 0.30526782640584527,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 50,
+                "n_a": 160430,
+                "x_b": 39,
+                "n_b": 92647,
+                "p_a": 0.000312,
+                "p_b": 0.000421,
+                "p_value": 0.15777142808371902,
+                "observed": "increase"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 19,
+              "n_a": 69,
+              "x_b": 7,
+              "n_b": 46,
+              "p_a": 0.275362,
+              "p_b": 0.152174,
+              "p_value": 0.12182010810890542,
+              "observed": "decrease",
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 26,
+                "n_a": 117867391,
+                "x_b": 8,
+                "n_b": 42627467,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 0.6890690686849616,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 68,
+                "n_a": 117867391,
+                "x_b": 47,
+                "n_b": 42627467,
+                "p_a": 1e-06,
+                "p_b": 1e-06,
+                "p_value": 0.0005117742592815056,
+                "observed": "increase"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 26,
+              "n_a": 94,
+              "x_b": 8,
+              "n_b": 55,
+              "p_a": 0.276596,
+              "p_b": 0.145455,
+              "p_value": 0.06566170245724834,
+              "observed": "decrease",
+              "verdict": "inconclusive"
+            }
+          }
+        }
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Within military policy coverage, framing around banning homosexuals from service was gradually replaced by framing around gay service members and repeal, which corresponds to Direction A.",
+        "topic": [
+          "don't ask, don't tell",
+          "gays in the military",
+          "military service"
+        ],
+        "lexicon_early": [
+          "ban on homosexuals",
+          "homosexual conduct",
+          "exclude homosexuals"
+        ],
+        "lexicon_late": [
+          "gay service members",
+          "repeal",
+          "openly gay troops"
+        ],
+        "direction": "A",
+        "tested": true,
+        "n_articles_a": 65,
+        "n_articles_b": 19,
+        "chars_a": 129069,
+        "chars_b": 10879,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 65,
+                "x_b": 0,
+                "n_b": 19,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 5,
+                "n_a": 65,
+                "x_b": 3,
+                "n_b": 19,
+                "p_a": 0.076923,
+                "p_b": 0.157895,
+                "p_value": 0.2902012648380914,
+                "observed": "increase"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 5,
+              "x_b": 0,
+              "n_b": 3,
+              "p_a": 0.0,
+              "p_b": 0.0,
+              "p_value": 1.0,
+              "observed": "decrease",
+              "verdict": "inconclusive"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 0,
+                "n_a": 129069,
+                "x_b": 0,
+                "n_b": 10879,
+                "p_a": 0.0,
+                "p_b": 0.0,
+                "p_value": 1.0,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 8,
+                "n_a": 129069,
+                "x_b": 11,
+                "n_b": 10879,
+                "p_a": 6.2e-05,
+                "p_b": 0.001011,
+                "p_value": 4.440892098500626e-16,
+                "observed": "increase"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 0,
+              "n_a": 8,
+              "x_b": 0,
+              "n_b": 11,
+              "p_a": 0.0,
+              "p_b": 0.0,
+              "p_value": 1.0,
+              "observed": "decrease",
+              "verdict": "inconclusive"
+            }
+          }
+        }
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Across all coverage, references to gay people being open about their sexuality, such as 'coming out' and 'openly gay', increased from 2006 to 2011, consistent with growing social acceptance and Direction A.",
+        "lexicon": [
+          "coming out",
+          "openly gay",
+          "gay couples",
+          "gay pride"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 225,
+            "n_a": 160430,
+            "x_b": 155,
+            "n_b": 92647,
+            "p_a": 0.001402,
+            "p_b": 0.001673,
+            "p_value": 0.09041003149713189,
+            "observed": "increase",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 303,
+            "n_a": 117867391,
+            "x_b": 198,
+            "n_b": 42627467,
+            "p_a": 3e-06,
+            "p_b": 5e-06,
+            "p_value": 5.077671616504631e-11,
+            "observed": "increase",
+            "verdict": "confirm"
           }
         }
       }
@@ -332,67 +331,111 @@
     "question": "A001",
     "hypotheses": [
       {
-        "type": "trend",
-        "hypothesis": "During the recession years, coverage of economic hardship increasingly describes families pooling resources, so phrases about living together and shared household support should rise in frequency, signaling family becoming more important.",
+        "kind": "trend_general",
+        "hypothesis": "Across all New York Times coverage, references to family-centered values such as 'family values' and 'family first' become more frequent between 2006 and 2011, consistent with family rising in perceived importance.",
         "lexicon": [
-          "moved back in with parents",
-          "multigenerational household",
-          "doubled up",
-          "relying on family",
-          "family budget"
-        ],
-        "topic": [
-          "recession"
+          "family values",
+          "family first",
+          "put family",
+          "family comes first"
         ],
         "direction": "B",
         "expected_change": "increase",
         "tested": true,
-        "n_articles_a": 67,
-        "n_articles_b": 375,
-        "chars_a": 169570,
-        "chars_b": 185616,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
         "result": {
           "presence": {
-            "x_a": 0,
-            "n_a": 67,
-            "x_b": 0,
-            "n_b": 375,
-            "p_a": 0.0,
-            "p_b": 0.0,
-            "p_value": 1.0,
+            "x_a": 43,
+            "n_a": 160430,
+            "x_b": 13,
+            "n_b": 92647,
+            "p_a": 0.000268,
+            "p_b": 0.00014,
+            "p_value": 0.03744594638611076,
             "observed": "decrease",
-            "verdict": "inconclusive"
+            "verdict": "deny"
           },
           "chars": {
-            "x_a": 0,
-            "n_a": 169570,
-            "x_b": 0,
-            "n_b": 185616,
-            "p_a": 0.0,
+            "x_a": 59,
+            "n_a": 117867391,
+            "x_b": 13,
+            "n_b": 42627467,
+            "p_a": 1e-06,
             "p_b": 0.0,
-            "p_value": 1.0,
+            "p_value": 0.10227401387654678,
             "observed": "decrease",
             "verdict": "inconclusive"
           }
         }
       },
       {
-        "type": "contrast",
-        "hypothesis": "Coverage shifts from moral language about family obligations toward language emphasizing individual choice and self-fulfillment, indicating family becoming less central to personal identity.",
+        "kind": "trend_topic",
+        "hypothesis": "Within coverage of the recession and jobs, language emphasizing families bearing the burden and relying on each other increases between 2006 and 2011, reflecting greater emphasis on family support during economic hardship.",
+        "topic": [
+          "recession",
+          "unemployment",
+          "foreclosure",
+          "layoffs",
+          "economic downturn"
+        ],
+        "lexicon": [
+          "families struggling",
+          "help their families",
+          "family members",
+          "relying on family",
+          "moved in with relatives"
+        ],
+        "direction": "B",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 747,
+        "n_articles_b": 1355,
+        "chars_a": 968523,
+        "chars_b": 666103,
+        "result": {
+          "presence": {
+            "x_a": 1,
+            "n_a": 747,
+            "x_b": 2,
+            "n_b": 1355,
+            "p_a": 0.001339,
+            "p_b": 0.001476,
+            "p_value": 0.9363771081725885,
+            "observed": "increase",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 2,
+            "n_a": 968523,
+            "x_b": 2,
+            "n_b": 666103,
+            "p_a": 2e-06,
+            "p_b": 3e-06,
+            "p_value": 0.7065320726617224,
+            "observed": "increase",
+            "verdict": "inconclusive"
+          }
+        }
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Across all coverage, debates framed around individual lifestyle choices and divorce-era family structure give way to language about spending time together and family togetherness by 2011, indicating family becoming more central to personal life.",
         "lexicon_early": [
-          "family values",
-          "traditional family",
-          "family obligations",
-          "raising children"
+          "single mothers",
+          "broken homes",
+          "divorce rate",
+          "nontraditional families"
         ],
         "lexicon_late": [
-          "personal choice",
-          "individual fulfillment",
-          "lifestyle choice",
-          "self-expression"
+          "family dinner",
+          "quality time",
+          "time with family",
+          "family togetherness"
         ],
-        "topic": [],
-        "direction": "A",
+        "direction": "B",
         "tested": true,
         "n_articles_a": 160430,
         "n_articles_b": 92647,
@@ -402,35 +445,35 @@
           "presence": {
             "independent": {
               "early": {
-                "x_a": 50,
+                "x_a": 24,
                 "n_a": 160430,
-                "x_b": 22,
+                "x_b": 5,
                 "n_b": 92647,
-                "p_a": 0.000312,
-                "p_b": 0.000237,
-                "p_value": 0.28629930450751173,
+                "p_a": 0.00015,
+                "p_b": 5.4e-05,
+                "p_value": 0.030380393574299003,
                 "observed": "decrease"
               },
               "late": {
-                "x_a": 29,
+                "x_a": 53,
                 "n_a": 160430,
-                "x_b": 16,
+                "x_b": 15,
                 "n_b": 92647,
-                "p_a": 0.000181,
-                "p_b": 0.000173,
-                "p_value": 0.8834484151191337,
+                "p_a": 0.00033,
+                "p_b": 0.000162,
+                "p_value": 0.012742845329130503,
                 "observed": "decrease"
               },
-              "verdict": "inconclusive"
+              "verdict": "deny"
             },
             "dominance": {
-              "x_a": 50,
-              "n_a": 79,
-              "x_b": 22,
-              "n_b": 38,
-              "p_a": 0.632911,
-              "p_b": 0.578947,
-              "p_value": 0.5742096618562569,
+              "x_a": 24,
+              "n_a": 77,
+              "x_b": 5,
+              "n_b": 20,
+              "p_a": 0.311688,
+              "p_b": 0.25,
+              "p_value": 0.5913347671849909,
               "observed": "decrease",
               "verdict": "inconclusive"
             }
@@ -438,35 +481,35 @@
           "chars": {
             "independent": {
               "early": {
-                "x_a": 69,
+                "x_a": 28,
                 "n_a": 117867391,
-                "x_b": 24,
-                "n_b": 42627467,
-                "p_a": 1e-06,
-                "p_b": 1e-06,
-                "p_value": 0.8693023254123706,
-                "observed": "decrease"
-              },
-              "late": {
-                "x_a": 32,
-                "n_a": 117867391,
-                "x_b": 17,
+                "x_b": 5,
                 "n_b": 42627467,
                 "p_a": 0.0,
                 "p_b": 0.0,
-                "p_value": 0.19733488401095345,
-                "observed": "increase"
+                "p_value": 0.13783486273707224,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 74,
+                "n_a": 117867391,
+                "x_b": 19,
+                "n_b": 42627467,
+                "p_a": 1e-06,
+                "p_b": 0.0,
+                "p_value": 0.18073646279546418,
+                "observed": "decrease"
               },
               "verdict": "inconclusive"
             },
             "dominance": {
-              "x_a": 69,
-              "n_a": 101,
-              "x_b": 24,
-              "n_b": 41,
-              "p_a": 0.683168,
-              "p_b": 0.585366,
-              "p_value": 0.2665760496374765,
+              "x_a": 28,
+              "n_a": 102,
+              "x_b": 5,
+              "n_b": 24,
+              "p_a": 0.27451,
+              "p_b": 0.208333,
+              "p_value": 0.5070541901804522,
               "observed": "decrease",
               "verdict": "inconclusive"
             }
@@ -474,107 +517,66 @@
         }
       },
       {
-        "type": "trend",
-        "hypothesis": "Marriage-related coverage increasingly drops references to traditional family structures as a defining social norm, so such phrases should decline, consistent with family losing importance.",
-        "lexicon": [
-          "traditional family",
-          "family values",
-          "husband and wife",
-          "nuclear family"
-        ],
-        "topic": [
-          "marriage"
-        ],
-        "direction": "A",
-        "expected_change": "decrease",
-        "tested": true,
-        "n_articles_a": 1116,
-        "n_articles_b": 655,
-        "chars_a": 5179346,
-        "chars_b": 345472,
-        "result": {
-          "presence": {
-            "x_a": 14,
-            "n_a": 1116,
-            "x_b": 4,
-            "n_b": 655,
-            "p_a": 0.012545,
-            "p_b": 0.006107,
-            "p_value": 0.19222984146445743,
-            "observed": "decrease",
-            "verdict": "inconclusive"
-          },
-          "chars": {
-            "x_a": 20,
-            "n_a": 5179346,
-            "x_b": 5,
-            "n_b": 345472,
-            "p_a": 4e-06,
-            "p_b": 1.4e-05,
-            "p_value": 0.004526936204516607,
-            "observed": "increase",
-            "verdict": "deny"
-          }
-        }
-      },
-      {
-        "type": "contrast",
-        "hypothesis": "Work-related coverage moves from career-advancement framing to framing that stresses time with family, suggesting family rising in priority relative to work.",
-        "lexicon_early": [
-          "career advancement",
-          "corporate ladder",
-          "climbing the ranks",
-          "long hours"
-        ],
-        "lexicon_late": [
-          "work-life balance",
-          "family time",
-          "time with children",
-          "family-friendly"
-        ],
+        "kind": "contrast_topic",
+        "hypothesis": "Within workplace and career coverage, the framing shifts from long hours and career advancement toward family-friendly policies and time with children by 2011, consistent with family taking greater priority.",
         "topic": [
           "workplace",
-          "jobs"
+          "work-life balance",
+          "career",
+          "employers",
+          "working hours"
+        ],
+        "lexicon_early": [
+          "long hours",
+          "career ladder",
+          "climb the corporate",
+          "office culture"
+        ],
+        "lexicon_late": [
+          "family-friendly",
+          "time with children",
+          "flexible schedules",
+          "family leave"
         ],
         "direction": "B",
         "tested": true,
-        "n_articles_a": 1443,
-        "n_articles_b": 1280,
-        "chars_a": 4093041,
-        "chars_b": 610122,
+        "n_articles_a": 3075,
+        "n_articles_b": 1503,
+        "chars_a": 9571901,
+        "chars_b": 827805,
         "result": {
           "presence": {
             "independent": {
               "early": {
-                "x_a": 4,
-                "n_a": 1443,
-                "x_b": 0,
-                "n_b": 1280,
-                "p_a": 0.002772,
-                "p_b": 0.0,
-                "p_value": 0.05942416714035925,
-                "observed": "decrease"
+                "x_a": 5,
+                "n_a": 3075,
+                "x_b": 3,
+                "n_b": 1503,
+                "p_a": 0.001626,
+                "p_b": 0.001996,
+                "p_value": 0.7783515514243402,
+                "observed": "increase"
               },
               "late": {
-                "x_a": 3,
-                "n_a": 1443,
-                "x_b": 1,
-                "n_b": 1280,
-                "p_a": 0.002079,
-                "p_b": 0.000781,
-                "p_value": 0.3775016569489984,
-                "observed": "decrease"
+                "x_a": 4,
+                "n_a": 3075,
+                "x_b": 3,
+                "n_b": 1503,
+                "p_a": 0.001301,
+                "p_b": 0.001996,
+                "p_value": 0.5718582623437412,
+                "observed": "increase"
               },
               "verdict": "inconclusive"
             },
             "dominance": {
-              "x_a": 4,
-              "n_a": 7,
-              "x_b": 0,
-              "n_b": 1,
-              "p_a": 0.571429,
-              "p_b": 0.0,
-              "p_value": 0.28504940740261286,
+              "x_a": 5,
+              "n_a": 9,
+              "x_b": 3,
+              "n_b": 6,
+              "p_a": 0.555556,
+              "p_b": 0.5,
+              "p_value": 0.8326621063505324,
               "observed": "decrease",
               "verdict": "inconclusive"
             }
@@ -582,35 +584,35 @@
           "chars": {
             "independent": {
               "early": {
-                "x_a": 4,
-                "n_a": 4093041,
-                "x_b": 0,
-                "n_b": 610122,
+                "x_a": 6,
+                "n_a": 9571901,
+                "x_b": 3,
+                "n_b": 827805,
                 "p_a": 1e-06,
-                "p_b": 0.0,
-                "p_value": 0.4400110614167745,
-                "observed": "decrease"
-              },
-              "late": {
-                "x_a": 3,
-                "n_a": 4093041,
-                "x_b": 1,
-                "n_b": 610122,
-                "p_a": 1e-06,
-                "p_b": 2e-06,
-                "p_value": 0.47404432905636296,
+                "p_b": 4e-06,
+                "p_value": 0.004919140560462942,
                 "observed": "increase"
               },
-              "verdict": "inconclusive"
+              "late": {
+                "x_a": 4,
+                "n_a": 9571901,
+                "x_b": 3,
+                "n_b": 827805,
+                "p_a": 0.0,
+                "p_b": 4e-06,
+                "p_value": 0.0006469406218208018,
+                "observed": "increase"
+              },
+              "verdict": "deny"
             },
             "dominance": {
-              "x_a": 4,
-              "n_a": 7,
-              "x_b": 0,
-              "n_b": 1,
-              "p_a": 0.571429,
-              "p_b": 0.0,
-              "p_value": 0.28504940740261286,
+              "x_a": 6,
+              "n_a": 10,
+              "x_b": 3,
+              "n_b": 6,
+              "p_a": 0.6,
+              "p_b": 0.5,
+              "p_value": 0.6962703401140229,
               "observed": "decrease",
               "verdict": "inconclusive"
             }
@@ -618,16 +620,15 @@
         }
       },
       {
-        "type": "trend",
-        "hypothesis": "Lifestyle and leisure coverage increasingly features family-centered activities, so references to family togetherness should grow, indicating family becoming more important.",
+        "kind": "trend_general",
+        "hypothesis": "Across all coverage, phrases about family routines and home life become more common between 2006 and 2011, suggesting a rise in the perceived importance of family in daily life.",
         "lexicon": [
           "family dinner",
           "family vacation",
-          "family togetherness",
-          "spending time with family",
-          "family game night"
+          "at home with",
+          "bedtime stories",
+          "family time"
         ],
-        "topic": [],
         "direction": "B",
         "expected_change": "increase",
         "tested": true,
@@ -637,24 +638,24 @@
         "chars_b": 42627467,
         "result": {
           "presence": {
-            "x_a": 54,
+            "x_a": 111,
             "n_a": 160430,
-            "x_b": 22,
+            "x_b": 47,
             "n_b": 92647,
-            "p_a": 0.000337,
-            "p_b": 0.000237,
-            "p_value": 0.16557116027963037,
+            "p_a": 0.000692,
+            "p_b": 0.000507,
+            "p_value": 0.07330989908894692,
             "observed": "decrease",
             "verdict": "inconclusive"
           },
           "chars": {
-            "x_a": 69,
+            "x_a": 146,
             "n_a": 117867391,
-            "x_b": 28,
+            "x_b": 53,
             "n_b": 42627467,
             "p_a": 1e-06,
             "p_b": 1e-06,
-            "p_value": 0.6070914491103077,
+            "p_value": 0.9813605036756543,
             "observed": "increase",
             "verdict": "inconclusive"
           }
@@ -667,16 +668,14 @@
     "question": "A168A",
     "hypotheses": [
       {
-        "type": "trend",
-        "hypothesis": "Coverage of fraud and swindles would rise after the 2008 financial crisis, reflecting a growing public sense that others will exploit you, which points toward Direction B.",
+        "kind": "trend_general",
+        "hypothesis": "Across all New York Times coverage, mentions of fraud-related vocabulary such as scam, swindle, and con artist rise between 2006 and 2011, reflecting a growing public expectation that others may take advantage.",
         "lexicon": [
-          "Ponzi scheme",
-          "fraud",
           "scam",
           "swindle",
-          "con artist"
+          "con artist",
+          "fraud"
         ],
-        "topic": [],
         "direction": "B",
         "expected_change": "increase",
         "tested": true,
@@ -686,140 +685,93 @@
         "chars_b": 42627467,
         "result": {
           "presence": {
-            "x_a": 1607,
+            "x_a": 1604,
             "n_a": 160430,
-            "x_b": 531,
+            "x_b": 471,
             "n_b": 92647,
-            "p_a": 0.010017,
-            "p_b": 0.005731,
+            "p_a": 0.009998,
+            "p_b": 0.005084,
             "p_value": 0.0,
             "observed": "decrease",
             "verdict": "deny"
           },
           "chars": {
-            "x_a": 2942,
+            "x_a": 2938,
             "n_a": 117867391,
-            "x_b": 791,
+            "x_b": 682,
             "n_b": 42627467,
             "p_a": 2.5e-05,
-            "p_b": 1.9e-05,
-            "p_value": 1.0880185641326534e-13,
+            "p_b": 1.6e-05,
+            "p_value": 0.0,
             "observed": "decrease",
             "verdict": "deny"
           }
         }
       },
       {
-        "type": "contrast",
-        "hypothesis": "Language about trusting others in good faith would give way to language about predatory exploitation during the financial crisis, indicating a shift toward Direction B.",
-        "lexicon_early": [
-          "good faith",
-          "trustworthy",
-          "benefit of the doubt"
-        ],
-        "lexicon_late": [
-          "predatory",
-          "exploitation",
-          "greed"
-        ],
+        "kind": "trend_topic",
+        "hypothesis": "Within coverage of the housing and financial crisis, language about victims being exploited by predatory lenders and fraudsters becomes more frequent between 2006 and 2011.",
         "topic": [
-          "mortgage",
-          "bank"
+          "foreclosure",
+          "housing crisis",
+          "subprime mortgage",
+          "financial crisis"
+        ],
+        "lexicon": [
+          "predatory lending",
+          "victims",
+          "exploited",
+          "fraud",
+          "scam"
         ],
         "direction": "B",
+        "expected_change": "increase",
         "tested": true,
-        "n_articles_a": 5472,
-        "n_articles_b": 3147,
-        "chars_a": 12240758,
-        "chars_b": 1482058,
+        "n_articles_a": 71,
+        "n_articles_b": 542,
+        "chars_a": 96511,
+        "chars_b": 257656,
         "result": {
           "presence": {
-            "independent": {
-              "early": {
-                "x_a": 1,
-                "n_a": 5472,
-                "x_b": 2,
-                "n_b": 3147,
-                "p_a": 0.000183,
-                "p_b": 0.000636,
-                "p_value": 0.2779312287044218,
-                "observed": "increase"
-              },
-              "late": {
-                "x_a": 367,
-                "n_a": 5472,
-                "x_b": 74,
-                "n_b": 3147,
-                "p_a": 0.067069,
-                "p_b": 0.023514,
-                "p_value": 0.0,
-                "observed": "decrease"
-              },
-              "verdict": "deny"
-            },
-            "dominance": {
-              "x_a": 1,
-              "n_a": 368,
-              "x_b": 2,
-              "n_b": 76,
-              "p_a": 0.002717,
-              "p_b": 0.026316,
-              "p_value": 0.022239306425507088,
-              "observed": "increase",
-              "verdict": "deny"
-            }
+            "x_a": 5,
+            "n_a": 71,
+            "x_b": 24,
+            "n_b": 542,
+            "p_a": 0.070423,
+            "p_b": 0.04428,
+            "p_value": 0.3292380169032578,
+            "observed": "decrease",
+            "verdict": "inconclusive"
           },
           "chars": {
-            "independent": {
-              "early": {
-                "x_a": 1,
-                "n_a": 12240758,
-                "x_b": 4,
-                "n_b": 1482058,
-                "p_a": 0.0,
-                "p_b": 3e-06,
-                "p_value": 6.184135119546852e-07,
-                "observed": "increase"
-              },
-              "late": {
-                "x_a": 585,
-                "n_a": 12240758,
-                "x_b": 98,
-                "n_b": 1482058,
-                "p_a": 4.8e-05,
-                "p_b": 6.6e-05,
-                "p_value": 0.0028085534773305554,
-                "observed": "increase"
-              },
-              "verdict": "deny"
-            },
-            "dominance": {
-              "x_a": 1,
-              "n_a": 586,
-              "x_b": 4,
-              "n_b": 102,
-              "p_a": 0.001706,
-              "p_b": 0.039216,
-              "p_value": 3.853425219313422e-05,
-              "observed": "increase",
-              "verdict": "deny"
-            }
+            "x_a": 11,
+            "n_a": 96511,
+            "x_b": 34,
+            "n_b": 257656,
+            "p_a": 0.000114,
+            "p_b": 0.000132,
+            "p_value": 0.6724846418049939,
+            "observed": "increase",
+            "verdict": "inconclusive"
           }
         }
       },
       {
-        "type": "trend",
-        "hypothesis": "Coverage of volunteering and helping strangers would increase, reflecting greater public confidence that people will act fairly toward one another, which points toward Direction A.",
-        "lexicon": [
-          "volunteers",
-          "good Samaritan",
-          "helping strangers",
-          "community spirit",
-          "charity"
+        "kind": "contrast_general",
+        "hypothesis": "Coverage shifts from language presuming good faith in people toward language expressing suspicion and wariness of others over the period.",
+        "lexicon_early": [
+          "good faith",
+          "benefit of the doubt",
+          "trusted",
+          "neighborly"
         ],
-        "topic": [],
-        "direction": "A",
-        "expected_change": "increase",
+        "lexicon_late": [
+          "distrust",
+          "skepticism",
+          "suspicion",
+          "wary"
+        ],
+        "direction": "B",
         "tested": true,
         "n_articles_a": 160430,
         "n_articles_b": 92647,
@@ -827,121 +779,174 @@
         "chars_b": 42627467,
         "result": {
           "presence": {
-            "x_a": 780,
-            "n_a": 160430,
-            "x_b": 262,
-            "n_b": 92647,
-            "p_a": 0.004862,
-            "p_b": 0.002828,
-            "p_value": 1.3766765505351941e-14,
-            "observed": "decrease",
-            "verdict": "deny"
-          },
-          "chars": {
-            "x_a": 1260,
-            "n_a": 117867391,
-            "x_b": 331,
-            "n_b": 42627467,
-            "p_a": 1.1e-05,
-            "p_b": 8e-06,
-            "p_value": 2.0140306555838094e-07,
-            "observed": "decrease",
-            "verdict": "deny"
-          }
-        }
-      },
-      {
-        "type": "contrast",
-        "hypothesis": "Framing of economic life as cutthroat competition would be gradually replaced by framing around cooperation and sharing, indicating a shift toward Direction A.",
-        "lexicon_early": [
-          "cutthroat",
-          "every man for himself",
-          "dog-eat-dog"
-        ],
-        "lexicon_late": [
-          "collaboration",
-          "sharing",
-          "cooperation"
-        ],
-        "topic": [
-          "economy",
-          "consumers"
-        ],
-        "direction": "A",
-        "tested": true,
-        "n_articles_a": 2185,
-        "n_articles_b": 1826,
-        "chars_a": 4566152,
-        "chars_b": 870415,
-        "result": {
-          "presence": {
             "independent": {
               "early": {
-                "x_a": 1,
-                "n_a": 2185,
-                "x_b": 1,
-                "n_b": 1826,
-                "p_a": 0.000458,
-                "p_b": 0.000548,
-                "p_value": 0.8988459405941485,
-                "observed": "increase"
+                "x_a": 208,
+                "n_a": 160430,
+                "x_b": 73,
+                "n_b": 92647,
+                "p_a": 0.001297,
+                "p_b": 0.000788,
+                "p_value": 0.0002148556968464277,
+                "observed": "decrease"
               },
               "late": {
-                "x_a": 47,
-                "n_a": 2185,
-                "x_b": 8,
-                "n_b": 1826,
-                "p_a": 0.02151,
-                "p_b": 0.004381,
-                "p_value": 3.393248506400326e-06,
+                "x_a": 657,
+                "n_a": 160430,
+                "x_b": 316,
+                "n_b": 92647,
+                "p_a": 0.004095,
+                "p_b": 0.003411,
+                "p_value": 0.00735620213542143,
                 "observed": "decrease"
               },
               "verdict": "deny"
             },
             "dominance": {
-              "x_a": 1,
-              "n_a": 48,
-              "x_b": 1,
-              "n_b": 9,
-              "p_a": 0.020833,
-              "p_b": 0.111111,
-              "p_value": 0.17678664966456825,
-              "observed": "increase",
+              "x_a": 208,
+              "n_a": 865,
+              "x_b": 73,
+              "n_b": 389,
+              "p_a": 0.240462,
+              "p_b": 0.187661,
+              "p_value": 0.038051959309249206,
+              "observed": "decrease",
+              "verdict": "confirm"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 298,
+                "n_a": 117867391,
+                "x_b": 84,
+                "n_b": 42627467,
+                "p_a": 3e-06,
+                "p_b": 2e-06,
+                "p_value": 0.043112177612818936,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 798,
+                "n_a": 117867391,
+                "x_b": 357,
+                "n_b": 42627467,
+                "p_a": 7e-06,
+                "p_b": 8e-06,
+                "p_value": 0.0008179842797890746,
+                "observed": "increase"
+              },
+              "verdict": "confirm"
+            },
+            "dominance": {
+              "x_a": 298,
+              "n_a": 1096,
+              "x_b": 84,
+              "n_b": 441,
+              "p_a": 0.271898,
+              "p_b": 0.190476,
+              "p_value": 0.0008347237971926269,
+              "observed": "decrease",
+              "verdict": "confirm"
+            }
+          }
+        }
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Within coverage of financial markets and investing, framing shifts from trusting advisers and firms toward describing investors as being preyed upon by schemes between 2006 and 2011.",
+        "topic": [
+          "Ponzi scheme",
+          "Madoff",
+          "investors",
+          "Wall Street"
+        ],
+        "lexicon_early": [
+          "trusted advisers",
+          "faith in",
+          "confidence in"
+        ],
+        "lexicon_late": [
+          "preyed upon",
+          "rip-off",
+          "taken advantage",
+          "duped"
+        ],
+        "direction": "B",
+        "tested": true,
+        "n_articles_a": 3249,
+        "n_articles_b": 2032,
+        "chars_a": 6514559,
+        "chars_b": 949862,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 19,
+                "n_a": 3249,
+                "x_b": 12,
+                "n_b": 2032,
+                "p_a": 0.005848,
+                "p_b": 0.005906,
+                "p_value": 0.9787463675071149,
+                "observed": "increase"
+              },
+              "late": {
+                "x_a": 3,
+                "n_a": 3249,
+                "x_b": 2,
+                "n_b": 2032,
+                "p_a": 0.000923,
+                "p_b": 0.000984,
+                "p_value": 0.9441921209528417,
+                "observed": "increase"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 19,
+              "n_a": 22,
+              "x_b": 12,
+              "n_b": 14,
+              "p_a": 0.863636,
+              "p_b": 0.857143,
+              "p_value": 0.9562012401007902,
+              "observed": "decrease",
               "verdict": "inconclusive"
             }
           },
           "chars": {
             "independent": {
               "early": {
-                "x_a": 1,
-                "n_a": 4566152,
-                "x_b": 1,
-                "n_b": 870415,
-                "p_a": 0.0,
-                "p_b": 1e-06,
-                "p_value": 0.18991377436512158,
+                "x_a": 21,
+                "n_a": 6514559,
+                "x_b": 13,
+                "n_b": 949862,
+                "p_a": 3e-06,
+                "p_b": 1.4e-05,
+                "p_value": 8.062988804624638e-06,
                 "observed": "increase"
               },
               "late": {
-                "x_a": 84,
-                "n_a": 4566152,
-                "x_b": 11,
-                "n_b": 870415,
-                "p_a": 1.8e-05,
-                "p_b": 1.3e-05,
-                "p_value": 0.23884983948155147,
-                "observed": "decrease"
+                "x_a": 4,
+                "n_a": 6514559,
+                "x_b": 2,
+                "n_b": 949862,
+                "p_a": 1e-06,
+                "p_b": 2e-06,
+                "p_value": 0.12983838319312002,
+                "observed": "increase"
               },
-              "verdict": "inconclusive"
+              "verdict": "deny"
             },
             "dominance": {
-              "x_a": 1,
-              "n_a": 85,
-              "x_b": 1,
-              "n_b": 12,
-              "p_a": 0.011765,
-              "p_b": 0.083333,
-              "p_value": 0.10243289401687061,
+              "x_a": 21,
+              "n_a": 25,
+              "x_b": 13,
+              "n_b": 15,
+              "p_a": 0.84,
+              "p_b": 0.866667,
+              "p_value": 0.8191294708665393,
               "observed": "increase",
               "verdict": "inconclusive"
             }
@@ -949,47 +954,43 @@
         }
       },
       {
-        "type": "trend",
-        "hypothesis": "References to trust and good faith in institutions and officials would decline, consistent with a rising expectation that others will take advantage, which points toward Direction B.",
+        "kind": "trend_general",
+        "hypothesis": "Across all coverage, phrases signaling cooperative assumptions about other people decline in frequency between 2006 and 2011.",
         "lexicon": [
-          "trust",
+          "benefit of the doubt",
           "good faith",
-          "public trust",
-          "integrity"
-        ],
-        "topic": [
-          "Congress",
-          "Wall Street"
+          "cooperation",
+          "give people a break"
         ],
         "direction": "B",
         "expected_change": "decrease",
         "tested": true,
-        "n_articles_a": 4918,
-        "n_articles_b": 2922,
-        "chars_a": 9786608,
-        "chars_b": 1468858,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
         "result": {
           "presence": {
-            "x_a": 171,
-            "n_a": 4918,
-            "x_b": 21,
-            "n_b": 2922,
-            "p_a": 0.03477,
-            "p_b": 0.007187,
-            "p_value": 2.1760371282653068e-14,
+            "x_a": 311,
+            "n_a": 160430,
+            "x_b": 115,
+            "n_b": 92647,
+            "p_a": 0.001939,
+            "p_b": 0.001241,
+            "p_value": 3.754082559837002e-05,
             "observed": "decrease",
             "verdict": "confirm"
           },
           "chars": {
-            "x_a": 292,
-            "n_a": 9786608,
-            "x_b": 29,
-            "n_b": 1468858,
-            "p_a": 3e-05,
-            "p_b": 2e-05,
-            "p_value": 0.03267998111644799,
+            "x_a": 446,
+            "n_a": 117867391,
+            "x_b": 149,
+            "n_b": 42627467,
+            "p_a": 4e-06,
+            "p_b": 3e-06,
+            "p_value": 0.4018057237421795,
             "observed": "decrease",
-            "verdict": "confirm"
+            "verdict": "inconclusive"
           }
         }
       }
@@ -1000,16 +1001,15 @@
     "question": "A165",
     "hypotheses": [
       {
-        "type": "trend",
-        "hypothesis": "As public trust in people eroded after the financial crisis, New York Times coverage would increasingly use fraud and deception vocabulary.",
+        "kind": "trend_general",
+        "hypothesis": "Across all New York Times coverage, references to fraud, scams, and distrust become more frequent between 2006 and 2011, consistent with a shift toward people feeling they need to be careful with others.",
         "lexicon": [
           "fraud",
           "scam",
-          "Ponzi",
           "con artist",
-          "distrust"
+          "distrust",
+          "swindle"
         ],
-        "topic": [],
         "direction": "A",
         "expected_change": "increase",
         "tested": true,
@@ -1019,184 +1019,288 @@
         "chars_b": 42627467,
         "result": {
           "presence": {
-            "x_a": 1639,
+            "x_a": 1657,
             "n_a": 160430,
-            "x_b": 558,
+            "x_b": 506,
             "n_b": 92647,
-            "p_a": 0.010216,
-            "p_b": 0.006023,
+            "p_a": 0.010328,
+            "p_b": 0.005462,
             "p_value": 0.0,
             "observed": "decrease",
             "verdict": "deny"
           },
           "chars": {
-            "x_a": 2950,
+            "x_a": 3005,
             "n_a": 117867391,
-            "x_b": 813,
+            "x_b": 719,
             "n_b": 42627467,
             "p_a": 2.5e-05,
-            "p_b": 1.9e-05,
-            "p_value": 5.893063814710331e-12,
+            "p_b": 1.7e-05,
+            "p_value": 0.0,
             "observed": "decrease",
             "verdict": "deny"
           }
         }
       },
       {
-        "type": "contrast",
-        "hypothesis": "Within coverage of public opinion and surveys, wariness-oriented security language from 2006 would give way to community-trust language by 2011, indicating a shift toward trust.",
+        "kind": "trend_topic",
+        "hypothesis": "Within coverage of the financial crisis and Wall Street, language about deception and betrayal rises between 2006 and 2011, reflecting heightened wariness toward financial actors.",
+        "topic": [
+          "financial crisis",
+          "Wall Street",
+          "bailout",
+          "subprime mortgage"
+        ],
+        "lexicon": [
+          "deception",
+          "betrayal",
+          "greed",
+          "cheated",
+          "misled"
+        ],
+        "direction": "A",
+        "expected_change": "increase",
+        "tested": true,
+        "n_articles_a": 1463,
+        "n_articles_b": 1633,
+        "chars_a": 4799726,
+        "chars_b": 766136,
+        "result": {
+          "presence": {
+            "x_a": 94,
+            "n_a": 1463,
+            "x_b": 34,
+            "n_b": 1633,
+            "p_a": 0.064252,
+            "p_b": 0.020821,
+            "p_value": 1.3605512272363285e-09,
+            "observed": "decrease",
+            "verdict": "deny"
+          },
+          "chars": {
+            "x_a": 138,
+            "n_a": 4799726,
+            "x_b": 41,
+            "n_b": 766136,
+            "p_a": 2.9e-05,
+            "p_b": 5.4e-05,
+            "p_value": 0.0003860916234885714,
+            "observed": "increase",
+            "verdict": "confirm"
+          }
+        }
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Around 2006, coverage leans on trust-affirming community language, while by 2011 it leans on vocabulary of scrutiny and caution, indicating a move toward wariness in dealing with people.",
         "lexicon_early": [
-          "suspicious",
-          "terror threat",
-          "watch list"
+          "good faith",
+          "neighborly",
+          "community spirit",
+          "take people at their word",
+          "open-hearted"
         ],
         "lexicon_late": [
-          "volunteers",
-          "helping neighbors",
-          "cooperation",
-          "trust"
+          "scrutiny",
+          "watchdog",
+          "skeptical",
+          "due diligence",
+          "beware"
         ],
-        "topic": [
-          "public opinion",
-          "survey"
-        ],
-        "direction": "B",
+        "direction": "A",
         "tested": true,
-        "n_articles_a": 915,
-        "n_articles_b": 504,
-        "chars_a": 5859345,
-        "chars_b": 267622,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
         "result": {
           "presence": {
             "independent": {
               "early": {
-                "x_a": 9,
-                "n_a": 915,
-                "x_b": 0,
-                "n_b": 504,
-                "p_a": 0.009836,
-                "p_b": 0.0,
-                "p_value": 0.025508653245839286,
+                "x_a": 50,
+                "n_a": 160430,
+                "x_b": 13,
+                "n_b": 92647,
+                "p_a": 0.000312,
+                "p_b": 0.00014,
+                "p_value": 0.008484230600597664,
                 "observed": "decrease"
               },
               "late": {
-                "x_a": 36,
-                "n_a": 915,
-                "x_b": 6,
-                "n_b": 504,
-                "p_a": 0.039344,
-                "p_b": 0.011905,
-                "p_value": 0.0035140234470154574,
-                "observed": "decrease"
-              },
-              "verdict": "deny"
-            },
-            "dominance": {
-              "x_a": 9,
-              "n_a": 45,
-              "x_b": 0,
-              "n_b": 6,
-              "p_a": 0.2,
-              "p_b": 0.0,
-              "p_value": 0.22738526970373263,
-              "observed": "decrease",
-              "verdict": "inconclusive"
-            }
-          },
-          "chars": {
-            "independent": {
-              "early": {
-                "x_a": 9,
-                "n_a": 5859345,
-                "x_b": 0,
-                "n_b": 267622,
-                "p_a": 2e-06,
-                "p_b": 0.0,
-                "p_value": 0.5214268637582176,
-                "observed": "decrease"
-              },
-              "late": {
-                "x_a": 69,
-                "n_a": 5859345,
-                "x_b": 6,
-                "n_b": 267622,
-                "p_a": 1.2e-05,
-                "p_b": 2.2e-05,
-                "p_value": 0.12379715267791003,
+                "x_a": 786,
+                "n_a": 160430,
+                "x_b": 476,
+                "n_b": 92647,
+                "p_a": 0.004899,
+                "p_b": 0.005138,
+                "p_value": 0.4120071021139975,
                 "observed": "increase"
               },
               "verdict": "inconclusive"
             },
             "dominance": {
-              "x_a": 9,
-              "n_a": 78,
-              "x_b": 0,
-              "n_b": 6,
-              "p_a": 0.115385,
-              "p_b": 0.0,
-              "p_value": 0.3785564157983914,
+              "x_a": 50,
+              "n_a": 836,
+              "x_b": 13,
+              "n_b": 489,
+              "p_a": 0.059809,
+              "p_b": 0.026585,
+              "p_value": 0.006101155178277917,
               "observed": "decrease",
+              "verdict": "confirm"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 69,
+                "n_a": 117867391,
+                "x_b": 19,
+                "n_b": 42627467,
+                "p_a": 1e-06,
+                "p_b": 0.0,
+                "p_value": 0.29121730055571793,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 1013,
+                "n_a": 117867391,
+                "x_b": 536,
+                "n_b": 42627467,
+                "p_a": 9e-06,
+                "p_b": 1.3e-05,
+                "p_value": 7.642775301519578e-13,
+                "observed": "increase"
+              },
               "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 69,
+              "n_a": 1082,
+              "x_b": 19,
+              "n_b": 555,
+              "p_a": 0.063771,
+              "p_b": 0.034234,
+              "p_value": 0.012131786440626513,
+              "observed": "decrease",
+              "verdict": "confirm"
             }
           }
         }
       },
       {
-        "type": "trend",
-        "hypothesis": "Coverage of local community life would show rising use of words about cooperation and neighborly help, consistent with greater willingness to trust others.",
-        "lexicon": [
-          "volunteers",
-          "cooperation",
-          "neighborly",
-          "civic engagement",
-          "trust"
-        ],
+        "kind": "contrast_topic",
+        "hypothesis": "Within coverage of online life, early reporting emphasizes social connection and friendship, while later reporting emphasizes identity theft and phishing, suggesting people became more guarded in online interactions.",
         "topic": [
-          "community"
+          "online",
+          "internet",
+          "social networking",
+          "MySpace"
         ],
-        "direction": "B",
-        "expected_change": "increase",
+        "lexicon_early": [
+          "online friends",
+          "social network",
+          "connect with friends",
+          "meet people"
+        ],
+        "lexicon_late": [
+          "identity theft",
+          "phishing",
+          "online predators",
+          "privacy settings"
+        ],
+        "direction": "A",
         "tested": true,
-        "n_articles_a": 2717,
-        "n_articles_b": 754,
-        "chars_a": 10975978,
-        "chars_b": 418736,
+        "n_articles_a": 3959,
+        "n_articles_b": 2666,
+        "chars_a": 6587182,
+        "chars_b": 1350818,
         "result": {
           "presence": {
-            "x_a": 293,
-            "n_a": 2717,
-            "x_b": 14,
-            "n_b": 754,
-            "p_a": 0.10784,
-            "p_b": 0.018568,
-            "p_value": 2.220446049250313e-14,
-            "observed": "decrease",
-            "verdict": "deny"
+            "independent": {
+              "early": {
+                "x_a": 117,
+                "n_a": 3959,
+                "x_b": 140,
+                "n_b": 2666,
+                "p_a": 0.029553,
+                "p_b": 0.052513,
+                "p_value": 2.0752560911940776e-06,
+                "observed": "increase"
+              },
+              "late": {
+                "x_a": 23,
+                "n_a": 3959,
+                "x_b": 3,
+                "n_b": 2666,
+                "p_a": 0.00581,
+                "p_b": 0.001125,
+                "p_value": 0.0027859762816011546,
+                "observed": "decrease"
+              },
+              "verdict": "deny"
+            },
+            "dominance": {
+              "x_a": 117,
+              "n_a": 140,
+              "x_b": 140,
+              "n_b": 143,
+              "p_a": 0.835714,
+              "p_b": 0.979021,
+              "p_value": 3.0074041049266143e-05,
+              "observed": "increase",
+              "verdict": "deny"
+            }
           },
           "chars": {
-            "x_a": 803,
-            "n_a": 10975978,
-            "x_b": 15,
-            "n_b": 418736,
-            "p_a": 7.3e-05,
-            "p_b": 3.6e-05,
-            "p_value": 0.005128665192305704,
-            "observed": "decrease",
-            "verdict": "deny"
+            "independent": {
+              "early": {
+                "x_a": 173,
+                "n_a": 6587182,
+                "x_b": 199,
+                "n_b": 1350818,
+                "p_a": 2.6e-05,
+                "p_b": 0.000147,
+                "p_value": 0.0,
+                "observed": "increase"
+              },
+              "late": {
+                "x_a": 41,
+                "n_a": 6587182,
+                "x_b": 3,
+                "n_b": 1350818,
+                "p_a": 6e-06,
+                "p_b": 2e-06,
+                "p_value": 0.0718133236457843,
+                "observed": "decrease"
+              },
+              "verdict": "deny"
+            },
+            "dominance": {
+              "x_a": 173,
+              "n_a": 214,
+              "x_b": 199,
+              "n_b": 202,
+              "p_a": 0.808411,
+              "p_b": 0.985149,
+              "p_value": 4.680838827653133e-09,
+              "observed": "increase",
+              "verdict": "deny"
+            }
           }
         }
       },
       {
-        "type": "trend",
-        "hypothesis": "Growing concern about being cheated online would raise coverage of identity theft and data security, reflecting increased caution toward others.",
+        "kind": "trend_general",
+        "hypothesis": "Across all New York Times coverage, language of cooperation and mutual goodwill becomes more frequent between 2006 and 2011, consistent with a shift toward perceiving most people as trustworthy.",
         "lexicon": [
-          "identity theft",
-          "phishing",
-          "data breach",
-          "security breach"
+          "cooperation",
+          "volunteers",
+          "bipartisan",
+          "compromise",
+          "helping neighbors"
         ],
-        "topic": [],
-        "direction": "A",
+        "direction": "B",
         "expected_change": "increase",
         "tested": true,
         "n_articles_a": 160430,
@@ -1205,125 +1309,26 @@
         "chars_b": 42627467,
         "result": {
           "presence": {
-            "x_a": 99,
+            "x_a": 1210,
             "n_a": 160430,
-            "x_b": 44,
+            "x_b": 573,
             "n_b": 92647,
-            "p_a": 0.000617,
-            "p_b": 0.000475,
-            "p_value": 0.1471003518794054,
+            "p_a": 0.007542,
+            "p_b": 0.006185,
+            "p_value": 8.38208380948835e-05,
             "observed": "decrease",
-            "verdict": "inconclusive"
+            "verdict": "deny"
           },
           "chars": {
-            "x_a": 177,
+            "x_a": 1766,
             "n_a": 117867391,
-            "x_b": 57,
+            "x_b": 730,
             "n_b": 42627467,
-            "p_a": 2e-06,
-            "p_b": 1e-06,
-            "p_value": 0.44584853275115055,
-            "observed": "decrease",
-            "verdict": "inconclusive"
-          }
-        }
-      },
-      {
-        "type": "contrast",
-        "hypothesis": "In coverage of Wall Street and investors, trust-based language would be replaced by betrayal and hoax vocabulary after the 2008 scandals, indicating a move toward caution.",
-        "lexicon_early": [
-          "trusted",
-          "good faith",
-          "honest broker"
-        ],
-        "lexicon_late": [
-          "swindle",
-          "Madoff",
-          "betrayal",
-          "hoax"
-        ],
-        "topic": [
-          "Wall Street",
-          "investors"
-        ],
-        "direction": "A",
-        "tested": true,
-        "n_articles_a": 3241,
-        "n_articles_b": 1877,
-        "chars_a": 6499720,
-        "chars_b": 873904,
-        "result": {
-          "presence": {
-            "independent": {
-              "early": {
-                "x_a": 8,
-                "n_a": 3241,
-                "x_b": 2,
-                "n_b": 1877,
-                "p_a": 0.002468,
-                "p_b": 0.001066,
-                "p_value": 0.27341549704350054,
-                "observed": "decrease"
-              },
-              "late": {
-                "x_a": 21,
-                "n_a": 3241,
-                "x_b": 26,
-                "n_b": 1877,
-                "p_a": 0.006479,
-                "p_b": 0.013852,
-                "p_value": 0.007707503096737511,
-                "observed": "increase"
-              },
-              "verdict": "inconclusive"
-            },
-            "dominance": {
-              "x_a": 8,
-              "n_a": 29,
-              "x_b": 2,
-              "n_b": 28,
-              "p_a": 0.275862,
-              "p_b": 0.071429,
-              "p_value": 0.04248850214233668,
-              "observed": "decrease",
-              "verdict": "confirm"
-            }
-          },
-          "chars": {
-            "independent": {
-              "early": {
-                "x_a": 12,
-                "n_a": 6499720,
-                "x_b": 2,
-                "n_b": 873904,
-                "p_a": 2e-06,
-                "p_b": 2e-06,
-                "p_value": 0.7781276232925272,
-                "observed": "increase"
-              },
-              "late": {
-                "x_a": 23,
-                "n_a": 6499720,
-                "x_b": 74,
-                "n_b": 873904,
-                "p_a": 4e-06,
-                "p_b": 8.5e-05,
-                "p_value": 0.0,
-                "observed": "increase"
-              },
-              "verdict": "inconclusive"
-            },
-            "dominance": {
-              "x_a": 12,
-              "n_a": 35,
-              "x_b": 2,
-              "n_b": 76,
-              "p_a": 0.342857,
-              "p_b": 0.026316,
-              "p_value": 3.049098520335747e-06,
-              "observed": "decrease",
-              "verdict": "confirm"
-            }
+            "p_a": 1.5e-05,
+            "p_b": 1.7e-05,
+            "p_value": 0.002371129604316291,
+            "observed": "increase",
+            "verdict": "confirm"
           }
         }
       }
@@ -1334,15 +1339,14 @@
     "question": "A124_02",
     "hypotheses": [
       {
-        "type": "trend",
-        "hypothesis": "As attitudes became less opposed to interracial neighbors, New York Times coverage would increasingly use language about racial progress and a post-racial society.",
+        "kind": "trend_general",
+        "hypothesis": "As Americans grew less willing to express overt racial exclusion, New York Times coverage used the language of racial progress and colorblindness more often across all articles from 2006 to 2011.",
         "lexicon": [
           "post-racial",
           "racial progress",
-          "first black president",
-          "racial barrier"
+          "colorblind",
+          "racial reconciliation"
         ],
-        "topic": [],
         "direction": "B",
         "expected_change": "increase",
         "tested": true,
@@ -1352,306 +1356,312 @@
         "chars_b": 42627467,
         "result": {
           "presence": {
-            "x_a": 13,
+            "x_a": 9,
             "n_a": 160430,
-            "x_b": 4,
+            "x_b": 6,
             "n_b": 92647,
-            "p_a": 8.1e-05,
-            "p_b": 4.3e-05,
-            "p_value": 0.2629515931485251,
-            "observed": "decrease",
-            "verdict": "inconclusive"
-          },
-          "chars": {
-            "x_a": 15,
-            "n_a": 117867391,
-            "x_b": 6,
-            "n_b": 42627467,
-            "p_a": 0.0,
-            "p_b": 0.0,
-            "p_value": 0.8346798273013984,
+            "p_a": 5.6e-05,
+            "p_b": 6.5e-05,
+            "p_value": 0.7850864991488264,
             "observed": "increase",
-            "verdict": "inconclusive"
-          }
-        }
-      },
-      {
-        "type": "contrast",
-        "hypothesis": "Coverage of race relations would shift from framing race mainly as conflict toward framing it as demographic change and multiracial identity, consistent with greater acceptance of racial mixing.",
-        "lexicon_early": [
-          "racial tensions",
-          "race riots",
-          "racial violence"
-        ],
-        "lexicon_late": [
-          "multiracial",
-          "racially diverse",
-          "mixed-race"
-        ],
-        "topic": [],
-        "direction": "B",
-        "tested": true,
-        "n_articles_a": 160430,
-        "n_articles_b": 92647,
-        "chars_a": 117867391,
-        "chars_b": 42627467,
-        "result": {
-          "presence": {
-            "independent": {
-              "early": {
-                "x_a": 23,
-                "n_a": 160430,
-                "x_b": 9,
-                "n_b": 92647,
-                "p_a": 0.000143,
-                "p_b": 9.7e-05,
-                "p_value": 0.3191405542924668,
-                "observed": "decrease"
-              },
-              "late": {
-                "x_a": 15,
-                "n_a": 160430,
-                "x_b": 23,
-                "n_b": 92647,
-                "p_a": 9.3e-05,
-                "p_b": 0.000248,
-                "p_value": 0.002206937549677823,
-                "observed": "increase"
-              },
-              "verdict": "inconclusive"
-            },
-            "dominance": {
-              "x_a": 23,
-              "n_a": 38,
-              "x_b": 9,
-              "n_b": 32,
-              "p_a": 0.605263,
-              "p_b": 0.28125,
-              "p_value": 0.0067103172205131845,
-              "observed": "decrease",
-              "verdict": "confirm"
-            }
-          },
-          "chars": {
-            "independent": {
-              "early": {
-                "x_a": 25,
-                "n_a": 117867391,
-                "x_b": 10,
-                "n_b": 42627467,
-                "p_a": 0.0,
-                "p_b": 0.0,
-                "p_value": 0.7875950525611686,
-                "observed": "increase"
-              },
-              "late": {
-                "x_a": 17,
-                "n_a": 117867391,
-                "x_b": 33,
-                "n_b": 42627467,
-                "p_a": 0.0,
-                "p_b": 1e-06,
-                "p_value": 2.7097746269078016e-10,
-                "observed": "increase"
-              },
-              "verdict": "inconclusive"
-            },
-            "dominance": {
-              "x_a": 25,
-              "n_a": 42,
-              "x_b": 10,
-              "n_b": 43,
-              "p_a": 0.595238,
-              "p_b": 0.232558,
-              "p_value": 0.0006817314897809013,
-              "observed": "decrease",
-              "verdict": "confirm"
-            }
-          }
-        }
-      },
-      {
-        "type": "trend",
-        "hypothesis": "If attitudes toward racial neighbors grew more hostile, coverage of housing and neighborhoods would show rising use of terms tied to segregation and white flight.",
-        "lexicon": [
-          "white flight",
-          "racial tensions",
-          "segregation",
-          "racially mixed neighborhoods"
-        ],
-        "topic": [
-          "neighborhood",
-          "housing"
-        ],
-        "direction": "A",
-        "expected_change": "increase",
-        "tested": true,
-        "n_articles_a": 3238,
-        "n_articles_b": 1245,
-        "chars_a": 6638591,
-        "chars_b": 664122,
-        "result": {
-          "presence": {
-            "x_a": 7,
-            "n_a": 3238,
-            "x_b": 5,
-            "n_b": 1245,
-            "p_a": 0.002162,
-            "p_b": 0.004016,
-            "p_value": 0.2818527527605439,
-            "observed": "increase",
-            "verdict": "inconclusive"
-          },
-          "chars": {
-            "x_a": 12,
-            "n_a": 6638591,
-            "x_b": 6,
-            "n_b": 664122,
-            "p_a": 2e-06,
-            "p_b": 9e-06,
-            "p_value": 0.00034802455067661775,
-            "observed": "increase",
-            "verdict": "confirm"
-          }
-        }
-      },
-      {
-        "type": "trend",
-        "hypothesis": "Greater acceptance of interracial relationships would show up as more coverage of interracial marriage and mixed-race families in the New York Times.",
-        "lexicon": [
-          "interracial marriage",
-          "mixed-race",
-          "interracial couples"
-        ],
-        "topic": [
-          "marriage"
-        ],
-        "direction": "B",
-        "expected_change": "increase",
-        "tested": true,
-        "n_articles_a": 1116,
-        "n_articles_b": 655,
-        "chars_a": 5179346,
-        "chars_b": 345472,
-        "result": {
-          "presence": {
-            "x_a": 8,
-            "n_a": 1116,
-            "x_b": 4,
-            "n_b": 655,
-            "p_a": 0.007168,
-            "p_b": 0.006107,
-            "p_value": 0.7926257312834699,
-            "observed": "decrease",
             "verdict": "inconclusive"
           },
           "chars": {
             "x_a": 10,
-            "n_a": 5179346,
-            "x_b": 5,
-            "n_b": 345472,
-            "p_a": 2e-06,
-            "p_b": 1.4e-05,
-            "p_value": 1.4786560399215887e-05,
+            "n_a": 117867391,
+            "x_b": 7,
+            "n_b": 42627467,
+            "p_a": 0.0,
+            "p_b": 0.0,
+            "p_value": 0.1723980216004799,
             "observed": "increase",
-            "verdict": "confirm"
+            "verdict": "inconclusive"
           }
         }
       },
       {
-        "type": "contrast",
-        "hypothesis": "Coverage around Obama-era politics would shift from neutral diversity framing toward racially charged resentment framing, indicating growing racial hostility.",
+        "kind": "trend_topic",
+        "hypothesis": "Within coverage of housing and neighborhoods, references to explicit segregation practices declined between 2006 and 2011 as stated racial exclusion became less socially acceptable.",
+        "topic": [
+          "housing",
+          "neighborhood",
+          "fair housing",
+          "homeowners"
+        ],
+        "lexicon": [
+          "racial covenant",
+          "redlining",
+          "segregated neighborhoods",
+          "whites only"
+        ],
+        "direction": "B",
+        "expected_change": "decrease",
+        "tested": true,
+        "n_articles_a": 3499,
+        "n_articles_b": 1347,
+        "chars_a": 6923662,
+        "chars_b": 710316,
+        "result": {
+          "presence": {
+            "x_a": 2,
+            "n_a": 3499,
+            "x_b": 0,
+            "n_b": 1347,
+            "p_a": 0.000572,
+            "p_b": 0.0,
+            "p_value": 0.380139056267925,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 2,
+            "n_a": 6923662,
+            "x_b": 0,
+            "n_b": 710316,
+            "p_a": 0.0,
+            "p_b": 0.0,
+            "p_value": 0.6505677270175223,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          }
+        }
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Coverage shifted from framing racial exclusion as a live problem of overt bias toward framing race relations through the lens of a post-racial or diversity-celebrating narrative.",
         "lexicon_early": [
-          "diversity",
-          "civil rights",
-          "racial equality"
+          "racial profiling",
+          "hate crime",
+          "racial slur",
+          "white supremacist"
         ],
         "lexicon_late": [
-          "racial resentment",
-          "racial backlash",
-          "birther"
+          "post-racial",
+          "multiracial",
+          "diversity",
+          "racial harmony"
         ],
-        "topic": [
-          "Obama"
-        ],
-        "direction": "A",
+        "direction": "B",
         "tested": true,
-        "n_articles_a": 155,
-        "n_articles_b": 3177,
-        "chars_a": 245141,
-        "chars_b": 1598528,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
         "result": {
           "presence": {
             "independent": {
               "early": {
-                "x_a": 1,
-                "n_a": 155,
-                "x_b": 10,
-                "n_b": 3177,
-                "p_a": 0.006452,
-                "p_b": 0.003148,
-                "p_value": 0.4837896199557825,
+                "x_a": 142,
+                "n_a": 160430,
+                "x_b": 28,
+                "n_b": 92647,
+                "p_a": 0.000885,
+                "p_b": 0.000302,
+                "p_value": 4.974580192218525e-08,
                 "observed": "decrease"
               },
               "late": {
-                "x_a": 0,
-                "n_a": 155,
-                "x_b": 16,
-                "n_b": 3177,
-                "p_a": 0.0,
-                "p_b": 0.005036,
-                "p_value": 0.3758057840090232,
+                "x_a": 199,
+                "n_a": 160430,
+                "x_b": 139,
+                "n_b": 92647,
+                "p_a": 0.00124,
+                "p_b": 0.0015,
+                "p_value": 0.0845912603061858,
                 "observed": "increase"
               },
               "verdict": "inconclusive"
             },
             "dominance": {
-              "x_a": 1,
-              "n_a": 1,
-              "x_b": 10,
-              "n_b": 26,
-              "p_a": 1.0,
-              "p_b": 0.384615,
-              "p_value": 0.21906440661100834,
+              "x_a": 142,
+              "n_a": 341,
+              "x_b": 28,
+              "n_b": 167,
+              "p_a": 0.416422,
+              "p_b": 0.167665,
+              "p_value": 2.382781394416611e-08,
               "observed": "decrease",
+              "verdict": "confirm"
+            }
+          },
+          "chars": {
+            "independent": {
+              "early": {
+                "x_a": 276,
+                "n_a": 117867391,
+                "x_b": 39,
+                "n_b": 42627467,
+                "p_a": 2e-06,
+                "p_b": 1e-06,
+                "p_value": 1.2121669001885493e-08,
+                "observed": "decrease"
+              },
+              "late": {
+                "x_a": 288,
+                "n_a": 117867391,
+                "x_b": 183,
+                "n_b": 42627467,
+                "p_a": 2e-06,
+                "p_b": 4e-06,
+                "p_value": 1.5320533730545094e-09,
+                "observed": "increase"
+              },
+              "verdict": "confirm"
+            },
+            "dominance": {
+              "x_a": 276,
+              "n_a": 564,
+              "x_b": 39,
+              "n_b": 222,
+              "p_a": 0.489362,
+              "p_b": 0.175676,
+              "p_value": 6.661338147750939e-16,
+              "observed": "decrease",
+              "verdict": "confirm"
+            }
+          }
+        }
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Within articles about neighborhoods and integration, the framing moved from fears of white flight and resistance to newcomers toward descriptions of diverse, mixed neighborhoods.",
+        "topic": [
+          "neighborhood",
+          "integration",
+          "suburb",
+          "neighbors"
+        ],
+        "lexicon_early": [
+          "white flight",
+          "resist integration",
+          "racial tension",
+          "block busting"
+        ],
+        "lexicon_late": [
+          "mixed-income",
+          "diverse neighborhood",
+          "welcoming",
+          "multiracial community"
+        ],
+        "direction": "B",
+        "tested": true,
+        "n_articles_a": 3650,
+        "n_articles_b": 1325,
+        "chars_a": 9688866,
+        "chars_b": 737746,
+        "result": {
+          "presence": {
+            "independent": {
+              "early": {
+                "x_a": 4,
+                "n_a": 3650,
+                "x_b": 2,
+                "n_b": 1325,
+                "p_a": 0.001096,
+                "p_b": 0.001509,
+                "p_value": 0.7102631014741758,
+                "observed": "increase"
+              },
+              "late": {
+                "x_a": 12,
+                "n_a": 3650,
+                "x_b": 3,
+                "n_b": 1325,
+                "p_a": 0.003288,
+                "p_b": 0.002264,
+                "p_value": 0.5605324529853872,
+                "observed": "decrease"
+              },
+              "verdict": "inconclusive"
+            },
+            "dominance": {
+              "x_a": 4,
+              "n_a": 16,
+              "x_b": 2,
+              "n_b": 5,
+              "p_a": 0.25,
+              "p_b": 0.4,
+              "p_value": 0.5169370442644898,
+              "observed": "increase",
               "verdict": "inconclusive"
             }
           },
           "chars": {
             "independent": {
               "early": {
-                "x_a": 1,
-                "n_a": 245141,
-                "x_b": 16,
-                "n_b": 1598528,
-                "p_a": 4e-06,
-                "p_b": 1e-05,
-                "p_value": 0.36795236925661934,
+                "x_a": 6,
+                "n_a": 9688866,
+                "x_b": 2,
+                "n_b": 737746,
+                "p_a": 1e-06,
+                "p_b": 3e-06,
+                "p_value": 0.04802296680434104,
                 "observed": "increase"
               },
               "late": {
-                "x_a": 0,
-                "n_a": 245141,
-                "x_b": 20,
-                "n_b": 1598528,
-                "p_a": 0.0,
-                "p_b": 1.3e-05,
-                "p_value": 0.07989101358502104,
+                "x_a": 16,
+                "n_a": 9688866,
+                "x_b": 3,
+                "n_b": 737746,
+                "p_a": 2e-06,
+                "p_b": 4e-06,
+                "p_value": 0.13852807203750372,
                 "observed": "increase"
               },
-              "verdict": "inconclusive"
+              "verdict": "deny"
             },
             "dominance": {
-              "x_a": 1,
-              "n_a": 1,
-              "x_b": 16,
-              "n_b": 36,
-              "p_a": 1.0,
-              "p_b": 0.444444,
-              "p_value": 0.27150046279979545,
-              "observed": "decrease",
+              "x_a": 6,
+              "n_a": 22,
+              "x_b": 2,
+              "n_b": 5,
+              "p_a": 0.272727,
+              "p_b": 0.4,
+              "p_value": 0.5737143034207526,
+              "observed": "increase",
               "verdict": "inconclusive"
             }
+          }
+        }
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Across all coverage, mentions of openly racist neighbor complaints and similar exclusionary attitudes became less frequent between 2006 and 2011.",
+        "lexicon": [
+          "don't want neighbors",
+          "racist neighbor",
+          "white neighbors",
+          "bigotry"
+        ],
+        "direction": "B",
+        "expected_change": "decrease",
+        "tested": true,
+        "n_articles_a": 160430,
+        "n_articles_b": 92647,
+        "chars_a": 117867391,
+        "chars_b": 42627467,
+        "result": {
+          "presence": {
+            "x_a": 36,
+            "n_a": 160430,
+            "x_b": 11,
+            "n_b": 92647,
+            "p_a": 0.000224,
+            "p_b": 0.000119,
+            "p_value": 0.06020832417611177,
+            "observed": "decrease",
+            "verdict": "inconclusive"
+          },
+          "chars": {
+            "x_a": 43,
+            "n_a": 117867391,
+            "x_b": 14,
+            "n_b": 42627467,
+            "p_a": 0.0,
+            "p_b": 0.0,
+            "p_value": 0.7326112526078328,
+            "observed": "decrease",
+            "verdict": "inconclusive"
           }
         }
       }

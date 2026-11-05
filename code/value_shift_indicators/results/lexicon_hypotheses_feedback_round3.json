@@ -1,0 +1,1452 @@
+[
+  {
+    "country": "USA",
+    "question": "A006",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Religious commitment intensified between 2006 and 2011, so NYT coverage should show growth in mentions of large, high-engagement congregations and their leaders.",
+        "lexicon": [
+          "megachurch",
+          "mega-church",
+          "Joel Osteen",
+          "Rick Warren",
+          "Saddleback",
+          "Lakewood Church"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Secularization shows up in Sunday-observance norms: fewer Sabbath restrictions and more Sunday commerce, so coverage of Sunday shopping and blue-law repeal should grow.",
+        "topic": [
+          "Sunday",
+          "Sabbath",
+          "blue laws"
+        ],
+        "lexicon": [
+          "blue laws repealed",
+          "Sunday shopping",
+          "stores open on Sunday",
+          "Sunday sales ban"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Public debate moved away from explicitly religious public-school and civic symbols toward secular framing, so early coverage should favor school-prayer and religious-display language while late coverage favors secular framing.",
+        "lexicon_early": [
+          "school prayer",
+          "under God",
+          "Ten Commandments display",
+          "prayer in public schools"
+        ],
+        "lexicon_late": [
+          "secular humanism",
+          "religiously neutral",
+          "separation of church and state",
+          "godless"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Within Muslim-American coverage, a shift toward describing Muslims as devout rather than nominal would signal rising religious importance, so late coverage should favor observant-practice language over cultural-identity language.",
+        "topic": [
+          "Muslim",
+          "mosque",
+          "Islam"
+        ],
+        "lexicon_early": [
+          "cultural Muslims",
+          "nominal Muslims",
+          "Muslims who do not practice"
+        ],
+        "lexicon_late": [
+          "devout Muslims",
+          "practicing Muslims",
+          "observant Muslims"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Life-cycle rituals are being secularized: weddings and funerals increasingly take non-religious forms, so coverage of civil ceremonies should grow relative to religious officiation.",
+        "topic": [
+          "wedding",
+          "marriage",
+          "funeral"
+        ],
+        "lexicon": [
+          "civil ceremony",
+          "secular wedding",
+          "officiated by a judge",
+          "humanist funeral"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A098",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of religion increasingly uses explicit 'no religious preference' and church-switching language, reflecting a rise in people who say they are not members of any congregation.",
+        "lexicon": [
+          "no religious preference",
+          "church-hopping",
+          "stopped going to church",
+          "religious switchers",
+          "nonchurchgoer"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Among coverage of young adults and religion, references to drifting away from church increase, consistent with a shift toward not being a member of any congregation.",
+        "topic": [
+          "young adults",
+          "millennials"
+        ],
+        "lexicon": [
+          "drifted away from church",
+          "no religious preference",
+          "not affiliated with any church",
+          "skipped church"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Church coverage shifts from closure and vacancy language toward membership-growth language, consistent with a move toward active membership.",
+        "lexicon_early": [
+          "vacant pulpit",
+          "shrinking congregation",
+          "empty pews",
+          "church closing",
+          "declining membership"
+        ],
+        "lexicon_late": [
+          "membership drive",
+          "new members joined",
+          "growing congregation",
+          "church plant",
+          "rejoined the church"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Within coverage of Protestant congregations, language about regular participation gives way to language about members leaving or being removed from rolls, indicating a shift toward non-membership.",
+        "topic": [
+          "Protestant congregation",
+          "pastor",
+          "church rolls"
+        ],
+        "lexicon_early": [
+          "attended every Sunday",
+          "tithing members",
+          "active in ministry",
+          "volunteer leaders"
+        ],
+        "lexicon_late": [
+          "removed from the rolls",
+          "withdrew membership",
+          "transferred membership elsewhere",
+          "no longer belongs"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Church stewardship and pledge-campaign language increases during the economic downturn as congregations work to re-engage members, reflecting a move toward active membership.",
+        "lexicon": [
+          "stewardship campaign",
+          "pledge drive",
+          "capital campaign",
+          "giving commitment",
+          "member commitment Sunday"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A101",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of visible, mobilized union activity rises between 2006 and 2011 as the recession and the 2009-2011 budget fights pushed workers toward picket lines, strike votes and steward-led action, which would signal a shift toward active participation rather than passive or lapsed membership.",
+        "lexicon": [
+          "picket line",
+          "strike authorization",
+          "shop steward",
+          "rank-and-file"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Among nurses and hospital workers, coverage of members leaving or dropping their unions rises after 2006, as decertification fights and dues-free campaigns grew, which would indicate a shift toward non-membership in this sector.",
+        "topic": [
+          "nurses union",
+          "National Nurses United",
+          "hospital workers"
+        ],
+        "lexicon": [
+          "decertification",
+          "decertify",
+          "dues-free",
+          "opt out of the union"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Language about the old, institutional features of union membership (union halls, hiring halls, closed shops) gives way to language about individuals leaving or rejecting union membership between 2006 and 2011, indicating a move toward not being a member.",
+        "lexicon_early": [
+          "union hall",
+          "hiring hall",
+          "closed shop"
+        ],
+        "lexicon_late": [
+          "decertify",
+          "quit the union",
+          "dues-free"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of the Chicago Teachers Union, the framing moves from routine contract bargaining before 2006-2008 to strikes, pickets and walkouts by 2011, which would indicate a shift toward active membership among teachers.",
+        "topic": [
+          "Chicago Teachers Union",
+          "CTU"
+        ],
+        "lexicon_early": [
+          "contract talks",
+          "tentative agreement"
+        ],
+        "lexicon_late": [
+          "strike",
+          "picket line",
+          "walkout"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of SEIU and other Change to Win unions focused on recruiting new members increases, reflecting organizing drives and membership rallies that would point toward more active union membership.",
+        "topic": [
+          "SEIU",
+          "Change to Win",
+          "AFL-CIO"
+        ],
+        "lexicon": [
+          "organizing drive",
+          "new members",
+          "join the union",
+          "membership rally"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A124_12",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Mentions of specific non-Christian religious groups as American communities rose, which would reflect growing visibility and a shift toward accepting them as neighbors (Direction B).",
+        "lexicon": [
+          "Hindu American",
+          "Sikh American",
+          "Buddhist American",
+          "Hindu neighbors",
+          "Buddhist neighbors"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of the 2010 Park51 / Ground Zero mosque dispute should show heightened public opposition to a Muslim neighbor institution, pushing the attitude toward unwillingness to have different-faith neighbors (Direction A).",
+        "topic": [
+          "Park51",
+          "Ground Zero mosque",
+          "Cordoba House"
+        ],
+        "lexicon": [
+          "opposed the mosque",
+          "backlash",
+          "protest outside",
+          "heated opposition",
+          "mosque opponents"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Nativist and anti-Catholic vocabulary of exclusion should give way to the language of pluralism and inclusion over the period, indicating movement toward acceptance of religious neighbors (Direction B).",
+        "lexicon_early": [
+          "Know-Nothing",
+          "nativist",
+          "anti-Catholic",
+          "No Irish Need Apply"
+        ],
+        "lexicon_late": [
+          "multicultural",
+          "pluralistic society",
+          "religious inclusion",
+          "welcoming congregation"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Discussion of atheists as unfit or godless should be replaced by more neutral terms for nonbelievers as ordinary neighbors, showing greater acceptance of people with different beliefs (Direction B).",
+        "topic": [
+          "atheist",
+          "atheists"
+        ],
+        "lexicon_early": [
+          "atheists are immoral",
+          "unfit for office",
+          "godless"
+        ],
+        "lexicon_late": [
+          "nonbelievers",
+          "secular neighbors",
+          "humanist"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Local zoning and community disputes over visibly distinct religious groups, such as Hasidic and ultra-Orthodox Jewish expansion, should become more frequent, reflecting increased neighborhood resistance (Direction A).",
+        "lexicon": [
+          "eruv",
+          "Hasidic zoning",
+          "ultra-Orthodox neighbors",
+          "Satmar"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A124_42",
+    "hypotheses": [
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Earlier coverage of cohabiting partners used moralistic, sin-based vocabulary, while later coverage shifted to neutral or affirming descriptions of committed couples, so the share of stigmatizing terms should fall relative to affirming terms.",
+        "lexicon_early": [
+          "sinful lifestyle",
+          "godless",
+          "depraved",
+          "debauchery"
+        ],
+        "lexicon_late": [
+          "committed couple",
+          "loving relationship",
+          "stable household",
+          "happily partnered"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of the Tea Party and conservative activist politics became more frequent and more focused on defending traditional values after 2009, which should keep explicit moral-opposition language in the news at higher levels, pushing opinion toward continued or increased objection.",
+        "topic": [
+          "Tea Party",
+          "tea party",
+          "values voters"
+        ],
+        "lexicon": [
+          "traditional values",
+          "religious liberty",
+          "pro-family",
+          "natural marriage"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "As tolerance framed as a matter of personal business spread through public discourse, articles increasingly invoked 'live and let live' and 'none of my business' attitudes, reflecting a move toward declining objection to unmarried neighbors.",
+        "lexicon": [
+          "live and let live",
+          "none of my business",
+          "private choices",
+          "mind their own business"
+        ],
+        "direction": "B",
+        "expected_change": "decrease"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of polling and public-opinion surveys, earlier reports framed unmarried cohabitation as morally objectionable, while later reports framed it as widely accepted, so moral-condemnation vocabulary should give way to acceptance vocabulary in survey-related articles.",
+        "topic": [
+          "Gallup poll",
+          "Pew Research",
+          "survey finds"
+        ],
+        "lexicon_early": [
+          "immoral",
+          "morally wrong",
+          "objectionable",
+          "shameful"
+        ],
+        "lexicon_late": [
+          "widely accepted",
+          "tolerant",
+          "majority now accept",
+          "growing acceptance"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Increased public debate over religious-based opposition to gay rights after the 2008 California ballot fight may have reinforced conservative stances on family structure, so explicit religious-moral objection language should rise in coverage, consistent with increased mention of objection.",
+        "lexicon": [
+          "Prop 8 supporters",
+          "religious objection",
+          "God's design for marriage",
+          "moral objections to cohabitation"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A196",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of brazen, unapologetic personal conduct rises between 2006 and 2011, consistent with a decline in the emphasis on behaving properly (Direction B).",
+        "lexicon": [
+          "shameless",
+          "unapologetic",
+          "brazenly",
+          "unabashed",
+          "no shame"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Reporting on households and workers facing the Great Recession emphasizes self-restraint and frugality more often in 2011 than in 2006, consistent with more people saying proper, disciplined conduct matters to them (Direction A).",
+        "topic": [
+          "Great Recession",
+          "foreclosure",
+          "pink slip",
+          "home repossession"
+        ],
+        "lexicon": [
+          "tighten belts",
+          "frugal",
+          "self-restraint",
+          "living within means",
+          "thrift"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "The vocabulary used to describe personal conduct shifts from flaunting and boldness toward discretion and self-control between 2006 and 2011, consistent with a move toward Direction A.",
+        "lexicon_early": [
+          "shameless",
+          "brazen",
+          "unabashed",
+          "flaunted",
+          "showboating"
+        ],
+        "lexicon_late": [
+          "restraint",
+          "self-control",
+          "discretion",
+          "dignified",
+          "prudent"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Coverage of hip-hop and rap artists moves from describing decorous, mannered public personas toward describing outrageous, profanity-laced behavior, consistent with a decline in emphasis on proper conduct (Direction B).",
+        "topic": [
+          "rappers",
+          "hip-hop artists",
+          "rap music"
+        ],
+        "lexicon_early": [
+          "decorous",
+          "mannered",
+          "well-spoken",
+          "polished",
+          "gentlemanly"
+        ],
+        "lexicon_late": [
+          "profanity-laced",
+          "outrageous",
+          "obscene lyrics",
+          "unfiltered",
+          "bling"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of Occupy-style protests increasingly describes defiance of police orders and unruly conduct between 2006 and 2011, consistent with less emphasis on behaving properly (Direction B).",
+        "topic": [
+          "Occupy movement",
+          "demonstrators",
+          "protest encampment",
+          "sit-in"
+        ],
+        "lexicon": [
+          "civil disobedience",
+          "defied police",
+          "unruly",
+          "lawless",
+          "arrested protesters"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "D001_B",
+    "hypotheses": [
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Reports of family members defrauding or stealing from relatives rose in NYT coverage 2006-2011, reflecting growing distrust of family (Direction A).",
+        "topic": [
+          "Ponzi",
+          "fraud",
+          "embezzlement",
+          "swindle"
+        ],
+        "lexicon": [
+          "stole from his mother",
+          "relative embezzled",
+          "defrauded his own family",
+          "took money from his father",
+          "family member swindled"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Coverage shifted from describing family members as trusted custodians of money or decisions toward describing them as betrayers, indicating decreasing trust in family (Direction A).",
+        "lexicon_early": [
+          "handed over power of attorney",
+          "trusted his daughter with",
+          "entrusted the estate to",
+          "put his brother in charge"
+        ],
+        "lexicon_late": [
+          "betrayed by his daughter",
+          "stole from his father",
+          "turned against his mother",
+          "exploited by his own son"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "After the Madoff scandal, stories about investment losses shifted from families who trusted relatives with savings to families who sued or clawed back money from relatives, reflecting declining family trust (Direction A).",
+        "topic": [
+          "Madoff",
+          "Ponzi",
+          "clawback",
+          "investors"
+        ],
+        "lexicon_early": [
+          "family and friends invested",
+          "trusted his brother-in-law",
+          "pooled their savings with relatives"
+        ],
+        "lexicon_late": [
+          "sued relatives",
+          "clawback",
+          "family members lost savings",
+          "blamed his brother-in-law"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "During the recession, reliance on relatives for child care increased, with more parents leaving children with grandparents or relatives, reflecting greater trust in family (Direction B).",
+        "topic": [
+          "babysitting",
+          "day care",
+          "nanny",
+          "child care"
+        ],
+        "lexicon": [
+          "grandmother watches",
+          "relatives watch the children",
+          "trusted with the kids",
+          "left the children with"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Expressions of family members as one's closest and most dependable allies rose in NYT text, signaling increased trust in family (Direction B).",
+        "lexicon": [
+          "my brother is my best friend",
+          "we always have each other",
+          "blood is thicker",
+          "my sister has always been there",
+          "count on my family"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "D059",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of household and parenting arrangements increasingly treats shared parenting and male caregiving as ordinary, so egalitarian gender-role language rises, consistent with a shift toward disagreeing that men make better leaders.",
+        "lexicon": [
+          "dual-income household",
+          "stay-at-home dad",
+          "paternity leave",
+          "shared parenting"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "In coverage of the recession and jobs crisis, references to women as workers and breadwinners rise, reflecting a more egalitarian view of women's economic roles, which corresponds to Direction A.",
+        "topic": [
+          "recession",
+          "unemployment",
+          "stimulus package",
+          "jobs report"
+        ],
+        "lexicon": [
+          "women's employment",
+          "women workers",
+          "female breadwinner",
+          "mothers in the workforce"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "In national security and defense coverage, leadership framed around toughness and masculine strength becomes more prominent, reflecting a more traditional view of leadership, which corresponds to Direction B.",
+        "topic": [
+          "Afghanistan",
+          "war on terror",
+          "national security",
+          "commander in chief"
+        ],
+        "lexicon": [
+          "tough leader",
+          "strong leader",
+          "manly",
+          "steady hand"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Descriptions of women's professional roles shift from dated labels for working women toward executive and professional titles, indicating a move toward treating women as equally capable leaders, which corresponds to Direction A.",
+        "lexicon_early": [
+          "housewife",
+          "lady doctor",
+          "career girl",
+          "working woman"
+        ],
+        "lexicon_late": [
+          "businesswoman",
+          "chief executive",
+          "female executive",
+          "policymaker"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of Congress and state legislatures, women are increasingly described by their own legislative records rather than through family ties, reflecting greater acceptance of women as leaders, which corresponds to Direction A.",
+        "topic": [
+          "House of Representatives",
+          "Congress",
+          "state legislature",
+          "city council"
+        ],
+        "lexicon_early": [
+          "wife of the senator",
+          "daughter of",
+          "widow of",
+          "Mrs."
+        ],
+        "lexicon_late": [
+          "she sponsored",
+          "bill she introduced",
+          "her legislation",
+          "her voting record"
+        ],
+        "direction": "A"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "D060",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Direction A: Public attention to pay-equity legislation rose between 2006 and 2011, reflecting a growing mainstream commitment to equal treatment of women and men in economic life, which should coincide with less support for prioritizing a boy's education over a girl's.",
+        "lexicon": [
+          "Lilly Ledbetter",
+          "Paycheck Fairness Act",
+          "equal pay act",
+          "pay equity",
+          "wage discrimination lawsuit"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Direction B: Coverage of single-sex public schooling, which the Bush administration encouraged in 2006, increased over this period. Rising support for separating students by sex, often framed around boys' needs, should move opinion toward prioritizing boys' education.",
+        "topic": [
+          "public schools",
+          "school districts",
+          "school board",
+          "classroom",
+          "K-12 education"
+        ],
+        "lexicon": [
+          "single-sex classrooms",
+          "single-sex schools",
+          "all-boys school",
+          "same-sex schooling",
+          "gender-segregated classes"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Direction A: Paternalistic language that casts women as a protected or lesser category gave way to gender-neutral framing. A shift from such phrasing toward explicitly equal terms should track movement toward disagreeing that boys' education matters more.",
+        "lexicon_early": [
+          "the weaker sex",
+          "the fairer sex",
+          "ladies first",
+          "little woman",
+          "gentleman's agreement"
+        ],
+        "lexicon_late": [
+          "gender-neutral",
+          "genderless",
+          "unisex",
+          "gender-blind",
+          "both sexes equally"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Direction B: In family and inheritance coverage, language favoring sons gave way to language favoring sons again, or sons were framed as the primary heirs. A rise in son-first framing should reflect opinion moving toward prioritizing a boy's advancement.",
+        "topic": [
+          "inheritance",
+          "family finances",
+          "estate planning",
+          "family business",
+          "succession"
+        ],
+        "lexicon_early": [
+          "daughters too",
+          "equal inheritance",
+          "share equally among children",
+          "daughters and sons alike"
+        ],
+        "lexicon_late": [
+          "eldest son",
+          "sons first",
+          "son will inherit",
+          "pass the business to his son",
+          "male heir"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Direction B: Amid the 2008-2009 recession, coverage of male-dominated blue-collar work rose, and emphasis on skilled trades as a route for men without degrees grew. Such framing should move opinion toward valuing a boy's college education more highly than a girl's.",
+        "lexicon": [
+          "skilled trades",
+          "blue-collar jobs",
+          "men without degrees",
+          "construction workers",
+          "manufacturing jobs"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "D078",
+    "error": "bad JSON",
+    "raw": "{\"hypotheses\":[{\"kind\":\"trend_general\",\"hypothesis\":\"Coverage of women who run major companies became more frequent between 2006 and 2011, which would reflect and reinforce a shift toward rejecting the claim that men make better executives (Direction A).\",\"lexicon\":[\"Indra Nooyi\",\"Ursula Burns\",\"Meg Whitman\",\"Marissa Mayer\",\"Virginia Rometty\"],\"direction\":\"A\",\"expected_change\":\"increase\"},{\"kind\":\"trend_topic\",\"hypothesis\":\"Debate over mandatory gender quotas for corporate boards grew after the Norway model drew attention, signaling greater public acceptance of women as business leaders (Direction A).\",\"topic\":[\"corporate boards\",\"board seats\",\"board of directors\",\"company directors\"],\"lexicon\":[\"gender quota\",\"mandatory quota\",\"Norway\",\"quota law\"],\"direction\":\"A\",\"expected_change\":\"increase\"},{\"kind\":\"contrast_general\",\"hypothesis\":\"Coverage moved from describing women mainly as housewives or homemakers toward describing men as stay-at-home fathers and caregivers, reflecting more egalitarian views of work and family roles (Direction A).\",\"lexicon_early\":[\"housewife\",\"homemaker\",\"housewives\",\"stay-at-home wife\"],\"lexicon_late\":[\"stay-at-home dads\",\"Mr. Mom\",\"stay-at-home fathers\",\"working fathers"
+  },
+  {
+    "country": "USA",
+    "question": "E023",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Mass mobilization around 2009-2010 protest rallies (Glenn Beck's 2010 events and related grassroots gatherings) should rise in NYT coverage, reflecting a broader increase in public political engagement and interest (Direction B).",
+        "lexicon": [
+          "Restore Honor rally",
+          "Rally to Restore Sanity",
+          "Taxed Enough Already",
+          "9/12 Project"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of presidential and congressional debates should increasingly describe audiences tuning out or switching away, signaling declining political interest (Direction A).",
+        "topic": [
+          "presidential debate",
+          "debate",
+          "televised debate",
+          "debate stage"
+        ],
+        "lexicon": [
+          "changed the channel",
+          "switched off",
+          "zoned out",
+          "nodded off",
+          "flipped past"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Descriptions of citizens shifting from passive disengagement to active participation (organizing, calling representatives) should be more common in later years than the earlier period, consistent with rising interest (Direction B).",
+        "lexicon_early": [
+          "apathetic",
+          "politically disengaged",
+          "checked out",
+          "sleepwalking through",
+          "sat on the sidelines"
+        ],
+        "lexicon_late": [
+          "called my congressman",
+          "sign-up sheet",
+          "organizing meeting",
+          "phone tree",
+          "mobilized volunteers"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Coverage of Supreme Court confirmation hearings should shift from language of riveted public attention early on to language of ignored or unwatched proceedings later, signaling declining interest (Direction A).",
+        "topic": [
+          "confirmation hearings",
+          "Supreme Court nomination",
+          "Sotomayor",
+          "Roberts"
+        ],
+        "lexicon_early": [
+          "riveted",
+          "hanging on every hearing",
+          "watched the hearings",
+          "glued to the screen"
+        ],
+        "lexicon_late": [
+          "skipped the hearings",
+          "hardly anyone watched",
+          "ratings slumped",
+          "nobody tuned in"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Dismissive remarks about Congress and Washington as a whole, beyond specific policy complaints, should become more frequent, reflecting growing public indifference toward politics (Direction A).",
+        "lexicon": [
+          "Congress is a joke",
+          "who cares about Washington",
+          "nobody cares about Congress",
+          "tired of the whole circus"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E217",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of minimally invasive and robotic medical technologies becomes more frequent and more upbeat between 2006 and 2011, reflecting growing public confidence that technology improves health outcomes (Direction A).",
+        "lexicon": [
+          "robotic surgery",
+          "laparoscopic",
+          "angioplasty",
+          "stent",
+          "MRI scan"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Food-safety stories framed around technological or industrial failure (contamination outbreaks in produce and meat) rise in frequency, signaling growing distrust of technology-driven food production (Direction B).",
+        "topic": [
+          "food",
+          "produce",
+          "meat",
+          "spinach"
+        ],
+        "lexicon": [
+          "salmonella",
+          "E. coli",
+          "listeria",
+          "outbreak",
+          "tainted"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "References shift from obsolete personal-computing hardware toward consumer social and mobile platforms, indicating coverage increasingly features technologies that feel convenient and life-enhancing (Direction A).",
+        "lexicon_early": [
+          "dial-up",
+          "floppy disk",
+          "CD-ROM",
+          "Palm Pilot"
+        ],
+        "lexicon_late": [
+          "Siri",
+          "Instagram",
+          "Pinterest",
+          "Groupon"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Coverage of scientists and research shifts from describing findings as settled and consensual toward describing misconduct and retractions, reflecting eroding trust in science (Direction B).",
+        "topic": [
+          "scientists",
+          "researchers",
+          "peer review"
+        ],
+        "lexicon_early": [
+          "settled",
+          "consensus",
+          "landmark"
+        ],
+        "lexicon_late": [
+          "Climategate",
+          "misconduct",
+          "fabricated",
+          "retraction"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Green-technology coverage centered on electric vehicles and home energy systems grows more prominent and more enthusiastic, reflecting rising public belief that technology makes daily life easier and cleaner (Direction A).",
+        "topic": [
+          "electric vehicle",
+          "solar",
+          "green technology"
+        ],
+        "lexicon": [
+          "Chevy Volt",
+          "Nissan Leaf",
+          "plug-in hybrid",
+          "smart meter",
+          "rooftop solar"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E234",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Consumer digital-platform vocabulary rises over 2006-2011 as everyday technology products become mainstream and are framed as improving daily life, pushing public evaluation of science and technology toward 'better off.'",
+        "lexicon": [
+          "cloud computing",
+          "Kindle",
+          "iPad",
+          "YouTube",
+          "Wi-Fi hotspot"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of climate science increasingly features credibility attacks such as hacked emails, fraud allegations, and skeptic campaigns, which should shift perceptions of science's net effect toward 'worse off' after the 2009 controversy.",
+        "topic": [
+          "climate science",
+          "climate research",
+          "climate scientists"
+        ],
+        "lexicon": [
+          "Climategate",
+          "hacked emails",
+          "scientific fraud",
+          "retracted study",
+          "climate skeptic"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Coverage shifts from celebrating landmark scientific achievements to reporting misconduct and fabricated results, reflecting a move toward the view that science makes the world worse off.",
+        "lexicon_early": [
+          "Human Genome Project",
+          "Hubble telescope",
+          "Apollo program",
+          "Dolly the sheep",
+          "moon landing"
+        ],
+        "lexicon_late": [
+          "scientific misconduct",
+          "research fraud",
+          "fabricated data",
+          "retracted study",
+          "falsified results"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Vaccine coverage shifts from safety-scare framing to population-benefit framing, which should move evaluations of science's effect toward 'better off.'",
+        "topic": [
+          "vaccine",
+          "vaccination",
+          "immunization"
+        ],
+        "lexicon_early": [
+          "vaccine scare",
+          "autism link",
+          "mercury preservative",
+          "adverse reaction",
+          "vaccine refusal"
+        ],
+        "lexicon_late": [
+          "herd immunity",
+          "lives saved",
+          "eradication",
+          "vaccination rate",
+          "immunization program"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Stories about drug safety failures and unintended consequences of medical technology grow more frequent, reinforcing a perception that scientific and technological advances create hidden harms and leave the world worse off.",
+        "lexicon": [
+          "drug recall",
+          "unintended consequences",
+          "medical device failure",
+          "FDA warning letter",
+          "pulled from market"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "F114A",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "As the Great Recession deepened, NYT coverage increasingly framed benefit-taking as a normal, even rational, response to a rigged economy, so acceptance of claiming benefits one is not entitled to should rise toward 'Always justifiable'.",
+        "lexicon": [
+          "everybody games the system",
+          "everyone does it",
+          "paid into the system",
+          "owed to us",
+          "the rich get away with it"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Heavy coverage of federal health-care fraud enforcement (strike forces, indictments, False Claims Act recoveries) should signal a tougher moral stance on defrauding public programs, pushing responses toward 'Never justifiable'.",
+        "topic": [
+          "Medicare fraud",
+          "Medicaid fraud",
+          "health care fraud",
+          "False Claims Act"
+        ],
+        "lexicon": [
+          "strike force",
+          "indicted",
+          "billion in false claims",
+          "zero tolerance",
+          "pleaded guilty"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Early 2006-era coverage cast benefit recipients as able-bodied people who should face work requirements and time limits; by 2011 the language shifted toward people who had paid in and earned their benefits, indicating greater acceptance of claiming them.",
+        "lexicon_early": [
+          "work requirement",
+          "time limits",
+          "able-bodied",
+          "dependency"
+        ],
+        "lexicon_late": [
+          "earned",
+          "paid in",
+          "just needed a hand",
+          "nothing left to lose"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Stories about people collecting benefits while working off the books or hiding income increasingly appeared with prosecutorial, condemnatory language, suggesting a hardening view that such claims are never justifiable.",
+        "lexicon": [
+          "working off the books",
+          "unreported income",
+          "collected benefits while working",
+          "overpayment recovery",
+          "wrongly collected"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Within coverage of unemployment checks, the early vocabulary of idleness and freeloading gave way after 2008 to language of layoffs and desperation, a shift toward viewing claims on jobless aid as justifiable.",
+        "topic": [
+          "unemployment checks",
+          "jobless checks",
+          "extended jobless aid"
+        ],
+        "lexicon_early": [
+          "freeloaders",
+          "couch",
+          "lazy",
+          "won't look for work"
+        ],
+        "lexicon_late": [
+          "laid off",
+          "desperate",
+          "can't make rent",
+          "paid into the system"
+        ],
+        "direction": "A"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "F199",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of legal remedies for abused partners grew between 2006 and 2011, reflecting stronger norms that domestic violence is never acceptable, so mentions of restraining orders should rise.",
+        "lexicon": [
+          "restraining order",
+          "restraining orders",
+          "order of protection"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of Afghanistan's women's rights, including the Elimination of Violence Against Women law, rose over 2006-2011. Heavier reporting on violence against women there should reflect a shift toward viewing wife beating as never justifiable.",
+        "topic": [
+          "Afghanistan",
+          "Karzai",
+          "Taliban",
+          "Kabul"
+        ],
+        "lexicon": [
+          "violence against women",
+          "Elimination of Violence Against Women",
+          "women's rights"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Early coverage framed family life through traditional family values language, while later coverage shifted to culture-war and moral-decline framing. If the public moved toward accepting male dominance in the home, this backlash language should grow relative to the earlier vocabulary.",
+        "lexicon_early": [
+          "family values",
+          "traditional family"
+        ],
+        "lexicon_late": [
+          "moral decline",
+          "culture war",
+          "men's rights"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "A men's rights and fathers' rights backlash gained visibility in the late 2000s. Growing talk of male victimhood in family courts would be consistent with more public sympathy for male authority in the home.",
+        "lexicon": [
+          "men's rights",
+          "fathers' rights",
+          "male victims"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Early NFL coverage excused athletes' off-field violence with 'boys will be boys' framing. Later coverage, around the league's personal conduct policy and high-profile arrests, used accountability language. A move toward 'never justifiable' should show up as this shift.",
+        "topic": [
+          "NFL",
+          "athletes",
+          "linebacker",
+          "quarterback"
+        ],
+        "lexicon_early": [
+          "boys will be boys",
+          "rough play",
+          "just a misunderstanding"
+        ],
+        "lexicon_late": [
+          "personal conduct policy",
+          "arrested for assault",
+          "suspended indefinitely"
+        ],
+        "direction": "B"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "G007_33_B",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of routine vetting of people already in one's personal circle (roommates, caregivers, relatives handling money) rises between 2006 and 2011, reflecting less default trust in acquaintances.",
+        "lexicon": [
+          "background check",
+          "changed the locks",
+          "pre-screened",
+          "vetted my"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Among online social-network and dating contexts, language of vouching and personal endorsement for acquaintances increases between 2006 and 2011, consistent with a shift toward complete trust in known people.",
+        "topic": [
+          "Facebook friends",
+          "online dating",
+          "social network"
+        ],
+        "lexicon": [
+          "took him at his word",
+          "vouched for him",
+          "trusted circle",
+          "on my word"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Descriptions of how people approach those they know shift from defensive precaution toward open, faith-based reliance between 2006 and 2011.",
+        "lexicon_early": [
+          "stranger danger",
+          "lock your doors",
+          "keep an eye on"
+        ],
+        "lexicon_late": [
+          "took on faith",
+          "built on trust",
+          "extended credit to"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of household helpers and house-sitters, descriptions move from handing over keys and responsibility toward cutting off access and screening, between 2006 and 2011.",
+        "topic": [
+          "roommates",
+          "house sitter",
+          "babysitter"
+        ],
+        "lexicon_early": [
+          "left in charge",
+          "handed over the keys",
+          "lent the car"
+        ],
+        "lexicon_late": [
+          "changed the locks",
+          "cut off access",
+          "pre-screened"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "In family business and inheritance coverage, language of severing family financial ties (disinheritance, revoked authority) increases between 2006 and 2011, reflecting less trust in relatives.",
+        "topic": [
+          "family business",
+          "siblings",
+          "inheritance"
+        ],
+        "lexicon": [
+          "cut out of the will",
+          "disinherited",
+          "changed the passwords",
+          "revoked power of attorney"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "G026",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of second-generation youth advocacy grew between 2006 and 2011, so references to children brought to or raised in the US by immigrant parents became more common, consistent with a rising share of respondents reporting an immigrant mother.",
+        "lexicon": [
+          "DREAM Act",
+          "DREAMers",
+          "Deferred Action",
+          "Dreamers"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "In coverage of bilingual and language-access issues, mentions of immigrant households rose over 2006-2011, reflecting a larger population of children with foreign-born mothers.",
+        "topic": [
+          "bilingual education",
+          "English learners",
+          "Spanish at home",
+          "language access"
+        ],
+        "lexicon": [
+          "immigrant household",
+          "foreign-born parent",
+          "mother who immigrated"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Descriptions of Americans shifted from hyphenated immigrant-origin labels toward old-stock ancestry language, so the attitude moved toward a 'No' answer about having an immigrant mother.",
+        "lexicon_early": [
+          "immigrant stock",
+          "immigrant origin",
+          "hyphenated Americans"
+        ],
+        "lexicon_late": [
+          "old-stock Americans",
+          "Mayflower descendants",
+          "colonial ancestry"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of immigration enforcement, framing moved from describing migrants as lone illegal entrants to describing them as members of families and communities, consistent with more respondents reporting immigrant mothers.",
+        "topic": [
+          "Secure Communities",
+          "Arizona law",
+          "E-Verify",
+          "immigration enforcement"
+        ],
+        "lexicon_early": [
+          "alien smuggling",
+          "illegal entrants"
+        ],
+        "lexicon_late": [
+          "immigrant workers",
+          "immigrant children",
+          "immigrant community"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Interest in genealogy and ethnic ancestry, prompted by census ancestry data, grew over 2006-2011, with more coverage of families tracing their roots to European origins, consistent with a shift toward 'No' about immigrant mothers.",
+        "topic": [
+          "census ancestry",
+          "genealogy",
+          "family history",
+          "ancestry.com"
+        ],
+        "lexicon": [
+          "German ancestry",
+          "Irish ancestry",
+          "Scotch-Irish",
+          "ancestral homeland"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  }
+]

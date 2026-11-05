@@ -1,0 +1,17 @@
+Country: {country}
+Time points: {year_a} and {year_b}
+Attitude measured: {attitude_description}
+
+Between {year_a} and {year_b}, the average answer moved in one of these two directions:
+Direction A: {direction_a}
+Direction B: {direction_b}
+
+In earlier rounds, you proposed these hypotheses and they were tested against real New York Times coverage ({window_start}-{window_end}), each one measured two ways: "presence" (fraction of matching articles containing the lexicon) and "chars" (occurrences per 100,000 characters). Verdict per measure: "confirm" = significant and matched what you predicted, "deny" = significant but opposite, "inconclusive" = not significant either way.
+
+{hypotheses_block}
+
+{votes_summary}
+
+Propose 5 NEW hypotheses -- different lexica and topics than above -- for Direction A or Direction B, that would be easier to measure reliably in NYT text. Use a mix of the four kinds (at least one of each if you have ideas for all four). For "trend_general" return: `kind` ("trend_general"), `hypothesis`, `lexicon`, `direction`, `expected_change`. For "trend_topic" return: `kind` ("trend_topic"), `hypothesis`, `topic`, `lexicon`, `direction`, `expected_change`. For "contrast_general" return: `kind` ("contrast_general"), `hypothesis`, `lexicon_early`, `lexicon_late`, `direction`. For "contrast_topic" return: `kind` ("contrast_topic"), `hypothesis`, `topic`, `lexicon_early`, `lexicon_late`, `direction`.
+
+Return JSON: {{"hypotheses": [...5 total...]}}
