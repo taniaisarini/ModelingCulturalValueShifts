@@ -28,8 +28,18 @@ settled yet — this is a snapshot to work from, not a plan. Update this doc as 
 >   `test_contrast` checked offline against small hand-built fake article lists (no real NYT data, no LLM calls) -- all correct,
 >   including a real presence-vs-occurrence divergence caught in the first fixture attempt (presence fraction can fall even as
 >   raw occurrences rise, if the same articles repeat the word more rather than more articles using it at all).
-> - **Not yet run for real** -- needs an explicit go-ahead for the actual `--run` LLM call, separate from the design approval
->   above, per project convention.
+> - **Run for real (2026-11-05), claude-haiku-5-5, all 5 pilot questions.** First pass: 2/5 succeeded at `max_tokens=1500`, 3/5
+>   truncated mid-JSON (same failure mode the original bulk run hit) -- retried just those 3 at `max_tokens=3000` (not the
+>   shared default, same reasoning as the original fix) and all 3 came back clean. 25 hypotheses total (15 trend, 10 contrast),
+>   0 untestable (every one had the required structured fields -- the whole point of the schema change).
+> - **Confirm-only accuracy, both metrics, decided-only (ties excluded), n=5 (too small for significance, reported as-is):**
+>   presence-fraction 2/4 correct (50%); occurrences-per-100k-chars 1/3 correct (33%). Both at or below chance, consistent with
+>   every other approach tried so far in this project (free-text language hypotheses: 55.7%; no-hypothesis baseline: 51.6%) --
+>   structuring the hypothesis schema did not, on this small sample, produce better signal than the free-text version, though
+>   5 questions is far too few to conclude anything beyond "not an obvious win." Per-question breakdown in
+>   `results/lexicon_hypotheses_pilot_tested.json`; true direction was "A" for all 5 pilot questions (coincidence of which
+>   5 were picked, not a bug -- cross-checked F118 against the already-established result from the original pilot).
+> - Not yet scaled past the 5-question pilot or run through a feedback-loop round; no dashboard built for this experiment yet.
 
 > **Value-shift indicator system (2026-11-02 to 2026-11-04, new, self-contained in `code/value_shift_indicators/`; built on an
 > unmerged worktree branch `worktree-value-shift-indicators`).** Explores whether an LLM can predict which direction a WVS question
