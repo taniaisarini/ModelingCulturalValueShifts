@@ -1,7 +1,184 @@
 # Status
 
-Inventory of what exists in this repo; the dated notes below are the running log (last updated 2026-10-29). No research question is
+Inventory of what exists in this repo; the dated notes below are the running log (last updated 2026-11-05). No research question is
 settled yet — this is a snapshot to work from, not a plan. Update this doc as code/data/results change.
+
+> **Structured, lexicon-based hypothesis experiment (2026-11-05, new, `code/value_shift_indicators/`; prompt approved before
+> use).** Follow-up to the language-hypothesis experiment below, constraining the hypothesis *type* instead of leaving it fully
+> open-ended: each hypothesis is now a fixed JSON shape, not a free-text sentence with markers inferred post hoc. Two types,
+> either optionally restricted to a `topic` word/phrase list (same mechanism as a lexicon, filtering which articles count at
+> all): **trend** (one lexicon, frequency rises/falls from year_a to year_b) and **contrast** (two lexicons, one expected to
+> dominate near year_a and the other near year_b -- a replacement/crossover pattern). New files (not committed):
+> `prompts/{system,user}/generate_lexicon_hypotheses.txt`, `run_lexicon_hypotheses.py` (generation, dry run by default),
+> `test_lexicon_hypotheses.py` (mechanical scoring, no LLM calls, reuses `test_language_hypotheses.load_nyt_texts`/`total_chars`
+> and `analysis_tools.two_proportion_z`).
+> - Every hypothesis is scored by **both** rate metrics side by side (not merged into one verdict), to compare which tracks
+>   reality better: article-presence fraction (like the old `count_matches()`) and raw occurrences per 100,000 characters
+>   (`count_occurrences()`, new -- the old pipeline only ever counted presence, never multiple mentions per article).
+> - Contrast hypotheses are additionally scored by **both** of two methods, each under both rate metrics (4 verdicts total):
+>   `independent` (two separate trend tests, one per lexicon, confirmed only if both hold) and `dominance` (one test on the
+>   early lexicon's *share* of early+late mentions, expected to fall over time). All of this reuses `two_proportion_z` exactly
+>   as-is -- no new statistic, just new (x, n) pairs fed into it (occurrence count over character count for the "chars" metric,
+>   a valid normal-approximation for a rare-event rate comparison).
+> - **Scope: a 5-question pilot** (USA wave5->6: F118 reused from the original pilot for continuity, plus A001/A168A/A165/A124_02
+>   spanning the other three usable significant-change formats), not the full 128-question set -- same caution the original
+>   language-hypothesis experiment used before scaling up.
+> - Dry run confirmed all 5 prompts render correctly (5/5 cache misses, 0 calls sent) and matches the exact text shown to and
+>   approved by the user. `filter_by_topic`/`count_presence`/`count_occurrences`/`rate_test`/`combine_verdicts`/`test_trend`/
+>   `test_contrast` checked offline against small hand-built fake article lists (no real NYT data, no LLM calls) -- all correct,
+>   including a real presence-vs-occurrence divergence caught in the first fixture attempt (presence fraction can fall even as
+>   raw occurrences rise, if the same articles repeat the word more rather than more articles using it at all).
+> - **Not yet run for real** -- needs an explicit go-ahead for the actual `--run` LLM call, separate from the design approval
+>   above, per project convention.
+
+> **Value-shift indicator system (2026-11-02 to 2026-11-04, new, self-contained in `code/value_shift_indicators/`; built on an
+> unmerged worktree branch `worktree-value-shift-indicators`).** Explores whether an LLM can predict which direction a WVS question
+> moved using only independent evidence (NYT Archive metadata, GDELT US events) -- the LLM is never told it's WVS and (for the
+> prediction test cases) never told the true direction. Three steps: `generate_indicators` (1 call: >=5 falsifiable indicators per
+> direction, e.g. "NYT coverage of X should increase"), `measure_indicator`/`data_sources.py` (no LLM, pulls real NYT keyword-match
+> rates and GDELT event-type rates for the indicator), `aggregate_judge` (1 call per round, up to 3 rounds: given all evidence so
+> far, decide a direction or ask for up to 5 more indicators, forced to decide by round 3). All prompts approved before use per
+> project convention; all calls through `fast_llm.py`, cached.
+> - **First test case (2026-11-02): USA, F118 ("justifiable: homosexuality"), wave5->6 (2006->2011), gpt-4.1-mini.** Correctly
+>   landed on the true direction (more accepting) in round 1, but the per-indicator confirm/deny design (10 independent judgments,
+>   no aggregation) left no single answer -- redesigned to the aggregate-judge loop above.
+> - **10-question run (gpt-4.1-mini): 5/10 correct, but decisions landed 8 "B" vs 2 "A"** despite a near-50/50 true split --
+>   investigated with an order-bias probe (`test_order_bias.py`: same evidence, A/B labels swapped) and ruled out: only 2/10
+>   flipped, so the skew was evidence-driven, not a position/order artifact. Leading suspect: GDELT's indexed event volume grew
+>   ~10x from 2006 to 2011 (more digitized sources, not more real events), so "rate per 1,000 total events" indicators are
+>   mechanically biased toward "decrease" regardless of topic.
+> - **Schema expansion (2026-11-02), approved then added:** GDELT indicators can specify actor types, actor-name/location
+>   substrings, Goldstein score, and an alternate `gdelt_baseline_codes` set (narrower denominator than "all events", to fight the
+>   volume-growth bias above); NYT indicators can restrict to sections and now also match `keywords[].name` tags. Hard guard added
+>   in `build_case()` against picking `year_a`/`year_b` on opposite sides of the GDELT 1.0/2.0 boundary (2015-02-18).
+> - **20-question run (10 new + the original 10, gpt-4.1-mini): 8/20 correct.** Usage of the new fields was lopsided --
+>   `gdelt_actor_types` and `nyt_sections` used on 100% of applicable indicators, but `gdelt_baseline_codes` (the volume-growth
+>   fix) only 4% and `gdelt_actor_name_contains` (the only real topic-targeting mechanism GDELT has) only 2% -- the model mostly
+>   skipped the two fields meant to fix the diagnosed problems. **Also found: `REL` (religious), invented for the
+>   `gdelt_actor_types` prompt vocabulary, is not a real GDELT actor-type code** (checked a real month's distinct values: GOV, BUS,
+>   EDU, COP, JUD, CVL, MED, LEG, MIL, MNC, HLH, LAB, CRM, ... -- no REL). 9 of 19 `REL`-filtered indicators across 4 questions got
+>   a silent, wrong 0/0 "no evidence" instead of actually being measured. Not yet fixed in the schema.
+
+> **Direct hands-on evidence rounds (2026-11-02, by Claude, not the automated pipeline above): 15 USA questions total (5 then
+> 10 more), real NYT/GDELT lookups, own reasoning and real-world historical knowledge used openly (not blind).** Findings:
+> - **Media volume vs. survey-measured sentiment can point in exactly opposite directions.** Life satisfaction rose slightly
+>   2006->2011 despite recession/unemployment-crisis NYT coverage rising +686%; confidence in companies rose despite Occupy Wall
+>   Street coverage spiking 0.06->4.05/1k; belief that "hard work brings success" strengthened even as "American Dream"-framed
+>   coverage *fell*. Three independent cases, all economic-attitude questions -- political/cultural/religious questions (Tea
+>   Party/debt-ceiling, the 2010 Park51/"Ground Zero mosque" controversy, gay-rights coverage) tracked the true direction well.
+> - **GDELT's institutional-actor disapprove/reject rate failed on every domestic-institutional-confidence question tested (3/3:
+>   confidence in government, Congress, political parties), while NYT confirmed all three of the same questions.** Likely cause,
+>   untested: the raw-events partition filters by event *location* (US soil) not actor *nationality*, so a "GOV actor disapproves"
+>   event can be a foreign government's statement made in the US (UN, embassies) rather than Americans disapproving of their own
+>   government. `Actor1CountryCode`/`Actor2CountryCode` columns exist in the stored data and were never filtered on.
+> - **NYT keyword search is brittle to exact phrasing.** `["Wisconsin collective bargaining", "Scott Walker union"]` returned 0/0
+>   for 2011 despite the Wisconsin Act 10 fight being one of the biggest domestic stories that year; single looser terms
+>   ("Wisconsin", "Scott Walker", "collective bargaining") found it immediately (28-209 matches). Confirmed independently: GDELT's
+>   `REL` actor-type bug above.
+> - Confirmed real-world knowledge is doing real work here: several hand-picked indicators (Tea Party, debt-ceiling standoff,
+>   Park51) and one *independently* generated one in the later language-hypothesis round converged on the same specific events --
+>   but this also means the exercise shows the data *contains* a detectable signal when you already know what to look for, not
+>   that a blind system could *find* it (see explicit discussion in conversation; not written up as code).
+
+> **Claude/Anthropic support added to `code/fast_llm.py` (2026-11-04).** Dispatches on model-name prefix (`"claude-"` vs default)
+> to the Anthropic Messages API or the existing OpenAI path; same `run_llm`/`plan_llm` call either way. Claude calls require
+> `max_tokens` explicitly (no API default) and `ANTHROPIC_API_KEY`. Ported into the isolated worktree from an uncommitted copy in
+> the shared checkout -- **not yet committed on `main`.** `anthropic` added to the environment (installed via pip in this
+> session; not yet added to `environment.yml`).
+
+> **Language-hypothesis experiment (2026-11-04, new prompt, new scope, also in `code/value_shift_indicators/`): can an LLM
+> predict value shifts from patterns in *how* people write, not just what gets covered?** Modeled loosely on the
+> post-9/11 "I" -> "we" pronoun-shift finding (Cohn, Mehl & Pennebaker 2004), but the model is given no worked example, just an
+> explanation of the hypothesis category, to avoid anchoring it to one pattern type. `generate_language_hypotheses` prompt: given
+> a value shift (blind to true direction, no "markers"/operationalization forced -- deliberately deferred), produce 5 hypotheses
+> about language patterns in NYT coverage. Piloted on F118 with `claude-haiku-5-5`: 5 genuinely style/framing-flavored hypotheses
+> (e.g. "equality/civil-rights" vs. "sin/immoral" framing; one specifically about quote-attribution, not just word frequency).
+> - **Scaled to all 128 USA wave5->6 significant changes with a usable (two-ended) scale** -- `bulk_cases.py` builds attitude
+>   descriptions mechanically from the codebook (`parsed_question` + `choices` in `parsed_survey_data_cleaned.jsonl`), filtered via
+>   `question_categories.csv` to `ordinal_scale`/`numeric_scale`/`binary`/`mention_flag` formats (not hand-authored per question
+>   like `cases.py`). Checked real per-country wave5/6 fieldwork years for the usual 5-country set (EGY 2008/2013, THA 2007/2013,
+>   UKR 2006/2011, URY 2006/2011, HKG 2005/2014) but **scoped this run to USA only**: NYT is a plausible domestic-discourse proxy
+>   for the US but not for the other 5 (foreign-correspondent coverage of another country is a different, weaker premise).
+>   128/128 succeeded (claude-haiku-5-5, 643 hypotheses, ~15s wall-clock; 2 initial JSON truncations at `max_tokens=1500`, retried
+>   individually at 2500 and patched in rather than bumping the shared default and invalidating the other 126's cache).
+>   Published as a browsable artifact (private): https://claude.ai/artifact/9ieYsZZgwq6MBTQgzGSf8c.
+> - **Quick mechanical test against real NYT text, no new LLM calls** (`test_language_hypotheses.py`): markers extracted from each
+>   hypothesis's own quoted example words/phrases (616/643 had >=1; the rest are pure structural claims, left untested). Two
+>   real bugs found and fixed: (1) `document_type != "article"` entries (multimedia/audio, ~textless) grew from ~2% to ~11% of the
+>   NYT archive 2006->2011, inflating the denominator -- filtered to articles only; (2) marker extraction kept trailing
+>   punctuation from quotes like `'crucial,'` -- stripped. **Result: 101 confirm / 219 deny / 296 inconclusive; only 59/128
+>   questions reached a non-tie predicted direction, accuracy on those 28/59 (47.5%, roughly chance).** Root cause of the
+>   persistent deny-heavy skew: NYT's indexed article count fell ~42% 2006->2011 (160,430 -> 92,647) even restricted to articles,
+>   so most quoted-phrase rates mechanically decline regardless of topic, while ~90% of generated hypotheses predict "increase" --
+>   a structural mismatch between the hypotheses and this test, not necessarily evidence the hypotheses are wrong. Known
+>   remaining weakness: some extracted markers are generic dictionary words quoted for emphasis (e.g. "friends" alone, 3,863
+>   matches) -- not fixed, needs a specificity judgment call rather than a quick regex tweak.
+
+> **Language-hypothesis normalization fix + multi-round feedback loop (2026-11-04, same day, continuation).** Root-caused the
+> deny-heavy skew above: NYT text per article shrank from ~734 chars (2006) to ~460 chars (2011), more than the ~42% article-count
+> drop alone -- `test_language_hypotheses.py` now rates matches per 100,000 corpus *characters* instead of per article
+> (`total_chars()`); confirmed by the confirm/deny balance flipping (101/219 -> 218/102) and more questions deciding (59 -> 82/128).
+> **Scoring correction (explicit user call): a "deny" verdict does NOT vote for the opposite direction** -- only "confirm"
+> casts a vote; a direction wins a question only if it has strictly more confirmed hypotheses than the other side, else "tie".
+> Confirm-only on round 1 alone: 42 correct / 40 wrong / 46 tied (accuracy on the 82 decided: 51.2%, chance).
+> - **Round 2 (new prompt, approved before use, `prompts/{system,user}/generate_language_hypotheses_round2.txt`):** for every
+>   question still tied, feed the model its own prior hypotheses with their real measured verdict/rates (not the true direction)
+>   and ask for 5 new ones. Ran on all 46 confirm-only ties (`run_language_hypotheses_round2.py` + a second pass,
+>   `run_language_hypotheses_round_n.py`, for the 28 that the first pass's deny-based tie list had missed -- see
+>   `run_language_hypotheses_round_n.py:load_cumulative()` for the exact, bug-fixed cumulative-vote logic). Combined round 1+2,
+>   confirm-only: 52 correct / 49 wrong / 27 tied (decided-only accuracy 51.5%, chance; z~0.30, p~0.76).
+> - **Rounds 3-5 (same reused prompt template, cumulative hypothesis history each round, run by a background agent):** only
+>   re-queried whatever was still tied going into that round (27 -> 14 -> 9 -> 6). **Final result, all 128 questions, rounds
+>   1-5 combined: 68 correct (53.1%) / 54 wrong (42.2%) / 6 tied (4.7%); decided-only accuracy 68/122 = 55.7% (z~1.27 vs 50%,
+>   p~0.20 -- directionally above chance but not significant).** Of the 6 still tied after 5 rounds: 3 have never had a single
+>   hypothesis confirmed in either direction across all 5 rounds (`A124_42`, `E025B`, `F121`), 3 are genuine nonzero ties
+>   (`D060` 1-1, `E012` 2-2, `E222B` 3-3). **Takeaway: 5 rounds cut the tie rate 46->6 (87%), but accuracy on each round's
+>   newly-decided questions stays at chance -- the climbing overall-accuracy number is the shrinking tie bucket, not the model
+>   getting better with more tries.** New files (not committed): `run_language_hypotheses_round2.py`,
+>   `run_language_hypotheses_round_n.py`, `test_language_hypotheses_round2(_extra|_round_n).py`,
+>   `results/language_hypotheses_round{2,2_extra,3,4,5}(_tested)?.json`.
+> - **Dashboard updated:** https://claude.ai/artifact/9ieYsZZgwq6MBTQgzGSf8c now shows, per question, a correct/wrong/tie
+>   status chip, a small two-row bar chart (Direction A / Direction B, segments = confirm/deny/inconclusive/untested
+>   hypothesis counts, colors matched to the per-hypothesis verdict badges), percent + a client-side chance-test
+>   p-value on the summary tiles, and a shared legend (versions 2-6; dataviz skill's status-color convention used
+>   throughout -- color is never the only cue, counts/symbols always sit next to it).
+
+> **No-hypothesis direct baseline for comparison (2026-11-04/05): claude-haiku-5-5 asked to just predict the
+> direction with no NYT/GDELT evidence at all** -- the same style of baseline already run for EGY/THA/UKR/URY/HKG
+> with gpt-4.1-mini etc. (`run_direction_baseline_set.py`), now for the same 128 USA questions as the
+> language-hypothesis experiment above (`code/run_direction_baseline_usa128.py`, not committed). Reused
+> `direction_baseline.py`'s existing, already-approved prompt unchanged.
+> - **Found a real mismatch first:** `direction_baseline.py`'s own significance gate (`change_detection.py`) only
+>   keeps 13 of the 128 -- the 128 were actually selected by a different, older significance test
+>   (`WVS_dataloader.py`'s per-respondent KS test, `data/significant_changes/ks/*.csv`, p<0.05). Per explicit user
+>   decision, the new script bypasses `change_detection.py`'s gate entirely and builds truth straight from the KS
+>   csvs for all 128, reusing `build_prompt()`/`parse_answer()` unchanged.
+> - **claude-haiku-5-5 needed `max_tokens=800`, not the 250 the gpt baselines use** (and rejects an explicit
+>   `temperature` entirely, unlike every OpenAI model run so far) -- at 250, 118/128 responses were cut off mid-
+>   reasoning before the required `ANSWER:` line; at 500, still 24/128; at 800, 128/128 parsed.
+> - **Result: 66/128 correct (51.6%), z=0.35 vs. chance, p=0.72 -- not significant**, i.e. indistinguishable from
+>   guessing. Essentially the same accuracy as the full 5-round NYT-hypothesis pipeline above (53.1%/55.7%
+>   decided-only, itself only marginally closer to significant at p=0.20) -- feeding in measured NYT language
+>   evidence has not yet beaten the model just guessing from its own background knowledge.
+> - **The raw survey CSV (`data/WVS_Time_Series_1981-2022_csv_v5_0.csv`, gitignored, 1.4 GB) is not in this
+>   worktree** (worktrees don't get gitignored files) -- symlinked from the main checkout's `data/` for this
+>   session; a fresh worktree needs the same symlink or a copy before `direction_baseline.py`-based scripts work.
+> - **Alternate scoring tried (recomputed from existing stored verdicts, no new measurement): deny as a -0.5
+>   penalty on its own hypothesis's direction** (confirm +1, deny -0.5, inconclusive 0; net score decides) instead
+>   of confirm-only voting. Result: 67 correct / 58 wrong / 3 tie (vs. 68/54/6 confirm-only) -- fewer ties but
+>   accuracy *drops slightly* (53.6% decided-only vs. 55.7%, p=0.42 vs. 0.20). Not adopted; confirm-only remains
+>   the scoring rule in use.
+> - **Known unresolved methodology gap, found while explaining a specific hypothesis** (the cohabiting-couples one
+>   for D060): `extract_markers()` pulls every quoted phrase out of a hypothesis with no idea which clause it
+>   belongs to, so a hypothesis that pairs a rising term with a falling term (e.g. "'cohabiting couples' rises
+>   while 'living in sin' declines") gets all markers dumped into one undifferentiated bucket and tested as a
+>   single combined rate -- not what the hypothesis actually claims. Also no context/topic conditioning at all
+>   (a hypothesis asking for a term "in housing/census contexts" is matched anywhere in the article). Not fixed;
+>   likely affects a meaningful fraction of the 1,123 generated hypotheses, not just this one.
+> - **Proposed but not yet run:** a forced-final-decision prompt (new prompt, drafted and shown to the user for
+>   approval, not yet confirmed/sent) for the 6 questions still tied after 5 rounds (`A124_42`, `E025B`, `F121`
+>   at 0-0 confirmed-either-way; `D060` 1-1, `E012` 2-2, `E222B` 3-3) -- feed back every hypothesis from every
+>   round and force a single A/B answer instead of proposing more hypotheses.
 
 > **Row-level GDELT pull, "Step 2" (done 2026-10-29): `code/gdelt_pull_raw_events.py`, full range 2003-11-01..2023-07-31, all 29 WVS
 > countries.** Row-level (not aggregated) events via `events_raw()`: 18 of the 23 columns in `gdelt_bq.ALLOWED_COLUMNS` (drops

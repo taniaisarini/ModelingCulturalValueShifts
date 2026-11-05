@@ -1,0 +1,241 @@
+{
+  "report": [
+    {
+      "direction": "A",
+      "indicator": "Increased frequency of New York Times articles with positive coverage of same-sex marriage legalization efforts.",
+      "source": "nyt",
+      "expected_change": "increase",
+      "verdict": "confirm",
+      "reasoning": "The frequency of New York Times articles with positive coverage of same-sex marriage legalization efforts nearly doubled from 2006 to 2011, indicating increased acceptance as predicted.",
+      "metrics": {
+        "source": "nyt",
+        "keywords": [
+          "same-sex marriage",
+          "marriage equality",
+          "gay marriage legalization",
+          "LGBT rights",
+          "marriage equality bill"
+        ],
+        "year_a_matches": 144,
+        "year_a_total": 163480,
+        "year_a_rate": 0.8808416931734769,
+        "year_b_matches": 179,
+        "year_b_total": 102969,
+        "year_b_rate": 1.7383872816090278
+      }
+    },
+    {
+      "direction": "A",
+      "indicator": "More GDELT events categorized as 01 MAKE PUBLIC STATEMENT with positive tone supporting LGBTQ+ rights.",
+      "source": "gdelt",
+      "expected_change": "increase",
+      "verdict": "deny",
+      "reasoning": "The proportion of positive MAKE PUBLIC STATEMENT events decreased by 9% and the average tone also declined from 5.64 to 5.31, indicating less positive support for LGBTQ+ rights rather than an increase.",
+      "metrics": {
+        "source": "gdelt",
+        "event_roots": [
+          "01"
+        ],
+        "year_a_matches": 153757,
+        "year_a_total": 969651,
+        "year_a_rate": 158.56942343172955,
+        "year_b_matches": 1488241,
+        "year_b_total": 10259907,
+        "year_b_rate": 145.05404386219095,
+        "tone_year_a": 5.640047818413955,
+        "tone_year_b": 5.308644529061791
+      }
+    },
+    {
+      "direction": "A",
+      "indicator": "Increase in GDELT events tagged as 14 PROTEST with positive tone, representing pro-LGBTQ+ rights demonstrations.",
+      "source": "gdelt",
+      "expected_change": "increase",
+      "verdict": "confirm",
+      "reasoning": "There is a clear 15% increase in the rate of positive-tone PROTEST events related to LGBTQ+ rights from 2006 to 2011, supporting the predicted increase in accepting attitudes.",
+      "metrics": {
+        "source": "gdelt",
+        "event_roots": [
+          "14"
+        ],
+        "year_a_matches": 5715,
+        "year_a_total": 969651,
+        "year_a_rate": 5.893873156424322,
+        "year_b_matches": 69588,
+        "year_b_total": 10259907,
+        "year_b_rate": 6.782517619311754,
+        "tone_year_a": 5.373131595567174,
+        "tone_year_b": 5.458447077950048
+      }
+    },
+    {
+      "direction": "A",
+      "indicator": "More New York Times articles discussing anti-discrimination laws protecting LGBTQ+ individuals.",
+      "source": "nyt",
+      "expected_change": "increase",
+      "verdict": "deny",
+      "reasoning": "The number of articles discussing anti-discrimination laws protecting LGBTQ+ individuals decreased from 2 to 0, contradicting the predicted increase.",
+      "metrics": {
+        "source": "nyt",
+        "keywords": [
+          "anti-discrimination law",
+          "LGBT protections",
+          "sexual orientation discrimination",
+          "hate crime legislation"
+        ],
+        "year_a_matches": 2,
+        "year_a_total": 163480,
+        "year_a_rate": 0.012233912405187179,
+        "year_b_matches": 0,
+        "year_b_total": 102969,
+        "year_b_rate": 0.0
+      }
+    },
+    {
+      "direction": "A",
+      "indicator": "Increase in GDELT events involving 05 ENGAGE IN DIPLOMATIC COOPERATION or 03 EXPRESS INTENT TO COOPERATE related to LGBTQ+ rights initiatives.",
+      "source": "gdelt",
+      "expected_change": "increase",
+      "verdict": "deny",
+      "reasoning": "The proportion of relevant GDELT events slightly decreased by 1% from 2006 to 2011, contrary to the predicted increase in diplomatic cooperation related to LGBTQ+ rights.",
+      "metrics": {
+        "source": "gdelt",
+        "event_roots": [
+          "03",
+          "05"
+        ],
+        "year_a_matches": 144237,
+        "year_a_total": 969651,
+        "year_a_rate": 148.75145799880576,
+        "year_b_matches": 1514463,
+        "year_b_total": 10259907,
+        "year_b_rate": 147.60981751588974,
+        "tone_year_a": 6.627889052588524,
+        "tone_year_b": 6.565064255686316
+      }
+    },
+    {
+      "direction": "B",
+      "indicator": "Increase in New York Times articles expressing opposition or criticism of homosexuality or LGBTQ+ rights.",
+      "source": "nyt",
+      "expected_change": "increase",
+      "verdict": "deny",
+      "reasoning": "The data shows a clear decrease of 55% in articles expressing opposition or criticism of homosexuality from 2006 to 2011, contrary to the predicted increase.",
+      "metrics": {
+        "source": "nyt",
+        "keywords": [
+          "homosexuality criticism",
+          "opposition to gay marriage",
+          "LGBT backlash",
+          "traditional marriage",
+          "anti-LGBT rhetoric"
+        ],
+        "year_a_matches": 7,
+        "year_a_total": 163480,
+        "year_a_rate": 0.042818693418155127,
+        "year_b_matches": 2,
+        "year_b_total": 102969,
+        "year_b_rate": 0.019423321582223776
+      }
+    },
+    {
+      "direction": "B",
+      "indicator": "More GDELT events tagged as 11 DISAPPROVE or 12 REJECT with negative tone targeting LGBTQ+ rights or homosexuality acceptance.",
+      "source": "gdelt",
+      "expected_change": "increase",
+      "verdict": "deny",
+      "reasoning": "The number of disapprove or reject events per 1,000 decreased by 13%, indicating less negative coverage rather than an increase as predicted.",
+      "metrics": {
+        "source": "gdelt",
+        "event_roots": [
+          "11",
+          "12"
+        ],
+        "year_a_matches": 100146,
+        "year_a_total": 969651,
+        "year_a_rate": 103.28045863924237,
+        "year_b_matches": 918690,
+        "year_b_total": 10259907,
+        "year_b_rate": 89.54174730823583,
+        "tone_year_a": 5.4954056690749296,
+        "tone_year_b": 5.152636965833173
+      }
+    },
+    {
+      "direction": "B",
+      "indicator": "Increase in GDELT events categorized as 14 PROTEST with negative tone representing anti-LGBTQ+ demonstrations or rallies.",
+      "source": "gdelt",
+      "expected_change": "increase",
+      "verdict": "inconclusive",
+      "reasoning": "Although the number of PROTEST events increased by 15%, the average tone remained positive and did not indicate an increase in negative anti-LGBTQ+ demonstrations specifically.",
+      "metrics": {
+        "source": "gdelt",
+        "event_roots": [
+          "14"
+        ],
+        "year_a_matches": 5715,
+        "year_a_total": 969651,
+        "year_a_rate": 5.893873156424322,
+        "year_b_matches": 69588,
+        "year_b_total": 10259907,
+        "year_b_rate": 6.782517619311754,
+        "tone_year_a": 5.373131595567174,
+        "tone_year_b": 5.458447077950048
+      }
+    },
+    {
+      "direction": "B",
+      "indicator": "More New York Times articles covering legislative attempts to restrict LGBTQ+ rights or ban same-sex marriage.",
+      "source": "nyt",
+      "expected_change": "increase",
+      "verdict": "confirm",
+      "reasoning": "The number of relevant articles increased by 77% from 2006 to 2011, indicating more coverage of legislative attempts to restrict LGBTQ+ rights, consistent with the predicted increase.",
+      "metrics": {
+        "source": "nyt",
+        "keywords": [
+          "ban same-sex marriage",
+          "anti-LGBT legislation",
+          "restrict LGBTQ rights",
+          "defense of marriage act",
+          "traditional marriage law"
+        ],
+        "year_a_matches": 17,
+        "year_a_total": 163480,
+        "year_a_rate": 0.10398825544409102,
+        "year_b_matches": 19,
+        "year_b_total": 102969,
+        "year_b_rate": 0.18452155503112586
+      }
+    },
+    {
+      "direction": "B",
+      "indicator": "Increase in GDELT events involving 10 DEMAND or 17 COERCE with negative tone aimed at limiting LGBTQ+ rights or expression.",
+      "source": "gdelt",
+      "expected_change": "increase",
+      "verdict": "confirm",
+      "reasoning": "The number of relevant events per 1,000 increased by 14% and the average tone became more negative, indicating increased negative actions aimed at limiting LGBTQ+ rights as predicted.",
+      "metrics": {
+        "source": "gdelt",
+        "event_roots": [
+          "10",
+          "17"
+        ],
+        "year_a_matches": 60417,
+        "year_a_total": 969651,
+        "year_a_rate": 62.3079850379157,
+        "year_b_matches": 730623,
+        "year_b_total": 10259907,
+        "year_b_rate": 71.21146419748248,
+        "tone_year_a": 5.222736604192698,
+        "tone_year_b": 4.1528584882993735
+      }
+    }
+  ],
+  "ground_truth": {
+    "mean_wave_5": 4.502978723404255,
+    "mean_wave_6": 5.396943029180176,
+    "change": 0.8939643057759206,
+    "true_direction": "A",
+    "p_value": 6.330725487581733e-10
+  }
+}

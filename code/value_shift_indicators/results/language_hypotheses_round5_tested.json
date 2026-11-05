@@ -1,0 +1,864 @@
+[
+  {
+    "question": "A102",
+    "hypotheses": [
+      {
+        "hypothesis": "Coverage of party platform and resolution fights increasingly describes ordinary county and state committee members 'voting on resolutions,' 'amending the platform,' or 'debating planks' at party meetings, portraying rank-and-file members as active participants in party governance.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "voting on resolutions",
+          "amending the platform",
+          "debating planks"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 0,
+        "rate_a": 0.0,
+        "rate_b": 0.0,
+        "p_value": 1.0,
+        "observed": "decrease",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Articles on party fundraising increasingly report that local supporters 'donated their time and money' or 'hosted fundraisers in their homes' on the party's behalf, framing such hosts as members doing hands-on work for the party.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "donated their time and money",
+          "hosted fundraisers in their homes"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 0,
+        "rate_a": 0.0,
+        "rate_b": 0.0,
+        "p_value": 1.0,
+        "observed": "decrease",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Stories on candidate races increasingly say voters 'care more about the candidate than the party' or 'vote for the person, not the party label,' presenting loyalty to individuals over the party as a common stance among the electorate.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "or"
+        ],
+        "tested": true,
+        "matches_a": 147389,
+        "matches_b": 87934,
+        "rate_a": 125.046,
+        "rate_b": 206.285,
+        "p_value": 0.0,
+        "observed": "increase",
+        "verdict": "confirm"
+      },
+      {
+        "hypothesis": "Reporting increasingly cites Pew Research Center or Gallup survey findings that party identification has 'slipped' or 'declined,' with figures on the share of Americans who 'do not identify with a party' used to explain the parties' weaker grip on the public.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "slipped",
+          "declined"
+        ],
+        "tested": true,
+        "matches_a": 809,
+        "matches_b": 285,
+        "rate_a": 0.686,
+        "rate_b": 0.669,
+        "p_value": 3.752553823233029e-13,
+        "observed": "decrease",
+        "verdict": "deny"
+      },
+      {
+        "hypothesis": "Coverage of party politics increasingly uses the phrase 'more people are staying out of party politics' or 'fewer people are attending party meetings,' with officials describing lower meeting turnout and less interest in party business.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "or"
+        ],
+        "tested": true,
+        "matches_a": 147389,
+        "matches_b": 87934,
+        "rate_a": 125.046,
+        "rate_b": 206.285,
+        "p_value": 0.0,
+        "observed": "increase",
+        "verdict": "confirm"
+      }
+    ],
+    "votes": {
+      "A": 0,
+      "B": 2
+    },
+    "predicted_direction": "B",
+    "true_direction": "B",
+    "correct": true
+  },
+  {
+    "question": "A124_42",
+    "hypotheses": [
+      {
+        "hypothesis": "Articles on cohabitation increasingly describe living together as something that 'undermines' or 'weakens' marriage, using those verbs as the framing for the arrangement.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "undermines",
+          "weakens"
+        ],
+        "tested": true,
+        "matches_a": 68,
+        "matches_b": 16,
+        "rate_a": 0.058,
+        "rate_b": 0.038,
+        "p_value": 0.0008331780058137284,
+        "observed": "decrease",
+        "verdict": "deny"
+      },
+      {
+        "hypothesis": "Research-based stories about cohabiting couples increasingly report that such couples are 'more likely to break up' or have 'less stable' relationships, presenting the arrangement as a risk factor.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "more likely to break up",
+          "less stable"
+        ],
+        "tested": true,
+        "matches_a": 6,
+        "matches_b": 0,
+        "rate_a": 0.005,
+        "rate_b": 0.0,
+        "p_value": 0.06267927220506841,
+        "observed": "decrease",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Coverage of civil rights and benefits increasingly groups 'gay and unmarried straight couples' together as equally deserving partners, using this parallel construction to present unmarried heterosexual couples as legitimate households.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "gay and unmarried straight couples"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 0,
+        "rate_a": 0.0,
+        "rate_b": 0.0,
+        "p_value": 1.0,
+        "observed": "decrease",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Commentary on young adults increasingly states that 'marriage is optional' or that marriage is 'no longer necessary' before couples set up a home together, treating marriage as a personal choice rather than a precondition.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "marriage is optional",
+          "no longer necessary"
+        ],
+        "tested": true,
+        "matches_a": 1,
+        "matches_b": 3,
+        "rate_a": 0.001,
+        "rate_b": 0.007,
+        "p_value": 0.11095453465004668,
+        "observed": "increase",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Stories about young adults' living arrangements less often describe unmarried co-residence as a 'sign of moral decline' or 'moral decay' of society, and such moral-decline language drops from feature and trend coverage.",
+        "direction": "B",
+        "expected_change": "decrease",
+        "markers": [
+          "sign of moral decline",
+          "moral decay"
+        ],
+        "tested": true,
+        "matches_a": 1,
+        "matches_b": 1,
+        "rate_a": 0.001,
+        "rate_b": 0.002,
+        "p_value": 0.6942148792756906,
+        "observed": "increase",
+        "verdict": "inconclusive"
+      }
+    ],
+    "votes": {
+      "A": 0,
+      "B": 0
+    },
+    "predicted_direction": "tie",
+    "true_direction": "B",
+    "correct": null
+  },
+  {
+    "question": "D060",
+    "hypotheses": [
+      {
+        "hypothesis": "Stories about family college savings more often use the phrase 'pay for her daughter's college,' presenting a daughter's degree as a parent's primary educational expense, which signals an equal-investment view of girls' schooling.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "pay for her daughter",
+          "presenting a daughter"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 0,
+        "rate_a": 0.0,
+        "rate_b": 0.0,
+        "p_value": 1.0,
+        "observed": "decrease",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Education coverage more often describes students as 'sons and daughters alike,' treating boys and girls as interchangeable recipients of college opportunity rather than ranking sons first.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "sons and daughters alike"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 0,
+        "rate_a": 0.0,
+        "rate_b": 0.0,
+        "p_value": 1.0,
+        "observed": "decrease",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Labor and economics stories more often refer to 'men without a college degree,' framing a degree as a necessity for men's earning power and implicitly favoring investment in sons' higher education.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "men without a college degree"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 0,
+        "rate_a": 0.0,
+        "rate_b": 0.0,
+        "p_value": 1.0,
+        "observed": "decrease",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Family and parenting features more often use the phrase 'send their sons to college' as a standard expectation, with daughters absent from the sentence, signaling that a son's degree is the default priority.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "send their sons to college"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 0,
+        "rate_a": 0.0,
+        "rate_b": 0.0,
+        "p_value": 1.0,
+        "observed": "decrease",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Education policy stories more often invoke 'gender parity in schools' as an achieved or accepted goal, framing girls' and boys' schooling as equivalent and not requiring a boy-first priority.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "gender parity in schools",
+          "and boys"
+        ],
+        "tested": true,
+        "matches_a": 56,
+        "matches_b": 15,
+        "rate_a": 0.048,
+        "rate_b": 0.035,
+        "p_value": 0.006762936188750457,
+        "observed": "decrease",
+        "verdict": "deny"
+      }
+    ],
+    "votes": {
+      "A": 0,
+      "B": 0
+    },
+    "predicted_direction": "tie",
+    "true_direction": "A",
+    "correct": null
+  },
+  {
+    "question": "E012",
+    "hypotheses": [
+      {
+        "hypothesis": "Coverage of veterans and active-duty troops increasingly uses the phrase 'thank you for your service' and 'support the troops' as a framing for military life, signaling greater public readiness to fight for the country.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "thank you for your service",
+          "support the troops"
+        ],
+        "tested": true,
+        "matches_a": 14,
+        "matches_b": 0,
+        "rate_a": 0.012,
+        "rate_b": 0.0,
+        "p_value": 0.00446249638691798,
+        "observed": "decrease",
+        "verdict": "deny"
+      },
+      {
+        "hypothesis": "Articles on national security increasingly describe the military's role as a way to 'defend the homeland' or 'protect the homeland' against threats, signaling stronger willingness among citizens to take up arms.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "or"
+        ],
+        "tested": true,
+        "matches_a": 147389,
+        "matches_b": 87934,
+        "rate_a": 125.046,
+        "rate_b": 206.285,
+        "p_value": 0.0,
+        "observed": "increase",
+        "verdict": "confirm"
+      },
+      {
+        "hypothesis": "Coverage of American foreign policy increasingly describes the country as having fought 'after a decade of war', using this framing to portray the public and military as exhausted and unwilling to commit to another conflict.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "after a decade of war"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 0,
+        "rate_a": 0.0,
+        "rate_b": 0.0,
+        "p_value": 1.0,
+        "observed": "decrease",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Reporting on the wars increasingly emphasizes 'the cost of the wars' in trillions of dollars and budget terms, signaling public resistance to committing forces to future fighting.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "the cost of the wars"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 0,
+        "rate_a": 0.0,
+        "rate_b": 0.0,
+        "p_value": 1.0,
+        "observed": "decrease",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Stories about Afghanistan increasingly center on a 'withdrawal timetable' or 'withdrawal from Afghanistan' as the dominant policy question, signaling declining public appetite for sustained combat.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "withdrawal timetable",
+          "withdrawal from Afghanistan"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 7,
+        "rate_a": 0.0,
+        "rate_b": 0.016,
+        "p_value": 0.0004983789386119319,
+        "observed": "increase",
+        "verdict": "confirm"
+      }
+    ],
+    "votes": {
+      "A": 1,
+      "B": 1
+    },
+    "predicted_direction": "tie",
+    "true_direction": "B",
+    "correct": null
+  },
+  {
+    "question": "E025B",
+    "hypotheses": [
+      {
+        "hypothesis": "NYT coverage of municipal and school-board disputes more often reports that petitions were \"delivered to\" officials or the council, describing completed signature sets handed over as a routine step, which reflects more signed petitions being produced and submitted.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "delivered to"
+        ],
+        "tested": true,
+        "matches_a": 49,
+        "matches_b": 19,
+        "rate_a": 0.042,
+        "rate_b": 0.045,
+        "p_value": 0.1378593351968429,
+        "observed": "increase",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "NYT stories about campaigns more often describe readers or residents who \"added their names to\" a cause, using this phrase for personal signing and treating it as a common act of participation.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "added their names to"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 0,
+        "rate_a": 0.0,
+        "rate_b": 0.0,
+        "p_value": 1.0,
+        "observed": "decrease",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "NYT coverage of refusal in public encounters becomes less frequent, with phrases such as \"would not sign\" or \"refused to add their name\" appearing less often, suggesting fewer approached citizens declining to put their name to a petition.",
+        "direction": "B",
+        "expected_change": "decrease",
+        "markers": [
+          "would not sign",
+          "refused to add their name"
+        ],
+        "tested": true,
+        "matches_a": 4,
+        "matches_b": 2,
+        "rate_a": 0.003,
+        "rate_b": 0.005,
+        "p_value": 0.8677460430633823,
+        "observed": "increase",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "NYT stories about petition campaigns more often mention \"paid signature gatherers\" or \"professional circulators\" as the main source of signatures, implying that volunteers are less willing to sign or circulate petitions on their own.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "paid signature gatherers",
+          "professional circulators"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 0,
+        "rate_a": 0.0,
+        "rate_b": 0.0,
+        "p_value": 1.0,
+        "observed": "decrease",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Commentary and opinion pieces in the NYT more often dismiss petition signing as \"a token gesture\" or \"mere symbolism,\" framing signing as a substitute for real action that fewer people are bothering to take.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "a token gesture",
+          "mere symbolism"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 0,
+        "rate_a": 0.0,
+        "rate_b": 0.0,
+        "p_value": 1.0,
+        "observed": "decrease",
+        "verdict": "inconclusive"
+      }
+    ],
+    "votes": {
+      "A": 0,
+      "B": 0
+    },
+    "predicted_direction": "tie",
+    "true_direction": "B",
+    "correct": null
+  },
+  {
+    "question": "E114",
+    "hypotheses": [
+      {
+        "hypothesis": "Articles about leaders who bypass parliament or elections more often use the phrase \"free and fair elections\" in the lead or first two paragraphs, treating a competitive vote as the expected standard that is being abandoned.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "free and fair elections"
+        ],
+        "tested": true,
+        "matches_a": 1,
+        "matches_b": 7,
+        "rate_a": 0.001,
+        "rate_b": 0.016,
+        "p_value": 0.0028072700421355457,
+        "observed": "increase",
+        "verdict": "confirm"
+      },
+      {
+        "hypothesis": "Stories about unelected or emergency rule more often describe the situation as a \"constitutional crisis\" in the headline or first paragraph, framing the suspension of normal lawmaking as a breakdown rather than a routine policy choice.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "constitutional crisis"
+        ],
+        "tested": true,
+        "matches_a": 10,
+        "matches_b": 3,
+        "rate_a": 0.008,
+        "rate_b": 0.007,
+        "p_value": 0.31116354565903914,
+        "observed": "decrease",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Coverage of leaders who suspend the constitution or extend emergency powers more often quotes opposition figures or civic groups saying the \"will of the people\" has been ignored, presenting popular mandate as the legitimate basis of government.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "will of the people"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 1,
+        "rate_a": 0.0,
+        "rate_b": 0.002,
+        "p_value": 0.18820243947666748,
+        "observed": "increase",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Economic reporting on governments that rule without legislative debate more often credits them with an \"economic miracle\" or sustained \"stability and growth,\" presenting concentrated executive authority as the source of prosperity.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "economic miracle",
+          "stability and growth"
+        ],
+        "tested": true,
+        "matches_a": 7,
+        "matches_b": 10,
+        "rate_a": 0.006,
+        "rate_b": 0.023,
+        "p_value": 0.0572427557963775,
+        "observed": "increase",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Articles about politics in struggling democracies more often describe a leader as \"tough but effective\" or \"a no-nonsense leader\" who delivers results, presenting a firm, unconstrained executive as competent rather than as a threat.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "tough but effective",
+          "a no-nonsense leader"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 0,
+        "rate_a": 0.0,
+        "rate_b": 0.0,
+        "p_value": 1.0,
+        "observed": "decrease",
+        "verdict": "inconclusive"
+      }
+    ],
+    "votes": {
+      "A": 1,
+      "B": 0
+    },
+    "predicted_direction": "A",
+    "true_direction": "A",
+    "correct": true
+  },
+  {
+    "question": "E222B",
+    "hypotheses": [
+      {
+        "hypothesis": "Leisure coverage in 2011 uses staycation framing, such as 'staycation' or 'vacationing at home,' describing people replacing trips with home-based leisure rather than taking them.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "staycation",
+          "vacationing at home"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 7,
+        "rate_a": 0.0,
+        "rate_b": 0.016,
+        "p_value": 0.0004983789386119319,
+        "observed": "increase",
+        "verdict": "confirm"
+      },
+      {
+        "hypothesis": "Articles about recreation and hobbies increasingly emphasize 'free or low-cost' options, presenting pastimes as chosen because cheaper alternatives are needed instead of the paid activities people used to do.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "free or low-cost"
+        ],
+        "tested": true,
+        "matches_a": 7,
+        "matches_b": 3,
+        "rate_a": 0.006,
+        "rate_b": 0.007,
+        "p_value": 0.6644350435206272,
+        "observed": "increase",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Stories about leisure and personal pursuits increasingly cite 'too busy to' or 'too busy for' as the reason people do not engage in activities, portraying time pressure as a reason for not participating.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "too busy to",
+          "too busy for"
+        ],
+        "tested": true,
+        "matches_a": 7,
+        "matches_b": 5,
+        "rate_a": 0.006,
+        "rate_b": 0.012,
+        "p_value": 0.716039206252788,
+        "observed": "increase",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Coverage of everyday activities increasingly describes people 'on Facebook,' 'on Twitter,' or 'using social media' as a routine daily pursuit, presenting online participation as a common, ongoing practice among ordinary Americans.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "on Facebook",
+          "on Twitter",
+          "using social media"
+        ],
+        "tested": true,
+        "matches_a": 10,
+        "matches_b": 487,
+        "rate_a": 0.008,
+        "rate_b": 1.142,
+        "p_value": 0.0,
+        "observed": "increase",
+        "verdict": "confirm"
+      },
+      {
+        "hypothesis": "Home and garden stories increasingly report that people 'planted a vegetable garden' or 'grow their own vegetables,' describing household-level growing as an active, widespread practice.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "planted a vegetable garden",
+          "grow their own vegetables"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 1,
+        "rate_a": 0.0,
+        "rate_b": 0.002,
+        "p_value": 0.18820243947666748,
+        "observed": "increase",
+        "verdict": "inconclusive"
+      }
+    ],
+    "votes": {
+      "A": 1,
+      "B": 1
+    },
+    "predicted_direction": "tie",
+    "true_direction": "A",
+    "correct": null
+  },
+  {
+    "question": "F121",
+    "hypotheses": [
+      {
+        "hypothesis": "Coverage increasingly describes a spouse who 'wanted a divorce' or 'asked for a divorce,' framing the decision to end a marriage as a legitimate personal choice rather than a question needing defense.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "wanted a divorce",
+          "asked for a divorce"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 0,
+        "rate_a": 0.0,
+        "rate_b": 0.0,
+        "p_value": 1.0,
+        "observed": "decrease",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "References to a spouse who 'walked away from' or 'left' a marriage decline in news reports, as ending a marriage is described less often as abandonment or desertion.",
+        "direction": "A",
+        "expected_change": "decrease",
+        "markers": [
+          "walked away from",
+          "left"
+        ],
+        "tested": true,
+        "matches_a": 5287,
+        "matches_b": 2335,
+        "rate_a": 4.486,
+        "rate_b": 5.478,
+        "p_value": 0.0,
+        "observed": "increase",
+        "verdict": "deny"
+      },
+      {
+        "hypothesis": "Coverage more often uses the phrase 'stay together' or 'stay married' when discussing couples in trouble, presenting continued marriage as the expected default that partners should work toward.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "stay together",
+          "stay married"
+        ],
+        "tested": true,
+        "matches_a": 3,
+        "matches_b": 2,
+        "rate_a": 0.003,
+        "rate_b": 0.005,
+        "p_value": 0.8748994254683766,
+        "observed": "increase",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Reporting on divorce more frequently uses the phrase 'children of divorce' or 'children of divorced parents,' framing the divorce as a lasting burden on the next generation.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "children of divorce",
+          "children of divorced parents"
+        ],
+        "tested": true,
+        "matches_a": 1,
+        "matches_b": 0,
+        "rate_a": 0.001,
+        "rate_b": 0.0,
+        "p_value": 0.4472962637461917,
+        "observed": "decrease",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Articles on marital separation increasingly use the phrase 'marriage is worth saving' or 'worth fighting for,' treating dissolution as something to be avoided where possible.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "marriage is worth saving",
+          "worth fighting for"
+        ],
+        "tested": true,
+        "matches_a": 1,
+        "matches_b": 1,
+        "rate_a": 0.001,
+        "rate_b": 0.002,
+        "p_value": 0.6942148792756906,
+        "observed": "increase",
+        "verdict": "inconclusive"
+      }
+    ],
+    "votes": {
+      "A": 0,
+      "B": 0
+    },
+    "predicted_direction": "tie",
+    "true_direction": "A",
+    "correct": null
+  },
+  {
+    "question": "G007_33_B",
+    "hypotheses": [
+      {
+        "hypothesis": "Coverage of family and friend relationships increasingly uses the phrase \"took advantage of\" alongside words like \"friendship\", \"brother\", or \"cousin\", framing close acquaintances as the ones who exploit trust.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "took advantage of",
+          "friendship",
+          "brother",
+          "cousin"
+        ],
+        "tested": true,
+        "matches_a": 4703,
+        "matches_b": 1038,
+        "rate_a": 3.99,
+        "rate_b": 2.435,
+        "p_value": 0.0,
+        "observed": "decrease",
+        "verdict": "deny"
+      },
+      {
+        "hypothesis": "Stories about crime and fraud increasingly describe impostors \"posing as a relative\" or \"pretending to be a grandchild\" to extract money from people who know them, signaling heightened suspicion toward those who claim a personal connection.",
+        "direction": "A",
+        "expected_change": "increase",
+        "markers": [
+          "posing as a relative",
+          "pretending to be a grandchild"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 0,
+        "rate_a": 0.0,
+        "rate_b": 0.0,
+        "p_value": 1.0,
+        "observed": "decrease",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Coverage of community and neighborhood life increasingly uses \"trust in one another\" or \"trust each other\" to describe how residents depend on people they know, presenting personal confidence as a shared resource.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "trust in one another",
+          "trust each other"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 1,
+        "rate_a": 0.0,
+        "rate_b": 0.002,
+        "p_value": 0.18820243947666748,
+        "observed": "increase",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Articles about local service and volunteer efforts increasingly describe residents who \"reached out to a neighbor\" or \"checked on a friend\" during crises, portraying personal acquaintances as the first and most reliable source of help.",
+        "direction": "B",
+        "expected_change": "increase",
+        "markers": [
+          "reached out to a neighbor",
+          "checked on a friend"
+        ],
+        "tested": true,
+        "matches_a": 0,
+        "matches_b": 0,
+        "rate_a": 0.0,
+        "rate_b": 0.0,
+        "p_value": 1.0,
+        "observed": "decrease",
+        "verdict": "inconclusive"
+      },
+      {
+        "hypothesis": "Reporting on family and business disputes less often uses the phrase \"trusted friend\" or \"trusted relative\" to describe the person who gave advice or handled money, with the mention of an intimate's trustworthiness fading from the account.",
+        "direction": "A",
+        "expected_change": "decrease",
+        "markers": [
+          "trusted friend",
+          "trusted relative"
+        ],
+        "tested": true,
+        "matches_a": 11,
+        "matches_b": 1,
+        "rate_a": 0.009,
+        "rate_b": 0.002,
+        "p_value": 0.04202476237576103,
+        "observed": "decrease",
+        "verdict": "confirm"
+      }
+    ],
+    "votes": {
+      "A": 1,
+      "B": 0
+    },
+    "predicted_direction": "A",
+    "true_direction": "A",
+    "correct": true
+  }
+]
