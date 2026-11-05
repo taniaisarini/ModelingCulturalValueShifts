@@ -3,6 +3,31 @@
 Inventory of what exists in this repo; the dated notes below are the running log (last updated 2026-11-05). No research question is
 settled yet — this is a snapshot to work from, not a plan. Update this doc as code/data/results change.
 
+> **Country/time-blind lexicon-hypothesis variant (2026-11-05, new prompt, shown and approved before use).**
+> Direct test of the confound finding above: the model is given ONLY `attitude_description`/`direction_a`/`direction_b` --
+> no country, no `year_a`/`year_b`, no window, no mention of "New York Times" (which would leak country anyway). New files:
+> `prompts/{system,user}/generate_lexicon_hypotheses_blind.txt` (generation) and
+> `..._blind_feedback.txt` (feedback rounds, same blindness), `run_lexicon_hypotheses_blind.py` (5-question pilot),
+> `run_lexicon_hypotheses_blind_bulk.py` (full 128), `run_lexicon_hypotheses_blind_feedback.py` (configurable
+> `--max-rounds` feedback loop, same tie rule and no-forced-decision policy as the context-aware version). The mechanical
+> test (`test_lexicon_hypotheses.py`) is unchanged -- hypotheses are still checked against the real USA NYT 2006/2011
+> corpus either way; only generation is blind.
+> - **5-question pilot:** qualitatively, lexica came out noticeably more generic/timeless (`"openly gay"`, `"family
+>   values"`, `"good faith"`) vs. the context-aware version's period-specific references (`"Facebook"`, `"Occupy Wall
+>   Street"`, `"Madoff"`, `"Tea Party"`) -- exactly the expected effect of removing real-world period knowledge.
+> - **Scaled to the full 128-question set, same model/`max_tokens` as the context-aware run:** 634 hypotheses round 1,
+>   70/128 tied (vs. 31/128 context-aware) -- removing context genuinely makes it harder to generate statistically
+>   decisive hypotheses. Full 5-round feedback loop run (same configurable script): ties cut 70->51->44->37->28 (60%
+>   reduction, smaller than context-aware's 77%); every round succeeded cleanly with 0 failures (unlike the
+>   context-aware run's recurring single-question truncation).
+> - **Final accuracy, all 128 questions, round 1 + feedback combined: presence-fraction 56/103 decided (54.4%, z=0.89,
+>   p=0.38); chars-per-100k 58/111 decided (52.3%, z=0.47, p=0.64).** Neither reaches significance, but both are higher
+>   than the context-aware equivalents (50.4%/49.6%) -- the best decided-only accuracy of anything tried in this project
+>   so far, though still far short of significant. Net pattern: blind generation leaves far more questions undecided
+>   (higher tie rate) but the ones it does decide skew slightly more often correct -- consistent with the context-aware
+>   confound finding: removing easy, irrelevant-but-significant secular-trend hypotheses (Facebook, the financial
+>   crisis) trades confirmation volume for (marginally) better quality among what survives.
+
 > **Chars-per-100k significance bug found and fixed (2026-11-05, `test_lexicon_hypotheses.py`).** Found by comparing, question
 > by question, where the earlier free-text language-hypothesis experiment was correct and this structured one was wrong (20
 > such cases). **The bug:** the chars metric's significance test ran a two-proportion z-test with `n` = total corpus

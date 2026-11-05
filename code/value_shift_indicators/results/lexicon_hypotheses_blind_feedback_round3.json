@@ -1,0 +1,4469 @@
+[
+  {
+    "country": "USA",
+    "question": "A004",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of politics increasingly describes the public as exhausted by politics itself, so expressions of political weariness rise, which would mean importance fell toward 'not at all important'.",
+        "lexicon": [
+          "sick of politics",
+          "tired of politics",
+          "politics is exhausting",
+          "burnt out on politics"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Fights over Supreme Court seats are framed as lifetime stakes, so coverage of the high court should increasingly describe politics as personally consequential, pushing importance toward 'very important'.",
+        "topic": [
+          "Supreme Court nominee",
+          "confirmation hearing",
+          "high court vacancy"
+        ],
+        "lexicon": [
+          "lifetime appointment",
+          "battle over the court",
+          "vote on the nominee",
+          "packed with conservatives"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Reporting shifts from describing politics as something people keep out of daily conversation to describing it as a constant topic of personal discussion, which indicates importance moved toward 'very important'.",
+        "lexicon_early": [
+          "keep politics out of it",
+          "don't discuss politics",
+          "not a dinner table topic"
+        ],
+        "lexicon_late": [
+          "can't stop talking about politics",
+          "political arguments with friends",
+          "everyone has an opinion"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Local town halls move from crowded, well-attended meetings to sparsely attended ones, signalling that civic engagement fell and importance moved toward 'not at all important'.",
+        "topic": [
+          "town hall",
+          "public meeting",
+          "city hearing"
+        ],
+        "lexicon_early": [
+          "packed room",
+          "standing room only",
+          "residents turned out"
+        ],
+        "lexicon_late": [
+          "empty chairs",
+          "sparse crowd",
+          "nobody showed up"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Surges in people registering to vote, reported as record sign-ups, indicate growing personal stake in politics, pushing importance toward 'very important'.",
+        "lexicon": [
+          "record registration",
+          "registration surge",
+          "new voter registrations",
+          "signed up to vote"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A006",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of pilgrimages and mass religious journeys should become more frequent if personal religious commitment is rising (Direction B), since these are visible markers of devotional practice.",
+        "lexicon": [
+          "pilgrimage",
+          "Hajj",
+          "Umrah",
+          "Lourdes",
+          "pilgrims"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "If religion is becoming less important to people (Direction A), former church buildings should increasingly be described as deconsecrated or repurposed, and that language should rise in heritage and property coverage.",
+        "topic": [
+          "chapel",
+          "abbey",
+          "listed building",
+          "heritage site"
+        ],
+        "lexicon": [
+          "deconsecrated",
+          "converted into flats",
+          "redundant church",
+          "closed for worship"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "A shift toward stronger personal religious commitment (Direction B) should move coverage from childhood religious formation language toward adult training and ministry language.",
+        "lexicon_early": [
+          "Sunday school",
+          "confirmation class",
+          "altar server",
+          "catechumen"
+        ],
+        "lexicon_late": [
+          "Bible college",
+          "seminary enrollment",
+          "youth ministry",
+          "mission trip"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "If religious importance is declining (Direction A), holiday coverage should shift from explicitly religious observance wording toward secular festive wording.",
+        "topic": [
+          "Christmas",
+          "Easter",
+          "holiday"
+        ],
+        "lexicon_early": [
+          "Midnight mass",
+          "Easter service",
+          "nativity play"
+        ],
+        "lexicon_late": [
+          "Christmas party",
+          "winter festival",
+          "holiday market"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Rising personal religiosity (Direction B) should show up as more coverage of organized group prayer activity, such as prayer meetings and vigils, within community and congregational news.",
+        "topic": [
+          "prayer",
+          "worship",
+          "congregation"
+        ],
+        "lexicon": [
+          "prayer meeting",
+          "prayer vigil",
+          "prayer group",
+          "pray together",
+          "prayer breakfast"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A009",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of mental strain and burnout rises as overall self-rated health declines toward 'Very poor'.",
+        "lexicon": [
+          "mental health crisis",
+          "burnout",
+          "anxiety epidemic",
+          "stress levels",
+          "psychological distress"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of post-restriction recovery and return to normal life rises as self-rated health moves toward 'Very good'.",
+        "lexicon": [
+          "back to normal",
+          "restrictions lifted",
+          "reopened",
+          "return to routine",
+          "lockdown ended"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of everyday active travel and recreational exercise rises as self-rated health moves toward 'Very good'.",
+        "topic": [
+          "cycling",
+          "walking",
+          "swimming",
+          "tennis",
+          "cycle lanes"
+        ],
+        "lexicon": [
+          "active travel",
+          "step count",
+          "walking groups",
+          "cycle lanes",
+          "daily walk"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Environmental health threats replace general wellness language as self-rated health shifts toward 'Very poor'.",
+        "lexicon_early": [
+          "good health",
+          "healthy eating",
+          "clean air",
+          "fresh air"
+        ],
+        "lexicon_late": [
+          "heatwave deaths",
+          "air quality warning",
+          "extreme heat",
+          "heat-related illness"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of smoking and drinking, language shifts from heavy-use descriptions to quitting and abstinence as self-rated health moves toward 'Very good'.",
+        "topic": [
+          "smoking",
+          "drinking",
+          "alcohol",
+          "tobacco"
+        ],
+        "lexicon_early": [
+          "binge drinking",
+          "heavy smoker",
+          "drinking heavily",
+          "chain smoking"
+        ],
+        "lexicon_late": [
+          "smoke-free",
+          "quit smoking",
+          "alcohol-free",
+          "sober"
+        ],
+        "direction": "B"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A098",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "If average membership status moved toward 'Not a member', news coverage should increasingly describe people dropping off church membership rolls or being removed from them, using administrative and bureaucratic phrasing.",
+        "lexicon": [
+          "dropped from church rolls",
+          "removed from membership roll",
+          "membership rolls have shrunk",
+          "nominal membership dropped",
+          "unchurched"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "If average membership status moved toward 'Active member', Catholic coverage should increasingly report rising Mass attendance and parish sign-ups, reflecting more engaged registered parishioners.",
+        "topic": [
+          "parish",
+          "diocese",
+          "Mass attendance",
+          "Catholic"
+        ],
+        "lexicon": [
+          "Mass attendance rose",
+          "returning to Mass",
+          "parish registration up",
+          "new parishioners registered",
+          "catechumens received"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "If the shift was toward 'Not a member', coverage should move from describing people as enrolled or baptized members of a congregation to describing people who never join or belong to any congregation.",
+        "lexicon_early": [
+          "registered with a parish",
+          "church member since birth",
+          "baptized and registered",
+          "signed the membership book"
+        ],
+        "lexicon_late": [
+          "unchurched",
+          "do not belong to any congregation",
+          "never join a church",
+          "no congregational ties"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "If the shift was toward 'Active member', coverage about church life should move from occasional or drop-in worshippers toward members who take on formal roles such as ministry teams, councils, and small groups.",
+        "topic": [
+          "volunteer",
+          "ministry",
+          "small group",
+          "church council"
+        ],
+        "lexicon_early": [
+          "occasional visitor",
+          "drop-in worshipper",
+          "attends when convenient",
+          "sits in the back"
+        ],
+        "lexicon_late": [
+          "ministry team member",
+          "served on church council",
+          "joined a small group",
+          "led a volunteer team"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "If the average moved toward 'Active member', coverage should increasingly describe congregations gaining committed, participating members through formal membership commitments and regular service involvement.",
+        "lexicon": [
+          "took membership vows",
+          "joined the congregation",
+          "committed members",
+          "members serving weekly",
+          "active congregants"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A099",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of women's and girls' football growth after the Lionesses' success should increasingly describe new sign-ups and regular playing, which would move the average answer toward active membership (Direction A).",
+        "lexicon": [
+          "Lionesses effect",
+          "girls football sessions",
+          "sign-ups surge",
+          "women's football boom",
+          "new players signed up"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Within grassroots and Sunday league coverage, reports of league restarts and returns to pitch after pandemic stoppages should rise, indicating more active membership (Direction A).",
+        "topic": [
+          "Sunday league",
+          "grassroots football",
+          "amateur football"
+        ],
+        "lexicon": [
+          "fixtures resumed",
+          "back on the pitch",
+          "league restart",
+          "season got underway"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Early coverage focused on participation being free or accessible, while later coverage emphasises fees and costs that push people to stop playing, shifting the average toward not being a member (Direction B).",
+        "lexicon_early": [
+          "free to play",
+          "no registration fee",
+          "open trials",
+          "walk-on sessions"
+        ],
+        "lexicon_late": [
+          "kit fees",
+          "match fees",
+          "cannot afford to play",
+          "pay to play"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In hockey and rugby union coverage, descriptions of players sidelined by lockdown in early reporting should give way to later descriptions of a full matchday squad and regular training, reflecting movement toward active membership (Direction A).",
+        "topic": [
+          "hockey club",
+          "rugby union"
+        ],
+        "lexicon_early": [
+          "on furlough",
+          "lockdown break",
+          "pandemic pause"
+        ],
+        "lexicon_late": [
+          "back in the squad",
+          "matchday squad",
+          "training twice a week"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Stories describing people leaving organised football altogether, using informal exit language, should become more common, consistent with a shift toward not being a member (Direction B).",
+        "lexicon": [
+          "hung up their boots",
+          "walked away from the sport",
+          "quit playing",
+          "drifted out of football",
+          "pandemic dropout"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A100",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of social prescribing and arts-on-referral schemes rises over time, reflecting growing emphasis on people taking part in creative activity themselves, which would push self-reported activity toward 'Active member'.",
+        "lexicon": [
+          "social prescribing",
+          "arts on prescription",
+          "creative health",
+          "arts on referral"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Cost-of-living pressure leads to more coverage of households cancelling discretionary memberships and subscriptions, which would push self-reported status toward 'Not a member'.",
+        "lexicon": [
+          "cost-of-living crisis",
+          "cancelled my subscription",
+          "cutting back on memberships",
+          "tightening belts"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of amateur music groups such as brass bands and choral societies increasingly describes hands-on participation such as open rehearsals and new-player sign-ups, which would move the average toward 'Active member'.",
+        "topic": [
+          "brass band",
+          "choral society",
+          "amateur choir",
+          "community orchestra"
+        ],
+        "lexicon": [
+          "open rehearsal",
+          "new players sign up",
+          "taster session",
+          "hands-on workshop"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Descriptions of arts audiences shift from passive attendance to participatory, co-created activity, indicating a move toward 'Active member' over time.",
+        "lexicon_early": [
+          "spectators in the stalls",
+          "audience only",
+          "watched from the seats",
+          "passive audience"
+        ],
+        "lexicon_late": [
+          "co-created",
+          "participatory workshop",
+          "took part themselves",
+          "hands-on making"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of museums, galleries and libraries, talk of free or friends-scheme sign-ups gives way to lapsed patrons and fee increases, indicating a move toward 'Not a member' over time.",
+        "topic": [
+          "museum",
+          "gallery",
+          "public library",
+          "friends scheme"
+        ],
+        "lexicon_early": [
+          "free sign-up",
+          "join for free",
+          "friends scheme launched",
+          "new members welcome"
+        ],
+        "lexicon_late": [
+          "lapsed patrons",
+          "membership fees rise",
+          "annual pass cancelled",
+          "no longer renewing"
+        ],
+        "direction": "B"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A102",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of people formally cutting ties with parties (disaffiliation, deregistration, going party-free) rises over time, consistent with more respondents moving to 'Not a member'.",
+        "lexicon": [
+          "disaffiliated",
+          "deregistered from the party",
+          "party-free",
+          "no party ties"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of members taking on hands-on election work (poll watching, ward or precinct roles) rises over time, consistent with more respondents becoming 'Active member'.",
+        "lexicon": [
+          "poll watchers",
+          "precinct captains",
+          "ward captains",
+          "election day volunteers"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Within coverage of political parties, mentions of anti-party sentiment and party-hopping rise over time, consistent with a shift toward non-membership.",
+        "topic": [
+          "political parties",
+          "party politics"
+        ],
+        "lexicon": [
+          "anti-party",
+          "party-hopping",
+          "outsider candidate",
+          "anti-establishment"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Descriptions of party members shift from dormant or inactive language toward active, participatory language over time, consistent with a move toward 'Active member'.",
+        "lexicon_early": [
+          "dormant members",
+          "inactive members",
+          "lapsed supporters"
+        ],
+        "lexicon_late": [
+          "active members",
+          "volunteer members",
+          "members who knock doors"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of candidate selection, language shifts from handpicked or closed selection toward members voting in primaries over time, reflecting greater member engagement and a move toward 'Active member'.",
+        "topic": [
+          "party primaries",
+          "candidate selection"
+        ],
+        "lexicon_early": [
+          "closed primary",
+          "handpicked candidate",
+          "appointed candidate"
+        ],
+        "lexicon_late": [
+          "open primary",
+          "members voted",
+          "one member one vote"
+        ],
+        "direction": "A"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A105",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "If average membership moved toward 'Not a member', news coverage should increasingly describe membership shrinkage in explicit terms, so decline-specific phrases should become more frequent over time.",
+        "lexicon": [
+          "membership decline",
+          "shrinking membership",
+          "membership has dropped",
+          "declining membership rolls"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "If people moved toward active membership, coverage of community service clubs should increasingly report rejoining and membership rebounds rather than attrition.",
+        "topic": [
+          "Rotary",
+          "Lions Club",
+          "service club",
+          "civic group"
+        ],
+        "lexicon": [
+          "membership rebound",
+          "rejoined the club",
+          "new members signed up",
+          "chapter revitalization"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "If the shift was toward non-membership, coverage should move from language about paying dues and annual enrollment toward language describing nominal or lapsed affiliation.",
+        "lexicon_early": [
+          "pledge drive",
+          "annual membership",
+          "dues-paying",
+          "renewal notice"
+        ],
+        "lexicon_late": [
+          "membership has lapsed",
+          "inactive on the rolls",
+          "nominal membership",
+          "in name only"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "If the shift was toward active membership, coverage of animal shelters, Meals on Wheels, and hospice work should move from occasional, check-writing support toward regular hands-on volunteer commitments.",
+        "topic": [
+          "animal shelter",
+          "Meals on Wheels",
+          "hospice"
+        ],
+        "lexicon_early": [
+          "nominal supporters",
+          "occasional donor",
+          "sent a check"
+        ],
+        "lexicon_late": [
+          "hands-on volunteers",
+          "weekly shifts",
+          "regular volunteer shifts"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "If engagement rose, coverage should increasingly cite civic participation gains and more people showing up to community organizations.",
+        "lexicon": [
+          "civic engagement rising",
+          "participation rates rose",
+          "more people showing up",
+          "civic engagement rebound"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A124_02",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of overt racial hostility in public life, measured by hate-crime and extremist-violence terms, rises over the period, reflecting growing public condemnation and tracking the direction of acceptance (Direction B).",
+        "lexicon": [
+          "hate crime",
+          "white supremacist",
+          "Proud Boys",
+          "racially motivated"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Discussion of neighborhood crime and drug activity increasingly ties local safety concerns to residents of particular groups, so these terms rise in the topic of neighbors and property, consistent with a shift toward expressed reluctance (Direction A).",
+        "topic": [
+          "neighbors",
+          "neighborhood",
+          "property values",
+          "homeowners association"
+        ],
+        "lexicon": [
+          "crime rate",
+          "drug dealers",
+          "gang activity",
+          "urban decline"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Coverage moves from explicit Jim Crow-era segregation vocabulary toward contemporary anti-racism and racial justice vocabulary, indicating a shift toward greater acceptance (Direction B).",
+        "lexicon_early": [
+          "Jim Crow",
+          "whites only",
+          "colored entrance",
+          "Ku Klux Klan"
+        ],
+        "lexicon_late": [
+          "Black Lives Matter",
+          "anti-racism training",
+          "Juneteenth",
+          "BIPOC"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Debate over school integration shifts from court-ordered busing and forced integration framing toward school-choice and parental-rights framing, which signals a move away from accepting mixed-race communities (Direction A).",
+        "topic": [
+          "school integration",
+          "busing",
+          "public schools",
+          "district"
+        ],
+        "lexicon_early": [
+          "forced integration",
+          "federal mandate",
+          "court-ordered"
+        ],
+        "lexicon_late": [
+          "school choice",
+          "parental rights",
+          "voucher"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of interracial marriage milestones, such as anniversaries of the Loving decision and related celebrations, becomes more frequent and positive over time, reflecting growing acceptance of mixed-race relationships and households (Direction B).",
+        "topic": [
+          "marriage",
+          "wedding",
+          "family",
+          "couple"
+        ],
+        "lexicon": [
+          "Loving Day",
+          "Loving v. Virginia",
+          "anti-miscegenation",
+          "mixed couples"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A124_12",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of Islamisation and religious-symbol restrictions rises over time, reflecting growing public reluctance to accept people of other faiths as neighbours (Direction A).",
+        "lexicon": [
+          "Islamisation",
+          "burqa ban",
+          "minaret ban",
+          "headscarf ban"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of religious dress accommodation increases over time, reflecting greater public acceptance of people of other faiths in everyday neighbourhood life (Direction B).",
+        "topic": [
+          "headscarf",
+          "hijab",
+          "religious dress",
+          "kippah"
+        ],
+        "lexicon": [
+          "accommodation",
+          "respect for",
+          "dress code exemption",
+          "allowed to wear"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Framing shifts from openness-based language toward civilisational-threat language, indicating a move toward reluctance about religiously different neighbours (Direction A).",
+        "lexicon_early": [
+          "religious freedom",
+          "open society",
+          "pluralist"
+        ],
+        "lexicon_late": [
+          "cultural threat",
+          "values clash",
+          "civilisational"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "On Ramadan and Eid, coverage moves from describing these festivals as foreign customs to describing shared public celebrations, indicating growing acceptance of religiously different neighbours (Direction B).",
+        "topic": [
+          "Ramadan",
+          "Eid",
+          "iftar"
+        ],
+        "lexicon_early": [
+          "foreign customs",
+          "strange",
+          "alien practices"
+        ],
+        "lexicon_late": [
+          "community iftar",
+          "shared celebration",
+          "neighbours invited"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of extremist preachers and hate-preaching networks rises over time, reflecting heightened public wariness of certain religious communities (Direction A).",
+        "lexicon": [
+          "hate preacher",
+          "Salafi",
+          "Wahhabi",
+          "extremist preacher"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A124_42",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Public coverage of pre-marital cohabitation as a normal, expected life stage rises over time, which would signal growing acceptance of unmarried couples sharing a home (Direction B).",
+        "lexicon": [
+          "trial marriage",
+          "test-drive marriage",
+          "living together before marriage",
+          "cohabitation before marriage"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "In housing contexts, objections framed as protecting property values and neighborhood covenants become more prominent, indicating stronger resistance to unmarried neighbors (Direction A).",
+        "topic": [
+          "neighbors",
+          "neighborhood",
+          "homeowners association",
+          "deed restrictions"
+        ],
+        "lexicon": [
+          "property values",
+          "neighborhood standards",
+          "covenant violation",
+          "neighborhood character"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Older terms that stigmatize unmarried couples give way to neutral or affirming partnership terms, marking a shift toward acceptance (Direction B).",
+        "lexicon_early": [
+          "concubinage",
+          "kept woman",
+          "fornicator",
+          "living in sin"
+        ],
+        "lexicon_late": [
+          "life partner",
+          "significant other",
+          "cohabiting adults",
+          "unmarried couple"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In zoning and occupancy rules, language restricting dwellings to family-only or related occupants gives way to language about unrelated adults and removed occupancy limits, reflecting greater tolerance of unmarried co-residents (Direction B).",
+        "topic": [
+          "zoning",
+          "occupancy",
+          "household definition",
+          "rental housing"
+        ],
+        "lexicon_early": [
+          "family-only occupancy",
+          "single-family household only",
+          "related persons only"
+        ],
+        "lexicon_late": [
+          "unrelated adults",
+          "occupancy limits removed",
+          "any combination of adults"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Rhetoric defending a traditional household against perceived decline becomes more frequent, indicating hardening opposition to unmarried couples living together (Direction A).",
+        "lexicon": [
+          "moral decay",
+          "family unit under threat",
+          "traditional household",
+          "decline of the family"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A168A",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage increasingly uses swindler-and-dupe vocabulary, suggesting public belief that people exploit others is rising (Direction B).",
+        "lexicon": [
+          "grifter",
+          "swindle",
+          "dupe",
+          "sucker",
+          "hustled"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "In workplace coverage, talk of employers exploiting workers should rise as distrust of those in power grows (Direction B).",
+        "topic": [
+          "employer",
+          "gig workers",
+          "layoffs",
+          "paycheck",
+          "staffing agency"
+        ],
+        "lexicon": [
+          "wage theft",
+          "misclassified",
+          "unpaid overtime",
+          "exploited"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Framing shifts from zero-sum, every-person-for-himself language toward mutual-trust and solidarity language, indicating movement toward belief that people are fair (Direction A).",
+        "lexicon_early": [
+          "zero-sum",
+          "every man for himself",
+          "dog eat dog",
+          "cutthroat"
+        ],
+        "lexicon_late": [
+          "civic spirit",
+          "mutual trust",
+          "solidarity",
+          "give back"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In tipping and service-work coverage, stories about workers being shortchanged should give way to stories about fair pay and honest guests (Direction A).",
+        "topic": [
+          "tipping",
+          "tip pool",
+          "servers",
+          "restaurant",
+          "hotel staff"
+        ],
+        "lexicon_early": [
+          "tip stealing",
+          "skimmed",
+          "shortchanged"
+        ],
+        "lexicon_late": [
+          "fair pay",
+          "living wage",
+          "paid fairly",
+          "honest tip"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of unattended stands and honor-system payment should increasingly describe trust in customers, reflecting belief that people will act fairly (Direction A).",
+        "topic": [
+          "honor box",
+          "farm stand",
+          "unattended",
+          "self-serve",
+          "payment on trust"
+        ],
+        "lexicon": [
+          "paid on trust",
+          "left unlocked",
+          "pay what you can",
+          "trust box"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A170",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of acute financial distress such as food bank reliance, payday borrowing, and energy-bill arrears rises over the period, indicating that more households are cutting back on essentials and life satisfaction is falling (Direction B).",
+        "lexicon": [
+          "food bank",
+          "payday loan",
+          "debt advice",
+          "energy bill arrears",
+          "cutting back on essentials"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Within travel and leisure coverage, mentions of holiday bookings and package-holiday demand rise as people feel more financially secure and optimistic about their personal lives (Direction A).",
+        "topic": [
+          "holidays",
+          "travel",
+          "package tours"
+        ],
+        "lexicon": [
+          "holiday bookings surge",
+          "package holidays sold out",
+          "record summer travel",
+          "staycation boom"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Language shifts from debt-collection and hardship vocabulary toward discretionary-spending and recovery vocabulary, reflecting a move toward greater life satisfaction (Direction A).",
+        "lexicon_early": [
+          "food bank",
+          "payday loan",
+          "debt collectors",
+          "bailiffs"
+        ],
+        "lexicon_late": [
+          "pay rise",
+          "savings rebuilt",
+          "treat yourself",
+          "holiday bookings"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In health service coverage, reporting moves from waiting-list reduction and target success toward record waiting lists, cancelled operations, and emergency department breaches, reflecting declining public satisfaction with services that affect personal wellbeing (Direction B).",
+        "topic": [
+          "health service",
+          "NHS",
+          "hospital waiting"
+        ],
+        "lexicon_early": [
+          "waiting list falling",
+          "targets met",
+          "shorter waits"
+        ],
+        "lexicon_late": [
+          "waiting list record",
+          "cancelled operations",
+          "A&E breaches",
+          "corridor care"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Education coverage increasingly reports teacher strikes, school closures, pupil absence, and exam stress, signalling family and personal strain and a decline in life satisfaction (Direction B).",
+        "topic": [
+          "schools",
+          "pupils",
+          "teachers"
+        ],
+        "lexicon": [
+          "teacher strikes",
+          "pupil absence",
+          "school closures",
+          "exam stress",
+          "teacher shortage"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A189",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage increasingly emphasizes job stability and security over novelty, so references to steady employment should rise as the value of being inventive falls (Direction B).",
+        "lexicon": [
+          "job security",
+          "stable career",
+          "steady paycheck",
+          "pension plan",
+          "civil service"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "In coverage of government and public-sector work, procedural and compliance language should grow as the public's preference for independent, inventive approaches declines (Direction B).",
+        "topic": [
+          "public sector",
+          "government agency",
+          "civil servants"
+        ],
+        "lexicon": [
+          "red tape",
+          "standard operating procedure",
+          "protocol",
+          "compliance training",
+          "chain of command"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Framing shifts from experimenting and taking risks toward relying on proven methods, so 'proven methods' language should displace 'experimental' language, signaling a move away from valuing creativity (Direction B).",
+        "lexicon_early": [
+          "experiment",
+          "moonshot",
+          "wild idea",
+          "risk-taking",
+          "trial and error"
+        ],
+        "lexicon_late": [
+          "proven methods",
+          "stick with what works",
+          "best practices",
+          "safe bet",
+          "tried and tested"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of arts education, framing moves from self-expression toward employability, so career-readiness terms should overtake artistic-freedom terms as creative ideals lose appeal (Direction B).",
+        "topic": [
+          "art school",
+          "art students",
+          "arts programs"
+        ],
+        "lexicon_early": [
+          "artistic freedom",
+          "self-expression",
+          "experimental art",
+          "creative exploration"
+        ],
+        "lexicon_late": [
+          "employability",
+          "job-ready",
+          "marketable skills",
+          "career prep"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "In coverage of manufacturing and factory work, language about repetitive, targeted routines should increase as workplaces prize consistency over inventive problem-solving (Direction B).",
+        "topic": [
+          "factory",
+          "manufacturing",
+          "production line"
+        ],
+        "lexicon": [
+          "assembly line",
+          "repetitive tasks",
+          "production targets",
+          "quality control",
+          "shift work"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A196",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "As the importance of behaving properly declines, coverage of social graces and genteel manners should decline too, since these phrases signal an older ideal of polite conduct that fades from public discussion.",
+        "lexicon": [
+          "mind your manners",
+          "social graces",
+          "genteel",
+          "well-mannered",
+          "stuffy etiquette"
+        ],
+        "direction": "B",
+        "expected_change": "decrease"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Public language should shift from celebrating conventional, rule-abiding conduct toward celebrating nonconformity, so early-period coverage should use conformity terms more than late-period coverage uses rebellion terms.",
+        "lexicon_early": [
+          "rule-abiding",
+          "law-abiding",
+          "conventional",
+          "dutiful",
+          "by the book"
+        ],
+        "lexicon_late": [
+          "nonconformist",
+          "counterculture",
+          "free spirit",
+          "rebel",
+          "iconoclast"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "In coverage of school dress and conduct rules, mentions of well-behaved, obedient students should rise if the importance of proper behavior rises, because these discipline-focused stories emphasize compliance.",
+        "topic": [
+          "school uniform",
+          "dress code",
+          "hall monitor",
+          "school conduct policy"
+        ],
+        "lexicon": [
+          "well-behaved",
+          "obedient",
+          "respectful of authority",
+          "behaves itself"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of policing and public order, the framing should move from disorder and unruliness toward respect for law and order, if people place more weight on behaving properly.",
+        "topic": [
+          "police",
+          "law enforcement",
+          "public order"
+        ],
+        "lexicon_early": [
+          "unruly",
+          "lawlessness",
+          "disorderly",
+          "rowdy"
+        ],
+        "lexicon_late": [
+          "respect for law",
+          "law and order",
+          "obey the law",
+          "orderly conduct"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "A rise in the value of proper behavior should be accompanied by more discussion of self-restraint and impulse control as personal virtues, since these terms describe the self-regulation that underlies behaving properly.",
+        "lexicon": [
+          "impulse control",
+          "self-restraint",
+          "moderation",
+          "temperance",
+          "self-control"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "C006",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Reports of households going without basics and facing collection action will become more frequent as financial strain deepens, pushing satisfaction toward dissatisfied.",
+        "lexicon": [
+          "heating or eating",
+          "bailiffs",
+          "debt collectors",
+          "arrears letters"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of household savings will shift toward rebuilding cash buffers, which signals improving financial satisfaction.",
+        "topic": [
+          "savings accounts",
+          "cash savings",
+          "emergency fund"
+        ],
+        "lexicon": [
+          "savings rebuilt",
+          "saved more",
+          "rebuilding savings"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Coverage moves from distress framing of living costs to framing that pay is outpacing prices, indicating a shift toward satisfaction.",
+        "lexicon_early": [
+          "heating or eating",
+          "food bank demand",
+          "cost-of-living crisis"
+        ],
+        "lexicon_late": [
+          "real terms pay growth",
+          "inflation has fallen",
+          "pay outstrips prices"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Household credit coverage shifts from balances being paid down to maxed-out cards and deferred-payment borrowing, indicating a shift toward dissatisfaction.",
+        "topic": [
+          "credit cards",
+          "credit card debt"
+        ],
+        "lexicon_early": [
+          "balances paid off",
+          "card balances fell"
+        ],
+        "lexicon_late": [
+          "maxed out cards",
+          "buy now pay later",
+          "card balances climb"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Explicit reporting that real incomes are rising and inflation has returned toward target will grow as households feel better off, pushing satisfaction toward satisfied.",
+        "lexicon": [
+          "real terms growth",
+          "pay outstrips inflation",
+          "inflation back to target",
+          "disposable incomes rise"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "D001_B",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of relatives exploiting or stealing from one another rises over time, signaling declining trust within families.",
+        "lexicon": [
+          "stole from his mother",
+          "took money from her parents",
+          "financial exploitation by a relative",
+          "drained his father's accounts"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Among sibling-related coverage, language of relying on brothers and sisters grows more common, indicating rising trust in siblings.",
+        "topic": [
+          "siblings",
+          "brothers and sisters",
+          "sister",
+          "brother"
+        ],
+        "lexicon": [
+          "could count on my brother",
+          "counted on my sister",
+          "had my back",
+          "trusted my sibling with"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Family-related coverage shifts from shared, open family routines toward location tracking and monitoring of relatives, reflecting a move toward suspicion within families.",
+        "lexicon_early": [
+          "shared family calendar",
+          "family photo album",
+          "family group dinner",
+          "passed down to the kids"
+        ],
+        "lexicon_late": [
+          "family location sharing",
+          "parental monitoring app",
+          "tracking my teen's phone",
+          "spyware on my child's device"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In blended-family coverage, framing moves from stepfamily conflict toward described bonding and mutual acceptance, indicating growing trust.",
+        "topic": [
+          "blended family",
+          "stepfamily",
+          "stepchildren",
+          "stepparent"
+        ],
+        "lexicon_early": [
+          "stepfamily conflict",
+          "stepchildren resent",
+          "never accepted the stepparent",
+          "custody battle with stepdad"
+        ],
+        "lexicon_late": [
+          "blended family bond",
+          "stepfamily thriving",
+          "stepdad became like a father",
+          "our new family works"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Expressions of family-first priority and valuing family above all else become more frequent, reflecting increased trust in family as a foundation.",
+        "lexicon": [
+          "put family first",
+          "family comes first",
+          "family is everything to me",
+          "strongest bond in my life"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "D060",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of female seclusion and chaperoning norms rises over the period, which would reflect a stronger emphasis on protecting women's modesty and a more traditional stance on girls' schooling (Direction B).",
+        "lexicon": [
+          "purdah",
+          "mahram",
+          "chaperone",
+          "modesty of women",
+          "gender-segregated classes"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of girls' access to schooling and dormitories rises over the period, reflecting more support for girls' higher education (Direction A).",
+        "topic": [
+          "girls' school",
+          "girls' college",
+          "girls' hostel",
+          "boarding school"
+        ],
+        "lexicon": [
+          "girls' scholarship",
+          "female scholarship",
+          "women's university",
+          "girls' hostel fees"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Framing shifts from sex-segregated schooling toward coeducation and gender-neutral admissions, which would indicate a move toward disagreeing that university is more important for boys (Direction A).",
+        "lexicon_early": [
+          "sex-segregated",
+          "purdah",
+          "girls-only schools",
+          "separate campus"
+        ],
+        "lexicon_late": [
+          "coeducation",
+          "mixed classrooms",
+          "gender-neutral admissions",
+          "co-ed campus"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Within discussions of children's degrees, coverage shifts from framing female study as wasteful toward the view that boys are the priority, so a rising share of the traditional phrasing would indicate a move toward agreeing strongly (Direction B).",
+        "topic": [
+          "degree",
+          "diploma",
+          "graduation",
+          "university place"
+        ],
+        "lexicon_early": [
+          "girls deserve degrees",
+          "daughters graduate",
+          "equal diploma",
+          "women's degree"
+        ],
+        "lexicon_late": [
+          "wasted on a girl",
+          "no need for girls to study",
+          "boys deserve the degree",
+          "son's degree first"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage using the language of the girl child and gender sensitisation rises over the period, reflecting growing acceptance of girls' rights to education (Direction A).",
+        "lexicon": [
+          "girl child",
+          "gender sensitisation",
+          "women's rights",
+          "gender-sensitive curriculum",
+          "SDG 4"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E015",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Public discussion of shorter working patterns and disconnecting from work grows over time, which would signal a more positive view of reduced work's place in life (Direction B).",
+        "lexicon": [
+          "four-day week",
+          "right to disconnect",
+          "digital detox",
+          "slow living"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of national economic weakness increasingly frames lower work engagement as a cost to the country, which would signal a more negative view of less work (Direction A).",
+        "topic": [
+          "public finances",
+          "tax receipts",
+          "national debt"
+        ],
+        "lexicon": [
+          "economic decline",
+          "lost output",
+          "brain drain",
+          "national decline"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Moral language about labour as duty and toil gives way over time to language praising downtime and leisure, which would signal a shift toward seeing less work as good (Direction B).",
+        "lexicon_early": [
+          "idle hands",
+          "graft",
+          "toil",
+          "dignity of labour"
+        ],
+        "lexicon_late": [
+          "slow living",
+          "unplugging",
+          "downtime",
+          "leisure pursuits"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Coverage of young people shifts from ambition and career progression toward disengagement and non-participation, which would signal a more negative view of less work (Direction A).",
+        "topic": [
+          "young people",
+          "graduates",
+          "school leavers"
+        ],
+        "lexicon_early": [
+          "career ladder",
+          "ambition",
+          "aspiration"
+        ],
+        "lexicon_late": [
+          "NEET",
+          "not in education, employment or training",
+          "disengaged",
+          "drift"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of men taking on home and caring roles becomes more common and accepted, which would signal a more positive view of reduced paid work (Direction B).",
+        "topic": [
+          "men",
+          "fathers",
+          "paternity"
+        ],
+        "lexicon": [
+          "stay-at-home dad",
+          "house husband",
+          "primary carer",
+          "shared parental leave"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E016",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of technology development shifts toward existential and safety framing, so warnings about catastrophic or uncontrollable outcomes become more common and the public reads technological progress as more dangerous.",
+        "lexicon": [
+          "existential risk",
+          "pause development",
+          "kill switch",
+          "unintended consequences"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Early coverage frames new technology with hesitation and wariness, while later coverage frames it with welcome and expectation of net benefit, so the public mood moves toward seeing technology development as a good thing.",
+        "lexicon_early": [
+          "hesitant",
+          "wary",
+          "uneasy",
+          "skeptical of"
+        ],
+        "lexicon_late": [
+          "embrace",
+          "welcome",
+          "benefits outweigh",
+          "eagerly awaited"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of robots, drones, and electric vehicles increasingly emphasizes concrete public benefits such as lives saved and efficiency gains, which should push general opinion toward viewing technology development as good.",
+        "topic": [
+          "robots",
+          "drones",
+          "electric vehicles"
+        ],
+        "lexicon": [
+          "lives saved",
+          "safer roads",
+          "efficiency gains",
+          "jobs created"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Coverage of gene editing shifts from celebrating therapeutic promise to raising ethical alarms about designer babies and loss of control, so attitudes toward technological development move toward seeing it as bad.",
+        "topic": [
+          "gene editing",
+          "CRISPR",
+          "genetic engineering"
+        ],
+        "lexicon_early": [
+          "promising",
+          "breakthrough therapy",
+          "cure"
+        ],
+        "lexicon_late": [
+          "designer babies",
+          "ethical concerns",
+          "playing God",
+          "out of control"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Public discourse increasingly describes technology as unaccountable and runaway, with rising references to tech giants wielding unchecked power, which pushes attitudes toward viewing technology development as a bad thing.",
+        "lexicon": [
+          "runaway",
+          "unaccountable",
+          "tech giants",
+          "monopoly power"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E018",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage increasingly describes strong, firm leadership and tough enforcement in favourable terms, so the average answer moves toward 'Good thing' on greater respect for authority.",
+        "lexicon": [
+          "firm hand",
+          "strong leadership",
+          "zero tolerance",
+          "tough on crime"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of online platforms increasingly frames established institutions and experts as untrustworthy and worth challenging, so the average answer moves toward 'Bad thing'.",
+        "topic": [
+          "social media",
+          "influencers",
+          "online forums"
+        ],
+        "lexicon": [
+          "anti-establishment",
+          "challenge the elites",
+          "question everything",
+          "distrust of experts"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Framing shifts from permissive, hands-off approaches toward explicit calls for firm leadership and order, so the average answer moves toward 'Good thing'.",
+        "lexicon_early": [
+          "laissez-faire parenting",
+          "free-for-all",
+          "permissive society",
+          "anything goes"
+        ],
+        "lexicon_late": [
+          "firm leadership",
+          "law-abiding",
+          "restore discipline",
+          "respect the law"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Coverage of the armed forces shifts from praising duty and honour to scrutinising overreach and civilian control, so the average answer moves toward 'Bad thing'.",
+        "topic": [
+          "military",
+          "army",
+          "generals"
+        ],
+        "lexicon_early": [
+          "duty and honour",
+          "trust the military",
+          "salute"
+        ],
+        "lexicon_late": [
+          "military overreach",
+          "civilian control",
+          "war crimes"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Workplace coverage increasingly stresses that employees should follow instructions and accept managerial decisions, so the average answer moves toward 'Good thing'.",
+        "topic": [
+          "workplace",
+          "employers",
+          "managers"
+        ],
+        "lexicon": [
+          "follow orders",
+          "do as told",
+          "respect the boss",
+          "management decides"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E025",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "As coverage of fraudulent petitions grows (bot-generated or fake signatures, petition scams), people become more likely to view signing as meaningless or untrustworthy, pushing answers toward 'Would never do'.",
+        "lexicon": [
+          "fake signatures",
+          "bot signatures",
+          "fraudulent petition",
+          "petition scam",
+          "signature farm"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of large signature milestones on international campaign platforms signals that signing is a common, accessible act, which should move actual reported participation toward 'Have done'.",
+        "topic": [
+          "Avaaz",
+          "MoveOn",
+          "Care2",
+          "global campaign"
+        ],
+        "lexicon": [
+          "million signatures",
+          "hit a million",
+          "milestone signatures",
+          "signatures so far"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Shift from in-person signature collection (clipboards at markets and stations) to coverage dominated by suspected fake or automated petitions reflects declining willingness to sign, toward 'Would never do'.",
+        "lexicon_early": [
+          "clipboard",
+          "signed at the market",
+          "stall outside the station",
+          "street collector"
+        ],
+        "lexicon_late": [
+          "bot-generated petition",
+          "fake petition",
+          "automated signatures",
+          "signature scam"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Within discussion of government responses to petitions, a move from coverage of ignored petitions to coverage of petitions that trigger formal parliamentary debate indicates petitions seem to work, pushing reported signing toward 'Have done'.",
+        "topic": [
+          "government response",
+          "parliamentary debate",
+          "petition committee"
+        ],
+        "lexicon_early": [
+          "petition ignored",
+          "petition rejected",
+          "no response to petition"
+        ],
+        "lexicon_late": [
+          "petition debated",
+          "reached the threshold for debate",
+          "petition will be debated"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Rising use of ironic, dismissive labels for petition signing (signing as a substitute for real action) signals growing scepticism about whether petitions matter, moving answers toward 'Would never do'.",
+        "lexicon": [
+          "signing from the sofa",
+          "keyboard warrior",
+          "hashtag activism",
+          "feel-good signing",
+          "signing it and forgetting it"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E025B",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of petitions reaching formal governmental thresholds (for example, e-petitions that trigger parliamentary debate) increased over the period, reflecting more people signing petitions and making them count. This would push the average answer toward 'Have done'.",
+        "lexicon": [
+          "100,000 signatures",
+          "record number of signatures",
+          "e-petition debate",
+          "Westminster Hall debate on petition"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of the nuisance side of online campaigning (inbox clutter, repeated solicitations) grew over the period. Frequent requests can wear down willingness to sign, pushing the average answer toward 'Not done'.",
+        "topic": [
+          "email inbox",
+          "spam",
+          "charity appeals",
+          "donation requests"
+        ],
+        "lexicon": [
+          "petition spam",
+          "signature requests",
+          "unsubscribe from campaigns",
+          "too many petitions"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Signing has shifted from being a visible, in-person act toward a quick, private digital one. Coverage moving from street-stall language to one-tap language would indicate a rise in signing, consistent with 'Have done'.",
+        "lexicon_early": [
+          "petition stall",
+          "clipboard outside",
+          "high street signatures",
+          "signed in person"
+        ],
+        "lexicon_late": [
+          "signed in seconds",
+          "one-tap signing",
+          "sign with your email",
+          "signed from my phone"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of social causes, the framing of petition signing shifted from a meaningful civic act to a low-effort gesture. This shift in tone would suggest the average answer moved toward 'Not done' as signing was seen as less serious.",
+        "topic": [
+          "social justice",
+          "climate movement",
+          "human rights campaign"
+        ],
+        "lexicon_early": [
+          "signed to show solidarity",
+          "added their voice",
+          "meaningful way to take part"
+        ],
+        "lexicon_late": [
+          "just a signature",
+          "armchair activism",
+          "signing and forgetting"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Reports of falling response or signing rates for petitions became more common. Explicit decline language about signature counts would point toward 'Not done'.",
+        "lexicon": [
+          "signature rates fell",
+          "fewer people signing petitions",
+          "petition participation declined",
+          "petitions losing support"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E026",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of specific high-profile consumer boycotts and cancellation campaigns increases over the period, reflecting more people reporting that they actually participated in boycotts.",
+        "lexicon": [
+          "Bud Light boycott",
+          "Target boycott",
+          "Tesla Takedown",
+          "canceled my subscription",
+          "stopped shopping at"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage that frames boycotts as harming ordinary workers and small businesses rises, which should push respondents toward refusing boycotts altogether.",
+        "topic": [
+          "economic blackmail",
+          "boycott backlash",
+          "collateral damage",
+          "punish companies"
+        ],
+        "lexicon": [
+          "hurts workers",
+          "laid off",
+          "small business owners",
+          "innocent employees",
+          "hurts the little guy"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Early coverage features calls to cancel or boycott a company, while later coverage features people reporting they personally stopped buying, indicating a shift toward reported participation.",
+        "lexicon_early": [
+          "urged followers to cancel",
+          "call for a boycott",
+          "calls to cancel"
+        ],
+        "lexicon_late": [
+          "I canceled",
+          "we stopped buying",
+          "I stopped shopping at"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In corporate-politics coverage, early articles emphasize brands taking public stands, while later articles emphasize companies staying neutral, consistent with growing rejection of boycott-driven politics.",
+        "topic": [
+          "corporate politics",
+          "brand activism",
+          "woke companies"
+        ],
+        "lexicon_early": [
+          "take a stand",
+          "speak out on issues",
+          "takes a side"
+        ],
+        "lexicon_late": [
+          "stay out of politics",
+          "keep politics out",
+          "just sell products"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Explicit statements that shopping or spending should not be politicized become more common, reflecting growing unwillingness to ever use purchasing as political action.",
+        "lexicon": [
+          "keep politics out of",
+          "stay out of politics",
+          "shopping is not political",
+          "politics out of shopping",
+          "don't politicize"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E026B",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Direction B: Reports of consumers cancelling subscriptions or deleting apps as protest should rise, reflecting more people actively joining boycotts and disengaging from brands.",
+        "lexicon": [
+          "cancelled my subscription",
+          "cancel subscription",
+          "deleted the app",
+          "uninstalled"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Direction A: Coverage of named brand boycotts should show more mentions of consumers ending their boycotts and returning to these brands, indicating fewer people reporting current boycott participation.",
+        "topic": [
+          "Disney",
+          "Starbucks",
+          "Cracker Barrel",
+          "Home Depot"
+        ],
+        "lexicon": [
+          "back at Starbucks",
+          "returned to Disney",
+          "no longer boycotting",
+          "ended our boycott"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Direction B: Discussion should shift from merely threatening or considering a boycott toward reports that people have actually boycotted, signaling a rise in self-reported participation.",
+        "lexicon_early": [
+          "considering a boycott",
+          "threatened to boycott",
+          "boycott threat"
+        ],
+        "lexicon_late": [
+          "have boycotted",
+          "boycotted the company",
+          "joined boycotts"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Direction A: In streaming and subscription coverage, talk should move from consumers cancelling services in protest to consumers resubscribing, indicating that boycott participation declined.",
+        "topic": [
+          "streaming",
+          "subscription",
+          "Netflix",
+          "Spotify"
+        ],
+        "lexicon_early": [
+          "cancelled subscription",
+          "quit streaming"
+        ],
+        "lexicon_late": [
+          "resubscribed",
+          "back to streaming"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Direction A: Mentions of consumers reinstating accounts or resuming normal spending after protests should become more frequent, signaling fewer people still boycotting.",
+        "lexicon": [
+          "resubscribed",
+          "reinstated",
+          "resumed normal spending",
+          "back to normal spending"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E040",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage increasingly describes the social ladder as broken or closed, so language about lost mobility should rise, which would track a shift toward the luck-and-connections view.",
+        "lexicon": [
+          "social mobility is dead",
+          "american dream is dead",
+          "broken ladder",
+          "ladder of opportunity",
+          "stuck in poverty"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Skilled-trades coverage should emphasize that effort and apprenticeship reliably pay, so reward-for-effort language in trade-focused reporting should rise, consistent with a shift toward the hard-work view.",
+        "topic": [
+          "apprenticeship",
+          "skilled trades",
+          "electrician",
+          "plumber",
+          "welder"
+        ],
+        "lexicon": [
+          "apprenticeship pays off",
+          "good living",
+          "earn while you learn",
+          "steady work for skilled",
+          "put in the years"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Discussion of career outcomes should shift from framing effort as going nowhere (dead-end, no future) toward framing it as paying off in concrete rewards, consistent with movement toward the hard-work view.",
+        "lexicon_early": [
+          "dead end",
+          "no future",
+          "hopeless",
+          "going nowhere",
+          "spinning wheels"
+        ],
+        "lexicon_late": [
+          "climbed",
+          "made it",
+          "the payoff",
+          "reaped the rewards",
+          "paid dividends"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Finance and banking coverage should move from describing bankers' success as earned and deserved to describing it as insider access and bailouts, consistent with movement toward the luck-and-connections view.",
+        "topic": [
+          "Wall Street",
+          "hedge funds",
+          "bankers",
+          "investment banks"
+        ],
+        "lexicon_early": [
+          "earned",
+          "deserved",
+          "merit",
+          "skill",
+          "talent"
+        ],
+        "lexicon_late": [
+          "bailout",
+          "insider",
+          "revolving door",
+          "bonuses for friends",
+          "too connected"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Elite college admissions coverage should increasingly highlight legacy and money-based advantages, so such language should rise, consistent with a shift toward the luck-and-connections view.",
+        "topic": [
+          "college admissions",
+          "legacy admissions",
+          "elite schools",
+          "Ivy League"
+        ],
+        "lexicon": [
+          "legacy admissions",
+          "pay to play",
+          "buy their way in",
+          "connected families",
+          "donor's child"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E069_08",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Confidence in the Civil Services fell as coverage of named, distinctive state failures grew, so mentions of these specific scandals should rise over time.",
+        "lexicon": [
+          "Windrush scandal",
+          "Post Office Horizon",
+          "Universal Credit fiasco",
+          "PPE contracts"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Confidence in the Civil Services rose as coverage of public-facing service backlogs being cleared increased, so reports of backlogs being cleared should grow within coverage of agencies the public deals with directly.",
+        "topic": [
+          "passport office",
+          "DVLA",
+          "HMRC"
+        ],
+        "lexicon": [
+          "backlog cleared",
+          "waiting times fell",
+          "queues cleared"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Early coverage framed officials as politically neutral, while later coverage frames them as partisan saboteurs or enemies of the political project, so the late vocabulary should dominate and confidence should fall.",
+        "lexicon_early": [
+          "apolitical",
+          "politically neutral",
+          "impartial advice"
+        ],
+        "lexicon_late": [
+          "enemies of the people",
+          "saboteurs",
+          "Brexit betrayal"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Within pandemic-related coverage of the civil service, framing moved from failure to success, so confidence rose as success language overtook failure language.",
+        "topic": [
+          "Covid",
+          "pandemic",
+          "furlough"
+        ],
+        "lexicon_early": [
+          "test and trace failure",
+          "Covid chaos",
+          "lockdown failures"
+        ],
+        "lexicon_late": [
+          "vaccine success",
+          "furlough saved jobs",
+          "world-beating"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Confidence in the Civil Services fell as coverage of government departments and agencies increasingly reported wrongful outcomes, apologies, and cover-ups, so these accountability-failure terms should rise.",
+        "topic": [
+          "Post Office",
+          "Horizon",
+          "Windrush",
+          "Home Office"
+        ],
+        "lexicon": [
+          "cover-up",
+          "wrongful",
+          "public inquiry",
+          "apology"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E069_12",
+    "hypotheses": [
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of Brexit-era referendum politics that describes parties as betraying voters should rise as confidence in parties falls toward 'none at all'.",
+        "topic": [
+          "referendum",
+          "Brexit",
+          "leave vote",
+          "remain vote"
+        ],
+        "lexicon": [
+          "ignored the people",
+          "sold out",
+          "betrayal of voters",
+          "broke their word"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Framing shifts from parties as local service providers to parties as a detached professional class, consistent with confidence moving toward 'none at all'.",
+        "lexicon_early": [
+          "constituency surgery",
+          "local MP helped",
+          "casework",
+          "listened to residents"
+        ],
+        "lexicon_late": [
+          "career politicians",
+          "Westminster bubble",
+          "out of touch",
+          "professional politicians"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Language of restored trust and renewal in parliamentary politics should increase as confidence in parties moves toward 'a great deal'.",
+        "lexicon": [
+          "restored faith in politics",
+          "renewed trust in parliament",
+          "new broom",
+          "fresh faces"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In House of Commons coverage, the frame moves from sleaze and cash-for-favours toward a clean-up or fresh-start narrative, consistent with rising confidence in parties.",
+        "topic": [
+          "Commons",
+          "Westminster",
+          "House of Commons",
+          "MPs' conduct"
+        ],
+        "lexicon_early": [
+          "cash for questions",
+          "sleaze",
+          "Westminster bubble",
+          "paid lobbying"
+        ],
+        "lexicon_late": [
+          "new broom",
+          "clean-up",
+          "fresh start",
+          "ethics reforms"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Sardonic, collective condemnation of all politicians should increase as confidence in parties drops toward 'none at all'.",
+        "lexicon": [
+          "all in it together",
+          "they're all the same",
+          "snouts in the trough",
+          "lying toads"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E069_15",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage increasingly describes women's organizations with explicitly positive 'women-led' framing, which should track rising public confidence (direction B).",
+        "lexicon": [
+          "women-led",
+          "women-owned",
+          "women-run"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage increasingly uses distrust-coded terms for nonprofits and advocacy groups, which should track falling confidence toward 'none at all' (direction A).",
+        "lexicon": [
+          "dark money",
+          "sham nonprofit",
+          "grift",
+          "fake charity"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Early coverage of women's groups centers on long-established, civic-minded institutions. Later coverage shifts toward accusatory, politically charged vocabulary, consistent with declining confidence (direction A).",
+        "lexicon_early": [
+          "Girl Scouts",
+          "YWCA",
+          "Junior League",
+          "League of Women Voters"
+        ],
+        "lexicon_late": [
+          "dark money",
+          "grift",
+          "defunded",
+          "cancel culture"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Among girls' and women's youth-serving groups, coverage increasingly emphasizes concrete program benefits, which should track rising confidence (direction B).",
+        "topic": [
+          "YWCA",
+          "Girls Inc",
+          "Girl Scouts of the USA",
+          "Girls on the Run"
+        ],
+        "lexicon": [
+          "mentoring",
+          "scholarship",
+          "leadership program",
+          "trusted"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Among pregnancy and reproductive-health women's groups, early coverage stresses nonpartisan service, while late coverage stresses partisanship and activism, consistent with declining confidence (direction A).",
+        "topic": [
+          "abortion fund",
+          "pregnancy resource center",
+          "reproductive health clinic",
+          "women's health clinic"
+        ],
+        "lexicon_early": [
+          "nonpartisan",
+          "bipartisan",
+          "community-based",
+          "trusted"
+        ],
+        "lexicon_late": [
+          "partisan",
+          "activist",
+          "politicized",
+          "culture war"
+        ],
+        "direction": "A"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E069_18A",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of regional organizations increasingly describes them as powerless or irrelevant, which would track a drop in public confidence toward 'None at all'.",
+        "lexicon": [
+          "toothless",
+          "sidelined",
+          "talking shop",
+          "irrelevant",
+          "vanity project"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of sub-regional blocs in Latin America and West Africa shifts toward language of renewal and rebuilt credibility, which would track rising confidence toward 'A great deal'.",
+        "topic": [
+          "Mercosur",
+          "ECOWAS",
+          "SADC"
+        ],
+        "lexicon": [
+          "revitalized",
+          "new mandate",
+          "rebuilt credibility",
+          "reformed",
+          "renewed commitment"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Early coverage framing regional organizations as reformed and credible gives way to later coverage framing them as toothless and ignored, which would track movement toward 'None at all'.",
+        "lexicon_early": [
+          "revitalized",
+          "renewed mandate",
+          "credible",
+          "respected",
+          "reformed"
+        ],
+        "lexicon_late": [
+          "toothless",
+          "ignored",
+          "snubbed",
+          "bypassed",
+          "irrelevant"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of the OAS, Arab League, and OSCE, language moves from effective mediation to being bypassed by national governments, which would track declining confidence toward 'None at all'.",
+        "topic": [
+          "Organization of American States",
+          "Arab League",
+          "OSCE"
+        ],
+        "lexicon_early": [
+          "effective mediator",
+          "trusted broker",
+          "credible monitor"
+        ],
+        "lexicon_late": [
+          "bypassed",
+          "sidelined by capitals",
+          "snubbed",
+          "left out of talks"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage increasingly uses reliability and trust vocabulary about regional bodies, which would track rising confidence toward 'A great deal'.",
+        "lexicon": [
+          "trusted partner",
+          "reliable broker",
+          "restored confidence",
+          "rebuilt trust",
+          "credible institution"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E069_24",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of NAFTA increasingly frames it through deindustrialization and regional decline, so distrust of the agreement should grow and average confidence should drift toward 'None at all'.",
+        "lexicon": [
+          "Rust Belt",
+          "hollowed out",
+          "China shock",
+          "Buy American"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "As the agreement was revised, coverage focused on technical trade-rule fixes and worker protections, which should raise confidence toward 'A great deal'.",
+        "topic": [
+          "NAFTA",
+          "trade deal",
+          "North American agreement"
+        ],
+        "lexicon": [
+          "rules of origin",
+          "labor chapter",
+          "dairy access",
+          "digital trade"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Early coverage described the agreement as a job creator and economic engine, while later coverage describes it as a source of hollowed-out communities and shuttered plants, indicating a shift toward 'None at all'.",
+        "lexicon_early": [
+          "jobs boom",
+          "export engine",
+          "investment flows",
+          "booming trade"
+        ],
+        "lexicon_late": [
+          "Rust Belt",
+          "shuttered",
+          "pink slip",
+          "hollowed out"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Early coverage of Congress's handling of the trade pact emphasized stalled opposition, while later coverage emphasizes bipartisan passage and signing, indicating a move toward 'A great deal'.",
+        "topic": [
+          "Congress",
+          "trade agreement"
+        ],
+        "lexicon_early": [
+          "stalled",
+          "opposition",
+          "Democrats object",
+          "holdout"
+        ],
+        "lexicon_late": [
+          "bipartisan",
+          "passed",
+          "signed into law",
+          "overwhelming vote"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of the Trump administration's trade policy increasingly features brinkmanship over deadlines and exit clauses, which should erode public confidence toward 'None at all'.",
+        "topic": [
+          "trade policy",
+          "Trump administration"
+        ],
+        "lexicon": [
+          "ultimatum",
+          "sunset clause",
+          "deadline passes",
+          "Lighthizer"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E069_40",
+    "hypotheses": [
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Coverage shifts from charity-promotion vocabulary toward safeguarding and sexual-misconduct scandal vocabulary, which signals declining confidence in charitable organizations (Direction A).",
+        "lexicon_early": [
+          "Giving Tuesday",
+          "matching gift",
+          "donor-advised"
+        ],
+        "lexicon_late": [
+          "Oxfam",
+          "safeguarding",
+          "sexual misconduct"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Mentions of independent charity rating and accreditation bodies rise as the public leans on external verification, which accompanies rising confidence in charities (Direction B).",
+        "lexicon": [
+          "Charity Navigator",
+          "BBB Wise Giving",
+          "accredited charity"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Veterans' charities draw more reporting on lavish spending and forced resignations over time, a pattern consistent with falling confidence in charitable organizations (Direction A).",
+        "topic": [
+          "Wounded Warrior",
+          "veterans charity",
+          "military charity"
+        ],
+        "lexicon": [
+          "misspent",
+          "lavish",
+          "resigned amid"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Within crowdfunding and online giving coverage, reporting moves from stolen-funds stories toward record-raised and pledged-match stories, reflecting rising confidence in charitable giving (Direction B).",
+        "topic": [
+          "crowdfunding",
+          "GoFundMe",
+          "online giving"
+        ],
+        "lexicon_early": [
+          "crowdfunding scam",
+          "stolen funds",
+          "fake campaign"
+        ],
+        "lexicon_late": [
+          "record raised",
+          "pledged to match",
+          "fully funded"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Donor-fatigue and lost-faith language increases in coverage, signalling a move toward no confidence in charitable organizations (Direction A).",
+        "lexicon": [
+          "donor fatigue",
+          "charity watchdog warns",
+          "donors lose faith"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E115",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of unelected, arm's-length bodies making binding decisions (quangos and similar) increases over time, reflecting rising public hostility to government by unaccountable experts (Direction A).",
+        "lexicon": [
+          "quango",
+          "quangos",
+          "arm's-length body",
+          "unelected quango"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage praising expert-led or non-partisan technical governments increases over time, reflecting growing public approval of having competent specialists run government (Direction B).",
+        "lexicon": [
+          "technocratic cabinet",
+          "non-partisan cabinet",
+          "expert-led government",
+          "competent administrators"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "In housing and planning coverage, framing of expert planners and national targets as imposed on local communities increases over time, signalling a move toward seeing expert-set decisions as illegitimate (Direction A).",
+        "topic": [
+          "housing targets",
+          "planning reform",
+          "planning permission"
+        ],
+        "lexicon": [
+          "imposed from above",
+          "unelected planners",
+          "ignore local voters",
+          "bypass local councils"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Framing shifts from blaming gridlocked, partisan politicians toward welcoming independent, evidence-led expert decision-making, indicating a move toward favouring expert governance (Direction B).",
+        "lexicon_early": [
+          "partisan gridlock",
+          "politicians squabbling",
+          "career politicians",
+          "political paralysis"
+        ],
+        "lexicon_late": [
+          "evidence-led decisions",
+          "independent experts",
+          "professional civil servants",
+          "expert regulators"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In artificial intelligence regulation coverage, framing shifts from lawmakers who 'don't understand the technology' and lobbyist-driven policy toward deferring to independent AI safety experts, indicating growing support for expert decision-making (Direction B).",
+        "topic": [
+          "AI regulation",
+          "artificial intelligence"
+        ],
+        "lexicon_early": [
+          "lawmakers don't understand",
+          "tech lobbyists",
+          "Congress hearings"
+        ],
+        "lexicon_late": [
+          "independent AI safety experts",
+          "expert regulators",
+          "evidence-led oversight"
+        ],
+        "direction": "B"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E217",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of specific, high-profile scientific frontiers will increase over time, signalling a more optimistic public narrative about science delivering tangible benefits, which should push agreement toward 'Completely agree'.",
+        "lexicon": [
+          "fusion energy",
+          "quantum computing",
+          "reusable rocket",
+          "gene editing",
+          "precision medicine"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Scrutiny of large technology firms will intensify, with more coverage of antitrust action and calls to break up companies, reflecting growing distrust that technology is making life easier for ordinary people, which should push agreement toward 'Completely disagree'.",
+        "topic": [
+          "Big Tech",
+          "Silicon Valley",
+          "tech giants"
+        ],
+        "lexicon": [
+          "antitrust",
+          "breakup",
+          "monopoly",
+          "tech billionaires",
+          "crackdown"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Narratives shift from environmental and technological catastrophe framings (nuclear winter, ozone collapse, Y2K-style panic) toward framings of ambitious payoffs (moonshots, clean energy, space ventures). A move from catastrophe to promise signals rising agreement that science improves life.",
+        "lexicon_early": [
+          "nuclear winter",
+          "ozone hole",
+          "acid rain",
+          "Y2K bug"
+        ],
+        "lexicon_late": [
+          "moonshot",
+          "clean energy",
+          "space tourism",
+          "breakthrough cure"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Within food and agriculture coverage, the frame shifts from 'miracle crop' yield triumphs to concerns about chemical residues and processing. This reflects growing skepticism that technology makes diets healthier, pushing agreement toward 'Completely disagree'.",
+        "topic": [
+          "food",
+          "agriculture"
+        ],
+        "lexicon_early": [
+          "green revolution",
+          "miracle crop",
+          "bumper harvest"
+        ],
+        "lexicon_late": [
+          "pesticide",
+          "glyphosate",
+          "ultra-processed",
+          "food additives",
+          "chemical residues"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Explicit calls for a return to low-tech living will become more common, reflecting a turn against the claim that technology makes life healthier and more comfortable, pushing agreement toward 'Completely disagree'.",
+        "lexicon": [
+          "Luddite",
+          "digital detox",
+          "screen-free",
+          "back to nature",
+          "off-grid living"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E218",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage increasingly describes work as precarious and insecure, so the average respondent becomes less confident that technology will open new opportunities for the next generation.",
+        "lexicon": [
+          "gig economy",
+          "zero-hours contracts",
+          "precariat",
+          "underemployment",
+          "side hustle out of necessity"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of biomedical technologies increasingly uses transformative, hopeful language, so respondents move toward agreeing that science will create opportunities.",
+        "topic": [
+          "vaccine",
+          "mRNA",
+          "gene editing",
+          "CRISPR"
+        ],
+        "lexicon": [
+          "life-saving",
+          "game-changer",
+          "transformative",
+          "cure within reach"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Coverage shifts from hopeful framing of science-driven growth, such as moonshots and green jobs, to framing of national decline and falling behind, so the average respondent moves toward disagreement.",
+        "lexicon_early": [
+          "moonshot",
+          "space race",
+          "renewable boom",
+          "green jobs",
+          "clean-energy boom"
+        ],
+        "lexicon_late": [
+          "stagnation",
+          "falling behind",
+          "brain drain",
+          "slowing growth",
+          "innovation drought"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Coverage of climate and energy moves from catastrophic, irreversible framing to framing around practical solutions and clean-tech jobs, so respondents move toward agreeing that technology will create opportunities.",
+        "topic": [
+          "climate",
+          "clean energy"
+        ],
+        "lexicon_early": [
+          "doom",
+          "catastrophe",
+          "irreversible",
+          "point of no return"
+        ],
+        "lexicon_late": [
+          "solutions",
+          "cheaper solar",
+          "clean tech jobs",
+          "falling costs"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage increasingly uses language of expanding opportunity and mobility, so the average respondent moves toward agreeing that the next generation will have more chances.",
+        "lexicon": [
+          "upward mobility",
+          "ladder of opportunity",
+          "limitless potential",
+          "new frontier",
+          "opportunity gap closing"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E222B",
+    "hypotheses": [
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of overseas travel will shift toward reports of trips being cancelled or replaced by staying local, indicating fewer people reporting recent international travel (Direction A).",
+        "topic": [
+          "international trip",
+          "overseas holiday",
+          "flights abroad"
+        ],
+        "lexicon": [
+          "cancelled our trip",
+          "stayed closer to home",
+          "skipped the holiday",
+          "postponed the trip"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Descriptions of food sourcing will move from ordering in or relying on delivery toward preparing meals at home, indicating more people reporting home cooking (Direction B).",
+        "lexicon_early": [
+          "bought takeout",
+          "ordered in",
+          "relied on delivery",
+          "grabbed a ready meal"
+        ],
+        "lexicon_late": [
+          "cooked from scratch",
+          "baked our own",
+          "made it at home",
+          "prepared meals myself"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Mentions of people giving up regular physical activity such as gym memberships or sports leagues will rise, indicating fewer people reporting recent exercise participation (Direction A).",
+        "lexicon": [
+          "quit the gym",
+          "cancelled my membership",
+          "no longer play in the league",
+          "stopped training"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Coverage of public library use will shift from active borrowing toward lapsed or abandoned visits, indicating fewer people reporting library use (Direction A).",
+        "topic": [
+          "public library",
+          "library card",
+          "book club"
+        ],
+        "lexicon_early": [
+          "borrowed books",
+          "checked out",
+          "renewed my card",
+          "attended the reading group"
+        ],
+        "lexicon_late": [
+          "haven't been back",
+          "lapsed membership",
+          "stopped visiting",
+          "let my card expire"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Reports of commuting by bicycle will increase, with more people describing riding to work or school, indicating more people reporting this activity (Direction B).",
+        "topic": [
+          "bike lane",
+          "cycle commute",
+          "e-bike"
+        ],
+        "lexicon": [
+          "commuted by bike",
+          "rode to work",
+          "pedaled to the office",
+          "switched to cycling"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E225",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "As public debate shifts toward treating Islamic law as the foundation of legislation, coverage of constitutional clauses naming sharia as a main legislative source rises, and this reflects greater acceptance of clerical interpretation of law.",
+        "lexicon": [
+          "principles of Sharia",
+          "main source of legislation",
+          "Article 2",
+          "Islamic law as source"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "As debate moves toward a civil, non-religious state framework, coverage of 'civil state' terminology rises, indicating a shift away from religious interpretive authority in law.",
+        "lexicon": [
+          "civil state",
+          "dawla madaniya",
+          "civic state",
+          "non-religious state"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "During constitutional drafting, references to al-Azhar or clerical councils reviewing legislation become more frequent, signaling growing public acceptance that religious bodies should vet laws.",
+        "topic": [
+          "constitutional vote",
+          "constitution drafting",
+          "parliamentary bill review"
+        ],
+        "lexicon": [
+          "al-Azhar",
+          "clerical council",
+          "religious scholars approve",
+          "fatwa on bill"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Public discourse shifts from framing law in terms of judicial review and rule of law toward framing it in terms of religious councils and scholarly opinions, indicating a move toward accepting clerical interpretation.",
+        "lexicon_early": [
+          "judicial review",
+          "rule of law",
+          "due process",
+          "constitutional court ruling"
+        ],
+        "lexicon_late": [
+          "religious council opinion",
+          "scholarly opinion",
+          "fatwa",
+          "Islamic council ruling"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In debates over the Guardian Council or equivalent oversight body, framing shifts from elected-representative sovereignty toward supreme-leader or clerical guardianship, indicating movement against clerical interpretive authority being seen as democratic.",
+        "topic": [
+          "guardian council",
+          "oversight body",
+          "veto of bills"
+        ],
+        "lexicon_early": [
+          "popular sovereignty",
+          "elected parliament",
+          "people's mandate"
+        ],
+        "lexicon_late": [
+          "supreme leader",
+          "velayat",
+          "clerical guardianship",
+          "divine mandate"
+        ],
+        "direction": "B"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E226",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of power changing hands through elections (opposition wins, incumbents losing) becomes more frequent over time, reflecting stronger public recognition of elections as the mechanism that removes leaders, which pushes the rating of free elections toward 'essential.'",
+        "lexicon": [
+          "incumbent defeated",
+          "opposition victory",
+          "power changed hands",
+          "unseated in the polls",
+          "won the election"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of watchdog institutions that monitor elections and government (press freedom, civil society, ombudsmen) grows over time, signaling greater public valuation of the accountability systems that accompany free elections, consistent with Direction A.",
+        "topic": [
+          "ombudsman",
+          "press freedom",
+          "civil society",
+          "watchdog group"
+        ],
+        "lexicon": [
+          "independent media",
+          "press freedom index",
+          "civic groups monitored",
+          "transparent count"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Early-period coverage emphasizes multiparty competition and coalition politics, while late-period coverage shifts toward dynastic succession and lifelong rule, indicating a drift toward rejecting competitive elections as essential (Direction B).",
+        "lexicon_early": [
+          "multiparty",
+          "opposition parliament",
+          "coalition government",
+          "coalition talks",
+          "parliamentary majority lost"
+        ],
+        "lexicon_late": [
+          "president for life",
+          "hereditary succession",
+          "dynastic rule",
+          "crown passed to son",
+          "lifelong mandate"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "On voting rights, early coverage centers on exclusionary practices (literacy tests, poll taxes, disenfranchisement) while late coverage centers on inclusionary reforms (automatic registration, repealed ID barriers), reflecting a rise in the perceived essentialness of free and inclusive elections (Direction A).",
+        "topic": [
+          "voting rights",
+          "voter registration",
+          "suffrage"
+        ],
+        "lexicon_early": [
+          "disenfranchised",
+          "literacy test",
+          "poll tax",
+          "voters turned away"
+        ],
+        "lexicon_late": [
+          "enfranchised",
+          "automatic registration",
+          "voter ID repealed",
+          "same-day registration"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Justifications that democracy is unsuited to the nation or culture (e.g., 'Asian values', 'not ready for democracy') become more common over time, reflecting growing acceptance that elections are not an essential characteristic of democracy (Direction B).",
+        "lexicon": [
+          "not ready for democracy",
+          "democracy does not suit",
+          "Asian values",
+          "western model of democracy",
+          "homegrown democracy"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E228",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "As the army-intervention question becomes more legitimated, coverage of democratic procedure as the remedy for bad governance should rise: writing about elections as the accountability mechanism should increase, which would indicate movement toward Direction B (against democracy).",
+        "lexicon": [
+          "peaceful transfer of power",
+          "vote them out",
+          "electoral mandate",
+          "term limits"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "If people increasingly accept intervention when government fails, coverage of technocratic or strongman solutions to governance problems should grow, indicating Direction A.",
+        "lexicon": [
+          "government of technocrats",
+          "iron fist",
+          "order before elections",
+          "strong man to restore order"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "When public services visibly collapse, coverage that calls for the armed forces to run the state should rise, suggesting Direction A (army takeover viewed as essential to democracy under incompetence).",
+        "topic": [
+          "public services collapse",
+          "power cuts",
+          "water shortages",
+          "failed state services"
+        ],
+        "lexicon": [
+          "armed forces should run",
+          "generals in charge of ministries",
+          "soldiers to manage the state"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Discourse shifting from electoral correction of governments toward claims that military takeovers are justified would indicate Direction A.",
+        "lexicon_early": [
+          "vote them out",
+          "elections every four years",
+          "ballot box"
+        ],
+        "lexicon_late": [
+          "military takeover is justified",
+          "soldiers are the only option",
+          "uniformed saviors"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In debates over corruption scandals, a shift from framing the army as untrustworthy toward framing elections and parliament as the cure would indicate Direction B (army intervention seen as against democracy).",
+        "topic": [
+          "corruption scandal",
+          "graft probe",
+          "embezzlement"
+        ],
+        "lexicon_early": [
+          "army cannot be trusted",
+          "officers are as corrupt",
+          "soldiers profit from power"
+        ],
+        "lexicon_late": [
+          "parliament must act",
+          "courts should prosecute",
+          "voters will judge"
+        ],
+        "direction": "B"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "E233",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Mentions of the #MeToo movement and its legacy signal growing public endorsement of women's equal rights as a democratic essential (Direction A).",
+        "lexicon": [
+          "MeToo",
+          "#MeToo",
+          "Time's Up",
+          "survivors speak out"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of women serving in security institutions increasingly portrays equal treatment of women as a democratic norm (Direction A).",
+        "topic": [
+          "army",
+          "armed forces",
+          "military",
+          "police",
+          "soldiers"
+        ],
+        "lexicon": [
+          "women in combat",
+          "female soldiers",
+          "women officers",
+          "women in the police"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Rising references to male guardianship and religious personal-status rules framed as incompatible with democratic governance indicate a shift toward rejecting unequal rights as undemocratic (Direction B).",
+        "lexicon": [
+          "male guardianship",
+          "guardianship law",
+          "personal status law",
+          "women's testimony halved"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Discourse moving from customs that subordinate women (dowry, child marriage, honour killings) toward property and inheritance equality reflects a shift toward treating women's equal rights as essential (Direction A).",
+        "lexicon_early": [
+          "dowry",
+          "honour killing",
+          "child marriage",
+          "bride price"
+        ],
+        "lexicon_late": [
+          "equal inheritance",
+          "women's property rights",
+          "land rights for women",
+          "inheritance equality"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In legal coverage, discourse shifting from constitutional equal citizenship toward religious or personal-status courts that limit women's rights indicates movement toward viewing unequal rights as compatible with democracy (Direction B).",
+        "topic": [
+          "court",
+          "law",
+          "constitution",
+          "legal",
+          "ruling"
+        ],
+        "lexicon_early": [
+          "equal citizenship",
+          "constitutional equality",
+          "equal protection under the law"
+        ],
+        "lexicon_late": [
+          "religious courts",
+          "personal status court",
+          "family arbitration",
+          "customary law"
+        ],
+        "direction": "B"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "F001",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Public discourse about what humans are for, and whether work or AI leaves room for human purpose, rises as people become more preoccupied with the big questions of their existence, pushing reflection on meaning toward 'Often'.",
+        "lexicon": [
+          "what are humans for",
+          "human purpose",
+          "purpose of work",
+          "meaning of work"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of AI-driven job displacement increasingly frames the loss of work as a loss of identity and purpose, which should coincide with more frequent personal reflection on meaning (direction B).",
+        "topic": [
+          "artificial intelligence",
+          "AI job losses",
+          "automation of jobs"
+        ],
+        "lexicon": [
+          "lost purpose",
+          "identity crisis",
+          "what do we do now",
+          "human value"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of the cost-of-living squeeze emphasises short-term financial triage, so people think about meaning less often and the average answer moves toward 'Never' (direction A).",
+        "topic": [
+          "cost of living",
+          "energy bills",
+          "inflation squeeze"
+        ],
+        "lexicon": [
+          "making ends meet",
+          "month to month",
+          "paying the bills",
+          "stretched thin"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Lifestyle language shifts from status consumption toward explicit talk of purpose and life's larger picture, indicating a move toward more frequent reflection on meaning (direction B).",
+        "lexicon_early": [
+          "status symbols",
+          "keeping up with the Joneses",
+          "conspicuous spending",
+          "shopping spree"
+        ],
+        "lexicon_late": [
+          "what really matters",
+          "purpose-driven",
+          "life's bigger picture",
+          "intentional living"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of religious life, language shifts from faith-based reflection toward secular framing, reflecting a decline in regular reflection on meaning and a move toward 'Never' (direction A).",
+        "topic": [
+          "church attendance",
+          "religious services",
+          "faith communities"
+        ],
+        "lexicon_early": [
+          "spiritual reflection",
+          "faith and purpose",
+          "congregation life"
+        ],
+        "lexicon_late": [
+          "empty pews",
+          "secular",
+          "no religion",
+          "religiously unaffiliated"
+        ],
+        "direction": "A"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "F028",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of Christians ceasing regular Mass or communion practice, and of sacramental participation falling away, rises as average attendance moves toward 'never'.",
+        "lexicon": [
+          "Sunday Mass attendance",
+          "Easter communicants",
+          "confirmation classes",
+          "stopped attending Mass",
+          "sacraments dropped"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Earlier coverage describes Sunday as a church-centred day, while later coverage frames Sunday as a day for shopping and leisure, consistent with a shift toward never attending.",
+        "lexicon_early": [
+          "Sunday school",
+          "choir practice",
+          "vestry meeting",
+          "harvest festival"
+        ],
+        "lexicon_late": [
+          "Sunday trading",
+          "Sunday shopping",
+          "weekend leisure",
+          "no church on Sundays"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of revival-style religious movements and converts rises when average attendance moves toward more-than-weekly attendance.",
+        "topic": [
+          "revival",
+          "Holy Spirit",
+          "born again"
+        ],
+        "lexicon": [
+          "attendance rising",
+          "young men",
+          "new converts",
+          "baptisms surge",
+          "filled to capacity"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Coverage of parish life shifts from stories of full pews and resident clergy toward stories of priest shortages and merged benefices, consistent with declining attendance.",
+        "topic": [
+          "parish",
+          "diocese",
+          "vicar"
+        ],
+        "lexicon_early": [
+          "full pews",
+          "parish register",
+          "curate appointed"
+        ],
+        "lexicon_late": [
+          "vicar shortage",
+          "benefice merged",
+          "priest shortage",
+          "parishes amalgamated"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of intensified, frequent worship formats (midweek services, prayer meetings, house churches) rises as average attendance moves toward more-than-weekly.",
+        "lexicon": [
+          "midweek service",
+          "weekday Mass",
+          "prayer meeting",
+          "house church",
+          "small group Bible study"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "F115",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "As living costs rose, news coverage increasingly framed fare avoidance through economic necessity and collective protest, so mentions of these terms should grow, pushing the average toward 'Always justifiable'.",
+        "lexicon": [
+          "cost-of-living crisis",
+          "fare strike",
+          "boycott",
+          "wages have not kept up"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of fare increases on bus and rail services increasingly included calls to refuse payment or organised boycotts, which should rise over time if the average moved toward 'Always justifiable'.",
+        "topic": [
+          "fare hikes",
+          "ticket prices",
+          "rail operators",
+          "bus operators"
+        ],
+        "lexicon": [
+          "fare strike",
+          "boycott",
+          "refuse to pay",
+          "fares protest"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Early coverage that stressed fare-evasion as organised criminality (gangs, hardened offenders) gave way to moral condemnation of the offence, so the vocabulary shifts from lenient framing to condemnatory framing if the average moved toward 'Never justifiable'.",
+        "lexicon_early": [
+          "fare protest",
+          "working families",
+          "fare rises"
+        ],
+        "lexicon_late": [
+          "organised fare evasion",
+          "gangs",
+          "hardened offenders"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Coverage of bus travel moved from strict enforcement language to sympathetic language about commuters struggling to pay, consistent with a move toward 'Always justifiable'.",
+        "topic": [
+          "bus travel",
+          "buses",
+          "commuters"
+        ],
+        "lexicon_early": [
+          "zero tolerance",
+          "penalty",
+          "strict enforcement"
+        ],
+        "lexicon_late": [
+          "understandable",
+          "desperate measures",
+          "struggling to pay"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Framing of fare avoidance as a forced choice (no alternative, essential journeys) should grow in coverage if public opinion moved toward 'Always justifiable'.",
+        "lexicon": [
+          "no choice",
+          "essential journey",
+          "forced to",
+          "hardship fare"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "F117",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Normalization of small facilitation payments and 'speed money' as ordinary costs of getting services should make acceptance of bribery more tolerable over time, pushing the average toward 'Always justifiable'.",
+        "lexicon": [
+          "facilitation payment",
+          "speed money",
+          "sweetener",
+          "grease money"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Coverage of demands for payment from low-level licensing and inspection officials will increasingly frame them as extortion and shakedowns, signalling that the public sees such payments as coercion and unjustifiable.",
+        "topic": [
+          "building inspector",
+          "health inspector",
+          "licensing official",
+          "permit office"
+        ],
+        "lexicon": [
+          "shakedown",
+          "extortion",
+          "demanded payment",
+          "hush money"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Public discourse shifting from prosecution-focused language about graft probes toward language that treats payments as routine or necessary signals greater acceptance of bribery.",
+        "lexicon_early": [
+          "graft probe",
+          "convicted",
+          "bribery charges",
+          "under investigation"
+        ],
+        "lexicon_late": [
+          "facilitation payment",
+          "necessary payment",
+          "normal fee",
+          "cost of doing business"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In sports governance coverage, a shift from describing gifts to officials as customary goodwill toward reporting indictments and lifetime bans indicates growing condemnation of bribery.",
+        "topic": [
+          "football federation",
+          "referee",
+          "sports officials",
+          "FIFA"
+        ],
+        "lexicon_early": [
+          "customary gifts",
+          "goodwill",
+          "tradition"
+        ],
+        "lexicon_late": [
+          "indictment",
+          "banned for life",
+          "bribery probe",
+          "extradited"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Growing use of asset-tracing and illicit-enrichment tools (asset declarations, unexplained wealth orders) signals stronger institutional rejection of official bribery, moving the average toward 'Never justifiable'.",
+        "lexicon": [
+          "asset declaration",
+          "unexplained wealth",
+          "illicit enrichment",
+          "anti-graft agency"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "F121",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "As acceptance of divorce grows, coverage increasingly describes leaving an unhappy marriage as a personal right or a 'second chance' at happiness.",
+        "lexicon": [
+          "second chance at happiness",
+          "unhappy marriage",
+          "right to leave"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "As opposition to divorce hardens, coverage increasingly uses moral-decline and family-breakdown framing.",
+        "lexicon": [
+          "family breakdown",
+          "divorce epidemic",
+          "fatherless homes"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Within coverage of children and custody, a growing share of articles stress that children are better off after a divorce from a conflicted home, which signals greater acceptance.",
+        "topic": [
+          "child custody",
+          "children of divorce",
+          "custody battle"
+        ],
+        "lexicon": [
+          "better off",
+          "happier home",
+          "high-conflict marriage"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Framing shifts from divorce as an escape or liberation toward divorce as a betrayal of promises, indicating movement toward 'never justifiable'.",
+        "lexicon_early": [
+          "escape from an unhappy marriage",
+          "free to leave",
+          "liberation"
+        ],
+        "lexicon_late": [
+          "betrayal of vows",
+          "broken promise",
+          "walking away from family"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In religious coverage of divorce, framing moves from sin and excommunication toward no-blame and second-chance language, indicating greater acceptance.",
+        "topic": [
+          "divorce",
+          "Catholic annulment",
+          "church doctrine on divorce"
+        ],
+        "lexicon_early": [
+          "mortal sin",
+          "excommunication",
+          "scandal"
+        ],
+        "lexicon_late": [
+          "no-blame divorce",
+          "second chance",
+          "compassion for the divorced"
+        ],
+        "direction": "A"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "F199",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of international women's rights instruments rises as public norms shift away from tolerating spousal violence, so these treaty and convention references should become more frequent (direction B).",
+        "lexicon": [
+          "Istanbul Convention",
+          "CEDAW",
+          "Beijing Platform",
+          "Bel\u00e9m do Par\u00e1"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Justifications of physical chastisement grounded in proverbs or scripture-based discipline framing become more common in coverage as tolerance rises (direction A).",
+        "lexicon": [
+          "spare the rod",
+          "a slap is not violence",
+          "correcting his wife",
+          "husband's authority"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Reporting on the legal implementation of anti-violence treaties and laws grows over time, with more articles describing enacted measures and their enforcement, signalling movement toward 'never justifiable' (direction B).",
+        "topic": [
+          "Istanbul Convention ratification",
+          "anti-violence legislation",
+          "domestic violence hotline",
+          "restraining order enforcement"
+        ],
+        "lexicon": [
+          "ratified",
+          "signatory",
+          "came into force",
+          "criminal conviction"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Early coverage frames spousal beating through male authority and private discipline, while later coverage frames it through refuges and protective services, indicating a move toward 'never justifiable' (direction B).",
+        "lexicon_early": [
+          "husband has the right",
+          "private discipline",
+          "keep it in the family",
+          "wife deserved it"
+        ],
+        "lexicon_late": [
+          "refuge",
+          "restraining order",
+          "safe house",
+          "victim support service"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In survey and opinion-poll reporting, early results are described with categorical rejection language, while later results increasingly feature conditional acceptance such as provocation or circumstances, indicating movement toward 'always justifiable' (direction A).",
+        "topic": [
+          "opinion poll on wife beating",
+          "survey of attitudes toward violence",
+          "public attitudes respondents"
+        ],
+        "lexicon_early": [
+          "never acceptable",
+          "completely unacceptable",
+          "no excuse under any circumstances"
+        ],
+        "lexicon_late": [
+          "in some circumstances",
+          "provoked",
+          "sometimes understandable",
+          "depends on the situation"
+        ],
+        "direction": "A"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "G007_18_B",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of vigilante behavior and neighbor-on-neighbor confrontations rises over time, signaling falling willingness to trust those nearby (Direction A).",
+        "lexicon": [
+          "vigilante",
+          "citizen's arrest",
+          "shot by neighbor",
+          "doxxed",
+          "armed neighbor"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Within local community-life coverage, mentions of shared community resources increase over time, indicating rising neighborly trust (Direction B).",
+        "topic": [
+          "community garden",
+          "street party",
+          "block association"
+        ],
+        "lexicon": [
+          "community fridge",
+          "tool library",
+          "seed swap",
+          "potluck",
+          "free pantry"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Coverage shifts from shared-resource language toward confrontational neighbor-conflict language, indicating declining trust (Direction A).",
+        "lexicon_early": [
+          "tool library",
+          "potluck",
+          "seed swap",
+          "free pantry",
+          "community fridge"
+        ],
+        "lexicon_late": [
+          "vigilante",
+          "citizen's arrest",
+          "doxxed",
+          "armed neighbor",
+          "neighbor dispute"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Within homeowners' association coverage, reporting moves from legal enforcement and fines toward volunteer and social activities, suggesting rising neighborly trust (Direction B).",
+        "topic": [
+          "HOA",
+          "homeowners association"
+        ],
+        "lexicon_early": [
+          "violation letter",
+          "fined",
+          "lawsuit against neighbor"
+        ],
+        "lexicon_late": [
+          "welcome committee",
+          "community picnic",
+          "board volunteers"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Reports of police being called on neighbors for minor disputes become more frequent over time, reflecting growing wariness toward people nearby (Direction A).",
+        "lexicon": [
+          "called the cops on",
+          "police called on neighbor",
+          "hostile neighbor",
+          "noise complaint",
+          "parking dispute"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "G007_33_B",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of schemes where trusted insiders defraud members of their own community (affinity-based swindles) increases, which would indicate growing distrust of people one knows personally.",
+        "lexicon": [
+          "affinity scheme",
+          "Ponzi",
+          "embezzled",
+          "swindled"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In neighborhood coverage, language of keeping distance and locking up gives way to language of looking out for one another, which would indicate rising trust in people one knows.",
+        "topic": [
+          "neighborhood watch",
+          "block",
+          "street"
+        ],
+        "lexicon_early": [
+          "keep your distance",
+          "lock your doors",
+          "bolt the door"
+        ],
+        "lexicon_late": [
+          "looked out for one another",
+          "open doors",
+          "trusted each other"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "In family coverage, reunion and welcoming language increases, which would indicate rising trust in relatives and close acquaintances.",
+        "topic": [
+          "family reunion",
+          "relatives",
+          "visiting"
+        ],
+        "lexicon": [
+          "reunion",
+          "hugged",
+          "welcomed back",
+          "holiday gathering"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Warnings shift from in-person and known-contact dealings toward voice cloning and impersonation of relatives, which would indicate growing suspicion even of voices and identities people know.",
+        "lexicon_early": [
+          "face-to-face",
+          "in person",
+          "known contacts"
+        ],
+        "lexicon_late": [
+          "voice cloning",
+          "deepfake",
+          "spoofed number",
+          "impersonating a relative"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "In dating coverage, warnings about deception by people met through apps increase, which would indicate growing distrust of people one gets to know personally.",
+        "topic": [
+          "dating app",
+          "first date",
+          "matches"
+        ],
+        "lexicon": [
+          "catfish",
+          "love scam",
+          "red flags",
+          "met online"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "G007_34_B",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of confidence scams and con artists rises over the period, signalling a more wary public toward unfamiliar people.",
+        "lexicon": [
+          "con artist",
+          "grifter",
+          "swindler",
+          "romance scam",
+          "pig butchering"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Within crowdfunding and online giving, coverage of strangers donating to one another and of pay-it-forward gestures increases, pointing to more open trust toward unknown people.",
+        "topic": [
+          "crowdfunding",
+          "GoFundMe",
+          "online fundraiser"
+        ],
+        "lexicon": [
+          "donated to a stranger",
+          "pay it forward",
+          "kindness pledge",
+          "matched donations"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Early coverage frames dealings with strangers as handshake-based and informal; later coverage frames them around formal verification and identity checks, indicating reduced trust in unknown people.",
+        "lexicon_early": [
+          "handshake deal",
+          "took his word",
+          "vouched for him",
+          "no paperwork needed"
+        ],
+        "lexicon_late": [
+          "background check",
+          "identity verification",
+          "ID required",
+          "proof of identity"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "On public health messaging, early coverage describes officials as hoaxers or misinformation sources, while later coverage describes them as trusted messengers, reflecting rising trust in these previously unfamiliar authorities.",
+        "topic": [
+          "public health officials",
+          "health advisers",
+          "vaccine messengers"
+        ],
+        "lexicon_early": [
+          "misinformation",
+          "hoax",
+          "cover-up",
+          "can't be believed"
+        ],
+        "lexicon_late": [
+          "trusted messenger",
+          "vaccinated together",
+          "reliable guidance",
+          "earned back trust"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "In coverage of dating apps, safety warnings about meeting unknown matches rise over time, reflecting a shift toward distrust of people met for the first time.",
+        "topic": [
+          "dating apps",
+          "Tinder",
+          "Bumble",
+          "Hinge"
+        ],
+        "lexicon": [
+          "catfished",
+          "love scam",
+          "meet in a public place",
+          "safety check"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "G026",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "As the share of households using a non-English language at home grows, more respondents have a mother born abroad, so coverage of multilingual homes should rise toward Yes.",
+        "lexicon": [
+          "spoke Spanish at home",
+          "language spoken at home",
+          "bilingual household",
+          "heritage language"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Growing dual-nationality arrangements mean more people report a foreign-born parent, so coverage of dual citizenship should increase under Direction A.",
+        "lexicon": [
+          "dual citizenship",
+          "dual nationality",
+          "overseas citizenship",
+          "citizenship by descent"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Public discussion shifted from enforcement language about aliens and registration toward language about youth and families with undocumented parents, consistent with more respondents having immigrant mothers (Direction A).",
+        "lexicon_early": [
+          "alien registration",
+          "INS",
+          "deportable aliens",
+          "entry without inspection"
+        ],
+        "lexicon_late": [
+          "DACA recipients",
+          "Dreamers",
+          "TPS holders",
+          "mixed-status households"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Within coverage of births and maternity care, mentions of births to foreign-born mothers should grow as the immigrant-mother share rises (Direction B reverses this, so Direction B predicts a decline).",
+        "topic": [
+          "births",
+          "maternity",
+          "newborns",
+          "obstetric"
+        ],
+        "lexicon": [
+          "born to foreign-born mothers",
+          "mothers born abroad",
+          "born overseas",
+          "foreign-born mothers"
+        ],
+        "direction": "B",
+        "expected_change": "decrease"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of marriage and intermarriage, early references to marrying across national origin lines give way to references to native-born spouses and grandchildren, tracking a shift toward No under Direction B.",
+        "topic": [
+          "marriage",
+          "intermarriage",
+          "spouse",
+          "wedding"
+        ],
+        "lexicon_early": [
+          "marry a foreigner",
+          "international marriage",
+          "mail-order bride",
+          "married abroad"
+        ],
+        "lexicon_late": [
+          "native-born spouse",
+          "American-born spouse",
+          "grew up in the U.S.",
+          "third-generation family"
+        ],
+        "direction": "B"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "G027",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of Anglo-Protestant and early-settler heritage declines over time, so references to such ancestry should fall if the share answering that a father is native-born rises.",
+        "lexicon": [
+          "Mayflower",
+          "WASP",
+          "Anglo-Saxon Protestant",
+          "Scots-Irish ancestry"
+        ],
+        "direction": "B",
+        "expected_change": "decrease"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Among coverage of Latino and Asian American communities, references to parents who emigrated from specific countries should rise if the share of immigrant fathers grows.",
+        "topic": [
+          "Latino",
+          "Hispanic",
+          "Asian American",
+          "Mexican American"
+        ],
+        "lexicon": [
+          "raised by immigrant",
+          "parents emigrated from",
+          "emigrated from Mexico",
+          "immigrated from India"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Framing shifts from multigenerational farming or pioneer ancestry toward recent arrival and immigrant roots, which would indicate movement toward Yes.",
+        "lexicon_early": [
+          "pioneer ancestors",
+          "family homestead",
+          "generations of farmers"
+        ],
+        "lexicon_late": [
+          "immigrant roots",
+          "parents came from abroad",
+          "arrived as a child"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of genealogy and DNA ancestry testing, framing shifts from European ethnic origin toward being born in the U.S. to native-born parents, indicating movement toward No.",
+        "topic": [
+          "ancestry DNA",
+          "genealogy",
+          "family tree"
+        ],
+        "lexicon_early": [
+          "English descent",
+          "German ancestry",
+          "ethnic origin"
+        ],
+        "lexicon_late": [
+          "born in the United States to",
+          "U.S.-born parents",
+          "native-born parents"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage of temporary and humanitarian immigration statuses rises over time, so mentions of these statuses should increase if the share with immigrant fathers grows.",
+        "lexicon": [
+          "visa overstay",
+          "refugee resettlement",
+          "Temporary Protected Status",
+          "H-1B visa"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  }
+]

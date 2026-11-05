@@ -1,0 +1,426 @@
+[
+  {
+    "country": "USA",
+    "question": "F118",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Across all coverage, mentions of openly identifying as gay or lesbian become more frequent over time, reflecting growing public visibility and acceptance of homosexuality.",
+        "lexicon": [
+          "openly gay",
+          "coming out",
+          "out as gay",
+          "openly lesbian"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "In coverage of religious institutions, moral condemnation language such as 'sinful' or 'abomination' becomes less frequent over time, suggesting a softening of moral judgment toward homosexuality.",
+        "topic": [
+          "church",
+          "sermon",
+          "scripture",
+          "religious leaders",
+          "denomination"
+        ],
+        "lexicon": [
+          "sinful",
+          "abomination",
+          "immoral",
+          "sin"
+        ],
+        "direction": "A",
+        "expected_change": "decrease"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Earlier coverage frames homosexuality through moral and pathologizing vocabulary, while later coverage frames it through rights and equality vocabulary, indicating a shift toward acceptance.",
+        "lexicon_early": [
+          "sinful",
+          "deviant",
+          "perversion",
+          "immoral",
+          "abnormal"
+        ],
+        "lexicon_late": [
+          "equality",
+          "LGBTQ rights",
+          "acceptance",
+          "inclusion",
+          "civil rights"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of anti-discrimination and gay rights legislation, earlier articles emphasize 'special rights' and 'lifestyle' framing, while later articles emphasize 'equal rights' and 'civil rights' framing, consistent with growing acceptance.",
+        "topic": [
+          "anti-discrimination bill",
+          "gay rights legislation",
+          "civil unions",
+          "same-sex marriage"
+        ],
+        "lexicon_early": [
+          "special rights",
+          "lifestyle choice",
+          "gay agenda"
+        ],
+        "lexicon_late": [
+          "equal rights",
+          "civil rights",
+          "equal protection"
+        ],
+        "direction": "A"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A001",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Across all news coverage, references to traditional family values and family obligations decline over time as family is framed less as a central duty.",
+        "lexicon": [
+          "family values",
+          "family obligations",
+          "traditional family",
+          "family ties",
+          "family duty"
+        ],
+        "direction": "A",
+        "expected_change": "decrease"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Within coverage of marriage, divorce, and childbearing, discussion of living alone and choosing to remain childfree rises over time, signaling lower priority placed on family life.",
+        "topic": [
+          "marriage",
+          "divorce",
+          "childbearing",
+          "having children",
+          "birth rate"
+        ],
+        "lexicon": [
+          "living alone",
+          "single-person households",
+          "childfree",
+          "choosing not to have children",
+          "never married"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Earlier coverage emphasizes family bonds and shared family time, while later coverage emphasizes personal freedom and self-fulfillment as life priorities.",
+        "lexicon_early": [
+          "family dinner",
+          "family time",
+          "family bonds",
+          "close-knit family",
+          "family gatherings"
+        ],
+        "lexicon_late": [
+          "personal freedom",
+          "self-fulfillment",
+          "personal goals",
+          "self-discovery",
+          "individual choice"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Within coverage of young adults and housing, early articles describe living with parents or multigenerational households as normal, while later articles describe early independence and moving out as the expected norm.",
+        "topic": [
+          "young adults",
+          "moving out",
+          "housing",
+          "living with parents",
+          "first home"
+        ],
+        "lexicon_early": [
+          "living with parents",
+          "multigenerational household",
+          "staying at home",
+          "family home",
+          "extended family living"
+        ],
+        "lexicon_late": [
+          "independent living",
+          "moving out early",
+          "own apartment",
+          "living independently",
+          "solo living"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Across all coverage, individualism-oriented language such as personal autonomy and self-reliance grows more frequent over time, reflecting a shift away from family as a central life anchor.",
+        "lexicon": [
+          "personal autonomy",
+          "self-reliance",
+          "individualism",
+          "go it alone",
+          "my own life"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A168A",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "As the average answer drifted toward distrust, coverage across all topics should use scam and exploitation vocabulary more often over time.",
+        "lexicon": [
+          "scam",
+          "fraud",
+          "con artists",
+          "rip-off",
+          "taken advantage of"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "Within coverage of community helping and volunteering, language of neighborly generosity should become more frequent if public trust in others rose.",
+        "topic": [
+          "volunteers",
+          "mutual aid",
+          "charity",
+          "community service"
+        ],
+        "lexicon": [
+          "stranger kindness",
+          "neighbors helped",
+          "good Samaritan",
+          "helping one another"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Earlier coverage should frame people in terms of good faith and honesty, while later coverage frames them in terms of exploitation and deception, indicating a shift toward distrust.",
+        "lexicon_early": [
+          "good faith",
+          "honest dealing",
+          "trustworthy",
+          "fair play"
+        ],
+        "lexicon_late": [
+          "exploit",
+          "taking advantage",
+          "deceive",
+          "scammers"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "In coverage of online commerce, earlier articles should emphasize trusted sellers and honest dealing, while later articles emphasize fake reviews and phishing, reflecting increased suspicion of others.",
+        "topic": [
+          "online shopping",
+          "e-commerce",
+          "marketplace",
+          "sellers"
+        ],
+        "lexicon_early": [
+          "trusted seller",
+          "honest dealing",
+          "good reputation"
+        ],
+        "lexicon_late": [
+          "fake reviews",
+          "phishing",
+          "identity theft",
+          "bait and switch"
+        ],
+        "direction": "B"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A165",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage increasingly warns about fraud and deception by strangers, so scam-related vocabulary becomes more frequent over time, consistent with a shift toward needing to be careful.",
+        "lexicon": [
+          "scam",
+          "fraud",
+          "con artists",
+          "phishing",
+          "identity theft"
+        ],
+        "direction": "A",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "In neighborhood and community stories, coverage of spontaneous helping between strangers becomes more frequent over time, consistent with a shift toward trusting people.",
+        "topic": [
+          "neighborhood",
+          "community",
+          "neighbors"
+        ],
+        "lexicon": [
+          "good Samaritan",
+          "helped a stranger",
+          "kindness",
+          "volunteers"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Earlier coverage uses language of good faith and reliable people, while later coverage emphasizes fraud and deception, pointing toward a shift toward caution.",
+        "lexicon_early": [
+          "good faith",
+          "trustworthy",
+          "good neighbors",
+          "honest dealings"
+        ],
+        "lexicon_late": [
+          "identity theft",
+          "phishing",
+          "deepfake",
+          "catfishing"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Within election coverage, earlier articles stress public confidence in institutions and fellow citizens, while later articles stress misinformation and distrust of others, indicating a shift toward caution.",
+        "topic": [
+          "election",
+          "voters",
+          "ballot"
+        ],
+        "lexicon_early": [
+          "public confidence",
+          "faith in institutions",
+          "fellow citizens"
+        ],
+        "lexicon_late": [
+          "misinformation",
+          "rigged",
+          "distrust",
+          "bad actors"
+        ],
+        "direction": "A"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Coverage increasingly emphasizes cooperation and mutual aid across groups over time, consistent with a shift toward viewing most people as trustworthy.",
+        "lexicon": [
+          "cooperation",
+          "mutual aid",
+          "reconciliation",
+          "working together"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "question": "A124_02",
+    "hypotheses": [
+      {
+        "kind": "trend_general",
+        "hypothesis": "Across all news coverage, references to racial diversity and inclusion become more frequent over time, reflecting a shift toward greater acceptance of people of other races.",
+        "lexicon": [
+          "racial diversity",
+          "multiracial",
+          "inclusion",
+          "diverse community"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      },
+      {
+        "kind": "trend_topic",
+        "hypothesis": "In coverage of housing and neighborhoods, mentions of explicitly exclusionary practices decline over time, while fair-housing and integration language rises.",
+        "topic": [
+          "neighborhood",
+          "housing",
+          "move in",
+          "homeowners"
+        ],
+        "lexicon": [
+          "restrictive covenant",
+          "white flight",
+          "fair housing",
+          "integrated neighborhood"
+        ],
+        "direction": "B",
+        "expected_change": "decrease"
+      },
+      {
+        "kind": "contrast_general",
+        "hypothesis": "Earlier coverage uses segregation-era language about racial separation, while later coverage uses terms that frame mixed-race society as normal.",
+        "lexicon_early": [
+          "segregated",
+          "colored",
+          "race mixing",
+          "separate but equal"
+        ],
+        "lexicon_late": [
+          "interracial marriage",
+          "multicultural",
+          "racial equality",
+          "civil rights"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "contrast_topic",
+        "hypothesis": "Within coverage of neighbors and residential moves, early articles stress resistance to newcomers of other races, while later articles stress welcome and good-neighbor framing.",
+        "topic": [
+          "neighbors",
+          "neighborhood",
+          "moved in",
+          "residents"
+        ],
+        "lexicon_early": [
+          "block busting",
+          "don't want them",
+          "racial transition",
+          "property values fall"
+        ],
+        "lexicon_late": [
+          "welcoming neighbors",
+          "good neighbor",
+          "community harmony",
+          "mixed neighborhood"
+        ],
+        "direction": "B"
+      },
+      {
+        "kind": "trend_general",
+        "hypothesis": "Across all coverage, language condemning racial prejudice and bigotry grows more common over time, consistent with a decline in stated reluctance toward other-race neighbors.",
+        "lexicon": [
+          "prejudice",
+          "bigotry",
+          "racism",
+          "discrimination"
+        ],
+        "direction": "B",
+        "expected_change": "increase"
+      }
+    ]
+  }
+]
