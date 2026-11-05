@@ -1,5 +1,30 @@
 # Status
 
+> **Chars-per-100k renamed to words-per-100k, and two performance fixes (2026-11-05, `test_lexicon_hypotheses.py`).**
+> User pushback: normalizing by raw character count never made sense as a text-quantity unit (word length varies);
+> word count does. Renamed throughout -- `total_chars`->`total_words`, the "chars" metric/field name ->"words" in
+> code, prompts, and all downstream scripts (`run_lexicon_hypotheses_feedback.py`,
+> `run_lexicon_hypotheses_blind_feedback.py`). Rescored pilot, bulk, and the full feedback-loop history for both the
+> context-aware and blind variants (no new LLM calls). **Result: accuracy barely moved** (context-aware: 50.4%/49.6%
+> unchanged exactly; blind: 54.4% unchanged, 52.3%->52.7%, one question flipped tie->correct) -- expected, since word
+> count and character count are both just proportional measures of text quantity, so the *direction* comparison
+> (the only thing the old chars metric fed into significance) is robust to which one you divide by. Still the right
+> fix for correctness/interpretability ("per 100,000 words" is a real rate; "per 100,000 characters" wasn't).
+> - **Performance, found while rescoring was unexpectedly slow:** (1) `total_words()` was being recomputed from
+>   scratch (full `.split()` tokenization over up to 253,077 articles) for EVERY "_general" hypothesis, even though
+>   `_general` hypotheses all share the exact same unfiltered full-corpus text -- added an identity-keyed cache so
+>   it's computed once, not ~370 times per run. (2) `count_presence()`/`count_occurrences()` were two separate full
+>   scans of the same (texts, markers) pair, called together at every call site -- merged into one `count_matches()`
+>   doing both in a single pass (halves full-corpus traversals: 2->1 for trend, 8->4 for contrast). Neither fix
+>   changes any result, only speed; verified offline against the existing fixture before trusting either.
+> - **Script fix:** `run_lexicon_hypotheses_feedback.py`/`_blind_feedback.py` now save every round's scored results
+>   and the full cumulative history to disk, not just the final tally -- a direct lesson from this same
+>   investigation needing to reload the NYT corpus and rescore from scratch to inspect prior results that had
+>   already been computed once (2026-11-05 "ALWAYS SAVE ALL RESULTS SOMEWHERE" feedback).
+> - **Final numbers, all word-normalized, all 128 questions, round 1 + feedback combined:** context-aware presence
+>   50.4% (z=0.09, p=0.93) / words 49.6% (z=-0.09, p=0.93); blind presence 54.4% (z=0.89, p=0.38) / words 52.7%
+>   (z=0.57, p=0.57). Nothing reaches significance anywhere -- same bottom line as every prior variant.
+
 Inventory of what exists in this repo; the dated notes below are the running log (last updated 2026-11-05). No research question is
 settled yet — this is a snapshot to work from, not a plan. Update this doc as code/data/results change.
 

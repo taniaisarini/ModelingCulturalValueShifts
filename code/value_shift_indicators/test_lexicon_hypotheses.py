@@ -22,10 +22,12 @@ Every hypothesis is scored by BOTH rate metrics, kept side by side rather than m
 compare which tracks reality better:
   - presence: fraction of (topic-filtered) articles containing >=1 lexicon word (article-level, like
     test_language_hypotheses.py's count_matches()).
-  - chars: raw word/phrase occurrences per 100,000 characters of (topic-filtered) text.
+  - words: raw word/phrase occurrences per 100,000 WORDS of (topic-filtered) text (2026-11-05: renamed
+    from a character-based denominator -- a character count isn't a real unit of text quantity, since
+    words vary in length; word count is).
 Each metric's comparison is a two-proportion z-test (analysis_tools.two_proportion_z), same statistic
-test_language_hypotheses.py already uses -- for "chars" this applies the test to (occurrences, total
-characters) instead of (matching articles, total articles), a valid normal-approximation for a rare-event
+test_language_hypotheses.py already uses -- for "words" this applies the test to (occurrences, total
+word count) instead of (matching articles, total articles), a valid normal-approximation for a rare-event
 rate comparison.
 
 Contrast hypotheses are additionally scored by TWO methods, also kept side by side, each under both rate
@@ -45,11 +47,28 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from analysis_tools import two_proportion_z  # noqa: E402
-from test_language_hypotheses import load_nyt_texts, total_chars  # noqa: E402
+from test_language_hypotheses import load_nyt_texts  # noqa: E402
 
 RESULTS = Path(__file__).resolve().parent / "results"
 YEAR_A, YEAR_B = 2006, 2011
 VALID_KINDS = {"trend_general", "trend_topic", "contrast_general", "contrast_topic"}
+
+
+_WORD_COUNT_CACHE = {}
+
+
+def total_words(texts):
+    """Word count via whitespace split -- simple, language-agnostic-ish tokenization, matching the
+    precision this whole mechanical pipeline already uses elsewhere (substring matching, not NLP).
+    Cached by list identity: the full, unfiltered corpus (texts_a/texts_b) is the SAME list object
+    passed in for every "_general" hypothesis (hundreds of them per run), and unlike the old
+    total_chars() (just len(t), near-free), .split() has to walk and tokenize every article -- recomputing
+    that from scratch each time was a real, avoidable slowdown (found 2026-11-05 when a rescore ran
+    far slower than the equivalent character-based one used to)."""
+    key = id(texts)
+    if key not in _WORD_COUNT_CACHE:
+        _WORD_COUNT_CACHE[key] = sum(len(t.split()) for t in texts)
+    return _WORD_COUNT_CACHE[key]
 
 
 def filter_by_topic(texts, topic):
@@ -61,16 +80,21 @@ def filter_by_topic(texts, topic):
     return [t for t in texts if any(k in t for k in topic_l)]
 
 
-def count_presence(texts, markers):
-    """Number of articles containing >=1 marker (article-level, like test_language_hypotheses.py)."""
+def count_matches(texts, markers):
+    """Returns (presence_count, occurrence_count) together in ONE pass over `texts` (2026-11-05:
+    these used to be two separate functions, count_presence() and count_occurrences(), each doing its
+    own full scan of the same text/marker pair -- every call site needed both, so that was a real,
+    avoidable doubling of the substring-scanning work, the actual cost driver in this whole pipeline.
+    presence_count = number of articles containing >=1 marker; occurrence_count = total marker
+    occurrences (not capped at 1 per article) summed across all articles and markers."""
     markers_l = [m.lower() for m in markers]
-    return sum(1 for t in texts if any(m in t for m in markers_l))
-
-
-def count_occurrences(texts, markers):
-    """Total marker occurrences (not just presence), summed across all articles and markers."""
-    markers_l = [m.lower() for m in markers]
-    return sum(t.count(m) for t in texts for m in markers_l)
+    presence = occurrences = 0
+    for t in texts:
+        c = sum(t.count(m) for m in markers_l)
+        occurrences += c
+        if c:
+            presence += 1
+    return presence, occurrences
 
 
 def rate_test(x_a, n_a, x_b, n_b):
@@ -84,22 +108,22 @@ def rate_test(x_a, n_a, x_b, n_b):
                 p_value=p_value, observed=("increase" if p_b > p_a else "decrease"))
 
 
-def chars_from_presence(presence_test, occ_a, chars_a, occ_b, chars_b):
-    """The chars metric's significance test, FIXED (2026-11-05 bug found by inspecting 20 cases where
-    the old free-text experiment was right and this one was wrong): testing raw occurrence counts
-    against total corpus CHARACTERS (tens to hundreds of millions for an unrestricted hypothesis) makes
-    a two-proportion z-test absurdly over-powered -- almost any word whose raw count didn't shrink by
-    exactly the same ratio as the whole corpus (2006 corpus is ~2.8x the characters of 2011's) comes
-    back "significant" (p=0.0 or 1e-15) regardless of real relevance to the hypothesis. Fix: the chars
-    metric's *direction* still comes from the occurrences-per-character rate (that's the whole point of
-    having a second metric), but its *significance* is NOT tested independently -- it reuses
-    `presence_test`'s p-value, exactly how the original language-hypothesis experiment's char-rate
-    fix worked (char rate only ever decided direction there, never significance; the z-test's n was
-    always the article count)."""
-    rate_a = occ_a / chars_a if chars_a else 0.0
-    rate_b = occ_b / chars_b if chars_b else 0.0
-    observed = None if (chars_a == 0 or chars_b == 0) else ("increase" if rate_b > rate_a else "decrease")
-    return dict(x_a=occ_a, n_a=chars_a, x_b=occ_b, n_b=chars_b,
+def words_from_presence(presence_test, occ_a, words_a, occ_b, words_b):
+    """The words metric's significance test (renamed 2026-11-05 from a character-based denominator --
+    a character count isn't a real unit of text quantity, word count is). Still carries the earlier
+    fix (found by inspecting 20 cases where the old free-text experiment was right and this one was
+    wrong): testing raw occurrence counts against total corpus WORDS (tens of millions for an
+    unrestricted hypothesis) would make a two-proportion z-test absurdly over-powered -- almost any
+    word whose raw count didn't shrink by exactly the same ratio as the whole corpus comes back
+    "significant" regardless of real relevance. So the words metric's *direction* comes from the
+    occurrences-per-word rate (that's the whole point of having a second metric), but its
+    *significance* is NOT tested independently -- it reuses `presence_test`'s p-value, exactly how the
+    original language-hypothesis experiment's rate fix worked (rate only ever decided direction there,
+    never significance; the z-test's n was always the article count)."""
+    rate_a = occ_a / words_a if words_a else 0.0
+    rate_b = occ_b / words_b if words_b else 0.0
+    observed = None if (words_a == 0 or words_b == 0) else ("increase" if rate_b > rate_a else "decrease")
+    return dict(x_a=occ_a, n_a=words_a, x_b=occ_b, n_b=words_b,
                 rate_a=round(rate_a * 100_000, 4), rate_b=round(rate_b * 100_000, 4),
                 p_value=presence_test["p_value"], observed=observed, significance_source="presence")
 
@@ -125,19 +149,21 @@ def combine_verdicts(v1, v2):
     return "inconclusive"
 
 
-def test_trend(sub_a, sub_b, chars_a, chars_b, lexicon, expected_change):
-    presence = rate_test(count_presence(sub_a, lexicon), len(sub_a),
-                          count_presence(sub_b, lexicon), len(sub_b))
-    occ_a, occ_b = count_occurrences(sub_a, lexicon), count_occurrences(sub_b, lexicon)
-    chars = chars_from_presence(presence, occ_a, chars_a, occ_b, chars_b)
+def test_trend(sub_a, sub_b, words_a, words_b, lexicon, expected_change):
+    pres_a, occ_a = count_matches(sub_a, lexicon)
+    pres_b, occ_b = count_matches(sub_b, lexicon)
+    presence = rate_test(pres_a, len(sub_a), pres_b, len(sub_b))
+    words = words_from_presence(presence, occ_a, words_a, occ_b, words_b)
     return dict(presence=dict(presence, verdict=verdict_for(presence, expected_change)),
-                chars=dict(chars, verdict=verdict_for(chars, expected_change)))
+                words=dict(words, verdict=verdict_for(words, expected_change)))
 
 
-def test_contrast(sub_a, sub_b, chars_a, chars_b, lexicon_early, lexicon_late):
+def test_contrast(sub_a, sub_b, words_a, words_b, lexicon_early, lexicon_late):
     n_a, n_b = len(sub_a), len(sub_b)
-    pres_early_a, pres_early_b = count_presence(sub_a, lexicon_early), count_presence(sub_b, lexicon_early)
-    pres_late_a, pres_late_b = count_presence(sub_a, lexicon_late), count_presence(sub_b, lexicon_late)
+    pres_early_a, occ_early_a = count_matches(sub_a, lexicon_early)
+    pres_early_b, occ_early_b = count_matches(sub_b, lexicon_early)
+    pres_late_a, occ_late_a = count_matches(sub_a, lexicon_late)
+    pres_late_b, occ_late_b = count_matches(sub_b, lexicon_late)
 
     pres_early_trend = rate_test(pres_early_a, n_a, pres_early_b, n_b)
     pres_late_trend = rate_test(pres_late_a, n_a, pres_late_b, n_b)
@@ -148,26 +174,25 @@ def test_contrast(sub_a, sub_b, chars_a, chars_b, lexicon_early, lexicon_late):
                                     pres_early_b, pres_early_b + pres_late_b)
     pres_dominance = dict(pres_dominance_rate, verdict=verdict_for(pres_dominance_rate, "decrease"))
 
-    # chars: direction from occurrence-per-char rate, significance reused from the matching
-    # presence-based lexicon trend test (see chars_from_presence) -- dominance is untouched, its own
-    # n (early+late occurrence counts) was never affected by the huge-character-count bug.
-    occ_early_a, occ_early_b = count_occurrences(sub_a, lexicon_early), count_occurrences(sub_b, lexicon_early)
-    occ_late_a, occ_late_b = count_occurrences(sub_a, lexicon_late), count_occurrences(sub_b, lexicon_late)
-    chars_early_trend = chars_from_presence(pres_early_trend, occ_early_a, chars_a, occ_early_b, chars_b)
-    chars_late_trend = chars_from_presence(pres_late_trend, occ_late_a, chars_a, occ_late_b, chars_b)
-    v_early_c, v_late_c = verdict_for(chars_early_trend, "decrease"), verdict_for(chars_late_trend, "increase")
-    chars_independent = dict(early=chars_early_trend, late=chars_late_trend,
-                             verdict=combine_verdicts(v_early_c, v_late_c))
-    chars_dominance_rate = rate_test(occ_early_a, occ_early_a + occ_late_a, occ_early_b, occ_early_b + occ_late_b)
-    chars_dominance = dict(chars_dominance_rate, verdict=verdict_for(chars_dominance_rate, "decrease"))
+    # words: direction from occurrence-per-word rate, significance reused from the matching
+    # presence-based lexicon trend test (see words_from_presence) -- dominance is untouched, its own
+    # n (early+late occurrence counts) was never affected by the huge-denominator bug. occ_early_*/
+    # occ_late_* already came out of the single count_matches() pass above -- no need to re-scan.
+    words_early_trend = words_from_presence(pres_early_trend, occ_early_a, words_a, occ_early_b, words_b)
+    words_late_trend = words_from_presence(pres_late_trend, occ_late_a, words_a, occ_late_b, words_b)
+    v_early_w, v_late_w = verdict_for(words_early_trend, "decrease"), verdict_for(words_late_trend, "increase")
+    words_independent = dict(early=words_early_trend, late=words_late_trend,
+                             verdict=combine_verdicts(v_early_w, v_late_w))
+    words_dominance_rate = rate_test(occ_early_a, occ_early_a + occ_late_a, occ_early_b, occ_early_b + occ_late_b)
+    words_dominance = dict(words_dominance_rate, verdict=verdict_for(words_dominance_rate, "decrease"))
 
     return dict(presence=dict(independent=pres_independent, dominance=pres_dominance),
-                chars=dict(independent=chars_independent, dominance=chars_dominance))
+                words=dict(independent=words_independent, dominance=words_dominance))
 
 
 def score_hypothesis(h, texts_a, texts_b):
     """Score one hypothesis dict against pre-loaded NYT text for both years. Returns the same dict
-    with tested=True and n_articles_a/n_articles_b/chars_a/chars_b/result added, or tested=False and
+    with tested=True and n_articles_a/n_articles_b/words_a/words_b/result added, or tested=False and
     untestable_reason added. Pulled out of run() so the feedback-loop script can score new hypotheses
     the same way without duplicating this logic."""
     kind = h.get("kind")
@@ -183,28 +208,28 @@ def score_hypothesis(h, texts_a, texts_b):
     # "_general" kinds use the full corpus as-is (no retrieval filter).
     sub_a = filter_by_topic(texts_a, topic) if is_topic_kind else texts_a
     sub_b = filter_by_topic(texts_b, topic) if is_topic_kind else texts_b
-    chars_a, chars_b = total_chars(sub_a), total_chars(sub_b)
+    words_a, words_b = total_words(sub_a), total_words(sub_b)
 
     if kind in ("trend_general", "trend_topic") and h.get("lexicon") and h.get("expected_change"):
-        result = test_trend(sub_a, sub_b, chars_a, chars_b, h["lexicon"], h["expected_change"])
+        result = test_trend(sub_a, sub_b, words_a, words_b, h["lexicon"], h["expected_change"])
     elif kind in ("contrast_general", "contrast_topic") and h.get("lexicon_early") and h.get("lexicon_late"):
-        result = test_contrast(sub_a, sub_b, chars_a, chars_b, h["lexicon_early"], h["lexicon_late"])
+        result = test_contrast(sub_a, sub_b, words_a, words_b, h["lexicon_early"], h["lexicon_late"])
     else:
         return dict(h, tested=False, untestable_reason="missing lexicon field(s)")
     return dict(h, tested=True, n_articles_a=len(sub_a), n_articles_b=len(sub_b),
-                chars_a=chars_a, chars_b=chars_b, result=result)
+                words_a=words_a, words_b=words_b, result=result)
 
 
 def effective_verdicts(h):
     """The single confirm/deny/inconclusive verdict per metric used for voting -- for a trend
     hypothesis this is just its own verdict; for a contrast hypothesis it's confirm if EITHER the
     independent or dominance method confirms (deny if either denies and neither confirms). Returns
-    (presence_verdict, chars_verdict); only call on a hypothesis with tested=True."""
+    (presence_verdict, words_verdict); only call on a hypothesis with tested=True."""
     r = h["result"]
     if h["kind"].startswith("trend"):
-        return r["presence"]["verdict"], r["chars"]["verdict"]
+        return r["presence"]["verdict"], r["words"]["verdict"]
     out = []
-    for metric in ("presence", "chars"):
+    for metric in ("presence", "words"):
         ind, dom = r[metric]["independent"]["verdict"], r[metric]["dominance"]["verdict"]
         if ind == "confirm" or dom == "confirm":
             out.append("confirm")
@@ -217,21 +242,21 @@ def effective_verdicts(h):
 
 def tally_votes(hyps):
     """Confirm-only voting across a question's (tested) hypotheses, for both metrics independently.
-    Returns dict(votes_presence, votes_chars, pred_presence, pred_chars) where pred is 'A', 'B', or
+    Returns dict(votes_presence, votes_words, pred_presence, pred_words) where pred is 'A', 'B', or
     'tie'. Untested hypotheses are skipped."""
-    votes_p, votes_c = {"A": 0, "B": 0}, {"A": 0, "B": 0}
+    votes_p, votes_w = {"A": 0, "B": 0}, {"A": 0, "B": 0}
     for h in hyps:
         if not h.get("tested"):
             continue
-        pv, cv = effective_verdicts(h)
+        pv, wv = effective_verdicts(h)
         d = h["direction"]
         if pv == "confirm":
             votes_p[d] += 1
-        if cv == "confirm":
-            votes_c[d] += 1
+        if wv == "confirm":
+            votes_w[d] += 1
     pred_p = "A" if votes_p["A"] > votes_p["B"] else "B" if votes_p["B"] > votes_p["A"] else "tie"
-    pred_c = "A" if votes_c["A"] > votes_c["B"] else "B" if votes_c["B"] > votes_c["A"] else "tie"
-    return dict(votes_presence=votes_p, votes_chars=votes_c, pred_presence=pred_p, pred_chars=pred_c)
+    pred_w = "A" if votes_w["A"] > votes_w["B"] else "B" if votes_w["B"] > votes_w["A"] else "tie"
+    return dict(votes_presence=votes_p, votes_words=votes_w, pred_presence=pred_p, pred_words=pred_w)
 
 
 def run(dataset="pilot"):

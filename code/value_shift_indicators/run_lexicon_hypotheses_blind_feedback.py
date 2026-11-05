@@ -4,7 +4,7 @@ the same way generation does; shown and approved before use). Mirrors
 run_lexicon_hypotheses_feedback.py exactly except for which prompt/round-1 file it uses.
 
 Starts from results/lexicon_hypotheses_blind_bulk_tested.json ("round 1"). A question is "tied" if
-confirm-only voting reaches no majority under EITHER the presence-fraction or the chars-per-100k
+confirm-only voting reaches no majority under EITHER the presence-fraction or the words-per-100k
 metric. For every question still tied going into a round, feeds back ALL of its hypotheses from every
 prior round (lexica, topic, kind, measured verdict under both metrics -- never the true direction,
 and still never any country/time/publication info) and asks for 5 NEW hypotheses, same four-kind
@@ -51,7 +51,7 @@ def load_round1():
 
 def is_tied(hyps):
     tally = tally_votes(hyps)
-    return tally["pred_presence"] == "tie" or tally["pred_chars"] == "tie"
+    return tally["pred_presence"] == "tie" or tally["pred_words"] == "tie"
 
 
 def _fmt_lexica(h):
@@ -75,17 +75,17 @@ def _hypotheses_block(hyps):
         lines.append(f"{i}. [round {h.get('round', '?')}, {h['kind']}, direction {h.get('direction', '?')}] "
                       f"{_fmt_lexica(h)}")
         if h.get("tested"):
-            pv, cv = effective_verdicts(h)
-            lines.append(f"   Result: presence={pv}, chars={cv}")
+            pv, wv = effective_verdicts(h)
+            lines.append(f"   Result: presence={pv}, words={wv}")
         else:
             lines.append(f"   Result: not tested ({h.get('untestable_reason', 'unknown')})")
     return "\n".join(lines)
 
 
 def _votes_summary(tally):
-    vp, vc = tally["votes_presence"], tally["votes_chars"]
+    vp, vw = tally["votes_presence"], tally["votes_words"]
     return (f"Current tally -- presence: A={vp['A']} B={vp['B']} ({tally['pred_presence']}); "
-            f"chars: A={vc['A']} B={vc['B']} ({tally['pred_chars']}).")
+            f"words: A={vw['A']} B={vw['B']} ({tally['pred_words']}).")
 
 
 def run_round(round_num, tied_questions, history, texts_a, texts_b, model, dry_run):
@@ -170,7 +170,7 @@ def run(model, max_rounds, dry_run):
         tally = tally_votes(hyps)
         final.append(dict(question=q, n_hypotheses=len(hyps), **tally))
     (RESULTS / "lexicon_hypotheses_blind_feedback_final.json").write_text(json.dumps(final, indent=2))
-    n_tied_final = sum(1 for f in final if f["pred_presence"] == "tie" or f["pred_chars"] == "tie")
+    n_tied_final = sum(1 for f in final if f["pred_presence"] == "tie" or f["pred_words"] == "tie")
     print(f"\nFinal: {len(final)} questions, {n_tied_final} still tied (either metric) after all rounds run.")
     print(f"-> {RESULTS / 'lexicon_hypotheses_blind_feedback_final.json'}")
 
