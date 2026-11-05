@@ -10,6 +10,7 @@ approach:
   - A fabricated GDELT actor-type code ("REL") doesn't exist in this data; REAL_GDELT_ACTOR_TYPES below
     is the verified list (checked against an actual month's distinct values).
 """
+import csv
 import math
 import sys
 from pathlib import Path
@@ -22,10 +23,46 @@ from functools import reduce
 
 import pandas as pd
 
+ROOT = Path(__file__).resolve().parent.parent.parent
+
 REAL_GDELT_ACTOR_TYPES = {"GOV", "BUS", "EDU", "COP", "JUD", "CVL", "MED", "LEG", "MIL", "MNC",
                           "HLH", "LAB", "CRM", "ELI", "IGO", "OPP", "UAF", "NGO", "IMG", "AGR",
                           "REB", "INS", "SPY", "HRI", "REF", "ENV", "UIS", "RAD", "SET", "SEP"}
 CIVIC_BASELINE_CODES = ["01", "02", "10", "11", "12", "14"]  # statement/appeal/demand/disapprove/reject/protest
+
+
+def load_nyt_texts(year):
+    """All text per doc for one year, text = lowercased headline+abstract+lead_paragraph+tags, loaded
+    once so many hypothesis tests don't each re-read 12 JSON files. Moved here from (now archived)
+    test_language_hypotheses.py 2026-11-05 since the lexicon-hypothesis pipeline (test_lexicon_hypotheses.py)
+    depends on it -- this is shared infrastructure, not part of either experiment specifically."""
+    texts = []
+    for month in range(1, 13):
+        path = NYT_DIR / f"{year}-{month:02d}.json"
+        if not path.exists():
+            continue
+        docs = json.loads(path.read_text())["response"]["docs"]
+        for doc in docs:
+            if doc.get("document_type") != "article":
+                continue  # multimedia/audio entries are ~textless; their growing share (2% -> 11%
+                          # from 2006 to 2011) mechanically depresses every rate if left in
+            headline = (doc.get("headline") or {}).get("main") or ""
+            tags = " ".join((kw.get("name") or "") for kw in (doc.get("keywords") or []))
+            texts.append(f"{headline} {doc.get('abstract') or ''} {doc.get('lead_paragraph') or ''} {tags}".lower())
+    return texts
+
+
+def load_ground_truth():
+    """{question: True/False}, True = mean increased ("A" in the case-builder convention), for every
+    USA wave5->6 question. Moved here from (now archived) test_language_hypotheses.py 2026-11-05 --
+    shared ground-truth lookup, used by the lexicon-hypothesis pipeline's accuracy checks."""
+    truth = {}
+    for path in (ROOT / "data" / "significant_changes" / "ks").glob("*_wave5_to_wave6.csv"):
+        with open(path) as f:
+            for r in csv.DictReader(f):
+                if r["country"] == "USA":
+                    truth[r["question"]] = float(r["mean_wave_6"]) > float(r["mean_wave_5"])
+    return truth
 
 
 def two_proportion_z(x1, n1, x2, n2):

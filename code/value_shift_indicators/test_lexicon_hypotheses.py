@@ -46,8 +46,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from analysis_tools import two_proportion_z  # noqa: E402
-from test_language_hypotheses import load_nyt_texts  # noqa: E402
+from analysis_tools import two_proportion_z, load_nyt_texts  # noqa: E402
 
 RESULTS = Path(__file__).resolve().parent / "results"
 YEAR_A, YEAR_B = 2006, 2011

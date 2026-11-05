@@ -1,5 +1,13 @@
 # Status
 
+> **Free-text language-hypothesis experiment archived (2026-11-05, `archive/language_hypothesis_v1/`, see its
+> README).** Marked invalid/superseded, not for a bug -- the whole free-text-with-regex-extracted-markers approach
+> was superseded by the structured lexicon-hypothesis experiment's four-kind JSON schema. All code, prompts, and
+> results moved intact (nothing deleted). Two genuinely shared functions (`load_nyt_texts`, `load_ground_truth`)
+> were moved to `code/value_shift_indicators/analysis_tools.py` first, since the lexicon-hypothesis pipeline still
+> depends on them -- one live copy, not a duplicate. Verified the live pipeline (`test_lexicon_hypotheses.py`) still
+> runs correctly after the move.
+
 > **Chars-per-100k renamed to words-per-100k, and two performance fixes (2026-11-05, `test_lexicon_hypotheses.py`).**
 > User pushback: normalizing by raw character count never made sense as a text-quantity unit (word length varies);
 > word count does. Renamed throughout -- `total_chars`->`total_words`, the "chars" metric/field name ->"words" in
