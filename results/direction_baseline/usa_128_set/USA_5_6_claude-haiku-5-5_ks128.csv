@@ -1,0 +1,2397 @@
+country,wave_a,wave_b,years_a,years_b,code,format,family,effect,truth,pred,correct,parsed,error,response,finish_reason,cached,prompt
+USA,5,6,2006,2011,A001,ordinal_scale,ordered,0.042522384100982746,toward_high,toward_low,False,True,,"The share saying family is ""very important"" is already near ceiling in the US, so any shift in the typical answer would most plausibly be toward ""Very important,"" not toward ""Not at all important,"" which is a negligible category for this item. Movement toward the bottom of the scale is very unlikely.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Indicate how important the following aspect is in your life. Would you say it is very important, rather important, not very important, or not important at all?
+Aspect: Family
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Very important""
+B: It moved toward ""Not at all important""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A002,ordinal_scale,ordered,0.05885530256028759,toward_high,toward_low,False,True,,"Friends are overwhelmingly rated ""very important"" in the United States, so the modal answer was already at that end of the scale. A shift toward ""not at all important"" between 2006 and 2011 would be unlikely, so the more plausible movement is toward ""very important.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: For the following aspect, indicate how important it is in your life. Would you say it is very important, rather important, not very important or not important at all?
+Aspect: Friends
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Very important""
+B: It moved toward ""Not at all important""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A003,ordinal_scale,ordered,-0.05863081789426117,toward_low,toward_low,True,True,,"Between 2006 and 2011, the recession and tighter work conditions plausibly pushed Americans to value free time more, not less. The ""very important"" end is the likelier direction for the typical answer to have moved, though I'm not certain of the survey specifics.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: For the following aspect, indicate how important it is in your life. Would you say it is very important, rather important, not very important or not important at all?
+Aspect: Leisure time
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not at all important""
+B: It moved toward ""Very important""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A004,ordinal_scale,ordered,0.00128113889436543,toward_high,toward_low,False,True,,"Political engagement in the U.S. rose after 2008, driven by the Obama election, the Tea Party, and Occupy protests, so more respondents plausibly came to see politics as very important by 2011. The typical answer was probably ""rather important"" in both years, with any shift leaning toward ""very important"" rather than ""not at all important.""
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: For the following aspect, indicate how important it is in your life. Would you say it is very important, rather important, not very important or not important at all?  
+Aspect: Politics
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not at all important""
+B: It moved toward ""Very important""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A005,ordinal_scale,ordered,-0.019632008382550303,toward_low,toward_low,True,True,,"Work was likely already rated ""very important"" by most Americans in 2006, and the 2011 survey came amid the Great Recession and high unemployment, when job security tends to matter more to people. A shift toward ""very important"" is more plausible than a shift toward ""not at all important.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: For the following aspect, indicate how important it is in your life. Would you say it is very important, rather important, not very important or not important at all?
+Aspect: Work
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Very important""
+B: It moved toward ""Not at all important""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A006,ordinal_scale,ordered,0.13602958063478954,toward_high,toward_high,True,True,,"The US has been gradually secularizing, and Pew and Gallup data show the share of Americans who say religion is important in their lives slipping during the late 2000s, while the ""not important"" end grew. The typical answer therefore likely shifted toward ""Not at all important,"" though the modal answer probably stayed ""Very important.""
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: For the following aspect, indicate how important it is in your life. Would you say it is very important, rather important, not very important or not important at all?  
+Aspect: Religion
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Very important""
+B: It moved toward ""Not at all important""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A008,ordinal_scale,ordered,0.013379244629244669,toward_high,toward_high,True,True,,"The typical American answer most likely shifted downward in happiness between 2006 and 2011. Survey measures such as the General Social Survey and World Values Survey show a dip in the share saying they were ""very happy"" after the 2008 recession, so the change points toward the less-happy end of the scale rather than toward ""Very happy.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Taking all things together, would you say you are feeling:  
+Feeling of happiness
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not at all happy""
+B: It moved toward ""Very happy""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A009,ordinal_scale,ordered,-0.02311279274275657,toward_low,toward_high,False,True,,"The US population aged and experienced the 2008 recession and its aftermath during this period, and both factors tend to push self-rated health downward. I'm not certain of the exact shift, but the typical answer more plausibly moved toward the poorer end.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: How would you describe your overall state of health these days? Would you say it is...
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Very poor""
+B: It moved toward ""Very good""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A098,ordinal_scale,ordered,-0.02342122383935563,toward_low,toward_low,True,True,,"Religious disaffiliation in the US rose through the late 2000s, with the share of religiously unaffiliated adults growing steadily between the mid-2000s and early 2010s. That suggests the typical response shifted away from active membership and toward ""not a member.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Now I am going to ask about your membership status in a voluntary organization. Could you tell me whether you are a member, an active member, an inactive member, or not a member of a church or religious organization?
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not a member""
+B: It moved toward ""Active member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A099,ordinal_scale,ordered,-0.03178072136398519,toward_low,toward_low,True,True,,"Sports and recreational membership in the US was fairly stable over this period, so any shift was probably small. The 2008–2011 recession likely reduced discretionary time and money for organized recreation, which points toward more people reporting ""Not a member"" rather than active participation.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Now I am going to read out a type of voluntary organization; could you tell me whether you are a member, an active member, an inactive member, or not a member of this organization?
+Organization type: Sport or recreational organization, football/baseball/rugby team
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not a member""
+B: It moved toward ""Active member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A100,ordinal_scale,ordered,-0.04506578922974358,toward_low,toward_low,True,True,,"Across the US, the modal answer to this membership question is almost certainly ""Not a member"" in both years, and civic participation in voluntary groups was broadly flat to declining over the late 2000s. That makes a shift toward ""Not a member"" the more plausible direction, not a rise in active membership.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I am going to read out a type of voluntary organization; could you tell me whether you are a member, an active member, an inactive member, or not a member of this type of organization?
+Organization type: Art, music or educational organization
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Active member""
+B: It moved toward ""Not a member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A101,ordinal_scale,ordered,-0.011422178936335098,toward_low,toward_low,True,True,,"Across these years, US union membership kept declining and the share of people not belonging to a union stayed high, so the typical response most plausibly drifted toward ""Not a member."" The 2011 Wisconsin protests may have raised visible union activism, but that is unlikely to have outweighed the longer downward trend in membership.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Now I am going to read out a type of voluntary organization; could you tell me whether you are a member, an active member, an inactive member, or not a member of this organization?
+Organization: Labour Union
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not a member""
+B: It moved toward ""Active member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A102,ordinal_scale,ordered,-0.07089606253618996,toward_low,toward_low,True,True,,"Political party membership is a minority position in the US and has been declining over time, so ""Not a member"" almost certainly dominated both years. The most plausible shift between 2006 and 2011 is a further increase in the share who are not members, which points to A.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Now I am going to read out a type of voluntary organization; could you tell me whether you are a member, an active member, an inactive member, or not a member?
+Organization type: Political party
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not a member""
+B: It moved toward ""Active member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A103,ordinal_scale,ordered,0.004233380774476658,toward_high,toward_low,False,True,,"The modal answer was almost certainly ""Not a member"" in both years, since most Americans don't belong to environmental organizations. Shifts in civic participation after the 2008 recession, along with the broader decline in associational membership, make it more likely that the ""Not a member"" share grew than that active membership rose.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Now I am going to read out a type of voluntary organization; could you tell me whether you are a member, an active member, an inactive member, or not a member of this organization?  
+Organization type: Environmental organization
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Active member""
+B: It moved toward ""Not a member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A104,ordinal_scale,ordered,0.030282331511839733,toward_high,toward_low,False,True,,"Across these WVS-style membership items, ""Not a member"" is usually the modal answer in the US, so the question is whether the typical response shifted toward it or toward active membership between 2006 and 2011. Membership in professional associations generally drifted down during the late-2000s recession, so I expect the typical answer moved toward ""Not a member.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Now I am going to read out a voluntary organization; could you tell me whether you are a member, an active member, an inactive member, or not a member of this type of organization?
+Organization type: Professional association
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not a member""
+B: It moved toward ""Active member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A105,ordinal_scale,ordered,0.015232529991611898,toward_high,toward_low,False,True,,"Membership in charitable and civic groups in the US has generally declined through the 2000s and into the early 2010s, especially after the 2008 recession. That makes a shift toward ""Not a member"" more likely than a shift toward ""Active member.""
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I am going to read out a type of voluntary organization; could you tell me whether you are a member, an active member, an inactive member, or not a member of this type of organization?
+Organization type: Humanitarian or charitable organization
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Active member""
+B: It moved toward ""Not a member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A106,ordinal_scale,ordered,-1.0775439902057278,toward_low,toward_low,True,True,,"Survey measures of US civic participation generally weakened in the late 2000s, and the recession period likely reduced involvement in voluntary groups, so the typical response probably shifted toward not being a member. This is a judgment from broader trends rather than the specific figures.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Now I am going to ask about your membership status in a voluntary organization. Are you a member, an active member, an inactive member, or not a member of this type of organization?
+Organization type: Other organization
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not a member""
+B: It moved toward ""Active member""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A124_02,mention_flag,share,0.01326164874551971,increase,decrease,False,True,,"Survey data from this period generally shows declining rejection of neighbors of a different race in the United States, as social attitudes became more accepting over the 2000s and early 2010s. I'd expect the share mentioning this to have fallen between 2006 and 2011.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Could you please mention if you would not like to have people of a different race as neighbors?
+
+### Task:
+
+Think about the share of people in United States who gave the answer ""Mentioned"". Did that share change between 2006 and 2011?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A124_03,mention_flag,share,-0.0234767025089605,decrease,decrease,True,True,,"Between 2006 and 2011, American attitudes toward many stigmatized groups in World Values Survey items trended toward greater tolerance, and heavy drinkers are a less stigmatized group than many others. I'd expect the share naming heavy drinkers as undesirable neighbors to have fallen, though I'm not certain of the exact figures.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Could you please mention if you would not like to have the following group of people as neighbors?
+Group: Heavy drinkers
+
+### Task:
+
+Think about the share of people in United States who gave the answer ""Mentioned"". Did that share change between 2006 and 2011?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A124_06,mention_flag,share,0.004032258064516153,increase,decrease,False,True,,"Anti-immigrant sentiment in the US appears to have softened after the intense immigration debates of 2006–2007, and survey measures of attitudes toward immigrants generally became more positive by 2011. That suggests fewer Americans would name immigrants or foreign workers as undesirable neighbors in 2011 than in 2006.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Could you please mention if you would not like to have immigrants/foreign workers as neighbors?
+
+### Task:
+
+Think about the share of people in United States who gave the answer ""Mentioned"". Did that share change between 2006 and 2011?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A124_07,mention_flag,share,-0.02482078853046593,decrease,decrease,True,True,,"Over the 2000s and early 2010s, American attitudes toward people with HIV/AIDS became steadily more accepting, and the share naming people with AIDS as unwelcome neighbors generally fell across survey waves. The 2006 to 2011 change most likely continued that decline.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Could you please mention if you would not like to have people who have AIDS as your neighbors?
+
+### Task:
+
+Think about the share of people in United States who gave the answer ""Mentioned"". Did that share change between 2006 and 2011?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A124_08,mention_flag,share,-0.032616487455197185,decrease,decrease,True,True,,"Across most of the World Values Survey items on neighbor preferences, mentions of stigmatized groups in the US have tended to fall over time as general tolerance rose. Drug addicts are a plausible exception, since the opioid crisis was emerging by 2011, but I'd still expect the broader trend to hold, so I predict a decrease.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Could you please mention if you would not like to have a particular group as neighbors?
+Group: Drug addicts
+
+### Task:
+
+Think about the share of people in United States who gave the answer ""Mentioned"". Did that share change between 2006 and 2011?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A124_09,mention_flag,share,-0.056362007168458766,decrease,decrease,True,True,,"Public acceptance of gay and lesbian people in the United States rose steadily through the late 2000s, so the share of respondents naming homosexuals as undesirable neighbors most likely fell between the 2006 and 2011 survey waves.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Could you please mention if you would not like to have the following group as neighbors?
+Group: Homosexuals
+
+### Task:
+
+Think about the share of people in United States who gave the answer ""Mentioned"". Did that share change between 2006 and 2011?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A124_12,mention_flag,share,0.012275985663082436,increase,decrease,False,True,,"Americans' stated reluctance to have neighbors of a different religion has generally fallen over the 2000s and early 2010s, as tolerance indicators in U.S. surveys trended upward. A decline from 2006 to 2011 is the more likely direction, though the margin is small and sampling noise could flip it.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Could you please mention if you would not like to have people of a different religion as neighbors?
+
+### Task:
+
+Think about the share of people in United States who gave the answer ""Mentioned"". Did that share change between 2006 and 2011?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A124_42,mention_flag,share,-0.01093189964157705,decrease,decrease,True,True,,"Attitudes toward unmarried cohabitation in the U.S. became markedly more accepting through the 2000s, so fewer respondents would likely name unmarried couples as undesirable neighbors by 2011 than in 2006. This is a general trend inference, not a figure I can verify for these specific survey waves.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Could you please mention if you would not like to have unmarried couples living together as neighbors?
+
+### Task:
+
+Think about the share of people in United States who gave the answer ""Mentioned"". Did that share change between 2006 and 2011?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A124_43,mention_flag,share,0.013978494623655913,increase,decrease,False,True,,"Survey data for the US generally shows declining reluctance toward out-groups such as immigrants and people of other backgrounds from the mid-2000s into the early 2010s, so a drop in the share mentioning people who speak a different language is the more likely direction. This is a judgment from broader trends, not a figure I can verify for this specific item.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Could you please mention if you would not like to have people who speak a different language as neighbors?
+
+### Task:
+
+Think about the share of people in United States who gave the answer ""Mentioned"". Did that share change between 2006 and 2011?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A165,binary,share,0.013920945415767827,increase,increase,True,True,,"Interpersonal trust in the US has trended downward over the past few decades, and the 2008 financial crisis and its aftermath likely made people more guarded. The share saying ""need to be very careful"" probably rose between the 2006 and 2011 survey waves.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Generally speaking, would you say that most people can be trusted or that you need to be very careful in dealing with people?
+
+### Task:
+
+Think about the share of people in United States who gave the answer ""Need to be very careful"". Did that share change between 2006 and 2011?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A168A,numeric_scale,ordered,0.028763002628616974,toward_high,toward_low,False,True,,"Trust in other people in the US, as measured by surveys like the General Social Survey, was flat to declining through the late 2000s, and the 2008–2009 recession likely reinforced suspicion of others. That points toward a shift toward the ""take advantage of me"" end of the scale between 2006 and 2011.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Do you think most people would try to take advantage of you if they got a chance, or would they try to be fair? Please show your response on a scale where 1 means “people would try to take advantage of you,” and 10 means “people would try to be fair.”
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Most people try to be fair""
+B: It moved toward ""Most people try to take advantage of me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A170,numeric_scale,ordered,0.17945016392393498,toward_high,toward_low,False,True,,"The 2006–2011 window spans the Great Recession, when U.S. life-satisfaction and life-evaluation measures fell to multi-year lows, with economic stress and job insecurity weighing on well-being. The typical response most likely shifted toward the dissatisfied end of the scale.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: All things considered, how satisfied are you with your life as a whole these days? Please use the provided scale to help with your answer.
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Dissatisfied""
+B: It moved toward ""Satisfied""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A173,numeric_scale,ordered,0.06784770729600265,toward_high,toward_low,False,True,,"Economic strain after the 2008 recession plausibly reduced many Americans' sense of control over their lives between 2006 and 2011, so the typical answer probably shifted downward. I'm reasoning from context here rather than from recalled survey figures.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please use this scale where 1 means ""none at all"" and 10 means ""a great deal"" to indicate how much freedom of choice and control you feel you have over the way your life turns out.
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A189,ordinal_scale,ordered,-0.19927209810112068,toward_low,toward_high,False,True,,"Survey trends in the US have generally moved toward stronger emphasis on self-direction and creativity, so the typical answer is more likely to have shifted toward ""very much like me"" than toward ""not at all like me."" The 2008 recession could have dampened this somewhat, but a move toward the ""not at all"" end seems less plausible than a move toward the ""very much"" end.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I will briefly describe a person. Using the provided scale, please indicate whether that person is very much like you, like you, somewhat like you, not like you, or not at all like you.  
+Description: It is important to this person to think up new ideas and be creative
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not at all like me""
+B: It moved toward ""Very much like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A190,ordinal_scale,ordered,-0.0031932516024086866,toward_low,toward_high,False,True,,"The 2008 financial crisis and recession likely raised economic insecurity, which could push people to rate wealth as more important to them. Survey trends on materialism in the late 2000s also point somewhat toward rising emphasis on money, so the typical answer plausibly shifted toward ""very much like me."" This is a judgment call rather than a firmly established trend.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please indicate how much the following description applies to you using this scale: very much like you, like you, somewhat like you, not like you, or not at all like you.
+Description: It is important to this person to be rich
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Very much like me""
+B: It moved toward ""Not at all like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A191,ordinal_scale,ordered,0.0039861997182519815,toward_high,toward_high,True,True,,"Security values tend to rise during economic hardship and perceived threat. The 2008 financial crisis and its aftermath between 2006 and 2011 would plausibly have increased the weight Americans put on secure surroundings, pushing the typical answer toward ""very much like me.""
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Now I will briefly describe a person. Using this card, would you please indicate whether that person is very much like you, like you, somewhat like you, not like you, or not at all like you?  
+Description: It is important to this person to live in secure surroundings.
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not at all like me""
+B: It moved toward ""Very much like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A192,ordinal_scale,ordered,-0.260729802261372,toward_low,toward_low,True,True,,"Hedonism items like ""to have a good time; to 'spoil' oneself"" tend to be less endorsed when economic hardship is salient, and the 2008 recession fell within this window. That suggests the typical US answer shifted toward ""Not at all like me,"" though the direction is uncertain.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please indicate how much the following description applies to you, using the provided scale: ""It is important to this person to have a good time; to 'spoil' oneself.""
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not at all like me""
+B: It moved toward ""Very much like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A194,ordinal_scale,ordered,0.13231048309243842,toward_high,toward_low,False,True,,"The question asks how the typical American answer shifted between 2006 and 2011 on the importance of personal success. The Great Recession likely pushed people toward security and away from achievement-focused goals, so I lean toward a move away from ""very much like me,"" though I'm not certain.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Now I will briefly describe a person. Using the provided scale, please indicate whether that person is very much like you, like you, somewhat like you, not like you, or not at all like you.  
+Description: It is important to this person being very successful
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Very much like me""
+B: It moved toward ""Not at all like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A195,ordinal_scale,ordered,0.06742565088849428,toward_high,toward_low,False,True,,"Between 2006 and 2011, the U.S. population was likely becoming more cautious after the 2008 financial crisis and recession, and the broader population was aging, which tends to lower reported stimulation values. Both pressures point toward a decline in how much respondents saw themselves as seeking adventure and risk.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I will briefly describe a person. Using the provided scale, please indicate whether that person is very much like you, like you, somewhat like you, not like you, or not at all like you.
+Description: It is important to this person adventure and taking risks
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not at all like me""
+B: It moved toward ""Very much like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A196,ordinal_scale,ordered,0.10084382151029736,toward_high,toward_low,False,True,,"Survey trends in the United States over this period generally point toward less emphasis on conformity and traditional propriety, so the typical answer to this item would likely drift toward ""not like me."" This is a judgment from broad trends rather than from specific data for this item.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I will briefly describe a person. Using the provided scale, please indicate whether that person is very much like you, like you, somewhat like you, not like you, or not at all like you.
+Description: It is important to this person to always behave properly
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not at all like me""
+B: It moved toward ""Very much like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A197,ordinal_scale,ordered,-0.020279462764297485,toward_low,toward_high,False,True,,"Survey responses to this item in the US are typically concentrated at ""very much like me"" or ""like me,"" so a shift toward ""not at all like me"" would be an unusual move for the typical answer. Concern for the environment in the US was broadly stable or slightly rising in the mid-2000s, so the more plausible direction is toward ""very much like me.""
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Now I will briefly describe a person. Using this card, would you please indicate whether that person is very much like you, like you, somewhat like you, not like you, or not at all like you?
+Description: It is important to this person to look after the environment
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not at all like me""
+B: It moved toward ""Very much like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,A198,ordinal_scale,ordered,-0.18252548638858856,toward_low,toward_low,True,True,,"Survey trends in the U.S. during this period generally show gradual declines in the emphasis on tradition and religious or customary observance, especially among younger adults, so the typical response likely shifted away from ""very much like me."" This is a modest, uncertain inference rather than a confident read of the specific 2006 and 2011 data.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Now I will briefly describe a person. Using this card, would you please indicate whether that person is very much like you, like you, somewhat like you, not like you, or not at all like you?
+Description: It is important to this person tradition
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Very much like me""
+B: It moved toward ""Not at all like me""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,C006,numeric_scale,ordered,0.32406760828128967,toward_high,toward_low,False,True,,"Household financial satisfaction in the U.S. likely fell between 2006 and 2011. 2006 was before the financial crisis, when incomes, home values, and credit were relatively strong, while 2011 came after the Great Recession, with high unemployment, falling home values, and lasting strain on household budgets.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: How satisfied are you with your household's financial situation? If '1' means you are completely dissatisfied and '10' means you are completely satisfied, where would you rate your satisfaction?
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Satisfied""
+B: It moved toward ""Dissatisfied""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,D001_B,ordinal_scale,ordered,0.03251135546559558,toward_high,toward_low,False,True,,"Trust in family is near the ceiling in the US, so the typical answer is almost certainly ""trust completely."" Economic hardship after the 2008 recession plausibly pushed people to lean more on relatives, which would move responses toward that top category rather than away from it.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I’d like to ask you how much you trust people from a certain group. Do you trust people from this group completely, somewhat, not very much, or not at all?
+Group: Your family
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Trust completely""
+B: It moved toward ""Do not trust at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,D054,ordinal_scale,ordered,-0.03523422728263359,toward_low,toward_low,True,True,,"Most Americans likely agree with this statement, so the typical answer sits on the agree side and is unlikely to swing toward strong disagreement. The 2008 recession pushed many families toward closer ties and a stronger sense of family duty, which makes an increase in strong agreement more plausible than a shift toward strong disagreement.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?  
+Statement: One of my main goals in life has been to make my parents proud
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Strongly disagree""
+B: It moved toward ""Agree strongly""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,D057,ordinal_scale,ordered,0.16453581432573028,toward_high,toward_high,True,True,,"Americans' views on traditional gender roles became steadily more egalitarian over the 2000s, so agreement with the idea that housewifery is as fulfilling as paid work would likely have declined. That shift points toward disagreement, so the typical answer moved toward ""Strongly disagree.""
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?
+Statement: Being a housewife is just as fulfilling as working for pay
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Agree strongly""
+B: It moved toward ""Strongly disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,D059,ordinal_scale,ordered,0.17954961923509805,toward_high,toward_high,True,True,,"Attitudes toward male political leadership have been trending steadily toward disagreement in the US since the 1990s, so the typical answer between 2006 and 2011 most likely shifted toward disagreeing, not agreeing strongly. The option pointing that way is ""Strongly disagree.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?
+Statement: On the whole, men make better political leaders than women do
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Strongly disagree""
+B: It moved toward ""Agree strongly""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,D060,ordinal_scale,ordered,0.0947924063694825,toward_high,toward_high,True,True,,"Over the 2000s and early 2010s, Americans became markedly less likely to endorse gender-differentiated views on education, and young women's university enrollment had already surpassed men's. A move toward stronger disagreement between 2006 and 2011 fits that trend, while a shift toward strong agreement would run against it.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: For the following statement, can you tell me how much you agree with it? Do you agree strongly, agree, disagree, or disagree strongly?  
+Statement: A university education is more important for a boy than for a girl
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Agree strongly""
+B: It moved toward ""Strongly disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,D078,ordinal_scale,ordered,0.12082154267457756,toward_high,toward_high,True,True,,"Attitudes toward women in leadership in the United States have grown steadily more egalitarian over the past few decades, so disagreement with the claim that men make better executives should have become more common by 2011 than in 2006. That points toward ""Strongly disagree.""
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: For the following statement, can you tell me how strongly you agree or disagree? Do you strongly agree, agree, disagree, or strongly disagree?
+Statement: On the whole, men make better business executives than women do
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Agree strongly""
+B: It moved toward ""Strongly disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E012,binary,share,-0.05249333113535548,decrease,decrease,True,True,,"Willingness to fight for one's country is typically tied to national mood and views of recent wars. By 2006 support for the Iraq War had already fallen sharply from its post-9/11 peak, and the Afghanistan and Iraq conflicts remained unpopular through 2011, so the share saying ""Yes"" most likely declined.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Would you be willing to fight for your country if there were another war?
+
+### Task:
+
+Think about the share of people in United States who gave the answer ""Yes"". Did that share change between 2006 and 2011?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E015,ordinal_scale,ordered,0.03296502124877376,toward_high,toward_high,True,True,,"Between 2006 and 2011 the US economy went through the Great Recession, with high unemployment and job insecurity. Those conditions would plausibly make people more likely to see less importance placed on work as a bad thing, so the typical answer probably shifted toward ""Bad thing."" This is a judgment from context, not a recalled survey figure.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I'm going to read out a possible change in our way of life that might take place in the near future. Please tell me if you think it would be a good thing, a bad thing, or if you don't mind.
+Change: Less importance placed on work in our lives
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Bad thing""
+B: It moved toward ""Good thing""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E016,ordinal_scale,ordered,-0.00935085579229411,toward_low,toward_low,True,True,,"Americans were already strongly positive about technology in 2006, and the 2006 to 2011 period saw rapid growth in smartphones and social media, which likely reinforced that optimism despite the recession. The typical answer more plausibly shifted toward ""Good thing"" than toward ""Bad thing.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I'm going to read out a possible change in our way of life that might take place in the near future. Please tell me if you think it would be a good thing, a bad thing, or you don't mind.
+Change: More emphasis on the development of technology
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Good thing""
+B: It moved toward ""Bad thing""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E018,ordinal_scale,ordered,0.04745127290610651,toward_high,toward_high,True,True,,"The US public's trust in institutions fell sharply after the 2008 financial crisis, while 2006 was still a period of elevated post-9/11 deference to authority. That suggests the share seeing greater respect for authority as a good thing likely dropped by 2011, so the typical answer moved toward ""bad thing.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I'm going to read out a possible change in our way of life that might take place in the near future. If it were to happen, would you think it would be a good thing, a bad thing, or don't mind?  
+Change: Greater respect for authority
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Bad thing""
+B: It moved toward ""Good thing""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E023,ordinal_scale,ordered,-0.02759811616954444,toward_low,toward_low,True,True,,"Political engagement in 2006 was already elevated by a contentious midterm, and the period through 2011 included the 2008 election surge and the Tea Party and Occupy mobilizations. That makes a shift toward ""very interested"" more plausible than a drift toward disengagement, though the evidence here is not conclusive.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: How interested are you in politics?
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not at all interested""
+B: It moved toward ""Very interested""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E025,ordinal_scale,ordered,0.12711143138441106,toward_high,toward_low,False,True,,"Over this period, petition signing in the US likely became more common, and online petitions grew rapidly, so the typical response probably shifted toward ""Have done."" Rising online petition use between 2006 and 2011 would push more respondents into that category, while ""Would never do"" would shrink.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Now I'd like you to look at this card. I'm going to read out a form of political action that people can take, and I'd like you to tell me whether you have actually done it, might do it, or would never do it under any circumstances.
+Action: Signing a petition
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Would never do""
+B: It moved toward ""Have done""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E025B,binary,share,-0.013079294616713089,decrease,decrease,True,True,,"Signing petitions became much easier after online platforms such as MoveOn and Change.org grew around 2008-2011, so more Americans likely reported signing one in the five years before 2011 than in the five years before 2006. That would mean fewer people answered ""Not done,"" so the share decreased.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Have you done the following activity in the last five years? Please answer yes or no.
+Activity: signing a petition
+
+### Task:
+
+Think about the share of people in United States who gave the answer ""Not done"". Did that share change between 2006 and 2011?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E026,ordinal_scale,ordered,0.08748788018914366,toward_high,toward_low,False,True,,"Boycott participation in the United States appears to have risen between the mid-2000s and 2011, a period that included growing consumer activism and the Occupy-era mobilization. That suggests the share saying they have actually done it grew, moving the typical answer toward ""Have done"" rather than ""Would never do.""
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Now I'd like you to consider a form of political action. Have you actually joined in boycotts, might you do it, or would you never do it under any circumstances?
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Would never do""
+B: It moved toward ""Have done""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E026B,binary,share,-0.38252282009507454,decrease,decrease,True,True,,"Reported boycott participation in the US plausibly rose from the mid-2000s to 2011, as consumer activism grew with social media and organized campaigns. A rise in people saying they had joined boycotts would mean the ""Not done"" share fell. This is a judgment from general trends, not from the specific survey figures.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Have you done the following activity in the last five years? Please answer yes or no.
+Activity: joining in boycotts
+
+### Task:
+
+Think about the share of people in United States who gave the answer ""Not done"". Did that share change between 2006 and 2011?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E027,ordinal_scale,ordered,0.004528853504205621,toward_high,toward_low,False,True,,"Over this period, the share of Americans who say they have ever joined a peaceful demonstration probably rose, since people accumulate protest experience over time and 2011 saw Tea Party and early Occupy activity. The ""would never do"" share would therefore have shrunk, making ""Have done"" the more likely direction of movement.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please look at this card. Have you ever attended peaceful demonstrations, might you attend one, or would you never attend one under any circumstances?
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Would never do""
+B: It moved toward ""Have done""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E033,numeric_scale,ordered,0.08548663801489198,toward_high,toward_high,True,True,,"Over 2006 to 2011, the U.S. public's self-placement on the left-right scale likely drifted rightward. The Tea Party surge and the backlash against the Obama administration's early policies pushed many Americans toward conservative self-identification in this period.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: In political matters, people talk of ""the left"" and ""the right."" How would you generally place your views on this scale?
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Right""
+B: It moved toward ""Left""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E035,numeric_scale,ordered,-0.6439127041053121,toward_low,toward_low,True,True,,"The 2008 recession, rising concern about inequality, and the Occupy Wall Street movement in 2011 all point toward greater public support for more equal incomes. Survey trends from that period also show American opinion moving in that direction, so the typical answer most likely shifted toward ""Incomes should be made more equal.""
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.
+Issue: Income equality
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""We need larger income differences as incentives""
+B: It moved toward ""Incomes should be made more equal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E036,numeric_scale,ordered,-0.010244707710235001,toward_low,toward_high,False,True,,"The 2008 financial crisis brought bank bailouts and the government's temporary takeover of GM and Chrysler stakes, which plausibly made Americans more willing to accept government ownership of business by 2011. I am not certain of the survey figures, so this rests on that context rather than the exact data.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.
+Issue: Private vs state ownership of business
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Private ownership of business should be increased""
+B: It moved toward ""Government ownership of business should be increased""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E037,numeric_scale,ordered,-0.3607924945567298,toward_low,toward_high,False,True,,"Americans' views on government responsibility likely shifted toward more government involvement between 2006 and 2011. The 2008 financial crisis and Great Recession increased economic hardship and public demand for government assistance, even though the partisan debate grew sharper afterward.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.  
+Issue: Government responsibility
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""The government should take more responsibility""
+B: It moved toward ""People should take more responsibility""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E039,numeric_scale,ordered,-0.06861334118072593,toward_low,toward_high,False,True,,"Americans' views on competition are fairly stable, but the 2008 recession and the growing public concern about inequality and zero-sum economic competition between 2006 and 2011 make a shift toward seeing competition as harmful somewhat more plausible than a move toward seeing it as good. This is a low-confidence judgment, since I don't have reliable year-by-year figures for this item.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.  
+Issue: Competition good or harmful
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Competition is harmful""
+B: It moved toward ""Competition is good""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E040,numeric_scale,ordered,-0.10233289730153805,toward_low,toward_high,False,True,,"The Great Recession (2008 to 2011) hit employment and household finances hard, and surveys from that period show many Americans doubting that effort reliably pays off. That suggests the typical answer shifted toward the ""luck and connections"" end of the scale.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.  
+Issue: Hard work brings success
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Hard work doesn't generally bring success - it's more a matter of luck and connections""
+B: It moved toward ""In the long run, hard work usually brings a better life""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E041,numeric_scale,ordered,0.20751690052831862,toward_high,toward_low,False,True,,"The 2011 survey came after the 2008 financial crisis and the bailouts, and during the rise of the Occupy movement and public anger over inequality and banking. Those events would plausibly push the typical respondent toward seeing wealth gains as coming at others' expense. So the typical answer most likely moved toward ""People can only get rich at the expense of others.""
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I'd like you to tell me your views on a particular issue. How would you place your views on this scale? 1 means you agree completely with the statement at the beginning of the scale; 10 means you agree completely with the statement at the end of the scale; and if your views fall somewhere in between, you can choose any number in between.
+Issue: Wealth accumulation
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Wealth can grow so there's enough for everyone""
+B: It moved toward ""People can only get rich at the expense of others""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E069_01,ordinal_scale,ordered,0.1459625461407188,toward_high,toward_high,True,True,,"Confidence in organized religion in the US declined through the 2000s, with more respondents shifting from ""quite a lot"" toward ""not very much."" That points toward the less-confident end of the scale, so the typical answer moved toward ""None at all"" rather than ""A great deal.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: The Churches (mosque, temple etc.)
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E069_02,ordinal_scale,ordered,-0.012699754760249427,toward_low,toward_low,True,True,,"Confidence in the U.S. armed forces rose between 2006 and 2011, when Gallup readings climbed to among the highest levels recorded, driven partly by the post-9/11 rally effect and the military's visible role in the bin Laden raid. The typical answer therefore shifted toward the highest confidence category, ""A great deal.""
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: The armed forces
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E069_04,ordinal_scale,ordered,0.03175300366250866,toward_high,toward_high,True,True,,"Confidence in the press in the U.S. fell through the late 2000s, with Gallup showing the share expressing high confidence declining and skepticism growing. The typical answer therefore likely shifted toward the low-confidence end, ""None at all,"" rather than toward ""A great deal.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: The press
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E069_05,ordinal_scale,ordered,0.1324158738955079,toward_high,toward_low,False,True,,"Confidence in labor unions in U.S. polling was low in both years, but it appears to have edged up rather than down between 2006 and 2011, with the 2011 public-sector union protests possibly raising visibility and sympathy. The typical answer therefore moved toward more confidence, not toward ""none at all.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: Labour Unions
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E069_06,ordinal_scale,ordered,0.01305885713856103,toward_high,toward_high,True,True,,"Confidence in the police was fairly stable in the US during the late 2000s, with no clear rise after 2006, so a move toward ""a great deal"" is less likely than a slight slide. Of the two options, the only one that reflects a decline in confidence is ""none at all,"" so I lean toward B, though with low certainty.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence, or none at all?  
+Organization: The police
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E069_07,ordinal_scale,ordered,0.07459730801035791,toward_high,toward_high,True,True,,"Confidence in legislative bodies in the US fell after the 2008 financial crisis, and the Tea Party era brought intense distrust of Congress and government generally. A comparable shift toward the negative end of the scale between 2006 and 2011 is the more likely direction, so the typical answer would have moved toward ""None at all.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Parliament
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E069_08,ordinal_scale,ordered,-0.05735203695618862,toward_low,toward_high,False,True,,"Confidence in public institutions in the US generally fell from the mid-2000s to the early 2010s, especially after the 2008 financial crisis and the recession that followed. A decline in confidence in the civil service would shift the typical response away from ""a great deal"" and toward the lower categories, so ""None at all"" is the more likely direction.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: The Civil Services
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E069_10,ordinal_scale,ordered,-0.004047978829773591,toward_low,toward_high,False,True,,"Confidence in television and the news media in the US generally declined through the late 2000s and early 2010s, with more people saying ""not very much"" or ""none at all."" That suggests the typical answer moved away from ""a great deal"" and toward ""none at all.""
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: Television
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E069_11,ordinal_scale,ordered,0.10188667532711326,toward_high,toward_high,True,True,,"Confidence in the national government fell sharply between 2006 and 2011, with Gallup-style measures dropping to historic lows by 2011 after the debt-ceiling fight. The typical response therefore shifted away from high confidence and toward the lowest category, ""None at all,"" rather than toward ""A great deal.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?  
+Organization: The government (in your nation’s capital)
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E069_12,ordinal_scale,ordered,0.10320599767435867,toward_high,toward_high,True,True,,"Confidence in U.S. political parties fell from the mid-2000s to 2011, with the share expressing high confidence dropping and the share expressing little or none rising. That shift runs toward the low end of the scale, so the typical answer moved toward ""None at all"" rather than ""A great deal.""
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Political Parties
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E069_13,ordinal_scale,ordered,-0.09864735624826171,toward_low,toward_high,False,True,,"Confidence in major companies fell after the 2008 financial crisis, when many Americans blamed large firms for the recession and bailouts. That shift would move the typical response away from ""a great deal"" and toward the low-confidence end, which is ""none at all.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Major Companies
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E069_14,ordinal_scale,ordered,0.05293127000944553,toward_high,toward_high,True,True,,"Confidence in environmental organizations in the US likely became more polarized between 2006 and 2011, as climate change grew into a partisan issue and Republican trust in environmental groups fell. That suggests the typical answer drifted toward the negative end, though I'm not certain of the exact modal shift.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Environmental organizations
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E069_15,ordinal_scale,ordered,-0.018552450755840777,toward_low,toward_high,False,True,,"Confidence in most U.S. institutions fell after the 2008 recession and stayed depressed into the early 2010s, so a drift toward skepticism is the more likely direction for a lesser-known organization like women's groups. This is a weak inference, since I don't have the exact survey figures for this item.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Women’s organizations
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""None at all""
+B: It moved toward ""A great deal""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E069_17,ordinal_scale,ordered,0.022911747287683415,toward_high,toward_low,False,True,,"Confidence in the courts in U.S. polling (Gallup-style measures) was generally in the mid-30s to mid-40s percent during the late 2000s and early 2010s, with no sustained collapse. Confidence in the judiciary tended to hold steady or edge up around 2010–2011 rather than falling toward ""none at all,"" so the typical answer likely shifted toward the higher-confidence end.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: The courts
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E069_18A,ordinal_scale,ordered,0.02902018616304325,toward_high,toward_high,True,True,,"US confidence in institutions generally fell after the 2008 financial crisis, and skepticism of multilateral bodies tended to stay high or grow over this period. A shift toward ""None at all"" fits that broader decline better than a move toward ""A great deal.""
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: How much confidence do you have in major regional organizations?
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E069_20,ordinal_scale,ordered,-0.024001823885297924,toward_low,toward_low,True,True,,"Confidence in the UN among Americans was probably low in 2006, after the Iraq war strained views of multilateral institutions. Views likely warmed somewhat by 2011, when the Obama administration had re-engaged with multilateral bodies, so the typical answer more plausibly shifted toward more confidence rather than ""none at all.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence, or none at all?
+Organization: The United Nations
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E069_24,ordinal_scale,ordered,0.02902018616304325,toward_high,toward_high,True,True,,"Public skepticism of trade deals like NAFTA grew after the 2008 financial crisis and the job losses that followed, and mainstream politicians across both parties criticized it more openly by 2011. The typical answer therefore most likely shifted toward less confidence, not more.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: The NAFTA
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E069_40,ordinal_scale,ordered,0.0070120674559368545,toward_high,toward_high,True,True,,"Confidence in most U.S. institutions fell after the 2008 recession, so the typical answer probably slipped toward less confidence rather than more. Of the two options, the direction of that drift points toward ""None at all.""
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I am going to name an organization. Could you tell me how much confidence you have in it: is it a great deal of confidence, quite a lot of confidence, not very much confidence or none at all?
+Organization: Charitable or humanitarian organizations
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A great deal""
+B: It moved toward ""None at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E114,ordinal_scale,ordered,0.062393197477484286,toward_high,toward_high,True,True,,"Americans have strongly opposed a leader who bypasses parliament and elections, so the modal answer in both years was probably ""very bad"" or ""fairly bad."" Without year-specific figures, I lean toward a shift toward ""very bad,"" since the 2006–2011 period showed no clear rise in support for governance outside elections.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I'm going to describe a type of political system and ask what you think about it as a way of governing this country. Would you say it is a very good, fairly good, fairly bad, or very bad way of governing?
+Type of political system: Having a strong leader who does not have to bother with parliament and elections
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Very bad""
+B: It moved toward ""Very good""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E115,ordinal_scale,ordered,-0.0328720238891389,toward_low,toward_low,True,True,,"Frustration with political gridlock and distrust of Congress were high in 2011, after the financial crisis and during the debt-ceiling fights, which plausibly made a governance model run by experts rather than elected officials more appealing. I'm not certain of the exact survey figures, so this is an inference from the political context.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I'm going to describe a type of political system and ask what you think about it as a way of governing this country. Would you say it is a very good, fairly good, fairly bad, or very bad way of governing this country?
+System: Having experts, not government, make decisions according to what they think is best for the country
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Very bad""
+B: It moved toward ""Very good""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E116,ordinal_scale,ordered,-0.029300404901724253,toward_low,toward_high,False,True,,"Americans overwhelmingly rejected army rule in both survey years, and ""very bad"" was likely the dominant answer throughout. Over the later 2000s, public trust in the military's role in domestic governance probably stayed low or hardened, so the typical answer more plausibly shifted toward ""very bad"" rather than ""very good.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I'm going to describe a type of political system and ask what you think about it as a way of governing this country. Would you say it is a very good, fairly good, fairly bad, or very bad way of governing this country?
+System: Having the army rule
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Very bad""
+B: It moved toward ""Very good""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E117,ordinal_scale,ordered,0.10352125693160796,toward_high,toward_low,False,True,,"The typical American answer was almost certainly ""very good"" in both years, since support for democracy as a way of governing has been consistently high. Movement toward ""very bad"" would be a tiny shift from a small share, so the more plausible change is a modest rise in ""very good"" between 2006 and 2011.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I'm going to describe a type of political system and ask what you think about it as a way of governing this country. Would you say it is a very good, fairly good, fairly bad, or very bad way of governing this country?  
+Type of political system: Having a democratic political system
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Very good""
+B: It moved toward ""Very bad""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E124,ordinal_scale,ordered,0.043906178485392466,toward_high,toward_high,True,True,,"Perceptions of rights may have soured after the Iraq War, the Guantanamo and Patriot Act controversies, and the 2008 financial crisis, which together suggest a more pessimistic shift by 2011. This is a low-confidence judgment, since partisan swaps between the Bush and Obama years could cut both ways.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: How much respect is there for individual human rights in this country nowadays?
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""There is no respect at all""
+B: It moved toward ""There is a lot of respect for individual human rights""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E217,numeric_scale,ordered,0.38116671940072866,toward_high,toward_low,False,True,,"Between 2006 and 2011, the U.S. saw economic hardship from the Great Recession and growing public concern about technology's side effects, which may have dampened the enthusiasm for science and technology that the statement measures. This is a low-confidence guess, since the typical answer was already high and the shift was probably small.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I would like to read a statement and ask how much you agree or disagree with it. For this question, a 1 means that you “completely disagree” and a 10 means that you “completely agree.”
+Statement: Science and technology are making our lives healthier, easier, and more comfortable
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Completely agree""
+B: It moved toward ""Completely disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E218,numeric_scale,ordered,0.17074983105064767,toward_high,toward_low,False,True,,"The 2006-to-2011 window spans the Great Recession, which likely dampened Americans' optimism about future opportunities for the next generation, so the typical rating probably fell rather than rose. This is an inference from the economic context, not a confirmed survey figure.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I would like you to tell me how much you agree or disagree with the following statement. A 1 means that you “completely disagree” and a 10 means that you “completely agree.”
+Statement: Because of science and technology, there will be more opportunities for the next generation
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Completely disagree""
+B: It moved toward ""Completely agree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E220,numeric_scale,ordered,-0.2767574884838728,toward_low,toward_low,True,True,,"The statement is an anti-science-dependence claim, and U.S. survey trends from the mid-2000s to early 2010s show stable or growing public confidence in science, with no clear rise in agreement that society leans too heavily on it. I'd expect the typical response to drift slightly toward disagreement, though the change is likely small and the direction is uncertain.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I would like to read a statement and ask how much you agree or disagree with it. For this question, a 1 means that you “completely disagree” and a 10 means that you “completely agree.”
+Statement: We depend too much on science and not enough on faith
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Completely disagree""
+B: It moved toward ""Completely agree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E221B,binary,share,-0.43295769453527355,decrease,decrease,True,True,,"Reported participation in peaceful demonstrations in the US plausibly rose between 2006 and 2011, with growing mobilization such as the Occupy movement and the Tea Party. If more people reported having attended a demonstration, the ""Not done"" share would have fallen.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Have you done the following activity in the last five years? Attending peaceful demonstrations
+
+### Task:
+
+Think about the share of people in United States who gave the answer ""Not done"". Did that share change between 2006 and 2011?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E222,ordinal_scale,ordered,0.8000460907517497,toward_high,toward_low,False,True,,"Across the WVS political action items, the share reporting ""have done"" in the US generally rose between 2006 and 2011, as online petitions and protest activity expanded and the Tea Party and Occupy movements mobilized. The ""would never do"" share probably fell somewhat over the same period, so the typical answer likely shifted toward ""have done,"" though the change for this vague write-in category is uncertain.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Now I’d like you to look at this card. I’m going to read out a form of political action that people can take, and I’d like you to tell me whether you have done this, might do it, or would never do it under any circumstances.
+Action: Other (write in)
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Have done""
+B: It moved toward ""Would never do""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E222B,binary,share,0.3409448818897638,increase,increase,True,True,,"The ""Other (write in)"" option is typically chosen by only a small minority, so the ""Not done"" share is high in both years. Economic strain after 2008 would plausibly reduce activity participation and push that share up, so I lean toward an increase, though I can't confirm the specific figures.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Have you done the following activity in the last five years? Other (write in):____________
+
+### Task:
+
+Think about the share of people in United States who gave the answer ""Not done"". Did that share change between 2006 and 2011?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E224,numeric_scale,ordered,-0.013117320245058295,toward_low,toward_high,False,True,,"The 2008 financial crisis and the rise of populist economic grievances (including the Occupy movement in 2011) likely increased public support for taxing the wealthy and aiding the poor, so the typical rating probably rose toward ""essential."" I'm not certain of the exact WVS-style figures for these years, so this is a directional judgment.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me how essential you think it is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: Governments tax the rich and subsidize the poor
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""An essential characteristic of democracy""
+B: It moved toward ""It is against democracy (spontaneous)""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E225,numeric_scale,ordered,-0.08466400261915652,toward_low,toward_low,True,True,,"Over this period, American attitudes trended toward secularization and away from religious control over law, so the typical rating for religious authorities interpreting laws most likely fell rather than rose. Option B describes that downward movement toward the ""against democracy"" end of the scale.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: Religious authorities interpret the laws
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""An essential characteristic of democracy""
+B: It moved toward ""It is against democracy (spontaneous)""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E226,numeric_scale,ordered,-0.00583239316410733,toward_low,toward_high,False,True,,"The item about free elections is near-universally rated as essential, so the typical answer is already at the top of the scale and cannot plausibly drift toward calling it ""against democracy."" The only realistic direction of movement is toward ""essential,"" so A is the better answer.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: People choose their leaders in free elections
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""An essential characteristic of democracy""
+B: It moved toward ""It is against democracy (spontaneous)""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E227,numeric_scale,ordered,-0.1354220859655637,toward_low,toward_high,False,True,,"Rising unemployment after the 2008 financial crisis would plausibly raise public support for unemployment aid, so the typical rating likely shifted up on the 1–10 scale toward ""an essential characteristic of democracy."" Such shifts are usually modest, so this is a judgment rather than a certainty.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: People receive state aid for unemployment
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""It is against democracy (spontaneous)""
+B: It moved toward ""An essential characteristic of democracy""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E228,numeric_scale,ordered,0.15471995102289426,toward_high,toward_low,False,True,,"The typical American answer was almost certainly at the low end of the scale (""not an essential characteristic"") in both years, since an army takeover is widely seen as incompatible with democracy. Any shift in the typical answer would most plausibly be a further move toward outright rejection rather than toward treating it as essential, though this is a low-confidence judgment.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: The army takes over when government is incompetent
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""It is against democracy (spontaneous)""
+B: It moved toward ""An essential characteristic of democracy""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E229,numeric_scale,ordered,-0.5043420062233732,toward_low,toward_high,False,True,,"Civil rights protecting people from state oppression is very likely rated near the top of the scale in both years, so any shift would be small and more plausibly upward toward ""essential"" than toward the opposite pole. Option A would require a large drop that is unlikely for this item.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use this scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: Civil rights protect people’s liberty from state oppression
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""It is against democracy (spontaneous)""
+B: It moved toward ""An essential characteristic of democracy""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E233,numeric_scale,ordered,-0.25902945640022246,toward_low,toward_high,False,True,,"The item is about a principle most Americans already regard as core to democracy, so the average was probably near the top of the scale in both years. Any movement would most plausibly be a slight rise toward ""essential,"" not a shift toward ""against democracy.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me how essential you think the following is as a characteristic of democracy. Use a scale where 1 means “not at all an essential characteristic of democracy” and 10 means it definitely is “an essential characteristic of democracy.”
+Characteristic: Women have the same rights as men
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""An essential characteristic of democracy""
+B: It moved toward ""It is against democracy (spontaneous)""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E234,numeric_scale,ordered,0.3077466421248438,toward_high,toward_low,False,True,,"The typical American answer probably drifted slightly toward the ""worse off"" end between 2006 and 2011. Optimism about technology dipped during the late-2000s recession and growing public skepticism about some technologies, though overall views stayed positive.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: All things considered, would you say that the world is better off or worse off because of science and technology? Please indicate your view on this scale: 1 means “the world is a lot worse off,” and 10 means “the world is a lot better off.”
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""A lot worse off""
+B: It moved toward ""A lot better off""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E235,numeric_scale,ordered,-0.14574173199145513,toward_low,toward_high,False,True,,"The response options are a 1–10 importance scale, so the realistic movement is toward the high end. Among the two choices, ""against democracy"" is a rare spontaneous response that would not plausibly become the typical answer, so the modal answer most likely drifted toward ""absolutely important.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: How important is it for you to live in a country that is governed democratically? On a scale where 1 means “not at all important” and 10 means “absolutely important,” what position would you choose?
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Absolutely imporrtant""
+B: It moved toward ""It is against democracy (spontaneous)""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E236,numeric_scale,ordered,0.011334503133895169,toward_high,toward_low,False,True,,"Trust in government in the US fell sharply between 2006 and 2011, amid the financial crisis, partisan gridlock, and the Tea Party and Occupy movements. A typical respondent in 2011 would therefore more likely rate US democracy lower than in 2006, so the answer leans toward the lower end of the scale.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: How democratically is your country being governed today? Using a scale from 1 to 10, where 1 means “not at all democratic” and 10 means “completely democratic,” what position would you choose?
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Completely democratic""
+B: It moved toward ""It is against democracy (spontaneous)""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,E255,ordinal_scale,ordered,0.31447666786012674,toward_high,toward_high,True,True,,"PC adoption and daily use in the United States rose steadily through the late 2000s, with more households owning computers and more people using them at work, school, and home. A shift in the typical response over 2006 to 2011 would therefore move toward more frequent use, not toward ""Never.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: How often do you use a personal computer?
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Frequently""
+B: It moved toward ""Never""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,F001,ordinal_scale,ordered,0.02034536213372551,toward_high,toward_low,False,True,,"Between 2006 and 2011, the Great Recession and its job losses may have prompted more people to reflect on life's meaning and purpose, which would shift the typical answer toward ""Often."" This is a weak inference, since I don't have the exact survey data.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: How often, if at all, do you think about the meaning and purpose of life?
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Often""
+B: It moved toward ""Never""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,F028,ordinal_scale,ordered,0.18091556102275685,toward_high,toward_high,True,True,,"Religious attendance in the US was on a gradual secularizing trend through the late 2000s, with the rising share of religiously unaffiliated adults and modest declines in weekly attendance. A shift in the typical response over 2006–2011 would more plausibly move toward less frequent attendance than toward more than once a week.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Apart from weddings, funerals, and christenings, how often do you attend religious services these days?
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Never practically never""
+B: It moved toward ""More than once a week""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,F063,numeric_scale,ordered,-0.4486363636363633,toward_low,toward_low,True,True,,"The question asks about the typical answer on a 1-10 scale, and the surrounding evidence points toward a modest decline. Survey data from this period, including rising religious ""nones"" in the U.S. between the mid-2000s and early 2010s, suggests that the share of Americans rating God as very important slipped somewhat, so the typical answer likely moved toward the ""not at all important"" end.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: How important is God in your life? Please use this scale to indicate: 10 means “very important” and 1 means “not at all important.”
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not at all important""
+B: It moved toward ""Very important""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,F114A,numeric_scale,ordered,-0.00011086431824214316,toward_low,toward_high,False,True,,"Economic hardship after the 2008 recession may have made Americans somewhat more tolerant of small benefit-related dishonesty, so the typical rating plausibly shifted toward justifiable. I'm not certain of the exact survey values, so this is a judgment call.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Claiming government benefits to which you are not entitled
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,F115,numeric_scale,ordered,0.01251526251526247,toward_high,toward_high,True,True,,"The 2008 recession and the financial strain that followed may have made Americans somewhat more willing to excuse minor rule-breaking like fare evasion, so the typical answer plausibly moved toward ""always justifiable."" This is a judgment from context rather than from the specific survey figures.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.  
+Statement: Avoiding a fare on public transport
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,F116,numeric_scale,ordered,-0.12212885154061626,toward_low,toward_high,False,True,,"The typical American answer on this 1-to-10 scale sits near the ""never justifiable"" end in both years. Economic strain after the 2008 recession plausibly loosened attitudes toward tax cheating somewhat, so I expect a small drift upward toward ""always justifiable,"" though I'm not certain of the exact survey figures.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me whether you think cheating on taxes if you have a chance can always be justified, never be justified, or something in between, using the provided scale.
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,F117,numeric_scale,ordered,0.09390514826620322,toward_high,toward_low,False,True,,"Bribery is condemned almost universally in the US, so any shift would be small. The 2008 financial crisis and the 2011 Occupy-era anger at elites plausibly hardened moral condemnation of corruption, so I expect the typical answer to have moved toward ""never justifiable."" This is a low-confidence judgment rather than a recalled data point.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.  
+Statement: Someone accepting a bribe in the course of their duties
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,F118,numeric_scale,ordered,0.8939643057759206,toward_high,toward_high,True,True,,"Public acceptance of homosexuality in the United States rose steadily through the late 2000s, with Pew and Gallup polls showing growing support for same-sex relations and marriage between 2006 and 2011. The typical answer on a justifiability scale would therefore have shifted toward the ""always justifiable"" end.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Homosexuality
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,F120,numeric_scale,ordered,0.34583337257376456,toward_high,toward_low,False,True,,"Public opinion on abortion in the U.S. appears to have grown more restrictive over this period. Gallup polling showed the pro-life share rising from around 42% in 2006 to about 50% by 2011, which suggests the typical answer on the justifiability scale moved toward ""never justifiable.""
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Abortion
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,F121,numeric_scale,ordered,0.386111161166534,toward_high,toward_high,True,True,,"Acceptance of divorce in the US has been fairly stable or slowly rising over the 2000s and early 2010s, so the typical answer on a justifiable-to-never-justifiable scale would most likely have shifted toward greater acceptance between 2006 and 2011. This is a general trend, not a precise figure for these years.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me whether you think this statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Divorce
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,F123,numeric_scale,ordered,0.3229121091942937,toward_high,toward_high,True,True,,"Across the World Values Surveys, attitudes toward permissive moral items like suicide have generally drifted toward greater acceptance in the US during the 2000s, so the typical answer probably shifted toward ""always justifiable."" I'm not certain of the exact wave-to-wave figures, so this is a directional judgment.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: Suicide
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Always justifiable""
+B: It moved toward ""Never justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,F199,numeric_scale,ordered,0.0426362351090237,toward_high,toward_low,False,True,,"Attitudes toward wife-beating in the US have generally become more condemnatory over recent decades, and the trend in survey data from the mid-2000s to early 2010s continued in that direction. The typical response therefore likely moved toward ""never justifiable.""
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Please tell me whether you think the following statement can always be justified, never be justified, or something in between, using the provided scale.
+Statement: For a man to beat his wife
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Never justifiable""
+B: It moved toward ""Always justifiable""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,G006,ordinal_scale,ordered,0.05556846861420017,toward_high,toward_low,False,True,,"Americans' national pride stayed high across this period, and the typical response is ""very proud"" in both years, so any shift would more plausibly strengthen that mode than move toward ""not at all proud,"" which is rare. Survey trends in this period are noisy, so this is a moderate-confidence call.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: How proud are you to be of the nationality of this country?
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Not at all proud""
+B: It moved toward ""Very proud""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,G007_18_B,ordinal_scale,ordered,0.10030533359319183,toward_high,toward_high,True,True,,"Neighborhood trust in the US is generally high, so the typical answer sits near ""somewhat"" or ""completely,"" and the two options here are the extremes. The 2006–2011 window covers the Great Recession, when economic stress and social disruption tended to erode trust. The more plausible shift is therefore toward less trust, though I'm not certain of the exact survey figures.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I’d like to ask you how much you trust people from a particular group. Could you tell me whether you trust people from your neighborhood completely, somewhat, not very much or not at all?
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Do not trust at all""
+B: It moved toward ""Trust completely""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,G007_33_B,ordinal_scale,ordered,0.011967703349282433,toward_high,toward_low,False,True,,"Trust in people you know personally is very high in the US, and ""trust completely"" is the most common answer. Distrust of acquaintances is rare, so a move toward ""do not trust at all"" is implausible, and the more likely shift, if any, is toward ""trust completely.""
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I’d like to ask you how much you trust people from a particular group. Could you tell me if you trust people from this group completely, somewhat, not very much, or not at all?
+Group: People you know personally
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Do not trust at all""
+B: It moved toward ""Trust completely""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,G007_34_B,ordinal_scale,ordered,0.052983032293377086,toward_high,toward_high,True,True,,"Trust in strangers in the US appears to have eroded after the 2008 financial crisis and the recession that followed, which would push the typical answer away from ""completely"" and toward the least-trusting end of the scale. The shift is likely small, but the direction favors the distrustful option.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I’d like to ask you how much you trust people from a specific group. Could you tell me whether you trust people you meet for the first time completely, somewhat, not very much, or not at all?
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Trust completely""
+B: It moved toward ""Do not trust at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,G007_35_B,ordinal_scale,ordered,0.10393756047040892,toward_high,toward_high,True,True,,"Trust in out-group members in the US likely eroded somewhat during the late 2000s, with the Great Recession and controversies such as the 2010 Park51 ""Ground Zero mosque"" debate probably souring attitudes toward religious minorities. This suggests the typical answer shifted toward the distrustful end, though the evidence is weak and the direction is uncertain.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I’d like to ask you how much you trust people from a specific group. Do you trust people from this group completely, somewhat, not very much or not at all?
+Group: People of another religion
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Do not trust at all""
+B: It moved toward ""Trust completely""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,G007_36_B,ordinal_scale,ordered,0.08367626886145407,toward_high,toward_high,True,True,,"The typical answer is probably ""somewhat"" in both years, so any shift would be modest. Between 2006 and 2011, economic hardship after the 2008 recession and heated immigration debates plausibly pushed responses toward more distrust of people of other nationalities, so I lean toward the ""do not trust at all"" direction.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: I’d like to ask you how much you trust people from a particular group. Do you trust people from this group completely, somewhat, not very much, or not at all?  
+Group: People of another nationality
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Trust completely""
+B: It moved toward ""Do not trust at all""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,G019,ordinal_scale,ordered,-0.012859890791759643,toward_low,toward_high,False,True,,"The question asks about a shift in the typical answer, and I don't have the exact 2006 and 2011 distributions. Over this period, U.S. public sentiment became somewhat more skeptical of global engagement, especially after the 2008 financial crisis, so I expect the typical response to move toward disagreement.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: People have different views about themselves and how they relate to the world. Using this card, would you tell me how strongly you agree or disagree with the following statement about how you see yourself?
+Statement: I see myself as a world citizen
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Strongly agree""
+B: It moved toward ""Strongly disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,G020,ordinal_scale,ordered,0.024896177642173,toward_high,toward_low,False,True,,"Attachment to local community in the U.S. is generally high, and the 2008 recession may have pushed people toward local ties and mutual support rather than away from them. A small shift toward stronger agreement seems more plausible than a move toward disagreement over this short window.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: People have different views about themselves and how they relate to the world. Using this card, would you tell me how strongly you agree or disagree with the following statement about how you see yourself?
+Statement: I see myself as member of my local community
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Strongly agree""
+B: It moved toward ""Strongly disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,G021,ordinal_scale,ordered,0.18661783160253398,toward_high,toward_low,False,True,,"Most Americans already strongly identify as national citizens, so the typical answer is likely near ""Strongly agree."" Identification with the nation tends to be stable or rise during periods of national stress, such as the 2008 recession and the 2010 political polarization, rather than fall. That points toward ""Strongly agree.""
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: People have different views about themselves and how they relate to the world. Using this card, would you tell me how strongly you agree or disagree with the following statement about how you see yourself?
+Statement: I see myself as a citizen of the [country] nation.
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Strongly disagree""
+B: It moved toward ""Strongly agree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,G022B,ordinal_scale,ordered,-0.061523334249645734,toward_low,toward_high,False,True,,"Americans have generally not framed their identity around North America, so the typical answer likely sits on the disagree side. Rising national-focused sentiment in the early 2010s, after the 2008 recession, suggests any movement would be toward stronger disagreement rather than stronger agreement.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: People have different views about themselves and how they relate to the world. Using this card, would you tell me how strongly you agree or disagree with the following statement about how you see yourself?
+Statement: I see myself as citizen of North America
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Strongly agree""
+B: It moved toward ""Strongly disagree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,G023,ordinal_scale,ordered,-0.10479323308270683,toward_low,toward_low,True,True,,"The US has long been among the most individualistic countries, and survey trends in the 2000s generally pointed toward more self-focused identity rather than less. So a shift toward stronger agreement with ""I see myself as an autonomous individual"" is the more plausible direction, though the change over five years is likely small.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: People have different views about themselves and how they relate to the world. Using the provided scale, would you tell me how strongly you agree or disagree with the following statement about how you see yourself?  
+Statement: I see myself as an autonomous individual
+
+### Task:
+
+Think about how the people of United States, taken as a whole, answered this question in 2006 and in 2011. Did the typical answer move?
+
+A: It moved toward ""Strongly disagree""
+B: It moved toward ""Strongly agree""
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,G026,binary,share,0.012140593433738966,increase,increase,True,True,,"The share of Americans with an immigrant mother probably rose over this period. The immigrant population grew substantially through the 2000s, and the children of those immigrants, the second generation, were a growing share of adults, even though immigration slowed after 2008.
+
+ANSWER: B",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Is your mother an immigrant to this country?
+
+### Task:
+
+Think about the share of people in United States who gave the answer ""Yes"". Did that share change between 2006 and 2011?
+
+A: The share decreased
+B: The share increased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"
+USA,5,6,2006,2011,G027,binary,share,0.015292056613341945,increase,increase,True,True,,"Immigration to the US was high through the 1990s and 2000s, so a growing share of adults had immigrant fathers over this period, and the share answering ""Yes"" would likely have edged up between 2006 and 2011. This is an inference from demographic trends, not from a specific survey result.
+
+ANSWER: A",end_turn,False,"### Inputs:
+
+Country: United States
+Year 1: 2006
+Year 2: 2011
+Question: Is your father an immigrant to this country?
+
+### Task:
+
+Think about the share of people in United States who gave the answer ""Yes"". Did that share change between 2006 and 2011?
+
+A: The share increased
+B: The share decreased
+
+Give one or two sentences of reasoning, then finish with a final line in exactly this form:
+ANSWER: <A or B>"

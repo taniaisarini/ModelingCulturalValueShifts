@@ -1,7 +1,35 @@
 # Status
 
-Inventory of what exists in this repo; the dated notes below are the running log (last updated 2026-11-04). No research question is
+Inventory of what exists in this repo; the dated notes below are the running log (last updated 2026-11-05). No research question is
 settled yet — this is a snapshot to work from, not a plan. Update this doc as code/data/results change.
+
+> **Structured, lexicon-based hypothesis experiment (2026-11-05, new, `code/value_shift_indicators/`; prompt approved before
+> use).** Follow-up to the language-hypothesis experiment below, constraining the hypothesis *type* instead of leaving it fully
+> open-ended: each hypothesis is now a fixed JSON shape, not a free-text sentence with markers inferred post hoc. Two types,
+> either optionally restricted to a `topic` word/phrase list (same mechanism as a lexicon, filtering which articles count at
+> all): **trend** (one lexicon, frequency rises/falls from year_a to year_b) and **contrast** (two lexicons, one expected to
+> dominate near year_a and the other near year_b -- a replacement/crossover pattern). New files (not committed):
+> `prompts/{system,user}/generate_lexicon_hypotheses.txt`, `run_lexicon_hypotheses.py` (generation, dry run by default),
+> `test_lexicon_hypotheses.py` (mechanical scoring, no LLM calls, reuses `test_language_hypotheses.load_nyt_texts`/`total_chars`
+> and `analysis_tools.two_proportion_z`).
+> - Every hypothesis is scored by **both** rate metrics side by side (not merged into one verdict), to compare which tracks
+>   reality better: article-presence fraction (like the old `count_matches()`) and raw occurrences per 100,000 characters
+>   (`count_occurrences()`, new -- the old pipeline only ever counted presence, never multiple mentions per article).
+> - Contrast hypotheses are additionally scored by **both** of two methods, each under both rate metrics (4 verdicts total):
+>   `independent` (two separate trend tests, one per lexicon, confirmed only if both hold) and `dominance` (one test on the
+>   early lexicon's *share* of early+late mentions, expected to fall over time). All of this reuses `two_proportion_z` exactly
+>   as-is -- no new statistic, just new (x, n) pairs fed into it (occurrence count over character count for the "chars" metric,
+>   a valid normal-approximation for a rare-event rate comparison).
+> - **Scope: a 5-question pilot** (USA wave5->6: F118 reused from the original pilot for continuity, plus A001/A168A/A165/A124_02
+>   spanning the other three usable significant-change formats), not the full 128-question set -- same caution the original
+>   language-hypothesis experiment used before scaling up.
+> - Dry run confirmed all 5 prompts render correctly (5/5 cache misses, 0 calls sent) and matches the exact text shown to and
+>   approved by the user. `filter_by_topic`/`count_presence`/`count_occurrences`/`rate_test`/`combine_verdicts`/`test_trend`/
+>   `test_contrast` checked offline against small hand-built fake article lists (no real NYT data, no LLM calls) -- all correct,
+>   including a real presence-vs-occurrence divergence caught in the first fixture attempt (presence fraction can fall even as
+>   raw occurrences rise, if the same articles repeat the word more rather than more articles using it at all).
+> - **Not yet run for real** -- needs an explicit go-ahead for the actual `--run` LLM call, separate from the design approval
+>   above, per project convention.
 
 > **Value-shift indicator system (2026-11-02 to 2026-11-04, new, self-contained in `code/value_shift_indicators/`; built on an
 > unmerged worktree branch `worktree-value-shift-indicators`).** Explores whether an LLM can predict which direction a WVS question
@@ -85,6 +113,72 @@ settled yet — this is a snapshot to work from, not a plan. Update this doc as 
 >   a structural mismatch between the hypotheses and this test, not necessarily evidence the hypotheses are wrong. Known
 >   remaining weakness: some extracted markers are generic dictionary words quoted for emphasis (e.g. "friends" alone, 3,863
 >   matches) -- not fixed, needs a specificity judgment call rather than a quick regex tweak.
+
+> **Language-hypothesis normalization fix + multi-round feedback loop (2026-11-04, same day, continuation).** Root-caused the
+> deny-heavy skew above: NYT text per article shrank from ~734 chars (2006) to ~460 chars (2011), more than the ~42% article-count
+> drop alone -- `test_language_hypotheses.py` now rates matches per 100,000 corpus *characters* instead of per article
+> (`total_chars()`); confirmed by the confirm/deny balance flipping (101/219 -> 218/102) and more questions deciding (59 -> 82/128).
+> **Scoring correction (explicit user call): a "deny" verdict does NOT vote for the opposite direction** -- only "confirm"
+> casts a vote; a direction wins a question only if it has strictly more confirmed hypotheses than the other side, else "tie".
+> Confirm-only on round 1 alone: 42 correct / 40 wrong / 46 tied (accuracy on the 82 decided: 51.2%, chance).
+> - **Round 2 (new prompt, approved before use, `prompts/{system,user}/generate_language_hypotheses_round2.txt`):** for every
+>   question still tied, feed the model its own prior hypotheses with their real measured verdict/rates (not the true direction)
+>   and ask for 5 new ones. Ran on all 46 confirm-only ties (`run_language_hypotheses_round2.py` + a second pass,
+>   `run_language_hypotheses_round_n.py`, for the 28 that the first pass's deny-based tie list had missed -- see
+>   `run_language_hypotheses_round_n.py:load_cumulative()` for the exact, bug-fixed cumulative-vote logic). Combined round 1+2,
+>   confirm-only: 52 correct / 49 wrong / 27 tied (decided-only accuracy 51.5%, chance; z~0.30, p~0.76).
+> - **Rounds 3-5 (same reused prompt template, cumulative hypothesis history each round, run by a background agent):** only
+>   re-queried whatever was still tied going into that round (27 -> 14 -> 9 -> 6). **Final result, all 128 questions, rounds
+>   1-5 combined: 68 correct (53.1%) / 54 wrong (42.2%) / 6 tied (4.7%); decided-only accuracy 68/122 = 55.7% (z~1.27 vs 50%,
+>   p~0.20 -- directionally above chance but not significant).** Of the 6 still tied after 5 rounds: 3 have never had a single
+>   hypothesis confirmed in either direction across all 5 rounds (`A124_42`, `E025B`, `F121`), 3 are genuine nonzero ties
+>   (`D060` 1-1, `E012` 2-2, `E222B` 3-3). **Takeaway: 5 rounds cut the tie rate 46->6 (87%), but accuracy on each round's
+>   newly-decided questions stays at chance -- the climbing overall-accuracy number is the shrinking tie bucket, not the model
+>   getting better with more tries.** New files (not committed): `run_language_hypotheses_round2.py`,
+>   `run_language_hypotheses_round_n.py`, `test_language_hypotheses_round2(_extra|_round_n).py`,
+>   `results/language_hypotheses_round{2,2_extra,3,4,5}(_tested)?.json`.
+> - **Dashboard updated:** https://claude.ai/artifact/9ieYsZZgwq6MBTQgzGSf8c now shows, per question, a correct/wrong/tie
+>   status chip, a small two-row bar chart (Direction A / Direction B, segments = confirm/deny/inconclusive/untested
+>   hypothesis counts, colors matched to the per-hypothesis verdict badges), percent + a client-side chance-test
+>   p-value on the summary tiles, and a shared legend (versions 2-6; dataviz skill's status-color convention used
+>   throughout -- color is never the only cue, counts/symbols always sit next to it).
+
+> **No-hypothesis direct baseline for comparison (2026-11-04/05): claude-haiku-5-5 asked to just predict the
+> direction with no NYT/GDELT evidence at all** -- the same style of baseline already run for EGY/THA/UKR/URY/HKG
+> with gpt-4.1-mini etc. (`run_direction_baseline_set.py`), now for the same 128 USA questions as the
+> language-hypothesis experiment above (`code/run_direction_baseline_usa128.py`, not committed). Reused
+> `direction_baseline.py`'s existing, already-approved prompt unchanged.
+> - **Found a real mismatch first:** `direction_baseline.py`'s own significance gate (`change_detection.py`) only
+>   keeps 13 of the 128 -- the 128 were actually selected by a different, older significance test
+>   (`WVS_dataloader.py`'s per-respondent KS test, `data/significant_changes/ks/*.csv`, p<0.05). Per explicit user
+>   decision, the new script bypasses `change_detection.py`'s gate entirely and builds truth straight from the KS
+>   csvs for all 128, reusing `build_prompt()`/`parse_answer()` unchanged.
+> - **claude-haiku-5-5 needed `max_tokens=800`, not the 250 the gpt baselines use** (and rejects an explicit
+>   `temperature` entirely, unlike every OpenAI model run so far) -- at 250, 118/128 responses were cut off mid-
+>   reasoning before the required `ANSWER:` line; at 500, still 24/128; at 800, 128/128 parsed.
+> - **Result: 66/128 correct (51.6%), z=0.35 vs. chance, p=0.72 -- not significant**, i.e. indistinguishable from
+>   guessing. Essentially the same accuracy as the full 5-round NYT-hypothesis pipeline above (53.1%/55.7%
+>   decided-only, itself only marginally closer to significant at p=0.20) -- feeding in measured NYT language
+>   evidence has not yet beaten the model just guessing from its own background knowledge.
+> - **The raw survey CSV (`data/WVS_Time_Series_1981-2022_csv_v5_0.csv`, gitignored, 1.4 GB) is not in this
+>   worktree** (worktrees don't get gitignored files) -- symlinked from the main checkout's `data/` for this
+>   session; a fresh worktree needs the same symlink or a copy before `direction_baseline.py`-based scripts work.
+> - **Alternate scoring tried (recomputed from existing stored verdicts, no new measurement): deny as a -0.5
+>   penalty on its own hypothesis's direction** (confirm +1, deny -0.5, inconclusive 0; net score decides) instead
+>   of confirm-only voting. Result: 67 correct / 58 wrong / 3 tie (vs. 68/54/6 confirm-only) -- fewer ties but
+>   accuracy *drops slightly* (53.6% decided-only vs. 55.7%, p=0.42 vs. 0.20). Not adopted; confirm-only remains
+>   the scoring rule in use.
+> - **Known unresolved methodology gap, found while explaining a specific hypothesis** (the cohabiting-couples one
+>   for D060): `extract_markers()` pulls every quoted phrase out of a hypothesis with no idea which clause it
+>   belongs to, so a hypothesis that pairs a rising term with a falling term (e.g. "'cohabiting couples' rises
+>   while 'living in sin' declines") gets all markers dumped into one undifferentiated bucket and tested as a
+>   single combined rate -- not what the hypothesis actually claims. Also no context/topic conditioning at all
+>   (a hypothesis asking for a term "in housing/census contexts" is matched anywhere in the article). Not fixed;
+>   likely affects a meaningful fraction of the 1,123 generated hypotheses, not just this one.
+> - **Proposed but not yet run:** a forced-final-decision prompt (new prompt, drafted and shown to the user for
+>   approval, not yet confirmed/sent) for the 6 questions still tied after 5 rounds (`A124_42`, `E025B`, `F121`
+>   at 0-0 confirmed-either-way; `D060` 1-1, `E012` 2-2, `E222B` 3-3) -- feed back every hypothesis from every
+>   round and force a single A/B answer instead of proposing more hypotheses.
 
 > **Row-level GDELT pull, "Step 2" (done 2026-10-29): `code/gdelt_pull_raw_events.py`, full range 2003-11-01..2023-07-31, all 29 WVS
 > countries.** Row-level (not aggregated) events via `events_raw()`: 18 of the 23 columns in `gdelt_bq.ALLOWED_COLUMNS` (drops

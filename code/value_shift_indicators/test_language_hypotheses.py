@@ -33,8 +33,8 @@ def extract_markers(text):
 
 
 def load_nyt_texts(year):
-    """All (text, total_count) for one year, text = lowercased headline+abstract+lead_paragraph+tags
-    per doc, loaded once so 600+ marker tests don't each re-read 12 JSON files."""
+    """All text per doc for one year, text = lowercased headline+abstract+lead_paragraph+tags,
+    loaded once so 600+ marker tests don't each re-read 12 JSON files."""
     texts = []
     for month in range(1, 13):
         path = NYT_DIR / f"{year}-{month:02d}.json"
@@ -49,6 +49,10 @@ def load_nyt_texts(year):
             tags = " ".join((kw.get("name") or "") for kw in (doc.get("keywords") or []))
             texts.append(f"{headline} {doc.get('abstract') or ''} {doc.get('lead_paragraph') or ''} {tags}".lower())
     return texts
+
+
+def total_chars(texts):
+    return sum(len(t) for t in texts)
 
 
 def count_matches(texts, markers):
@@ -70,7 +74,8 @@ def run():
     print("loading NYT 2006/2011 into memory...")
     texts_a, texts_b = load_nyt_texts(YEAR_A), load_nyt_texts(YEAR_B)
     total_a, total_b = len(texts_a), len(texts_b)
-    print(f"  {total_a} articles ({YEAR_A}), {total_b} articles ({YEAR_B})")
+    chars_a, chars_b = total_chars(texts_a), total_chars(texts_b)
+    print(f"  {total_a} articles / {chars_a} chars ({YEAR_A}), {total_b} articles / {chars_b} chars ({YEAR_B})")
 
     data = json.load(open(RESULTS / "language_hypotheses_bulk.json"))
     truth = load_ground_truth()
@@ -89,17 +94,20 @@ def run():
                 continue
             m_a, m_b = count_matches(texts_a, markers), count_matches(texts_b, markers)
             test = two_proportion_z(m_a, total_a, m_b, total_b)
-            rate_a, rate_b = m_a / total_a * 1000, m_b / total_b * 1000
+            rate_a, rate_b = m_a / chars_a * 100_000, m_b / chars_b * 100_000
             observed = "increase" if rate_b > rate_a else "decrease"
             significant = test is not None and test[3] < 0.05
             matches_expected = observed == h.get("expected_change")
+            direction = h.get("direction", "?")
+            opposite = "B" if direction == "A" else "A" if direction == "B" else "?"
             if significant and matches_expected:
                 verdict = "confirm"
                 n_confirm += 1
-                votes[h.get("direction", "?")] = votes.get(h.get("direction", "?"), 0) + 1
+                votes[direction] = votes.get(direction, 0) + 1
             elif significant and not matches_expected:
                 verdict = "deny"
                 n_deny += 1
+                votes[opposite] = votes.get(opposite, 0) + 1
             else:
                 verdict = "inconclusive"
                 n_inconclusive += 1

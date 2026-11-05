@@ -1,0 +1,19 @@
+Country: {country}
+Time points: {year_a} and {year_b}
+Attitude measured: {attitude_description}
+
+Between {year_a} and {year_b}, the average answer moved in one of these two directions:
+Direction A: {direction_a}
+Direction B: {direction_b}
+
+In an earlier round, you proposed these hypotheses and they were tested against real New York Times coverage ({window_start}-{window_end}), comparing match rates per 100,000 characters of text in {year_a} vs {year_b} (a two-proportion test, significant if p<0.05):
+
+{hypotheses_block}
+
+Verdicts: "confirm" = significant and matched what you predicted. "deny" = significant but opposite of what you predicted. "inconclusive" = not statistically significant either way.
+
+{votes_summary}
+
+Propose 5 NEW hypotheses -- different markers/patterns than above -- for Direction A or Direction B, that would be easier to measure reliably in NYT text. For each return `hypothesis` (one sentence), `direction` ("A" or "B"), `expected_change` ("increase" or "decrease").
+
+Return JSON: {{"hypotheses": [...5 total...]}}

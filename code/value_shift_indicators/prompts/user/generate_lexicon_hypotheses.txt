@@ -1,0 +1,15 @@
+Country: {country}
+Time points: {year_a} and {year_b}
+Attitude measured: {attitude_description}
+
+Between {year_a} and {year_b}, the average answer moved in one of these two directions:
+Direction A: {direction_a}
+Direction B: {direction_b}
+
+Produce 5 hypotheses about New York Times coverage between {window_start} and {window_end}: a mix of "trend" and "contrast" types (at least 1 of each), each indicating whether the attitude shifted toward Direction A or Direction B.
+
+For a "trend" hypothesis return: `type` ("trend"), `hypothesis` (one sentence), `lexicon` (2-6 words or short phrases expected to change in frequency together), `topic` (0-6 words/phrases restricting to a specific subject, or an empty list if the pattern should hold across all coverage), `direction` ("A" or "B"), `expected_change` ("increase" or "decrease").
+
+For a "contrast" hypothesis return: `type` ("contrast"), `hypothesis` (one sentence), `lexicon_early` (2-6 words/phrases expected to be more common around {year_a}), `lexicon_late` (2-6 words/phrases expected to be more common around {year_b}), `topic` (0-6 words/phrases restricting to a specific subject, or an empty list), `direction` ("A" or "B" -- the direction this pattern would indicate).
+
+Return JSON: {{"hypotheses": [...5 total...]}}
